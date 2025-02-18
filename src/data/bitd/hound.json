@@ -1,0 +1,11 @@
+{
+  "name": "hound",
+  "items": [
+    { "name": "fine pistol", "load": 1 },
+    { "name": "hunting pet", "load": 0 }
+  ],
+  "ratings": {
+    "hunt": 2,
+    "prowl": 1
+  }
+}

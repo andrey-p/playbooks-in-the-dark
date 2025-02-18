@@ -1,0 +1,11 @@
+{
+  "name": "cutter",
+  "items": [
+    { "name": "fine weapon", "load": 1 },
+    { "name": "manacle and chains", "load": 0 }
+  ],
+  "ratings": {
+    "skirmish": 2,
+    "command": 1
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "id": "bitd",
+  "name": "Blades in the Dark",
+  "characterPlaybooks": [
+    "cutter",
+    "hunter"
+  ],
+  "commonItems": [
+    { "name": "a knife or two", "load": 1 },
+    { "name": "climbing equipment", "load": 2 }
+  ],
+  "attributes": [
+    {
+      "name": "insight",
+      "actions": [
+        "study",
+        "tinker"
+      ]
+    },
+    {
+      "name": "prowess",
+      "actions": [
+        "finesse",
+        "skirmish"
+      ]
+    },
+    {
+      "name": "resolve",
+      "actions": [
+        "attune",
+        "consort"
+      ]
+    }
+  ]
+}
