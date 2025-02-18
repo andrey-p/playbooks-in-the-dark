@@ -1,0 +1,14 @@
+/* styles for CSV paths, hence stroke / width */
+
+.dagger {
+  stroke: var(--foreground);
+  stroke-width: 2px;
+}
+
+.filled {
+  fill: var(--highlight);
+}
+
+.empty {
+  fill: var(--background);
+}

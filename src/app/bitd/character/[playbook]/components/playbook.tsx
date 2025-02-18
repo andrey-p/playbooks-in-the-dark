@@ -1,5 +1,6 @@
 import type { CharacterPlaybook, System } from '@/types';
 import Attribute from './attribute';
+import styles from './playbook.module.css';
 
 type Props = {
   playbookData: CharacterPlaybook,
@@ -14,13 +15,17 @@ export default function Playbook(props: Props) {
       {playbookData.name}
 
       <div>
-        {systemData.attributes.map(attribute => (
-          <Attribute
-            key={attribute.name}
-            attribute={attribute}
-            ratings={playbookData.ratings}
-          />
-        ))}
+        <h2>Attributes</h2>
+
+        <div className={styles.attributes}>
+          {systemData.attributes.map(attribute => (
+            <Attribute
+              key={attribute.name}
+              attribute={attribute}
+              ratings={playbookData.ratings}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

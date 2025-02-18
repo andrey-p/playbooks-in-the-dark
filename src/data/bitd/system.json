@@ -3,7 +3,7 @@
   "name": "Blades in the Dark",
   "characterPlaybooks": [
     "cutter",
-    "hunter"
+    "hound"
   ],
   "commonItems": [
     { "name": "a knife or two", "load": 1 },

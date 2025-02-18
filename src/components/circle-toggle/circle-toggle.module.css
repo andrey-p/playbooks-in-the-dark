@@ -1,0 +1,10 @@
+.filled {
+  border-radius: 50%;
+  background-color: var(--foreground);
+}
+
+.empty {
+  border-radius: 50%;
+  border: 3px solid var(--foreground);
+  background-color: var(--background);
+}
