@@ -1,4 +1,4 @@
-import styles from './circle-toggle.module.css';
+import styles from './circle.module.css';
 
 type Props = {
   size?: number,

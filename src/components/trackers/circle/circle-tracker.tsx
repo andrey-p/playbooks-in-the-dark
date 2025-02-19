@@ -1,4 +1,4 @@
-import CircleToggle from '@/components/circle-toggle/circle-toggle';
+import CircleToggle from '@/components/toggles/circle';
 import styles from './circle-tracker.module.css';
 
 type Props = {

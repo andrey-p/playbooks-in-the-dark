@@ -1,4 +1,4 @@
-import Dagger from './dagger';
+import DaggerToggle from '@/components/toggles/dagger';
 import styles from './dagger-tracker.module.css';
 
 type Props = {
@@ -12,7 +12,7 @@ export default function DaggerTracker(props: Props) {
 
   for (let i = 0; i < max; i++) {
     daggers.push(
-      <Dagger key={i} filled={i < value} />
+      <DaggerToggle key={i} filled={i < value} />
     );
   }
 
