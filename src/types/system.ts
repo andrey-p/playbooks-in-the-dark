@@ -1,12 +1,12 @@
 import Item from './item';
-import Attribute from './attribute';
+import AttributeWithActions from './attribute-with-actions';
 
 type System = {
   id: string,
   name: string,
   characterPlaybooks: string[],
   commonItems: Item[],
-  attributes: Attribute[]
+  attributesWithActions: AttributeWithActions[]
 };
 
 export default System;

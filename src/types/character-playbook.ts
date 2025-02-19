@@ -1,10 +1,10 @@
 import type Item from './item';
-import type Ratings from './ratings';
+import type ActionRatings from './action-ratings';
 
 type CharacterPlaybook = {
   name: string,
   items: Item[],
-  ratings: Ratings
+  actionRatings: ActionRatings
 };
 
 export default CharacterPlaybook;

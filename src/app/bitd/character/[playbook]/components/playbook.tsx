@@ -1,5 +1,5 @@
 import type { CharacterPlaybook, System } from '@/types';
-import Attribute from './attribute';
+import Ratings from '@/components/playbooks/ratings/ratings';
 import styles from './playbook.module.css';
 
 type Props = {
@@ -18,11 +18,11 @@ export default function Playbook(props: Props) {
         <h2>Attributes</h2>
 
         <div className={styles.attributes}>
-          {systemData.attributes.map(attribute => (
-            <Attribute
+          {systemData.attributesWithActions.map(attribute => (
+            <Ratings
               key={attribute.name}
-              attribute={attribute}
-              ratings={playbookData.ratings}
+              attributeWithActions={attribute}
+              currentActionRatings={playbookData.actionRatings}
             />
           ))}
         </div>

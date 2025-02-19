@@ -9,7 +9,7 @@
     { "name": "a knife or two", "load": 1 },
     { "name": "climbing equipment", "load": 2 }
   ],
-  "attributes": [
+  "attributesWithActions": [
     {
       "name": "insight",
       "actions": [
