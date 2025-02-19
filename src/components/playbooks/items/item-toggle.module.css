@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+}
+
+.toggle {
+  margin-right: 5px;
+}
+
+.toggle:not(:last-child) {
+  position: relative;
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    width: 5px;
+    height: 1px;
+    top: 50%;
+    right: -5px;
+    background-color: var(--foreground);
+  }
+}

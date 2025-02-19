@@ -1,5 +1,6 @@
 import type { CharacterPlaybook, System } from '@/types';
 import Ratings from '@/components/playbooks/ratings/ratings';
+import ItemList from '@/components/playbooks/items/item-list';
 import styles from './playbook.module.css';
 
 type Props = {
@@ -26,6 +27,17 @@ export default function Playbook(props: Props) {
             />
           ))}
         </div>
+      </div>
+
+      <div>
+        <h2>Items</h2>
+
+        <ItemList
+          items={playbookData.items}
+        />
+        <ItemList
+          items={systemData.commonItems}
+        />
       </div>
     </div>
   );

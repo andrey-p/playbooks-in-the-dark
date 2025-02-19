@@ -1,0 +1,8 @@
+.filled {
+  background-color: var(--foreground);
+}
+
+.empty {
+  border: 1px solid var(--foreground);
+  background-color: var(--background);
+}
