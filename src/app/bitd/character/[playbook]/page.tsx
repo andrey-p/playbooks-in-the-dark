@@ -1,4 +1,4 @@
-import { getJson } from '@/lib/data';
+import { getJson } from '@/lib/system-data';
 import CharacterPlaybook from './components/playbook';
 
 type Props = {

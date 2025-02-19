@@ -1,6 +1,6 @@
 //import styles from "./page.module.css";
 import Link from 'next/link';
-import { getJson } from '@/lib/data';
+import { getJson } from '@/lib/system-data';
 import type { System } from '@/types';
 
 export default function Home() {
