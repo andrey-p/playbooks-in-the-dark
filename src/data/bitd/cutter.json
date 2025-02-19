@@ -7,5 +7,15 @@
   "actionRatings": {
     "skirmish": 2,
     "command": 1
-  }
+  },
+  "specialAbilities": [
+    {
+      "name": "battleborn",
+      "description": "lorem ipsum"
+    },
+    {
+      "name": "bodyguard",
+      "description": "dolorem sic"
+    }
+  ]
 }

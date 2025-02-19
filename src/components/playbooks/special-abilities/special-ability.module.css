@@ -1,0 +1,15 @@
+.container {
+  padding-left: 3rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.name {
+  font-weight: 600;
+}

@@ -7,5 +7,15 @@
   "actionRatings": {
     "hunt": 2,
     "prowl": 1
-  }
+  },
+  "specialAbilities": [
+    {
+      "name": "sharpshooter",
+      "description": "lorem ipsum"
+    },
+    {
+      "name": "focused",
+      "description": "dolorem sic"
+    }
+  ]
 }
