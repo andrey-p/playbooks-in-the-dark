@@ -6,7 +6,7 @@ import Ratings from '@/components/playbooks/ratings/ratings';
 import ItemList from '@/components/playbooks/items/item-list';
 import SpecialAbilityList from '@/components/playbooks/special-abilities/special-ability-list';
 import styles from './playbook.module.css';
-import { characterPlaybookReducer } from '@/reducers';
+import { userCharacterReducer } from '@/reducers';
 
 type Props = {
   playbookData: CharacterPlaybook,
@@ -15,11 +15,14 @@ type Props = {
 
 export default function Playbook(props: Props) {
   const { playbookData, systemData } = props;
-  const [localPlaybookData, dispatch] = useReducer(characterPlaybookReducer, playbookData);
+  const [userCharacterData, dispatch] = useReducer(userCharacterReducer, {
+    actionRatings: Object.assign(playbookData.actionRatings),
+    attributeXp: {}
+  });
 
   return (
     <div>
-      {localPlaybookData.name}
+      {playbookData.name}
 
       <div>
         <h2>Attributes</h2>
@@ -44,7 +47,7 @@ export default function Playbook(props: Props) {
         <h2>Items</h2>
 
         <ItemList
-          items={localPlaybookData.items}
+          items={playbookData.items}
         />
         <ItemList
           items={systemData.commonItems}
@@ -55,7 +58,7 @@ export default function Playbook(props: Props) {
         <h2>Special abilities</h2>
 
         <SpecialAbilityList
-          specialAbilities={localPlaybookData.specialAbilities}
+          specialAbilities={playbookData.specialAbilities}
         />
       </div>
     </div>

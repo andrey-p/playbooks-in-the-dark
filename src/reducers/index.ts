@@ -1,1 +1,1 @@
-export { default as characterPlaybookReducer } from './character-playbook';
+export { default as userCharacterReducer } from './user-character';
