@@ -1,8 +1,12 @@
+'use client';
+
+import { useReducer } from 'react';
 import type { CharacterPlaybook, System } from '@/types';
 import Ratings from '@/components/playbooks/ratings/ratings';
 import ItemList from '@/components/playbooks/items/item-list';
 import SpecialAbilityList from '@/components/playbooks/special-abilities/special-ability-list';
 import styles from './playbook.module.css';
+import { characterPlaybookReducer } from '@/reducers';
 
 type Props = {
   playbookData: CharacterPlaybook,
@@ -11,10 +15,11 @@ type Props = {
 
 export default function Playbook(props: Props) {
   const { playbookData, systemData } = props;
+  const [localPlaybookData, dispatch] = useReducer(characterPlaybookReducer, playbookData);
 
   return (
     <div>
-      {playbookData.name}
+      {localPlaybookData.name}
 
       <div>
         <h2>Attributes</h2>
@@ -24,7 +29,12 @@ export default function Playbook(props: Props) {
             <Ratings
               key={attribute.name}
               attributeWithActions={attribute}
-              currentActionRatings={playbookData.actionRatings}
+              currentActionRatings={localPlaybookData.actionRatings}
+              onRatingUpdate={(action, value) => dispatch({
+                type: 'set_action_rating',
+                action,
+                value
+              })}
             />
           ))}
         </div>
@@ -34,7 +44,7 @@ export default function Playbook(props: Props) {
         <h2>Items</h2>
 
         <ItemList
-          items={playbookData.items}
+          items={localPlaybookData.items}
         />
         <ItemList
           items={systemData.commonItems}
@@ -45,7 +55,7 @@ export default function Playbook(props: Props) {
         <h2>Special abilities</h2>
 
         <SpecialAbilityList
-          specialAbilities={playbookData.specialAbilities}
+          specialAbilities={localPlaybookData.specialAbilities}
         />
       </div>
     </div>

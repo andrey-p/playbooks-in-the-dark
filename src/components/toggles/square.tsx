@@ -1,12 +1,9 @@
 import styles from './square.module.css';
+import clsx from 'clsx';
+import type { ToggleProps } from './toggles.types';
 
-type Props = {
-  size?: number,
-  filled?: boolean
-};
-
-export default function Square(props: Props) {
-  const { filled } = props;
+export default function Square(props: ToggleProps) {
+  const { filled, highlighted, ...rest } = props;
   let { size } = props;
 
   size = size || 25;
@@ -14,7 +11,13 @@ export default function Square(props: Props) {
   return (
     <div
       style={{ width: size, height: size }}
-      className={filled ? styles.filled : styles.empty}
+      className={clsx(
+        styles.default,
+        filled && styles.filled,
+        highlighted && styles.highlighted
+      )}
+       
+      {...rest}
     >
     </div>
   );

@@ -1,22 +1,28 @@
-import CircleTracker from '@/components/trackers/circle/circle-tracker';
-import DaggerTracker from '@/components/trackers/dagger/dagger-tracker';
+import Tracker from '@/components/trackers/simple-tracker';
 import type { AttributeWithActions, ActionRatings } from '@/types';
 import styles from './ratings.module.css';
 
 type Props = {
   attributeWithActions: AttributeWithActions,
-  currentActionRatings: ActionRatings
+  currentActionRatings: ActionRatings,
+  onRatingUpdate: (actionName: string, value: number) => void,
+  onXpUpdate: (attributeName: string, value: number) => void
 };
 
 export default function Ratings(props: Props) {
-  const { attributeWithActions, currentActionRatings } = props;
+  const { attributeWithActions, currentActionRatings, onRatingUpdate } = props;
+
   return (
     <div className={styles.container}>
       <h3 className={styles.title}>{attributeWithActions.name}</h3>
       <div className={styles.xp}>
-        <DaggerTracker
+        <Tracker
           value={2}
           max={6}
+          type='dagger'
+          onValueSelect={(value) => {
+            onXpUpdate(attribute, value);
+          }}
         />
       </div>
 
@@ -26,7 +32,14 @@ export default function Ratings(props: Props) {
             key={action}
             className={styles.rating}
           >
-            <CircleTracker value={currentActionRatings[action] || 0} max={4} />
+            <Tracker
+              value={currentActionRatings[action] || 0}
+              max={4}
+              type='circle'
+              onValueSelect={(value) => {
+                onRatingUpdate(action, value);
+              }}
+            />
             <div className={styles.actionName}>{action}</div>
           </li>
         ))}

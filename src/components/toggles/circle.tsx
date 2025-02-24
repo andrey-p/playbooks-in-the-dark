@@ -1,12 +1,9 @@
 import styles from './circle.module.css';
+import clsx from 'clsx';
+import type { ToggleProps } from './toggles.types';
 
-type Props = {
-  size?: number,
-  filled?: boolean
-};
-
-export default function Circle(props: Props) {
-  const { filled } = props;
+export default function Circle(props: ToggleProps) {
+  const { filled, highlighted, ...rest } = props;
   let { size } = props;
 
   size = size || 25;
@@ -14,7 +11,12 @@ export default function Circle(props: Props) {
   return (
     <div
       style={{ width: size, height: size }}
-      className={filled ? styles.filled : styles.empty}
+      className={clsx(
+        styles.default,
+        filled && styles.filled,
+        highlighted && styles.highlighted
+      )}
+      {...rest}
     >
     </div>
   );

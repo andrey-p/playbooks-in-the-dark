@@ -1,8 +1,12 @@
+.default {
+  background-color: var(--background);
+  border: 1px solid var(--foreground);
+}
+
 .filled {
   background-color: var(--foreground);
 }
 
-.empty {
-  border: 1px solid var(--foreground);
-  background-color: var(--background);
+.highlighted {
+  background-color: var(--highlight);
 }
