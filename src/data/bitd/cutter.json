@@ -1,8 +1,8 @@
 {
-  "name": "cutter",
+  "id": "cutter",
   "items": [
-    { "name": "fine weapon", "load": 1 },
-    { "name": "manacle and chains", "load": 0 }
+    { "id": "fine weapon", "load": 1 },
+    { "id": "manacle and chains", "load": 0 }
   ],
   "actionRatings": {
     "skirmish": 2,
@@ -10,11 +10,11 @@
   },
   "specialAbilities": [
     {
-      "name": "battleborn",
+      "id": "battleborn",
       "description": "lorem ipsum"
     },
     {
-      "name": "bodyguard",
+      "id": "bodyguard",
       "description": "dolorem sic"
     }
   ]

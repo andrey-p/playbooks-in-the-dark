@@ -1,5 +1,5 @@
 type AttributeWithActions = {
-  name: string,
+  id: string,
   actions: string[]
 };
 

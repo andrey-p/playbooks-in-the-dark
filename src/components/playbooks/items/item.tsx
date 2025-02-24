@@ -13,7 +13,7 @@ export default function Item(props: Props) {
     <div className={styles.container}>
       <ItemToggle load={item.load} />
       <span className={item.load === 0 ? styles.noLoadItem : ''}>
-        {item.name}
+        {item.id}
       </span>
     </div>
   );

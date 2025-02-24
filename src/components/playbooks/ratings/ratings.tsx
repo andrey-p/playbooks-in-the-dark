@@ -21,14 +21,14 @@ export default function Ratings(props: Props) {
 
   return (
     <div className={styles.container}>
-      <h3 className={styles.title}>{attributeWithActions.name}</h3>
+      <h3 className={styles.title}>{attributeWithActions.id}</h3>
       <div className={styles.xp}>
         <Tracker
           value={xp}
           max={6}
           type='dagger'
           onValueSelect={(value) => {
-            onXpUpdate(attributeWithActions.name, value);
+            onXpUpdate(attributeWithActions.id, value);
           }}
         />
       </div>

@@ -15,7 +15,7 @@ export default function SpecialAbilitiesList(props: Props) {
         <CircleToggle />
       </div>
 
-      <span className={styles.name}>{specialAbility.name}:</span>
+      <span className={styles.name}>{specialAbility.id}:</span>
       <span>{specialAbility.description}</span>
     </div>
   );

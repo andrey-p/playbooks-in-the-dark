@@ -6,26 +6,26 @@
     "hound"
   ],
   "commonItems": [
-    { "name": "a knife or two", "load": 1 },
-    { "name": "climbing equipment", "load": 2 }
+    { "id": "a knife or two", "load": 1 },
+    { "id": "climbing equipment", "load": 2 }
   ],
   "attributesWithActions": [
     {
-      "name": "insight",
+      "id": "insight",
       "actions": [
         "study",
         "tinker"
       ]
     },
     {
-      "name": "prowess",
+      "id": "prowess",
       "actions": [
         "finesse",
         "skirmish"
       ]
     },
     {
-      "name": "resolve",
+      "id": "resolve",
       "actions": [
         "attune",
         "consort"

@@ -22,7 +22,7 @@ export default function Playbook(props: Props) {
 
   return (
     <div>
-      {playbookData.name}
+      {playbookData.id}
 
       <div>
         <h2>Attributes</h2>
@@ -30,10 +30,10 @@ export default function Playbook(props: Props) {
         <div className={styles.attributes}>
           {systemData.attributesWithActions.map(attribute => (
             <Ratings
-              key={attribute.name}
+              key={attribute.id}
               attributeWithActions={attribute}
               currentActionRatings={userCharacterData.actionRatings}
-              xp={userCharacterData.attributeXp[attribute.name] || 0}
+              xp={userCharacterData.attributeXp[attribute.id] || 0}
               onXpUpdate={(attribute, value) => dispatch({
                 type: 'set_attribute_xp',
                 attribute,

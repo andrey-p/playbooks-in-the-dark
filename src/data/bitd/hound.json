@@ -1,8 +1,8 @@
 {
-  "name": "hound",
+  "id": "hound",
   "items": [
-    { "name": "fine pistol", "load": 1 },
-    { "name": "hunting pet", "load": 0 }
+    { "id": "fine pistol", "load": 1 },
+    { "id": "hunting pet", "load": 0 }
   ],
   "actionRatings": {
     "hunt": 2,
@@ -10,11 +10,11 @@
   },
   "specialAbilities": [
     {
-      "name": "sharpshooter",
+      "id": "sharpshooter",
       "description": "lorem ipsum"
     },
     {
-      "name": "focused",
+      "id": "focused",
       "description": "dolorem sic"
     }
   ]

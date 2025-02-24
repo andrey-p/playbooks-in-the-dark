@@ -3,7 +3,7 @@ import type ActionRatings from './action-ratings';
 import type SpecialAbility from './special-ability';
 
 type CharacterPlaybook = {
-  name: string,
+  id: string,
   items: Item[],
   actionRatings: ActionRatings,
   specialAbilities: SpecialAbility[]

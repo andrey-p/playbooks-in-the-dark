@@ -1,5 +1,5 @@
 type SpecialAbility = {
-  name: string,
+  id: string,
   description: string
 };
 

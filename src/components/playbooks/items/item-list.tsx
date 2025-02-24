@@ -11,7 +11,7 @@ export default function ItemList(props: Props) {
   return (
     <ul>
       {items.map(item => (
-        <li key={item.name}>
+        <li key={item.id}>
           <Item item={item} />
         </li>
       ))}

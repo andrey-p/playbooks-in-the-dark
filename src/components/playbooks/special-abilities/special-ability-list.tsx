@@ -11,7 +11,7 @@ export default function SpecialAbilityList(props: Props) {
   return (
     <ul>
       {specialAbilities.map(specialAbility => (
-        <li key={specialAbility.name}>
+        <li key={specialAbility.id}>
           <SpecialAbility
             specialAbility={specialAbility}
           />

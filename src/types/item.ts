@@ -1,5 +1,5 @@
 type Item = {
-  name: string,
+  id: string,
   load: number
 };
 
