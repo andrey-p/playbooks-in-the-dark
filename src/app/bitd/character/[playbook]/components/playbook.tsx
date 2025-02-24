@@ -17,7 +17,8 @@ export default function Playbook(props: Props) {
   const { playbookData, systemData } = props;
   const [userCharacterData, dispatch] = useReducer(userCharacterReducer, {
     actionRatings: Object.assign(playbookData.actionRatings),
-    attributeXp: {}
+    attributeXp: {},
+    selectedItems: []
   });
 
   return (
@@ -54,9 +55,21 @@ export default function Playbook(props: Props) {
 
         <ItemList
           items={playbookData.items}
+          selectedItems={userCharacterData.selectedItems}
+          onItemSelect={(itemId, selected) => dispatch({
+            type: 'set_item_selected',
+            itemId,
+            selected
+          })}
         />
         <ItemList
           items={systemData.commonItems}
+          selectedItems={userCharacterData.selectedItems}
+          onItemSelect={(itemId, selected) => dispatch({
+            type: 'set_item_selected',
+            itemId,
+            selected
+          })}
         />
       </div>
 
