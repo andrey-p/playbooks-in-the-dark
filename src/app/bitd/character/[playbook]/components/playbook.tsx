@@ -18,7 +18,8 @@ export default function Playbook(props: Props) {
   const [userCharacterData, dispatch] = useReducer(userCharacterReducer, {
     actionRatings: Object.assign(playbookData.actionRatings),
     attributeXp: {},
-    selectedItems: []
+    selectedItems: [],
+    selectedSpecialAbilities: []
   });
 
   return (
@@ -78,6 +79,12 @@ export default function Playbook(props: Props) {
 
         <SpecialAbilityList
           specialAbilities={playbookData.specialAbilities}
+          selectedAbilities={userCharacterData.selectedSpecialAbilities}
+          onSpecialAbilitySelect={(specialAbilityId, selected) => dispatch({
+            type: 'set_special_ability_selected',
+            specialAbilityId,
+            selected
+          })}
         />
       </div>
     </div>

@@ -7,7 +7,8 @@ type AttributeXp = {
 type UserCharacterData = {
   actionRatings: ActionRatings,
   attributeXp: AttributeXp,
-  selectedItems: string[]
+  selectedItems: string[],
+  selectedSpecialAbilities: string[]
 };
 
 export default UserCharacterData;

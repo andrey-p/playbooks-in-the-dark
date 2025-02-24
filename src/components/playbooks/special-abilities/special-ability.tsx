@@ -1,18 +1,28 @@
+import { useState } from 'react';
 import CircleToggle from '@/components/toggles/circle';
 import type { SpecialAbility } from '@/types';
 import styles from './special-ability.module.css';
 
 type Props = {
-  specialAbility: SpecialAbility
+  specialAbility: SpecialAbility,
+  selected: boolean,
+  onSelect: (selected: boolean) => void
 };
 
-export default function SpecialAbilitiesList(props: Props) {
-  const { specialAbility } = props;
+export default function SpecialAbility(props: Props) {
+  const { specialAbility, selected, onSelect } = props;
+  const [highlighted, setHighlighted] = useState<boolean>(false);
 
   return (
     <div className={styles.container}>
       <div className={styles.toggle}>
-        <CircleToggle />
+        <CircleToggle
+          filled={selected}
+          highlighted={highlighted}
+          onMouseEnter={() => setHighlighted(true)}
+          onMouseLeave={() => setHighlighted(false)}
+          onClick={() => onSelect(!selected)}
+        />
       </div>
 
       <span className={styles.name}>{specialAbility.id}:</span>

@@ -12,6 +12,23 @@ type Action = {
   type: 'set_item_selected',
   itemId: string,
   selected: boolean
+} | {
+  type: 'set_special_ability_selected',
+  specialAbilityId: string,
+  selected: boolean
+};
+
+const toggleEntry = (id: string, selected: boolean, entries: string[]): string[] => {
+  entries = entries.concat();
+  const idx = entries.indexOf(id);
+
+  if (selected && idx === -1) {
+    entries.push(id);
+  } else if (!selected && idx > -1) {
+    entries.splice(idx, 1);
+  }
+
+  return entries;
 };
 
 export default function userCharacterReducer(state: UserCharacterData, action: Action) {
@@ -25,14 +42,18 @@ export default function userCharacterReducer(state: UserCharacterData, action: A
       state.attributeXp[action.attribute] = action.value;
       break;
     case 'set_item_selected':
-      const idx = state.selectedItems.indexOf(action.itemId);
-
-      if (action.selected && idx === -1) {
-        state.selectedItems.push(action.itemId);
-      } else if (!action.selected && idx > -1) {
-        state.selectedItems.splice(idx, 1);
-      }
-
+      state.selectedItems = toggleEntry(
+        action.itemId,
+        action.selected,
+        state.selectedItems
+      );
+      break;
+    case 'set_special_ability_selected':
+      state.selectedSpecialAbilities = toggleEntry(
+        action.specialAbilityId,
+        action.selected,
+        state.selectedSpecialAbilities
+      );
       break;
   }
 
