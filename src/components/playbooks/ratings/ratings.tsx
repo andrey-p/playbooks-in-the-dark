@@ -5,23 +5,30 @@ import styles from './ratings.module.css';
 type Props = {
   attributeWithActions: AttributeWithActions,
   currentActionRatings: ActionRatings,
+  xp: number,
   onRatingUpdate: (actionName: string, value: number) => void,
   onXpUpdate: (attributeName: string, value: number) => void
 };
 
 export default function Ratings(props: Props) {
-  const { attributeWithActions, currentActionRatings, onRatingUpdate } = props;
+  const {
+    attributeWithActions,
+    currentActionRatings,
+    xp,
+    onRatingUpdate,
+    onXpUpdate
+  } = props;
 
   return (
     <div className={styles.container}>
       <h3 className={styles.title}>{attributeWithActions.name}</h3>
       <div className={styles.xp}>
         <Tracker
-          value={2}
+          value={xp}
           max={6}
           type='dagger'
           onValueSelect={(value) => {
-            onXpUpdate(attribute, value);
+            onXpUpdate(attributeWithActions.name, value);
           }}
         />
       </div>

@@ -32,7 +32,13 @@ export default function Playbook(props: Props) {
             <Ratings
               key={attribute.name}
               attributeWithActions={attribute}
-              currentActionRatings={localPlaybookData.actionRatings}
+              currentActionRatings={userCharacterData.actionRatings}
+              xp={userCharacterData.attributeXp[attribute.name] || 0}
+              onXpUpdate={(attribute, value) => dispatch({
+                type: 'set_attribute_xp',
+                attribute,
+                value
+              })}
               onRatingUpdate={(action, value) => dispatch({
                 type: 'set_action_rating',
                 action,
