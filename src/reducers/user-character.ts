@@ -7,6 +7,9 @@ type Action = {
   type: 'set_heritage',
   value: string
 } | {
+  type: 'set_stress',
+  value: number
+} | {
   type: 'set_action_rating',
   action: string,
   value: number
@@ -46,6 +49,9 @@ export default function userCharacterReducer(state: UserCharacterData, action: A
       break;
     case 'set_heritage':
       state.heritage = action.value;
+      break;
+    case 'set_stress':
+      state.stress = action.value;
       break;
     case 'set_action_rating':
       state.actionRatings[action.action] = action.value;

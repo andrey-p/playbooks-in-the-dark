@@ -6,6 +6,7 @@ import Ratings from '@/components/playbooks/ratings/ratings';
 import ItemList from '@/components/playbooks/items/item-list';
 import TextField from '@/components/playbooks/text-field/text-field';
 import SpecialAbilityList from '@/components/playbooks/special-abilities/special-ability-list';
+import SimpleTracker from '@/components/trackers/simple-tracker';
 import styles from './playbook.module.css';
 import { userCharacterReducer } from '@/reducers';
 
@@ -19,6 +20,8 @@ export default function Playbook(props: Props) {
   const [userCharacterData, dispatch] = useReducer(userCharacterReducer, {
     name: '',
     heritage: '',
+    stress: 0,
+    traumas: [],
     actionRatings: Object.assign(playbookData.actionRatings),
     attributeXp: {},
     selectedItems: [],
@@ -57,6 +60,22 @@ export default function Playbook(props: Props) {
             'Tycheros'
           ]}
         />
+      </div>
+
+      <div>
+        <h2>Stress and Trauma</h2>
+
+        <SimpleTracker
+          value={userCharacterData.stress}
+          type='dagger'
+          max={9}
+          onValueSelect={(value) => dispatch({
+            type: 'set_stress',
+            value
+          })}
+        />
+
+
       </div>
 
       <div>
