@@ -4,6 +4,7 @@ import { useReducer } from 'react';
 import type { CharacterPlaybook, System } from '@/types';
 import Ratings from '@/components/playbooks/ratings/ratings';
 import ItemList from '@/components/playbooks/items/item-list';
+import TextField from '@/components/playbooks/text-field/text-field';
 import SpecialAbilityList from '@/components/playbooks/special-abilities/special-ability-list';
 import styles from './playbook.module.css';
 import { userCharacterReducer } from '@/reducers';
@@ -16,6 +17,7 @@ type Props = {
 export default function Playbook(props: Props) {
   const { playbookData, systemData } = props;
   const [userCharacterData, dispatch] = useReducer(userCharacterReducer, {
+    name: '',
     actionRatings: Object.assign(playbookData.actionRatings),
     attributeXp: {},
     selectedItems: [],
@@ -25,6 +27,19 @@ export default function Playbook(props: Props) {
   return (
     <div>
       {playbookData.id}
+
+      <div>
+        <h2>Details</h2>
+
+        <TextField
+          text={userCharacterData.name}
+          label='name'
+          onTextUpdated={(value) => dispatch({
+            type: 'set_name',
+            value
+          })}
+        />
+      </div>
 
       <div>
         <h2>Attributes</h2>

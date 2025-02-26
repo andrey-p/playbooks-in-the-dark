@@ -1,6 +1,9 @@
 import type { UserCharacterData } from '@/types';
 
 type Action = {
+  type: 'set_name',
+  value: string
+} | {
   type: 'set_action_rating',
   action: string,
   value: number
@@ -35,6 +38,9 @@ export default function userCharacterReducer(state: UserCharacterData, action: A
   state = structuredClone(state);
 
   switch (action.type) {
+    case 'set_name':
+      state.name = action.value;
+      break;
     case 'set_action_rating':
       state.actionRatings[action.action] = action.value;
       break;

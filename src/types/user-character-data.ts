@@ -5,6 +5,7 @@ type AttributeXp = {
 };
 
 type UserCharacterData = {
+  name: string,
   actionRatings: ActionRatings,
   attributeXp: AttributeXp,
   selectedItems: string[],
