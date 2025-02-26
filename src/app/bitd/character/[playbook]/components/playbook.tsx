@@ -18,6 +18,7 @@ export default function Playbook(props: Props) {
   const { playbookData, systemData } = props;
   const [userCharacterData, dispatch] = useReducer(userCharacterReducer, {
     name: '',
+    heritage: '',
     actionRatings: Object.assign(playbookData.actionRatings),
     attributeXp: {},
     selectedItems: [],
@@ -38,6 +39,23 @@ export default function Playbook(props: Props) {
             type: 'set_name',
             value
           })}
+        />
+
+        <TextField
+          text={userCharacterData.heritage}
+          label='heritage'
+          onTextUpdated={(value) => dispatch({
+            type: 'set_heritage',
+            value
+          })}
+          examples={[
+            'Akoros',
+            'The Dagger Isles',
+            'Iruvia',
+            'Severos',
+            'Skovlan',
+            'Tycheros'
+          ]}
         />
       </div>
 

@@ -9,8 +9,9 @@
   border-bottom: 1px solid var(--foreground);
 }
 
-.label {
+.labelContainer {
   position: absolute;
+  display: flex;
   left: 0;
   bottom: 0;
 }

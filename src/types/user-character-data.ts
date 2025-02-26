@@ -6,6 +6,7 @@ type AttributeXp = {
 
 type UserCharacterData = {
   name: string,
+  heritage: string,
   actionRatings: ActionRatings,
   attributeXp: AttributeXp,
   selectedItems: string[],

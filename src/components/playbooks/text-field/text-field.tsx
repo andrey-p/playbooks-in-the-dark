@@ -1,14 +1,16 @@
 import { useId } from 'react';
 import styles from './text-field.module.css';
+import ExampleList from '@/components/example-list/example-list';
 
 type Props = {
   text: string,
   label: string,
-  onTextUpdated: (text: string) => void
+  onTextUpdated: (text: string) => void,
+  examples?: string[]
 };
 
 export default function TextField(props: Props) {
-  const { text, label, onTextUpdated } = props;
+  const { text, label, onTextUpdated, examples } = props;
   const consistentId = useId();
 
   return (
@@ -21,10 +23,21 @@ export default function TextField(props: Props) {
         name={consistentId}
         onChange={(e) => onTextUpdated(e.currentTarget.value)}
       />
-      <label
-        className={styles.label}
-        htmlFor={consistentId}
-      >{label}</label>
+      <div className={styles.labelContainer}>
+        <label
+          className={styles.label}
+          htmlFor={consistentId}
+        >
+          {label}
+          {examples && ':'}
+        </label>
+
+        {examples && (
+          <ExampleList
+            items={examples}
+          />
+        )}
+      </div>
     </div>
   );
 }

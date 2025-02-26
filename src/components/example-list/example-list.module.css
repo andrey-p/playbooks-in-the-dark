@@ -1,0 +1,24 @@
+.container {
+  overflow: hidden;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  /*
+   * each item will start with an em dash
+   * this will make sure that the first one on each row
+   * isn't showing
+   */
+  margin-left: -1rem;
+}
+
+.item {
+  white-space: nowrap;
+
+  &:before {
+    content: '—';
+  }
+}
