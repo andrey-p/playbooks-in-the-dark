@@ -7,6 +7,7 @@ import ItemList from '@/components/playbooks/items/item-list';
 import TextField from '@/components/playbooks/text-field/text-field';
 import SpecialAbilityList from '@/components/playbooks/special-abilities/special-ability-list';
 import SimpleTracker from '@/components/trackers/simple-tracker';
+import ExampleList from '@/components/example-list/example-list';
 import styles from './playbook.module.css';
 import { userCharacterReducer } from '@/reducers';
 
@@ -75,7 +76,32 @@ export default function Playbook(props: Props) {
           })}
         />
 
-
+        <div>
+          <SimpleTracker
+            value={userCharacterData.traumas.length}
+            type='dagger'
+            max={4}
+          />
+          <ExampleList
+            items={[
+              'Cold',
+              'Haunted',
+              'Obsessed',
+              'Paranoid',
+              'Reckless',
+              'Soft',
+              'Unstable',
+              'Vicious'
+            ]}
+            selectable
+            selectedItems={userCharacterData.traumas}
+            onItemSelected={(trauma, selected) => dispatch({
+              type: 'set_trauma_selected',
+              trauma,
+              selected
+            })}
+          />
+        </div>
       </div>
 
       <div>

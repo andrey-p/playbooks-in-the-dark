@@ -10,6 +10,10 @@ type Action = {
   type: 'set_stress',
   value: number
 } | {
+  type: 'set_trauma_selected',
+  trauma: string,
+  selected: boolean
+} | {
   type: 'set_action_rating',
   action: string,
   value: number
@@ -58,6 +62,13 @@ export default function userCharacterReducer(state: UserCharacterData, action: A
       break;
     case 'set_attribute_xp':
       state.attributeXp[action.attribute] = action.value;
+      break;
+    case 'set_trauma_selected':
+      state.traumas = toggleEntry(
+        action.trauma,
+        action.selected,
+        state.traumas
+      );
       break;
     case 'set_item_selected':
       state.selectedItems = toggleEntry(

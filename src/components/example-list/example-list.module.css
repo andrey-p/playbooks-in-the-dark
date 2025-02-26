@@ -17,8 +17,28 @@
 
 .item {
   white-space: nowrap;
+  padding-left: 1rem;
+  position: relative;
 
   &:before {
     content: '—';
+    position: absolute;
+    left: 0;
+  }
+}
+
+.selectable {
+  cursor: pointer;
+
+  &:before {
+    cursor: initial;
+  }
+}
+
+.selected {
+  text-decoration: underline;
+
+  &:before {
+    text-decoration: none;
   }
 }
