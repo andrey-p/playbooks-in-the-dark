@@ -2,6 +2,7 @@ import { getJson } from '@/lib/system-data';
 import CharacterPlaybook from '../components/playbook';
 import type { UserCharacterData } from '@/types';
 import { getCharacter } from '@/lib/store';
+import { notFound } from 'next/navigation';
 
 type Props = {
   params: Promise<{
@@ -17,6 +18,15 @@ export default async function Page(props: Props) {
   const systemData = getJson('bitd', 'system');
 
   const data = await getCharacter(id);
+
+  if (!data) {
+    return notFound();
+  }
+
+  // this should really only happen if someone's mucking about with the URLs
+  if (data.systemId !== 'bitd' || data.playbookId != 'playbook') {
+    return notFound();
+  }
 
   return (
     <CharacterPlaybook

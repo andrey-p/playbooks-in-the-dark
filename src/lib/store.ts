@@ -11,10 +11,25 @@ export const getCharacter = async (id: string) => {
   return result as UserCharacterData;
 };
 
+// very very basic validation
+//
+// this data is mostly arbitrary, and not rendered unsafely via React
+// so a size limit is probably the best way to validate this for now
+const validateData = (data: UserCharacterData) => {
+  if (JSON.stringify(data).length > 4000) {
+    throw new Error('playbook size too large');
+  }
+};
+
 export const saveCharacter = async (data: UserCharacterData) => {
-  // TODO validate
   if (!data.id) {
     data.id = nanoid();
+  }
+
+  try {
+    validateData(data);
+  } catch {
+    throw new Error('Couldn\'t save playbook');
   }
 
   await put(Resource.sheets.name, data);

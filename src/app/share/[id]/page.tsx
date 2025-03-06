@@ -1,4 +1,4 @@
-import { redirect } from 'next/navigation';
+import { redirect, notFound } from 'next/navigation';
 import { getCharacter } from '@/lib/store';
 
 type Props = {
@@ -11,8 +11,10 @@ export default async function Page(props: Props) {
   const data = await getCharacter(id);
   console.log(id);
 
-  // TODO error for no data?
   // TODO loading state?
+  if (!data) {
+    return notFound();
+  }
 
   redirect(`/${data.systemId}/character/${data.playbookId}/${id}`);
 }
