@@ -1,11 +1,24 @@
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { DynamoDBDocumentClient, GetCommand, PutCommand } from '@aws-sdk/lib-dynamodb';
 
-const client = new DynamoDBClient();
-const docClient = DynamoDBDocumentClient.from(client);
+
+let docClient: DynamoDBDocumentClient;
+
+const getClient = () => {
+  if (docClient) {
+    return docClient;
+  }
+
+  const client = new DynamoDBClient();
+  docClient = DynamoDBDocumentClient.from(client);
+
+  return docClient;
+};
 
 export async function get(tableName: string, key: object): Promise<object | null> {
-  const response = await docClient.send(
+  const client = getClient();
+
+  const response = await client.send(
     new GetCommand({
       TableName: tableName,
       Key: key
@@ -16,7 +29,9 @@ export async function get(tableName: string, key: object): Promise<object | null
 }
 
 export async function put(tableName: string, item: object): Promise<object | null> {
-  const putResponse = await docClient.send(
+  const client = getClient();
+
+  const putResponse = await client.send(
     new PutCommand({
       TableName: tableName,
       Item: item
@@ -26,7 +41,7 @@ export async function put(tableName: string, item: object): Promise<object | nul
   // TODO what should happen on failure?
 
   if (putResponse.$metadata.httpStatusCode === 200) {
-    const getResponse = await docClient.send(new GetCommand({
+    const getResponse = await client.send(new GetCommand({
       TableName: tableName,
       // TODO fix err
       Key: { id: item.id }
