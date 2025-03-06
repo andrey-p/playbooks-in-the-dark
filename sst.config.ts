@@ -8,9 +8,23 @@ export default $config({
       removal: input?.stage === "production" ? "retain" : "remove",
       protect: ["production"].includes(input?.stage),
       home: "aws",
+      providers: {
+        aws: {
+          profile: "playbooks-project"
+        }
+      }
     };
   },
   async run() {
-    new sst.aws.Nextjs("MyWeb");
-  },
+    const table = new sst.aws.Dynamo('characters', {
+      fields: {
+        id: "string"
+      },
+      primaryIndex: { hashKey: "id" }
+    });
+
+    new sst.aws.Nextjs("Playbooks", {
+      link: [table]
+    });
+  }
 });
