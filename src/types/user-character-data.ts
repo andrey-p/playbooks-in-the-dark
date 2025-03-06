@@ -5,6 +5,8 @@ type AttributeXp = {
 };
 
 type UserCharacterData = {
+  systemId: string,
+  playbookId: string,
   name: string,
   heritage: string,
   stress: number,

@@ -19,6 +19,8 @@ type Props = {
 export default function Playbook(props: Props) {
   const { playbookData, systemData } = props;
   const [userCharacterData, dispatch] = useReducer(userCharacterReducer, {
+    systemId: systemData.id,
+    playbookId: playbookData.id,
     name: '',
     heritage: '',
     stress: 0,
