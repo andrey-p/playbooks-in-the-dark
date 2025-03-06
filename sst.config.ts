@@ -16,7 +16,7 @@ export default $config({
     };
   },
   async run() {
-    const table = new sst.aws.Dynamo('characters', {
+    const table = new sst.aws.Dynamo('sheets', {
       fields: {
         id: "string"
       },

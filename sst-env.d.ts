@@ -9,7 +9,7 @@ declare module "sst" {
       "type": "sst.aws.Nextjs"
       "url": string
     }
-    "characters": {
+    "sheets": {
       "name": string
       "type": "sst.aws.Dynamo"
     }

@@ -6,7 +6,7 @@ import { nanoid } from 'nanoid';
 import type { UserCharacterData } from '@/types';
 
 export const getCharacter = async (id: string) => {
-  const result = await get(Resource.characters.name, { id });
+  const result = await get(Resource.sheets.name, { id });
 
   return result as UserCharacterData;
 };
@@ -17,7 +17,7 @@ export const saveCharacter = async (data: UserCharacterData) => {
     data.id = nanoid();
   }
 
-  await put(Resource.characters.name, data);
+  await put(Resource.sheets.name, data);
 
   return getCharacter(data.id);
 };
