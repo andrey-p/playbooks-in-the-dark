@@ -29,6 +29,16 @@ export default function Playbook(props: Props) {
     selectedSpecialAbilities: []
   });
 
+  const savePlaybook = () => {
+    fetch('/api/character', {
+      method: 'POST',
+      body: JSON.stringify(userCharacterData),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+  };
+
   return (
     <div>
       {playbookData.id}
@@ -165,6 +175,8 @@ export default function Playbook(props: Props) {
           })}
         />
       </div>
+
+      <button onClick={savePlaybook}>Save</button>
     </div>
   );
 }
