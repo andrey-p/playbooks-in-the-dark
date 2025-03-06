@@ -1,7 +1,7 @@
 'use client';
 
 import { useReducer } from 'react';
-import type { CharacterPlaybook, System } from '@/types';
+import type { UserCharacterData, CharacterPlaybook, System } from '@/types';
 import Ratings from '@/components/playbooks/ratings/ratings';
 import ItemList from '@/components/playbooks/items/item-list';
 import TextField from '@/components/playbooks/text-field/text-field';
@@ -11,34 +11,23 @@ import ExampleList from '@/components/example-list/example-list';
 import styles from './playbook.module.css';
 import { userCharacterReducer } from '@/reducers';
 
+import { saveCharacter } from '@/lib/store';
+
 type Props = {
   playbookData: CharacterPlaybook,
-  systemData: System
+  systemData: System,
+  userCharacterData: UserCharacterData
 };
 
 export default function Playbook(props: Props) {
-  const { playbookData, systemData } = props;
-  const [userCharacterData, dispatch] = useReducer(userCharacterReducer, {
-    systemId: systemData.id,
-    playbookId: playbookData.id,
-    name: '',
-    heritage: '',
-    stress: 0,
-    traumas: [],
-    actionRatings: Object.assign(playbookData.actionRatings),
-    attributeXp: {},
-    selectedItems: [],
-    selectedSpecialAbilities: []
-  });
+  const { userCharacterData: initialCharacterData, playbookData, systemData } = props;
+  const [userCharacterData, dispatch] = useReducer(userCharacterReducer, initialCharacterData);
 
-  const savePlaybook = () => {
-    fetch('/api/character', {
-      method: 'POST',
-      body: JSON.stringify(userCharacterData),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
+  const savePlaybook = async () => {
+    const data = await saveCharacter(userCharacterData);
+
+    const { id } = data;
+    console.log(`/character/share/${id}`);
   };
 
   return (
