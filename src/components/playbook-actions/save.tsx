@@ -1,8 +1,8 @@
-import { useState, useRef } from 'react';
-import styles from './save.module.css';
+import { useState, useRef } from "react";
+import styles from "./save.module.css";
 
 type Props = {
-  savePlaybook: () => Promise<{ shareableUrl: string }>
+  savePlaybook: () => Promise<{ shareableUrl: string }>;
 };
 
 export default function SaveAction(props: Props) {
@@ -22,24 +22,19 @@ export default function SaveAction(props: Props) {
 
   return (
     <div className={styles.container}>
-      <button onClick={onClick}>
-        Save
-      </button>
-      {
-        link &&
-          (
-            <label>
-              Shareable link
-              <input
-                type='text'
-                value={link || ''}
-                readOnly
-                onSelect={onSelect}
-                ref={inputRef}
-              />
-            </label>
-          )
-      }
+      <button onClick={onClick}>Save</button>
+      {link && (
+        <label>
+          Shareable link
+          <input
+            type="text"
+            value={link || ""}
+            readOnly
+            onSelect={onSelect}
+            ref={inputRef}
+          />
+        </label>
+      )}
     </div>
   );
 }

@@ -1,13 +1,13 @@
-import Tracker from '@/components/trackers/simple-tracker';
-import type { AttributeWithActions, ActionRatings } from '@/types';
-import styles from './ratings.module.css';
+import Tracker from "@/components/trackers/simple-tracker";
+import type { AttributeWithActions, ActionRatings } from "@/types";
+import styles from "./ratings.module.css";
 
 type Props = {
-  attributeWithActions: AttributeWithActions,
-  currentActionRatings: ActionRatings,
-  xp: number,
-  onRatingUpdate: (actionName: string, value: number) => void,
-  onXpUpdate: (attributeName: string, value: number) => void
+  attributeWithActions: AttributeWithActions;
+  currentActionRatings: ActionRatings;
+  xp: number;
+  onRatingUpdate: (actionName: string, value: number) => void;
+  onXpUpdate: (attributeName: string, value: number) => void;
 };
 
 export default function Ratings(props: Props) {
@@ -26,7 +26,7 @@ export default function Ratings(props: Props) {
         <Tracker
           value={xp}
           max={6}
-          type='dagger'
+          type="dagger"
           onValueSelect={(value) => {
             onXpUpdate(attributeWithActions.id, value);
           }}
@@ -34,15 +34,12 @@ export default function Ratings(props: Props) {
       </div>
 
       <ul className={styles.ratings}>
-        {attributeWithActions.actions.map(action => (
-          <li
-            key={action}
-            className={styles.rating}
-          >
+        {attributeWithActions.actions.map((action) => (
+          <li key={action} className={styles.rating}>
             <Tracker
               value={currentActionRatings[action] || 0}
               max={4}
-              type='circle'
+              type="circle"
               onValueSelect={(value) => {
                 onRatingUpdate(action, value);
               }}

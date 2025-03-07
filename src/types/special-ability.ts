@@ -1,6 +1,6 @@
 type SpecialAbility = {
-  id: string,
-  description: string
+  id: string;
+  description: string;
 };
 
 export default SpecialAbility;

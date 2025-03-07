@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import CircleToggle from '@/components/toggles/circle';
-import type { SpecialAbility } from '@/types';
-import styles from './special-ability.module.css';
+import { useState } from "react";
+import CircleToggle from "@/components/toggles/circle";
+import type { SpecialAbility } from "@/types";
+import styles from "./special-ability.module.css";
 
 type Props = {
-  specialAbility: SpecialAbility,
-  selected: boolean,
-  onSelect: (selected: boolean) => void
+  specialAbility: SpecialAbility;
+  selected: boolean;
+  onSelect: (selected: boolean) => void;
 };
 
 export default function SpecialAbility(props: Props) {

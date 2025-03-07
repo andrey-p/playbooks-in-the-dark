@@ -1,1 +1,1 @@
-export { default as userCharacterReducer } from './user-character';
+export { default as userCharacterReducer } from "./user-character";

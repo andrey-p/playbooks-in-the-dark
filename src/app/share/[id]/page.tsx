@@ -1,8 +1,8 @@
-import { redirect, notFound } from 'next/navigation';
-import { getCharacter } from '@/lib/store';
+import { redirect, notFound } from "next/navigation";
+import { getCharacter } from "@/lib/store";
 
 type Props = {
-  params: Promise<{ id: string }>
+  params: Promise<{ id: string }>;
 };
 
 export default async function Page(props: Props) {

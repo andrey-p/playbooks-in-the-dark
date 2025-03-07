@@ -1,10 +1,7 @@
 {
   "id": "bitd",
   "name": "Blades in the Dark",
-  "characterPlaybooks": [
-    "cutter",
-    "hound"
-  ],
+  "characterPlaybooks": ["cutter", "hound"],
   "commonItems": [
     { "id": "a knife or two", "load": 1 },
     { "id": "climbing equipment", "load": 2 }
@@ -12,24 +9,15 @@
   "attributesWithActions": [
     {
       "id": "insight",
-      "actions": [
-        "study",
-        "tinker"
-      ]
+      "actions": ["study", "tinker"]
     },
     {
       "id": "prowess",
-      "actions": [
-        "finesse",
-        "skirmish"
-      ]
+      "actions": ["finesse", "skirmish"]
     },
     {
       "id": "resolve",
-      "actions": [
-        "attune",
-        "consort"
-      ]
+      "actions": ["attune", "consort"]
     }
   ]
 }

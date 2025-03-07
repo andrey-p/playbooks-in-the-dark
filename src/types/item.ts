@@ -1,6 +1,6 @@
 type Item = {
-  id: string,
-  load: number
+  id: string;
+  load: number;
 };
 
 export default Item;

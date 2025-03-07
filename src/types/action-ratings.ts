@@ -1,5 +1,5 @@
 type ActionRatings = {
-  [key: string]: number
+  [key: string]: number;
 };
 
 export default ActionRatings;

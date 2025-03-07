@@ -16,7 +16,7 @@ export default $config({
     };
   },
   async run() {
-    const table = new sst.aws.Dynamo('sheets', {
+    const table = new sst.aws.Dynamo("sheets", {
       fields: {
         id: "string"
       },
@@ -26,9 +26,9 @@ export default $config({
     new sst.aws.Nextjs("Playbooks", {
       link: [table],
       environment: {
-        PLAYBOOKS_APP_URL: $dev ?
-          'http://localhost:3000' :
-          'https://example.com'
+        PLAYBOOKS_APP_URL: $dev
+          ? "http://localhost:3000"
+          : "https://example.com"
       }
     });
   }

@@ -1,15 +1,15 @@
-import { getJson } from '@/lib/system-data';
-import CharacterPlaybook from './components/playbook';
+import { getJson } from "@/lib/system-data";
+import CharacterPlaybook from "./components/playbook";
 
 type Props = {
-  params: Promise<{ playbook: string }>
+  params: Promise<{ playbook: string }>;
 };
 
 export default async function Page(props: Props) {
-  const { playbook } = await (props.params);
+  const { playbook } = await props.params;
 
-  const playbookData = getJson('bitd', playbook);
-  const systemData = getJson('bitd', 'system');
+  const playbookData = getJson("bitd", playbook);
+  const systemData = getJson("bitd", "system");
 
   console.log(playbookData);
 
@@ -20,8 +20,8 @@ export default async function Page(props: Props) {
       userCharacterData={{
         systemId: systemData.id,
         playbookId: playbookData.id,
-        name: '',
-        heritage: '',
+        name: "",
+        heritage: "",
         stress: 0,
         traumas: [],
         actionRatings: Object.assign(playbookData.actionRatings),

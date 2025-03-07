@@ -1,10 +1,10 @@
-import type ItemType from '@/types/item';
-import Item from './item';
+import type ItemType from "@/types/item";
+import Item from "./item";
 
 type Props = {
-  items: ItemType[],
-  selectedItems: string[],
-  onItemSelect: (id: string, selected: boolean) => void
+  items: ItemType[];
+  selectedItems: string[];
+  onItemSelect: (id: string, selected: boolean) => void;
 };
 
 export default function ItemList(props: Props) {
@@ -12,7 +12,7 @@ export default function ItemList(props: Props) {
 
   return (
     <ul>
-      {items.map(item => (
+      {items.map((item) => (
         <li key={item.id}>
           <Item
             item={item}

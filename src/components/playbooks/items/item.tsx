@@ -1,11 +1,11 @@
-import type Item from '@/types/item';
-import ItemToggle from './item-toggle';
-import styles from './item.module.css';
+import type Item from "@/types/item";
+import ItemToggle from "./item-toggle";
+import styles from "./item.module.css";
 
 type Props = {
-  item: Item,
-  selected: boolean,
-  onSelect: (selected: boolean) => void
+  item: Item;
+  selected: boolean;
+  onSelect: (selected: boolean) => void;
 };
 
 export default function Item(props: Props) {
@@ -13,12 +13,8 @@ export default function Item(props: Props) {
 
   return (
     <div className={styles.container}>
-      <ItemToggle
-        load={item.load}
-        selected={selected}
-        onSelect={onSelect}
-      />
-      <span className={item.load === 0 ? styles.noLoadItem : ''}>
+      <ItemToggle load={item.load} selected={selected} onSelect={onSelect} />
+      <span className={item.load === 0 ? styles.noLoadItem : ""}>
         {item.id}
       </span>
     </div>

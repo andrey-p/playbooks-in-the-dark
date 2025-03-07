@@ -1,25 +1,20 @@
-import styles from './example-list.module.css';
-import clsx from 'clsx';
+import styles from "./example-list.module.css";
+import clsx from "clsx";
 
 type Props = {
-  items: string[],
-  selectable?: boolean,
-  selectedItems?: string[],
-  onItemSelected?: (item: string, selected: boolean) => void
+  items: string[];
+  selectable?: boolean;
+  selectedItems?: string[];
+  onItemSelected?: (item: string, selected: boolean) => void;
 };
 
 export default function ExampleList(props: Props) {
-  const {
-    items,
-    onItemSelected,
-    selectable,
-    selectedItems = []
-  } = props;
+  const { items, onItemSelected, selectable, selectedItems = [] } = props;
 
   return (
     <div className={styles.container}>
       <ul className={styles.list}>
-        {items.map(item => {
+        {items.map((item) => {
           const selected = selectedItems.includes(item);
 
           return (
@@ -35,7 +30,9 @@ export default function ExampleList(props: Props) {
                   onItemSelected(item, !selected);
                 }
               }}
-            >{item}</li>
+            >
+              {item}
+            </li>
           );
         })}
       </ul>

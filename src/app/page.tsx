@@ -1,20 +1,16 @@
 //import styles from "./page.module.css";
-import Link from 'next/link';
-import { getJson } from '@/lib/system-data';
-import type { System } from '@/types';
+import Link from "next/link";
+import { getJson } from "@/lib/system-data";
+import type { System } from "@/types";
 
 export default function Home() {
-  const systemData = getJson('bitd', 'system') as System;
+  const systemData = getJson("bitd", "system") as System;
 
   return (
     <div>
       New character:
-
-      {systemData.characterPlaybooks.map(playbook => (
-        <Link
-          key={playbook}
-          href={`bitd/character/${playbook}`}
-        >
+      {systemData.characterPlaybooks.map((playbook) => (
+        <Link key={playbook} href={`bitd/character/${playbook}`}>
           {playbook}
         </Link>
       ))}

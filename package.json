@@ -6,7 +6,8 @@
     "build": "next build",
     "dev": "next dev --turbopack",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "prettier": "prettier . --write"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.758.0",
@@ -25,6 +26,10 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
+    "prettier": "^3.5.3",
     "typescript": "^5"
+  },
+  "prettier": {
+    "trailingComma": "none"
   }
 }

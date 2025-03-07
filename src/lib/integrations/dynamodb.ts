@@ -1,5 +1,9 @@
-import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
-import { DynamoDBDocumentClient, GetCommand, PutCommand } from '@aws-sdk/lib-dynamodb';
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import {
+  DynamoDBDocumentClient,
+  GetCommand,
+  PutCommand
+} from "@aws-sdk/lib-dynamodb";
 
 let docClient: DynamoDBDocumentClient;
 
@@ -14,7 +18,10 @@ const getClient = () => {
   return docClient;
 };
 
-export async function get(tableName: string, key: object): Promise<object | null> {
+export async function get(
+  tableName: string,
+  key: object
+): Promise<object | null> {
   const client = getClient();
 
   const response = await client.send(
