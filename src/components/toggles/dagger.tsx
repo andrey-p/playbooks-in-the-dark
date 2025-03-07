@@ -9,7 +9,13 @@ export default function Dagger(props: ToggleProps) {
   const width = height / 2.5;
 
   return (
-    <div style={{ width, height }} {...rest}>
+    <button
+      role="switch"
+      aria-checked={filled}
+      style={{ width, height }}
+      className={styles.container}
+      {...rest}
+    >
       <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
         <path
           className={clsx(
@@ -20,6 +26,6 @@ export default function Dagger(props: ToggleProps) {
           d={`M 0,0 ${width},0 ${width},${height / 1.5} 0,${height} Z`}
         />
       </svg>
-    </div>
+    </button>
   );
 }

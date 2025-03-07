@@ -9,7 +9,9 @@ export default function Square(props: ToggleProps) {
   size = size || 25;
 
   return (
-    <div
+    <button
+      role="switch"
+      aria-checked={filled}
       style={{ width: size, height: size }}
       className={clsx(
         styles.default,
@@ -17,6 +19,6 @@ export default function Square(props: ToggleProps) {
         highlighted && styles.highlighted
       )}
       {...rest}
-    ></div>
+    ></button>
   );
 }
