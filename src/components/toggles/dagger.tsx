@@ -13,6 +13,7 @@ export default function Dagger(props: ToggleProps) {
       role="switch"
       aria-checked={filled}
       style={{ width, height }}
+      className={styles.container}
       {...rest}
     >
       <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
