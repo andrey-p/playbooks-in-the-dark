@@ -1,11 +1,11 @@
 import { useState, useRef } from 'react';
-import styles from './share-button.module.css';
+import styles from './save.module.css';
 
 type Props = {
   savePlaybook: () => Promise<{ shareableUrl: string }>
 };
 
-export default function ShareButton(props: Props) {
+export default function SaveAction(props: Props) {
   const { savePlaybook } = props;
   const [link, setLink] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -22,8 +22,11 @@ export default function ShareButton(props: Props) {
 
   return (
     <div className={styles.container}>
+      <button onClick={onClick}>
+        Save
+      </button>
       {
-        link ?
+        link &&
           (
             <label>
               Shareable link
@@ -35,11 +38,6 @@ export default function ShareButton(props: Props) {
                 ref={inputRef}
               />
             </label>
-          ) :
-          (
-            <button onClick={onClick}>
-              Create shareable link
-            </button>
           )
       }
     </div>

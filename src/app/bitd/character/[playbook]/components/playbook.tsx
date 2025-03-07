@@ -10,7 +10,7 @@ import SimpleTracker from '@/components/trackers/simple-tracker';
 import ExampleList from '@/components/example-list/example-list';
 import styles from './playbook.module.css';
 import { userCharacterReducer } from '@/reducers';
-import ShareButton from '@/components/share-button/share-button';
+import SaveAction from '@/components/playbook-actions/save';
 
 import { getEnvVar } from '@/lib/env';
 import { saveCharacter } from '@/lib/store';
@@ -171,11 +171,9 @@ export default function Playbook(props: Props) {
         />
       </div>
 
-      {!initialCharacterData.id && (
-        <ShareButton
-          savePlaybook={savePlaybook}
-        />
-      )}
+      <SaveAction
+        savePlaybook={savePlaybook}
+      />
     </div>
   );
 }
