@@ -171,9 +171,11 @@ export default function Playbook(props: Props) {
         />
       </div>
 
-      <ShareButton
-        savePlaybook={savePlaybook}
-      />
+      {!initialCharacterData.id && (
+        <ShareButton
+          savePlaybook={savePlaybook}
+        />
+      )}
     </div>
   );
 }

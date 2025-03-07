@@ -22,22 +22,25 @@ export default function ShareButton(props: Props) {
 
   return (
     <div className={styles.container}>
-      <button onClick={onClick}>
-        Create shareable link
-      </button>
       {
-        link && (
-          <label>
-            Shareable link
-            <input
-              type='text'
-              value={link || ''}
-              readOnly
-              onSelect={onSelect}
-              ref={inputRef}
-            />
-          </label>
-        )
+        link ?
+          (
+            <label>
+              Shareable link
+              <input
+                type='text'
+                value={link || ''}
+                readOnly
+                onSelect={onSelect}
+                ref={inputRef}
+              />
+            </label>
+          ) :
+          (
+            <button onClick={onClick}>
+              Create shareable link
+            </button>
+          )
       }
     </div>
   );
