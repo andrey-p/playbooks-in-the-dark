@@ -23,7 +23,7 @@ export default async function Page(props: Props) {
   }
 
   // this should really only happen if someone's mucking about with the URLs
-  if (data.systemId !== 'bitd' || data.playbookId != 'playbook') {
+  if (data.systemId !== 'bitd' || data.playbookId !== playbook) {
     return notFound();
   }
 
