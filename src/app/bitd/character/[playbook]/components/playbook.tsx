@@ -1,7 +1,7 @@
 'use client';
 
 import { useReducer } from 'react';
-import type { CharacterPlaybook, System } from '@/types';
+import type { UserCharacterData, CharacterPlaybook, System } from '@/types';
 import Ratings from '@/components/playbooks/ratings/ratings';
 import ItemList from '@/components/playbooks/items/item-list';
 import TextField from '@/components/playbooks/text-field/text-field';
@@ -10,24 +10,29 @@ import SimpleTracker from '@/components/trackers/simple-tracker';
 import ExampleList from '@/components/example-list/example-list';
 import styles from './playbook.module.css';
 import { userCharacterReducer } from '@/reducers';
+import SaveAction from '@/components/playbook-actions/save';
+
+import { getEnvVar } from '@/lib/env';
+import { saveCharacter } from '@/lib/store';
 
 type Props = {
   playbookData: CharacterPlaybook,
-  systemData: System
+  systemData: System,
+  userCharacterData: UserCharacterData
 };
 
 export default function Playbook(props: Props) {
-  const { playbookData, systemData } = props;
-  const [userCharacterData, dispatch] = useReducer(userCharacterReducer, {
-    name: '',
-    heritage: '',
-    stress: 0,
-    traumas: [],
-    actionRatings: Object.assign(playbookData.actionRatings),
-    attributeXp: {},
-    selectedItems: [],
-    selectedSpecialAbilities: []
-  });
+  const { userCharacterData: initialCharacterData, playbookData, systemData } = props;
+  const [userCharacterData, dispatch] = useReducer(userCharacterReducer, initialCharacterData);
+
+  const savePlaybook = async () => {
+    const data = await saveCharacter(userCharacterData);
+    const baseUrl = await getEnvVar('APP_URL');
+
+    return {
+      shareableUrl: `${baseUrl}/share/${data.id}`
+    };
+  };
 
   return (
     <div>
@@ -165,6 +170,10 @@ export default function Playbook(props: Props) {
           })}
         />
       </div>
+
+      <SaveAction
+        savePlaybook={savePlaybook}
+      />
     </div>
   );
 }

@@ -17,6 +17,18 @@ export default async function Page(props: Props) {
     <CharacterPlaybook
       playbookData={playbookData}
       systemData={systemData}
+      userCharacterData={{
+        systemId: systemData.id,
+        playbookId: playbookData.id,
+        name: '',
+        heritage: '',
+        stress: 0,
+        traumas: [],
+        actionRatings: Object.assign(playbookData.actionRatings),
+        attributeXp: {},
+        selectedItems: [],
+        selectedSpecialAbilities: []
+      }}
     />
   );
 }
