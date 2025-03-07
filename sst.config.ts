@@ -24,7 +24,12 @@ export default $config({
     });
 
     new sst.aws.Nextjs("Playbooks", {
-      link: [table]
+      link: [table],
+      environment: {
+        PLAYBOOKS_APP_URL: $dev ?
+          'http://localhost:3000' :
+          'https://example.com'
+      }
     });
   }
 });

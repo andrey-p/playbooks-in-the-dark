@@ -10,7 +10,9 @@ import SimpleTracker from '@/components/trackers/simple-tracker';
 import ExampleList from '@/components/example-list/example-list';
 import styles from './playbook.module.css';
 import { userCharacterReducer } from '@/reducers';
+import ShareButton from '@/components/share-button/share-button';
 
+import { getEnvVar } from '@/lib/env';
 import { saveCharacter } from '@/lib/store';
 
 type Props = {
@@ -25,9 +27,11 @@ export default function Playbook(props: Props) {
 
   const savePlaybook = async () => {
     const data = await saveCharacter(userCharacterData);
+    const baseUrl = await getEnvVar('APP_URL');
 
-    const { id } = data;
-    console.log(`/character/share/${id}`);
+    return {
+      shareableUrl: `${baseUrl}/share/${data.id}`
+    };
   };
 
   return (
@@ -167,7 +171,9 @@ export default function Playbook(props: Props) {
         />
       </div>
 
-      <button onClick={savePlaybook}>Save</button>
+      <ShareButton
+        savePlaybook={savePlaybook}
+      />
     </div>
   );
 }
