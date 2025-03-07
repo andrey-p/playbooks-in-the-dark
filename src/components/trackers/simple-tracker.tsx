@@ -29,6 +29,8 @@ function getToggleComponent(type: TrackerType): React.FC {
 
 export default function SimpleTracker(props: Props) {
   const { value, max, type, onValueSelect } = props;
+  // is borke https://github.com/facebook/react/issues/31687
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [highlightedValue, setHighlightedValue] = useState<number | null>(null);
 
   const toggles = [];
