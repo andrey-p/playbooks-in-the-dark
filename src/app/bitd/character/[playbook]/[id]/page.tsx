@@ -1,6 +1,5 @@
 import { getJson } from '@/lib/system-data';
 import CharacterPlaybook from '../components/playbook';
-import type { UserCharacterData } from '@/types';
 import { getCharacter } from '@/lib/store';
 import { notFound } from 'next/navigation';
 
@@ -32,7 +31,7 @@ export default async function Page(props: Props) {
     <CharacterPlaybook
       playbookData={playbookData}
       systemData={systemData}
-      userCharacterData={data as UserCharacterData}
+      userCharacterData={data}
     />
   );
 }

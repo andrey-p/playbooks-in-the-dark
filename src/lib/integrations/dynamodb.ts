@@ -27,7 +27,7 @@ export async function get(tableName: string, key: object): Promise<object | null
   return response.Item || null;
 }
 
-export async function put(tableName: string, item: object): Promise<object | null> {
+export async function put(tableName: string, item: object): Promise<void> {
   const client = getClient();
 
   await client.send(
@@ -36,8 +36,4 @@ export async function put(tableName: string, item: object): Promise<object | nul
       Item: item
     })
   );
-
-  // TODO what should happen on failure?
-
-  return null;
 }

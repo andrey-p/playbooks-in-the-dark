@@ -9,9 +9,7 @@ export default async function Page(props: Props) {
   const { id } = await props.params;
 
   const data = await getCharacter(id);
-  console.log(id);
 
-  // TODO loading state?
   if (!data) {
     return notFound();
   }
