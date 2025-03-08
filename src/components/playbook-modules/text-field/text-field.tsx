@@ -1,16 +1,26 @@
 import { useId } from "react";
+import { z } from "zod";
 import styles from "./text-field.module.css";
 import ExampleList from "@/components/example-list/example-list";
+import type { SharedModuleProps } from '../playbook-modules.types';
 
-type Props = {
+const SystemModuleProps = z.object({
+  examples: z.string().array().optional()
+}).optional();
+
+type Props = SharedModuleProps & {
+  systemModuleData: {
+    props: z.infer<typeof SystemModuleProps>
+  }
   text: string;
-  label: string;
-  onTextUpdated: (text: string) => void;
-  examples?: string[];
+  //onTextUpdated: (text: string) => void;
 };
 
 export default function TextField(props: Props) {
-  const { text, label, onTextUpdated, examples } = props;
+  const { systemModuleData } = props;
+  const { examples } = SystemModuleProps.parse(systemModuleData.props) || {};
+
+  const { text, onTextUpdated } = props;
   const consistentId = useId();
 
   return (
@@ -25,7 +35,7 @@ export default function TextField(props: Props) {
       />
       <div className={styles.labelContainer}>
         <label className={styles.label} htmlFor={consistentId}>
-          {label}
+          {systemModuleData.label}
           {examples && ":"}
         </label>
 

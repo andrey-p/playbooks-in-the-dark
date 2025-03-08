@@ -17,5 +17,41 @@
       "id": "resolve",
       "actions": ["attune", "consort"]
     }
-  ]
+  ],
+  "layout": [
+    [
+      "name",
+      "heritage"
+    ]
+  ],
+  "modules": {
+    "name": {
+      "id": "name",
+      "type": "textField",
+      "label": "Name"
+    },
+    "heritage": {
+      "id": "heritage",
+      "type": "textField",
+      "label": "Heritage",
+      "props": {
+        "examples": [
+          "Akoros",
+          "The Dagger Isles",
+          "Iruvia",
+          "Severos",
+          "Skovlan",
+          "Tycheros"
+        ]
+      }
+    },
+    "stress": {
+      "id": "stress",
+      "type": "tracker",
+      "props": {
+        "trackerType": "dagger",
+        "max": 9
+      }
+    }
+  }
 }
