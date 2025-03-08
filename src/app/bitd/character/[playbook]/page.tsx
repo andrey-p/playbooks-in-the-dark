@@ -1,4 +1,9 @@
 import { getJson } from "@/lib/system-data";
+import type {
+  CharacterPlaybook as CharacterPlaybookType,
+  SystemCharacters as SystemCharactersType,
+  System as SystemType
+} from "@/types";
 import CharacterPlaybook from "./components/playbook";
 
 type Props = {
@@ -8,15 +13,17 @@ type Props = {
 export default async function Page(props: Props) {
   const { playbook } = await props.params;
 
-  const playbookData = getJson("bitd", playbook);
-  const systemData = getJson("bitd", "system");
-
-  console.log(playbookData);
+  const playbookData = getJson("bitd", playbook) as CharacterPlaybookType;
+  const systemData = getJson("bitd", "system") as SystemType;
+  const systemCharactersData = getJson(
+    "bitd",
+    "characters"
+  ) as SystemCharactersType;
 
   return (
     <CharacterPlaybook
       playbookData={playbookData}
-      systemData={systemData}
+      systemCharactersData={systemCharactersData}
       userCharacterData={{
         systemId: systemData.id,
         playbookId: playbookData.id,

@@ -1,0 +1,21 @@
+{
+  "playbooks": ["cutter", "hound"],
+  "commonItems": [
+    { "id": "a knife or two", "load": 1 },
+    { "id": "climbing equipment", "load": 2 }
+  ],
+  "attributesWithActions": [
+    {
+      "id": "insight",
+      "actions": ["study", "tinker"]
+    },
+    {
+      "id": "prowess",
+      "actions": ["finesse", "skirmish"]
+    },
+    {
+      "id": "resolve",
+      "actions": ["attune", "consort"]
+    }
+  ]
+}

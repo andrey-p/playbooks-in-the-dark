@@ -1,7 +1,11 @@
 "use client";
 
 import { useReducer } from "react";
-import type { UserCharacterData, CharacterPlaybook, System } from "@/types";
+import type {
+  UserCharacterData,
+  CharacterPlaybook,
+  SystemCharacters
+} from "@/types";
 import Ratings from "@/components/playbooks/ratings/ratings";
 import ItemList from "@/components/playbooks/items/item-list";
 import TextField from "@/components/playbooks/text-field/text-field";
@@ -17,7 +21,7 @@ import { saveCharacter } from "@/lib/store";
 
 type Props = {
   playbookData: CharacterPlaybook;
-  systemData: System;
+  systemCharactersData: SystemCharacters;
   userCharacterData: UserCharacterData;
 };
 
@@ -25,7 +29,7 @@ export default function Playbook(props: Props) {
   const {
     userCharacterData: initialCharacterData,
     playbookData,
-    systemData
+    systemCharactersData
   } = props;
   const [userCharacterData, dispatch] = useReducer(
     userCharacterReducer,
@@ -128,7 +132,7 @@ export default function Playbook(props: Props) {
         <h2>Attributes</h2>
 
         <div className={styles.attributes}>
-          {systemData.attributesWithActions.map((attribute) => (
+          {systemCharactersData.attributesWithActions.map((attribute) => (
             <Ratings
               key={attribute.id}
               attributeWithActions={attribute}
@@ -168,7 +172,7 @@ export default function Playbook(props: Props) {
           }
         />
         <ItemList
-          items={systemData.commonItems}
+          items={systemCharactersData.commonItems}
           selectedItems={userCharacterData.selectedItems}
           onItemSelect={(itemId, selected) =>
             dispatch({
