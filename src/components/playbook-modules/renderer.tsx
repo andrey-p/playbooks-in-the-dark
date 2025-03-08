@@ -1,4 +1,5 @@
-import type { PlaybookModule } from '@/types';
+import type { PlaybookModule, UserCharacterData } from '@/types';
+import type Action from '@/reducers/user-character-action';
 
 import TextField from './text-field/text-field';
 // import Tracker from './tracker/tracker';
@@ -7,11 +8,13 @@ type Props = {
   layout: string[][],
   modules: {
     [key: string]: PlaybookModule
-  }
+  },
+  userCharacterData: UserCharacterData,
+  dispatch: React.ActionDispatch<[Action]>
 };
 
 export default function Renderer(props: Props) {
-  const { layout, modules } = props;
+  const { layout, modules, userCharacterData, dispatch } = props;
 
   return layout.map(column => {
     return column.map(moduleId => {
@@ -27,8 +30,13 @@ export default function Renderer(props: Props) {
             <TextField
               key={moduleId}
               systemModuleData={moduleData}
-              text='foo'
-              //onTextUpdated: () => {}
+              value={userCharacterData[moduleId]}
+              onUpdate={(value) => {
+                dispatch({
+                  type: 'set_' + moduleId,
+                  value
+                });
+              }}
             />
           );
         default:

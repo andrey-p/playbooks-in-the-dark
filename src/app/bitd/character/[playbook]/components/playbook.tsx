@@ -55,6 +55,8 @@ export default function Playbook(props: Props) {
         <ModuleRenderer
           layout={systemCharactersData.layout}
           modules={systemCharactersData.modules}
+          userCharacterData={userCharacterData}
+          dispatch={dispatch}
         />
       }
 

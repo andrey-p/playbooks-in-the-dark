@@ -8,30 +8,27 @@ const SystemModuleProps = z.object({
   examples: z.string().array().optional()
 }).optional();
 
-type Props = SharedModuleProps & {
+type Props = SharedModuleProps<string> & {
   systemModuleData: {
     props: z.infer<typeof SystemModuleProps>
   }
-  text: string;
-  //onTextUpdated: (text: string) => void;
 };
 
 export default function TextField(props: Props) {
-  const { systemModuleData } = props;
+  const { systemModuleData, value, onUpdate } = props;
   const { examples } = SystemModuleProps.parse(systemModuleData.props) || {};
 
-  const { text, onTextUpdated } = props;
   const consistentId = useId();
 
   return (
     <div className={styles.container}>
       <input
         type="text"
-        value={text}
+        value={value}
         className={styles.input}
         id={consistentId}
         name={consistentId}
-        onChange={(e) => onTextUpdated(e.currentTarget.value)}
+        onChange={(e) => onUpdate(e.currentTarget.value)}
       />
       <div className={styles.labelContainer}>
         <label className={styles.label} htmlFor={consistentId}>
