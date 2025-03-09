@@ -23,12 +23,14 @@
     "name": {
       "id": "name",
       "type": "textField",
-      "label": "Name"
+      "label": "Name",
+      "default": ""
     },
     "heritage": {
       "id": "heritage",
       "type": "textField",
       "label": "Heritage",
+      "default": "",
       "props": {
         "examples": [
           "Akoros",
