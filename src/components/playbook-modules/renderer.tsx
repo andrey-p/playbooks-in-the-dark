@@ -62,7 +62,7 @@ export default function Renderer(props: Props) {
             <TextField
               key={moduleId}
               systemModuleData={moduleData}
-              value={schema.Value.parse(value)}
+              value={schema.Value.parse(value || moduleData.default)}
               onUpdate={(value) => {
                 dispatch({ type: "set_string", key: moduleId, value });
               }}

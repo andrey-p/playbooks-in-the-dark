@@ -14,12 +14,14 @@ describe("Renderer", () => {
           name: {
             id: "name",
             type: "textField",
-            label: "Name"
+            label: "Name",
+            default: ""
           },
           heritage: {
             id: "heritage",
             type: "textField",
             label: "Heritage",
+            default: "",
             props: {
               examples: ["Iruvia", "Akoros"]
             }
@@ -29,8 +31,7 @@ describe("Renderer", () => {
           id: undefined,
           systemId: "bitd",
           playbookId: "cutter",
-          name: "sss",
-          heritage: ""
+          name: "sss"
         }}
         dispatch={dispatch}
       />
@@ -65,21 +66,21 @@ describe("Renderer", () => {
             name: {
               id: "name",
               type: "textField",
+              default: "",
               label: "Name"
             }
           }}
           userCharacterData={{
             id: undefined,
             systemId: "bitd",
-            playbookId: "cutter",
-            name: "sss"
+            playbookId: "cutter"
           }}
           dispatch={jest.fn()}
         />
       );
-    }).toThrow();
+    }).toThrow(/missing module/);
   });
-  it("throws if trying to render an undefined module", () => {
+  it("throws if trying to render an unknown module", () => {
     expect(() => {
       render(
         <Renderer
@@ -88,19 +89,19 @@ describe("Renderer", () => {
             name: {
               id: "name",
               type: "textFeeled",
+              default: "",
               label: "Name"
             }
           }}
           userCharacterData={{
             id: undefined,
             systemId: "bitd",
-            playbookId: "cutter",
-            name: "sss"
+            playbookId: "cutter"
           }}
           dispatch={jest.fn()}
         />
       );
-    }).toThrow();
+    }).toThrow(/no schema defined/);
   });
   it("throws if any of the shared module props are incorrect", () => {
     expect(() => {
@@ -111,6 +112,7 @@ describe("Renderer", () => {
             name: {
               id: "name",
               type: "textField",
+              default: "",
               // @ts-expect-error - yes, I know, TS, this is the point of the test
               lable: "Name"
             }
@@ -118,8 +120,7 @@ describe("Renderer", () => {
           userCharacterData={{
             id: undefined,
             systemId: "bitd",
-            playbookId: "cutter",
-            name: "sss"
+            playbookId: "cutter"
           }}
           dispatch={jest.fn()}
         />
@@ -136,6 +137,7 @@ describe("Renderer", () => {
               id: "name",
               type: "textField",
               label: "Name",
+              default: "",
               props: {
                 examples: 123
               }
@@ -144,8 +146,7 @@ describe("Renderer", () => {
           userCharacterData={{
             id: undefined,
             systemId: "bitd",
-            playbookId: "cutter",
-            name: "sss"
+            playbookId: "cutter"
           }}
           dispatch={jest.fn()}
         />
@@ -162,6 +163,7 @@ describe("Renderer", () => {
               id: "name",
               type: "textField",
               label: "Name",
+              default: "",
               props: {
                 examples: 123
               }
