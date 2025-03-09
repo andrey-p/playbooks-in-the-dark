@@ -14,6 +14,12 @@ export default function userCharacterReducer(
     case "set_number":
       state[action.key] = action.value;
       break;
+    case "set_string_array":
+      state[action.key] = action.value;
+      break;
+    default:
+      throw new Error('unexpected action type: ' + action.type);
+
     // case "set_action_rating":
     //   state.actionRatings[action.action] = action.value;
     //   break;
@@ -25,13 +31,6 @@ export default function userCharacterReducer(
     //     action.trauma,
     //     action.selected,
     //     state.traumas
-    //   );
-    //   break;
-    // case "set_item_selected":
-    //   state.selectedItems = toggleEntry(
-    //     action.itemId,
-    //     action.selected,
-    //     state.selectedItems
     //   );
     //   break;
     // case "set_special_ability_selected":
