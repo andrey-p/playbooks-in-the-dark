@@ -25,6 +25,7 @@ export default async function Page(props: Props) {
       playbookData={playbookData}
       systemCharactersData={systemCharactersData}
       userCharacterData={{
+        id: undefined,
         systemId: systemData.id,
         playbookId: playbookData.id,
         name: "",
