@@ -5,5 +5,5 @@ export const SystemModuleData = z.object({
   type: z.string(),
   label: z.string(),
   default: z.any(),
-  props: z.object({}).optional()
+  props: z.any()
 });

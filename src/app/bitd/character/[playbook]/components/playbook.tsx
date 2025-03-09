@@ -6,6 +6,7 @@ import type {
   CharacterPlaybook,
   SystemCharacters
 } from "@/types";
+/*
 import Ratings from "@/components/playbooks/ratings/ratings";
 import ItemList from "@/components/playbooks/items/item-list";
 import TextField from "@/components/playbooks/text-field/text-field";
@@ -13,6 +14,7 @@ import SpecialAbilityList from "@/components/playbooks/special-abilities/special
 import SimpleTracker from "@/components/trackers/simple-tracker";
 import ExampleList from "@/components/example-list/example-list";
 import styles from "./playbook.module.css";
+*/
 import ModuleRenderer from "@/components/playbook-modules/renderer";
 import { userCharacterReducer } from "@/reducers";
 import SaveAction from "@/components/playbook-actions/save";

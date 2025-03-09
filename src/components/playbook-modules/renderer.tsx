@@ -1,4 +1,3 @@
-import { z } from "zod";
 import type { UserCharacterData } from "@/types";
 import type Action from "@/reducers/user-character-action";
 
@@ -13,7 +12,7 @@ import Tracker from "./tracker/tracker";
 type Props = {
   layout: string[][];
   modules: {
-    [key: string]: z.infer<typeof SystemModuleData>;
+    [key: string]: object;
   };
   userCharacterData: UserCharacterData;
   dispatch: React.ActionDispatch<[Action]>;
@@ -42,12 +41,12 @@ export default function Renderer(props: Props) {
         throw new Error("Got layout entry for missing module: " + moduleId);
       }
 
-      const moduleData = modules[moduleId];
+      const moduleObj = modules[moduleId];
       const value = userCharacterData[moduleId];
 
       // up to this point we're just passing arbitrary data for this module around
       // first off, check that the module definition is correct
-      SystemModuleData.parse(moduleData);
+      const moduleData = SystemModuleData.parse(Object.assign(moduleObj));
 
       // the module should define its own Zod schemas that also verify actual correctness
       const schema = schemasByModuleType[moduleData.type];
@@ -56,14 +55,17 @@ export default function Renderer(props: Props) {
         throw new Error(`Module ${moduleId} has no schema defined`);
       }
 
-      moduleData.props = schema.SystemProps.parse(moduleData.props);
+      const moduleDataWithProps = {
+        ...moduleData,
+        props: schema.SystemProps.parse(moduleData.props)
+      };
 
       switch (moduleData.type) {
         case "textField":
           return (
             <TextField
               key={moduleId}
-              systemModuleData={moduleData}
+              systemModuleData={moduleDataWithProps}
               value={schema.Value.parse(value || moduleData.default)}
               onUpdate={(value) => {
                 dispatch({ type: "set_string", key: moduleId, value });
@@ -74,7 +76,7 @@ export default function Renderer(props: Props) {
           return (
             <Tracker
               key={moduleId}
-              systemModuleData={moduleData}
+              systemModuleData={moduleDataWithProps}
               value={schema.Value.parse(value || moduleData.default)}
               onUpdate={(value) => {
                 dispatch({ type: "set_number", key: moduleId, value });

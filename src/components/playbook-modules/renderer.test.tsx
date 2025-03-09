@@ -113,7 +113,6 @@ describe("Renderer", () => {
               id: "name",
               type: "textField",
               default: "",
-              // @ts-expect-error - yes, I know, TS, this is the point of the test
               lable: "Name"
             }
           }}
