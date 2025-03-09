@@ -1,10 +1,7 @@
 import type { UserData } from "@/types";
 import type Action from "./user-data-action";
 
-export default function userDataReducer(
-  state: UserData,
-  action: Action
-) {
+export default function userDataReducer(state: UserData, action: Action) {
   state = structuredClone(state);
 
   switch (action.type) {

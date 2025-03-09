@@ -1,11 +1,7 @@
 "use client";
 
 import { useReducer } from "react";
-import type {
-  UserData,
-  CharacterPlaybook,
-  SystemCharacters
-} from "@/types";
+import type { UserData, CharacterPlaybook, SystemCharacters } from "@/types";
 /*
 import Ratings from "@/components/playbooks/ratings/ratings";
 import ItemList from "@/components/playbooks/items/item-list";
@@ -34,10 +30,7 @@ export default function Playbook(props: Props) {
     playbookData,
     systemCharactersData
   } = props;
-  const [userData, dispatch] = useReducer(
-    userDataReducer,
-    initialUserData
-  );
+  const [userData, dispatch] = useReducer(userDataReducer, initialUserData);
 
   const savePlaybook = async () => {
     const data = await saveCharacter(userData);
