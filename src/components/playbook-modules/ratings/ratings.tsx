@@ -23,8 +23,6 @@ export default function Ratings(props: Props) {
   const startingRatings = playbookProps;
   const { actionRatings, attributeXp } = userValue;
 
-  // TODO validate actions and ratings
-
   // if ratings aren't defined, use the starting ones for the playbook
   const currentRatings =
     Object.keys(actionRatings).length === 0 ? startingRatings : actionRatings;
