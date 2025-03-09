@@ -11,10 +11,12 @@
   "specialAbilities": [
     {
       "id": "sharpshooter",
+      "name": "Sharpshooter",
       "description": "lorem ipsum"
     },
     {
       "id": "focused",
+      "name": "Focused",
       "description": "dolorem sic"
     }
   ]

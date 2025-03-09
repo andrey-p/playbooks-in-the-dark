@@ -11,10 +11,12 @@
   "specialAbilities": [
     {
       "id": "battleborn",
+      "name": "Battleborn",
       "description": "lorem ipsum"
     },
     {
       "id": "bodyguard",
+      "name": "Bodyguard",
       "description": "dolorem sic"
     }
   ]

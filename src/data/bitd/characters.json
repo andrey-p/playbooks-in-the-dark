@@ -14,7 +14,10 @@
       "actions": ["attune", "consort"]
     }
   ],
-  "layout": [["name", "heritage", "stress"], ["items"]],
+  "layout": [
+    ["name", "heritage", "stress"],
+    ["specialAbilities", "items"]
+  ],
   "modules": {
     "name": {
       "id": "name",
@@ -47,6 +50,12 @@
         "trackerType": "dagger",
         "max": 9
       }
+    },
+    "specialAbilities": {
+      "id": "specialAbilities",
+      "type": "specialAbilities",
+      "label": "Special abilities",
+      "default": []
     },
     "items": {
       "id": "items",
