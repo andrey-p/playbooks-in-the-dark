@@ -9,7 +9,7 @@ describe("Renderer", () => {
 
     render(
       <Renderer
-        layout={[["name", "heritage"]]}
+        layout={[["name", "heritage"], ["items"]]}
         modules={{
           name: {
             id: "name",
@@ -25,6 +25,18 @@ describe("Renderer", () => {
             props: {
               examples: ["Iruvia", "Akoros"]
             }
+          },
+          items: {
+            id: "items",
+            type: "items",
+            label: "Items",
+            default: [],
+            props: {
+              common: [
+                { id: "a", name: "aa", load: 2 },
+                { id: "b", name: "bb", load: 0 }
+              ]
+            }
           }
         }}
         userCharacterData={{
@@ -33,7 +45,10 @@ describe("Renderer", () => {
           playbookId: "cutter",
           name: "sss"
         }}
-        playbookData={{ id: "cutter" }}
+        playbookData={{
+          id: "cutter",
+          items: [{ id: "c", name: "cc", load: 1 }]
+        }}
         dispatch={dispatch}
       />
     );

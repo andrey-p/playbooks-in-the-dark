@@ -14,7 +14,7 @@
       "actions": ["attune", "consort"]
     }
   ],
-  "layout": [["name", "heritage", "stress", "items"]],
+  "layout": [["name", "heritage", "stress"], ["items"]],
   "modules": {
     "name": {
       "id": "name",

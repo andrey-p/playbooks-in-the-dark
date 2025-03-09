@@ -4,6 +4,9 @@ import type Action from "@/reducers/user-character-action";
 import type { SharedModuleSchemas } from "./playbook-modules.types";
 import { SystemModuleData } from "./playbook-modules.schema";
 
+import ColumnContainer from "./layout/column-container";
+import Column from "./layout/column";
+
 import TextFieldSchemas from "./text-field/text-field.schema";
 import TextField from "./text-field/text-field";
 import TrackerSchemas from "./tracker/tracker.schema";
@@ -39,70 +42,82 @@ export default function Renderer(props: Props) {
   // layout is an array of arrays, or more specifically a list of columns
   // each of which is a list of modules
   // go down and render each of them
-  return layout.map((column) => {
-    return column.map((moduleId) => {
-      if (!modules[moduleId]) {
-        throw new Error("Got layout entry for missing module: " + moduleId);
-      }
+  return (
+    <ColumnContainer>
+      {layout.map((column, i) => (
+        <Column key={i}>
+          {column.map((moduleId) => {
+            if (!modules[moduleId]) {
+              throw new Error(
+                "Got layout entry for missing module: " + moduleId
+              );
+            }
 
-      const moduleObj = modules[moduleId];
-      const value = userCharacterData[moduleId];
-      const playbookValue = playbookData[moduleId];
+            const moduleObj = modules[moduleId];
+            const value = userCharacterData[moduleId];
+            const playbookValue = playbookData[moduleId];
 
-      // up to this point we're just passing arbitrary data for this module around
-      // first off, check that the module definition is correct
-      const moduleData = SystemModuleData.parse(Object.assign(moduleObj));
+            // up to this point we're just passing arbitrary data for this module around
+            // first off, check that the module definition is correct
+            const moduleData = SystemModuleData.parse(Object.assign(moduleObj));
 
-      // the module should define its own Zod schemas that also verify actual correctness
-      const schema = schemasByModuleType[moduleData.type];
+            // the module should define its own Zod schemas that also verify actual correctness
+            const schema = schemasByModuleType[moduleData.type];
 
-      if (!schema) {
-        throw new Error(`Module ${moduleId} has no schema defined`);
-      }
+            if (!schema) {
+              throw new Error(`Module ${moduleId} has no schema defined`);
+            }
 
-      const typeCheckedProps = {
-        systemModuleData: {
-          ...moduleData,
-          props: schema.SystemProps.parse(moduleData.props)
-        },
-        playbookData: schema.PlaybookProps.parse(playbookValue),
-        value: schema.Value.parse(value || moduleData.default)
-      };
+            const typeCheckedProps = {
+              systemModuleData: {
+                ...moduleData,
+                props: schema.SystemProps.parse(moduleData.props)
+              },
+              playbookData: schema.PlaybookProps.parse(playbookValue),
+              value: schema.Value.parse(value || moduleData.default)
+            };
 
-      switch (moduleData.type) {
-        case "textField":
-          return (
-            <TextField
-              key={moduleId}
-              onUpdate={(value) => {
-                dispatch({ type: "set_string", key: moduleId, value });
-              }}
-              {...typeCheckedProps}
-            />
-          );
-        case "tracker":
-          return (
-            <Tracker
-              key={moduleId}
-              onUpdate={(value) => {
-                dispatch({ type: "set_number", key: moduleId, value });
-              }}
-              {...typeCheckedProps}
-            />
-          );
-        case "items":
-          return (
-            <Items
-              key={moduleId}
-              onUpdate={(value) => {
-                dispatch({ type: "set_string_array", key: moduleId, value });
-              }}
-              {...typeCheckedProps}
-            />
-          );
-        default:
-          throw new Error("Unknown module type: " + moduleData.type);
-      }
-    });
-  });
+            switch (moduleData.type) {
+              case "textField":
+                return (
+                  <TextField
+                    key={moduleId}
+                    onUpdate={(value) => {
+                      dispatch({ type: "set_string", key: moduleId, value });
+                    }}
+                    {...typeCheckedProps}
+                  />
+                );
+              case "tracker":
+                return (
+                  <Tracker
+                    key={moduleId}
+                    onUpdate={(value) => {
+                      dispatch({ type: "set_number", key: moduleId, value });
+                    }}
+                    {...typeCheckedProps}
+                  />
+                );
+              case "items":
+                return (
+                  <Items
+                    key={moduleId}
+                    onUpdate={(value) => {
+                      dispatch({
+                        type: "set_string_array",
+                        key: moduleId,
+                        value
+                      });
+                    }}
+                    {...typeCheckedProps}
+                  />
+                );
+              default:
+                throw new Error("Unknown module type: " + moduleData.type);
+            }
+          })}
+        </Column>
+      ))}
+    </ColumnContainer>
+  );
 }
