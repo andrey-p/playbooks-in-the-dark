@@ -7,7 +7,8 @@ import { SystemModuleData } from "./playbook-modules.schema";
 
 import TextFieldSchemas from "./text-field/text-field.schema";
 import TextField from "./text-field/text-field";
-// import Tracker from './tracker/tracker';
+import TrackerSchemas from "./tracker/tracker.schema";
+import Tracker from './tracker/tracker';
 
 type Props = {
   layout: string[][];
@@ -19,7 +20,8 @@ type Props = {
 };
 
 const schemasByModuleType: Record<string, SharedModuleSchemas> = {
-  textField: TextFieldSchemas
+  textField: TextFieldSchemas,
+  tracker: TrackerSchemas
 };
 
 // The renderer is probably the meatiest component of the whole app -
@@ -54,7 +56,7 @@ export default function Renderer(props: Props) {
         throw new Error(`Module ${moduleId} has no schema defined`);
       }
 
-      schema.SystemProps.parse(moduleData.props);
+      moduleData.props = schema.SystemProps.parse(moduleData.props);
 
       switch (moduleData.type) {
         case "textField":
@@ -65,6 +67,17 @@ export default function Renderer(props: Props) {
               value={schema.Value.parse(value || moduleData.default)}
               onUpdate={(value) => {
                 dispatch({ type: "set_string", key: moduleId, value });
+              }}
+            />
+          );
+        case "tracker":
+          return (
+            <Tracker
+              key={moduleId}
+              systemModuleData={moduleData}
+              value={schema.Value.parse(value || moduleData.default)}
+              onUpdate={(value) => {
+                dispatch({ type: "set_number", key: moduleId, value });
               }}
             />
           );

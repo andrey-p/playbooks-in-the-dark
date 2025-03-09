@@ -18,7 +18,7 @@
       "actions": ["attune", "consort"]
     }
   ],
-  "layout": [["name", "heritage"]],
+  "layout": [["name", "heritage", "stress"]],
   "modules": {
     "name": {
       "id": "name",
@@ -45,6 +45,8 @@
     "stress": {
       "id": "stress",
       "type": "tracker",
+      "label": "Stress",
+      "default": 0,
       "props": {
         "trackerType": "dagger",
         "max": 9

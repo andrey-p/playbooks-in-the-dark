@@ -1,22 +1,22 @@
 import type { UserCharacterData } from "@/types";
 import type Action from "./user-character-action";
 
-const toggleEntry = (
-  id: string,
-  selected: boolean,
-  entries: string[]
-): string[] => {
-  entries = entries.concat();
-  const idx = entries.indexOf(id);
+// const toggleEntry = (
+//   id: string,
+//   selected: boolean,
+//   entries: string[]
+// ): string[] => {
+//   entries = entries.concat();
+//   const idx = entries.indexOf(id);
 
-  if (selected && idx === -1) {
-    entries.push(id);
-  } else if (!selected && idx > -1) {
-    entries.splice(idx, 1);
-  }
+//   if (selected && idx === -1) {
+//     entries.push(id);
+//   } else if (!selected && idx > -1) {
+//     entries.splice(idx, 1);
+//   }
 
-  return entries;
-};
+//   return entries;
+// };
 
 export default function userCharacterReducer(
   state: UserCharacterData,
@@ -28,8 +28,8 @@ export default function userCharacterReducer(
     case "set_string":
       state[action.key] = action.value;
       break;
-    case "set_stress":
-      state.stress = action.value;
+    case "set_number":
+      state[action.key] = action.value;
       break;
     // case "set_action_rating":
     //   state.actionRatings[action.action] = action.value;

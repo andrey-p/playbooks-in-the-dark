@@ -5,15 +5,8 @@ type Action =
       value: string;
     }
   | {
-      type: "set_name";
-      value: string;
-    }
-  | {
-      type: "set_heritage";
-      value: string;
-    }
-  | {
-      type: "set_stress";
+      type: "set_number";
+      key: string;
       value: number;
     }
   | {
