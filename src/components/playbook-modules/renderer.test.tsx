@@ -39,7 +39,7 @@ describe("Renderer", () => {
             }
           }
         }}
-        userCharacterData={{
+        userData={{
           id: undefined,
           systemId: "bitd",
           playbookId: "cutter",
@@ -86,7 +86,7 @@ describe("Renderer", () => {
               label: "Name"
             }
           }}
-          userCharacterData={{
+          userData={{
             id: undefined,
             systemId: "bitd",
             playbookId: "cutter"
@@ -110,7 +110,7 @@ describe("Renderer", () => {
               label: "Name"
             }
           }}
-          userCharacterData={{
+          userData={{
             id: undefined,
             systemId: "bitd",
             playbookId: "cutter"
@@ -134,7 +134,7 @@ describe("Renderer", () => {
               lable: "Name"
             }
           }}
-          userCharacterData={{
+          userData={{
             id: undefined,
             systemId: "bitd",
             playbookId: "cutter"
@@ -161,7 +161,7 @@ describe("Renderer", () => {
               }
             }
           }}
-          userCharacterData={{
+          userData={{
             id: undefined,
             systemId: "bitd",
             playbookId: "cutter"
@@ -188,7 +188,7 @@ describe("Renderer", () => {
               }
             }
           }}
-          userCharacterData={{
+          userData={{
             id: undefined,
             systemId: "bitd",
             playbookId: "cutter",

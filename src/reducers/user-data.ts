@@ -1,8 +1,8 @@
-import type { UserCharacterData } from "@/types";
-import type Action from "./user-character-action";
+import type { UserData } from "@/types";
+import type Action from "./user-data-action";
 
-export default function userCharacterReducer(
-  state: UserCharacterData,
+export default function userDataReducer(
+  state: UserData,
   action: Action
 ) {
   state = structuredClone(state);

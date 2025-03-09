@@ -2,7 +2,7 @@
 
 import { useReducer } from "react";
 import type {
-  UserCharacterData,
+  UserData,
   CharacterPlaybook,
   SystemCharacters
 } from "@/types";
@@ -16,7 +16,7 @@ import ExampleList from "@/components/example-list/example-list";
 import styles from "./playbook.module.css";
 */
 import ModuleRenderer from "@/components/playbook-modules/renderer";
-import { userCharacterReducer } from "@/reducers";
+import { userDataReducer } from "@/reducers";
 import SaveAction from "@/components/playbook-actions/save";
 
 import { getEnvVar } from "@/lib/env";
@@ -25,22 +25,22 @@ import { saveCharacter } from "@/lib/store";
 type Props = {
   playbookData: CharacterPlaybook;
   systemCharactersData: SystemCharacters;
-  userCharacterData: UserCharacterData;
+  userData: UserData;
 };
 
 export default function Playbook(props: Props) {
   const {
-    userCharacterData: initialCharacterData,
+    userData: initialUserData,
     playbookData,
     systemCharactersData
   } = props;
-  const [userCharacterData, dispatch] = useReducer(
-    userCharacterReducer,
-    initialCharacterData
+  const [userData, dispatch] = useReducer(
+    userDataReducer,
+    initialUserData
   );
 
   const savePlaybook = async () => {
-    const data = await saveCharacter(userCharacterData);
+    const data = await saveCharacter(userData);
     const baseUrl = await getEnvVar("APP_URL");
 
     return {
@@ -57,46 +57,12 @@ export default function Playbook(props: Props) {
           layout={systemCharactersData.layout}
           modules={systemCharactersData.modules}
           playbookData={playbookData}
-          userCharacterData={userCharacterData}
+          userData={userData}
           dispatch={dispatch}
         />
       }
 
       {/*
-      <div>
-        <h2>Details</h2>
-
-        <TextField
-          text={userCharacterData.name}
-          label="name"
-          onTextUpdated={(value) =>
-            dispatch({
-              type: "set_name",
-              value
-            })
-          }
-        />
-
-        <TextField
-          text={userCharacterData.heritage}
-          label="heritage"
-          onTextUpdated={(value) =>
-            dispatch({
-              type: "set_heritage",
-              value
-            })
-          }
-          examples={[
-            "Akoros",
-            "The Dagger Isles",
-            "Iruvia",
-            "Severos",
-            "Skovlan",
-            "Tycheros"
-          ]}
-        />
-      </div>
-
       <div>
         <h2>Stress and Trauma</h2>
 

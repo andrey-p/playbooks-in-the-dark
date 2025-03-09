@@ -38,7 +38,7 @@ export default async function Page(props: Props) {
     <CharacterPlaybook
       playbookData={playbookData}
       systemCharactersData={systemCharactersData}
-      userCharacterData={data}
+      userData={data}
     />
   );
 }

@@ -1,8 +1,8 @@
-type UserCharacterData = {
+type UserData = {
   id: string | undefined;
   systemId: string;
   playbookId: string;
   [key: string]: unknown;
 };
 
-export default UserCharacterData;
+export default UserData;

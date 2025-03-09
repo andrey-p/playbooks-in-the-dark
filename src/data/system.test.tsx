@@ -19,7 +19,7 @@ describe("system data check", () => {
               playbookData={playbookData}
               layout={characterData.layout}
               modules={characterData.modules}
-              userCharacterData={{
+              userData={{
                 id: undefined,
                 systemId,
                 playbookId
