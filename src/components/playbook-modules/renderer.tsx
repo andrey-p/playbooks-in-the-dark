@@ -55,9 +55,12 @@ export default function Renderer(props: Props) {
         throw new Error(`Module ${moduleId} has no schema defined`);
       }
 
-      const moduleDataWithProps = {
-        ...moduleData,
-        props: schema.SystemProps.parse(moduleData.props)
+      const typeCheckedProps = {
+        systemModuleData: {
+          ...moduleData,
+          props: schema.SystemProps.parse(moduleData.props)
+        },
+        value: schema.Value.parse(value || moduleData.default)
       };
 
       switch (moduleData.type) {
@@ -65,22 +68,20 @@ export default function Renderer(props: Props) {
           return (
             <TextField
               key={moduleId}
-              systemModuleData={moduleDataWithProps}
-              value={schema.Value.parse(value || moduleData.default)}
               onUpdate={(value) => {
                 dispatch({ type: "set_string", key: moduleId, value });
               }}
+              {...typeCheckedProps}
             />
           );
         case "tracker":
           return (
             <Tracker
               key={moduleId}
-              systemModuleData={moduleDataWithProps}
-              value={schema.Value.parse(value || moduleData.default)}
               onUpdate={(value) => {
                 dispatch({ type: "set_number", key: moduleId, value });
               }}
+              {...typeCheckedProps}
             />
           );
         default:
