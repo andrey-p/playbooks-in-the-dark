@@ -6,14 +6,14 @@ import { SharedModuleProps } from "../playbook-modules.types";
 import schemas from "./text-field.schema";
 
 type Props = SharedModuleProps<z.infer<typeof schemas.Value>> & {
-  systemModuleData: {
+  moduleDefinition: {
     props?: z.infer<typeof schemas.SystemProps>;
   };
 };
 
 export default function TextField(props: Props) {
-  const { systemModuleData, value, onUpdate } = props;
-  const { props: moduleProps, label } = systemModuleData;
+  const { moduleDefinition, value, onUpdate } = props;
+  const { props: moduleProps, label } = moduleDefinition;
   const examples = moduleProps?.examples;
 
   const consistentId = useId();

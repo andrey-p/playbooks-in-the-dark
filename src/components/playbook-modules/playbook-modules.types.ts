@@ -1,9 +1,9 @@
 import { z } from "zod";
 
-import { SystemModuleData } from "./playbook-modules.schema";
+import { ModuleDefinition } from "./playbook-modules.schema";
 
 export type SharedModuleProps<T> = {
-  systemModuleData: z.infer<typeof SystemModuleData>;
+  moduleDefinition: z.infer<typeof ModuleDefinition>;
   value: T;
   onUpdate: (value: T) => void;
 };

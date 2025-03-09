@@ -2,7 +2,7 @@ import type { UserCharacterData, CharacterPlaybook } from "@/types";
 import type Action from "@/reducers/user-character-action";
 
 import type { SharedModuleSchemas } from "./playbook-modules.types";
-import { SystemModuleData } from "./playbook-modules.schema";
+import { ModuleDefinition } from "./playbook-modules.schema";
 
 import ColumnContainer from "./layout/column-container";
 import Column from "./layout/column";
@@ -59,25 +59,27 @@ export default function Renderer(props: Props) {
 
             // up to this point we're just passing arbitrary data for this module around
             // first off, check that the module definition is correct
-            const moduleData = SystemModuleData.parse(Object.assign(moduleObj));
+            const moduleDefinition = ModuleDefinition.parse(
+              Object.assign(moduleObj)
+            );
 
             // the module should define its own Zod schemas that also verify actual correctness
-            const schema = schemasByModuleType[moduleData.type];
+            const schema = schemasByModuleType[moduleDefinition.type];
 
             if (!schema) {
               throw new Error(`Module ${moduleId} has no schema defined`);
             }
 
             const typeCheckedProps = {
-              systemModuleData: {
-                ...moduleData,
-                props: schema.SystemProps.parse(moduleData.props)
+              moduleDefinition: {
+                ...moduleDefinition,
+                props: schema.SystemProps.parse(moduleDefinition.props)
               },
               playbookData: schema.PlaybookProps.parse(playbookValue),
-              value: schema.Value.parse(value || moduleData.default)
+              value: schema.Value.parse(value || moduleDefinition.default)
             };
 
-            switch (moduleData.type) {
+            switch (moduleDefinition.type) {
               case "textField":
                 return (
                   <TextField
@@ -113,7 +115,9 @@ export default function Renderer(props: Props) {
                   />
                 );
               default:
-                throw new Error("Unknown module type: " + moduleData.type);
+                throw new Error(
+                  "Unknown module type: " + moduleDefinition.type
+                );
             }
           })}
         </Column>

@@ -4,14 +4,14 @@ import schemas from "./tracker.schema";
 import SimpleTracker from "@/components/trackers/simple-tracker";
 
 type Props = SharedModuleProps<z.infer<typeof schemas.Value>> & {
-  systemModuleData: {
+  moduleDefinition: {
     props: z.infer<typeof schemas.SystemProps>;
   };
 };
 
 export default function Tracker(props: Props) {
-  const { systemModuleData, value, onUpdate } = props;
-  const { props: moduleProps, label } = systemModuleData;
+  const { moduleDefinition, value, onUpdate } = props;
+  const { props: moduleProps, label } = moduleDefinition;
   const { max, trackerType } = moduleProps;
 
   return (
