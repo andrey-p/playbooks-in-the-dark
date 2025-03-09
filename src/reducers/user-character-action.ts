@@ -10,6 +10,11 @@ type Action =
       value: number;
     }
   | {
+      type: "set_string_array";
+      key: string;
+      value: string[];
+    }
+  | {
       type: "set_trauma_selected";
       trauma: string;
       selected: boolean;

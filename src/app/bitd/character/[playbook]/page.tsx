@@ -28,13 +28,10 @@ export default async function Page(props: Props) {
         id: undefined,
         systemId: systemData.id,
         playbookId: playbookData.id,
-        name: "",
-        heritage: "",
         stress: 0,
         traumas: [],
-        actionRatings: Object.assign(playbookData.actionRatings),
+        //actionRatings: Object.assign(playbookData.actionRatings),
         attributeXp: {},
-        selectedItems: [],
         selectedSpecialAbilities: []
       }}
     />

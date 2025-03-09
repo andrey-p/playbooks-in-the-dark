@@ -1,9 +1,5 @@
 {
   "playbooks": ["cutter", "hound"],
-  "commonItems": [
-    { "id": "a knife or two", "load": 1 },
-    { "id": "climbing equipment", "load": 2 }
-  ],
   "attributesWithActions": [
     {
       "id": "insight",
@@ -18,7 +14,7 @@
       "actions": ["attune", "consort"]
     }
   ],
-  "layout": [["name", "heritage", "stress"]],
+  "layout": [["name", "heritage", "stress", "items"]],
   "modules": {
     "name": {
       "id": "name",
@@ -50,6 +46,22 @@
       "props": {
         "trackerType": "dagger",
         "max": 9
+      }
+    },
+    "items": {
+      "id": "items",
+      "type": "items",
+      "label": "Items",
+      "default": [],
+      "props": {
+        "common": [
+          { "id": "a knife or two", "name": "A knife or two", "load": 1 },
+          {
+            "id": "climbing equipment",
+            "name": "Climbing equipment",
+            "load": 2
+          }
+        ]
       }
     }
   }

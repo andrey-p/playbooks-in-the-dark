@@ -1,8 +1,8 @@
 {
   "id": "cutter",
   "items": [
-    { "id": "fine weapon", "load": 1 },
-    { "id": "manacle and chains", "load": 0 }
+    { "id": "fine weapon", "name": "A fine weapon", "load": 1 },
+    { "id": "manacle and chains", "name": "Manacle and chains", "load": 0 }
   ],
   "actionRatings": {
     "skirmish": 2,

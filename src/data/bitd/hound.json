@@ -1,8 +1,8 @@
 {
   "id": "hound",
   "items": [
-    { "id": "fine pistol", "load": 1 },
-    { "id": "hunting pet", "load": 0 }
+    { "id": "fine pistol", "name": "Fine pistol", "load": 1 },
+    { "id": "hunting pet", "name": "Hunting pet", "load": 0 }
   ],
   "actionRatings": {
     "hunt": 2,
