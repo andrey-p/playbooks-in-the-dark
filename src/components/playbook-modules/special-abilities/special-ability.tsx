@@ -1,10 +1,11 @@
+import { z } from "zod";
 import { useState } from "react";
 import CircleToggle from "@/components/toggles/circle";
-import type { SpecialAbility } from "@/types";
+import { SpecialAbility as SpecialAbilitySchema } from "./special-abilities.schema";
 import styles from "./special-ability.module.css";
 
 type Props = {
-  specialAbility: SpecialAbility;
+  specialAbility: z.infer<typeof SpecialAbilitySchema>;
   selected: boolean;
   onSelect: (selected: boolean) => void;
 };
