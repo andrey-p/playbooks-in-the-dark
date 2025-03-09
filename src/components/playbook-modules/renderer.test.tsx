@@ -33,6 +33,7 @@ describe("Renderer", () => {
           playbookId: "cutter",
           name: "sss"
         }}
+        playbookData={{ id: "cutter" }}
         dispatch={dispatch}
       />
     );
@@ -75,6 +76,7 @@ describe("Renderer", () => {
             systemId: "bitd",
             playbookId: "cutter"
           }}
+          playbookData={{ id: "cutter" }}
           dispatch={jest.fn()}
         />
       );
@@ -98,6 +100,7 @@ describe("Renderer", () => {
             systemId: "bitd",
             playbookId: "cutter"
           }}
+          playbookData={{ id: "cutter" }}
           dispatch={jest.fn()}
         />
       );
@@ -121,6 +124,7 @@ describe("Renderer", () => {
             systemId: "bitd",
             playbookId: "cutter"
           }}
+          playbookData={{ id: "cutter" }}
           dispatch={jest.fn()}
         />
       );
@@ -147,6 +151,7 @@ describe("Renderer", () => {
             systemId: "bitd",
             playbookId: "cutter"
           }}
+          playbookData={{ id: "cutter" }}
           dispatch={jest.fn()}
         />
       );
@@ -174,6 +179,7 @@ describe("Renderer", () => {
             playbookId: "cutter",
             name: ["oh no"]
           }}
+          playbookData={{ id: "cutter" }}
           dispatch={jest.fn()}
         />
       );

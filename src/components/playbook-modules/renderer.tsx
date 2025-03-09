@@ -1,4 +1,4 @@
-import type { UserCharacterData } from "@/types";
+import type { UserCharacterData, CharacterPlaybook } from "@/types";
 import type Action from "@/reducers/user-character-action";
 
 import type { SharedModuleSchemas } from "./playbook-modules.types";
@@ -15,6 +15,7 @@ type Props = {
     [key: string]: object;
   };
   userCharacterData: UserCharacterData;
+  playbookData: CharacterPlaybook;
   dispatch: React.ActionDispatch<[Action]>;
 };
 
@@ -30,7 +31,7 @@ const schemasByModuleType: Record<string, SharedModuleSchemas> = {
 //
 // any type uncertainty and inconsistency should be resolved at runtime in this component
 export default function Renderer(props: Props) {
-  const { layout, modules, userCharacterData, dispatch } = props;
+  const { layout, modules, userCharacterData, playbookData, dispatch } = props;
 
   // layout is an array of arrays, or more specifically a list of columns
   // each of which is a list of modules
@@ -43,6 +44,7 @@ export default function Renderer(props: Props) {
 
       const moduleObj = modules[moduleId];
       const value = userCharacterData[moduleId];
+      const playbookValue = playbookData[moduleId];
 
       // up to this point we're just passing arbitrary data for this module around
       // first off, check that the module definition is correct
@@ -60,6 +62,7 @@ export default function Renderer(props: Props) {
           ...moduleData,
           props: schema.SystemProps.parse(moduleData.props)
         },
+        playbookData: schema.PlaybookProps.parse(playbookValue),
         value: schema.Value.parse(value || moduleData.default)
       };
 

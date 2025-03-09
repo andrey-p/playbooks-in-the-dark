@@ -11,12 +11,12 @@ describe("system data check", () => {
       const characterData = getJson(systemId, "characters");
 
       characterData.playbooks.forEach((playbookId: string) => {
-        //const playbookData = getJson(systemId, playbookId);
+        const playbookData = getJson(systemId, playbookId);
 
         test(`playbook ${playbookId} should render OK`, () => {
           render(
             <Renderer
-              //playbookData={playbookData}
+              playbookData={playbookData}
               layout={characterData.layout}
               modules={characterData.modules}
               userCharacterData={{
