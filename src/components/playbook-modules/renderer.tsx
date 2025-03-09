@@ -1,7 +1,9 @@
-import type { PlaybookModule, UserCharacterData } from "@/types";
+import { z } from "zod";
+import type { UserCharacterData } from "@/types";
 import type Action from "@/reducers/user-character-action";
 
 import type { SharedModuleSchemas } from "./playbook-modules.types";
+import { SystemModuleData } from "./playbook-modules.schema";
 
 import TextFieldSchemas from "./text-field/text-field.schema";
 import TextField from "./text-field/text-field";
@@ -10,7 +12,7 @@ import TextField from "./text-field/text-field";
 type Props = {
   layout: string[][];
   modules: {
-    [key: string]: PlaybookModule;
+    [key: string]: z.infer<typeof SystemModuleData>;
   };
   userCharacterData: UserCharacterData;
   dispatch: React.ActionDispatch<[Action]>;
@@ -20,6 +22,12 @@ const schemasByModuleType: Record<string, SharedModuleSchemas> = {
   textField: TextFieldSchemas
 };
 
+// The renderer is probably the meatiest component of the whole app -
+// it matches up sheet layout with modules defined for the system and the specific playbook
+// with any user data stored for the particular module, and the actual modules we have code for
+// with specific type-safe methods for the reducer
+//
+// any type uncertainty and inconsistency should be resolved at runtime in this component
 export default function Renderer(props: Props) {
   const { layout, modules, userCharacterData, dispatch } = props;
 
@@ -36,7 +44,10 @@ export default function Renderer(props: Props) {
       const value = userCharacterData[moduleId];
 
       // up to this point we're just passing arbitrary data for this module around
-      // the module should define its own Zod schemas that verify actual correctness
+      // first off, check that the module definition is correct
+      SystemModuleData.parse(moduleData);
+
+      // the module should define its own Zod schemas that also verify actual correctness
       const schema = schemasByModuleType[moduleData.type];
 
       if (!schema) {

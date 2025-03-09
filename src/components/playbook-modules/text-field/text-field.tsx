@@ -7,15 +7,15 @@ import schemas from "./text-field.schema";
 
 type Props = SharedModuleProps<z.infer<typeof schemas.Value>> & {
   systemModuleData: {
-    props: z.infer<typeof schemas.SystemProps>;
+    props?: z.infer<typeof schemas.SystemProps>;
   };
 };
 
 export default function TextField(props: Props) {
   const { systemModuleData, value, onUpdate } = props;
   const { props: moduleProps, label } = systemModuleData;
-  const { examples } = moduleProps;
   const text = value;
+  const examples = moduleProps?.examples;
 
   const consistentId = useId();
 
@@ -32,9 +32,8 @@ export default function TextField(props: Props) {
       <div className={styles.labelContainer}>
         <label className={styles.label} htmlFor={consistentId}>
           {label}
-          {examples && ":"}
         </label>
-
+        {examples && ":"}
         {examples && <ExampleList items={examples} />}
       </div>
     </div>
