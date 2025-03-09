@@ -53,14 +53,14 @@ export default function Renderer(props: Props) {
               );
             }
 
-            const moduleObj = modules[moduleId];
+            const moduleDefinitionObj = modules[moduleId];
             const value = userCharacterData[moduleId];
             const playbookProps = playbookData[moduleId];
 
             // up to this point we're just passing arbitrary data for this module around
             // first off, check that the module definition is correct
             const moduleDefinition = ModuleDefinition.parse(
-              Object.assign(moduleObj)
+              Object.assign(moduleDefinitionObj)
             );
 
             // the module should define its own Zod schemas that also verify actual correctness
