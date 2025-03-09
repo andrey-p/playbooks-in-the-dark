@@ -8,7 +8,7 @@ import { SystemModuleData } from "./playbook-modules.schema";
 import TextFieldSchemas from "./text-field/text-field.schema";
 import TextField from "./text-field/text-field";
 import TrackerSchemas from "./tracker/tracker.schema";
-import Tracker from './tracker/tracker';
+import Tracker from "./tracker/tracker";
 
 type Props = {
   layout: string[][];

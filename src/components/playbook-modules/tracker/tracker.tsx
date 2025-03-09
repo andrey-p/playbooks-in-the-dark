@@ -6,7 +6,7 @@ import SimpleTracker from "@/components/trackers/simple-tracker";
 type Props = SharedModuleProps<z.infer<typeof schemas.Value>> & {
   systemModuleData: {
     props: z.infer<typeof schemas.SystemProps>;
-  }
+  };
 };
 
 export default function Tracker(props: Props) {
@@ -26,5 +26,4 @@ export default function Tracker(props: Props) {
       />
     </div>
   );
-
 }
