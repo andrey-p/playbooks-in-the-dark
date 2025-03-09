@@ -15,6 +15,9 @@ export const getCharacter = async (id: string) => {
 //
 // this data is mostly arbitrary, and not rendered unsafely via React
 // so a size limit is probably the best way to validate this for now
+//
+// TODO an idea could be to pull in all the DataValue validators from playbook-modules
+// and run some zod checks against that
 const validateData = (data: UserData) => {
   if (JSON.stringify(data).length > 4000) {
     throw new Error("playbook size too large");
