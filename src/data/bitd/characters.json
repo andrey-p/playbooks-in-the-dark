@@ -15,7 +15,7 @@
     }
   ],
   "layout": [
-    ["name", "heritage", "stress"],
+    ["name", "heritage", "stress", "trauma"],
     ["specialAbilities", "items"],
     ["ratings"]
   ],
@@ -50,6 +50,24 @@
       "props": {
         "trackerType": "dagger",
         "max": 9
+      }
+    },
+    "trauma": {
+      "id": "trauma",
+      "type": "trauma",
+      "label": "Trauma",
+      "default": [],
+      "props": {
+        "options": [
+          { "id": "cold", "name": "Cold" },
+          { "id": "haunted", "name": "Haunted" },
+          { "id": "obsessed", "name": "Obsessed" },
+          { "id": "paranoid", "name": "Paranoid" },
+          { "id": "reckless", "name": "Reckless" },
+          { "id": "soft", "name": "Soft" },
+          { "id": "unstable", "name": "Unstable" },
+          { "id": "vicious", "name": "Vicious" }
+        ]
       }
     },
     "specialAbilities": {
