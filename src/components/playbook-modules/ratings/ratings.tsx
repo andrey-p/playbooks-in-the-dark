@@ -23,7 +23,8 @@ export default function Ratings(props: Props) {
   const startingRatings = playbookProps;
   const { actionRatings, attributeXp } = userValue;
 
-  // if ratings aren't defined, use the starting ones for the playbook
+  // if the user hasn't set any ratings yet,
+  // use the starting ones that the playbook defines
   const currentRatings =
     Object.keys(actionRatings).length === 0 ? startingRatings : actionRatings;
 
