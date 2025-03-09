@@ -1,6 +1,6 @@
-import styles from "./dagger.module.css";
-import type { ToggleProps } from "./toggles.types";
-import clsx from "clsx";
+import styles from './dagger.module.css';
+import type { ToggleProps } from './toggles.types';
+import clsx from 'clsx';
 
 export default function Dagger(props: ToggleProps) {
   const { size, filled, highlighted, ...rest } = props;
@@ -10,7 +10,7 @@ export default function Dagger(props: ToggleProps) {
 
   return (
     <button
-      role="switch"
+      role='switch'
       aria-checked={filled}
       style={{ width, height }}
       className={styles.container}

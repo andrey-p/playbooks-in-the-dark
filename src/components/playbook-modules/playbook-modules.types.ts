@@ -1,6 +1,6 @@
-import { z } from "zod";
+import { z } from 'zod';
 
-import { ModuleDefinition } from "./playbook-modules.schema";
+import { ModuleDefinition } from './playbook-modules.schema';
 
 export type SharedModuleProps<T> = {
   moduleDefinition: z.infer<typeof ModuleDefinition>;

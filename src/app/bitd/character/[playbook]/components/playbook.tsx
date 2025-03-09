@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { useReducer } from "react";
-import type { UserData, CharacterPlaybook, SystemCharacters } from "@/types";
-import ModuleRenderer from "@/components/playbook-modules/renderer";
-import { userDataReducer } from "@/reducers";
-import SaveAction from "@/components/playbook-actions/save";
+import { useReducer } from 'react';
+import type { UserData, CharacterPlaybook, SystemCharacters } from '@/types';
+import ModuleRenderer from '@/components/playbook-modules/renderer';
+import { userDataReducer } from '@/reducers';
+import SaveAction from '@/components/playbook-actions/save';
 
-import { getEnvVar } from "@/lib/env";
-import { saveCharacter } from "@/lib/store";
+import { getEnvVar } from '@/lib/env';
+import { saveCharacter } from '@/lib/store';
 
 type Props = {
   playbookData: CharacterPlaybook;
@@ -25,7 +25,7 @@ export default function Playbook(props: Props) {
 
   const savePlaybook = async () => {
     const data = await saveCharacter(userData);
-    const baseUrl = await getEnvVar("APP_URL");
+    const baseUrl = await getEnvVar('APP_URL');
 
     return {
       shareableUrl: `${baseUrl}/share/${data.id}`

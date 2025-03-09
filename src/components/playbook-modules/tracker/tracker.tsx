@@ -1,7 +1,7 @@
-import { z } from "zod";
-import { SharedModuleProps } from "../playbook-modules.types";
-import schemas from "./tracker.schema";
-import SimpleTracker from "@/components/trackers/simple-tracker";
+import { z } from 'zod';
+import { SharedModuleProps } from '../playbook-modules.types';
+import schemas from './tracker.schema';
+import SimpleTracker from '@/components/trackers/simple-tracker';
 
 type Props = SharedModuleProps<z.infer<typeof schemas.UserValue>> & {
   moduleDefinition: {

@@ -1,22 +1,22 @@
-import type { UserData, CharacterPlaybook } from "@/types";
-import type Action from "@/reducers/user-data-action";
+import type { UserData, CharacterPlaybook } from '@/types';
+import type Action from '@/reducers/user-data-action';
 
-import type { SharedModuleSchemas } from "./playbook-modules.types";
-import { ModuleDefinition } from "./playbook-modules.schema";
+import type { SharedModuleSchemas } from './playbook-modules.types';
+import { ModuleDefinition } from './playbook-modules.schema';
 
-import ColumnContainer from "./layout/column-container";
-import Column from "./layout/column";
+import ColumnContainer from './layout/column-container';
+import Column from './layout/column';
 
-import TextFieldSchemas from "./text-field/text-field.schema";
-import TextField from "./text-field/text-field";
-import TrackerSchemas from "./tracker/tracker.schema";
-import Tracker from "./tracker/tracker";
-import ItemsSchemas from "./items/items.schema";
-import Items from "./items/items";
-import SpecialAbilitiesSchemas from "./special-abilities/special-abilities.schema";
-import SpecialAbilities from "./special-abilities/special-abilities";
-import RatingsSchemas from "./ratings/ratings.schema";
-import Ratings from "./ratings/ratings";
+import TextFieldSchemas from './text-field/text-field.schema';
+import TextField from './text-field/text-field';
+import TrackerSchemas from './tracker/tracker.schema';
+import Tracker from './tracker/tracker';
+import ItemsSchemas from './items/items.schema';
+import Items from './items/items';
+import SpecialAbilitiesSchemas from './special-abilities/special-abilities.schema';
+import SpecialAbilities from './special-abilities/special-abilities';
+import RatingsSchemas from './ratings/ratings.schema';
+import Ratings from './ratings/ratings';
 
 type Props = {
   layout: string[][];
@@ -55,7 +55,7 @@ export default function Renderer(props: Props) {
           {column.map((moduleId) => {
             if (!modules[moduleId]) {
               throw new Error(
-                "Got layout entry for missing module: " + moduleId
+                'Got layout entry for missing module: ' + moduleId
               );
             }
 
@@ -88,33 +88,33 @@ export default function Renderer(props: Props) {
             };
 
             switch (moduleDefinition.type) {
-              case "textField":
+              case 'textField':
                 return (
                   <TextField
                     key={moduleId}
                     onUpdate={(value) => {
-                      dispatch({ type: "set_string", key: moduleId, value });
+                      dispatch({ type: 'set_string', key: moduleId, value });
                     }}
                     {...typeCheckedProps}
                   />
                 );
-              case "tracker":
+              case 'tracker':
                 return (
                   <Tracker
                     key={moduleId}
                     onUpdate={(value) => {
-                      dispatch({ type: "set_number", key: moduleId, value });
+                      dispatch({ type: 'set_number', key: moduleId, value });
                     }}
                     {...typeCheckedProps}
                   />
                 );
-              case "items":
+              case 'items':
                 return (
                   <Items
                     key={moduleId}
                     onUpdate={(value) => {
                       dispatch({
-                        type: "set_string_array",
+                        type: 'set_string_array',
                         key: moduleId,
                         value
                       });
@@ -122,13 +122,13 @@ export default function Renderer(props: Props) {
                     {...typeCheckedProps}
                   />
                 );
-              case "specialAbilities":
+              case 'specialAbilities':
                 return (
                   <SpecialAbilities
                     key={moduleId}
                     onUpdate={(value) => {
                       dispatch({
-                        type: "set_string_array",
+                        type: 'set_string_array',
                         key: moduleId,
                         value
                       });
@@ -136,13 +136,13 @@ export default function Renderer(props: Props) {
                     {...typeCheckedProps}
                   />
                 );
-              case "ratings":
+              case 'ratings':
                 return (
                   <Ratings
                     key={moduleId}
                     onUpdate={(value) => {
                       dispatch({
-                        type: "set_ratings_xp",
+                        type: 'set_ratings_xp',
                         key: moduleId,
                         value
                       });
@@ -152,7 +152,7 @@ export default function Renderer(props: Props) {
                 );
               default:
                 throw new Error(
-                  "Unknown module type: " + moduleDefinition.type
+                  'Unknown module type: ' + moduleDefinition.type
                 );
             }
           })}

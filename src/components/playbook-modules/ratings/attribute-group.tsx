@@ -1,10 +1,10 @@
-import { z } from "zod";
+import { z } from 'zod';
 import {
   Attribute as AttributeSchema,
   Action as ActionSchema
-} from "./ratings.schema";
-import Tracker from "@/components/trackers/simple-tracker";
-import styles from "./attribute-group.module.css";
+} from './ratings.schema';
+import Tracker from '@/components/trackers/simple-tracker';
+import styles from './attribute-group.module.css';
 
 type AttributeType = z.infer<typeof AttributeSchema>;
 type ActionType = z.infer<typeof ActionSchema>;
@@ -29,7 +29,7 @@ export default function AttributeGroup(props: Props) {
         <Tracker
           value={xp}
           max={6}
-          type="dagger"
+          type='dagger'
           onValueSelect={(value) => {
             onXpUpdate(attribute.id, value);
           }}
@@ -42,7 +42,7 @@ export default function AttributeGroup(props: Props) {
             <Tracker
               value={currentRatings[action.id] || 0}
               max={4}
-              type="circle"
+              type='circle'
               onValueSelect={(value) => {
                 onRatingUpdate(action.id, value);
               }}

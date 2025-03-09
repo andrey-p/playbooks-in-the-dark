@@ -41,6 +41,8 @@
     "typescript": "^5"
   },
   "prettier": {
-    "trailingComma": "none"
+    "trailingComma": "none",
+    "singleQuote": true,
+    "jsxSingleQuote": true
   }
 }

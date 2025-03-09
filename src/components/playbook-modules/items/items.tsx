@@ -1,8 +1,8 @@
-import { z } from "zod";
-import { SharedModuleProps } from "../playbook-modules.types";
-import schemas, { Item as ItemSchema } from "./items.schema";
-import { toggleArrayEntry } from "@/lib/utils";
-import Item from "./item";
+import { z } from 'zod';
+import { SharedModuleProps } from '../playbook-modules.types';
+import schemas, { Item as ItemSchema } from './items.schema';
+import { toggleArrayEntry } from '@/lib/utils';
+import Item from './item';
 
 type ItemType = z.infer<typeof ItemSchema>;
 

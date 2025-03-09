@@ -1,8 +1,8 @@
-import { z } from "zod";
-import { useState } from "react";
-import CircleToggle from "@/components/toggles/circle";
-import { SpecialAbility as SpecialAbilitySchema } from "./special-abilities.schema";
-import styles from "./special-ability.module.css";
+import { z } from 'zod';
+import { useState } from 'react';
+import CircleToggle from '@/components/toggles/circle';
+import { SpecialAbility as SpecialAbilitySchema } from './special-abilities.schema';
+import styles from './special-ability.module.css';
 
 type Props = {
   specialAbility: z.infer<typeof SpecialAbilitySchema>;

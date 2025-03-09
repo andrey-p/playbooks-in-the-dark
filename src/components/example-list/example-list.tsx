@@ -1,5 +1,5 @@
-import styles from "./example-list.module.css";
-import clsx from "clsx";
+import styles from './example-list.module.css';
+import clsx from 'clsx';
 
 type Props = {
   items: string[];

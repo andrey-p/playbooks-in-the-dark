@@ -1,6 +1,6 @@
-import styles from "./circle.module.css";
-import clsx from "clsx";
-import type { ToggleProps } from "./toggles.types";
+import styles from './circle.module.css';
+import clsx from 'clsx';
+import type { ToggleProps } from './toggles.types';
 
 export default function Circle(props: ToggleProps) {
   const { filled, highlighted, ...rest } = props;
@@ -10,7 +10,7 @@ export default function Circle(props: ToggleProps) {
 
   return (
     <button
-      role="switch"
+      role='switch'
       aria-checked={filled}
       style={{ width: size, height: size }}
       className={clsx(

@@ -1,7 +1,7 @@
-import { z } from "zod";
-import { Item as ItemSchema } from "./items.schema";
-import ItemToggle from "./item-toggle";
-import styles from "./item.module.css";
+import { z } from 'zod';
+import { Item as ItemSchema } from './items.schema';
+import ItemToggle from './item-toggle';
+import styles from './item.module.css';
 
 type Props = {
   item: z.infer<typeof ItemSchema>;
@@ -15,7 +15,7 @@ export default function Item(props: Props) {
   return (
     <div className={styles.container}>
       <ItemToggle load={item.load} selected={selected} onSelect={onSelect} />
-      <span className={item.load === 0 ? styles.noLoadItem : ""}>
+      <span className={item.load === 0 ? styles.noLoadItem : ''}>
         {item.id}
       </span>
     </div>

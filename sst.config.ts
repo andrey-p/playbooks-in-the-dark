@@ -4,31 +4,31 @@
 export default $config({
   app(input) {
     return {
-      name: "playbooks-in-the-dark",
-      removal: input?.stage === "production" ? "retain" : "remove",
-      protect: ["production"].includes(input?.stage),
-      home: "aws",
+      name: 'playbooks-in-the-dark',
+      removal: input?.stage === 'production' ? 'retain' : 'remove',
+      protect: ['production'].includes(input?.stage),
+      home: 'aws',
       providers: {
         aws: {
-          profile: "playbooks-project"
+          profile: 'playbooks-project'
         }
       }
     };
   },
   async run() {
-    const table = new sst.aws.Dynamo("sheets", {
+    const table = new sst.aws.Dynamo('sheets', {
       fields: {
-        id: "string"
+        id: 'string'
       },
-      primaryIndex: { hashKey: "id" }
+      primaryIndex: { hashKey: 'id' }
     });
 
-    new sst.aws.Nextjs("Playbooks", {
+    new sst.aws.Nextjs('Playbooks', {
       link: [table],
       environment: {
         PLAYBOOKS_APP_URL: $dev
-          ? "http://localhost:3000"
-          : "https://example.com"
+          ? 'http://localhost:3000'
+          : 'https://example.com'
       }
     });
   }

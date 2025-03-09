@@ -1,9 +1,9 @@
-"use server";
+'use server';
 
-import { Resource } from "sst";
-import { get, put } from "./integrations/dynamodb";
-import { nanoid } from "nanoid";
-import type { UserData } from "@/types";
+import { Resource } from 'sst';
+import { get, put } from './integrations/dynamodb';
+import { nanoid } from 'nanoid';
+import type { UserData } from '@/types';
 
 export const getCharacter = async (id: string) => {
   const result = await get(Resource.sheets.name, { id });
@@ -20,7 +20,7 @@ export const getCharacter = async (id: string) => {
 // and run some zod checks against that
 const validateData = (data: UserData) => {
   if (JSON.stringify(data).length > 4000) {
-    throw new Error("playbook size too large");
+    throw new Error('playbook size too large');
   }
 };
 

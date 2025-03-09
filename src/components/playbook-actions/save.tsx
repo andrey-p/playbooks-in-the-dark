@@ -1,5 +1,5 @@
-import { useState, useRef } from "react";
-import styles from "./save.module.css";
+import { useState, useRef } from 'react';
+import styles from './save.module.css';
 
 type Props = {
   savePlaybook: () => Promise<{ shareableUrl: string }>;
@@ -27,8 +27,8 @@ export default function SaveAction(props: Props) {
         <label>
           Shareable link
           <input
-            type="text"
-            value={link || ""}
+            type='text'
+            value={link || ''}
             readOnly
             onSelect={onSelect}
             ref={inputRef}

@@ -1,12 +1,12 @@
 //import styles from "./page.module.css";
-import Link from "next/link";
-import { getJson } from "@/lib/system-data";
-import type { SystemCharacters } from "@/types";
+import Link from 'next/link';
+import { getJson } from '@/lib/system-data';
+import type { SystemCharacters } from '@/types';
 
 export default function Home() {
   const systemCharactersData = getJson(
-    "bitd",
-    "characters"
+    'bitd',
+    'characters'
   ) as SystemCharacters;
 
   return (

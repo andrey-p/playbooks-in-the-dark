@@ -1,10 +1,10 @@
-import { z } from "zod";
-import { SharedModuleProps } from "../playbook-modules.types";
+import { z } from 'zod';
+import { SharedModuleProps } from '../playbook-modules.types';
 import schemas, {
   Attribute as AttributeSchema,
   Action as ActionSchema
-} from "./ratings.schema";
-import AttributeGroup from "./attribute-group";
+} from './ratings.schema';
+import AttributeGroup from './attribute-group';
 
 type AttributeType = z.infer<typeof AttributeSchema>;
 type ActionType = z.infer<typeof ActionSchema>;

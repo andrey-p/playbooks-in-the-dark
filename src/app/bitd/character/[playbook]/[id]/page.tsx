@@ -1,11 +1,11 @@
-import { getJson } from "@/lib/system-data";
-import CharacterPlaybook from "../components/playbook";
+import { getJson } from '@/lib/system-data';
+import CharacterPlaybook from '../components/playbook';
 import type {
   CharacterPlaybook as CharacterPlaybookType,
   SystemCharacters as SystemCharactersType
-} from "@/types";
-import { getCharacter } from "@/lib/store";
-import { notFound } from "next/navigation";
+} from '@/types';
+import { getCharacter } from '@/lib/store';
+import { notFound } from 'next/navigation';
 
 type Props = {
   params: Promise<{
@@ -17,10 +17,10 @@ type Props = {
 export default async function Page(props: Props) {
   const { playbook, id } = await props.params;
 
-  const playbookData = getJson("bitd", playbook) as CharacterPlaybookType;
+  const playbookData = getJson('bitd', playbook) as CharacterPlaybookType;
   const systemCharactersData = getJson(
-    "bitd",
-    "characters"
+    'bitd',
+    'characters'
   ) as SystemCharactersType;
 
   const data = await getCharacter(id);
@@ -30,7 +30,7 @@ export default async function Page(props: Props) {
   }
 
   // this should really only happen if someone's mucking about with the URLs
-  if (data.systemId !== "bitd" || data.playbookId !== playbook) {
+  if (data.systemId !== 'bitd' || data.playbookId !== playbook) {
     return notFound();
   }
 

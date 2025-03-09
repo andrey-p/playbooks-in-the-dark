@@ -1,4 +1,4 @@
-import styles from "./column-container.module.css";
+import styles from './column-container.module.css';
 
 type Props = {
   children: React.ReactNode;

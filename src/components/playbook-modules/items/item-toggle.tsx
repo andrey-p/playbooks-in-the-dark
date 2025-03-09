@@ -1,6 +1,6 @@
-import { useState } from "react";
-import SquareToggle from "@/components/toggles/square";
-import styles from "./item-toggle.module.css";
+import { useState } from 'react';
+import SquareToggle from '@/components/toggles/square';
+import styles from './item-toggle.module.css';
 
 type Props = {
   load: number;

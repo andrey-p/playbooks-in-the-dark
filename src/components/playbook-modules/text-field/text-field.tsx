@@ -1,9 +1,9 @@
-import { useId } from "react";
-import { z } from "zod";
-import styles from "./text-field.module.css";
-import ExampleList from "@/components/example-list/example-list";
-import { SharedModuleProps } from "../playbook-modules.types";
-import schemas from "./text-field.schema";
+import { useId } from 'react';
+import { z } from 'zod';
+import styles from './text-field.module.css';
+import ExampleList from '@/components/example-list/example-list';
+import { SharedModuleProps } from '../playbook-modules.types';
+import schemas from './text-field.schema';
 
 type Props = SharedModuleProps<z.infer<typeof schemas.UserValue>> & {
   moduleDefinition: {
@@ -21,7 +21,7 @@ export default function TextField(props: Props) {
   return (
     <div className={styles.container}>
       <input
-        type="text"
+        type='text'
         value={userValue}
         className={styles.input}
         id={consistentId}
@@ -32,7 +32,7 @@ export default function TextField(props: Props) {
         <label className={styles.label} htmlFor={consistentId}>
           {label}
         </label>
-        {examples && ":"}
+        {examples && ':'}
         {examples && <ExampleList items={examples} />}
       </div>
     </div>

@@ -1,10 +1,10 @@
-import { z } from "zod";
-import { SharedModuleProps } from "../playbook-modules.types";
+import { z } from 'zod';
+import { SharedModuleProps } from '../playbook-modules.types';
 import schemas, {
   SpecialAbility as SpecialAbilitySchema
-} from "./special-abilities.schema";
-import { toggleArrayEntry } from "@/lib/utils";
-import SpecialAbility from "./special-ability";
+} from './special-abilities.schema';
+import { toggleArrayEntry } from '@/lib/utils';
+import SpecialAbility from './special-ability';
 
 type SpecialAbilityType = z.infer<typeof SpecialAbilitySchema>;
 
