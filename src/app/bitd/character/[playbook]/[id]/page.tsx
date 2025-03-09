@@ -1,5 +1,9 @@
 import { getJson } from "@/lib/system-data";
 import CharacterPlaybook from "../components/playbook";
+import type {
+  CharacterPlaybook as CharacterPlaybookType,
+  SystemCharacters as SystemCharactersType
+} from "@/types";
 import { getCharacter } from "@/lib/store";
 import { notFound } from "next/navigation";
 
@@ -13,8 +17,11 @@ type Props = {
 export default async function Page(props: Props) {
   const { playbook, id } = await props.params;
 
-  const playbookData = getJson("bitd", playbook);
-  const systemData = getJson("bitd", "system");
+  const playbookData = getJson("bitd", playbook) as CharacterPlaybookType;
+  const systemCharactersData = getJson(
+    "bitd",
+    "characters"
+  ) as SystemCharactersType;
 
   const data = await getCharacter(id);
 
@@ -30,8 +37,8 @@ export default async function Page(props: Props) {
   return (
     <CharacterPlaybook
       playbookData={playbookData}
-      systemData={systemData}
-      userCharacterData={data}
+      systemCharactersData={systemCharactersData}
+      userData={data}
     />
   );
 }

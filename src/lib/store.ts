@@ -3,25 +3,28 @@
 import { Resource } from "sst";
 import { get, put } from "./integrations/dynamodb";
 import { nanoid } from "nanoid";
-import type { UserCharacterData } from "@/types";
+import type { UserData } from "@/types";
 
 export const getCharacter = async (id: string) => {
   const result = await get(Resource.sheets.name, { id });
 
-  return result as UserCharacterData;
+  return result as UserData;
 };
 
 // very very basic validation
 //
 // this data is mostly arbitrary, and not rendered unsafely via React
 // so a size limit is probably the best way to validate this for now
-const validateData = (data: UserCharacterData) => {
+//
+// TODO an idea could be to pull in all the DataValue validators from playbook-modules
+// and run some zod checks against that
+const validateData = (data: UserData) => {
   if (JSON.stringify(data).length > 4000) {
     throw new Error("playbook size too large");
   }
 };
 
-export const saveCharacter = async (data: UserCharacterData) => {
+export const saveCharacter = async (data: UserData) => {
   if (!data.id) {
     data.id = nanoid();
   }

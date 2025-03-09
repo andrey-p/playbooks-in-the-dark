@@ -1,9 +1,10 @@
-import type Item from "@/types/item";
+import { z } from "zod";
+import { Item as ItemSchema } from "./items.schema";
 import ItemToggle from "./item-toggle";
 import styles from "./item.module.css";
 
 type Props = {
-  item: Item;
+  item: z.infer<typeof ItemSchema>;
   selected: boolean;
   onSelect: (selected: boolean) => void;
 };

@@ -1,0 +1,135 @@
+{
+  "playbooks": ["cutter", "hound"],
+  "attributesWithActions": [
+    {
+      "id": "insight",
+      "actions": ["study", "tinker"]
+    },
+    {
+      "id": "prowess",
+      "actions": ["finesse", "skirmish"]
+    },
+    {
+      "id": "resolve",
+      "actions": ["attune", "consort"]
+    }
+  ],
+  "layout": [
+    ["name", "heritage", "stress"],
+    ["specialAbilities", "items"],
+    ["ratings"]
+  ],
+  "modules": {
+    "name": {
+      "id": "name",
+      "type": "textField",
+      "label": "Name",
+      "default": ""
+    },
+    "heritage": {
+      "id": "heritage",
+      "type": "textField",
+      "label": "Heritage",
+      "default": "",
+      "props": {
+        "examples": [
+          "Akoros",
+          "The Dagger Isles",
+          "Iruvia",
+          "Severos",
+          "Skovlan",
+          "Tycheros"
+        ]
+      }
+    },
+    "stress": {
+      "id": "stress",
+      "type": "tracker",
+      "label": "Stress",
+      "default": 0,
+      "props": {
+        "trackerType": "dagger",
+        "max": 9
+      }
+    },
+    "specialAbilities": {
+      "id": "specialAbilities",
+      "type": "specialAbilities",
+      "label": "Special abilities",
+      "default": []
+    },
+    "items": {
+      "id": "items",
+      "type": "items",
+      "label": "Items",
+      "default": [],
+      "props": {
+        "common": [
+          { "id": "a knife or two", "name": "A knife or two", "load": 1 },
+          {
+            "id": "climbing equipment",
+            "name": "Climbing equipment",
+            "load": 2
+          }
+        ]
+      }
+    },
+    "ratings": {
+      "id": "ratings",
+      "type": "ratings",
+      "label": "Ratings",
+      "default": {
+        "actionRatings": {},
+        "attributeXp": {}
+      },
+      "props": {
+        "attributes": [
+          {
+            "id": "insight",
+            "name": "Insight"
+          },
+          {
+            "id": "prowess",
+            "name": "Prowess"
+          },
+          {
+            "id": "resolve",
+            "name": "Resolve"
+          }
+        ],
+        "actions": [
+          {
+            "id": "study",
+            "name": "Study",
+            "attributeId": "insight"
+          },
+          {
+            "id": "tinker",
+            "name": "Tinker",
+            "attributeId": "insight"
+          },
+          {
+            "id": "finesse",
+            "name": "Finesse",
+            "attributeId": "prowess"
+          },
+          {
+            "id": "skirmish",
+            "name": "Skirmish",
+            "attributeId": "prowess"
+          },
+          {
+            "id": "attune",
+            "name": "Attune",
+            "attributeId": "resolve"
+          },
+          {
+            "id": "consort",
+            "name": "Consort",
+            "attributeId": "resolve"
+          }
+        ]
+      }
+    }
+  }
+}
