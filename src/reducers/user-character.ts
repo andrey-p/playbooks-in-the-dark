@@ -18,7 +18,7 @@ export default function userCharacterReducer(
       state[action.key] = action.value;
       break;
     default:
-      throw new Error('unexpected action type: ' + action.type);
+      throw new Error("unexpected action type: " + action.type);
 
     // case "set_action_rating":
     //   state.actionRatings[action.action] = action.value;
