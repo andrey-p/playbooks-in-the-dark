@@ -1,6 +1,6 @@
 import Item from "./item";
 import AttributeWithActions from "./attribute-with-actions";
-import PlaybookModule from './playbook-module';
+import PlaybookModule from "./playbook-module";
 
 type SystemCharacters = {
   playbooks: string[];
@@ -8,8 +8,8 @@ type SystemCharacters = {
   attributesWithActions: AttributeWithActions[];
   layout: string[][];
   modules: {
-    [key: string]: PlaybookModule
-  }
+    [key: string]: PlaybookModule;
+  };
 };
 
 export default SystemCharacters;

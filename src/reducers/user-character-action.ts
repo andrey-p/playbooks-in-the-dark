@@ -1,5 +1,10 @@
 type Action =
   | {
+      type: "set_string";
+      key: string;
+      value: string;
+    }
+  | {
       type: "set_name";
       value: string;
     }
@@ -37,4 +42,4 @@ type Action =
       selected: boolean;
     };
 
-  export default Action;
+export default Action;

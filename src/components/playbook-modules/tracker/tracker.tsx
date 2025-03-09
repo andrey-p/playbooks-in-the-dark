@@ -1,4 +1,4 @@
-import SimpleTracker from '@/components/trackers/simple-tracker';
+import SimpleTracker from "@/components/trackers/simple-tracker";
 
 type Props = {
   value: number;
@@ -8,8 +8,5 @@ type Props = {
 };
 
 export default function Tracker(props: Props) {
-  return (
-    <SimpleTracker
-    />
-  );
+  return <SimpleTracker />;
 }
