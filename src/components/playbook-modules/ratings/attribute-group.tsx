@@ -24,7 +24,7 @@ export default function AttributeGroup(props: Props) {
 
   return (
     <div className={styles.container}>
-      <h3 className={styles.title}>{attribute.name}</h3>
+      <h4 className={styles.title}>{attribute.name}</h4>
       <div className={styles.xp}>
         <Tracker
           value={xp}
