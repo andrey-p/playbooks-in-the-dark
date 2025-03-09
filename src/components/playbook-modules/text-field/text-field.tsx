@@ -14,7 +14,6 @@ type Props = SharedModuleProps<z.infer<typeof schemas.Value>> & {
 export default function TextField(props: Props) {
   const { systemModuleData, value, onUpdate } = props;
   const { props: moduleProps, label } = systemModuleData;
-  const text = value;
   const examples = moduleProps?.examples;
 
   const consistentId = useId();
@@ -23,7 +22,7 @@ export default function TextField(props: Props) {
     <div className={styles.container}>
       <input
         type="text"
-        value={text}
+        value={value}
         className={styles.input}
         id={consistentId}
         name={consistentId}
