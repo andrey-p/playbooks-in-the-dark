@@ -15,28 +15,16 @@ type Action =
       value: string[];
     }
   | {
+      type: "set_ratings_xp";
+      key: string;
+      value: {
+        actionRatings: Record<string, number>;
+        attributeXp: Record<string, number>;
+      };
+    }
+  | {
       type: "set_trauma_selected";
       trauma: string;
-      selected: boolean;
-    }
-  | {
-      type: "set_action_rating";
-      action: string;
-      value: number;
-    }
-  | {
-      type: "set_attribute_xp";
-      attribute: string;
-      value: number;
-    }
-  | {
-      type: "set_item_selected";
-      itemId: string;
-      selected: boolean;
-    }
-  | {
-      type: "set_special_ability_selected";
-      specialAbilityId: string;
       selected: boolean;
     };
 

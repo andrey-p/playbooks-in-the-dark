@@ -15,7 +15,7 @@ type Props = SharedModuleProps<z.infer<typeof schemas.UserValue>> & {
   playbookProps: z.infer<typeof schemas.PlaybookProps>;
 };
 
-export default function SpecialAbilityList(props: Props) {
+export default function SpecialAbilities(props: Props) {
   const {
     moduleDefinition,
     userValue: selectedAbilities,

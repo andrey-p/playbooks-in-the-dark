@@ -4,7 +4,7 @@
     { "id": "fine pistol", "name": "Fine pistol", "load": 1 },
     { "id": "hunting pet", "name": "Hunting pet", "load": 0 }
   ],
-  "actionRatings": {
+  "ratings": {
     "hunt": 2,
     "prowl": 1
   },

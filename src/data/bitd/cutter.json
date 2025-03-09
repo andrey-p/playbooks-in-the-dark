@@ -4,7 +4,7 @@
     { "id": "fine weapon", "name": "A fine weapon", "load": 1 },
     { "id": "manacle and chains", "name": "Manacle and chains", "load": 0 }
   ],
-  "actionRatings": {
+  "ratings": {
     "skirmish": 2,
     "command": 1
   },

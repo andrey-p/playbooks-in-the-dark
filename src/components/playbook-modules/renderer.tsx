@@ -15,6 +15,8 @@ import ItemsSchemas from "./items/items.schema";
 import Items from "./items/items";
 import SpecialAbilitiesSchemas from "./special-abilities/special-abilities.schema";
 import SpecialAbilities from "./special-abilities/special-abilities";
+import RatingsSchemas from "./ratings/ratings.schema";
+import Ratings from "./ratings/ratings";
 
 type Props = {
   layout: string[][];
@@ -30,7 +32,8 @@ const schemasByModuleType: Record<string, SharedModuleSchemas> = {
   textField: TextFieldSchemas,
   tracker: TrackerSchemas,
   items: ItemsSchemas,
-  specialAbilities: SpecialAbilitiesSchemas
+  specialAbilities: SpecialAbilitiesSchemas,
+  ratings: RatingsSchemas
 };
 
 // The renderer is probably the meatiest component of the whole app -
@@ -126,6 +129,20 @@ export default function Renderer(props: Props) {
                     onUpdate={(value) => {
                       dispatch({
                         type: "set_string_array",
+                        key: moduleId,
+                        value
+                      });
+                    }}
+                    {...typeCheckedProps}
+                  />
+                );
+              case "ratings":
+                return (
+                  <Ratings
+                    key={moduleId}
+                    onUpdate={(value) => {
+                      dispatch({
+                        type: "set_ratings_xp",
                         key: moduleId,
                         value
                       });

@@ -16,7 +16,8 @@
   ],
   "layout": [
     ["name", "heritage", "stress"],
-    ["specialAbilities", "items"]
+    ["specialAbilities", "items"],
+    ["ratings"]
   ],
   "modules": {
     "name": {
@@ -69,6 +70,63 @@
             "id": "climbing equipment",
             "name": "Climbing equipment",
             "load": 2
+          }
+        ]
+      }
+    },
+    "ratings": {
+      "id": "ratings",
+      "type": "ratings",
+      "label": "Ratings",
+      "default": {
+        "actionRatings": {},
+        "attributeXp": {}
+      },
+      "props": {
+        "attributes": [
+          {
+            "id": "insight",
+            "name": "Insight"
+          },
+          {
+            "id": "prowess",
+            "name": "Prowess"
+          },
+          {
+            "id": "resolve",
+            "name": "Resolve"
+          }
+        ],
+        "actions": [
+          {
+            "id": "study",
+            "name": "Study",
+            "attributeId": "insight"
+          },
+          {
+            "id": "tinker",
+            "name": "Tinker",
+            "attributeId": "insight"
+          },
+          {
+            "id": "finesse",
+            "name": "Finesse",
+            "attributeId": "prowess"
+          },
+          {
+            "id": "skirmish",
+            "name": "Skirmish",
+            "attributeId": "prowess"
+          },
+          {
+            "id": "attune",
+            "name": "Attune",
+            "attributeId": "resolve"
+          },
+          {
+            "id": "consort",
+            "name": "Consort",
+            "attributeId": "resolve"
           }
         ]
       }
