@@ -10,7 +10,7 @@ type Props = SharedModuleProps<z.infer<typeof schemas.Value>> & {
   moduleDefinition: {
     props: z.infer<typeof schemas.SystemProps>;
   };
-  playbookData: z.infer<typeof schemas.PlaybookProps>;
+  playbookProps: z.infer<typeof schemas.PlaybookProps>;
 };
 
 export default function ItemList(props: Props) {
@@ -18,7 +18,7 @@ export default function ItemList(props: Props) {
     moduleDefinition,
     value: selectedItems,
     onUpdate,
-    playbookData
+    playbookProps
   } = props;
 
   const onItemSelect = (itemId: string, selected: boolean) => {
@@ -37,7 +37,7 @@ export default function ItemList(props: Props) {
           />
         </li>
       ))}
-      {playbookData.map((item: ItemType) => (
+      {playbookProps.map((item: ItemType) => (
         <li key={item.id}>
           <Item
             item={item}
