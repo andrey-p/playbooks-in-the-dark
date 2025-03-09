@@ -10,12 +10,12 @@ const SystemProps = z.object({
   common: z.array(Item)
 });
 const PlaybookProps = z.array(Item);
-const Value = z.array(z.string());
+const UserValue = z.array(z.string());
 
 const schemas = {
   SystemProps,
   PlaybookProps,
-  Value
+  UserValue
 };
 
 export default schemas;

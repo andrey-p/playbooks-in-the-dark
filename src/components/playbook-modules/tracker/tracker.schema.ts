@@ -5,12 +5,12 @@ const SystemProps = z.object({
   max: z.number()
 });
 const PlaybookProps = z.void();
-const Value = z.number().int();
+const UserValue = z.number().int();
 
 const schemas = {
   SystemProps,
   PlaybookProps,
-  Value
+  UserValue
 };
 
 export default schemas;

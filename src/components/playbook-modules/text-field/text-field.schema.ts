@@ -6,12 +6,12 @@ const SystemProps = z
   })
   .optional();
 const PlaybookProps = z.void();
-const Value = z.string();
+const UserValue = z.string();
 
 const schemas = {
   SystemProps,
   PlaybookProps,
-  Value
+  UserValue
 };
 
 export default schemas;

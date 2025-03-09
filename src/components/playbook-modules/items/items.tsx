@@ -6,7 +6,7 @@ import Item from "./item";
 
 type ItemType = z.infer<typeof ItemSchema>;
 
-type Props = SharedModuleProps<z.infer<typeof schemas.Value>> & {
+type Props = SharedModuleProps<z.infer<typeof schemas.UserValue>> & {
   moduleDefinition: {
     props: z.infer<typeof schemas.SystemProps>;
   };
@@ -16,7 +16,7 @@ type Props = SharedModuleProps<z.infer<typeof schemas.Value>> & {
 export default function ItemList(props: Props) {
   const {
     moduleDefinition,
-    value: selectedItems,
+    userValue: selectedItems,
     onUpdate,
     playbookProps
   } = props;

@@ -54,7 +54,7 @@ export default function Renderer(props: Props) {
             }
 
             const moduleDefinitionObj = modules[moduleId];
-            const value = userCharacterData[moduleId];
+            const userValue = userCharacterData[moduleId];
             const playbookProps = playbookData[moduleId];
 
             // up to this point we're just passing arbitrary data for this module around
@@ -76,7 +76,9 @@ export default function Renderer(props: Props) {
                 props: schema.SystemProps.parse(moduleDefinition.props)
               },
               playbookProps: schema.PlaybookProps.parse(playbookProps),
-              value: schema.Value.parse(value || moduleDefinition.default)
+              userValue: schema.UserValue.parse(
+                userValue || moduleDefinition.default
+              )
             };
 
             switch (moduleDefinition.type) {

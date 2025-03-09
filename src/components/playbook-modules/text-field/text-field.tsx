@@ -5,14 +5,14 @@ import ExampleList from "@/components/example-list/example-list";
 import { SharedModuleProps } from "../playbook-modules.types";
 import schemas from "./text-field.schema";
 
-type Props = SharedModuleProps<z.infer<typeof schemas.Value>> & {
+type Props = SharedModuleProps<z.infer<typeof schemas.UserValue>> & {
   moduleDefinition: {
     props?: z.infer<typeof schemas.SystemProps>;
   };
 };
 
 export default function TextField(props: Props) {
-  const { moduleDefinition, value, onUpdate } = props;
+  const { moduleDefinition, userValue, onUpdate } = props;
   const { props: moduleProps, label } = moduleDefinition;
   const examples = moduleProps?.examples;
 
@@ -22,7 +22,7 @@ export default function TextField(props: Props) {
     <div className={styles.container}>
       <input
         type="text"
-        value={value}
+        value={userValue}
         className={styles.input}
         id={consistentId}
         name={consistentId}
