@@ -1,17 +1,10 @@
 import { z } from 'zod';
-import { SharedModuleProps } from '../playbook-modules.types';
-import schemas, { Item as ItemSchema } from './items.schema';
+import PropsSchema, { Item as ItemSchema } from './items.schema';
 import { toggleArrayEntry } from '@/lib/utils';
 import Item from './item';
 
+type Props = z.infer<typeof PropsSchema>;
 type ItemType = z.infer<typeof ItemSchema>;
-
-type Props = SharedModuleProps<z.infer<typeof schemas.UserValue>> & {
-  moduleDefinition: {
-    props: z.infer<typeof schemas.SystemProps>;
-  };
-  playbookProps: z.infer<typeof schemas.PlaybookProps>;
-};
 
 export default function ItemList(props: Props) {
   const {

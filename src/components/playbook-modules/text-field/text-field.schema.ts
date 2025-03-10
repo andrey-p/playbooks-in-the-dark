@@ -1,17 +1,22 @@
 import { z } from 'zod';
+import { BaseModuleDefinition } from '../playbook-module.schema';
 
-const SystemProps = z
-  .object({
-    examples: z.string().array().optional()
+export const ModuleDefinition = BaseModuleDefinition.and(
+  z.object({
+    props: z
+      .object({
+        examples: z.string().array().optional()
+      })
+      .optional()
   })
-  .optional();
-const PlaybookProps = z.void();
-const UserValue = z.string();
+);
 
-const schemas = {
-  SystemProps,
-  PlaybookProps,
-  UserValue
-};
+export const PlaybookProps = z.void();
+export const UserValue = z.string();
 
-export default schemas;
+export default z.object({
+  moduleDefinition: ModuleDefinition,
+  playbookProps: PlaybookProps,
+  userValue: UserValue,
+  onUpdate: z.function().args(UserValue).returns(z.void())
+});

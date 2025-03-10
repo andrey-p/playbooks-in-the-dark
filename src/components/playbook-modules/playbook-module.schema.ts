@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const ModuleDefinition = z.object({
+export const BaseModuleDefinition = z.object({
   id: z.string(),
   type: z.string(),
   label: z.string(),

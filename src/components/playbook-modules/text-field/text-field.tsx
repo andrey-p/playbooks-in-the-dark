@@ -2,14 +2,9 @@ import { useId } from 'react';
 import { z } from 'zod';
 import styles from './text-field.module.css';
 import ExampleList from '@/components/example-list/example-list';
-import { SharedModuleProps } from '../playbook-modules.types';
-import schemas from './text-field.schema';
+import PropsSchema from './text-field.schema';
 
-type Props = SharedModuleProps<z.infer<typeof schemas.UserValue>> & {
-  moduleDefinition: {
-    props?: z.infer<typeof schemas.SystemProps>;
-  };
-};
+type Props = z.infer<typeof PropsSchema>;
 
 export default function TextField(props: Props) {
   const { moduleDefinition, userValue, onUpdate } = props;

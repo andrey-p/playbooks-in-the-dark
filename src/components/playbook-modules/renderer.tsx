@@ -1,24 +1,14 @@
+import { z } from 'zod';
 import type { UserData, CharacterPlaybook } from '@/types';
 import type Action from '@/reducers/user-data-action';
-
-import type { SharedModuleSchemas } from './playbook-modules.types';
-import { ModuleDefinition } from './playbook-modules.schema';
 
 import ColumnContainer from './layout/column-container';
 import Column from './layout/column';
 
-import TextFieldSchemas from './text-field/text-field.schema';
-import TextField from './text-field/text-field';
-import TrackerSchemas from './tracker/tracker.schema';
-import Tracker from './tracker/tracker';
-import ItemsSchemas from './items/items.schema';
-import Items from './items/items';
-import SpecialAbilitiesSchemas from './special-abilities/special-abilities.schema';
-import SpecialAbilities from './special-abilities/special-abilities';
-import RatingsSchemas from './ratings/ratings.schema';
-import Ratings from './ratings/ratings';
-import TraumaSchemas from './trauma/trauma.schema';
-import Trauma from './trauma/trauma';
+import {
+  schemasByModuleType,
+  componentsByModuleType
+} from './all-modules-and-schemas';
 
 type Props = {
   layout: string[][];
@@ -28,15 +18,6 @@ type Props = {
   userData: UserData;
   playbookData: CharacterPlaybook;
   dispatch: React.ActionDispatch<[Action]>;
-};
-
-const schemasByModuleType: Record<string, SharedModuleSchemas> = {
-  textField: TextFieldSchemas,
-  tracker: TrackerSchemas,
-  items: ItemsSchemas,
-  specialAbilities: SpecialAbilitiesSchemas,
-  ratings: RatingsSchemas,
-  trauma: TraumaSchemas
 };
 
 // The renderer is probably the meatiest component of the whole app -
@@ -62,116 +43,57 @@ export default function Renderer(props: Props) {
               );
             }
 
-            const moduleDefinitionObj = modules[moduleId];
+            const moduleDefinition = modules[moduleId];
             const userValue = userData[moduleId];
             const playbookProps = playbookData[moduleId];
 
             // up to this point we're just passing arbitrary data for this module around
-            // first off, check that the module definition is correct
-            const moduleDefinition = ModuleDefinition.parse(
-              Object.assign(moduleDefinitionObj)
-            );
+            // we need to do some verification before we continue
 
-            // the module should define its own Zod schemas that also verify actual correctness
-            const schema = schemasByModuleType[moduleDefinition.type];
+            // first off, grab the module type off of the module definition
+            // so we know what we're looking at
+            const basicModuleDefinition = z
+              .object({
+                type: z.string(),
+                default: z.any()
+              })
+              .parse(moduleDefinition);
 
-            if (!schema) {
-              throw new Error(`Module ${moduleId} has no schema defined`);
+            // pull out the schemas that this module has defined
+            const schemaModuleType =
+              basicModuleDefinition.type as keyof typeof schemasByModuleType;
+
+            if (!(schemaModuleType in schemasByModuleType)) {
+              throw new Error(`module type ${moduleId} has no schema defined`);
             }
 
-            const typeCheckedProps = {
-              moduleDefinition: {
-                ...moduleDefinition,
-                props: schema.SystemProps.parse(moduleDefinition.props)
-              },
-              playbookProps: schema.PlaybookProps.parse(playbookProps),
-              userValue: schema.UserValue.parse(
-                userValue || moduleDefinition.default
-              )
-            };
+            const schemas = schemasByModuleType[schemaModuleType];
 
-            switch (moduleDefinition.type) {
-              case 'textField':
-                return (
-                  <TextField
-                    key={moduleId}
-                    onUpdate={(value) => {
-                      dispatch({ type: 'set_string', key: moduleId, value });
-                    }}
-                    {...typeCheckedProps}
-                  />
-                );
-              case 'tracker':
-                return (
-                  <Tracker
-                    key={moduleId}
-                    onUpdate={(value) => {
-                      dispatch({ type: 'set_number', key: moduleId, value });
-                    }}
-                    {...typeCheckedProps}
-                  />
-                );
-              case 'trauma':
-                return (
-                  <Trauma
-                    key={moduleId}
-                    onUpdate={(value) => {
-                      dispatch({
-                        type: 'set_string_array',
-                        key: moduleId,
-                        value
-                      });
-                    }}
-                    {...typeCheckedProps}
-                  />
-                );
-              case 'items':
-                return (
-                  <Items
-                    key={moduleId}
-                    onUpdate={(value) => {
-                      dispatch({
-                        type: 'set_string_array',
-                        key: moduleId,
-                        value
-                      });
-                    }}
-                    {...typeCheckedProps}
-                  />
-                );
-              case 'specialAbilities':
-                return (
-                  <SpecialAbilities
-                    key={moduleId}
-                    onUpdate={(value) => {
-                      dispatch({
-                        type: 'set_string_array',
-                        key: moduleId,
-                        value
-                      });
-                    }}
-                    {...typeCheckedProps}
-                  />
-                );
-              case 'ratings':
-                return (
-                  <Ratings
-                    key={moduleId}
-                    onUpdate={(value) => {
-                      dispatch({
-                        type: 'set_ratings_xp',
-                        key: moduleId,
-                        value
-                      });
-                    }}
-                    {...typeCheckedProps}
-                  />
-                );
-              default:
-                throw new Error(
-                  'Unknown module type: ' + moduleDefinition.type
-                );
+            // then, pull out the component this module will be using
+            const componentModuleType =
+              basicModuleDefinition.type as keyof typeof componentsByModuleType;
+            if (!(componentModuleType in componentsByModuleType)) {
+              throw new Error(
+                `module type ${moduleId} has no component defined`
+              );
             }
+
+            // trust me on this bro
+            // (some mild jiggery-pokery to let Typescript rest easy about the props)
+            // (don't worry, they're verified via Zod and system tests)
+            const Component = componentsByModuleType[componentModuleType]
+              .default as unknown as React.ElementType;
+
+            const typeCheckedProps = schemas.default.parse({
+              moduleDefinition,
+              playbookProps,
+              userValue: userValue || basicModuleDefinition.default,
+              onUpdate: (value: z.infer<typeof schemas.UserValue>) => {
+                dispatch({ type: 'set_value', key: moduleId, value });
+              }
+            });
+
+            return <Component key={moduleId} {...typeCheckedProps} />;
           })}
         </Column>
       ))}

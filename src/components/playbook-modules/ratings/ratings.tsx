@@ -1,20 +1,13 @@
 import { z } from 'zod';
-import { SharedModuleProps } from '../playbook-modules.types';
-import schemas, {
+import PropsSchema, {
   Attribute as AttributeSchema,
   Action as ActionSchema
 } from './ratings.schema';
 import AttributeGroup from './attribute-group';
 
+type Props = z.infer<typeof PropsSchema>;
 type AttributeType = z.infer<typeof AttributeSchema>;
 type ActionType = z.infer<typeof ActionSchema>;
-
-type Props = SharedModuleProps<z.infer<typeof schemas.UserValue>> & {
-  moduleDefinition: {
-    props: z.infer<typeof schemas.SystemProps>;
-  };
-  playbookProps: z.infer<typeof schemas.PlaybookProps>;
-};
 
 export default function Ratings(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;

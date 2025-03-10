@@ -1,17 +1,11 @@
 import { z } from 'zod';
-import { SharedModuleProps } from '../playbook-modules.types';
-import schemas, { TraumaItem as TraumaItemSchema } from './trauma.schema';
+import PropsSchema, { TraumaItem as TraumaItemSchema } from './trauma.schema';
 import SimpleTracker from '@/components/trackers/simple-tracker';
 import { toggleArrayEntry } from '@/lib/utils';
 import ExampleList from '@/components/example-list/example-list';
 
 type TraumaItemType = z.infer<typeof TraumaItemSchema>;
-
-type Props = SharedModuleProps<z.infer<typeof schemas.UserValue>> & {
-  moduleDefinition: {
-    props: z.infer<typeof schemas.SystemProps>;
-  };
-};
+type Props = z.infer<typeof PropsSchema>;
 
 export default function Trauma(props: Props) {
   const { moduleDefinition, userValue: selectedTraumas, onUpdate } = props;

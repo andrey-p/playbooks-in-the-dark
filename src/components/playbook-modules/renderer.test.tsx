@@ -9,7 +9,7 @@ describe('Renderer', () => {
 
     render(
       <Renderer
-        layout={[['name', 'heritage'], ['items']]}
+        layout={[['name', 'heritage']]}
         modules={{
           name: {
             id: 'name',
@@ -68,7 +68,7 @@ describe('Renderer', () => {
     await user.keyboard('l');
 
     expect(dispatch).toHaveBeenCalledWith({
-      type: 'set_string',
+      type: 'set_value',
       key: 'name',
       value: 'sssl'
     });

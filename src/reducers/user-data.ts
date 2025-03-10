@@ -5,16 +5,7 @@ export default function userDataReducer(state: UserData, action: Action) {
   state = structuredClone(state);
 
   switch (action.type) {
-    case 'set_string':
-      state[action.key] = action.value;
-      break;
-    case 'set_number':
-      state[action.key] = action.value;
-      break;
-    case 'set_string_array':
-      state[action.key] = action.value;
-      break;
-    case 'set_ratings_xp':
+    case 'set_value':
       state[action.key] = action.value;
       break;
     default:
