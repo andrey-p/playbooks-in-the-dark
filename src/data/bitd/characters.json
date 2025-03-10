@@ -1,21 +1,7 @@
 {
   "playbooks": ["cutter", "hound"],
-  "attributesWithActions": [
-    {
-      "id": "insight",
-      "actions": ["study", "tinker"]
-    },
-    {
-      "id": "prowess",
-      "actions": ["finesse", "skirmish"]
-    },
-    {
-      "id": "resolve",
-      "actions": ["attune", "consort"]
-    }
-  ],
   "layout": [
-    ["name", "heritage", "stress", "trauma"],
+    ["name", "heritage", "stress", "trauma", "harm"],
     ["specialAbilities", "items"],
     ["ratings"]
   ],
@@ -68,6 +54,15 @@
           { "id": "unstable", "name": "Unstable" },
           { "id": "vicious", "name": "Vicious" }
         ]
+      }
+    },
+    "harm": {
+      "id": "harm",
+      "type": "harm",
+      "label": "Harm",
+      "default": [],
+      "props": {
+        "levelDescriptions": ["Less effect", "-1D", "Need help"]
       }
     },
     "specialAbilities": {

@@ -8,7 +8,8 @@ type Action = {
     | {
         actionRatings: Record<string, number>;
         attributeXp: Record<string, number>;
-      };
+      }
+    | { text: string; column: number; level: number }[];
 };
 
 export default Action;

@@ -6,6 +6,7 @@ import * as Items from './items/items';
 import * as SpecialAbilities from './special-abilities/special-abilities';
 import * as Ratings from './ratings/ratings';
 import * as Trauma from './trauma/trauma';
+import * as Harm from './harm/harm';
 
 export const componentsByModuleType = {
   textField: TextField,
@@ -13,5 +14,6 @@ export const componentsByModuleType = {
   items: Items,
   specialAbilities: SpecialAbilities,
   ratings: Ratings,
-  trauma: Trauma
+  trauma: Trauma,
+  harm: Harm
 };

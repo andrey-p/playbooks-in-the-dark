@@ -6,6 +6,7 @@ import * as ItemsSchemas from './items/items.schema';
 import * as SpecialAbilitiesSchemas from './special-abilities/special-abilities.schema';
 import * as RatingsSchemas from './ratings/ratings.schema';
 import * as TraumaSchemas from './trauma/trauma.schema';
+import * as HarmSchemas from './harm/harm.schema';
 
 export const schemasByModuleType = {
   textField: TextFieldSchemas,
@@ -13,5 +14,6 @@ export const schemasByModuleType = {
   items: ItemsSchemas,
   specialAbilities: SpecialAbilitiesSchemas,
   ratings: RatingsSchemas,
-  trauma: TraumaSchemas
+  trauma: TraumaSchemas,
+  harm: HarmSchemas
 };
