@@ -2,6 +2,8 @@ import { z } from 'zod';
 import type { UserData } from '@/types';
 import { schemasByModuleType } from '@/components/playbook-modules/all-schemas';
 
+// pull in schemas for all kinds of user value (ie. data that will be saved to DB)
+// and create a big zod schema that checks for all of them
 const userValueSchemas = Object.values(schemasByModuleType).map(
   (schemas) => schemas.UserValue
 );
@@ -12,6 +14,7 @@ const unifiedUserValueSchema = userValueSchemas.reduce(
   z.void()
 );
 
+// then add in the usual, more clearly defined properties
 const userDataSchema = z
   .object({
     id: z.string().max(255),
