@@ -1,13 +1,8 @@
 import { z } from 'zod';
-import { SharedModuleProps } from '../playbook-modules.types';
-import schemas from './tracker.schema';
 import SimpleTracker from '@/components/trackers/simple-tracker';
+import PropsSchema from './tracker.schema';
 
-type Props = SharedModuleProps<z.infer<typeof schemas.UserValue>> & {
-  moduleDefinition: {
-    props: z.infer<typeof schemas.SystemProps>;
-  };
-};
+type Props = z.infer<typeof PropsSchema>;
 
 export default function Tracker(props: Props) {
   const { moduleDefinition, userValue, onUpdate } = props;

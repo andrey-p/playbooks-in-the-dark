@@ -1,16 +1,20 @@
 import { z } from 'zod';
+import { BaseModuleDefinition } from '../playbook-module.schema';
 
-const SystemProps = z.object({
-  trackerType: z.enum(['dagger', 'circle', 'square']),
-  max: z.number()
+export const ModuleDefinition = BaseModuleDefinition.and(
+  z.object({
+    props: z.object({
+      trackerType: z.enum(['dagger', 'circle', 'square']),
+      max: z.number()
+    })
+  })
+);
+export const PlaybookProps = z.void();
+export const UserValue = z.number().int();
+
+export default z.object({
+  moduleDefinition: ModuleDefinition,
+  playbookProps: PlaybookProps,
+  userValue: UserValue,
+  onUpdate: z.function().args(UserValue).returns(z.void())
 });
-const PlaybookProps = z.void();
-const UserValue = z.number().int();
-
-const schemas = {
-  SystemProps,
-  PlaybookProps,
-  UserValue
-};
-
-export default schemas;

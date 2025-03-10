@@ -1,19 +1,12 @@
 import { z } from 'zod';
-import { SharedModuleProps } from '../playbook-modules.types';
-import schemas, {
+import PropsSchema, {
   SpecialAbility as SpecialAbilitySchema
 } from './special-abilities.schema';
 import { toggleArrayEntry } from '@/lib/utils';
 import SpecialAbility from './special-ability';
 
+type Props = z.infer<typeof PropsSchema>;
 type SpecialAbilityType = z.infer<typeof SpecialAbilitySchema>;
-
-type Props = SharedModuleProps<z.infer<typeof schemas.UserValue>> & {
-  moduleDefinition: {
-    props: z.infer<typeof schemas.SystemProps>;
-  };
-  playbookProps: z.infer<typeof schemas.PlaybookProps>;
-};
 
 export default function SpecialAbilities(props: Props) {
   const {

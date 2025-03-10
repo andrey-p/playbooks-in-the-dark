@@ -68,7 +68,7 @@ describe('Renderer', () => {
     await user.keyboard('l');
 
     expect(dispatch).toHaveBeenCalledWith({
-      type: 'set_string',
+      type: 'set_value',
       key: 'name',
       value: 'sssl'
     });

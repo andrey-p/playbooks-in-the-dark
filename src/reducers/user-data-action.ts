@@ -1,31 +1,14 @@
-type Action =
-  | {
-      type: 'set_string';
-      key: string;
-      value: string;
-    }
-  | {
-      type: 'set_number';
-      key: string;
-      value: number;
-    }
-  | {
-      type: 'set_string_array';
-      key: string;
-      value: string[];
-    }
-  | {
-      type: 'set_ratings_xp';
-      key: string;
-      value: {
+type Action = {
+  type: 'set_value';
+  key: string;
+  value:
+    | string
+    | number
+    | string[]
+    | {
         actionRatings: Record<string, number>;
         attributeXp: Record<string, number>;
       };
-    }
-  | {
-      type: 'set_trauma_selected';
-      trauma: string;
-      selected: boolean;
-    };
+};
 
 export default Action;

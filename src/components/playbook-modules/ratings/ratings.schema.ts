@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { BaseModuleDefinition } from '../playbook-module.schema';
 
 export const Attribute = z.object({
   id: z.string(),
@@ -11,20 +12,23 @@ export const Action = z.object({
   attributeId: z.string()
 });
 
-const SystemProps = z.object({
-  attributes: z.array(Attribute),
-  actions: z.array(Action)
-});
-const PlaybookProps = z.record(z.string(), z.number().int());
-const UserValue = z.object({
+export const ModuleDefinition = BaseModuleDefinition.and(
+  z.object({
+    props: z.object({
+      attributes: z.array(Attribute),
+      actions: z.array(Action)
+    })
+  })
+);
+export const PlaybookProps = z.record(z.string(), z.number().int());
+export const UserValue = z.object({
   actionRatings: z.record(z.string(), z.number().int()),
   attributeXp: z.record(z.string(), z.number().int())
 });
 
-const schemas = {
-  SystemProps,
-  PlaybookProps,
-  UserValue
-};
-
-export default schemas;
+export default z.object({
+  moduleDefinition: ModuleDefinition,
+  playbookProps: PlaybookProps,
+  userValue: UserValue,
+  onUpdate: z.function().args(UserValue).returns(z.void())
+});
