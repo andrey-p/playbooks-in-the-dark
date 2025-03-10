@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { UserData } from '@/types';
-import { schemasByModuleType } from '@/components/playbook-modules/all-modules-and-schemas';
+import { schemasByModuleType } from '@/components/playbook-modules/all-schemas';
 
 const userValueSchemas = Object.values(schemasByModuleType).map(
   (schemas) => schemas.UserValue

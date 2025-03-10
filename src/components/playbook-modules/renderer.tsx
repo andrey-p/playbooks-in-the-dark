@@ -5,10 +5,8 @@ import type Action from '@/reducers/user-data-action';
 import ColumnContainer from './layout/column-container';
 import Column from './layout/column';
 
-import {
-  schemasByModuleType,
-  componentsByModuleType
-} from './all-modules-and-schemas';
+import { componentsByModuleType } from './all-modules';
+import { schemasByModuleType } from './all-schemas';
 
 type Props = {
   layout: string[][];
