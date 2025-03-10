@@ -9,7 +9,7 @@ describe('Renderer', () => {
 
     render(
       <Renderer
-        layout={[['name', 'heritage']]}
+        layout={[['name', 'heritage'], ['items']]}
         modules={{
           name: {
             id: 'name',
