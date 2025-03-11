@@ -3,7 +3,7 @@
   "layout": [
     ["name", "heritage", "stress", "trauma", "harm", "healingClock", "armor"],
     ["specialAbilities", "items"],
-    ["ratings"]
+    ["playbookXp", "ratings"]
   ],
   "modules": {
     "name": {
@@ -108,6 +108,16 @@
             "load": 2
           }
         ]
+      }
+    },
+    "playbookXp": {
+      "id": "playbookXp",
+      "type": "tracker",
+      "label": "Playbook XP",
+      "default": 0,
+      "props": {
+        "max": 7,
+        "trackerType": "dagger"
       }
     },
     "ratings": {
