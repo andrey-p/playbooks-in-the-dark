@@ -14,7 +14,7 @@ export const ModuleDefinition = BaseModuleDefinition.and(
     })
   })
 );
-export const PlaybookProps = z.array(Item);
+export const PlaybookProps = z.array(Item).optional();
 export const UserValue = z.array(z.string());
 
 export default z.object({

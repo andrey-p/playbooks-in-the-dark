@@ -11,7 +11,7 @@ export default function ItemList(props: Props) {
     moduleDefinition,
     userValue: selectedItems,
     onUpdate,
-    playbookProps
+    playbookProps = []
   } = props;
 
   const onItemSelect = (itemId: string, selected: boolean) => {
@@ -20,25 +20,28 @@ export default function ItemList(props: Props) {
   };
 
   return (
-    <ul>
-      {moduleDefinition.props.common.map((item: ItemType) => (
-        <li key={item.id}>
-          <Item
-            item={item}
-            selected={selectedItems.includes(item.id)}
-            onSelect={(selected) => onItemSelect(item.id, selected)}
-          />
-        </li>
-      ))}
-      {playbookProps.map((item: ItemType) => (
-        <li key={item.id}>
-          <Item
-            item={item}
-            selected={selectedItems.includes(item.id)}
-            onSelect={(selected) => onItemSelect(item.id, selected)}
-          />
-        </li>
-      ))}
-    </ul>
+    <div>
+      <h3>{moduleDefinition.label}</h3>
+      <ul>
+        {moduleDefinition.props.common.map((item: ItemType) => (
+          <li key={item.id}>
+            <Item
+              item={item}
+              selected={selectedItems.includes(item.id)}
+              onSelect={(selected) => onItemSelect(item.id, selected)}
+            />
+          </li>
+        ))}
+        {playbookProps.map((item: ItemType) => (
+          <li key={item.id}>
+            <Item
+              item={item}
+              selected={selectedItems.includes(item.id)}
+              onSelect={(selected) => onItemSelect(item.id, selected)}
+            />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

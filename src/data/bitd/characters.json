@@ -1,7 +1,7 @@
 {
   "playbooks": ["cutter", "hound"],
   "layout": [
-    ["name", "heritage", "stress", "trauma", "harm", "healingClock"],
+    ["name", "heritage", "stress", "trauma", "harm", "healingClock", "armor"],
     ["specialAbilities", "items"],
     ["ratings"]
   ],
@@ -73,6 +73,19 @@
       "props": {
         "trackerType": "clock",
         "max": 4
+      }
+    },
+    "armor": {
+      "id": "armor",
+      "type": "items",
+      "label": "Armor Uses",
+      "default": [],
+      "props": {
+        "common": [
+          { "id": "armor", "name": "Armor", "load": 1 },
+          { "id": "heavy", "name": "Heavy", "load": 1 },
+          { "id": "special", "name": "Special", "load": 1 }
+        ]
       }
     },
     "specialAbilities": {
