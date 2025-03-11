@@ -1,0 +1,33 @@
+.container {
+  border: none;
+}
+
+.up {
+  transform: 0;
+}
+
+.left {
+  transform: rotate(-90deg);
+}
+
+.right {
+  transform: rotate(90deg);
+}
+
+.down {
+  transform: rotate(180deg);
+}
+
+/* styles for CSV paths, hence stroke / width */
+.default {
+  stroke: var(--foreground);
+  stroke-width: 2px;
+}
+
+.filled {
+  fill: var(--highlight);
+}
+
+.highlighted {
+  fill: var(--highlight);
+}

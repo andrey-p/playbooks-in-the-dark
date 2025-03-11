@@ -19,5 +19,18 @@
       "name": "Focused",
       "description": "dolorem sic"
     }
-  ]
+  ],
+  "contacts": {
+    "customName": "Dangerous Friends",
+    "contacts": [
+      {
+        "id": "steiner",
+        "name": "Steiner, an assassin"
+      },
+      {
+        "id": "celene",
+        "name": "Celene, a sentinel"
+      }
+    ]
+  }
 }

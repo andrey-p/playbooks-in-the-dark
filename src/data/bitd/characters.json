@@ -2,7 +2,7 @@
   "playbooks": ["cutter", "hound"],
   "layout": [
     ["name", "heritage", "stress", "trauma", "harm", "healingClock", "armor"],
-    ["specialAbilities", "items"],
+    ["specialAbilities", "contacts", "items"],
     ["coin", "playbookXp", "ratings"]
   ],
   "modules": {
@@ -93,6 +93,12 @@
       "type": "specialAbilities",
       "label": "Special abilities",
       "default": []
+    },
+    "contacts": {
+      "id": "contacts",
+      "type": "contacts",
+      "label": "Contacts",
+      "default": {}
     },
     "items": {
       "id": "items",

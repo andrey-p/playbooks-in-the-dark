@@ -8,6 +8,7 @@ import * as Ratings from './ratings/ratings';
 import * as Trauma from './trauma/trauma';
 import * as Harm from './harm/harm';
 import * as MultiTracker from './multi-tracker/multi-tracker';
+import * as Contacts from './contacts/contacts';
 
 export const componentsByModuleType = {
   textField: TextField,
@@ -17,5 +18,6 @@ export const componentsByModuleType = {
   ratings: Ratings,
   trauma: Trauma,
   harm: Harm,
-  multiTracker: MultiTracker
+  multiTracker: MultiTracker,
+  contacts: Contacts
 };
