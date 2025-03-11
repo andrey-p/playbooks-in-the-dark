@@ -3,7 +3,7 @@
   "layout": [
     ["name", "heritage", "stress", "trauma", "harm", "healingClock", "armor"],
     ["specialAbilities", "items"],
-    ["playbookXp", "ratings"]
+    ["coin", "playbookXp", "ratings"]
   ],
   "modules": {
     "name": {
@@ -118,6 +118,27 @@
       "props": {
         "max": 7,
         "trackerType": "dagger"
+      }
+    },
+    "coin": {
+      "id": "coin",
+      "type": "multiTracker",
+      "label": "Coin",
+      "default": {
+        "coin": 0,
+        "stash": 0
+      },
+      "props": {
+        "trackers": {
+          "coin": {
+            "max": 4,
+            "trackerType": "square"
+          },
+          "stash": {
+            "max": 40,
+            "trackerType": "square"
+          }
+        }
       }
     },
     "ratings": {

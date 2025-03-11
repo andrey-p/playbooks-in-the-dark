@@ -7,6 +7,7 @@ import * as SpecialAbilitiesSchemas from './special-abilities/special-abilities.
 import * as RatingsSchemas from './ratings/ratings.schema';
 import * as TraumaSchemas from './trauma/trauma.schema';
 import * as HarmSchemas from './harm/harm.schema';
+import * as MultiTrackerSchemas from './multi-tracker/multi-tracker.schema';
 
 export const schemasByModuleType = {
   textField: TextFieldSchemas,
@@ -15,5 +16,6 @@ export const schemasByModuleType = {
   specialAbilities: SpecialAbilitiesSchemas,
   ratings: RatingsSchemas,
   trauma: TraumaSchemas,
-  harm: HarmSchemas
+  harm: HarmSchemas,
+  multiTracker: MultiTrackerSchemas
 };
