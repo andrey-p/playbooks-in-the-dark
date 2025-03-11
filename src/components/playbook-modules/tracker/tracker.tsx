@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import SimpleTracker from '@/components/trackers/simple-tracker';
+import Clock from '@/components/trackers/clock';
 import PropsSchema from './tracker.schema';
 
 type Props = z.infer<typeof PropsSchema>;
@@ -13,12 +14,16 @@ export default function Tracker(props: Props) {
     <div>
       <h3>{label}</h3>
 
-      <SimpleTracker
-        value={userValue}
-        max={max}
-        type={trackerType}
-        onValueSelect={onUpdate}
-      />
+      {trackerType === 'clock' ? (
+        <Clock value={userValue} max={max} onValueSelect={onUpdate} />
+      ) : (
+        <SimpleTracker
+          value={userValue}
+          max={max}
+          type={trackerType}
+          onValueSelect={onUpdate}
+        />
+      )}
     </div>
   );
 }

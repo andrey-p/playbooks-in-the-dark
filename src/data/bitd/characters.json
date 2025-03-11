@@ -1,7 +1,7 @@
 {
   "playbooks": ["cutter", "hound"],
   "layout": [
-    ["name", "heritage", "stress", "trauma", "harm"],
+    ["name", "heritage", "stress", "trauma", "harm", "healingClock"],
     ["specialAbilities", "items"],
     ["ratings"]
   ],
@@ -63,6 +63,16 @@
       "default": [],
       "props": {
         "levelDescriptions": ["Less effect", "-1D", "Need help"]
+      }
+    },
+    "healingClock": {
+      "id": "healingClock",
+      "type": "tracker",
+      "label": "Healing",
+      "default": 0,
+      "props": {
+        "trackerType": "clock",
+        "max": 4
       }
     },
     "specialAbilities": {
