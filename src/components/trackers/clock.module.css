@@ -11,3 +11,7 @@
 .highlighted {
   fill: var(--highlight);
 }
+
+.circle {
+  pointer-events: none;
+}

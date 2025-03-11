@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import styles from './clock.module.css';
+import clsx from 'clsx';
 
 type Props = {
   value: number;
@@ -8,67 +10,73 @@ type Props = {
 };
 
 export default function Clock(props: Props) {
-  const { value, max: slices, onValueSelect, size } = props;
+  const { value, max: numSlices, onValueSelect, size } = props;
+  const [highlightedSlice, setHighlightedSlice] = useState<number | null>(null);
 
   const diameter = size || 100;
   const radius = diameter / 2;
-  const radsPerSlice = (2 * Math.PI) / slices;
+  const radsPerSlice = (2 * Math.PI) / numSlices;
   // make the first line vertical
   const startingRad = Math.PI / 2;
 
-  const lines: string[] = [];
-  const highlightedSlices: string[] = [];
+  const slices: string[] = [];
 
-  for (let i = 0; i < slices; i++) {
-    // -radsPerSlice makes this go clockwise
-    const rad = - radsPerSlice * i + startingRad;
+  // draw slices that match the clock
+  for (let i = 0; i < numSlices; i++) {
+    // - radsPerSlice makes this go clockwise
+    const rad = -radsPerSlice * i + startingRad;
+    const nextRad = -radsPerSlice * (i + 1) + startingRad;
 
-    // draw lines bisecting the circle
-    const lineStartX = Math.cos(rad) * diameter + radius;
-    const lineStartY = -Math.sin(rad) * diameter + radius;
-    const lineEndX = -Math.cos(rad) * diameter + radius;
-    const lineEndY = Math.sin(rad) * diameter + radius;
-
-    lines.push(`M ${lineStartX},${lineStartY} ${lineEndX},${lineEndY} Z`);
-
-    // add any filled slices
-    if (i < value) {
-      const nextRad = - radsPerSlice * (i + 1) + startingRad;
-      const shapeStartX = Math.cos(rad) * diameter * 1.5 + radius;
-      const shapeStartY = -Math.sin(rad) * diameter * 1.5 + radius;
-      const shapeEndX = Math.cos(nextRad) * diameter * 1.5 + radius;
-      const shapeEndY = -Math.sin(nextRad) * diameter * 1.5 + radius;
-      highlightedSlices.push(`M ${shapeStartX},${shapeStartY} ${shapeEndX},${shapeEndY} ${radius},${radius} Z`);
-    }
+    // expand the slices a bit so the short side falls outside of the clip circle
+    const shapeStartX = Math.cos(rad) * diameter * 1.5 + radius;
+    const shapeStartY = -Math.sin(rad) * diameter * 1.5 + radius;
+    const shapeEndX = Math.cos(nextRad) * diameter * 1.5 + radius;
+    const shapeEndY = -Math.sin(nextRad) * diameter * 1.5 + radius;
+    slices.push(
+      `M ${shapeStartX},${shapeStartY} ${shapeEndX},${shapeEndY} ${radius},${radius} Z`
+    );
   }
 
   return (
     <div>
-      <svg width={diameter} height={diameter} viewBox={`0 0 ${diameter} ${diameter}`}>
+      <svg
+        width={diameter}
+        height={diameter}
+        viewBox={`0 0 ${diameter} ${diameter}`}
+        onMouseOut={() => setHighlightedSlice(null)}
+      >
         <defs>
           <clipPath id='circleClip'>
             {/*
-              the circles have a couple of pixels added
+              the circles have a couple of pixels tweaked
               so the outlines don't get clipped by the SVG boundaries
             */}
-            <circle
-              cy={radius + 1}
-              cx={radius + 1}
-              r={radius - 2}
-            />
+            <circle cy={radius + 1} cx={radius + 1} r={radius - 2} />
           </clipPath>
         </defs>
-        {highlightedSlices.map((slice, i) => (
-          <path key={i} d={slice} className={styles.highlighted} fill='red' clip-path='url(#circleClip)'/>
-        ))}
-        {lines.map((line, i) => (
-          <path key={i} d={line} className={styles.default} clip-path='url(#circleClip)'/>
+        {slices.map((slice, i) => (
+          <path
+            key={i}
+            d={slice}
+            className={clsx(
+              styles.default,
+              highlightedSlice && i < highlightedSlice && styles.highlighted,
+              highlightedSlice === null && i < value && styles.highlighted
+            )}
+            clip-path='url(#circleClip)'
+            onMouseOver={() => setHighlightedSlice(i + 1)}
+            onClick={() => {
+              if (onValueSelect) {
+                onValueSelect(i + 1);
+              }
+            }}
+          />
         ))}
         <circle
           cy={radius + 1}
           cx={radius + 1}
           r={radius - 2}
-          className={styles.default}
+          className={clsx(styles.default, styles.circle)}
           fill='rgba(0,0,0,0)'
         />
       </svg>
