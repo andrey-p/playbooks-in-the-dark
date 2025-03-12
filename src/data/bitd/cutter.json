@@ -19,5 +19,18 @@
       "name": "Bodyguard",
       "description": "dolorem sic"
     }
-  ]
+  ],
+  "contacts": {
+    "customName": "Dangerous Friends",
+    "contacts": [
+      {
+        "id": "marlane",
+        "name": "Marlane, a pugilist"
+      },
+      {
+        "id": "chael",
+        "name": "Chael, a vicious thug"
+      }
+    ]
+  }
 }

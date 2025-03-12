@@ -4,13 +4,18 @@ import { BaseModuleDefinition } from '../playbook-module.schema';
 export const ModuleDefinition = BaseModuleDefinition.and(
   z.object({
     props: z.object({
-      trackerType: z.enum(['dagger', 'circle', 'square', 'clock']),
-      max: z.number()
+      trackers: z.record(
+        z.string(),
+        z.object({
+          trackerType: z.enum(['dagger', 'circle', 'square']),
+          max: z.number()
+        })
+      )
     })
   })
 );
 export const PlaybookProps = z.void();
-export const UserValue = z.number().int();
+export const UserValue = z.record(z.string(), z.number());
 
 export default z.object({
   moduleDefinition: ModuleDefinition,

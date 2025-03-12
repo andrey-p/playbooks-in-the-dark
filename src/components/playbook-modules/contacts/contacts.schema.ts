@@ -1,16 +1,21 @@
 import { z } from 'zod';
 import { BaseModuleDefinition } from '../playbook-module.schema';
 
+export const Contact = z.object({
+  id: z.string(),
+  name: z.string()
+});
+
 export const ModuleDefinition = BaseModuleDefinition.and(
   z.object({
-    props: z.object({
-      trackerType: z.enum(['dagger', 'circle', 'square', 'clock']),
-      max: z.number()
-    })
+    props: z.void()
   })
 );
-export const PlaybookProps = z.void();
-export const UserValue = z.number().int();
+export const PlaybookProps = z.object({
+  contacts: z.array(Contact),
+  customLabel: z.string().optional()
+});
+export const UserValue = z.record(z.string(), z.number());
 
 export default z.object({
   moduleDefinition: ModuleDefinition,

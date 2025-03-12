@@ -1,0 +1,17 @@
+/* styles for CSV paths, hence stroke / width */
+.default {
+  stroke: var(--foreground);
+  stroke-width: 1px;
+}
+
+.filled {
+  fill: var(--highlight);
+}
+
+.highlighted {
+  fill: var(--highlight);
+}
+
+.circle {
+  pointer-events: none;
+}

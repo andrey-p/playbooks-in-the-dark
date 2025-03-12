@@ -5,6 +5,7 @@ import type Action from '@/reducers/user-data-action';
 import ColumnContainer from './layout/column-container';
 import Column from './layout/column';
 
+import { BaseModuleDefinition as BaseModuleDefinitionSchema } from './playbook-module.schema';
 import { componentsByModuleType } from './all-modules';
 import { schemasByModuleType } from './all-schemas';
 
@@ -50,16 +51,12 @@ export default function Renderer(props: Props) {
 
             // first off, grab the module type off of the module definition
             // so we know what we're looking at
-            const basicModuleDefinition = z
-              .object({
-                type: z.string(),
-                default: z.any()
-              })
-              .parse(moduleDefinition);
+            const baseModuleDefinition =
+              BaseModuleDefinitionSchema.parse(moduleDefinition);
 
             // pull out the schemas that this module has defined
             const schemaModuleType =
-              basicModuleDefinition.type as keyof typeof schemasByModuleType;
+              baseModuleDefinition.type as keyof typeof schemasByModuleType;
 
             if (!(schemaModuleType in schemasByModuleType)) {
               throw new Error(`module type ${moduleId} has no schema defined`);
@@ -69,11 +66,20 @@ export default function Renderer(props: Props) {
 
             // then, pull out the component this module will be using
             const componentModuleType =
-              basicModuleDefinition.type as keyof typeof componentsByModuleType;
+              baseModuleDefinition.type as keyof typeof componentsByModuleType;
             if (!(componentModuleType in componentsByModuleType)) {
               throw new Error(
                 `module type ${moduleId} has no component defined`
               );
+            }
+
+            // if this module is playbook-restricted,
+            // only render if the current playbook matches
+            if (
+              baseModuleDefinition.playbooks &&
+              !baseModuleDefinition.playbooks.includes(playbookData.id)
+            ) {
+              return null;
             }
 
             // trust me on this bro
@@ -85,7 +91,7 @@ export default function Renderer(props: Props) {
             const typeCheckedProps = schemas.default.parse({
               moduleDefinition,
               playbookProps,
-              userValue: userValue || basicModuleDefinition.default,
+              userValue: userValue || baseModuleDefinition.default,
               onUpdate: (value: z.infer<typeof schemas.UserValue>) => {
                 dispatch({ type: 'set_value', key: moduleId, value });
               }

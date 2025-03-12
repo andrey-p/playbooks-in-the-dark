@@ -1,0 +1,9 @@
+.infoColumn {
+  width: 10%;
+  border: 1px solid var(--foreground);
+}
+
+.harmColumn {
+  width: 40%;
+  border: 1px solid var(--foreground);
+}

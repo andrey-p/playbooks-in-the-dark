@@ -1,23 +1,9 @@
 {
-  "playbooks": ["cutter", "hound"],
-  "attributesWithActions": [
-    {
-      "id": "insight",
-      "actions": ["study", "tinker"]
-    },
-    {
-      "id": "prowess",
-      "actions": ["finesse", "skirmish"]
-    },
-    {
-      "id": "resolve",
-      "actions": ["attune", "consort"]
-    }
-  ],
+  "playbooks": ["cutter", "hound", "leech"],
   "layout": [
-    ["name", "heritage", "stress", "trauma"],
-    ["specialAbilities", "items"],
-    ["ratings"]
+    ["name", "heritage", "stress", "trauma", "harm", "healingClock", "armor"],
+    ["specialAbilities", "contacts", "items", "alchemicals"],
+    ["coin", "playbookXp", "ratings"]
   ],
   "modules": {
     "name": {
@@ -70,18 +56,64 @@
         ]
       }
     },
+    "harm": {
+      "id": "harm",
+      "type": "harm",
+      "label": "Harm",
+      "default": [],
+      "props": {
+        "levelDescriptions": ["Less effect", "-1D", "Need help"]
+      }
+    },
+    "healingClock": {
+      "id": "healingClock",
+      "type": "tracker",
+      "label": "Healing",
+      "default": 0,
+      "props": {
+        "trackerType": "clock",
+        "max": 4
+      }
+    },
+    "armor": {
+      "id": "armor",
+      "type": "items",
+      "label": "Armor Uses",
+      "default": { "items": {} },
+      "props": {
+        "common": [
+          { "id": "armor", "name": "Armor", "load": 1 },
+          { "id": "heavy", "name": "Heavy", "load": 1 },
+          { "id": "special", "name": "Special", "load": 1 }
+        ]
+      }
+    },
     "specialAbilities": {
       "id": "specialAbilities",
       "type": "specialAbilities",
       "label": "Special abilities",
       "default": []
     },
+    "contacts": {
+      "id": "contacts",
+      "type": "contacts",
+      "label": "Contacts",
+      "default": {}
+    },
     "items": {
       "id": "items",
       "type": "items",
       "label": "Items",
-      "default": [],
+      "default": {
+        "load": null,
+        "items": {}
+      },
       "props": {
+        "load": [
+          { "id": "light", "name": "3 light" },
+          { "id": "normal", "name": "5 normal" },
+          { "id": "heavy", "name": "6 heavy" }
+        ],
         "common": [
           { "id": "a knife or two", "name": "A knife or two", "load": 1 },
           {
@@ -90,6 +122,53 @@
             "load": 2
           }
         ]
+      }
+    },
+    "alchemicals": {
+      "id": "alchemicals",
+      "type": "items",
+      "label": "Alchemicals",
+      "playbooks": ["leech"],
+      "default": {
+        "items": {}
+      },
+      "props": {
+        "common": [
+          { "id": "bandolier1", "name": "Bandolier", "load": 3 },
+          { "id": "bandolier2", "name": "Bandolier", "load": 3 }
+        ]
+      },
+      "description": "<p>When you use a bandolier slot, choose an alchemical:</p> <ul><li>Alcahest</li><li>Drift oil</li></ul>"
+    },
+    "playbookXp": {
+      "id": "playbookXp",
+      "type": "tracker",
+      "label": "Playbook XP",
+      "default": 0,
+      "props": {
+        "max": 7,
+        "trackerType": "dagger"
+      }
+    },
+    "coin": {
+      "id": "coin",
+      "type": "multiTracker",
+      "label": "Coin",
+      "default": {
+        "coin": 0,
+        "stash": 0
+      },
+      "props": {
+        "trackers": {
+          "coin": {
+            "max": 4,
+            "trackerType": "square"
+          },
+          "stash": {
+            "max": 40,
+            "trackerType": "square"
+          }
+        }
       }
     },
     "ratings": {

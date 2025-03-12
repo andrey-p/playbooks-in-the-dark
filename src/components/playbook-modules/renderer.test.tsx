@@ -30,7 +30,9 @@ describe('Renderer', () => {
             id: 'items',
             type: 'items',
             label: 'Items',
-            default: [],
+            default: {
+              items: {}
+            },
             props: {
               common: [
                 { id: 'a', name: 'aa', load: 2 },
@@ -72,6 +74,84 @@ describe('Renderer', () => {
       key: 'name',
       value: 'sssl'
     });
+  });
+  it('renders a playbook-specific module if the playbook matches', () => {
+    const dispatch = jest.fn();
+
+    render(
+      <Renderer
+        layout={[['name', 'heritage']]}
+        modules={{
+          name: {
+            id: 'name',
+            type: 'textField',
+            label: 'Name',
+            default: ''
+          },
+          heritage: {
+            id: 'heritage',
+            type: 'textField',
+            label: 'Heritage',
+            default: '',
+            playbooks: ['cutter'],
+            props: {
+              examples: ['Iruvia', 'Akoros']
+            }
+          }
+        }}
+        userData={{
+          id: undefined,
+          systemId: 'bitd',
+          playbookId: 'cutter'
+        }}
+        playbookData={{
+          id: 'cutter'
+        }}
+        dispatch={dispatch}
+      />
+    );
+
+    const heritageInput = screen.getByLabelText('Heritage');
+    expect(heritageInput).toBeTruthy();
+  });
+  it("doesn't render a playbook-specific module if the playbook doesn't match", () => {
+    const dispatch = jest.fn();
+
+    render(
+      <Renderer
+        layout={[['name', 'heritage']]}
+        modules={{
+          name: {
+            id: 'name',
+            type: 'textField',
+            label: 'Name',
+            default: ''
+          },
+          heritage: {
+            id: 'heritage',
+            type: 'textField',
+            label: 'Heritage',
+            default: '',
+            playbooks: ['cutter'],
+            props: {
+              examples: ['Iruvia', 'Akoros']
+            }
+          }
+        }}
+        userData={{
+          id: undefined,
+          systemId: 'bitd',
+          playbookId: 'hound'
+        }}
+        playbookData={{
+          id: 'hound'
+        }}
+        dispatch={dispatch}
+      />
+    );
+
+    const heritageInput = screen.queryByLabelText('Heritage');
+    expect(heritageInput).toBeFalsy();
   });
   it('throws if the layout references an undefined module', () => {
     expect(() => {
