@@ -14,42 +14,46 @@ describe('system data check', () => {
   systems.forEach((systemId) => {
     describe(systemId, () => {
       // maybe system data will be passed down at some point?
-      // const systemData = getJson(systemId, 'system');
-      const characterData = getJson(systemId, 'characters');
+      const systemData = getJson(systemId, 'system');
 
-      characterData.playbooks.forEach((playbookId: string) => {
-        const playbookData = getJson(systemId, playbookId);
+      systemData.playbookTypes.forEach((playbookType: string) => {
+        const playbookDefinition = getJson(systemId, playbookType);
 
-        test(`playbook ${playbookId} should render OK`, () => {
-          render(
-            <Renderer
-              playbookData={playbookData}
-              layout={characterData.layout}
-              modules={characterData.modules}
-              userData={{
-                id: undefined,
-                systemId,
-                playbookId
-              }}
-              dispatch={jest.fn()}
-            />
-          );
-        });
+        playbookDefinition.playbooks.forEach((playbookId: string) => {
+          const playbookData = getJson(systemId, playbookId);
 
-        // "description" is currently the only property that gets rendered unsafely
-        // this is perhaps a bit over-the-top but let's not XSS people with module descriptions
-        test('any descriptions should only contain simple, bare tags', () => {
-          Object.values(characterData.modules).forEach((value: unknown) => {
-            const playbookModule = value as object;
+          test(`playbook ${playbookId} should render OK`, () => {
+            render(
+              <Renderer
+                playbookData={playbookData}
+                layout={playbookDefinition.layout}
+                modules={playbookDefinition.modules}
+                userData={{
+                  id: undefined,
+                  systemId,
+                  playbookId
+                }}
+                dispatch={jest.fn()}
+              />
+            );
+          });
 
-            if ('description' in playbookModule) {
-              const allowedTagsRe = /<\/?p>|<\/?ul>|<\/?li>/g;
-              const stripped = (playbookModule.description as string).replace(
-                allowedTagsRe,
-                ''
-              );
-              expect(stripped).not.toMatch(/<|>/);
-            }
+          // "description" is currently the only property that gets rendered unsafely
+          // this is perhaps a bit over-the-top but let's not XSS people with module descriptions
+          test('any descriptions should only contain simple, bare tags', () => {
+            Object.values(playbookDefinition.modules).forEach(
+              (value: unknown) => {
+                const playbookModule = value as object;
+
+                if ('description' in playbookModule) {
+                  const allowedTagsRe = /<\/?p>|<\/?ul>|<\/?li>/g;
+                  const stripped = (
+                    playbookModule.description as string
+                  ).replace(allowedTagsRe, '');
+                  expect(stripped).not.toMatch(/<|>/);
+                }
+              }
+            );
           });
         });
       });

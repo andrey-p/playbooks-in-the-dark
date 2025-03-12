@@ -1,7 +1,7 @@
 'use client';
 
 import { useReducer } from 'react';
-import type { UserData, CharacterPlaybook, SystemCharacters } from '@/types';
+import type { UserData, PlaybookData, PlaybookDefinition } from '@/types';
 import ModuleRenderer from '@/components/playbook-modules/renderer';
 import { userDataReducer } from '@/reducers';
 import SaveAction from '@/components/playbook-actions/save';
@@ -10,17 +10,13 @@ import { getEnvVar } from '@/lib/env';
 import { saveCharacter } from '@/lib/store';
 
 type Props = {
-  playbookData: CharacterPlaybook;
-  systemCharactersData: SystemCharacters;
+  playbookData: PlaybookData;
+  playbookDefinition: PlaybookDefinition;
   userData: UserData;
 };
 
 export default function Playbook(props: Props) {
-  const {
-    userData: initialUserData,
-    playbookData,
-    systemCharactersData
-  } = props;
+  const { userData: initialUserData, playbookData, playbookDefinition } = props;
   const [userData, dispatch] = useReducer(userDataReducer, initialUserData);
 
   const savePlaybook = async () => {
@@ -38,8 +34,8 @@ export default function Playbook(props: Props) {
 
       {
         <ModuleRenderer
-          layout={systemCharactersData.layout}
-          modules={systemCharactersData.modules}
+          layout={playbookDefinition.layout}
+          modules={playbookDefinition.modules}
           playbookData={playbookData}
           userData={userData}
           dispatch={dispatch}

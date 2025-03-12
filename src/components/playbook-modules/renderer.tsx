@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import type { UserData, CharacterPlaybook } from '@/types';
+import type { UserData, PlaybookData } from '@/types';
 import type Action from '@/reducers/user-data-action';
 
 import ColumnContainer from './layout/column-container';
@@ -15,7 +15,7 @@ type Props = {
     [key: string]: object;
   };
   userData: UserData;
-  playbookData: CharacterPlaybook;
+  playbookData: PlaybookData;
   dispatch: React.ActionDispatch<[Action]>;
 };
 

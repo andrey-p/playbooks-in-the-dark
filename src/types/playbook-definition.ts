@@ -1,4 +1,4 @@
-type SystemCharacters = {
+type PlaybookDefinition = {
   playbooks: string[];
   layout: string[][];
   modules: {
@@ -6,4 +6,4 @@ type SystemCharacters = {
   };
 };
 
-export default SystemCharacters;
+export default PlaybookDefinition;

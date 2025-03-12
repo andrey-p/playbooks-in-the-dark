@@ -1,4 +1,5 @@
 {
   "id": "bitd",
-  "name": "Blades in the Dark"
+  "name": "Blades in the Dark",
+  "playbookTypes": ["character"]
 }

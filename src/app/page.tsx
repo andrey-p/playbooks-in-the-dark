@@ -1,18 +1,18 @@
 //import styles from "./page.module.css";
 import Link from 'next/link';
 import { getJson } from '@/lib/system-data';
-import type { SystemCharacters } from '@/types';
+import type { PlaybookDefinition } from '@/types';
 
 export default function Home() {
   const systemCharactersData = getJson(
     'bitd',
-    'characters'
-  ) as SystemCharacters;
+    'character'
+  ) as PlaybookDefinition;
 
   return (
     <div>
       New character:
-      {systemCharactersData.playbooks.map((playbook) => (
+      {systemCharactersData.playbooks.map((playbook: string) => (
         <Link key={playbook} href={`bitd/character/${playbook}`}>
           {playbook}
         </Link>
