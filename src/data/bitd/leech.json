@@ -1,5 +1,5 @@
 {
-  "id": "cutter",
+  "id": "leech",
   "items": [
     { "id": "fine tinkering tools", "name": "Fine tinkering tools", "load": 1 },
     { "id": "fine wrecking tools", "name": "Fine wrecking tools", "load": 2 }

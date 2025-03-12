@@ -2,7 +2,7 @@
   "playbooks": ["cutter", "hound", "leech"],
   "layout": [
     ["name", "heritage", "stress", "trauma", "harm", "healingClock", "armor"],
-    ["specialAbilities", "contacts", "items"],
+    ["specialAbilities", "contacts", "items", "alchemicals"],
     ["coin", "playbookXp", "ratings"]
   ],
   "modules": {
@@ -123,6 +123,22 @@
           }
         ]
       }
+    },
+    "alchemicals": {
+      "id": "alchemicals",
+      "type": "items",
+      "label": "Alchemicals",
+      "playbooks": ["leech"],
+      "default": {
+        "items": []
+      },
+      "props": {
+        "common": [
+          { "id": "bandolier1", "name": "Bandolier", "load": 3 },
+          { "id": "bandolier2", "name": "Bandolier", "load": 3 }
+        ]
+      },
+      "description": "<p>When you use a bandolier slot, choose an alchemical:</p> <ul><li>Alcahest</li><li>Drift oil</li></ul>"
     },
     "playbookXp": {
       "id": "playbookXp",
