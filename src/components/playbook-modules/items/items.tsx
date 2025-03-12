@@ -2,6 +2,7 @@ import { z } from 'zod';
 import PropsSchema, { Item as ItemSchema } from './items.schema';
 import Item from './item';
 import RadioGroup from '@/components/radio-group/radio-group';
+import ModuleWrapper from '../layout/module-wrapper';
 
 type Props = z.infer<typeof PropsSchema>;
 type ItemType = z.infer<typeof ItemSchema>;
@@ -29,9 +30,10 @@ export default function ItemList(props: Props) {
   };
 
   return (
-    <div>
-      <h3>{moduleDefinition.label}</h3>
-
+    <ModuleWrapper
+      moduleDefinition={moduleDefinition}
+      playbookProps={playbookProps}
+    >
       {load && (
         <RadioGroup
           options={load}
@@ -59,12 +61,6 @@ export default function ItemList(props: Props) {
           </li>
         ))}
       </ul>
-
-      {moduleDefinition.description && (
-        <div
-          dangerouslySetInnerHTML={{ __html: moduleDefinition.description }}
-        />
-      )}
-    </div>
+    </ModuleWrapper>
   );
 }

@@ -1,12 +1,13 @@
 import { z } from 'zod';
 import PropsSchema from './multi-tracker.schema';
 import SimpleTracker from '@/components/trackers/simple-tracker';
+import ModuleWrapper from '../layout/module-wrapper';
 
 type Props = z.infer<typeof PropsSchema>;
 
 export default function MultiTracker(props: Props) {
-  const { moduleDefinition, userValue, onUpdate } = props;
-  const { props: moduleProps, label } = moduleDefinition;
+  const { moduleDefinition, playbookProps, userValue, onUpdate } = props;
+  const { props: moduleProps } = moduleDefinition;
   const { trackers } = moduleProps;
 
   const onValueSelect = (trackerId: string, value: number) => {
@@ -17,8 +18,10 @@ export default function MultiTracker(props: Props) {
   };
 
   return (
-    <div>
-      <h3>{label}</h3>
+    <ModuleWrapper
+      moduleDefinition={moduleDefinition}
+      playbookProps={playbookProps}
+    >
       {Object.keys(trackers).map((trackerId) => (
         <SimpleTracker
           key={trackerId}
@@ -28,6 +31,6 @@ export default function MultiTracker(props: Props) {
           onValueSelect={(value: number) => onValueSelect(trackerId, value)}
         />
       ))}
-    </div>
+    </ModuleWrapper>
   );
 }

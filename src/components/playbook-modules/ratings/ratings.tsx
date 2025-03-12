@@ -4,6 +4,7 @@ import PropsSchema, {
   Action as ActionSchema
 } from './ratings.schema';
 import AttributeGroup from './attribute-group';
+import ModuleWrapper from '../layout/module-wrapper';
 
 type Props = z.infer<typeof PropsSchema>;
 type AttributeType = z.infer<typeof AttributeSchema>;
@@ -11,7 +12,7 @@ type ActionType = z.infer<typeof ActionSchema>;
 
 export default function Ratings(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
-  const { label, props: moduleProps } = moduleDefinition;
+  const { props: moduleProps } = moduleDefinition;
   const { attributes, actions } = moduleProps;
   const startingRatings = playbookProps.startingRatings;
   const { actionRatings, attributeXp } = userValue;
@@ -42,8 +43,10 @@ export default function Ratings(props: Props) {
   };
 
   return (
-    <div>
-      <h3>{label}</h3>
+    <ModuleWrapper
+      moduleDefinition={moduleDefinition}
+      playbookProps={playbookProps}
+    >
       {attributes.map((attribute: AttributeType) => (
         <AttributeGroup
           key={attribute.id}
@@ -57,6 +60,6 @@ export default function Ratings(props: Props) {
           )}
         />
       ))}
-    </div>
+    </ModuleWrapper>
   );
 }

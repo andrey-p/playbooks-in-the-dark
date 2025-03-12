@@ -4,6 +4,7 @@ import PropsSchema, {
 } from './special-abilities.schema';
 import { toggleArrayEntry } from '@/lib/utils';
 import SpecialAbility from './special-ability';
+import ModuleWrapper from '../layout/module-wrapper';
 
 type Props = z.infer<typeof PropsSchema>;
 type SpecialAbilityType = z.infer<typeof SpecialAbilitySchema>;
@@ -30,8 +31,10 @@ export default function SpecialAbilities(props: Props) {
   };
 
   return (
-    <div>
-      <h3>{moduleDefinition.label}</h3>
+    <ModuleWrapper
+      moduleDefinition={moduleDefinition}
+      playbookProps={playbookProps}
+    >
       <ul>
         {specialAbilities.abilities.map(
           (specialAbility: SpecialAbilityType) => (
@@ -47,6 +50,6 @@ export default function SpecialAbilities(props: Props) {
           )
         )}
       </ul>
-    </div>
+    </ModuleWrapper>
   );
 }
