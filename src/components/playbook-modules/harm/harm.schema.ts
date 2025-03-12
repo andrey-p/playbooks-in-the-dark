@@ -2,9 +2,15 @@ import { z } from 'zod';
 import { BaseModuleDefinition } from '../playbook-module.schema';
 
 export const HarmItem = z.object({
-  text: z.string(),
-  level: z.number().int(),
-  column: z.number().int()
+  text: z.string().refine((val) => val.length <= 255),
+  level: z
+    .number()
+    .int()
+    .refine((val) => val >= 0 && val <= 5),
+  column: z
+    .number()
+    .int()
+    .refine((val) => val >= 0 && val <= 5)
 });
 
 export const ModuleDefinition = BaseModuleDefinition.and(

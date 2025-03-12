@@ -15,7 +15,7 @@ export const ModuleDefinition = BaseModuleDefinition.and(
 export const PlaybookProps = z.object({
   abilities: z.array(SpecialAbility)
 });
-export const UserValue = z.array(z.string());
+export const UserValue = z.array(z.string().refine((val) => val.length <= 255));
 
 export default z.object({
   moduleDefinition: ModuleDefinition,
