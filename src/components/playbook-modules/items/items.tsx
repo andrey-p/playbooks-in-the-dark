@@ -1,6 +1,5 @@
 import { z } from 'zod';
 import PropsSchema, { Item as ItemSchema } from './items.schema';
-import { toggleArrayEntry } from '@/lib/utils';
 import Item from './item';
 import RadioGroup from '@/components/radio-group/radio-group';
 
@@ -12,10 +11,12 @@ export default function ItemList(props: Props) {
   const { common, load } = moduleDefinition.props;
   const { items: selectedItems, load: selectedLoad } = userValue;
 
-  const onItemSelect = (itemId: string, selected: boolean) => {
-    const nextSelectedItems = toggleArrayEntry(itemId, selected, selectedItems);
+  const onItemSelect = (itemId: string, selected: number) => {
     onUpdate({
-      items: nextSelectedItems,
+      items: {
+        ...selectedItems,
+        [itemId]: selected
+      },
       load: selectedLoad
     });
   };
@@ -43,7 +44,7 @@ export default function ItemList(props: Props) {
           <li key={item.id}>
             <Item
               item={item}
-              selected={selectedItems.includes(item.id)}
+              selected={selectedItems[item.id]}
               onSelect={(selected) => onItemSelect(item.id, selected)}
             />
           </li>
@@ -52,7 +53,7 @@ export default function ItemList(props: Props) {
           <li key={item.id}>
             <Item
               item={item}
-              selected={selectedItems.includes(item.id)}
+              selected={selectedItems[item.id]}
               onSelect={(selected) => onItemSelect(item.id, selected)}
             />
           </li>

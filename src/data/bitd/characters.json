@@ -79,7 +79,7 @@
       "id": "armor",
       "type": "items",
       "label": "Armor Uses",
-      "default": { "items": [] },
+      "default": { "items": {} },
       "props": {
         "common": [
           { "id": "armor", "name": "Armor", "load": 1 },
@@ -106,7 +106,7 @@
       "label": "Items",
       "default": {
         "load": null,
-        "items": []
+        "items": {}
       },
       "props": {
         "load": [
@@ -130,7 +130,7 @@
       "label": "Alchemicals",
       "playbooks": ["leech"],
       "default": {
-        "items": []
+        "items": {}
       },
       "props": {
         "common": [

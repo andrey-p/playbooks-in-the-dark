@@ -1,12 +1,12 @@
 import { z } from 'zod';
 import { Item as ItemSchema } from './items.schema';
-import ItemToggle from './item-toggle';
+import SimpleTracker from '@/components/trackers/simple-tracker';
 import styles from './item.module.css';
 
 type Props = {
   item: z.infer<typeof ItemSchema>;
-  selected: boolean;
-  onSelect: (selected: boolean) => void;
+  selected?: number;
+  onSelect: (selected: number) => void;
 };
 
 export default function Item(props: Props) {
@@ -14,7 +14,18 @@ export default function Item(props: Props) {
 
   return (
     <div className={styles.container}>
-      <ItemToggle load={item.load} selected={selected} onSelect={onSelect} />
+      <SimpleTracker
+        value={selected || 0}
+        type='square'
+        max={item.load}
+        onValueSelect={(value: number) => {
+          if (value === selected) {
+            onSelect(0);
+          } else {
+            onSelect(value);
+          }
+        }}
+      />
       <span className={item.load === 0 ? styles.noLoadItem : ''}>
         {item.id}
       </span>

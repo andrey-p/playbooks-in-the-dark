@@ -1,11 +1,4 @@
-.container {
-  display: flex;
-}
-
-.toggle {
-  margin-right: 5px;
-}
-
+/* TODO apply this when styling */
 .toggle:not(:last-child) {
   position: relative;
 

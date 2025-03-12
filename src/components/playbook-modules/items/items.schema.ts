@@ -4,7 +4,8 @@ import { BaseModuleDefinition } from '../playbook-module.schema';
 export const Item = z.object({
   id: z.string(),
   name: z.string(),
-  load: z.number().int()
+  load: z.number().int(),
+  showLinked: z.boolean().optional()
 });
 
 export const ModuleDefinition = BaseModuleDefinition.and(
@@ -17,7 +18,7 @@ export const ModuleDefinition = BaseModuleDefinition.and(
 export const PlaybookProps = z.array(Item).optional();
 export const UserValue = z.object({
   load: z.string().optional().nullable(),
-  items: z.array(z.string())
+  items: z.record(z.string(), z.number())
 });
 
 export default z.object({

@@ -31,7 +31,7 @@ describe('Renderer', () => {
             type: 'items',
             label: 'Items',
             default: {
-              items: []
+              items: {}
             },
             props: {
               common: [

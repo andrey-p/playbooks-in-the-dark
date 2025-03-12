@@ -12,7 +12,7 @@ type Action = {
     | { text: string; column: number; level: number }[]
     | Record<string, number>
     | {
-        items: string[];
+        items: Record<string, number>;
         load?: string | null | undefined;
       };
 };
