@@ -1,25 +1,31 @@
 {
   "id": "cutter",
-  "items": [
-    { "id": "fine weapon", "name": "A fine weapon", "load": 1 },
-    { "id": "manacle and chains", "name": "Manacle and chains", "load": 0 }
-  ],
-  "ratings": {
-    "skirmish": 2,
-    "command": 1
+  "items": {
+    "custom": [
+      { "id": "fine weapon", "name": "A fine weapon", "load": 1 },
+      { "id": "manacle and chains", "name": "Manacle and chains", "load": 0 }
+    ]
   },
-  "specialAbilities": [
-    {
-      "id": "battleborn",
-      "name": "Battleborn",
-      "description": "lorem ipsum"
-    },
-    {
-      "id": "bodyguard",
-      "name": "Bodyguard",
-      "description": "dolorem sic"
+  "ratings": {
+    "startingRatings": {
+      "skirmish": 2,
+      "command": 1
     }
-  ],
+  },
+  "specialAbilities": {
+    "abilities": [
+      {
+        "id": "battleborn",
+        "name": "Battleborn",
+        "description": "lorem ipsum"
+      },
+      {
+        "id": "bodyguard",
+        "name": "Bodyguard",
+        "description": "dolorem sic"
+      }
+    ]
+  },
   "contacts": {
     "customName": "Dangerous Friends",
     "contacts": [

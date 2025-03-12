@@ -33,17 +33,19 @@ export default function SpecialAbilities(props: Props) {
     <div>
       <h3>{moduleDefinition.label}</h3>
       <ul>
-        {specialAbilities.map((specialAbility: SpecialAbilityType) => (
-          <li key={specialAbility.id}>
-            <SpecialAbility
-              specialAbility={specialAbility}
-              selected={selectedAbilities.includes(specialAbility.id)}
-              onSelect={(selected) =>
-                onSpecialAbilitySelect(specialAbility.id, selected)
-              }
-            />
-          </li>
-        ))}
+        {specialAbilities.abilities.map(
+          (specialAbility: SpecialAbilityType) => (
+            <li key={specialAbility.id}>
+              <SpecialAbility
+                specialAbility={specialAbility}
+                selected={selectedAbilities.includes(specialAbility.id)}
+                onSelect={(selected) =>
+                  onSpecialAbilitySelect(specialAbility.id, selected)
+                }
+              />
+            </li>
+          )
+        )}
       </ul>
     </div>
   );

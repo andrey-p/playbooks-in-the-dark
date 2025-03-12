@@ -20,7 +20,9 @@ export const ModuleDefinition = BaseModuleDefinition.and(
     })
   })
 );
-export const PlaybookProps = z.record(z.string(), z.number().int());
+export const PlaybookProps = z.object({
+  startingRatings: z.record(z.string(), z.number().int())
+});
 export const UserValue = z.object({
   actionRatings: z.record(z.string(), z.number().int()),
   attributeXp: z.record(z.string(), z.number().int())

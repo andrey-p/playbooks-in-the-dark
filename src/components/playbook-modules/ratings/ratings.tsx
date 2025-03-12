@@ -13,7 +13,7 @@ export default function Ratings(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
   const { label, props: moduleProps } = moduleDefinition;
   const { attributes, actions } = moduleProps;
-  const startingRatings = playbookProps;
+  const startingRatings = playbookProps.startingRatings;
   const { actionRatings, attributeXp } = userValue;
 
   // if the user hasn't set any ratings yet,

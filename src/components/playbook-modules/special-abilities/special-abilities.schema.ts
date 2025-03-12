@@ -12,7 +12,9 @@ export const ModuleDefinition = BaseModuleDefinition.and(
     props: z.void()
   })
 );
-export const PlaybookProps = z.array(SpecialAbility);
+export const PlaybookProps = z.object({
+  abilities: z.array(SpecialAbility)
+});
 export const UserValue = z.array(z.string());
 
 export default z.object({

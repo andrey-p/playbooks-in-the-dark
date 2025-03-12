@@ -7,7 +7,7 @@ type Props = z.infer<typeof PropsSchema>;
 type ItemType = z.infer<typeof ItemSchema>;
 
 export default function ItemList(props: Props) {
-  const { moduleDefinition, userValue, onUpdate, playbookProps = [] } = props;
+  const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
   const { common, load } = moduleDefinition.props;
   const { items: selectedItems, load: selectedLoad } = userValue;
 
@@ -49,7 +49,7 @@ export default function ItemList(props: Props) {
             />
           </li>
         ))}
-        {playbookProps.map((item: ItemType) => (
+        {playbookProps?.custom?.map((item: ItemType) => (
           <li key={item.id}>
             <Item
               item={item}

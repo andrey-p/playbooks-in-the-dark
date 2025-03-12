@@ -1,25 +1,31 @@
 {
   "id": "hound",
-  "items": [
-    { "id": "fine pistol", "name": "Fine pistol", "load": 1 },
-    { "id": "hunting pet", "name": "Hunting pet", "load": 0 }
-  ],
-  "ratings": {
-    "hunt": 2,
-    "prowl": 1
+  "items": {
+    "custom": [
+      { "id": "fine pistol", "name": "Fine pistol", "load": 1 },
+      { "id": "hunting pet", "name": "Hunting pet", "load": 0 }
+    ]
   },
-  "specialAbilities": [
-    {
-      "id": "sharpshooter",
-      "name": "Sharpshooter",
-      "description": "lorem ipsum"
-    },
-    {
-      "id": "focused",
-      "name": "Focused",
-      "description": "dolorem sic"
+  "ratings": {
+    "startingRatings": {
+      "hunt": 2,
+      "prowl": 1
     }
-  ],
+  },
+  "specialAbilities": {
+    "abilities": [
+      {
+        "id": "sharpshooter",
+        "name": "Sharpshooter",
+        "description": "lorem ipsum"
+      },
+      {
+        "id": "focused",
+        "name": "Focused",
+        "description": "dolorem sic"
+      }
+    ]
+  },
   "contacts": {
     "customName": "Dangerous Friends",
     "contacts": [
