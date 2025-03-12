@@ -6,5 +6,6 @@ export const BaseModuleDefinition = z.object({
   label: z.string(),
   default: z.any(),
   props: z.any(),
-  playbooks: z.array(z.string()).optional()
+  playbooks: z.array(z.string()).optional(),
+  description: z.string().optional()
 });

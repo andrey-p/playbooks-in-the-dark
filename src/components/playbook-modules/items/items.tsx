@@ -58,6 +58,12 @@ export default function ItemList(props: Props) {
           </li>
         ))}
       </ul>
+
+      {moduleDefinition.description && (
+        <div
+          dangerouslySetInnerHTML={{ __html: moduleDefinition.description }}
+        />
+      )}
     </div>
   );
 }
