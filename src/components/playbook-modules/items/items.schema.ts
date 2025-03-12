@@ -1,5 +1,8 @@
 import { z } from 'zod';
-import { BaseModuleDefinition } from '../playbook-module.schema';
+import {
+  BaseModuleDefinition,
+  BasePlaybookProps
+} from '../playbook-module.schema';
 
 export const Item = z.object({
   id: z.string().refine((val) => val.length <= 255),
@@ -18,11 +21,13 @@ export const ModuleDefinition = BaseModuleDefinition.and(
     })
   })
 );
-export const PlaybookProps = z
-  .object({
-    custom: z.array(Item).optional()
-  })
-  .optional();
+export const PlaybookProps = BasePlaybookProps.and(
+  z
+    .object({
+      custom: z.array(Item).optional()
+    })
+    .optional()
+);
 export const UserValue = z.object({
   load: z
     .string()

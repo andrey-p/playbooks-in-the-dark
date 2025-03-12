@@ -1,5 +1,8 @@
 import { z } from 'zod';
-import { BaseModuleDefinition } from '../playbook-module.schema';
+import {
+  BaseModuleDefinition,
+  BasePlaybookProps
+} from '../playbook-module.schema';
 
 export const HarmItem = z.object({
   text: z.string().refine((val) => val.length <= 255),
@@ -20,7 +23,7 @@ export const ModuleDefinition = BaseModuleDefinition.and(
     })
   })
 );
-export const PlaybookProps = z.void();
+export const PlaybookProps = BasePlaybookProps.and(z.void());
 export const UserValue = z.array(HarmItem);
 
 export default z.object({

@@ -1,5 +1,8 @@
 import { z } from 'zod';
-import { BaseModuleDefinition } from '../playbook-module.schema';
+import {
+  BaseModuleDefinition,
+  BasePlaybookProps
+} from '../playbook-module.schema';
 
 export const SpecialAbility = z.object({
   id: z.string(),
@@ -12,9 +15,11 @@ export const ModuleDefinition = BaseModuleDefinition.and(
     props: z.void()
   })
 );
-export const PlaybookProps = z.object({
-  abilities: z.array(SpecialAbility)
-});
+export const PlaybookProps = BasePlaybookProps.and(
+  z.object({
+    abilities: z.array(SpecialAbility)
+  })
+);
 export const UserValue = z.array(z.string().refine((val) => val.length <= 255));
 
 export default z.object({

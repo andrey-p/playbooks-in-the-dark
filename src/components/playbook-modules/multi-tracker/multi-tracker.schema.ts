@@ -1,5 +1,8 @@
 import { z } from 'zod';
-import { BaseModuleDefinition } from '../playbook-module.schema';
+import {
+  BaseModuleDefinition,
+  BasePlaybookProps
+} from '../playbook-module.schema';
 
 export const ModuleDefinition = BaseModuleDefinition.and(
   z.object({
@@ -14,7 +17,7 @@ export const ModuleDefinition = BaseModuleDefinition.and(
     })
   })
 );
-export const PlaybookProps = z.void();
+export const PlaybookProps = BasePlaybookProps.and(z.void());
 export const UserValue = z.record(
   z.string().refine((val) => val.length < 255),
   z.number().refine((val) => val >= 0 && val <= 255)

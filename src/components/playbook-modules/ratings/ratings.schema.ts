@@ -1,5 +1,8 @@
 import { z } from 'zod';
-import { BaseModuleDefinition } from '../playbook-module.schema';
+import {
+  BaseModuleDefinition,
+  BasePlaybookProps
+} from '../playbook-module.schema';
 
 export const Attribute = z.object({
   id: z.string(),
@@ -20,9 +23,11 @@ export const ModuleDefinition = BaseModuleDefinition.and(
     })
   })
 );
-export const PlaybookProps = z.object({
-  startingRatings: z.record(z.string(), z.number().int())
-});
+export const PlaybookProps = BasePlaybookProps.and(
+  z.object({
+    startingRatings: z.record(z.string(), z.number().int())
+  })
+);
 export const UserValue = z.object({
   actionRatings: z.record(
     z.string().refine((val) => val.length <= 255),
