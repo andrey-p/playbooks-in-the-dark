@@ -1,5 +1,8 @@
 import { z } from 'zod';
-import { BaseModuleDefinition } from '../playbook-module.schema';
+import {
+  BaseModuleDefinition,
+  BasePlaybookProps
+} from '../playbook-module.schema';
 
 export const Contact = z.object({
   id: z.string(),
@@ -11,11 +14,15 @@ export const ModuleDefinition = BaseModuleDefinition.and(
     props: z.void()
   })
 );
-export const PlaybookProps = z.object({
-  contacts: z.array(Contact),
-  customLabel: z.string().optional()
-});
-export const UserValue = z.record(z.string(), z.number());
+export const PlaybookProps = BasePlaybookProps.and(
+  z.object({
+    contacts: z.array(Contact)
+  })
+);
+export const UserValue = z.record(
+  z.string().refine((val) => val.length <= 255),
+  z.number().refine((val) => val >= -1 && val <= 1)
+);
 
 export default z.object({
   moduleDefinition: ModuleDefinition,

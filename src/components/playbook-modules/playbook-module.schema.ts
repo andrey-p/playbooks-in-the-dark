@@ -9,3 +9,9 @@ export const BaseModuleDefinition = z.object({
   playbooks: z.array(z.string()).optional(),
   description: z.string().optional()
 });
+
+export const BasePlaybookProps = z
+  .object({
+    customLabel: z.string().optional()
+  })
+  .optional();

@@ -1,10 +1,16 @@
 import { z } from 'zod';
-import { BaseModuleDefinition } from '../playbook-module.schema';
+import {
+  BaseModuleDefinition,
+  BasePlaybookProps
+} from '../playbook-module.schema';
 
 export const Item = z.object({
-  id: z.string(),
-  name: z.string(),
-  load: z.number().int(),
+  id: z.string().refine((val) => val.length <= 255),
+  name: z.string().refine((val) => val.length <= 255),
+  load: z
+    .number()
+    .int()
+    .refine((val) => val >= 0 && val <= 10),
   showLinked: z.boolean().optional()
 });
 
@@ -15,10 +21,23 @@ export const ModuleDefinition = BaseModuleDefinition.and(
     })
   })
 );
-export const PlaybookProps = z.array(Item).optional();
+export const PlaybookProps = BasePlaybookProps.and(
+  z
+    .object({
+      custom: z.array(Item).optional()
+    })
+    .optional()
+);
 export const UserValue = z.object({
-  load: z.string().optional().nullable(),
-  items: z.record(z.string(), z.number())
+  load: z
+    .string()
+    .optional()
+    .nullable()
+    .refine((val) => !val || val.length <= 255),
+  items: z.record(
+    z.string().refine((val) => val.length <= 255),
+    z.number().refine((val) => val >= 0 && val <= 10)
+  )
 });
 
 export default z.object({

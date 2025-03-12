@@ -49,7 +49,9 @@ describe('Renderer', () => {
         }}
         playbookData={{
           id: 'cutter',
-          items: [{ id: 'c', name: 'cc', load: 1 }]
+          items: {
+            custom: [{ id: 'c', name: 'cc', load: 1 }]
+          }
         }}
         dispatch={dispatch}
       />

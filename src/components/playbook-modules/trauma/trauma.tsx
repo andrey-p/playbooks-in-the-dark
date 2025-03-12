@@ -3,13 +3,19 @@ import PropsSchema, { TraumaItem as TraumaItemSchema } from './trauma.schema';
 import SimpleTracker from '@/components/trackers/simple-tracker';
 import { toggleArrayEntry } from '@/lib/utils';
 import ExampleList from '@/components/example-list/example-list';
+import ModuleWrapper from '../layout/module-wrapper';
 
 type TraumaItemType = z.infer<typeof TraumaItemSchema>;
 type Props = z.infer<typeof PropsSchema>;
 
 export default function Trauma(props: Props) {
-  const { moduleDefinition, userValue: selectedTraumas, onUpdate } = props;
-  const { props: moduleProps, label } = moduleDefinition;
+  const {
+    moduleDefinition,
+    userValue: selectedTraumas,
+    playbookProps,
+    onUpdate
+  } = props;
+  const { props: moduleProps } = moduleDefinition;
 
   const onItemSelect = (itemId: string, selected: boolean) => {
     const nextSelectedItems = toggleArrayEntry(
@@ -25,8 +31,10 @@ export default function Trauma(props: Props) {
   );
 
   return (
-    <div>
-      <h3>{label}</h3>
+    <ModuleWrapper
+      moduleDefinition={moduleDefinition}
+      playbookProps={playbookProps}
+    >
       <div>
         <SimpleTracker value={selectedTraumas.length} max={4} type='dagger' />
         <ExampleList
@@ -36,6 +44,6 @@ export default function Trauma(props: Props) {
           onItemSelected={onItemSelect}
         />
       </div>
-    </div>
+    </ModuleWrapper>
   );
 }
