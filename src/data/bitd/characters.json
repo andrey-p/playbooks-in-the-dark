@@ -79,7 +79,7 @@
       "id": "armor",
       "type": "items",
       "label": "Armor Uses",
-      "default": [],
+      "default": { "items": [] },
       "props": {
         "common": [
           { "id": "armor", "name": "Armor", "load": 1 },
@@ -104,8 +104,16 @@
       "id": "items",
       "type": "items",
       "label": "Items",
-      "default": [],
+      "default": {
+        "load": null,
+        "items": []
+      },
       "props": {
+        "load": [
+          { "id": "light", "name": "3 light" },
+          { "id": "normal", "name": "5 normal" },
+          { "id": "heavy", "name": "6 heavy" }
+        ],
         "common": [
           { "id": "a knife or two", "name": "A knife or two", "load": 1 },
           {

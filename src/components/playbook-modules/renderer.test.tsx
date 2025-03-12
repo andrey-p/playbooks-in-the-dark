@@ -30,7 +30,9 @@ describe('Renderer', () => {
             id: 'items',
             type: 'items',
             label: 'Items',
-            default: [],
+            default: {
+              items: []
+            },
             props: {
               common: [
                 { id: 'a', name: 'aa', load: 2 },

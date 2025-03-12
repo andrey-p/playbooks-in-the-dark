@@ -10,7 +10,11 @@ type Action = {
         attributeXp: Record<string, number>;
       }
     | { text: string; column: number; level: number }[]
-    | Record<string, number>;
+    | Record<string, number>
+    | {
+        items: string[];
+        load?: string | null | undefined;
+      };
 };
 
 export default Action;
