@@ -1,0 +1,36 @@
+{
+  "id": "cutter",
+  "items": [
+    { "id": "fine tinkering tools", "name": "Fine tinkering tools", "load": 1 },
+    { "id": "fine wrecking tools", "name": "Fine wrecking tools", "load": 2 }
+  ],
+  "ratings": {
+    "tinker": 2,
+    "wreck": 1
+  },
+  "specialAbilities": [
+    {
+      "id": "alchemist",
+      "name": "Alchemist",
+      "description": "lorem ipsum"
+    },
+    {
+      "id": "analyst",
+      "name": "Analyst",
+      "description": "dolorem sic"
+    }
+  ],
+  "contacts": {
+    "customName": "Clever Friends",
+    "contacts": [
+      {
+        "id": "stazia",
+        "name": "Stazia, an apothecary"
+      },
+      {
+        "id": "veldren",
+        "name": "Veldren, a psychonaut"
+      }
+    ]
+  }
+}

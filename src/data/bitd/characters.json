@@ -1,5 +1,5 @@
 {
-  "playbooks": ["cutter", "hound"],
+  "playbooks": ["cutter", "hound", "leech"],
   "layout": [
     ["name", "heritage", "stress", "trauma", "harm", "healingClock", "armor"],
     ["specialAbilities", "contacts", "items"],
