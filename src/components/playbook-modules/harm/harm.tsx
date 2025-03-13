@@ -38,11 +38,11 @@ export default function Harm(props: Props) {
       moduleDefinition={moduleDefinition}
       playbookProps={playbookProps}
     >
-      <table>
+      <table className={styles.table}>
         <tbody>
           {levels.map((level) => (
             <tr key={level}>
-              <td className={styles.infoColumn}>{level}</td>
+              <td className={styles.levelColumn}>{level + 1}</td>
               {level === 2 ? (
                 <td className={styles.harmColumn} colSpan={2}>
                   <HarmItem

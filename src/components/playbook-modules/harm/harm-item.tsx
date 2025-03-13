@@ -1,3 +1,4 @@
+import styles from './harm-item.module.css';
 import { useId } from 'react';
 
 type Props = {
@@ -14,8 +15,9 @@ export default function HarmItem(props: Props) {
 
   return (
     <input
+      className={styles.input}
       type='text'
-      value={harmText}
+      value={harmText || ''}
       id={consistentId}
       name={consistentId}
       onChange={(e) => onUpdate(level, column, e.currentTarget.value)}

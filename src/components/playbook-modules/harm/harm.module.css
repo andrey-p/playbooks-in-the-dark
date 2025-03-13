@@ -1,6 +1,18 @@
-.infoColumn {
-  width: 10%;
+.table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.levelColumn {
+  width: 5%;
   border: 1px solid var(--foreground);
+  text-align: center;
+}
+
+.infoColumn {
+  width: 20%;
+  border: 1px solid var(--foreground);
+  text-align: center;
 }
 
 .harmColumn {
