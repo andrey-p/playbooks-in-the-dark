@@ -24,7 +24,7 @@ export default function ModuleWrapper(props: Props) {
         moduleDefinition.type
       )}
     >
-      <h2>{playbookProps.customLabel || moduleDefinition.label}</h2>
+      <h2 className={styles.heading}>{playbookProps.customLabel || moduleDefinition.label}</h2>
       {children}
       {moduleDefinition.description && (
         <div

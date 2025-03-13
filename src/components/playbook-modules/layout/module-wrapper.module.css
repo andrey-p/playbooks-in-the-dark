@@ -1,0 +1,13 @@
+.container {
+  margin-bottom: 1rem;
+}
+
+.heading {
+  background-color: var(--foreground);
+  color: var(--background);
+  font-family: var(--font-goblin-one);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 0 0.3rem;
+  margin-bottom: 0.5rem;
+}
