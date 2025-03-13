@@ -1,5 +1,5 @@
 import { getJson } from '@/lib/system-data';
-import PlaybookEditor from '../components/playbook';
+import PlaybookEditor from '../components/playbook-editor';
 import type {
   System as SystemType,
   PlaybookData as PlaybookDataType,

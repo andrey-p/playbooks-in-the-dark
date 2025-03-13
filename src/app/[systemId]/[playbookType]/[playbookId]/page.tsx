@@ -4,7 +4,7 @@ import type {
   PlaybookDefinition as PlaybookDefinitionType,
   System as SystemType
 } from '@/types';
-import PlaybookEditor from './components/playbook';
+import PlaybookEditor from './components/playbook-editor';
 import { notFound } from 'next/navigation';
 
 type Params = {

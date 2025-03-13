@@ -7,7 +7,7 @@ import { userDataReducer } from '@/reducers';
 import SaveAction from '@/components/playbook-actions/save';
 
 import { getEnvVar } from '@/lib/env';
-import { saveCharacter } from '@/lib/store';
+import { savePlaybook } from '@/lib/store';
 
 type Props = {
   playbookData: PlaybookData;
@@ -19,8 +19,8 @@ export default function Playbook(props: Props) {
   const { userData: initialUserData, playbookData, playbookDefinition } = props;
   const [userData, dispatch] = useReducer(userDataReducer, initialUserData);
 
-  const savePlaybook = async () => {
-    const data = await saveCharacter(userData);
+  const save = async () => {
+    const data = await savePlaybook(userData);
     const baseUrl = await getEnvVar('APP_URL');
 
     return {
@@ -42,7 +42,7 @@ export default function Playbook(props: Props) {
         />
       }
 
-      <SaveAction savePlaybook={savePlaybook} />
+      <SaveAction savePlaybook={save} />
     </div>
   );
 }
