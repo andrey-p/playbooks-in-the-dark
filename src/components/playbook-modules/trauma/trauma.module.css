@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+}
+
+.tracker {
+  margin-right: 1rem;
+}

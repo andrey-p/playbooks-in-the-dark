@@ -4,6 +4,7 @@ import SimpleTracker from '@/components/trackers/simple-tracker';
 import { toggleArrayEntry } from '@/lib/utils';
 import ExampleList from '@/components/example-list/example-list';
 import ModuleWrapper from '../layout/module-wrapper';
+import styles from './trauma.module.css';
 
 type TraumaItemType = z.infer<typeof TraumaItemSchema>;
 type Props = z.infer<typeof PropsSchema>;
@@ -35,8 +36,10 @@ export default function Trauma(props: Props) {
       moduleDefinition={moduleDefinition}
       playbookProps={playbookProps}
     >
-      <div>
-        <SimpleTracker value={selectedTraumas.length} max={4} type='dagger' />
+      <div className={styles.container}>
+        <div className={styles.tracker}>
+          <SimpleTracker value={selectedTraumas.length} max={4} type='dagger' />
+        </div>
         <ExampleList
           items={options}
           selectable
