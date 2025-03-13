@@ -1,6 +1,7 @@
 import { getJson } from '@/lib/system-data';
 import Renderer from '@/components/playbook-modules/renderer';
 import { render } from '@testing-library/react';
+import systemsJson from './systems.json';
 
 // a lot of the data is checked at runtime, when the sheet is rendered
 // and <Renderer /> will immediately crash if it doesn't like something
@@ -8,10 +9,12 @@ import { render } from '@testing-library/react';
 // these tests simulate all sheets rendering so we know that
 // all of the data in this project is fully good and OK
 
-const systems = ['bitd'];
+const { systems } = systemsJson;
 
 describe('system data check', () => {
-  systems.forEach((systemId) => {
+  systems.forEach((system) => {
+    const systemId = system.id;
+
     describe(systemId, () => {
       // maybe system data will be passed down at some point?
       const systemData = getJson(systemId, 'system');
