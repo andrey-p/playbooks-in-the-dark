@@ -1,0 +1,5 @@
+.separator {
+  width: 300px;
+  border-bottom: 1px solid var(--midground);
+  margin: 3rem auto;
+}

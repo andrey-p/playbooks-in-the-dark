@@ -1,5 +1,6 @@
 {
   "id": "bitd",
   "name": "Blades in the Dark",
-  "playbookTypes": ["scoundrel"]
+  "description": "A game about scoundrels in a haunted, industrial-fantasy city.",
+  "playbookTypes": ["scoundrel", "crew"]
 }
