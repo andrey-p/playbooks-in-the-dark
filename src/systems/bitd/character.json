@@ -1,4 +1,5 @@
 {
+  "id": "character",
   "playbooks": ["cutter", "hound", "leech"],
   "name": "Scoundrels",
   "layout": [
