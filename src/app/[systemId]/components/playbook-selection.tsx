@@ -28,7 +28,9 @@ export default function PlaybookSelection(props: Props) {
             <ul>
               {playbooksByType[playbookDefinition.id].map((playbook) => (
                 <li key={playbook.id}>
-                  <Link href={`/${systemData.id}/${playbookDefinition.id}/${playbook.id}`}>
+                  <Link
+                    href={`/${systemData.id}/${playbookDefinition.id}/${playbook.id}`}
+                  >
                     {playbook.name}: {playbook.description}
                   </Link>
                 </li>
