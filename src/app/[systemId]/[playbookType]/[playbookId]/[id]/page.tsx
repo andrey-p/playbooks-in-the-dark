@@ -1,11 +1,11 @@
 import { getJson } from '@/lib/system-data';
-import CharacterPlaybook from '../components/playbook';
+import PlaybookEditor from '../components/playbook';
 import type {
   System as SystemType,
   PlaybookData as PlaybookDataType,
   PlaybookDefinition as PlaybookDefinitionType
 } from '@/types';
-import { getCharacter } from '@/lib/store';
+import { getPlaybook } from '@/lib/store';
 import { notFound } from 'next/navigation';
 
 type Params = {
@@ -37,7 +37,7 @@ export default async function Page(props: Props) {
     return notFound();
   }
 
-  const data = await getCharacter(id);
+  const data = await getPlaybook(id);
 
   if (!data) {
     return notFound();
@@ -49,7 +49,7 @@ export default async function Page(props: Props) {
   }
 
   return (
-    <CharacterPlaybook
+    <PlaybookEditor
       playbookData={playbookData}
       playbookDefinition={playbookDefinition}
       userData={data}

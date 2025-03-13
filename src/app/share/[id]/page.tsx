@@ -1,5 +1,5 @@
 import { redirect, notFound } from 'next/navigation';
-import { getCharacter } from '@/lib/store';
+import { getPlaybook } from '@/lib/store';
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -8,7 +8,7 @@ type Props = {
 export default async function Page(props: Props) {
   const { id } = await props.params;
 
-  const data = await getCharacter(id);
+  const data = await getPlaybook(id);
 
   if (!data) {
     return notFound();

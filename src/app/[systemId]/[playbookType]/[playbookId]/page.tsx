@@ -4,7 +4,7 @@ import type {
   PlaybookDefinition as PlaybookDefinitionType,
   System as SystemType
 } from '@/types';
-import CharacterPlaybook from './components/playbook';
+import PlaybookEditor from './components/playbook';
 import { notFound } from 'next/navigation';
 
 type Params = {
@@ -36,7 +36,7 @@ export default async function Page(props: Props) {
   }
 
   return (
-    <CharacterPlaybook
+    <PlaybookEditor
       playbookData={playbookData}
       playbookDefinition={playbookDefinition}
       userData={{

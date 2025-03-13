@@ -6,13 +6,13 @@ import { nanoid } from 'nanoid';
 import type { UserData } from '@/types';
 import { validateUserData } from './validation';
 
-export const getCharacter = async (id: string) => {
+export const getPlaybook = async (id: string) => {
   const result = await get(Resource.sheets.name, { id });
 
   return result as UserData;
 };
 
-export const saveCharacter = async (data: UserData) => {
+export const savePlaybook = async (data: UserData) => {
   if (!data.id) {
     data.id = nanoid();
   }
@@ -25,5 +25,5 @@ export const saveCharacter = async (data: UserData) => {
 
   await put(Resource.sheets.name, data);
 
-  return getCharacter(data.id);
+  return getPlaybook(data.id);
 };
