@@ -55,7 +55,7 @@ describe('validation', () => {
         validateUserData(data);
       }).toThrow();
     });
-    it('fails with basic fields missing', () => {
+    it('fails with unexpected data', () => {
       const data = {
         id: 'asdf',
         systemId: 'asdf',
