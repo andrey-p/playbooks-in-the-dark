@@ -1,15 +1,18 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Goblin_One, EB_Garamond } from 'next/font/google';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin']
+const goblinOne = Goblin_One({
+  variable: '--font-goblin-one',
+  subsets: ['latin'],
+  weight: '400'
+  // TODO fallback
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin']
+const garamond = EB_Garamond({
+  variable: '--font-garamond',
+  subsets: ['latin'],
+  weight: ['400', '700', '800']
 });
 
 export const metadata: Metadata = {
@@ -24,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${goblinOne.variable} ${garamond.variable}`}>
         {children}
       </body>
     </html>

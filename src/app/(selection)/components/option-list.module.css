@@ -1,0 +1,31 @@
+.heading {
+  font-family: var(--font-goblin-one);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  background:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0) 10%,
+      var(--background) 10% 90%,
+      rgba(0, 0, 0, 0) 90%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--background) 33%,
+      var(--foreground) 33% 66%,
+      var(--background) 66%
+    );
+  margin-bottom: 3rem;
+}
+
+.list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 5%;
+}
+
+.item {
+  width: 47.5%;
+}

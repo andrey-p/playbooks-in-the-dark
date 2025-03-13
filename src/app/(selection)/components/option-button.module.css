@@ -1,0 +1,21 @@
+.container {
+  display: block;
+  background-color: var(--foreground);
+  padding: 1.5rem;
+  text-align: left;
+
+  &:hover {
+    outline: 5px solid var(--highlight);
+  }
+}
+
+.heading {
+  color: var(--background);
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: var(--background);
+}

@@ -1,0 +1,28 @@
+.container {
+  text-align: center;
+}
+
+.systemBlurb {
+  margin-bottom: 2rem;
+}
+
+.heading {
+  font-family: var(--font-goblin-one);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.or,
+.goBack {
+  font-family: var(--font-goblin-one);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+
+.goBack {
+  &:hover,
+  &:focus {
+    color: var(--highlight);
+  }
+}

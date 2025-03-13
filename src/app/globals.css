@@ -1,7 +1,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --highlight: #ff0000;
+  --highlight: #ce3a00;
+  --midground: #666;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,12 +16,17 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  font-family:
+    var(--font-garamond),
+    Times New Roman,
+    serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
