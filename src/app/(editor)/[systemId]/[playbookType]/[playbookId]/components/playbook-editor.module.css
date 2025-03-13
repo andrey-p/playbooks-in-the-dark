@@ -1,4 +1,8 @@
-.attributes {
-  display: flex;
-  gap: 5%;
+.heading {
+  font-family: var(--font-goblin-one);
+  text-transform: uppercase;
+}
+
+.description {
+  font-style: italic;
 }
