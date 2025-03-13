@@ -5,14 +5,15 @@ import './globals.css';
 const goblinOne = Goblin_One({
   variable: '--font-goblin-one',
   subsets: ['latin'],
-  weight: '400'
-  // TODO fallback
+  weight: '400',
+  fallback: ['Impact', 'serif']
 });
 
 const garamond = EB_Garamond({
   variable: '--font-garamond',
   subsets: ['latin'],
-  weight: ['400', '700', '800']
+  weight: ['400', '700', '800'],
+  fallback: ['Times New roman', 'serif']
 });
 
 export const metadata: Metadata = {
