@@ -15,7 +15,13 @@ export default function TextField(props: Props) {
   const consistentId = useId();
 
   return (
-    <div className={clsx(styles.container, moduleDefinition.id, moduleDefinition.type)}>
+    <div
+      className={clsx(
+        styles.container,
+        moduleDefinition.id,
+        moduleDefinition.type
+      )}
+    >
       <div className={styles.inputContainer}>
         <input
           type='text'
