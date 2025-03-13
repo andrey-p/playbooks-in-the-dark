@@ -41,6 +41,7 @@ export default async function Page(props: Props) {
       playbookDefinition={playbookDefinition}
       userData={{
         id: undefined,
+        playbookType,
         systemId: systemData.id,
         playbookId: playbookData.id
       }}

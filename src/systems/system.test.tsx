@@ -33,6 +33,7 @@ describe('system data check', () => {
                 modules={playbookDefinition.modules}
                 userData={{
                   id: undefined,
+                  playbookType,
                   systemId,
                   playbookId
                 }}

@@ -52,6 +52,7 @@ describe('Renderer', () => {
         }}
         userData={{
           id: undefined,
+          playbookType: 'scoundrel',
           systemId: 'bitd',
           playbookId: 'cutter',
           scoundrelName: 'sss'
@@ -108,6 +109,7 @@ describe('Renderer', () => {
         userData={{
           id: undefined,
           systemId: 'bitd',
+          playbookType: 'scoundrel',
           playbookId: 'cutter'
         }}
         playbookData={playbookData}
@@ -145,6 +147,7 @@ describe('Renderer', () => {
         userData={{
           id: undefined,
           systemId: 'bitd',
+          playbookType: 'scoundrel',
           playbookId: 'hound'
         }}
         playbookData={{
@@ -174,6 +177,7 @@ describe('Renderer', () => {
           userData={{
             id: undefined,
             systemId: 'bitd',
+            playbookType: 'scoundrel',
             playbookId: 'cutter'
           }}
           playbookData={playbookData}
@@ -198,6 +202,7 @@ describe('Renderer', () => {
           userData={{
             id: undefined,
             systemId: 'bitd',
+            playbookType: 'scoundrel',
             playbookId: 'cutter'
           }}
           playbookData={playbookData}
@@ -222,6 +227,7 @@ describe('Renderer', () => {
           userData={{
             id: undefined,
             systemId: 'bitd',
+            playbookType: 'scoundrel',
             playbookId: 'cutter'
           }}
           playbookData={playbookData}
@@ -249,6 +255,7 @@ describe('Renderer', () => {
           userData={{
             id: undefined,
             systemId: 'bitd',
+            playbookType: 'scoundrel',
             playbookId: 'cutter'
           }}
           playbookData={playbookData}
@@ -277,6 +284,7 @@ describe('Renderer', () => {
             id: undefined,
             systemId: 'bitd',
             playbookId: 'cutter',
+            playbookType: 'scoundrel',
             scoundrelName: ['oh no']
           }}
           playbookData={playbookData}

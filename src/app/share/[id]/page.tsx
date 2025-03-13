@@ -14,5 +14,5 @@ export default async function Page(props: Props) {
     return notFound();
   }
 
-  redirect(`/${data.systemId}/character/${data.playbookId}/${id}`);
+  redirect(`/${data.systemId}/${data.playbookType}/${data.playbookId}/${id}`);
 }
