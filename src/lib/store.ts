@@ -1,18 +1,21 @@
 'use server';
 
+import { z } from 'zod';
 import { Resource } from 'sst';
 import { get, put } from './integrations/dynamodb';
 import { nanoid } from 'nanoid';
-import type { UserData } from '@/types';
+import { UserData as UserDataSchema } from '@/schemas';
 import { validateUserData } from './validation';
 
-export const getCharacter = async (id: string) => {
-  const result = await get(Resource.sheets.name, { id });
+type UserDataType = z.infer<typeof UserDataSchema>;
 
-  return result as UserData;
+export const getPlaybook = async (id: string) => {
+  const result = await get(Resource.playbookTable.name, { id });
+
+  return UserDataSchema.parse(result);
 };
 
-export const saveCharacter = async (data: UserData) => {
+export const savePlaybook = async (data: UserDataType) => {
   if (!data.id) {
     data.id = nanoid();
   }
@@ -23,7 +26,7 @@ export const saveCharacter = async (data: UserData) => {
     throw new Error("Couldn't save playbook");
   }
 
-  await put(Resource.sheets.name, data);
+  await put(Resource.playbookTable.name, data);
 
-  return getCharacter(data.id);
+  return getPlaybook(data.id);
 };

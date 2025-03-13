@@ -1,8 +1,5 @@
 import { z } from 'zod';
-import {
-  BaseModuleDefinition,
-  BasePlaybookProps
-} from '../playbook-module.schema';
+import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
 
 export const Item = z.object({
   id: z.string().refine((val) => val.length <= 255),

@@ -1,6 +1,8 @@
 import { z } from 'zod';
-import type { UserData } from '@/types';
+import { UserData as UserDataSchema } from '@/schemas';
 import { schemasByModuleType } from '@/components/playbook-modules/all-schemas';
+
+type UserDataType = z.infer<typeof UserDataSchema>;
 
 // pull in schemas for all kinds of user value (ie. data that will be saved to DB)
 // and create a big zod schema that checks for all of them
@@ -15,15 +17,11 @@ const unifiedUserValueSchema = userValueSchemas.reduce(
 );
 
 // then add in the usual, more clearly defined properties
-const userDataSchema = z
-  .object({
-    id: z.string().max(255),
-    systemId: z.string().max(255),
-    playbookId: z.string().max(255)
-  })
-  .and(z.record(z.string(), unifiedUserValueSchema));
+const userDataSchema = UserDataSchema.and(
+  z.record(z.string(), unifiedUserValueSchema)
+);
 
-export const validateUserData = (userData: UserData) => {
+export const validateUserData = (userData: UserDataType) => {
   userDataSchema.parse(userData);
 
   // this is very very basic

@@ -1,21 +1,27 @@
 import { z } from 'zod';
-import type { UserData, CharacterPlaybook } from '@/types';
+import {
+  UserData as UserDataSchema,
+  PlaybookData as PlaybookDataSchema,
+  BaseModuleDefinition as BaseModuleDefinitionSchema
+} from '@/schemas';
 import type Action from '@/reducers/user-data-action';
 
 import ColumnContainer from './layout/column-container';
 import Column from './layout/column';
 
-import { BaseModuleDefinition as BaseModuleDefinitionSchema } from './playbook-module.schema';
 import { componentsByModuleType } from './all-modules';
 import { schemasByModuleType } from './all-schemas';
+
+type UserDataType = z.infer<typeof UserDataSchema>;
+type PlaybookDataType = z.infer<typeof PlaybookDataSchema>;
 
 type Props = {
   layout: string[][];
   modules: {
     [key: string]: object;
   };
-  userData: UserData;
-  playbookData: CharacterPlaybook;
+  userData: UserDataType;
+  playbookData: PlaybookDataType;
   dispatch: React.ActionDispatch<[Action]>;
 };
 

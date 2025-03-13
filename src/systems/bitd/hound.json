@@ -1,5 +1,7 @@
 {
   "id": "hound",
+  "name": "Hound",
+  "description": "ipsum",
   "items": {
     "custom": [
       { "id": "fine pistol", "name": "Fine pistol", "load": 1 },
