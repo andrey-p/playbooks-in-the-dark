@@ -7,7 +7,7 @@ import type { UserData } from '@/types';
 import { validateUserData } from './validation';
 
 export const getPlaybook = async (id: string) => {
-  const result = await get(Resource.sheets.name, { id });
+  const result = await get(Resource.playbookTable.name, { id });
 
   return result as UserData;
 };
@@ -23,7 +23,7 @@ export const savePlaybook = async (data: UserData) => {
     throw new Error("Couldn't save playbook");
   }
 
-  await put(Resource.sheets.name, data);
+  await put(Resource.playbookTable.name, data);
 
   return getPlaybook(data.id);
 };
