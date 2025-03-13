@@ -7,23 +7,24 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  justify-content: flex-end;
   /*
-   * each item will start with an em dash
-   * this will make sure that the first one on each row
+   * each item will end with an em dash
+   * this will make sure that the last one on each row
    * isn't showing
    */
-  margin-left: -1rem;
+  margin-right: -1rem;
 }
 
 .item {
   white-space: nowrap;
-  padding-left: 1rem;
+  padding-right: 1rem;
   position: relative;
 
-  &:before {
+  &:after {
     content: '—';
     position: absolute;
-    left: 0;
+    right: -0.1rem;
   }
 }
 

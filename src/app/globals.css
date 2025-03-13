@@ -23,12 +23,14 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-size: 1.2em;
-  font-family:
-    var(--font-garamond),
-    Times New Roman,
-    serif;
+  font-family: var(--font-garamond);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+input {
+  font-size: 1.2rem;
+  font-family: var(--font-garamond);
 }
 
 * {
