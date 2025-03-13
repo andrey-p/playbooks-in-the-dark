@@ -1,7 +1,10 @@
-import type { UserData } from '@/types';
-import type Action from './user-data-action';
+import { z } from 'zod';
+import { UserData as UserDataSchema } from '@/schemas';
 
-export default function userDataReducer(state: UserData, action: Action) {
+import type Action from './user-data-action';
+type UserDataType = z.infer<typeof UserDataSchema>;
+
+export default function userDataReducer(state: UserDataType, action: Action) {
   state = structuredClone(state);
 
   switch (action.type) {

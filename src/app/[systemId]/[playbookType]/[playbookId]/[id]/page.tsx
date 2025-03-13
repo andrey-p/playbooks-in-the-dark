@@ -1,10 +1,10 @@
 import { getJson } from '@/lib/system-data';
 import PlaybookEditor from '../components/playbook-editor';
-import type {
-  System as SystemType,
-  PlaybookData as PlaybookDataType,
-  PlaybookDefinition as PlaybookDefinitionType
-} from '@/types';
+import {
+  PlaybookData as PlaybookDataSchema,
+  PlaybookDefinition as PlaybookDefinitionSchema,
+  System as SystemSchema
+} from '@/schemas';
 import { getPlaybook } from '@/lib/store';
 import { notFound } from 'next/navigation';
 
@@ -27,12 +27,11 @@ export default async function Page(props: Props) {
   let playbookDefinition;
 
   try {
-    systemData = getJson(systemId, 'system') as SystemType;
-    playbookData = getJson(systemId, playbookId) as PlaybookDataType;
-    playbookDefinition = getJson(
-      systemId,
-      playbookType
-    ) as PlaybookDefinitionType;
+    systemData = SystemSchema.parse(getJson(systemId, 'system'));
+    playbookData = PlaybookDataSchema.parse(getJson(systemId, playbookId));
+    playbookDefinition = PlaybookDefinitionSchema.parse(
+      getJson(systemId, playbookType)
+    );
   } catch {
     return notFound();
   }

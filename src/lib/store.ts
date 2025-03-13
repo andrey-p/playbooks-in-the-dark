@@ -1,18 +1,21 @@
 'use server';
 
+import { z } from 'zod';
 import { Resource } from 'sst';
 import { get, put } from './integrations/dynamodb';
 import { nanoid } from 'nanoid';
-import type { UserData } from '@/types';
+import { UserData as UserDataSchema } from '@/schemas';
 import { validateUserData } from './validation';
+
+type UserDataType = z.infer<typeof UserDataSchema>;
 
 export const getPlaybook = async (id: string) => {
   const result = await get(Resource.playbookTable.name, { id });
 
-  return result as UserData;
+  return UserDataSchema.parse(result);
 };
 
-export const savePlaybook = async (data: UserData) => {
+export const savePlaybook = async (data: UserDataType) => {
   if (!data.id) {
     data.id = nanoid();
   }

@@ -1,9 +1,14 @@
-import type {
-  PlaybookData as PlaybookDataType,
-  PlaybookDefinition as PlaybookDefinitionType,
-  System as SystemType
-} from '@/types';
+import { z } from 'zod';
+import {
+  PlaybookData as PlaybookDataSchema,
+  PlaybookDefinition as PlaybookDefinitionSchema,
+  System as SystemSchema
+} from '@/schemas';
 import Link from 'next/link';
+
+type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
+type PlaybookDataType = z.infer<typeof PlaybookDataSchema>;
+type SystemType = z.infer<typeof SystemSchema>;
 
 type Props = {
   systemData: SystemType;

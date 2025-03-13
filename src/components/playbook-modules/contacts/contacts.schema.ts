@@ -1,8 +1,5 @@
 import { z } from 'zod';
-import {
-  BaseModuleDefinition,
-  BasePlaybookProps
-} from '../playbook-module.schema';
+import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
 
 export const Contact = z.object({
   id: z.string(),

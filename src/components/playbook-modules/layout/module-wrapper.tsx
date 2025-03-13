@@ -2,7 +2,7 @@ import { z } from 'zod';
 import {
   BaseModuleDefinition as BaseModuleDefinitionSchema,
   BasePlaybookProps as BasePlaybookPropsSchema
-} from '../playbook-module.schema';
+} from '@/schemas';
 
 type Props = {
   moduleDefinition: z.infer<typeof BaseModuleDefinitionSchema>;

@@ -1,12 +1,12 @@
 //import styles from "./page.module.css";
 import Link from 'next/link';
 import { getJson } from '@/lib/system-data';
-import type { System } from '@/types';
+import { System } from '@/schemas';
 import systemsJson from '@/systems/systems.json';
 
 export default function Home() {
   const availableSystems = systemsJson.systems.map((system) => {
-    return getJson(system.id, 'system') as System;
+    return System.parse(getJson(system.id, 'system'));
   });
 
   return (

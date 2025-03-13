@@ -1,18 +1,27 @@
 'use client';
 
 import { useReducer } from 'react';
-import type { UserData, PlaybookData, PlaybookDefinition } from '@/types';
+import { z } from 'zod';
+import {
+  PlaybookData as PlaybookDataSchema,
+  PlaybookDefinition as PlaybookDefinitionSchema,
+  UserData as UserDataSchema
+} from '@/schemas';
 import ModuleRenderer from '@/components/playbook-modules/renderer';
 import { userDataReducer } from '@/reducers';
 import SaveAction from '@/components/playbook-actions/save';
+
+type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
+type PlaybookDataType = z.infer<typeof PlaybookDataSchema>;
+type UserDataType = z.infer<typeof UserDataSchema>;
 
 import { getEnvVar } from '@/lib/env';
 import { savePlaybook } from '@/lib/store';
 
 type Props = {
-  playbookData: PlaybookData;
-  playbookDefinition: PlaybookDefinition;
-  userData: UserData;
+  playbookData: PlaybookDataType;
+  playbookDefinition: PlaybookDefinitionType;
+  userData: UserDataType;
 };
 
 export default function Playbook(props: Props) {

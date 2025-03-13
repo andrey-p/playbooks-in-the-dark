@@ -1,11 +1,15 @@
+import { z } from 'zod';
 import { getJson } from '@/lib/system-data';
-import type {
-  PlaybookData as PlaybookDataType,
-  PlaybookDefinition as PlaybookDefinitionType,
-  System as SystemType
-} from '@/types';
+import {
+  PlaybookData as PlaybookDataSchema,
+  PlaybookDefinition as PlaybookDefinitionSchema,
+  System as SystemSchema
+} from '@/schemas';
 import { notFound } from 'next/navigation';
 import PlaybookSelection from './components/playbook-selection';
+
+type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
+type PlaybookDataType = z.infer<typeof PlaybookDataSchema>;
 
 type Props = {
   params: Promise<{ systemId: string }>;
@@ -19,18 +23,21 @@ export default async function Page(props: Props) {
   const playbooksByType: Record<string, PlaybookDataType[]> = {};
 
   try {
-    systemData = getJson(systemId, 'system') as SystemType;
+    systemData = SystemSchema.parse(getJson(systemId, 'system'));
 
     systemData.playbookTypes.forEach((type) => {
-      const definition = getJson(systemId, type) as PlaybookDefinitionType;
+      const definition = PlaybookDefinitionSchema.parse(
+        getJson(systemId, type)
+      );
       playbookDefinitions.push(definition);
 
       playbooksByType[type] = [];
 
       definition.playbooks.forEach((playbookId) => {
-        playbooksByType[type].push(
-          getJson(systemId, playbookId) as PlaybookDataType
+        const playbookData = PlaybookDataSchema.parse(
+          getJson(systemId, playbookId)
         );
+        playbooksByType[type].push(playbookData);
       });
     });
   } catch {
