@@ -1,13 +1,22 @@
 {
   "playbooks": ["cutter", "hound", "leech"],
+  "name": "Scoundrels",
   "layout": [
-    ["name", "heritage", "stress", "trauma", "harm", "healingClock", "armor"],
+    [
+      "scoundrelName",
+      "heritage",
+      "stress",
+      "trauma",
+      "harm",
+      "healingClock",
+      "armor"
+    ],
     ["specialAbilities", "contacts", "items", "alchemicals"],
     ["coin", "playbookXp", "ratings"]
   ],
   "modules": {
-    "name": {
-      "id": "name",
+    "scoundrelName": {
+      "id": "scoundrelName",
       "type": "textField",
       "label": "Name",
       "default": ""

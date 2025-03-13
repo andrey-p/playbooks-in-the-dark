@@ -2,6 +2,15 @@ import Renderer from './renderer';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
+const playbookData = {
+  id: 'cutter',
+  name: 'Cutter',
+  description: 'a roustabout',
+  items: {
+    custom: [{ id: 'c', name: 'cc', load: 1 }]
+  }
+};
+
 describe('Renderer', () => {
   it('renders modules if all data is correctly passed', async () => {
     const user = userEvent.setup();
@@ -9,10 +18,10 @@ describe('Renderer', () => {
 
     render(
       <Renderer
-        layout={[['name', 'heritage'], ['items']]}
+        layout={[['scoundrelName', 'heritage'], ['items']]}
         modules={{
-          name: {
-            id: 'name',
+          scoundrelName: {
+            id: 'scoundrelName',
             type: 'textField',
             label: 'Name',
             default: ''
@@ -45,14 +54,9 @@ describe('Renderer', () => {
           id: undefined,
           systemId: 'bitd',
           playbookId: 'cutter',
-          name: 'sss'
+          scoundrelName: 'sss'
         }}
-        playbookData={{
-          id: 'cutter',
-          items: {
-            custom: [{ id: 'c', name: 'cc', load: 1 }]
-          }
-        }}
+        playbookData={playbookData}
         dispatch={dispatch}
       />
     );
@@ -73,7 +77,7 @@ describe('Renderer', () => {
 
     expect(dispatch).toHaveBeenCalledWith({
       type: 'set_value',
-      key: 'name',
+      key: 'scoundrelName',
       value: 'sssl'
     });
   });
@@ -82,10 +86,10 @@ describe('Renderer', () => {
 
     render(
       <Renderer
-        layout={[['name', 'heritage']]}
+        layout={[['scoundrelName', 'heritage']]}
         modules={{
-          name: {
-            id: 'name',
+          scoundrelName: {
+            id: 'scoundrelName',
             type: 'textField',
             label: 'Name',
             default: ''
@@ -106,9 +110,7 @@ describe('Renderer', () => {
           systemId: 'bitd',
           playbookId: 'cutter'
         }}
-        playbookData={{
-          id: 'cutter'
-        }}
+        playbookData={playbookData}
         dispatch={dispatch}
       />
     );
@@ -121,10 +123,10 @@ describe('Renderer', () => {
 
     render(
       <Renderer
-        layout={[['name', 'heritage']]}
+        layout={[['scoundrelName', 'heritage']]}
         modules={{
-          name: {
-            id: 'name',
+          scoundrelName: {
+            id: 'scoundrelName',
             type: 'textField',
             label: 'Name',
             default: ''
@@ -146,6 +148,7 @@ describe('Renderer', () => {
           playbookId: 'hound'
         }}
         playbookData={{
+          ...playbookData,
           id: 'hound'
         }}
         dispatch={dispatch}
@@ -159,10 +162,10 @@ describe('Renderer', () => {
     expect(() => {
       render(
         <Renderer
-          layout={[['nam']]}
+          layout={[['scoundrelNam']]}
           modules={{
-            name: {
-              id: 'name',
+            scoundrelName: {
+              id: 'scoundrelName',
               type: 'textField',
               default: '',
               label: 'Name'
@@ -173,7 +176,7 @@ describe('Renderer', () => {
             systemId: 'bitd',
             playbookId: 'cutter'
           }}
-          playbookData={{ id: 'cutter' }}
+          playbookData={playbookData}
           dispatch={jest.fn()}
         />
       );
@@ -183,10 +186,10 @@ describe('Renderer', () => {
     expect(() => {
       render(
         <Renderer
-          layout={[['name']]}
+          layout={[['scoundrelName']]}
           modules={{
-            name: {
-              id: 'name',
+            scoundrelName: {
+              id: 'scoundrelName',
               type: 'textFeeled',
               default: '',
               label: 'Name'
@@ -197,7 +200,7 @@ describe('Renderer', () => {
             systemId: 'bitd',
             playbookId: 'cutter'
           }}
-          playbookData={{ id: 'cutter' }}
+          playbookData={playbookData}
           dispatch={jest.fn()}
         />
       );
@@ -207,10 +210,10 @@ describe('Renderer', () => {
     expect(() => {
       render(
         <Renderer
-          layout={[['name']]}
+          layout={[['scoundrelName']]}
           modules={{
-            name: {
-              id: 'name',
+            scoundrelName: {
+              id: 'scoundrelName',
               type: 'textField',
               default: '',
               lable: 'Name'
@@ -221,7 +224,7 @@ describe('Renderer', () => {
             systemId: 'bitd',
             playbookId: 'cutter'
           }}
-          playbookData={{ id: 'cutter' }}
+          playbookData={playbookData}
           dispatch={jest.fn()}
         />
       );
@@ -231,10 +234,10 @@ describe('Renderer', () => {
     expect(() => {
       render(
         <Renderer
-          layout={[['name']]}
+          layout={[['scoundrelName']]}
           modules={{
-            name: {
-              id: 'name',
+            scoundrelName: {
+              id: 'scoundrelName',
               type: 'textField',
               label: 'Name',
               default: '',
@@ -248,7 +251,7 @@ describe('Renderer', () => {
             systemId: 'bitd',
             playbookId: 'cutter'
           }}
-          playbookData={{ id: 'cutter' }}
+          playbookData={playbookData}
           dispatch={jest.fn()}
         />
       );
@@ -258,10 +261,10 @@ describe('Renderer', () => {
     expect(() => {
       render(
         <Renderer
-          layout={[['name']]}
+          layout={[['scoundrelName']]}
           modules={{
-            name: {
-              id: 'name',
+            scoundrelName: {
+              id: 'scoundrelName',
               type: 'textField',
               label: 'Name',
               default: '',
@@ -274,9 +277,9 @@ describe('Renderer', () => {
             id: undefined,
             systemId: 'bitd',
             playbookId: 'cutter',
-            name: ['oh no']
+            scoundrelName: ['oh no']
           }}
-          playbookData={{ id: 'cutter' }}
+          playbookData={playbookData}
           dispatch={jest.fn()}
         />
       );

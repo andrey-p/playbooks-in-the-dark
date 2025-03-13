@@ -1,5 +1,7 @@
 {
   "id": "cutter",
+  "name": "Cutter",
+  "description": "lorem",
   "items": {
     "custom": [
       { "id": "fine weapon", "name": "A fine weapon", "load": 1 },
