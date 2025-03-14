@@ -184,12 +184,14 @@
         "trackers": {
           "coin": {
             "max": 4,
-            "trackerType": "square"
+            "trackerType": "square",
+            "label": "Coin"
           },
           "stash": {
             "max": 40,
             "trackerType": "square",
-            "wrap": true
+            "wrap": true,
+            "label": "Stash"
           }
         }
       }

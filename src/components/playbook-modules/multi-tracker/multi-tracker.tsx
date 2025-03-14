@@ -32,6 +32,7 @@ export default function MultiTracker(props: Props) {
             wrap={trackers[trackerId].wrap}
             onValueSelect={(value: number) => onValueSelect(trackerId, value)}
           />
+          <div>{trackers[trackerId].label}</div>
         </div>
       ))}
     </ModuleWrapper>

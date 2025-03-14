@@ -9,7 +9,8 @@ export const ModuleDefinition = BaseModuleDefinition.and(
         z.object({
           trackerType: z.enum(['dagger', 'circle', 'square']),
           max: z.number(),
-          wrap: z.boolean().optional()
+          wrap: z.boolean().optional(),
+          label: z.string()
         })
       )
     })
