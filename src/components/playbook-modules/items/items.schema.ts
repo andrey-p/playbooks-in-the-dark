@@ -14,6 +14,7 @@ export const Item = z.object({
 export const ModuleDefinition = BaseModuleDefinition.and(
   z.object({
     props: z.object({
+      twoColumns: z.boolean().optional(),
       load: z.array(z.object({
         id: z.string(),
         name: z.string()

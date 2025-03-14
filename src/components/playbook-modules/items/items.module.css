@@ -1,6 +1,16 @@
 .list {
   list-style-type: none;
   margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 100%;
+}
+
+.twoColumnsItem {
+  width: 50%;
 }
 
 .load {

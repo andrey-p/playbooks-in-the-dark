@@ -130,6 +130,7 @@
         "items": {}
       },
       "props": {
+        "twoColumns": true,
         "load": [
           { "id": "light", "name": "3 light" },
           { "id": "normal", "name": "5 normal" },
