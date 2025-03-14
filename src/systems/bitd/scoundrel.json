@@ -8,6 +8,7 @@
       "heritage",
       "stress",
       "trauma",
+      "traumaText",
       "harm",
       "healingClock",
       "armor"
@@ -50,19 +51,29 @@
     },
     "trauma": {
       "id": "trauma",
-      "type": "trauma",
+      "type": "tracker",
       "label": "Trauma",
-      "default": [],
+      "default": 0,
       "props": {
-        "options": [
-          { "id": "cold", "name": "Cold" },
-          { "id": "haunted", "name": "Haunted" },
-          { "id": "obsessed", "name": "Obsessed" },
-          { "id": "paranoid", "name": "Paranoid" },
-          { "id": "reckless", "name": "Reckless" },
-          { "id": "soft", "name": "Soft" },
-          { "id": "unstable", "name": "Unstable" },
-          { "id": "vicious", "name": "Vicious" }
+        "trackerType": "dagger",
+        "max": 4
+      }
+    },
+    "traumaText": {
+      "id": "traumaText",
+      "type": "textField",
+      "label": "Trauma",
+      "default": "",
+      "props": {
+        "examples": [
+          "Cold",
+          "Haunted",
+          "Obsessed",
+          "Paranoid",
+          "Reckless",
+          "Soft",
+          "Unstable",
+          "Vicious"
         ]
       }
     },
