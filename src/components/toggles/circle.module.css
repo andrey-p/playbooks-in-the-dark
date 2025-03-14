@@ -1,6 +1,6 @@
 .default {
   border-radius: 50%;
-  border: 3px solid var(--foreground);
+  border: 2px solid var(--foreground);
   background-color: var(--background);
 }
 

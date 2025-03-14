@@ -26,7 +26,7 @@ export default function SpecialAbility(props: Props) {
         />
       </div>
 
-      <span className={styles.name}>{specialAbility.id}:</span>
+      <span className={styles.name}>{specialAbility.name}: </span>
       <span>{specialAbility.description}</span>
     </div>
   );

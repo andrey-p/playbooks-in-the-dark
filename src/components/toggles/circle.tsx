@@ -6,7 +6,7 @@ export default function Circle(props: ToggleProps) {
   const { filled, highlighted, ...rest } = props;
   let { size } = props;
 
-  size = size || 25;
+  size = size || 20;
 
   return (
     <button
