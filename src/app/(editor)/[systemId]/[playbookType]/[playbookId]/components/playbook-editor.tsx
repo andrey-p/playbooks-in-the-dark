@@ -10,6 +10,7 @@ import {
 import ModuleRenderer from '@/components/playbook-modules/renderer';
 import { userDataReducer } from '@/reducers';
 import SaveAction from '@/components/playbook-actions/save';
+import styles from './playbook-editor.module.css';
 
 type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
 type PlaybookDataType = z.infer<typeof PlaybookDataSchema>;
@@ -39,7 +40,10 @@ export default function Playbook(props: Props) {
 
   return (
     <div>
-      {playbookData.id}
+      <div>
+        <h1 className={styles.heading}>{playbookData.name}</h1>
+        <p className={styles.description}>{playbookData.description}</p>
+      </div>
 
       {
         <ModuleRenderer

@@ -1,41 +1,60 @@
-import { useId } from 'react';
+import { useState } from 'react';
+import styles from './radio-group.module.css';
+
+import DaggerToggle from '@/components/toggles/dagger';
+import RhombusToggle from '@/components/toggles/rhombus';
+import type { ToggleProps as TogglePropsType } from '@/components/toggles/toggles.types';
 
 type Option = { id: string | null; name: string };
+
+type RadioType = 'rhombus' | 'dagger';
 
 type Props = {
   options: Option[];
   selected: string | null;
   onValueSelect: (id: string | null) => void;
+  type: RadioType;
 };
 
+function getToggleComponent(type: RadioType): React.FC<TogglePropsType> {
+  switch (type) {
+    case 'rhombus':
+      return RhombusToggle;
+    case 'dagger':
+      return DaggerToggle;
+    default:
+      throw new Error('unexpected tracker type ' + type);
+  }
+}
+
 export default function RadioGroup(props: Props) {
-  const { options, selected, onValueSelect } = props;
-  const id = useId();
+  const { options, selected, type, onValueSelect } = props;
+  const [highlightedId, setHighlightedId] = useState<string | null>(null);
 
-  const onChange = (e: React.FormEvent<HTMLInputElement>) => {
-    const nextId = e.currentTarget.value;
-
-    if (nextId === selected) {
+  const onChange = (id: string | null) => {
+    if (id === selected) {
       onValueSelect(null);
     } else {
-      onValueSelect(nextId);
+      onValueSelect(id);
     }
   };
 
+  const ToggleComponent = getToggleComponent(type);
+
   return (
-    <ul>
+    <ul className={styles.list}>
       {options.map((option: Option) => (
-        <li key={option.id}>
+        <li key={option.id} className={styles.item}>
           <label>
-            <input
-              type='radio'
-              name={id}
-              checked={selected === option.id}
-              value={option.id || ''}
-              onClick={onChange}
-              onChange={onChange}
+            <ToggleComponent
+              filled={selected === option.id}
+              highlighted={highlightedId === option.id}
+              size={20}
+              onClick={() => onChange(option.id)}
+              onMouseEnter={() => setHighlightedId(option.id)}
+              onMouseLeave={() => setHighlightedId(null)}
             />
-            {option.name}
+            <span className={styles.name}>{option.name}</span>
           </label>
         </li>
       ))}

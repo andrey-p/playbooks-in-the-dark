@@ -2,6 +2,7 @@ import { z } from 'zod';
 import PropsSchema, { Contact as ContactSchema } from './contacts.schema';
 import Contact from './contact';
 import ModuleWrapper from '../layout/module-wrapper';
+import styles from './contacts.module.css';
 
 type Props = z.infer<typeof PropsSchema>;
 type ContactType = z.infer<typeof ContactSchema>;
@@ -22,9 +23,9 @@ export default function Contacts(props: Props) {
       moduleDefinition={moduleDefinition}
       playbookProps={playbookProps}
     >
-      <ul>
+      <ul className={styles.list}>
         {contacts.map((contact: ContactType) => (
-          <li key={contact.id}>
+          <li className={styles.item} key={contact.id}>
             <Contact
               contact={contact}
               relationship={userValue[contact.id]}

@@ -1,4 +1,8 @@
-.attributes {
-  display: flex;
-  gap: 5%;
+.heading {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+}
+
+.description {
+  font-style: italic;
 }

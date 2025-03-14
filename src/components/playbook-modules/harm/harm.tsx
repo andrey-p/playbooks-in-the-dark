@@ -1,13 +1,19 @@
 import { z } from 'zod';
 import PropsSchema from './harm.schema';
 import HarmItem from './harm-item';
+import ModuleWrapper from '../layout/module-wrapper';
 
 import styles from './harm.module.css';
 
 type Props = z.infer<typeof PropsSchema>;
 
 export default function Harm(props: Props) {
-  const { moduleDefinition, userValue: harmsTaken, onUpdate } = props;
+  const {
+    moduleDefinition,
+    userValue: harmsTaken,
+    onUpdate,
+    playbookProps
+  } = props;
   const { levelDescriptions } = moduleDefinition.props;
 
   // zero-based
@@ -33,14 +39,15 @@ export default function Harm(props: Props) {
   };
 
   return (
-    <div>
-      <h3>{moduleDefinition.label}</h3>
-
-      <table>
+    <ModuleWrapper
+      moduleDefinition={moduleDefinition}
+      playbookProps={playbookProps}
+    >
+      <table className={styles.table}>
         <tbody>
           {levels.map((level) => (
             <tr key={level}>
-              <td className={styles.infoColumn}>{level}</td>
+              <td className={styles.levelColumn}>{level + 1}</td>
               {level === 2 ? (
                 <td className={styles.harmColumn} colSpan={2}>
                   <HarmItem
@@ -83,6 +90,6 @@ export default function Harm(props: Props) {
           ))}
         </tbody>
       </table>
-    </div>
+    </ModuleWrapper>
   );
 }

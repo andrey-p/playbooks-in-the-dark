@@ -1,0 +1,21 @@
+.list {
+  list-style-type: none;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 100%;
+}
+
+.twoColumnsItem {
+  width: 50%;
+}
+
+.load {
+  position: absolute;
+  top: 0.1rem;
+  right: 0.5rem;
+  color: var(--background);
+}

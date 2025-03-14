@@ -2,22 +2,20 @@ import styles from './triangle.module.css';
 import type { ToggleProps } from './toggles.types';
 import clsx from 'clsx';
 
-type Props = ToggleProps & {
-  variant?: 'up' | 'down' | 'left' | 'right';
-};
+type Props = ToggleProps;
 
 export default function Triangle(props: Props) {
-  const { size, filled, highlighted, variant = 'up', ...rest } = props;
+  const { size, filled, highlighted, ...rest } = props;
 
-  const height = size || 20;
-  const width = height;
+  const height = size || 25;
+  const width = height / 1.5;
 
   return (
     <button
       role='switch'
       aria-checked={filled}
       style={{ width, height }}
-      className={clsx(styles.container, styles[variant])}
+      className={styles.container}
       {...rest}
     >
       <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
@@ -27,7 +25,7 @@ export default function Triangle(props: Props) {
             filled && styles.filled,
             highlighted && styles.highlighted
           )}
-          d={`M ${width / 2},0 ${width},${height} ${0},${height} Z`}
+          d={`M ${width / 2},0 ${width},${height / 2} ${width / 2},${height} 0,${height / 2} Z`}
         />
       </svg>
     </button>

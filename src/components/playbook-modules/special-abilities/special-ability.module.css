@@ -1,12 +1,12 @@
 .container {
-  padding-left: 3rem;
+  padding-left: 2rem;
   padding-bottom: 1rem;
   position: relative;
 }
 
 .toggle {
   position: absolute;
-  top: 0;
+  top: 0.2rem;
   left: 0;
 }
 
