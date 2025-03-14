@@ -2,6 +2,7 @@ import { z } from 'zod';
 import { useState } from 'react';
 import { Contact as ContactSchema } from './contacts.schema';
 import TriangleToggle from '@/components/toggles/triangle';
+import styles from './contact.module.css';
 
 type ContactType = z.infer<typeof ContactSchema>;
 
@@ -19,6 +20,7 @@ export default function Contact(props: Props) {
     <div>
       <TriangleToggle
         variant='up'
+        size={15}
         filled={relationship === 1}
         highlighted={highlighted === 1}
         onMouseEnter={() => setHighlighted(1)}
@@ -28,6 +30,7 @@ export default function Contact(props: Props) {
         }}
       />
       <TriangleToggle
+        size={15}
         variant='down'
         filled={relationship === -1}
         highlighted={highlighted === -1}
@@ -37,7 +40,7 @@ export default function Contact(props: Props) {
           onRelationshipUpdate(contact.id, relationship === -1 ? 0 : -1);
         }}
       />
-      {contact.name}
+      <span className={styles.name}>{contact.name}</span>
     </div>
   );
 }

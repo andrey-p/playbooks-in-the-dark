@@ -9,7 +9,7 @@ type Props = ToggleProps & {
 export default function Triangle(props: Props) {
   const { size, filled, highlighted, variant = 'up', ...rest } = props;
 
-  const height = size || 25;
+  const height = size || 20;
   const width = height;
 
   return (
