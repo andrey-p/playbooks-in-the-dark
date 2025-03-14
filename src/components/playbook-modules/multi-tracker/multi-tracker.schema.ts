@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
 
-export const ModuleDefinition = BaseModuleDefinition.and(
+export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
     props: z.object({
       trackers: z.record(

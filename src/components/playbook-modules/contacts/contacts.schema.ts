@@ -6,7 +6,7 @@ export const Contact = z.object({
   name: z.string()
 });
 
-export const ModuleDefinition = BaseModuleDefinition.and(
+export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
     props: z.void()
   })

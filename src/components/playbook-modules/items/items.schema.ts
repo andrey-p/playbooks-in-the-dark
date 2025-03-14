@@ -11,7 +11,7 @@ export const Item = z.object({
   showLinked: z.boolean().optional()
 });
 
-export const ModuleDefinition = BaseModuleDefinition.and(
+export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
     props: z.object({
       twoColumns: z.boolean().optional(),

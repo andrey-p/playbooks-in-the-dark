@@ -12,7 +12,7 @@ export const Action = z.object({
   attributeId: z.string()
 });
 
-export const ModuleDefinition = BaseModuleDefinition.and(
+export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
     props: z.object({
       attributes: z.array(Attribute),

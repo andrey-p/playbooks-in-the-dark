@@ -13,7 +13,7 @@ export const HarmItem = z.object({
     .refine((val) => val >= 0 && val <= 5)
 });
 
-export const ModuleDefinition = BaseModuleDefinition.and(
+export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
     props: z.object({
       levelDescriptions: z.array(z.string())
