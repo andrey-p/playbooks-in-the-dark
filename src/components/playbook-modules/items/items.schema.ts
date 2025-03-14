@@ -14,6 +14,10 @@ export const Item = z.object({
 export const ModuleDefinition = BaseModuleDefinition.and(
   z.object({
     props: z.object({
+      load: z.array(z.object({
+        id: z.string(),
+        name: z.string()
+      })).optional(),
       common: z.array(Item)
     })
   })
