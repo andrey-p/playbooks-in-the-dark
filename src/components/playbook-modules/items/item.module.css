@@ -3,6 +3,11 @@
   margin-bottom: 0.5rem;
 }
 
+.itemLabel {
+  margin-left: 0.5rem;
+  line-height: 1;
+}
+
 .noLoadItem {
   font-style: italic;
 }

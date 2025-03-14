@@ -1,0 +1,11 @@
+.list {
+  list-style-type: none;
+  margin-bottom: 2rem;
+}
+
+.load {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: var(--background);
+}
