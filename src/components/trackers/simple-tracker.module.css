@@ -2,3 +2,19 @@
   display: flex;
   gap: 0.3rem;
 }
+
+.linked {
+  .toggle:not(:last-child) {
+    position: relative;
+
+    &:after {
+      content: ' ';
+      position: absolute;
+      width: 5px;
+      height: 1px;
+      top: 50%;
+      right: -5px;
+      background-color: var(--foreground);
+    }
+  }
+}

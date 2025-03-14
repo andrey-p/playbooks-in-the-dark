@@ -19,6 +19,7 @@ export default function Item(props: Props) {
       <SimpleTracker
         value={selected || 0}
         type='square'
+        variant='linked'
         max={item.load || 1}
         onValueSelect={(value: number) => {
           if (value === selected) {

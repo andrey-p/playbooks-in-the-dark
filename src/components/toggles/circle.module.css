@@ -2,6 +2,7 @@
   border-radius: 50%;
   border: 2px solid var(--foreground);
   background-color: var(--background);
+  display: block;
 }
 
 .filled {

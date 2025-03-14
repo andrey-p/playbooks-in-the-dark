@@ -1,6 +1,7 @@
 .default {
   background-color: var(--background);
   border: 1px solid var(--foreground);
+  display: block;
 }
 
 .filled {

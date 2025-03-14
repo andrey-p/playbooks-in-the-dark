@@ -4,6 +4,7 @@ import DaggerToggle from '@/components/toggles/dagger';
 import SquareToggle from '@/components/toggles/square';
 import type { ToggleProps } from '@/components/toggles/toggles.types';
 import styles from './simple-tracker.module.css';
+import clsx from 'clsx';
 
 type TrackerType = 'circle' | 'dagger' | 'square';
 
@@ -12,9 +13,10 @@ type Props = {
   max: number;
   onValueSelect?: (value: number) => void;
   type: TrackerType;
+  variant?: 'linked';
 };
 
-function getToggleComponent(type: TrackerType): React.FC {
+function getToggleComponent(type: TrackerType): React.FC<ToggleProps> {
   switch (type) {
     case 'circle':
       return CircleToggle;
@@ -28,7 +30,7 @@ function getToggleComponent(type: TrackerType): React.FC {
 }
 
 export default function SimpleTracker(props: Props) {
-  const { value, max, type, onValueSelect } = props;
+  const { value, max, type, variant, onValueSelect } = props;
   // is borke https://github.com/facebook/react/issues/31687
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [highlightedValue, setHighlightedValue] = useState<number | null>(null);
@@ -59,8 +61,16 @@ export default function SimpleTracker(props: Props) {
       }
     };
 
-    toggles.push(<ToggleComponent key={i} {...props} />);
+    toggles.push(
+      <div key={i} className={styles.toggle}>
+        <ToggleComponent {...props} />
+      </div>
+    );
   }
 
-  return <div className={styles.container}>{toggles}</div>;
+  return (
+    <div className={clsx(styles.container, variant && styles[variant])}>
+      {toggles}
+    </div>
+  );
 }
