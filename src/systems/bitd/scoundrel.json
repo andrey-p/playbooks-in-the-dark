@@ -188,7 +188,8 @@
           },
           "stash": {
             "max": 40,
-            "trackerType": "square"
+            "trackerType": "square",
+            "wrap": true
           }
         }
       }

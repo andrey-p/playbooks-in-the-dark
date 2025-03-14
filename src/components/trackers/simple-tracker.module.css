@@ -3,6 +3,10 @@
   gap: 0.3rem;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
+
 .linked {
   .toggle:not(:last-child) {
     position: relative;

@@ -14,6 +14,7 @@ type Props = {
   onValueSelect?: (value: number) => void;
   type: TrackerType;
   variant?: 'linked';
+  wrap?: boolean;
 };
 
 function getToggleComponent(type: TrackerType): React.FC<ToggleProps> {
@@ -30,7 +31,7 @@ function getToggleComponent(type: TrackerType): React.FC<ToggleProps> {
 }
 
 export default function SimpleTracker(props: Props) {
-  const { value, max, type, variant, onValueSelect } = props;
+  const { value, max, type, variant, wrap, onValueSelect } = props;
   // is borke https://github.com/facebook/react/issues/31687
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [highlightedValue, setHighlightedValue] = useState<number | null>(null);
@@ -69,7 +70,7 @@ export default function SimpleTracker(props: Props) {
   }
 
   return (
-    <div className={clsx(styles.container, variant && styles[variant])}>
+    <div className={clsx(styles.container, variant && styles[variant], wrap && styles.wrap)}>
       {toggles}
     </div>
   );
