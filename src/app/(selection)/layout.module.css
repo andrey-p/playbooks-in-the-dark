@@ -10,7 +10,7 @@
 }
 
 .heading {
-  font-family: var(--font-goblin-one);
+  font-family: var(--font-display);
   text-transform: uppercase;
   line-height: 0.9;
   border-bottom: 10px solid var(--foreground);
@@ -47,7 +47,7 @@
 }
 
 .subheading {
-  font-family: var(--font-garamond);
+  font-family: var(--font-text);
   font-weight: 700;
   font-size: 20px;
 }
