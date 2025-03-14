@@ -1,34 +1,52 @@
 .container {
   flex-grow: 1;
   position: relative;
+  margin-top: 1.5rem;
 }
 
 .title {
   background-color: var(--background);
+  font-family: var(--font-goblin-one);
+  text-transform: uppercase;
+  font-size: 1rem;
   position: absolute;
-  top: -0.75rem;
+  top: -0.6rem;
   left: 0.5rem;
+  z-index: 1;
 }
 
 .xp {
   position: absolute;
   right: 0.5rem;
   top: -0.75rem;
+  z-index: 1;
 }
 
 .ratings {
   border: 1px solid var(--foreground);
   border-radius: 5px;
-  padding: 2rem 0.5rem 0.5rem;
+  padding: 1rem 0.5rem 0.5rem;
   list-style-type: none;
+  position: relative;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 0.9rem;
+    bottom: 0.75rem;
+    left: 30px;
+    width: 1px;
+    background-color: var(--foreground);
+  }
 }
 
 .rating {
   display: flex;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .actionName {
   flex-grow: 1;
+  line-height: 1;
   margin-left: 1rem;
 }
