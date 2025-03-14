@@ -28,7 +28,9 @@ export default function Item(props: Props) {
           }
         }}
       />
-      <span className={clsx(styles.itemLabel, item.load === 0 && styles.noLoadItem)}>
+      <span
+        className={clsx(styles.itemLabel, item.load === 0 && styles.noLoadItem)}
+      >
         {item.id}
       </span>
     </div>
