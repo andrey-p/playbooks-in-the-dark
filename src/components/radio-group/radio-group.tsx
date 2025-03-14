@@ -1,9 +1,9 @@
-import { useId } from 'react';
+import { useState } from 'react';
 import styles from './radio-group.module.css';
 
 import DaggerToggle from '@/components/toggles/dagger';
 import RhombusToggle from '@/components/toggles/rhombus';
-import type { TogglePropsType } from '@/components/toggles/toggles.types';
+import type { ToggleProps as TogglePropsType } from '@/components/toggles/toggles.types';
 
 type Option = { id: string | null; name: string };
 
@@ -29,7 +29,7 @@ function getToggleComponent(type: RadioType): React.FC<TogglePropsType> {
 
 export default function RadioGroup(props: Props) {
   const { options, selected, type, onValueSelect } = props;
-  const id = useId();
+  const [highlightedId, setHighlightedId] = useState<string | null>(null);
 
   const onChange = (id: string | null) => {
     if (id === selected) {
@@ -48,8 +48,11 @@ export default function RadioGroup(props: Props) {
           <label>
             <ToggleComponent
               filled={selected === option.id}
-              size={15}
+              highlighted={highlightedId === option.id}
+              size={20}
               onClick={() => onChange(option.id)}
+              onMouseEnter={() => setHighlightedId(option.id)}
+              onMouseLeave={() => setHighlightedId(null)}
             />
             <span className={styles.name}>{option.name}</span>
           </label>

@@ -4,7 +4,7 @@
 }
 
 .item {
-  margin-right: 1rem;
+  margin-right: 0.5rem;
 
   &:last-child {
     margin-right: 0;
@@ -12,5 +12,7 @@
 }
 
 .name {
-  margin-left: 0.5rem;
+  vertical-align: top;
+  line-height: 1;
+  margin-left: 0.25rem;
 }
