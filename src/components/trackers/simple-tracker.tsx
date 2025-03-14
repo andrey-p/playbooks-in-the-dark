@@ -70,7 +70,13 @@ export default function SimpleTracker(props: Props) {
   }
 
   return (
-    <div className={clsx(styles.container, variant && styles[variant], wrap && styles.wrap)}>
+    <div
+      className={clsx(
+        styles.container,
+        variant && styles[variant],
+        wrap && styles.wrap
+      )}
+    >
       {toggles}
     </div>
   );

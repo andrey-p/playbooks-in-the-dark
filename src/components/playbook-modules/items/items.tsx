@@ -48,7 +48,10 @@ export default function ItemList(props: Props) {
       )}
       <ul className={styles.list}>
         {common.map((item: ItemType) => (
-          <li className={clsx(styles.item, twoColumns && styles.twoColumnsItem)} key={item.id}>
+          <li
+            className={clsx(styles.item, twoColumns && styles.twoColumnsItem)}
+            key={item.id}
+          >
             <Item
               item={item}
               selected={selectedItems[item.id]}
@@ -59,7 +62,10 @@ export default function ItemList(props: Props) {
       </ul>
       <ul className={styles.list}>
         {playbookProps?.custom?.map((item: ItemType) => (
-          <li className={clsx(styles.item, twoColumns && styles.twoColumnsItem)} key={item.id}>
+          <li
+            className={clsx(styles.item, twoColumns && styles.twoColumnsItem)}
+            key={item.id}
+          >
             <Item
               item={item}
               selected={selectedItems[item.id]}

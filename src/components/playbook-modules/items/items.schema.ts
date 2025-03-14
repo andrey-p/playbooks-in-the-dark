@@ -15,10 +15,14 @@ export const ModuleDefinition = BaseModuleDefinition.and(
   z.object({
     props: z.object({
       twoColumns: z.boolean().optional(),
-      load: z.array(z.object({
-        id: z.string(),
-        name: z.string()
-      })).optional(),
+      load: z
+        .array(
+          z.object({
+            id: z.string(),
+            name: z.string()
+          })
+        )
+        .optional(),
       common: z.array(Item)
     })
   })
