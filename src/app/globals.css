@@ -31,6 +31,9 @@ body {
 input {
   font-size: 1.2rem;
   font-family: var(--font-text);
+  &:focus-visible {
+    outline: 4px solid var(--highlight);
+  }
 }
 
 * {
