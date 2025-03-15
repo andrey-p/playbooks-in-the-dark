@@ -1,0 +1,17 @@
+.bitd {
+  .column:nth-child(1) {
+    width: 40%;
+  }
+  .column:nth-child(2) {
+    width: 40%;
+  }
+  .column:nth-child(3) {
+    width: 20%;
+  }
+
+  .multiTracker.coin {
+    .stash {
+      width: 250px;
+    }
+  }
+}

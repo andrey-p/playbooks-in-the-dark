@@ -49,6 +49,7 @@ export default async function Page(props: Props) {
 
   return (
     <PlaybookEditor
+      systemData={systemData}
       playbookData={playbookData}
       playbookDefinition={playbookDefinition}
       userData={data}
