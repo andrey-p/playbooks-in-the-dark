@@ -18,12 +18,18 @@ describe('Renderer', () => {
 
     render(
       <Renderer
-        layout={[['scoundrelName', 'heritage'], ['items']]}
+        layout={[[['scoundrelName', 'alias'], ['heritage']], ['items']]}
         modules={{
           scoundrelName: {
             id: 'scoundrelName',
             type: 'textField',
             label: 'Name',
+            default: ''
+          },
+          alias: {
+            id: 'alias',
+            type: 'textField',
+            label: 'Alias',
             default: ''
           },
           heritage: {
@@ -65,6 +71,10 @@ describe('Renderer', () => {
     const nameInput = screen.getByLabelText('Name');
     expect(nameInput).toBeTruthy();
     expect(nameInput).toHaveValue('sss');
+
+    const aliasInput = screen.getByLabelText('Alias');
+    expect(aliasInput).toBeTruthy();
+    expect(aliasInput).toHaveValue('');
 
     const heritageInput = screen.getByLabelText('Heritage');
     expect(heritageInput).toBeTruthy();

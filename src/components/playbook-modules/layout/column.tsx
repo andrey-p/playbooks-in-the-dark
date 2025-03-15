@@ -5,7 +5,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function ColumnContainer(props: Props) {
+export default function Column(props: Props) {
   const { children } = props;
 
   return <div className={clsx(styles.column, 'column')}>{children}</div>;
