@@ -21,5 +21,10 @@ export default function Description(props: Props) {
     throw new Error('Detected tag: ' + testText);
   }
 
-  return <div className={styles.container} dangerouslySetInnerHTML={{ __html: text }} />;
+  return (
+    <div
+      className={styles.container}
+      dangerouslySetInnerHTML={{ __html: text }}
+    />
+  );
 }
