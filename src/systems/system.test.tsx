@@ -41,24 +41,6 @@ describe('system data check', () => {
               />
             );
           });
-
-          // "description" is currently the only property that gets rendered unsafely
-          // this is perhaps a bit over-the-top but let's not XSS people with module descriptions
-          test('any descriptions should only contain simple, bare tags', () => {
-            Object.values(playbookDefinition.modules).forEach(
-              (value: unknown) => {
-                const playbookModule = value as object;
-
-                if ('description' in playbookModule) {
-                  const allowedTagsRe = /<\/?p>|<\/?ul>|<\/?li>/g;
-                  const stripped = (
-                    playbookModule.description as string
-                  ).replace(allowedTagsRe, '');
-                  expect(stripped).not.toMatch(/<|>/);
-                }
-              }
-            );
-          });
         });
       });
     });

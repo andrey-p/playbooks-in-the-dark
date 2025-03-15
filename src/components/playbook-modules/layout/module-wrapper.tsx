@@ -4,6 +4,7 @@ import {
   BasePlaybookProps as BasePlaybookPropsSchema
 } from '@/schemas';
 import styles from './module-wrapper.module.css';
+import Description from '@/components/description/description';
 import clsx from 'clsx';
 
 type Props = {
@@ -29,9 +30,7 @@ export default function ModuleWrapper(props: Props) {
       </h2>
       {children}
       {moduleDefinition.description && (
-        <div
-          dangerouslySetInnerHTML={{ __html: moduleDefinition.description }}
-        />
+        <Description text={moduleDefinition.description} />
       )}
     </div>
   );
