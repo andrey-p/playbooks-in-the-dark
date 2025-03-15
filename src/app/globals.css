@@ -43,8 +43,12 @@ input {
 }
 
 a {
-  color: inherit;
+  color: var(--highlight);
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
