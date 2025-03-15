@@ -46,34 +46,38 @@ export default function ItemList(props: Props) {
           />
         </div>
       )}
-      <ul className={styles.list}>
-        {common.map((item: ItemType) => (
-          <li
-            className={clsx(styles.item, twoColumns && styles.twoColumnsItem)}
-            key={item.id}
-          >
-            <Item
-              item={item}
-              selected={selectedItems[item.id]}
-              onSelect={(selected) => onItemSelect(item.id, selected)}
-            />
-          </li>
-        ))}
-      </ul>
-      <ul className={styles.list}>
-        {playbookProps?.custom?.map((item: ItemType) => (
-          <li
-            className={clsx(styles.item, twoColumns && styles.twoColumnsItem)}
-            key={item.id}
-          >
-            <Item
-              item={item}
-              selected={selectedItems[item.id]}
-              onSelect={(selected) => onItemSelect(item.id, selected)}
-            />
-          </li>
-        ))}
-      </ul>
+      {common.length && (
+        <ul className={styles.list}>
+          {common.map((item: ItemType) => (
+            <li
+              className={clsx(styles.item, twoColumns && styles.twoColumnsItem)}
+              key={item.id}
+            >
+              <Item
+                item={item}
+                selected={selectedItems[item.id]}
+                onSelect={(selected) => onItemSelect(item.id, selected)}
+              />
+            </li>
+          ))}
+        </ul>
+      )}
+      {playbookProps?.custom?.length && (
+        <ul className={styles.list}>
+          {playbookProps?.custom?.map((item: ItemType) => (
+            <li
+              className={clsx(styles.item, twoColumns && styles.twoColumnsItem)}
+              key={item.id}
+            >
+              <Item
+                item={item}
+                selected={selectedItems[item.id]}
+                onSelect={(selected) => onItemSelect(item.id, selected)}
+              />
+            </li>
+          ))}
+        </ul>
+      )}
     </ModuleWrapper>
   );
 }
