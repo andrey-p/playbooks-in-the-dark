@@ -31,33 +31,19 @@ export default function Toggle(props: Props) {
     case 'dagger':
       width = height / 2.5;
       shape = (
-        <path
-          d={`M 0,0 ${width},0 ${width},${height / 1.5} 0,${height} Z`}
-        />
+        <path d={`M 0,0 ${width},0 ${width},${height / 1.5} 0,${height} Z`} />
       );
       break;
     case 'circle':
-      shape = (
-        <circle
-          cy={width / 2}
-          cx={width / 2}
-          r={width / 2}
-        />
-      );
+      shape = <circle cy={width / 2} cx={width / 2} r={width / 2} />;
       break;
     case 'triangle':
       shape = (
-        <path
-          d={`M ${width / 2},0 ${width},${height} ${0},${height} Z`}
-        />
+        <path d={`M ${width / 2},0 ${width},${height} ${0},${height} Z`} />
       );
       break;
     case 'square':
-      shape = (
-        <path
-          d={`M 0,0 ${width},0 ${width},${height}, 0,${height} Z`}
-        />
-      );
+      shape = <path d={`M 0,0 ${width},0 ${width},${height}, 0,${height} Z`} />;
       break;
   }
 
