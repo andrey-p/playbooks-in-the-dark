@@ -62,5 +62,24 @@ describe('SimpleTracker', () => {
     for (let i = 3; i < toggles.length; i++) {
       expect(toggles[i]).not.toHaveAttribute('aria-checked', 'true');
     }
+
+    // click the same value again to toggle 0
+    await user.click(toggles[2]);
+    expect(onValueSelect).toHaveBeenCalledWith(0);
+
+    rerender(
+      <SimpleTracker
+        onValueSelect={onValueSelect}
+        value={0}
+        max={10}
+        type='square'
+      />
+    );
+
+    toggles = screen.getAllByRole('switch');
+
+    for (let i = 0; i < toggles.length; i++) {
+      expect(toggles[i]).not.toHaveAttribute('aria-checked', 'true');
+    }
   });
 });

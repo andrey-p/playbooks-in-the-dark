@@ -1,0 +1,37 @@
+.container {
+  border: none;
+  background: none;
+  display: block;
+}
+
+/* styles for CSV paths, hence stroke / width */
+.default {
+  stroke: var(--foreground);
+  stroke-width: 2px;
+}
+
+.filled {
+  fill: var(--foreground);
+  stroke: var(--foreground);
+}
+
+.highlighted {
+  fill: var(--highlight);
+  stroke: var(--highlight);
+}
+
+.inverted {
+  &.default {
+    stroke: var(--background);
+  }
+
+  &.filled {
+    fill: var(--foreground);
+    stroke: var(--background);
+  }
+
+  &.highlighted {
+    fill: var(--highlight);
+    stroke: var(--highlight);
+  }
+}

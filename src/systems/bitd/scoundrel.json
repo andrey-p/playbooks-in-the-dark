@@ -4,14 +4,13 @@
   "name": "Scoundrel",
   "layout": [
     [
-      "scoundrelName",
+      ["scoundrelName", "alias"],
       "heritage",
       "stress",
       "trauma",
       "traumaText",
       "harm",
-      "healingClock",
-      "armor"
+      ["healingClock", "armor"]
     ],
     ["specialAbilities", "contacts", "items", "alchemicals"],
     ["coin", "playbookXp", "ratings"]
@@ -21,6 +20,12 @@
       "id": "scoundrelName",
       "type": "textField",
       "label": "Name",
+      "default": ""
+    },
+    "alias": {
+      "id": "alias",
+      "type": "textField",
+      "label": "Alias",
       "default": ""
     },
     "heritage": {

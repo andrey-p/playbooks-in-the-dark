@@ -3,6 +3,7 @@ import PropsSchema from './multi-tracker.schema';
 import SimpleTracker from '@/components/trackers/simple-tracker';
 import ModuleWrapper from '../layout/module-wrapper';
 import styles from './multi-tracker.module.css';
+import clsx from 'clsx';
 
 type Props = z.infer<typeof PropsSchema>;
 
@@ -24,7 +25,7 @@ export default function MultiTracker(props: Props) {
       playbookProps={playbookProps}
     >
       {Object.keys(trackers).map((trackerId) => (
-        <div key={trackerId} className={styles.tracker}>
+        <div key={trackerId} className={clsx(styles.tracker, trackerId)}>
           <SimpleTracker
             value={userValue[trackerId] || 0}
             max={trackers[trackerId].max}

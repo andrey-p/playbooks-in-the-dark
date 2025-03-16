@@ -1,8 +1,9 @@
 import { z } from 'zod';
 import { useState } from 'react';
-import CircleToggle from '@/components/toggles/circle';
+import Toggle from '@/components/toggle/toggle';
 import { SpecialAbility as SpecialAbilitySchema } from './special-abilities.schema';
 import styles from './special-ability.module.css';
+import Description from '@/components/description/description';
 
 type Props = {
   specialAbility: z.infer<typeof SpecialAbilitySchema>;
@@ -17,7 +18,8 @@ export default function SpecialAbility(props: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.toggle}>
-        <CircleToggle
+        <Toggle
+          type='circle'
           filled={selected}
           highlighted={highlighted}
           onMouseEnter={() => setHighlighted(true)}
@@ -27,7 +29,7 @@ export default function SpecialAbility(props: Props) {
       </div>
 
       <span className={styles.name}>{specialAbility.name}: </span>
-      <span>{specialAbility.description}</span>
+      <Description text={specialAbility.description} />
     </div>
   );
 }

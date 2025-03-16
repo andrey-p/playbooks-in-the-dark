@@ -7,6 +7,7 @@
   &:hover,
   &:focus {
     outline: 5px solid var(--highlight);
+    text-decoration: none;
   }
 }
 

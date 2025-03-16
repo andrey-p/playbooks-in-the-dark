@@ -3,6 +3,10 @@
   list-style-type: none;
 }
 
+.label {
+  display: flex;
+}
+
 .item {
   margin-right: 0.5rem;
 

@@ -51,3 +51,10 @@
   font-weight: 700;
   font-size: 20px;
 }
+
+.footer {
+  margin-top: 8rem;
+  border-top: 1px solid var(--midground);
+  padding-top: 2rem;
+  text-align: left;
+}

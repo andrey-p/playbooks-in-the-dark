@@ -1,10 +1,7 @@
 import { useState } from 'react';
-import CircleToggle from '@/components/toggles/circle';
-import DaggerToggle from '@/components/toggles/dagger';
-import SquareToggle from '@/components/toggles/square';
-import type { ToggleProps } from '@/components/toggles/toggles.types';
 import styles from './simple-tracker.module.css';
 import clsx from 'clsx';
+import Toggle from '@/components/toggle/toggle';
 
 type TrackerType = 'circle' | 'dagger' | 'square';
 
@@ -17,19 +14,6 @@ type Props = {
   wrap?: boolean;
 };
 
-function getToggleComponent(type: TrackerType): React.FC<ToggleProps> {
-  switch (type) {
-    case 'circle':
-      return CircleToggle;
-    case 'dagger':
-      return DaggerToggle;
-    case 'square':
-      return SquareToggle;
-    default:
-      throw new Error('unexpected tracker type ' + type);
-  }
-}
-
 export default function SimpleTracker(props: Props) {
   const { value, max, type, variant, wrap, onValueSelect } = props;
   // is borke https://github.com/facebook/react/issues/31687
@@ -38,33 +22,32 @@ export default function SimpleTracker(props: Props) {
 
   const toggles = [];
 
-  const ToggleComponent = getToggleComponent(type);
-
   for (let i = 0; i < max; i++) {
-    // highlight all the circles up to and including
+    // highlight all the toggles up to and including
     // the one that was highlighted
     const highlighted =
       typeof highlightedValue === 'number' ? i < highlightedValue : false;
 
-    const props: ToggleProps = {
-      filled: i < value,
-      highlighted,
-      onClick: () => {
-        if (onValueSelect) {
-          onValueSelect(i + 1);
-        }
-      },
-      onMouseEnter: () => {
-        setHighlightedValue(i + 1);
-      },
-      onMouseLeave: () => {
-        setHighlightedValue(null);
-      }
-    };
-
     toggles.push(
       <div key={i} className={styles.toggle}>
-        <ToggleComponent {...props} />
+        <Toggle
+          type={type}
+          filled={i < value}
+          highlighted={highlighted}
+          size={type === 'dagger' ? 30 : undefined}
+          onClick={() => {
+            if (onValueSelect) {
+              if (value === i + 1) {
+                onValueSelect(0);
+              } else {
+                onValueSelect(i + 1);
+              }
+            }
+          }}
+          onMouseEnter={() => {
+            setHighlightedValue(i + 1);
+          }}
+        />
       </div>
     );
   }
@@ -76,6 +59,9 @@ export default function SimpleTracker(props: Props) {
         variant && styles[variant],
         wrap && styles.wrap
       )}
+      onMouseLeave={() => {
+        setHighlightedValue(null);
+      }}
     >
       {toggles}
     </div>

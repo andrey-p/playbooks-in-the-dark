@@ -61,13 +61,17 @@ export default function Clock(props: Props) {
             className={clsx(
               styles.default,
               highlightedSlice && i < highlightedSlice && styles.highlighted,
-              highlightedSlice === null && i < value && styles.highlighted
+              highlightedSlice === null && i < value && styles.filled
             )}
             clipPath='url(#circleClip)'
             onMouseOver={() => setHighlightedSlice(i + 1)}
             onClick={() => {
               if (onValueSelect) {
-                onValueSelect(i + 1);
+                if (value === i + 1) {
+                  onValueSelect(0);
+                } else {
+                  onValueSelect(i + 1);
+                }
               }
             }}
           />

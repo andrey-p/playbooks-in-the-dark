@@ -19,7 +19,7 @@
       {
         "id": "battleborn",
         "name": "Battleborn",
-        "description": "lorem ipsum dolorem sdfs fsd fasdf asdf sdfs df sd f sdf s dfsdf sdf s"
+        "description": "lorem <strong>ipsum</strong> dolorem sdfs fsd fasdf asdf sdfs df sd f sdf s dfsdf sdf s"
       },
       {
         "id": "bodyguard",

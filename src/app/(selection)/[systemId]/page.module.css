@@ -21,8 +21,11 @@
 }
 
 .goBack {
+  color: var(--foreground);
+
   &:hover,
   &:focus {
+    text-decoration: none;
     color: var(--highlight);
   }
 }

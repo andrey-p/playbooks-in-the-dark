@@ -1,5 +1,6 @@
 .container {
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .input {
@@ -16,6 +17,5 @@
 
 .labelContainer {
   display: flex;
-  left: 0;
-  bottom: 0;
+  justify-content: space-between;
 }
