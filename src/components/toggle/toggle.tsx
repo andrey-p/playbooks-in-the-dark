@@ -19,19 +19,11 @@ export default function Toggle(props: Props) {
   let width = height;
   let shape;
 
-  const classes = clsx(
-    styles.default,
-    filled && styles.filled,
-    highlighted && styles.highlighted,
-    invertColours && styles.inverted
-  );
-
   switch (type) {
     case 'rhombus':
       width = height / 1.5;
       shape = (
         <path
-          className={classes}
           d={`M ${width / 2},0 ${width},${height / 2} ${width / 2},${height} 0,${height / 2} Z`}
         />
       );
@@ -40,7 +32,6 @@ export default function Toggle(props: Props) {
       width = height / 2.5;
       shape = (
         <path
-          className={classes}
           d={`M 0,0 ${width},0 ${width},${height / 1.5} 0,${height} Z`}
         />
       );
@@ -51,14 +42,12 @@ export default function Toggle(props: Props) {
           cy={width / 2}
           cx={width / 2}
           r={width / 2}
-          className={classes}
         />
       );
       break;
     case 'triangle':
       shape = (
         <path
-          className={classes}
           d={`M ${width / 2},0 ${width},${height} ${0},${height} Z`}
         />
       );
@@ -66,7 +55,6 @@ export default function Toggle(props: Props) {
     case 'square':
       shape = (
         <path
-          className={classes}
           d={`M 0,0 ${width},0 ${width},${height}, 0,${height} Z`}
         />
       );
@@ -77,7 +65,13 @@ export default function Toggle(props: Props) {
     <button
       role='switch'
       aria-checked={filled}
-      className={styles.container}
+      className={clsx(
+        styles.container,
+        styles.default,
+        filled && styles.filled,
+        highlighted && styles.highlighted,
+        invertColours && styles.inverted
+      )}
       style={{ width, height }}
       {...rest}
     >
