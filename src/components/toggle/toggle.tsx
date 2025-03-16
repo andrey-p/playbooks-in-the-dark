@@ -6,13 +6,14 @@ type Props = {
   size?: number;
   filled?: boolean;
   highlighted?: boolean;
+  invertColours?: boolean;
   onMouseEnter?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   onMouseLeave?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 export default function Toggle(props: Props) {
-  const { type, size, highlighted, filled, ...rest } = props;
+  const { type, size, highlighted, invertColours, filled, ...rest } = props;
 
   const height = size || 20;
   let width = height;
@@ -21,7 +22,8 @@ export default function Toggle(props: Props) {
   const classes = clsx(
     styles.default,
     filled && styles.filled,
-    highlighted && styles.highlighted
+    highlighted && styles.highlighted,
+    invertColours && styles.inverted
   );
 
   switch (type) {

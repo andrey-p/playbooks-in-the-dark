@@ -18,3 +18,20 @@
   fill: var(--highlight);
   stroke: var(--highlight);
 }
+
+.inverted {
+  &.default {
+    stroke: var(--background);
+  }
+
+  &.filled {
+    fill: var(--foreground);
+    stroke: var(--background);
+  }
+
+  &.highlighted {
+    fill: var(--highlight);
+    stroke: var(--highlight);
+  }
+}
+

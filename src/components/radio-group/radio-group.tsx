@@ -11,10 +11,11 @@ type Props = {
   selected: string | null;
   onValueSelect: (id: string | null) => void;
   type: RadioType;
+  invertColours?: boolean;
 };
 
 export default function RadioGroup(props: Props) {
-  const { options, selected, type, onValueSelect } = props;
+  const { options, selected, type, onValueSelect, invertColours } = props;
   const [highlightedId, setHighlightedId] = useState<string | null>(null);
 
   const onChange = (id: string | null) => {
@@ -34,6 +35,7 @@ export default function RadioGroup(props: Props) {
               type={type}
               filled={selected === option.id}
               highlighted={highlightedId === option.id}
+              invertColours={invertColours}
               size={20}
               onClick={() => onChange(option.id)}
               onMouseEnter={() => setHighlightedId(option.id)}

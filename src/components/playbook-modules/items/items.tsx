@@ -39,6 +39,7 @@ export default function ItemList(props: Props) {
       {load && (
         <div className={styles.load}>
           <RadioGroup
+            invertColours
             options={load}
             selected={selectedLoad || null}
             type='rhombus'
