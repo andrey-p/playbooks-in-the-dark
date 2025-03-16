@@ -30,7 +30,7 @@ export default function RadioGroup(props: Props) {
     <ul className={styles.list}>
       {options.map((option: Option) => (
         <li key={option.id} className={styles.item}>
-          <label>
+          <label className={styles.label}>
             <Toggle
               type={type}
               filled={selected === option.id}

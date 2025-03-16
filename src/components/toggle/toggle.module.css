@@ -1,6 +1,7 @@
 .container {
   border: none;
   background: none;
+  display: block;
 }
 
 /* styles for CSV paths, hence stroke / width */
