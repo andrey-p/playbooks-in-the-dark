@@ -37,7 +37,11 @@ export default function SimpleTracker(props: Props) {
           size={type === 'dagger' ? 30 : undefined}
           onClick={() => {
             if (onValueSelect) {
-              onValueSelect(i + 1);
+              if (value === i + 1) {
+                onValueSelect(0);
+              } else {
+                onValueSelect(i + 1);
+              }
             }
           }}
           onMouseEnter={() => {

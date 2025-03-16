@@ -21,13 +21,7 @@ export default function Item(props: Props) {
         type='square'
         variant='linked'
         max={item.load || 1}
-        onValueSelect={(value: number) => {
-          if (value === selected) {
-            onSelect(0);
-          } else {
-            onSelect(value);
-          }
-        }}
+        onValueSelect={onSelect}
       />
       <span
         className={clsx(styles.itemLabel, item.load === 0 && styles.noLoadItem)}
