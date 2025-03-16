@@ -5,11 +5,13 @@
 }
 
 .filled {
-  fill: var(--highlight);
+  fill: var(--foreground);
+  stroke: var(--foreground);
 }
 
 .highlighted {
   fill: var(--highlight);
+  stroke: var(--highlight);
 }
 
 .circle {
