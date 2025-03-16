@@ -23,7 +23,7 @@ export default function SimpleTracker(props: Props) {
   const toggles = [];
 
   for (let i = 0; i < max; i++) {
-    // highlight all the circles up to and including
+    // highlight all the toggles up to and including
     // the one that was highlighted
     const highlighted =
       typeof highlightedValue === 'number' ? i < highlightedValue : false;
@@ -43,9 +43,6 @@ export default function SimpleTracker(props: Props) {
           onMouseEnter={() => {
             setHighlightedValue(i + 1);
           }}
-          onMouseLeave={() => {
-            setHighlightedValue(null);
-          }}
         />
       </div>
     );
@@ -58,6 +55,9 @@ export default function SimpleTracker(props: Props) {
         variant && styles[variant],
         wrap && styles.wrap
       )}
+      onMouseLeave={() => {
+        setHighlightedValue(null);
+      }}
     >
       {toggles}
     </div>
