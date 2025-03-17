@@ -5,6 +5,10 @@
 
 declare module "sst" {
   export interface Resource {
+    "CertArn": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
     "Playbooks": {
       "type": "sst.aws.Nextjs"
       "url": string
