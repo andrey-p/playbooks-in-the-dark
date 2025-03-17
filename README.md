@@ -24,7 +24,7 @@ Until proper docs are set up, I recommend looking at what's already there in the
 
 Running up to a beta release:
 
-- [X] set up production site
+- [x] set up production site
 - [ ] data entry for BitD characters
 - [ ] add BitD crews
 - [ ] add mobile support

@@ -10,8 +10,10 @@ export default $config({
       home: 'aws',
       providers: {
         aws: {
-          profile: input?.stage === 'production' ?
-            'playbooks-project' : 'playbooks-project-dev'
+          profile:
+            input?.stage === 'production'
+              ? 'playbooks-project'
+              : 'playbooks-project-dev'
         }
       }
     };
