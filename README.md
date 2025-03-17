@@ -2,6 +2,8 @@
 
 This is a modular character sheet for the [Blades in the Dark](https://bladesinthedark.com/) RPG system and other [Forged in the Dark](https://bladesinthedark.com/forged-dark) games.
 
+You can find it running at [thedark.iswhywecanthavenicethings.fyi](https://thedark.iswhywecanthavenicethings.fyi/).
+
 ## What is this?
 
 Blades in the Dark is an excellent system and the various Forged in the Dark games extend it excellently. There's a few really good online character sheets out there, but they only support the base game.
@@ -22,7 +24,7 @@ Until proper docs are set up, I recommend looking at what's already there in the
 
 Running up to a beta release:
 
-- [ ] set up production site
+- [X] set up production site
 - [ ] data entry for BitD characters
 - [ ] add BitD crews
 - [ ] add mobile support
