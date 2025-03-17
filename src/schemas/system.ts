@@ -5,7 +5,8 @@ const System = z.object({
   name: z.string(),
   description: z.string(),
   playbookTypes: z.array(z.string()),
-  customStyles: z.string().optional()
+  customStyles: z.string().optional(),
+  license: z.string().optional()
 });
 
 export default System;

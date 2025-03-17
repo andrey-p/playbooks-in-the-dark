@@ -16,8 +16,15 @@ export default function Attribution() {
         .
       </p>
       <p>
-        This website by Andrey Pissantchev. This is a fan work, very much
-        unaffiliated with any of the original creators.
+        This website by Andrey Pissantchev. This is a fan project, very much
+        unaffiliated with any of the original creators. Check it out on{' '}
+        <a
+          target='_blank'
+          href='https://github.com/andrey-p/playbooks-in-the-dark'
+        >
+          Github
+        </a>
+        !
       </p>
     </div>
   );
