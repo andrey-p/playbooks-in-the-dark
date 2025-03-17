@@ -10,12 +10,15 @@ export default $config({
       home: 'aws',
       providers: {
         aws: {
-          profile: 'playbooks-project'
+          profile: input?.stage === 'production' ?
+            'playbooks-project' : 'playbooks-project-dev'
         }
       }
     };
   },
   async run() {
+    const certArn = new sst.Secret('CertArn');
+
     const table = new sst.aws.Dynamo('playbookTable', {
       fields: {
         id: 'string'
@@ -25,10 +28,15 @@ export default $config({
 
     new sst.aws.Nextjs('Playbooks', {
       link: [table],
+      domain: {
+        name: 'thedark.iswhywecanthavenicethings.fyi',
+        dns: false,
+        cert: certArn.value
+      },
       environment: {
         PLAYBOOKS_APP_URL: $dev
           ? 'http://localhost:3000'
-          : 'https://example.com'
+          : 'https://thedark.iswhywecanthavenicethings.fyi'
       }
     });
   }

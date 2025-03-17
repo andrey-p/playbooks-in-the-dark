@@ -56,3 +56,13 @@ a {
     color-scheme: dark;
   }
 }
+
+/*
+ * this needs to be set as a global style otherwise webpack
+ * complains about impure style definitions
+ */
+.description {
+  li {
+    margin-left: 1.2rem;
+  }
+}

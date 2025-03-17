@@ -1,4 +1,5 @@
 import styles from './description.module.css';
+import clsx from 'clsx';
 
 type Props = {
   text: string;
@@ -23,7 +24,7 @@ export default function Description(props: Props) {
 
   return (
     <div
-      className={styles.container}
+      className={clsx(styles.container, 'description')}
       dangerouslySetInnerHTML={{ __html: text }}
     />
   );
