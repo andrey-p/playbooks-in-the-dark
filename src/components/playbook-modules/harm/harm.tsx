@@ -54,7 +54,7 @@ export default function Harm(props: Props) {
                     level={2}
                     column={0}
                     onUpdate={onHarmItemUpdate}
-                    harmText={harmsTaken.find((harm) => harm.level === 3)?.text}
+                    harmText={harmsTaken.find((harm) => harm.level === 2)?.text}
                   />
                 </td>
               ) : (
