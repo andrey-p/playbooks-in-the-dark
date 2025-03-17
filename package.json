@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev --turbopack",
     "lint": "next lint",
-    "start": "next start",
+    "start": "sst dev",
     "test": "jest",
     "prettier": "prettier . --write",
     "ci": "npm run test && npm run lint && tsc && prettier . -c"
