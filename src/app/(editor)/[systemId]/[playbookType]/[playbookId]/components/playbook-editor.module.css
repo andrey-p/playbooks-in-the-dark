@@ -1,3 +1,7 @@
+.header {
+  position: relative;
+}
+
 .heading {
   font-family: var(--font-display);
   text-transform: uppercase;
