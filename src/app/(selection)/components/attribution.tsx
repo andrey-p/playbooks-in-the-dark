@@ -3,7 +3,7 @@ import styles from './attribution.module.css';
 export default function Attribution() {
   return (
     <div className={styles.container}>
-      <p>
+      <p className={styles.p}>
         This work is based on{' '}
         <a target='_blank' href='http://www.bladesinthedark.com/'>
           Blades in the Dark
@@ -15,7 +15,7 @@ export default function Attribution() {
         </a>
         .
       </p>
-      <p>
+      <p className={styles.p}>
         This website by Andrey Pissantchev. This is a fan project, very much
         unaffiliated with any of the original creators. Check it out on{' '}
         <a
