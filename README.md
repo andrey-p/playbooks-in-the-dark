@@ -25,12 +25,13 @@ Running up to a beta release:
 - [ ] set up production site
 - [ ] data entry for BitD characters
 - [ ] add BitD crews
-- [ ] add mobile styles
+- [ ] add mobile support
 - [ ] add the first non-bitd system
 
 Future:
 
 - [ ] add support for Deep Cuts content
+- [ ] translation support
 
 ## License
 
@@ -40,4 +41,4 @@ All Blades in the Dark content (and Forged in the Dark content, too) is attribut
 
 Other systems (as they get added) will have their own license text in their `system.json` file.
 
-All code in this repo is by Andrey Pissantchev, licensed under MIT.
+All code in this repo is licensed under MIT.
