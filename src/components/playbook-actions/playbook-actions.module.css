@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  gap: 0.5rem;
+}
+
+.statusText {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding-top: 10px;
+}
+
+.statusNotSaved {
+  color: var(--highlight);
+}

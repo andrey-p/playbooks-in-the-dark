@@ -1,0 +1,15 @@
+.button {
+  background-color: var(--foreground);
+  border: 2px solid var(--background);
+  color: var(--background);
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+
+  &:hover,
+  &:focus {
+    outline: 3px solid var(--highlight);
+  }
+}
