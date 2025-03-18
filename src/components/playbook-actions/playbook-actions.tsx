@@ -38,14 +38,16 @@ export default function PlaybookActions(props: Props) {
       >
         {statusText}
       </div>
-      <Button onClick={savePlaybook} label='Save' icon={<FiSave />} />
-      {userDataId && (
-        <Button
-          onClick={copyLink}
-          label='Copy shareable link'
-          icon={<FiCopy />}
-        />
-      )}
+      <div className={styles.buttons}>
+        <Button onClick={savePlaybook} label='Save' icon={<FiSave />} />
+        {userDataId && (
+          <Button
+            onClick={copyLink}
+            label='Copy shareable link'
+            icon={<FiCopy />}
+          />
+        )}
+      </div>
     </div>
   );
 }
