@@ -1,7 +1,8 @@
 .container {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   margin: 0 auto 5rem;
-  padding-top: 20px;
+  padding: 2rem 1rem 0;
   text-align: center;
 }
 
@@ -14,6 +15,8 @@
   background-color: var(--foreground);
   -webkit-mask: url(/logo.svg) no-repeat center;
   mask: url(/logo.svg) no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
   aspect-ratio: 500 / 329;
   margin-bottom: 10px;
 }
