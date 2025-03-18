@@ -1,23 +1,25 @@
 .container {
   display: block;
-  background-color: var(--foreground);
+  background-color: var(--btn-background);
   padding: 1.5rem;
   text-align: left;
+  color: var(--btn-text);
+  border: 2px solid var(--btn-text);
 
   &:hover,
   &:focus {
-    outline: 5px solid var(--highlight);
+    box-shadow: var(--btn-highlight-shadow);
     text-decoration: none;
   }
 }
 
 .heading {
-  color: var(--background);
+  color: inherit;
   font-size: 1.2rem;
   font-weight: 800;
   margin-bottom: 0.5rem;
 }
 
 .description {
-  color: var(--background);
+  color: inherit;
 }

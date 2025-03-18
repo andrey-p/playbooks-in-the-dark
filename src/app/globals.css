@@ -1,14 +1,28 @@
 :root {
+  /* generic colours */
   --background: #ffffff;
   --foreground: #171717;
   --highlight: #ce3a00;
   --midground: #666;
+
+  /*
+   * button bits - keep them separate from the foreground/background colours
+   * otherwise readability goes out the window
+   */
+  --btn-background: var(--background);
+  --btn-text: var(--foreground);
+
+  --btn-highlight-shadow:
+    0px 0px 0px 1px var(--background), 0px 0px 0px 4px var(--highlight);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --btn-background: var(--foreground);
+    --btn-text: var(--background);
   }
 }
 

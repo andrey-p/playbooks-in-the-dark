@@ -1,7 +1,9 @@
 /* styles for CSV paths, hence stroke / width */
 .default {
   stroke: var(--foreground);
+  fill: var(--background);
   stroke-width: 1px;
+  cursor: pointer;
 }
 
 .filled {
@@ -15,5 +17,6 @@
 }
 
 .circle {
+  stroke: var(--foreground);
   pointer-events: none;
 }

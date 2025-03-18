@@ -7,12 +7,14 @@
 /* styles for CSV paths, hence stroke / width */
 .default {
   stroke: var(--foreground);
+  fill: var(--background);
   stroke-width: 2px;
+  cursor: pointer;
 }
 
 .filled {
-  fill: var(--foreground);
   stroke: var(--foreground);
+  fill: var(--foreground);
 }
 
 .highlighted {
@@ -20,13 +22,16 @@
   stroke: var(--highlight);
 }
 
+/*
+ * this toggle will be rendered against a solid
+ * var(--foreground) colour
+ */
 .inverted {
   &.default {
     stroke: var(--background);
   }
 
   &.filled {
-    fill: var(--foreground);
     stroke: var(--background);
   }
 
