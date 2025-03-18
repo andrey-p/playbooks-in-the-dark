@@ -80,7 +80,7 @@ export default function Clock(props: Props) {
           cy={radius + 1}
           cx={radius + 1}
           r={radius - 2}
-          className={clsx(styles.default, styles.circle)}
+          className={clsx(styles.circle)}
           fill='rgba(0,0,0,0)'
         />
       </svg>

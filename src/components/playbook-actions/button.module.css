@@ -1,7 +1,7 @@
 .button {
-  background-color: var(--foreground);
-  border: 2px solid var(--background);
-  color: var(--background);
+  background-color: var(--btn-background);
+  border: 2px solid var(--btn-text);
+  color: var(--btn-text);
   font-size: 1.2rem;
   line-height: 1;
   padding: 0.5rem 0.5rem;
@@ -10,6 +10,6 @@
 
   &:hover,
   &:focus {
-    outline: 3px solid var(--highlight);
+    box-shadow: var(--btn-highlight-shadow);
   }
 }
