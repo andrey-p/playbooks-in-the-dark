@@ -1,5 +1,9 @@
 .container {
   margin: 1rem;
   border: 1px solid var(--foreground);
-  padding: 2rem;
+  padding: 1rem;
+
+  @media (max-width: 600px) {
+    padding: 0rem;
+  }
 }

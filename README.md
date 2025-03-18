@@ -25,14 +25,16 @@ Until proper docs are set up, I recommend looking at what's already there in the
 Running up to a beta release:
 
 - [x] set up production site
+- [x] add mobile support
+- [ ] improve character saving flow
 - [ ] data entry for BitD characters
 - [ ] add BitD crews
-- [ ] add mobile support
 - [ ] add the first non-bitd system
 
 Future:
 
 - [ ] add support for Deep Cuts content
+- [ ] add auto-update for anyone else viewing the same playbook
 - [ ] translation support
 
 ## License
