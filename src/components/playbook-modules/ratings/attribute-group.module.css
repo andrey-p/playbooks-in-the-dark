@@ -2,6 +2,7 @@
   flex-grow: 1;
   position: relative;
   margin-top: 1.5rem;
+  min-width: 250px;
 }
 
 .title {
