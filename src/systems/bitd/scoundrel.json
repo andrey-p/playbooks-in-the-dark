@@ -22,7 +22,8 @@
       "trauma",
       "traumaText",
       "harm",
-      ["healingClock", "armor"]
+      ["healingClock", "armor"],
+      "notes"
     ],
     ["specialAbilities", "contacts", "items", "alchemicals"],
     ["coin", "playbookXp", "ratings"]
@@ -158,6 +159,11 @@
           { "id": "special", "name": "Special", "load": 1 }
         ]
       }
+    },
+    "notes": {
+      "id": "notes",
+      "type": "textArea",
+      "label": "Notes"
     },
     "specialAbilities": {
       "id": "specialAbilities",

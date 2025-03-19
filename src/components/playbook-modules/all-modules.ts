@@ -1,6 +1,7 @@
 // kept separate from all-schemas.ts so it can be loaded by server code
 
 import * as TextField from './text-field/text-field';
+import * as TextArea from './text-area/text-area';
 import * as Tracker from './tracker/tracker';
 import * as Items from './items/items';
 import * as SpecialAbilities from './special-abilities/special-abilities';
@@ -17,5 +18,6 @@ export const componentsByModuleType = {
   ratings: Ratings,
   harm: Harm,
   multiTracker: MultiTracker,
-  contacts: Contacts
+  contacts: Contacts,
+  textArea: TextArea
 };
