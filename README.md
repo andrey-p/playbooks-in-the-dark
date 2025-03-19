@@ -26,8 +26,8 @@ Running up to a beta release:
 
 - [x] set up production site
 - [x] add mobile support
+- [x] data entry for BitD characters
 - [ ] improve character saving flow
-- [ ] data entry for BitD characters
 - [ ] add BitD crews
 - [ ] add the first non-bitd system
 
