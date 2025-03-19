@@ -1,6 +1,7 @@
 // kept separate from all-modules.ts so this file can be loaded by server code
 
 import * as TextFieldSchemas from './text-field/text-field.schema';
+import * as TextAreaSchemas from './text-area/text-area.schema';
 import * as TrackerSchemas from './tracker/tracker.schema';
 import * as ItemsSchemas from './items/items.schema';
 import * as SpecialAbilitiesSchemas from './special-abilities/special-abilities.schema';
@@ -11,6 +12,7 @@ import * as ContactsSchemas from './contacts/contacts.schema';
 
 export const schemasByModuleType = {
   textField: TextFieldSchemas,
+  textArea: TextAreaSchemas,
   tracker: TrackerSchemas,
   items: ItemsSchemas,
   specialAbilities: SpecialAbilitiesSchemas,

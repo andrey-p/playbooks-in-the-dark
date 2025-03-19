@@ -22,7 +22,8 @@
       "trauma",
       "traumaText",
       "harm",
-      ["healingClock", "armor"]
+      ["healingClock", "armor"],
+      "notes"
     ],
     ["specialAbilities", "contacts", "items", "alchemicals"],
     ["coin", "playbookXp", "ratings"]
@@ -31,32 +32,27 @@
     "scoundrelName": {
       "id": "scoundrelName",
       "type": "textField",
-      "label": "Name",
-      "default": ""
+      "label": "Name"
     },
     "crew": {
       "id": "crew",
       "type": "textField",
-      "label": "Crew",
-      "default": ""
+      "label": "Crew"
     },
     "alias": {
       "id": "alias",
       "type": "textField",
-      "label": "Alias",
-      "default": ""
+      "label": "Alias"
     },
     "look": {
       "id": "look",
       "type": "textField",
-      "label": "Look",
-      "default": ""
+      "label": "Look"
     },
     "heritage": {
       "id": "heritage",
       "type": "textField",
       "label": "Heritage",
-      "default": "",
       "props": {
         "examples": [
           "Akoros",
@@ -72,7 +68,6 @@
       "id": "background",
       "type": "textField",
       "label": "Background",
-      "default": "",
       "props": {
         "examples": [
           "Academic",
@@ -89,7 +84,6 @@
       "id": "vice",
       "type": "textField",
       "label": "Vice / Purveyor",
-      "default": "",
       "props": {
         "examples": [
           "Faith",
@@ -106,7 +100,6 @@
       "id": "stress",
       "type": "tracker",
       "label": "Stress",
-      "default": 0,
       "props": {
         "trackerType": "dagger",
         "max": 9
@@ -116,7 +109,6 @@
       "id": "trauma",
       "type": "tracker",
       "label": "Trauma",
-      "default": 0,
       "props": {
         "trackerType": "dagger",
         "max": 4
@@ -126,7 +118,6 @@
       "id": "traumaText",
       "type": "textField",
       "label": "Trauma",
-      "default": "",
       "props": {
         "examples": [
           "Cold",
@@ -144,7 +135,6 @@
       "id": "harm",
       "type": "harm",
       "label": "Harm",
-      "default": [],
       "props": {
         "levelDescriptions": ["Less effect", "-1D", "Need help"]
       }
@@ -153,7 +143,6 @@
       "id": "healingClock",
       "type": "tracker",
       "label": "Healing",
-      "default": 0,
       "props": {
         "trackerType": "clock",
         "max": 4
@@ -163,7 +152,6 @@
       "id": "armor",
       "type": "items",
       "label": "Armor Uses",
-      "default": { "items": {} },
       "props": {
         "common": [
           { "id": "armor", "name": "Armor", "load": 1 },
@@ -172,28 +160,25 @@
         ]
       }
     },
+    "notes": {
+      "id": "notes",
+      "type": "textArea",
+      "label": "Notes"
+    },
     "specialAbilities": {
       "id": "specialAbilities",
       "type": "specialAbilities",
-      "label": "Special abilities",
-      "default": {
-        "selected": {}
-      }
+      "label": "Special abilities"
     },
     "contacts": {
       "id": "contacts",
       "type": "contacts",
-      "label": "Contacts",
-      "default": {}
+      "label": "Contacts"
     },
     "items": {
       "id": "items",
       "type": "items",
       "label": "Items",
-      "default": {
-        "load": null,
-        "items": {}
-      },
       "props": {
         "twoColumns": true,
         "load": [
@@ -226,9 +211,6 @@
       "type": "items",
       "label": "Alchemicals",
       "playbooks": ["leech"],
-      "default": {
-        "items": {}
-      },
       "props": {
         "common": [
           { "id": "bandolier1", "name": "Bandolier", "load": 3 },
@@ -241,7 +223,6 @@
       "id": "playbookXp",
       "type": "tracker",
       "label": "Playbook XP",
-      "default": 0,
       "props": {
         "max": 7,
         "trackerType": "dagger"
@@ -251,10 +232,6 @@
       "id": "coin",
       "type": "multiTracker",
       "label": "Coin",
-      "default": {
-        "coin": 0,
-        "stash": 0
-      },
       "props": {
         "trackers": {
           "coin": {
@@ -275,10 +252,6 @@
       "id": "ratings",
       "type": "ratings",
       "label": "Ratings",
-      "default": {
-        "actionRatings": {},
-        "attributeXp": {}
-      },
       "props": {
         "attributes": [
           {

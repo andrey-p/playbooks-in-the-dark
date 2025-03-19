@@ -16,10 +16,14 @@ export const PlaybookProps = BasePlaybookProps.and(
     contacts: z.array(Contact)
   })
 );
-export const UserValue = z.record(
-  z.string().refine((val) => val.length <= 255),
-  z.number().refine((val) => val >= -1 && val <= 1)
-);
+export const UserValue = z
+  .object({
+    contacts: z.record(
+      z.string().refine((val) => val.length <= 255),
+      z.number().refine((val) => val >= -1 && val <= 1)
+    )
+  })
+  .default({ contacts: {} });
 
 export default z.object({
   moduleDefinition: ModuleDefinition,

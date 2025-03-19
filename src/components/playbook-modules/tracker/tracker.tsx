@@ -10,6 +10,11 @@ export default function Tracker(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
   const { props: moduleProps } = moduleDefinition;
   const { max, trackerType } = moduleProps;
+  const { value } = userValue;
+
+  const onValueSelect = (value: number) => {
+    onUpdate({ value });
+  };
 
   return (
     <ModuleWrapper
@@ -17,13 +22,13 @@ export default function Tracker(props: Props) {
       playbookProps={playbookProps}
     >
       {trackerType === 'clock' ? (
-        <Clock value={userValue} max={max} onValueSelect={onUpdate} />
+        <Clock value={value} max={max} onValueSelect={onValueSelect} />
       ) : (
         <SimpleTracker
-          value={userValue}
+          value={value}
           max={max}
           type={trackerType}
-          onValueSelect={onUpdate}
+          onValueSelect={onValueSelect}
         />
       )}
     </ModuleWrapper>

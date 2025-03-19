@@ -21,7 +21,11 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
   })
 );
 export const PlaybookProps = BasePlaybookProps.and(z.void());
-export const UserValue = z.array(HarmItem);
+export const UserValue = z
+  .object({
+    harmsTaken: z.array(HarmItem)
+  })
+  .default({ harmsTaken: [] });
 
 export default z.object({
   moduleDefinition: ModuleDefinition,

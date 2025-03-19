@@ -14,7 +14,8 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
 export const PlaybookProps = BasePlaybookProps.and(z.void());
 export const UserValue = z
   .object({
-    text: z.string().refine((val) => val.length <= 255)
+    // 2k characters should be enough for anyone right?
+    text: z.string().refine((val) => val.length <= 3000)
   })
   .default({ text: '' });
 

@@ -7,6 +7,6 @@ const UserData = z
     playbookType: z.string(),
     playbookId: z.string()
   })
-  .and(z.record(z.string(), z.unknown()));
+  .catchall(z.any());
 
 export default UserData;

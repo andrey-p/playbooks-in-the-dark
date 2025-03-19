@@ -42,7 +42,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-input {
+input,
+textarea {
   font-size: 1.2rem;
   font-family: var(--font-text);
   &:focus-visible {

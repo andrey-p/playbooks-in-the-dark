@@ -17,9 +17,7 @@ const unifiedUserValueSchema = userValueSchemas.reduce(
 );
 
 // then add in the usual, more clearly defined properties
-const userDataSchema = UserDataSchema.and(
-  z.record(z.string(), unifiedUserValueSchema)
-);
+const userDataSchema = UserDataSchema.catchall(unifiedUserValueSchema);
 
 export const validateUserData = (userData: UserDataType) => {
   userDataSchema.parse(userData);

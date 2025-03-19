@@ -3,13 +3,14 @@ type Action = {
   key: string;
   value:
     | string
-    | number
-    | string[]
+    | { contacts: Record<string, number> }
+    | { values: Record<string, number> }
     | {
         actionRatings: Record<string, number>;
         attributeXp: Record<string, number>;
       }
-    | { text: string; column: number; level: number }[]
+    | { text: string }
+    | { harmsTaken: { text: string; column: number; level: number }[] }
     | Record<string, number>
     | {
         items: Record<string, number>;

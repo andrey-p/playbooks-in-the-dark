@@ -23,20 +23,17 @@ describe('Renderer', () => {
           scoundrelName: {
             id: 'scoundrelName',
             type: 'textField',
-            label: 'Name',
-            default: ''
+            label: 'Name'
           },
           alias: {
             id: 'alias',
             type: 'textField',
-            label: 'Alias',
-            default: ''
+            label: 'Alias'
           },
           heritage: {
             id: 'heritage',
             type: 'textField',
             label: 'Heritage',
-            default: '',
             props: {
               examples: ['Iruvia', 'Akoros']
             }
@@ -45,9 +42,6 @@ describe('Renderer', () => {
             id: 'items',
             type: 'items',
             label: 'Items',
-            default: {
-              items: {}
-            },
             props: {
               common: [
                 { id: 'a', name: 'aa', load: 2 },
@@ -61,7 +55,7 @@ describe('Renderer', () => {
           playbookType: 'scoundrel',
           systemId: 'bitd',
           playbookId: 'cutter',
-          scoundrelName: 'sss'
+          scoundrelName: { text: 'sss' }
         }}
         playbookData={playbookData}
         dispatch={dispatch}
@@ -89,7 +83,7 @@ describe('Renderer', () => {
     expect(dispatch).toHaveBeenCalledWith({
       type: 'set_value',
       key: 'scoundrelName',
-      value: 'sssl'
+      value: { text: 'sssl' }
     });
   });
   it('renders a playbook-specific module if the playbook matches', () => {
@@ -102,14 +96,12 @@ describe('Renderer', () => {
           scoundrelName: {
             id: 'scoundrelName',
             type: 'textField',
-            label: 'Name',
-            default: ''
+            label: 'Name'
           },
           heritage: {
             id: 'heritage',
             type: 'textField',
             label: 'Heritage',
-            default: '',
             playbooks: ['cutter'],
             props: {
               examples: ['Iruvia', 'Akoros']
@@ -140,14 +132,12 @@ describe('Renderer', () => {
           scoundrelName: {
             id: 'scoundrelName',
             type: 'textField',
-            label: 'Name',
-            default: ''
+            label: 'Name'
           },
           heritage: {
             id: 'heritage',
             type: 'textField',
             label: 'Heritage',
-            default: '',
             playbooks: ['cutter'],
             props: {
               examples: ['Iruvia', 'Akoros']
@@ -180,7 +170,6 @@ describe('Renderer', () => {
             scoundrelName: {
               id: 'scoundrelName',
               type: 'textField',
-              default: '',
               label: 'Name'
             }
           }}
@@ -205,7 +194,6 @@ describe('Renderer', () => {
             scoundrelName: {
               id: 'scoundrelName',
               type: 'textFeeled',
-              default: '',
               label: 'Name'
             }
           }}
@@ -230,7 +218,6 @@ describe('Renderer', () => {
             scoundrelName: {
               id: 'scoundrelName',
               type: 'textField',
-              default: '',
               lable: 'Name'
             }
           }}
@@ -256,7 +243,6 @@ describe('Renderer', () => {
               id: 'scoundrelName',
               type: 'textField',
               label: 'Name',
-              default: '',
               props: {
                 examples: 123
               }
@@ -274,6 +260,34 @@ describe('Renderer', () => {
       );
     }).toThrow();
   });
+  it('throws if default provided is in an incorrect format', () => {
+    expect(() => {
+      render(
+        <Renderer
+          layout={[['scoundrelName']]}
+          modules={{
+            scoundrelName: {
+              id: 'scoundrelName',
+              type: 'textField',
+              label: 'Name',
+              default: { valooooo: 123 },
+              props: {
+                examples: 123
+              }
+            }
+          }}
+          userData={{
+            id: undefined,
+            systemId: 'bitd',
+            playbookId: 'cutter',
+            playbookType: 'scoundrel'
+          }}
+          playbookData={playbookData}
+          dispatch={jest.fn()}
+        />
+      );
+    }).toThrow();
+  });
   it('throws if the value passed is in an incorrect format', () => {
     expect(() => {
       render(
@@ -284,7 +298,6 @@ describe('Renderer', () => {
               id: 'scoundrelName',
               type: 'textField',
               label: 'Name',
-              default: '',
               props: {
                 examples: 123
               }
