@@ -1,11 +1,23 @@
 {
   "id": "scoundrel",
-  "playbooks": ["cutter", "hound", "leech"],
+  "playbooks": [
+    "cutter",
+    "hound",
+    "leech",
+    "lurk",
+    "slide",
+    "spider",
+    "whisper"
+  ],
   "name": "Scoundrel",
   "layout": [
     [
-      ["scoundrelName", "alias"],
+      "scoundrelName",
+      ["crew", "alias"],
+      "look",
       "heritage",
+      "background",
+      "vice",
       "stress",
       "trauma",
       "traumaText",
@@ -22,10 +34,22 @@
       "label": "Name",
       "default": ""
     },
+    "crew": {
+      "id": "crew",
+      "type": "textField",
+      "label": "Crew",
+      "default": ""
+    },
     "alias": {
       "id": "alias",
       "type": "textField",
       "label": "Alias",
+      "default": ""
+    },
+    "look": {
+      "id": "look",
+      "type": "textField",
+      "label": "Look",
       "default": ""
     },
     "heritage": {
@@ -41,6 +65,40 @@
           "Severos",
           "Skovlan",
           "Tycheros"
+        ]
+      }
+    },
+    "background": {
+      "id": "background",
+      "type": "textField",
+      "label": "Background",
+      "default": "",
+      "props": {
+        "examples": [
+          "Academic",
+          "Labor",
+          "Law",
+          "Trade",
+          "Military",
+          "Noble",
+          "Underworld"
+        ]
+      }
+    },
+    "vice": {
+      "id": "vice",
+      "type": "textField",
+      "label": "Vice / Purveyor",
+      "default": "",
+      "props": {
+        "examples": [
+          "Faith",
+          "Gambling",
+          "Luxury",
+          "Obligation",
+          "Pleasure",
+          "Stupor",
+          "Weird"
         ]
       }
     },
@@ -142,12 +200,22 @@
           { "id": "heavy", "name": "6 heavy" }
         ],
         "common": [
-          { "id": "a knife or two", "name": "A knife or two", "load": 1 },
-          {
-            "id": "climbing equipment",
-            "name": "Climbing equipment",
-            "load": 2
-          }
+          { "id": "a blade or two", "name": "A Blade or Two", "load": 1 },
+          { "id": "throwing knives", "name": "Throwing Knives", "load": 1 },
+          { "id": "a pistol", "name": "A Pistol", "load": 1 },
+          { "id": "a 2nd pistol", "name": "A 2nd Pistol", "load": 1 },
+          { "id": "a large weapon", "name": "A Large Weapon", "load": 2 },
+          { "id": "an unusual weapon", "name": "An Unusual Weapon", "load": 1 },
+          { "id": "armor", "name": "Armour", "load": 2 },
+          { "id": "heavy", "name": "+ Heavy", "load": 3 },
+          { "id": "burglary gear", "name": "Burglary Gear", "load": 1 },
+          { "id": "climbing gear", "name": "Climbing Gear", "load": 2 },
+          { "id": "arcane implements", "name": "Arcane Implements", "load": 1 },
+          { "id": "documents", "name": "Documents", "load": 1 },
+          { "id": "subterfuge supplies", "name": "Subterfuge Supplies", "load": 1 },
+          { "id": "demolition tools", "name": "Demolition Tools", "load": 2 },
+          { "id": "tinkering tools", "name": "Tinkering Tools", "load": 1 },
+          { "id": "lantern", "name": "Lantern", "load": 1 }
         ]
       }
     },
@@ -165,7 +233,7 @@
           { "id": "bandolier2", "name": "Bandolier", "load": 3 }
         ]
       },
-      "description": "<p>When you use a bandolier slot, choose an alchemical:</p> <ul><li>Alcahest</li><li>Drift oil</li></ul>"
+      "description": "<p>When you use a bandolier slot, choose an alchemical:</p> <ul><li>Alcahest</li><li>Binding Oil</li><li>Drift Oil</li><li>Drown Powder</li><li>Eyeblind Poison</li><li>Fire Oil</li><li>Grenade</li><li>Quicksilver</li><li>Skullfire Poison</li><li>Smoke Bomb</li><li>Spark (drug)</li><li>Standstill Poison</li><li>Trance Powder</li></ul>"
     },
     "playbookXp": {
       "id": "playbookXp",
@@ -226,6 +294,16 @@
         ],
         "actions": [
           {
+            "id": "hunt",
+            "name": "Hunt",
+            "attributeId": "insight"
+          },
+          {
+            "id": "survey",
+            "name": "Survey",
+            "attributeId": "insight"
+          },
+          {
             "id": "study",
             "name": "Study",
             "attributeId": "insight"
@@ -241,8 +319,18 @@
             "attributeId": "prowess"
           },
           {
+            "id": "prowl",
+            "name": "Prowl",
+            "attributeId": "prowess"
+          },
+          {
             "id": "skirmish",
             "name": "Skirmish",
+            "attributeId": "prowess"
+          },
+          {
+            "id": "wreck",
+            "name": "Wreck",
             "attributeId": "prowess"
           },
           {
@@ -251,8 +339,18 @@
             "attributeId": "resolve"
           },
           {
+            "id": "command",
+            "name": "Command",
+            "attributeId": "resolve"
+          },
+          {
             "id": "consort",
             "name": "Consort",
+            "attributeId": "resolve"
+          },
+          {
+            "id": "sway",
+            "name": "Sway",
             "attributeId": "resolve"
           }
         ]
