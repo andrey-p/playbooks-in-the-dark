@@ -9,12 +9,15 @@ type ContactType = z.infer<typeof ContactSchema>;
 
 export default function Contacts(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
-  const { contacts } = playbookProps;
+  const { contacts: selectedContacts } = userValue;
+  const { contacts: availableContacts } = playbookProps;
 
   const onRelationshipUpdate = (id: string, value: number) => {
     onUpdate({
-      ...userValue,
-      [id]: value
+      contacts: {
+        ...selectedContacts,
+        [id]: value
+      }
     });
   };
 
@@ -24,11 +27,11 @@ export default function Contacts(props: Props) {
       playbookProps={playbookProps}
     >
       <ul className={styles.list}>
-        {contacts.map((contact: ContactType) => (
+        {availableContacts.map((contact: ContactType) => (
           <li className={styles.item} key={contact.id}>
             <Contact
               contact={contact}
-              relationship={userValue[contact.id]}
+              relationship={selectedContacts[contact.id]}
               onRelationshipUpdate={onRelationshipUpdate}
             />
           </li>

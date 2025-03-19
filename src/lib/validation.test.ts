@@ -19,7 +19,7 @@ describe('validation', () => {
         playbookId: 'asdf',
         playbookType: 'scoundrel',
         someTextField: { text: 'asdfasdfsadf' },
-        someTracker: 123,
+        someTracker: { value: 123 },
         ratings: {
           actionRatings: {
             finesse: 2,
@@ -40,7 +40,7 @@ describe('validation', () => {
         playbookId: 'asdf',
         someTextField: { text: 'asdfasdfsadf' },
         playbookType: 'scoundrel',
-        someTracker: 123,
+        someTracker: { value: 123 },
         ratings: {
           actionRatings: {
             finesse: 2,
@@ -65,7 +65,7 @@ describe('validation', () => {
         playbookId: 'asdf',
         playbookType: 'scoundrel',
         someTextField: { text: 'asdfasdfsadf' },
-        someTracker: 123,
+        someTracker: { value: 123 },
         ratings: {
           actionRatings: {
             finesse: 2,

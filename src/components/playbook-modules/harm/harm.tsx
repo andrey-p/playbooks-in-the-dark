@@ -8,12 +8,8 @@ import styles from './harm.module.css';
 type Props = z.infer<typeof PropsSchema>;
 
 export default function Harm(props: Props) {
-  const {
-    moduleDefinition,
-    userValue: harmsTaken,
-    onUpdate,
-    playbookProps
-  } = props;
+  const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
+  const { harmsTaken } = userValue;
   const { levelDescriptions } = moduleDefinition.props;
 
   // zero-based
@@ -35,7 +31,7 @@ export default function Harm(props: Props) {
       });
     }
 
-    onUpdate(nextHarmsTaken);
+    onUpdate({ harmsTaken: nextHarmsTaken });
   };
 
   return (

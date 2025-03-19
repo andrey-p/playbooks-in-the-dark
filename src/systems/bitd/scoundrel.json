@@ -106,7 +106,7 @@
       "id": "stress",
       "type": "tracker",
       "label": "Stress",
-      "default": 0,
+      "default": { "value": 0 },
       "props": {
         "trackerType": "dagger",
         "max": 9
@@ -116,7 +116,7 @@
       "id": "trauma",
       "type": "tracker",
       "label": "Trauma",
-      "default": 0,
+      "default": { "value": 0 },
       "props": {
         "trackerType": "dagger",
         "max": 4
@@ -144,7 +144,7 @@
       "id": "harm",
       "type": "harm",
       "label": "Harm",
-      "default": [],
+      "default": { "harmsTaken": [] },
       "props": {
         "levelDescriptions": ["Less effect", "-1D", "Need help"]
       }
@@ -153,7 +153,7 @@
       "id": "healingClock",
       "type": "tracker",
       "label": "Healing",
-      "default": 0,
+      "default": { "value": 0 },
       "props": {
         "trackerType": "clock",
         "max": 4
@@ -184,7 +184,7 @@
       "id": "contacts",
       "type": "contacts",
       "label": "Contacts",
-      "default": {}
+      "default": { "contacts": {} }
     },
     "items": {
       "id": "items",
@@ -241,7 +241,7 @@
       "id": "playbookXp",
       "type": "tracker",
       "label": "Playbook XP",
-      "default": 0,
+      "default": { "value": 0 },
       "props": {
         "max": 7,
         "trackerType": "dagger"
@@ -252,8 +252,10 @@
       "type": "multiTracker",
       "label": "Coin",
       "default": {
-        "coin": 0,
-        "stash": 0
+        "values": {
+          "coin": 0,
+          "stash": 0
+        }
       },
       "props": {
         "trackers": {

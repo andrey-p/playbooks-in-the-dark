@@ -11,11 +11,14 @@ export default function MultiTracker(props: Props) {
   const { moduleDefinition, playbookProps, userValue, onUpdate } = props;
   const { props: moduleProps } = moduleDefinition;
   const { trackers } = moduleProps;
+  const { values } = userValue;
 
   const onValueSelect = (trackerId: string, value: number) => {
     onUpdate({
-      ...userValue,
-      [trackerId]: value
+      values: {
+        ...values,
+        [trackerId]: value
+      }
     });
   };
 
@@ -27,7 +30,7 @@ export default function MultiTracker(props: Props) {
       {Object.keys(trackers).map((trackerId) => (
         <div key={trackerId} className={clsx(styles.tracker, trackerId)}>
           <SimpleTracker
-            value={userValue[trackerId] || 0}
+            value={values[trackerId] || 0}
             max={trackers[trackerId].max}
             type={trackers[trackerId].trackerType}
             wrap={trackers[trackerId].wrap}
