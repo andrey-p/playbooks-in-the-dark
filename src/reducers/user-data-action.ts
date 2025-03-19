@@ -14,6 +14,9 @@ type Action = {
     | {
         items: Record<string, number>;
         load?: string | null | undefined;
+      }
+    | {
+        selected: Record<string, number>;
       };
 };
 

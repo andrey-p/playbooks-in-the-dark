@@ -1,35 +1,32 @@
 import { z } from 'zod';
-import { useState } from 'react';
-import Toggle from '@/components/toggle/toggle';
+import SimpleTracker from '@/components/trackers/simple-tracker';
 import { SpecialAbility as SpecialAbilitySchema } from './special-abilities.schema';
 import styles from './special-ability.module.css';
 import Description from '@/components/description/description';
 
 type Props = {
   specialAbility: z.infer<typeof SpecialAbilitySchema>;
-  selected: boolean;
-  onSelect: (selected: boolean) => void;
+  selected?: number;
+  onSelect: (selected: number) => void;
 };
 
 export default function SpecialAbility(props: Props) {
   const { specialAbility, selected, onSelect } = props;
-  const [highlighted, setHighlighted] = useState<boolean>(false);
 
   return (
     <div className={styles.container}>
       <div className={styles.toggle}>
-        <Toggle
+        <SimpleTracker
+          value={selected || 0}
           type='circle'
-          filled={selected}
-          highlighted={highlighted}
-          onMouseEnter={() => setHighlighted(true)}
-          onMouseLeave={() => setHighlighted(false)}
-          onClick={() => onSelect(!selected)}
+          max={specialAbility.max || 1}
+          onValueSelect={onSelect}
         />
       </div>
-
-      <span className={styles.name}>{specialAbility.name}: </span>
-      <Description text={specialAbility.description} />
+      <div>
+        <span className={styles.name}>{specialAbility.name}: </span>
+        <Description text={specialAbility.description} />
+      </div>
     </div>
   );
 }

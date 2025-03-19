@@ -33,6 +33,7 @@
       {
         "id": "ghost hunter",
         "name": "Ghost Hunter",
+        "max": 2,
         "description": "Your hunting pet is imbued with spirit energy. It gains <strong>potency</strong> when tracking or fighting the supernatural, and gains an arcane ability: <em>ghost-form</em>, <em>mind-link</em>, or <em>arrow-swift</em>. Take this ability again to choose an additional arcane ability for your pet."
       },
       {
@@ -58,6 +59,7 @@
       {
         "id": "veteran",
         "name": "Veteran",
+        "max": 3,
         "description": "Choose a special ability from another source."
       }
     ]

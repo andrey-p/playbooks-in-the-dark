@@ -63,6 +63,7 @@
       {
         "id": "veteran",
         "name": "Veteran",
+        "max": 3,
         "description": "Choose a special ability from another source."
       }
     ]

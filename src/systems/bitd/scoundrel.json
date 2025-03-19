@@ -176,7 +176,9 @@
       "id": "specialAbilities",
       "type": "specialAbilities",
       "label": "Special abilities",
-      "default": []
+      "default": {
+        "selected": {}
+      }
     },
     "contacts": {
       "id": "contacts",

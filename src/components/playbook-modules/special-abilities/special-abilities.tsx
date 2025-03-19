@@ -2,7 +2,6 @@ import { z } from 'zod';
 import PropsSchema, {
   SpecialAbility as SpecialAbilitySchema
 } from './special-abilities.schema';
-import { toggleArrayEntry } from '@/lib/utils';
 import SpecialAbility from './special-ability';
 import ModuleWrapper from '../layout/module-wrapper';
 import styles from './special-abilities.module.css';
@@ -11,24 +10,20 @@ type Props = z.infer<typeof PropsSchema>;
 type SpecialAbilityType = z.infer<typeof SpecialAbilitySchema>;
 
 export default function SpecialAbilities(props: Props) {
-  const {
-    moduleDefinition,
-    userValue: selectedAbilities,
-    onUpdate,
-    playbookProps
-  } = props;
+  const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
   const specialAbilities = playbookProps;
+  const { selected } = userValue;
 
   const onSpecialAbilitySelect = (
     specialAbilityId: string,
-    selected: boolean
+    selectedValue: number
   ) => {
-    const nextSelectedAbilities = toggleArrayEntry(
-      specialAbilityId,
-      selected,
-      selectedAbilities
-    );
-    onUpdate(nextSelectedAbilities);
+    const nextSelectedAbilities = {
+      ...selected,
+      [specialAbilityId]: selectedValue
+    };
+
+    onUpdate({ selected: nextSelectedAbilities });
   };
 
   return (
@@ -42,7 +37,7 @@ export default function SpecialAbilities(props: Props) {
             <li key={specialAbility.id}>
               <SpecialAbility
                 specialAbility={specialAbility}
-                selected={selectedAbilities.includes(specialAbility.id)}
+                selected={selected[specialAbility.id]}
                 onSelect={(selected) =>
                   onSpecialAbilitySelect(specialAbility.id, selected)
                 }
