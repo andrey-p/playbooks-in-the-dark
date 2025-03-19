@@ -5,6 +5,7 @@
   text-align: left;
   color: var(--btn-text);
   border: 2px solid var(--btn-text);
+  height: 100%;
 
   &:hover,
   &:focus {
