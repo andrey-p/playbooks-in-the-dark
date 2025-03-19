@@ -61,12 +61,12 @@ export default function Toggle(props: Props) {
       style={{ width, height }}
       {...rest}
     >
-      {/* add 1px around the viewbox so the
+      {/* add 2px around the viewbox so the
         shape stroke doesn't get cut off */}
       <svg
         width={width}
         height={height}
-        viewBox={`-1 -1 ${width + 2} ${height + 2}`}
+        viewBox={`-2 -2 ${width + 4} ${height + 4}`}
       >
         {shape}
       </svg>
