@@ -9,6 +9,7 @@ type Action = {
         actionRatings: Record<string, number>;
         attributeXp: Record<string, number>;
       }
+    | { text: string }
     | { text: string; column: number; level: number }[]
     | Record<string, number>
     | {

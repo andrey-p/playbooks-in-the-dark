@@ -12,7 +12,9 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
 );
 
 export const PlaybookProps = BasePlaybookProps.and(z.void());
-export const UserValue = z.string().refine((val) => val.length <= 255);
+export const UserValue = z.object({
+  text: z.string().refine((val) => val.length <= 255)
+});
 
 export default z.object({
   moduleDefinition: ModuleDefinition,

@@ -11,6 +11,7 @@ export default function TextField(props: Props) {
   const { moduleDefinition, userValue, onUpdate } = props;
   const { props: moduleProps, label } = moduleDefinition;
   const examples = moduleProps?.examples;
+  const { text } = userValue;
 
   const consistentId = useId();
 
@@ -25,11 +26,15 @@ export default function TextField(props: Props) {
       <div className={styles.inputContainer}>
         <input
           type='text'
-          value={userValue}
+          value={text}
           className={styles.input}
           id={consistentId}
           name={consistentId}
-          onChange={(e) => onUpdate(e.currentTarget.value)}
+          onChange={(e) =>
+            onUpdate({
+              text: e.currentTarget.value
+            })
+          }
         />
       </div>
       <div className={styles.labelContainer}>

@@ -18,7 +18,7 @@ describe('validation', () => {
         systemId: 'asdf',
         playbookId: 'asdf',
         playbookType: 'scoundrel',
-        someTextField: 'asdfasdfsadf',
+        someTextField: { text: 'asdfasdfsadf' },
         someTracker: 123,
         ratings: {
           actionRatings: {
@@ -38,7 +38,7 @@ describe('validation', () => {
       const data = {
         id: 'asdf',
         playbookId: 'asdf',
-        someTextField: 'asdfasdfsadf',
+        someTextField: { text: 'asdfasdfsadf' },
         playbookType: 'scoundrel',
         someTracker: 123,
         ratings: {
@@ -64,7 +64,7 @@ describe('validation', () => {
         systemId: 'asdf',
         playbookId: 'asdf',
         playbookType: 'scoundrel',
-        someTextField: 'asdfasdfsadf',
+        someTextField: { text: 'asdfasdfsadf' },
         someTracker: 123,
         ratings: {
           actionRatings: {
@@ -93,7 +93,7 @@ describe('validation', () => {
         systemId: 'asdf',
         playbookId: 'asdf',
         playbookType: 'scoundrel',
-        foo: 'all work and no play makes jack a dull boy'.repeat(500)
+        foo: { text: 'all work and no play makes jack a dull boy'.repeat(500) }
       };
 
       expect(() => {

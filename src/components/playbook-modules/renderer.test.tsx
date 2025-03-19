@@ -24,19 +24,19 @@ describe('Renderer', () => {
             id: 'scoundrelName',
             type: 'textField',
             label: 'Name',
-            default: ''
+            default: { text: '' }
           },
           alias: {
             id: 'alias',
             type: 'textField',
             label: 'Alias',
-            default: ''
+            default: { text: '' }
           },
           heritage: {
             id: 'heritage',
             type: 'textField',
             label: 'Heritage',
-            default: '',
+            default: { text: '' },
             props: {
               examples: ['Iruvia', 'Akoros']
             }
@@ -61,7 +61,7 @@ describe('Renderer', () => {
           playbookType: 'scoundrel',
           systemId: 'bitd',
           playbookId: 'cutter',
-          scoundrelName: 'sss'
+          scoundrelName: { text: 'sss' }
         }}
         playbookData={playbookData}
         dispatch={dispatch}
@@ -89,7 +89,7 @@ describe('Renderer', () => {
     expect(dispatch).toHaveBeenCalledWith({
       type: 'set_value',
       key: 'scoundrelName',
-      value: 'sssl'
+      value: { text: 'sssl' }
     });
   });
   it('renders a playbook-specific module if the playbook matches', () => {
@@ -103,13 +103,13 @@ describe('Renderer', () => {
             id: 'scoundrelName',
             type: 'textField',
             label: 'Name',
-            default: ''
+            default: { text: '' }
           },
           heritage: {
             id: 'heritage',
             type: 'textField',
             label: 'Heritage',
-            default: '',
+            default: { text: '' },
             playbooks: ['cutter'],
             props: {
               examples: ['Iruvia', 'Akoros']
@@ -141,13 +141,13 @@ describe('Renderer', () => {
             id: 'scoundrelName',
             type: 'textField',
             label: 'Name',
-            default: ''
+            default: { text: '' }
           },
           heritage: {
             id: 'heritage',
             type: 'textField',
             label: 'Heritage',
-            default: '',
+            default: { text: '' },
             playbooks: ['cutter'],
             props: {
               examples: ['Iruvia', 'Akoros']
@@ -180,7 +180,7 @@ describe('Renderer', () => {
             scoundrelName: {
               id: 'scoundrelName',
               type: 'textField',
-              default: '',
+              default: { text: '' },
               label: 'Name'
             }
           }}
@@ -205,7 +205,7 @@ describe('Renderer', () => {
             scoundrelName: {
               id: 'scoundrelName',
               type: 'textFeeled',
-              default: '',
+              default: { text: '' },
               label: 'Name'
             }
           }}
@@ -230,7 +230,7 @@ describe('Renderer', () => {
             scoundrelName: {
               id: 'scoundrelName',
               type: 'textField',
-              default: '',
+              default: { text: '' },
               lable: 'Name'
             }
           }}
@@ -256,7 +256,7 @@ describe('Renderer', () => {
               id: 'scoundrelName',
               type: 'textField',
               label: 'Name',
-              default: '',
+              default: { text: '' },
               props: {
                 examples: 123
               }
@@ -284,7 +284,7 @@ describe('Renderer', () => {
               id: 'scoundrelName',
               type: 'textField',
               label: 'Name',
-              default: '',
+              default: { text: '' },
               props: {
                 examples: 123
               }
