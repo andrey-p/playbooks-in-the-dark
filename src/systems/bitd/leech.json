@@ -9,7 +9,7 @@
       { "id": "blowguns & darts syringes", "name": "Blowgun & Darts, syringes", "load": 0 },
       { "id": "bandolier 1", "name": "Bandolier (3 uses)", "load": 1 },
       { "id": "bandolier 2", "name": "Bandolier (3 uses)", "load": 1 },
-      { "id": "gadgets", "name": "Gadgets", "load": 3 }
+      { "id": "gadgets", "name": "Gadgets", "load": 3, "showLinked": false }
     ]
   },
   "ratings": {
