@@ -13,7 +13,10 @@ export default function TextArea(props: Props) {
   const consistentId = useId();
 
   return (
-    <ModuleWrapper moduleDefinition={moduleDefinition} playbookProps={playbookProps}>
+    <ModuleWrapper
+      moduleDefinition={moduleDefinition}
+      playbookProps={playbookProps}
+    >
       <textarea
         className={styles.input}
         id={consistentId}
@@ -28,4 +31,3 @@ export default function TextArea(props: Props) {
     </ModuleWrapper>
   );
 }
-

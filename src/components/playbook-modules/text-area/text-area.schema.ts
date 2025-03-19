@@ -25,4 +25,3 @@ export default z.object({
   userValue: UserValue,
   onUpdate: z.function().args(UserValue).returns(z.void())
 });
-
