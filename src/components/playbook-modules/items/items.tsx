@@ -47,9 +47,9 @@ export default function ItemList(props: Props) {
           />
         </div>
       )}
-      {common.length && (
+      {playbookProps?.custom?.length && (
         <ul className={styles.list}>
-          {common.map((item: ItemType) => (
+          {playbookProps?.custom?.map((item: ItemType) => (
             <li
               className={clsx(styles.item, twoColumns && styles.twoColumnsItem)}
               key={item.id}
@@ -63,9 +63,9 @@ export default function ItemList(props: Props) {
           ))}
         </ul>
       )}
-      {playbookProps?.custom?.length && (
+      {common.length && (
         <ul className={styles.list}>
-          {playbookProps?.custom?.map((item: ItemType) => (
+          {common.map((item: ItemType) => (
             <li
               className={clsx(styles.item, twoColumns && styles.twoColumnsItem)}
               key={item.id}

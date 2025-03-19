@@ -1,0 +1,81 @@
+{
+  "id": "slide",
+  "name": "Slide",
+  "description": "A subtle manipulator and spy",
+  "items": {
+    "custom": [
+      { "id": "fine clothes & jewelry", "name": "Fine Clothes & Jewelry", "load": 0 },
+      { "id": "fine disguise kit", "name": "Fine Disguise Kit", "load": 1 },
+      { "id": "fine loaded dice trick cards", "name": "Fine Loaded Dice, Trick Cards", "load": 0 },
+      { "id": "trance powder", "name": "Trance Powder", "load": 0 },
+      { "id": "a cane-sword", "name": "A cane-sword", "load": 1 },
+      { "id": "spiritbane charm", "name": "Spiritbane Charm", "load": 0 }
+    ]
+  },
+  "ratings": {
+    "startingRatings": {
+      "consort": 1,
+      "sway": 2
+    }
+  },
+  "specialAbilities": {
+    "abilities": [
+      {
+        "id": "rook's gambit",
+        "name": "Rook's Gambit",
+        "description": "Take <strong>2 stress</strong> to roll your best action rating while performing a different action. Say how you adapt your skill to this use."
+      },
+      {
+        "id": "cloak & dagger",
+        "name": "Cloak & Dagger",
+        "description": "When you use a disguise or other form of covert misdirection, you get <strong>+1d</strong> to rolls to confuse or deflect suspicion. When you throw off your disguise, the resulting surprise gives you the initiative in the situation."
+      },
+      {
+        "id": "ghost voice",
+        "name": "Ghost Voice",
+        "description": "You know the secret method to interact with a ghost or demon as if it was a normal human, regardless of how wild or feral it appears. You gain <strong>potency</strong> when communicating with the supernatural."
+      },
+      {
+        "id": "like looking into a mirror",
+        "name": "Like Looking into a Mirror",
+        "description": "You can always tell when someone is lying to you."
+      },
+      {
+        "id": "a little something on the side",
+        "name": "A Little Something on the Side",
+        "description": "At the end of each downtime phase, you earn +2 stash."
+      },
+      {
+        "id": "mesmerism",
+        "name": "Mesmerism",
+        "description": "When you <strong>Sway</strong> someone, you may cause them to forget that it's happened until they next interact with you."
+      },
+      {
+        "id": "subterfuge",
+        "name": "Subterfuge",
+        "description": "You may expend your <strong>special armor</strong> to resist a consequence from suspicion or persuasion, or to <strong>push yourself</strong> for subterfuge."
+      },
+      {
+        "id": "trust in me",
+        "name": "Trust in Me",
+        "description": "You get <strong>+1d</strong> vs. a target with whom you have an intimate relationship."
+      },
+      {
+        "id": "veteran",
+        "name": "Veteran",
+        "max": 3,
+        "description": "Choose a special ability from another source."
+      }
+    ]
+  },
+  "contacts": {
+    "customName": "Sly Friends",
+    "contacts": [
+      { "id": "bryl", "name": "Bryl, a drug dealer" },
+      { "id": "baszo baz", "name": "Bazso Baz, a gang leader" },
+      { "id": "klyra", "name": "Klyra, a tavern owner" },
+      { "id": "nyryx", "name": "Nyryx, a prostitute" },
+      { "id": "harker", "name": "Harker, a jail-bird" }
+    ]
+  }
+}

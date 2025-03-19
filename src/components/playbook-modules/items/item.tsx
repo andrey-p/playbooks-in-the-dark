@@ -13,13 +13,17 @@ type Props = {
 export default function Item(props: Props) {
   const { item, selected, onSelect } = props;
 
+  // default to showing load 2+ items as linked
+  const showLinked =
+    typeof item.showLinked === 'boolean' ? item.showLinked : true;
+
   return (
     <div className={styles.container}>
       {/* load 0 items still show a box */}
       <SimpleTracker
         value={selected || 0}
         type='square'
-        variant='linked'
+        variant={showLinked ? 'linked' : undefined}
         max={item.load || 1}
         onValueSelect={onSelect}
       />
