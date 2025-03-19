@@ -31,32 +31,27 @@
     "scoundrelName": {
       "id": "scoundrelName",
       "type": "textField",
-      "label": "Name",
-      "default": { "text": "" }
+      "label": "Name"
     },
     "crew": {
       "id": "crew",
       "type": "textField",
-      "label": "Crew",
-      "default": { "text": "" }
+      "label": "Crew"
     },
     "alias": {
       "id": "alias",
       "type": "textField",
-      "label": "Alias",
-      "default": { "text": "" }
+      "label": "Alias"
     },
     "look": {
       "id": "look",
       "type": "textField",
-      "label": "Look",
-      "default": { "text": "" }
+      "label": "Look"
     },
     "heritage": {
       "id": "heritage",
       "type": "textField",
       "label": "Heritage",
-      "default": { "text": "" },
       "props": {
         "examples": [
           "Akoros",
@@ -72,7 +67,6 @@
       "id": "background",
       "type": "textField",
       "label": "Background",
-      "default": { "text": "" },
       "props": {
         "examples": [
           "Academic",
@@ -89,7 +83,6 @@
       "id": "vice",
       "type": "textField",
       "label": "Vice / Purveyor",
-      "default": { "text": "" },
       "props": {
         "examples": [
           "Faith",
@@ -106,7 +99,6 @@
       "id": "stress",
       "type": "tracker",
       "label": "Stress",
-      "default": { "value": 0 },
       "props": {
         "trackerType": "dagger",
         "max": 9
@@ -116,7 +108,6 @@
       "id": "trauma",
       "type": "tracker",
       "label": "Trauma",
-      "default": { "value": 0 },
       "props": {
         "trackerType": "dagger",
         "max": 4
@@ -126,7 +117,6 @@
       "id": "traumaText",
       "type": "textField",
       "label": "Trauma",
-      "default": { "text": "" },
       "props": {
         "examples": [
           "Cold",
@@ -144,7 +134,6 @@
       "id": "harm",
       "type": "harm",
       "label": "Harm",
-      "default": { "harmsTaken": [] },
       "props": {
         "levelDescriptions": ["Less effect", "-1D", "Need help"]
       }
@@ -153,7 +142,6 @@
       "id": "healingClock",
       "type": "tracker",
       "label": "Healing",
-      "default": { "value": 0 },
       "props": {
         "trackerType": "clock",
         "max": 4
@@ -163,7 +151,6 @@
       "id": "armor",
       "type": "items",
       "label": "Armor Uses",
-      "default": { "items": {} },
       "props": {
         "common": [
           { "id": "armor", "name": "Armor", "load": 1 },
@@ -175,25 +162,17 @@
     "specialAbilities": {
       "id": "specialAbilities",
       "type": "specialAbilities",
-      "label": "Special abilities",
-      "default": {
-        "selected": {}
-      }
+      "label": "Special abilities"
     },
     "contacts": {
       "id": "contacts",
       "type": "contacts",
-      "label": "Contacts",
-      "default": { "contacts": {} }
+      "label": "Contacts"
     },
     "items": {
       "id": "items",
       "type": "items",
       "label": "Items",
-      "default": {
-        "load": null,
-        "items": {}
-      },
       "props": {
         "twoColumns": true,
         "load": [
@@ -226,9 +205,6 @@
       "type": "items",
       "label": "Alchemicals",
       "playbooks": ["leech"],
-      "default": {
-        "items": {}
-      },
       "props": {
         "common": [
           { "id": "bandolier1", "name": "Bandolier", "load": 3 },
@@ -241,7 +217,6 @@
       "id": "playbookXp",
       "type": "tracker",
       "label": "Playbook XP",
-      "default": { "value": 0 },
       "props": {
         "max": 7,
         "trackerType": "dagger"
@@ -251,12 +226,6 @@
       "id": "coin",
       "type": "multiTracker",
       "label": "Coin",
-      "default": {
-        "values": {
-          "coin": 0,
-          "stash": 0
-        }
-      },
       "props": {
         "trackers": {
           "coin": {
@@ -277,10 +246,6 @@
       "id": "ratings",
       "type": "ratings",
       "label": "Ratings",
-      "default": {
-        "actionRatings": {},
-        "attributeXp": {}
-      },
       "props": {
         "attributes": [
           {

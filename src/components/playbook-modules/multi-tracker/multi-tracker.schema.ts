@@ -17,12 +17,14 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
   })
 );
 export const PlaybookProps = BasePlaybookProps.and(z.void());
-export const UserValue = z.object({
-  values: z.record(
-    z.string().refine((val) => val.length < 255),
-    z.number().refine((val) => val >= 0 && val <= 255)
-  )
-});
+export const UserValue = z
+  .object({
+    values: z.record(
+      z.string().refine((val) => val.length < 255),
+      z.number().refine((val) => val >= 0 && val <= 255)
+    )
+  })
+  .default({ values: {} });
 
 export default z.object({
   moduleDefinition: ModuleDefinition,

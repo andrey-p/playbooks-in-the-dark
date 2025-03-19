@@ -25,22 +25,24 @@ export const PlaybookProps = BasePlaybookProps.and(
     startingRatings: z.record(z.string(), z.number().int())
   })
 );
-export const UserValue = z.object({
-  actionRatings: z.record(
-    z.string().refine((val) => val.length <= 255),
-    z
-      .number()
-      .int()
-      .refine((val) => val >= 0 && val <= 10)
-  ),
-  attributeXp: z.record(
-    z.string().refine((val) => val.length <= 255),
-    z
-      .number()
-      .int()
-      .refine((val) => val >= 0 && val <= 20)
-  )
-});
+export const UserValue = z
+  .object({
+    actionRatings: z.record(
+      z.string().refine((val) => val.length <= 255),
+      z
+        .number()
+        .int()
+        .refine((val) => val >= 0 && val <= 10)
+    ),
+    attributeXp: z.record(
+      z.string().refine((val) => val.length <= 255),
+      z
+        .number()
+        .int()
+        .refine((val) => val >= 0 && val <= 20)
+    )
+  })
+  .default({ actionRatings: {}, attributeXp: {} });
 
 export default z.object({
   moduleDefinition: ModuleDefinition,

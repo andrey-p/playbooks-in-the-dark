@@ -18,15 +18,17 @@ export const PlaybookProps = BasePlaybookProps.and(
     abilities: z.array(SpecialAbility)
   })
 );
-export const UserValue = z.object({
-  selected: z.record(
-    z.string().refine((val) => val.length <= 255),
-    z
-      .number()
-      .int()
-      .refine((val) => val > 0 && val < 10)
-  )
-});
+export const UserValue = z
+  .object({
+    selected: z.record(
+      z.string().refine((val) => val.length <= 255),
+      z
+        .number()
+        .int()
+        .refine((val) => val > 0 && val < 10)
+    )
+  })
+  .default({ selected: {} });
 
 export default z.object({
   moduleDefinition: ModuleDefinition,

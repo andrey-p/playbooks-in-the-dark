@@ -34,17 +34,19 @@ export const PlaybookProps = BasePlaybookProps.and(
     })
     .optional()
 );
-export const UserValue = z.object({
-  load: z
-    .string()
-    .optional()
-    .nullable()
-    .refine((val) => !val || val.length <= 255),
-  items: z.record(
-    z.string().refine((val) => val.length <= 255),
-    z.number().refine((val) => val >= 0 && val <= 10)
-  )
-});
+export const UserValue = z
+  .object({
+    load: z
+      .string()
+      .optional()
+      .nullable()
+      .refine((val) => !val || val.length <= 255),
+    items: z.record(
+      z.string().refine((val) => val.length <= 255),
+      z.number().refine((val) => val >= 0 && val <= 10)
+    )
+  })
+  .default({ items: {} });
 
 export default z.object({
   moduleDefinition: ModuleDefinition,
