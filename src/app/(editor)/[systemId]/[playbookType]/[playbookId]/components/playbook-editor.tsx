@@ -2,6 +2,8 @@
 
 import { useState, useReducer } from 'react';
 import { z } from 'zod';
+import { usePathname } from 'next/navigation';
+
 import {
   PlaybookData as PlaybookDataSchema,
   PlaybookDefinition as PlaybookDefinitionSchema,
@@ -38,15 +40,20 @@ export default function Playbook(props: Props) {
     JSON.stringify(initialUserData)
   );
   const [userData, dispatch] = useReducer(userDataReducer, initialUserData);
+  const pathName = usePathname();
 
   const save = async () => {
     const data = await savePlaybook(userData);
 
+    setLastSaved(JSON.stringify({ ...userData, id: data.id }));
+
+    // if this is a new character being saved, store the newly created ID in local state
     if (!userData.id && data.id) {
       dispatch({ type: 'set_value', key: 'id', value: data.id });
-    }
 
-    setLastSaved(JSON.stringify({ ...userData, id: data.id }));
+      // set the URL so the user can refresh or copy / paste without losing their character
+      window.history.replaceState(null, '', pathName + '/' + data.id);
+    }
   };
 
   return (
