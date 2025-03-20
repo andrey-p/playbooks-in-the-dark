@@ -7,9 +7,9 @@ import {
   System as SystemSchema
 } from '@/schemas';
 import { notFound } from 'next/navigation';
-import OptionList from '../components/option-list';
-import Separator from '../components/separator';
-import type { Option as OptionType } from '../components/options.types';
+import OptionList from '../../components/option-list';
+import Separator from '../../components/separator';
+import type { Option as OptionType } from '../../components/options.types';
 import styles from './page.module.css';
 
 type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
