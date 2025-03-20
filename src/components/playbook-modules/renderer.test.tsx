@@ -6,8 +6,10 @@ const playbookData = {
   id: 'cutter',
   name: 'Cutter',
   description: 'a roustabout',
-  items: {
-    custom: [{ id: 'c', name: 'cc', load: 1 }]
+  modules: {
+    items: {
+      custom: [{ id: 'c', name: 'cc', load: 1 }]
+    }
   }
 };
 

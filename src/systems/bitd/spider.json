@@ -2,80 +2,82 @@
   "id": "spider",
   "name": "Spider",
   "description": "A devious mastermind",
-  "items": {
-    "custom": [
-      { "id": "fine cover identity", "name": "Fine cover identity", "load": 0 },
-      { "id": "fine bottle of whiskey", "name": "Fine Bottle of Whiskey", "load": 1 },
-      { "id": "blueprints", "name": "Blueprints", "load": 1 },
-      { "id": "vial of slumber essence", "name": "Vial of Slumber Essence", "load": 0 },
-      { "id": "conealed palm pistol", "name": "Concealed Palm Pistol", "load": 0 },
-      { "id": "spiritbane charm", "name": "Spiritbane Charm", "load": 0 }
-    ]
-  },
-  "ratings": {
-    "startingRatings": {
-      "study": 1,
-      "consort": 2
-    }
-  },
-  "specialAbilities": {
-    "abilities": [
-      {
-        "id": "foresight",
-        "name": "Foresight",
-        "description": "Two times per score you can <strong>assist</strong> a teammate without paying stress. Tell us how you prepared for this."
-      },
-      {
-        "id": "calculating",
-        "name": "Calculating",
-        "description": "Due to your careful planning, during <strong>downtime</strong>, you may give yourself or another crew member +1 downtime action."
-      },
-      {
-        "id": "connected",
-        "name": "Connected",
-        "description": "During downtime, you get <strong>+1 result level</strong> when you <strong>acquire an asset</strong> or <strong>reduce heat</strong>."
-      },
-      {
-        "id": "functioning vice",
-        "name": "Functioning Vice",
-        "description": "When you indulge your vice, you may adjust the dice outcome by 1 or 2 (up or down). An ally who joins in your vice may do the same."
-      },
-      {
-        "id": "ghost contract",
-        "name": "Ghost Contract",
-        "description": "When you shake on a deal, you and your partner—human or otherwise—both bear a mark of your oath. If either breaks the contract, they take level 3 harm, \"Cursed\"."
-      },
-      {
-        "id": "jail bird",
-        "name": "Jail Bird",
-        "description": "When <strong>incarcerated</strong>, your wanted level counts as 1 less, your Tier as 1 more, and you gain +1 faction status with a faction you help on the inside (in addition to your incarceration roll)."
-      },
-      {
-        "id": "mastermind",
-        "name": "Mastermind",
-        "description": "You may expend your <strong>special armor</strong> to protect a teammate, or to <strong>push yourself</strong> when you gather information or work on a long-term project."
-      },
-      {
-        "id": "weaving the web",
-        "name": "Weaving the Web",
-        "description": "You gain <strong>+1d</strong> to <strong>Consort</strong> when you <strong>gather information</strong> on a target for a score. You get <strong>+1d</strong> to the <strong>engagement roll</strong> for that operation."
-      },
-      {
-        "id": "veteran",
-        "name": "Veteran",
-        "max": 3,
-        "description": "Choose a special ability from another source."
+  "modules": {
+    "items": {
+      "custom": [
+        { "id": "fine cover identity", "name": "Fine cover identity", "load": 0 },
+        { "id": "fine bottle of whiskey", "name": "Fine Bottle of Whiskey", "load": 1 },
+        { "id": "blueprints", "name": "Blueprints", "load": 1 },
+        { "id": "vial of slumber essence", "name": "Vial of Slumber Essence", "load": 0 },
+        { "id": "conealed palm pistol", "name": "Concealed Palm Pistol", "load": 0 },
+        { "id": "spiritbane charm", "name": "Spiritbane Charm", "load": 0 }
+      ]
+    },
+    "ratings": {
+      "startingRatings": {
+        "study": 1,
+        "consort": 2
       }
-    ]
-  },
-  "contacts": {
-    "customName": "Shrewd Friends",
-    "contacts": [
-      { "id": "salia", "name": "Salia, an information broker" },
-      { "id": "augus", "name": "Augus, a master architect" },
-      { "id": "jennah", "name": "Jennah, a servant" },
-      { "id": "riven", "name": "Riven, a chemist" },
-      { "id": "jeren", "name": "Jeren, a bluecoat archivist" }
-    ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "foresight",
+          "name": "Foresight",
+          "description": "Two times per score you can <strong>assist</strong> a teammate without paying stress. Tell us how you prepared for this."
+        },
+        {
+          "id": "calculating",
+          "name": "Calculating",
+          "description": "Due to your careful planning, during <strong>downtime</strong>, you may give yourself or another crew member +1 downtime action."
+        },
+        {
+          "id": "connected",
+          "name": "Connected",
+          "description": "During downtime, you get <strong>+1 result level</strong> when you <strong>acquire an asset</strong> or <strong>reduce heat</strong>."
+        },
+        {
+          "id": "functioning vice",
+          "name": "Functioning Vice",
+          "description": "When you indulge your vice, you may adjust the dice outcome by 1 or 2 (up or down). An ally who joins in your vice may do the same."
+        },
+        {
+          "id": "ghost contract",
+          "name": "Ghost Contract",
+          "description": "When you shake on a deal, you and your partner—human or otherwise—both bear a mark of your oath. If either breaks the contract, they take level 3 harm, \"Cursed\"."
+        },
+        {
+          "id": "jail bird",
+          "name": "Jail Bird",
+          "description": "When <strong>incarcerated</strong>, your wanted level counts as 1 less, your Tier as 1 more, and you gain +1 faction status with a faction you help on the inside (in addition to your incarceration roll)."
+        },
+        {
+          "id": "mastermind",
+          "name": "Mastermind",
+          "description": "You may expend your <strong>special armor</strong> to protect a teammate, or to <strong>push yourself</strong> when you gather information or work on a long-term project."
+        },
+        {
+          "id": "weaving the web",
+          "name": "Weaving the Web",
+          "description": "You gain <strong>+1d</strong> to <strong>Consort</strong> when you <strong>gather information</strong> on a target for a score. You get <strong>+1d</strong> to the <strong>engagement roll</strong> for that operation."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another source."
+        }
+      ]
+    },
+    "contacts": {
+      "customName": "Shrewd Friends",
+      "contacts": [
+        { "id": "salia", "name": "Salia, an information broker" },
+        { "id": "augus", "name": "Augus, a master architect" },
+        { "id": "jennah", "name": "Jennah, a servant" },
+        { "id": "riven", "name": "Riven, a chemist" },
+        { "id": "jeren", "name": "Jeren, a bluecoat archivist" }
+      ]
+    }
   }
 }

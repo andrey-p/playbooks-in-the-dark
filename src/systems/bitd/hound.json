@@ -2,76 +2,78 @@
   "id": "hound",
   "name": "Hound",
   "description": "A deadly sharpshooter and tracker",
-  "items": {
-    "custom": [
-      { "id": "fine pair of pistols", "name": "Fine Pair of Pistols", "load": 1 },
-      { "id": "fine long rifle", "name": "Fine Long Rifle", "load": 2 },
-      { "id": "electroplasmic ammunition", "name": "Electroplasmic Ammunition", "load": 1 },
-      { "id": "a trained hunting pet", "name": "A Trained Hunting Pet", "load": 0 },
-      { "id": "spyglass", "name": "Spyglass", "load": 1 },
-      { "id": "spiritbane charm", "name": "Spiritbane charm", "load": 0 }
-    ]
-  },
-  "ratings": {
-    "startingRatings": {
-      "hunt": 2,
-      "survey": 1
-    }
-  },
-  "specialAbilities": {
-    "abilities": [
-      {
-        "id": "sharpshooter",
-        "name": "Sharpshooter",
-        "description": "You can <strong>push yourself</strong> to do one of the following: <em>make a ranged attack at extreme distance beyond what’s normal for the weapon</em>—<em>unleash a barrage of rapid fire to suppress the enemy</em>."
-      },
-      {
-        "id": "focused",
-        "name": "Focused",
-        "description": "You may expend your <strong>special armor</strong> to resist a consequence of surprise or mental harm (fear, confusion, losing track of someone) or to <strong>push yourself</strong> for ranged combat or tracking."
-      },
-      {
-        "id": "ghost hunter",
-        "name": "Ghost Hunter",
-        "max": 2,
-        "description": "Your hunting pet is imbued with spirit energy. It gains <strong>potency</strong> when tracking or fighting the supernatural, and gains an arcane ability: <em>ghost-form</em>, <em>mind-link</em>, or <em>arrow-swift</em>. Take this ability again to choose an additional arcane ability for your pet."
-      },
-      {
-        "id": "scout",
-        "name": "Scout",
-        "description": "When you <strong>gather info</strong> to locate a target, you get <strong>+1 effect</strong>. When you hide in a prepared position or use camouflage, you get <strong>+1d</strong> to rolls to avoid detection."
-      },
-      {
-        "id": "survivor",
-        "name": "Survivor",
-        "description": "From hard won experience or occult ritual, you are immune to the poisonous miasma of the deathlands and are able to subsist on the strange flora and fauna there. You get <strong>+1 stress box</strong>."
-      },
-      {
-        "id": "tough as nails",
-        "name": "Tough as Nails",
-        "description": "Penalties from harm are one level less severe (though level 4 harm is still fatal)."
-      },
-      {
-        "id": "vengeful",
-        "name": "Vengeful",
-        "description": "You gain an additional <strong>xp trigger</strong>: You got payback against someone who harmed you or someone you care about. If your crew helped you get payback, also mark crew xp."
-      },
-      {
-        "id": "veteran",
-        "name": "Veteran",
-        "max": 3,
-        "description": "Choose a special ability from another source."
+  "modules": {
+    "items": {
+      "custom": [
+        { "id": "fine pair of pistols", "name": "Fine Pair of Pistols", "load": 1 },
+        { "id": "fine long rifle", "name": "Fine Long Rifle", "load": 2 },
+        { "id": "electroplasmic ammunition", "name": "Electroplasmic Ammunition", "load": 1 },
+        { "id": "a trained hunting pet", "name": "A Trained Hunting Pet", "load": 0 },
+        { "id": "spyglass", "name": "Spyglass", "load": 1 },
+        { "id": "spiritbane charm", "name": "Spiritbane charm", "load": 0 }
+      ]
+    },
+    "ratings": {
+      "startingRatings": {
+        "hunt": 2,
+        "survey": 1
       }
-    ]
-  },
-  "contacts": {
-    "customName": "Dangerous Friends",
-    "contacts": [
-      { "id": "steiner", "name": "Steiner, an assassin" },
-      { "id": "celene", "name": "Celene, a sentinel" },
-      { "id": "melvir", "name": "Melvir, a physicker" },
-      { "id": "veleris", "name": "Veleris, a spy" },
-      { "id": "casta", "name": "Casta, a bounty hunter" }
-    ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "sharpshooter",
+          "name": "Sharpshooter",
+          "description": "You can <strong>push yourself</strong> to do one of the following: <em>make a ranged attack at extreme distance beyond what’s normal for the weapon</em>—<em>unleash a barrage of rapid fire to suppress the enemy</em>."
+        },
+        {
+          "id": "focused",
+          "name": "Focused",
+          "description": "You may expend your <strong>special armor</strong> to resist a consequence of surprise or mental harm (fear, confusion, losing track of someone) or to <strong>push yourself</strong> for ranged combat or tracking."
+        },
+        {
+          "id": "ghost hunter",
+          "name": "Ghost Hunter",
+          "max": 2,
+          "description": "Your hunting pet is imbued with spirit energy. It gains <strong>potency</strong> when tracking or fighting the supernatural, and gains an arcane ability: <em>ghost-form</em>, <em>mind-link</em>, or <em>arrow-swift</em>. Take this ability again to choose an additional arcane ability for your pet."
+        },
+        {
+          "id": "scout",
+          "name": "Scout",
+          "description": "When you <strong>gather info</strong> to locate a target, you get <strong>+1 effect</strong>. When you hide in a prepared position or use camouflage, you get <strong>+1d</strong> to rolls to avoid detection."
+        },
+        {
+          "id": "survivor",
+          "name": "Survivor",
+          "description": "From hard won experience or occult ritual, you are immune to the poisonous miasma of the deathlands and are able to subsist on the strange flora and fauna there. You get <strong>+1 stress box</strong>."
+        },
+        {
+          "id": "tough as nails",
+          "name": "Tough as Nails",
+          "description": "Penalties from harm are one level less severe (though level 4 harm is still fatal)."
+        },
+        {
+          "id": "vengeful",
+          "name": "Vengeful",
+          "description": "You gain an additional <strong>xp trigger</strong>: You got payback against someone who harmed you or someone you care about. If your crew helped you get payback, also mark crew xp."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another source."
+        }
+      ]
+    },
+    "contacts": {
+      "customName": "Dangerous Friends",
+      "contacts": [
+        { "id": "steiner", "name": "Steiner, an assassin" },
+        { "id": "celene", "name": "Celene, a sentinel" },
+        { "id": "melvir", "name": "Melvir, a physicker" },
+        { "id": "veleris", "name": "Veleris, a spy" },
+        { "id": "casta", "name": "Casta, a bounty hunter" }
+      ]
+    }
   }
 }

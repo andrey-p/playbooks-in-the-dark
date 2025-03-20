@@ -42,7 +42,7 @@ export default function Renderer(props: Props) {
 
     const moduleDefinition = modules[moduleId];
     const userValue = userData[moduleId];
-    const playbookProps = playbookData[moduleId];
+    const playbookProps = playbookData.modules[moduleId];
 
     // up to this point we're just passing arbitrary data for this module around
     // we need to do some verification before we continue
