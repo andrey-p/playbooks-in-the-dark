@@ -46,11 +46,16 @@ export default function Playbook(props: Props) {
   const save = async () => {
     const data = await savePlaybookToDb(userData);
 
-    setLastSaved(JSON.stringify({ ...userData, id: data.id }));
+    const dataWithId = {
+      ...userData,
+      id: data.id
+    };
+
+    setLastSaved(JSON.stringify(dataWithId));
 
     // store this in local storage
     // so it can be accessed easily from the homepage
-    savePlaybookToLocalStorage(userData);
+    savePlaybookToLocalStorage(dataWithId);
 
     // if this is a new character being saved, store the newly created ID in local state
     if (!userData.id && data.id) {
