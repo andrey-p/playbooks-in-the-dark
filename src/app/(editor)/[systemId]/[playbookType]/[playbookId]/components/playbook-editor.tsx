@@ -20,7 +20,8 @@ type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
 type PlaybookDataType = z.infer<typeof PlaybookDataSchema>;
 type UserDataType = z.infer<typeof UserDataSchema>;
 
-import { savePlaybook } from '@/lib/store';
+import { savePlaybook as savePlaybookToDb } from '@/lib/store';
+import { savePlaybook as savePlaybookToLocalStorage } from '@/lib/local-storage';
 
 type Props = {
   playbookData: PlaybookDataType;
@@ -43,9 +44,13 @@ export default function Playbook(props: Props) {
   const pathName = usePathname();
 
   const save = async () => {
-    const data = await savePlaybook(userData);
+    const data = await savePlaybookToDb(userData);
 
     setLastSaved(JSON.stringify({ ...userData, id: data.id }));
+
+    // store this in local storage
+    // so it can be accessed easily from the homepage
+    savePlaybookToLocalStorage(userData);
 
     // if this is a new character being saved, store the newly created ID in local state
     if (!userData.id && data.id) {
