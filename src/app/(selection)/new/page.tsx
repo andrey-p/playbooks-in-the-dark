@@ -11,7 +11,7 @@ export default function Home() {
     })
     .map((system) => ({
       id: system.id,
-      href: `/${system.id}`,
+      href: `/new/${system.id}`,
       name: system.name,
       description: system.description
     }));
