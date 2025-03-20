@@ -17,8 +17,14 @@ export default function PlaybookActions(props: Props) {
   const [statusText, setStatusText] = useState<string>('');
 
   useEffect(() => {
-    setStatusText(isSaved ? 'Saved' : 'Not saved');
-  }, [isSaved]);
+    // don't show "saved" until the playbook has actually been saved
+    // for the first time
+    if (isSaved && userDataId) {
+      setStatusText('Saved');
+    } else if (!isSaved) {
+      setStatusText('Not saved');
+    }
+  }, [isSaved, userDataId]);
 
   const copyLink = async () => {
     const baseUrl = await getEnvVar('APP_URL');
