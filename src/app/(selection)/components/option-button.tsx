@@ -4,7 +4,7 @@ import Link from 'next/link';
 type Props = {
   href: string;
   name: string;
-  description: string;
+  description?: string;
 };
 
 export default function OptionButton(props: Props) {
@@ -13,7 +13,7 @@ export default function OptionButton(props: Props) {
   return (
     <Link className={styles.container} href={href}>
       <h3 className={styles.heading}>{name}</h3>
-      <p className={styles.description}>{description}</p>
+      {description && <p className={styles.description}>{description}</p>}
     </Link>
   );
 }
