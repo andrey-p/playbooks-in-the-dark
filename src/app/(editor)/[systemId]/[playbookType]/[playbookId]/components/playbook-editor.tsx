@@ -55,7 +55,7 @@ export default function Playbook(props: Props) {
 
     // store this in local storage
     // so it can be accessed easily from the homepage
-    savePlaybookToLocalStorage(dataWithId);
+    savePlaybookToLocalStorage(dataWithId, playbookData, playbookDefinition);
 
     // if this is a new character being saved, store the newly created ID in local state
     if (!userData.id && data.id) {

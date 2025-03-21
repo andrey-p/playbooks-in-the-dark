@@ -1,9 +1,15 @@
 import { z } from 'zod';
-import { UserData as UserDataSchema } from '@/schemas';
+import {
+  UserData as UserDataSchema,
+  PlaybookData as PlaybookDataSchema,
+  PlaybookDefinition as PlaybookDefinitionSchema
+} from '@/schemas';
 
 const KEY = 'playbooks';
 
 type UserDataType = z.infer<typeof UserDataSchema>;
+type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
+type PlaybookDataType = z.infer<typeof PlaybookDataSchema>;
 
 export const getPlaybooks = (): UserDataType[] => {
   const storageValue = window.localStorage.getItem(KEY) || '';
@@ -19,7 +25,11 @@ export const getPlaybooks = (): UserDataType[] => {
   return playbooks;
 };
 
-export const savePlaybook = (data: UserDataType) => {
+export const savePlaybook = (
+  data: UserDataType,
+  playbookData: PlaybookDataType,
+  playbookDefinition: PlaybookDefinitionType
+) => {
   // only store the bare minimum in local storage
   const dataToSave = {
     id: data.id,
@@ -28,7 +38,8 @@ export const savePlaybook = (data: UserDataType) => {
     playbookId: data.playbookId,
     // if there's a name to the character, store that as well
     // so we've got something to show
-    name: data.name || null
+    name: data.name ? data.name : `An unnamed ${playbookDefinition.name}`,
+    description: playbookData.name
   };
 
   const playbooks = getPlaybooks();

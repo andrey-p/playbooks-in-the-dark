@@ -7,21 +7,22 @@ import Link from 'next/link';
 import styles from './page.module.css';
 
 export default function Home() {
-  const playbookOptions = getPlaybooks().map((playbook) => {
+  const savedOptions = getPlaybooks().map((playbook) => {
     return {
       id: playbook.id || '',
       href: `/${playbook.systemId}/${playbook.playbookType}/${playbook.playbookId}/${playbook.id}`,
-      name: playbook.name || 'An unnamed ' + playbook.playbookType
+      name: playbook.name,
+      description: playbook.description
     };
   });
 
   return (
     <div>
-      {playbookOptions.length ? (
+      {savedOptions.length ? (
         <>
           <OptionList
             heading='Your saved playbooks'
-            options={playbookOptions}
+            options={savedOptions}
           />
           <Separator />
         </>
