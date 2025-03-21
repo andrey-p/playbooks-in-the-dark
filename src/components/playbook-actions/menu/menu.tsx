@@ -1,12 +1,12 @@
 import { useEffect, useCallback, useRef } from 'react';
 import { getEnvVar } from '@/lib/env';
 import styles from './menu.module.css';
-import Button from './button';
+import Button from '../button';
 
 import { FiX } from 'react-icons/fi';
 
 type Props = {
-  userDataId?: string;
+  userDataId: string;
   onClose: () => void;
 };
 
@@ -41,6 +41,17 @@ export default function Menu(props: Props) {
       <div className={styles.closeBtn}>
         <Button onClick={onClose} label='Close menu' icon={<FiX />} /> 
       </div>
+
+      <ul className={styles.menuList}>
+        <li className={styles.menuItem}>
+          <CopyLinkMenuItem
+            userDataId={userDataId}
+          />
+          <a href='#' className={styles.menuLink}>
+            
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import clsx from 'clsx';
 import styles from './playbook-actions.module.css';
 import Button from './button';
-import Menu from './menu';
+import Menu from './menu/menu';
 
 import { FiSave, FiMenu, FiCopy } from 'react-icons/fi';
 
@@ -28,16 +28,18 @@ export default function PlaybookActions(props: Props) {
             isSaved ? 'Save' : 'Save (you have unsaved changes)'
           }icon={<FiSave />} />
         </div>
-        <Button
-          onClick={(e: React.MouseEvent) => {
-            e.preventDefault();
-            setIsMenuOpen(true);
-          }}
-          icon={<FiMenu />}
-          label='Open menu'
-        />
+        {userDataId && (
+          <Button
+            onClick={(e: React.MouseEvent) => {
+              e.preventDefault();
+              setIsMenuOpen(true);
+            }}
+            icon={<FiMenu />}
+            label='Open menu'
+          />
+        )}
       </div>
-      {isMenuOpen && (
+      {isMenuOpen && userDataId && (
         <Menu
           userDataId={userDataId}
           onClose={onMenuClose}
