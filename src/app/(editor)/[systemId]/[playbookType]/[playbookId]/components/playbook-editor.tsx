@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useReducer } from 'react';
+import { useState, useReducer, useEffect, useCallback } from 'react';
 import { z } from 'zod';
 import { usePathname } from 'next/navigation';
 
@@ -43,7 +43,7 @@ export default function Playbook(props: Props) {
   const [userData, dispatch] = useReducer(userDataReducer, initialUserData);
   const pathName = usePathname();
 
-  const save = async () => {
+  const save = useCallback(async () => {
     const data = await savePlaybookToDb(userData);
 
     const dataWithId = {
@@ -64,7 +64,23 @@ export default function Playbook(props: Props) {
       // set the URL so the user can refresh or copy / paste without losing their character
       window.history.replaceState(null, '', pathName + '/' + data.id);
     }
-  };
+  }, [userData, playbookData, playbookDefinition, pathName]);
+
+  // after the first save, save automatically every 30s
+  // (because of how the dependencies are constructed,
+  // the timer will be reset with every change;
+  // this is fine)
+  useEffect(() => {
+    if (!userData.id) { return; }
+
+    const interval = setInterval(() => {
+      save();
+    }, 30000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [userData.id, save]);
 
   return (
     <div className={systemData.id}>
