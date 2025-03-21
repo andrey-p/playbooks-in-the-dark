@@ -1,9 +1,10 @@
+import { useState, useCallback } from 'react';
 import clsx from 'clsx';
 import styles from './playbook-actions.module.css';
 import Button from './button';
-import { getEnvVar } from '@/lib/env';
+import Menu from './menu';
 
-import { FiSave, FiCopy } from 'react-icons/fi';
+import { FiSave, FiMenu, FiCopy } from 'react-icons/fi';
 
 type Props = {
   savePlaybook: () => void;
@@ -13,12 +14,11 @@ type Props = {
 
 export default function PlaybookActions(props: Props) {
   const { isSaved, savePlaybook, userDataId } = props;
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  const copyLink = async () => {
-    const baseUrl = await getEnvVar('APP_URL');
-    const shareableUrl = `${baseUrl}/share/${userDataId}`;
-    await navigator.clipboard.writeText(shareableUrl);
-  };
+  const onMenuClose = useCallback(() => {
+    setIsMenuOpen(false);
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -28,14 +28,21 @@ export default function PlaybookActions(props: Props) {
             isSaved ? 'Save' : 'Save (you have unsaved changes)'
           }icon={<FiSave />} />
         </div>
-        {userDataId && (
-          <Button
-            onClick={copyLink}
-            label='Copy shareable link'
-            icon={<FiCopy />}
-          />
-        )}
+        <Button
+          onClick={(e: React.MouseEvent) => {
+            e.preventDefault();
+            setIsMenuOpen(true);
+          }}
+          icon={<FiMenu />}
+          label='Open menu'
+        />
       </div>
+      {isMenuOpen && (
+        <Menu
+          userDataId={userDataId}
+          onClose={onMenuClose}
+        />
+      )}
     </div>
   );
 }
