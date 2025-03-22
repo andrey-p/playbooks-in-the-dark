@@ -2,22 +2,26 @@ import { z } from 'zod';
 import {
   UserData as UserDataSchema,
   PlaybookData as PlaybookDataSchema,
-  PlaybookDefinition as PlaybookDefinitionSchema
+  PlaybookDefinition as PlaybookDefinitionSchema,
+  LocalStorageUserData as LocalStorageUserDataSchema
 } from '@/schemas';
 
 const KEY = 'playbooks';
 
 type UserDataType = z.infer<typeof UserDataSchema>;
+type LocalStorageUserDataType = z.infer<typeof LocalStorageUserDataSchema>;
 type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
 type PlaybookDataType = z.infer<typeof PlaybookDataSchema>;
 
-export const getPlaybooks = (): UserDataType[] => {
+export const getPlaybooks = (): LocalStorageUserDataType[] => {
   const storageValue = window.localStorage.getItem(KEY) || '';
 
-  let playbooks: UserDataType[];
+  let playbooks: LocalStorageUserDataType[];
 
   try {
-    playbooks = z.array(UserDataSchema).parse(JSON.parse(storageValue));
+    playbooks = z
+      .array(LocalStorageUserDataSchema)
+      .parse(JSON.parse(storageValue));
   } catch {
     playbooks = [];
   }
@@ -36,11 +40,10 @@ export const savePlaybook = (
     systemId: data.systemId,
     playbookType: data.playbookType,
     playbookId: data.playbookId,
-    modules: {},
     // if there's a name to the character, store that as well
     // so we've got something to show
-    name: data.modules.name
-      ? data.modules.name
+    name: data.modules.name?.text
+      ? data.modules.name.text
       : `An unnamed ${playbookDefinition.name}`,
     description: playbookData.name
   };
