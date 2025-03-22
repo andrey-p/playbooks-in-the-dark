@@ -24,9 +24,11 @@ export default function PlaybookActions(props: Props) {
     <div className={styles.container}>
       <div className={styles.buttons}>
         <div className={clsx(!isSaved && styles.notSaved)}>
-          <Button onClick={savePlaybook} label={
-            isSaved ? 'Save' : 'Save (you have unsaved changes)'
-          }icon={<FiSave />} />
+          <Button
+            onClick={savePlaybook}
+            label={isSaved ? 'Save' : 'Save (you have unsaved changes)'}
+            icon={<FiSave />}
+          />
         </div>
         {userDataId && (
           <Button
@@ -40,10 +42,7 @@ export default function PlaybookActions(props: Props) {
         )}
       </div>
       {isMenuOpen && userDataId && (
-        <Menu
-          userDataId={userDataId}
-          onClose={onMenuClose}
-        />
+        <Menu userDataId={userDataId} onClose={onMenuClose} />
       )}
     </div>
   );

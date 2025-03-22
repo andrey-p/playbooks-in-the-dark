@@ -20,10 +20,7 @@ export default function Home() {
     <div>
       {savedOptions.length ? (
         <>
-          <OptionList
-            heading='Your saved playbooks'
-            options={savedOptions}
-          />
+          <OptionList heading='Your saved playbooks' options={savedOptions} />
           <Separator />
         </>
       ) : null}

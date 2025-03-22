@@ -71,7 +71,9 @@ export default function Playbook(props: Props) {
   // the timer will be reset with every change;
   // this is fine)
   useEffect(() => {
-    if (!userData.id) { return; }
+    if (!userData.id) {
+      return;
+    }
 
     const interval = setInterval(() => {
       save();
