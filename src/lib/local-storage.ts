@@ -54,3 +54,14 @@ export const savePlaybook = (
 
   window.localStorage.setItem(KEY, JSON.stringify(playbooks));
 };
+
+export const deletePlaybook = (id: string) => {
+  const playbooks = getPlaybooks();
+  const idx = playbooks.findIndex((savedData) => savedData.id === id);
+
+  if (idx > -1) {
+    playbooks.splice(idx, 1);
+  }
+
+  window.localStorage.setItem(KEY, JSON.stringify(playbooks));
+};

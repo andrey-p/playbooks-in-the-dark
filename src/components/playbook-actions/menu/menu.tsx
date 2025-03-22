@@ -2,6 +2,7 @@ import { useEffect, useCallback, useRef } from 'react';
 import styles from './menu.module.css';
 import Button from '../button';
 import CopyMenuItem from './copy-menu-item';
+import DeleteMenuItem from './delete-menu-item';
 
 import { FiX } from 'react-icons/fi';
 
@@ -51,6 +52,9 @@ export default function Menu(props: Props) {
       <ul className={styles.menuList}>
         <li className={styles.menuItem}>
           <CopyMenuItem userDataId={userDataId} />
+        </li>
+        <li className={styles.menuItem}>
+          <DeleteMenuItem userDataId={userDataId} />
         </li>
       </ul>
 

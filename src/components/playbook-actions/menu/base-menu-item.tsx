@@ -13,9 +13,9 @@ export default function BaseMenuItem(props: Props) {
 
   return (
     <div className={styles.container}>
-      <a href='#' onClick={onClick} role='button' className={styles.link}>
+      <button onClick={onClick} className={styles.link}>
         {children}
-      </a>
+      </button>
       {secondaryContent && (
         <div
           className={clsx(
