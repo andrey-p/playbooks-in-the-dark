@@ -9,7 +9,7 @@ export default function userDataReducer(state: UserDataType, action: Action) {
 
   switch (action.type) {
     case 'set_value':
-      state[action.key] = action.value;
+      state.modules[action.key] = action.value;
       break;
     default:
       throw new Error('unexpected action type: ' + action.type);

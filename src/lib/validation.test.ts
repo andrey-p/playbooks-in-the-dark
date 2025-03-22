@@ -7,7 +7,8 @@ describe('validation', () => {
         id: 'asdf',
         systemId: 'asdf',
         playbookType: 'scoundrel',
-        playbookId: 'asdf'
+        playbookId: 'asdf',
+        modules: {}
       };
 
       validateUserData(data);
@@ -18,16 +19,18 @@ describe('validation', () => {
         systemId: 'asdf',
         playbookId: 'asdf',
         playbookType: 'scoundrel',
-        someTextField: { text: 'asdfasdfsadf' },
-        someTracker: { value: 123 },
-        ratings: {
-          actionRatings: {
-            finesse: 2,
-            skirmish: 3,
-            attune: 1
-          },
-          attributeXp: {
-            insight: 5
+        modules: {
+          someTextField: { text: 'asdfasdfsadf' },
+          someTracker: { value: 123 },
+          ratings: {
+            actionRatings: {
+              finesse: 2,
+              skirmish: 3,
+              attune: 1
+            },
+            attributeXp: {
+              insight: 5
+            }
           }
         }
       };
@@ -40,15 +43,17 @@ describe('validation', () => {
         playbookId: 'asdf',
         someTextField: { text: 'asdfasdfsadf' },
         playbookType: 'scoundrel',
-        someTracker: { value: 123 },
-        ratings: {
-          actionRatings: {
-            finesse: 2,
-            skirmish: 3,
-            attune: 1
-          },
-          attributeXp: {
-            insight: 5
+        modules: {
+          someTracker: { value: 123 },
+          ratings: {
+            actionRatings: {
+              finesse: 2,
+              skirmish: 3,
+              attune: 1
+            },
+            attributeXp: {
+              insight: 5
+            }
           }
         }
       };
@@ -64,21 +69,23 @@ describe('validation', () => {
         systemId: 'asdf',
         playbookId: 'asdf',
         playbookType: 'scoundrel',
-        someTextField: { text: 'asdfasdfsadf' },
-        someTracker: { value: 123 },
-        ratings: {
-          actionRatings: {
-            finesse: 2,
-            skirmish: 3,
-            attune: 1
+        modules: {
+          someTextField: { text: 'asdfasdfsadf' },
+          someTracker: { value: 123 },
+          ratings: {
+            actionRatings: {
+              finesse: 2,
+              skirmish: 3,
+              attune: 1
+            },
+            attributeXp: {
+              insight: 5
+            }
           },
-          attributeXp: {
-            insight: 5
-          }
-        },
-        noModule: {
-          willHave: {
-            thisStructure: 'i hope'
+          noModule: {
+            willHave: {
+              thisStructure: 'i hope'
+            }
           }
         }
       };
@@ -93,7 +100,11 @@ describe('validation', () => {
         systemId: 'asdf',
         playbookId: 'asdf',
         playbookType: 'scoundrel',
-        foo: { text: 'all work and no play makes jack a dull boy'.repeat(500) }
+        modules: {
+          foo: {
+            text: 'all work and no play makes jack a dull boy'.repeat(500)
+          }
+        }
       };
 
       expect(() => {

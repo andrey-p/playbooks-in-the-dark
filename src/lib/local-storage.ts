@@ -36,9 +36,12 @@ export const savePlaybook = (
     systemId: data.systemId,
     playbookType: data.playbookType,
     playbookId: data.playbookId,
+    modules: {},
     // if there's a name to the character, store that as well
     // so we've got something to show
-    name: data.name ? data.name : `An unnamed ${playbookDefinition.name}`,
+    name: data.modules.name
+      ? data.modules.name
+      : `An unnamed ${playbookDefinition.name}`,
     description: playbookData.name
   };
 

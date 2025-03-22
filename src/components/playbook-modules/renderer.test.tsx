@@ -57,7 +57,9 @@ describe('Renderer', () => {
           playbookType: 'scoundrel',
           systemId: 'bitd',
           playbookId: 'cutter',
-          scoundrelName: { text: 'sss' }
+          modules: {
+            scoundrelName: { text: 'sss' }
+          }
         }}
         playbookData={playbookData}
         dispatch={dispatch}
@@ -114,7 +116,8 @@ describe('Renderer', () => {
           id: undefined,
           systemId: 'bitd',
           playbookType: 'scoundrel',
-          playbookId: 'cutter'
+          playbookId: 'cutter',
+          modules: {}
         }}
         playbookData={playbookData}
         dispatch={dispatch}
@@ -150,7 +153,8 @@ describe('Renderer', () => {
           id: undefined,
           systemId: 'bitd',
           playbookType: 'scoundrel',
-          playbookId: 'hound'
+          playbookId: 'hound',
+          modules: {}
         }}
         playbookData={{
           ...playbookData,
@@ -179,7 +183,8 @@ describe('Renderer', () => {
             id: undefined,
             systemId: 'bitd',
             playbookType: 'scoundrel',
-            playbookId: 'cutter'
+            playbookId: 'cutter',
+            modules: {}
           }}
           playbookData={playbookData}
           dispatch={jest.fn()}
@@ -203,7 +208,8 @@ describe('Renderer', () => {
             id: undefined,
             systemId: 'bitd',
             playbookType: 'scoundrel',
-            playbookId: 'cutter'
+            playbookId: 'cutter',
+            modules: {}
           }}
           playbookData={playbookData}
           dispatch={jest.fn()}
@@ -227,7 +233,8 @@ describe('Renderer', () => {
             id: undefined,
             systemId: 'bitd',
             playbookType: 'scoundrel',
-            playbookId: 'cutter'
+            playbookId: 'cutter',
+            modules: {}
           }}
           playbookData={playbookData}
           dispatch={jest.fn()}
@@ -254,7 +261,8 @@ describe('Renderer', () => {
             id: undefined,
             systemId: 'bitd',
             playbookType: 'scoundrel',
-            playbookId: 'cutter'
+            playbookId: 'cutter',
+            modules: {}
           }}
           playbookData={playbookData}
           dispatch={jest.fn()}
@@ -282,7 +290,8 @@ describe('Renderer', () => {
             id: undefined,
             systemId: 'bitd',
             playbookId: 'cutter',
-            playbookType: 'scoundrel'
+            playbookType: 'scoundrel',
+            modules: {}
           }}
           playbookData={playbookData}
           dispatch={jest.fn()}
@@ -310,7 +319,9 @@ describe('Renderer', () => {
             systemId: 'bitd',
             playbookId: 'cutter',
             playbookType: 'scoundrel',
-            scoundrelName: ['oh no']
+            modules: {
+              scoundrelName: ['oh no']
+            }
           }}
           playbookData={playbookData}
           dispatch={jest.fn()}
