@@ -12,7 +12,7 @@
   "name": "Scoundrel",
   "layout": [
     [
-      "scoundrelName",
+      "name",
       ["crew", "alias"],
       "look",
       "heritage",
@@ -29,8 +29,8 @@
     ["coin", "playbookXp", "ratings"]
   ],
   "modules": {
-    "scoundrelName": {
-      "id": "scoundrelName",
+    "name": {
+      "id": "name",
       "type": "textField",
       "label": "Name"
     },

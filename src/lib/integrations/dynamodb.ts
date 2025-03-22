@@ -2,7 +2,8 @@ import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import {
   DynamoDBDocumentClient,
   GetCommand,
-  PutCommand
+  PutCommand,
+  DeleteCommand
 } from '@aws-sdk/lib-dynamodb';
 
 let docClient: DynamoDBDocumentClient;
@@ -41,6 +42,20 @@ export async function put(tableName: string, item: object): Promise<void> {
     new PutCommand({
       TableName: tableName,
       Item: item
+    })
+  );
+}
+
+export async function deleteItem(
+  tableName: string,
+  key: object
+): Promise<void> {
+  const client = getClient();
+
+  await client.send(
+    new DeleteCommand({
+      TableName: tableName,
+      Key: key
     })
   );
 }

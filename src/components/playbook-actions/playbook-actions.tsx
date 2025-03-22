@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useCallback } from 'react';
 import clsx from 'clsx';
 import styles from './playbook-actions.module.css';
 import Button from './button';
-import { getEnvVar } from '@/lib/env';
+import Menu from './menu/menu';
 
-import { FiSave, FiCopy } from 'react-icons/fi';
+import { FiSave, FiMenu } from 'react-icons/fi';
 
 type Props = {
   savePlaybook: () => void;
@@ -14,40 +14,36 @@ type Props = {
 
 export default function PlaybookActions(props: Props) {
   const { isSaved, savePlaybook, userDataId } = props;
-  const [statusText, setStatusText] = useState<string>('');
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  useEffect(() => {
-    setStatusText(isSaved ? 'Saved' : 'Not saved');
-  }, [isSaved]);
-
-  const copyLink = async () => {
-    const baseUrl = await getEnvVar('APP_URL');
-    const shareableUrl = `${baseUrl}/share/${userDataId}`;
-    await navigator.clipboard.writeText(shareableUrl);
-
-    setStatusText('Copied shareable link');
-  };
+  const onMenuClose = useCallback(() => {
+    setIsMenuOpen(false);
+  }, []);
 
   return (
     <div className={styles.container}>
-      <div
-        className={clsx(
-          styles.statusText,
-          statusText === 'Not saved' && styles.statusNotSaved
-        )}
-      >
-        {statusText}
-      </div>
       <div className={styles.buttons}>
-        <Button onClick={savePlaybook} label='Save' icon={<FiSave />} />
+        <div className={clsx(!isSaved && styles.notSaved)}>
+          <Button
+            onClick={savePlaybook}
+            label={isSaved ? 'Save' : 'Save (you have unsaved changes)'}
+            icon={<FiSave />}
+          />
+        </div>
         {userDataId && (
           <Button
-            onClick={copyLink}
-            label='Copy shareable link'
-            icon={<FiCopy />}
+            onClick={(e: React.MouseEvent) => {
+              e.preventDefault();
+              setIsMenuOpen(true);
+            }}
+            icon={<FiMenu />}
+            label='Open menu'
           />
         )}
       </div>
+      {isMenuOpen && userDataId && (
+        <Menu userDataId={userDataId} onClose={onMenuClose} />
+      )}
     </div>
   );
 }

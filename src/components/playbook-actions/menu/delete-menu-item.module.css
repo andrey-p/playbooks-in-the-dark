@@ -1,0 +1,19 @@
+.confirmBtn {
+  background: none;
+  font-family: var(--font-body);
+  font-size: inherit;
+  border: none;
+  cursor: pointer;
+  color: var(--highlight);
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: var(--highlight);
+    text-decoration: underline;
+  }
+
+  &:first-child {
+    margin-right: 1rem;
+  }
+}

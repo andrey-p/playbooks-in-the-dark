@@ -27,13 +27,14 @@ Running up to a beta release:
 - [x] set up production site
 - [x] add mobile support
 - [x] data entry for BitD characters
-- [ ] improve character saving flow
+- [x] improve character saving flow
 - [ ] add BitD crews
 - [ ] add the first non-bitd system
 
 Future:
 
 - [ ] add support for Deep Cuts content
+- [ ] improve ownership model
 - [ ] add auto-update for anyone else viewing the same playbook
 - [ ] translation support
 

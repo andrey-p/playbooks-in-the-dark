@@ -1,0 +1,42 @@
+.container {
+  position: fixed;
+  width: 20rem;
+  max-width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  background-color: var(--background);
+  border-left: 2px solid var(--foreground);
+  z-index: 20;
+  padding: 3rem 1rem 1rem;
+}
+
+.heading {
+  width: 15rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.menuList {
+  border-top: 1px solid var(--foreground);
+  border-bottom: 1px solid var(--foreground);
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+
+  @media (max-width: 600px) {
+    right: 2rem;
+    top: 2rem;
+  }
+}
+
+.explainerHeading,
+.explainerP {
+  margin-bottom: 1rem;
+}

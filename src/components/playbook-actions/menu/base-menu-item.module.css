@@ -1,0 +1,30 @@
+.container {
+  padding-bottom: 1rem;
+}
+
+.link {
+  background: none;
+  font-family: var(--font-body);
+  font-size: inherit;
+  border: none;
+  display: block;
+  cursor: pointer;
+  color: var(--foreground);
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    color: var(--highlight);
+    text-decoration: underline;
+  }
+}
+
+.secondaryContent {
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+}
+
+.secondaryContentVisible {
+  max-height: 60px;
+}

@@ -66,6 +66,10 @@ a {
   }
 }
 
+ul {
+  list-style-type: none;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -77,6 +81,10 @@ a {
  * complains about impure style definitions
  */
 .description {
+  ul {
+    list-style-type: disc;
+  }
+
   li {
     margin-left: 1.2rem;
   }

@@ -2,7 +2,7 @@
 
 import { z } from 'zod';
 import { Resource } from 'sst';
-import { get, put } from './integrations/dynamodb';
+import { get, put, deleteItem } from './integrations/dynamodb';
 import { nanoid } from 'nanoid';
 import { UserData as UserDataSchema } from '@/schemas';
 import { validateUserData } from './validation';
@@ -29,4 +29,8 @@ export const savePlaybook = async (data: UserDataType) => {
   await put(Resource.playbookTable.name, data);
 
   return getPlaybook(data.id);
+};
+
+export const deletePlaybook = async (id: string) => {
+  await deleteItem(Resource.playbookTable.name, { id });
 };

@@ -2,79 +2,81 @@
   "id": "cutter",
   "name": "Cutter",
   "description": "A dangerous & intimidating fighter",
-  "items": {
-    "custom": [
-      { "id": "fine hand weapon", "name": "Fine Hand Weapon", "load": 1 },
-      { "id": "fine heavy weapon", "name": "Fine Heavy Weapon", "load": 2 },
-      { "id": "scary weapon or tool", "name": "Scary Weapon or Tool", "load": 1 }, { "id": "manacles and chain", "name": "Manacles and Chain", "load": 0 },
-      { "id": "rage essence vial", "name": "Rage Essence Vial", "load": 0 },
-      { "id": "spiritbane charm", "name": "Spiritbane charm", "load": 0 }
-    ]
-  },
-  "ratings": {
-    "startingRatings": {
-      "skirmish": 2,
-      "command": 1
-    }
-  },
-  "specialAbilities": {
-    "abilities": [
-      {
-        "id": "battleborn",
-        "name": "Battleborn",
-        "description": "You may expend your <strong>special armor</strong> to reduce harm from an attack in combat or to <strong>push yourself</strong> during a fight."
-      },
-      {
-        "id": "bodyguard",
-        "name": "Bodyguard",
-        "description": "When you <strong>protect</strong> a teammate, take <strong>+1d</strong> to your resistance roll. When you <strong>gather info</strong> to anticipate possible threats in the current situation, you get <strong>+1 effect</strong>."
-      },
-      {
-        "id": "ghost fighter",
-        "name": "Ghost Fighter",
-        "description": "You may imbue your hands, melee weapons, or tools with spirit energy. You gain <strong>potency</strong> in combat vs. the supernatural. You may grapple with spirits to restrain and capture them."
-      },
-      {
-        "id": "leader",
-        "name": "Leader",
-        "description": "When you <strong>Command</strong> a <strong>cohort</strong> in combat, they continue to fight when they would otherwise <strong>break</strong> (they're not taken out when they suffer level 3 harm). They gain <strong>+1 effect</strong> and <strong>1 armor</strong>."
-      },
-      {
-        "id": "mule",
-        "name": "Mule",
-        "description": "Your load limits are higher. Light: 5. Normal: 7. Heavy: 8."
-      },
-      {
-        "id": "not to be trifled with",
-        "name": "Not to be Trifled With",
-        "description": "You can <strong>push yourself</strong> to do one of the following: <em>perform a feat of physical force that verges on the superhuman</em>—<em>engage a small gang on equal footing in close combat</em>."
-      },
-      {
-        "id": "savage",
-        "name": "Savage",
-        "description": "When you unleash physical violence, it's especially frightening. When you <strong>Command</strong> a frightened target, take <strong>+1d</strong>."
-      },
-      {
-        "id": "vigorous",
-        "name": "Vigorous",
-        "description": "You recover from harm faster. Permanently fill in one of your healing clock segments. Take <strong>+1d</strong> to healing treatment rolls."
-      },
-      {
-        "id": "veteran",
-        "name": "Veteran",
-        "max": 3,
-        "description": "Choose a special ability from another source."
+  "modules": {
+    "items": {
+      "custom": [
+        { "id": "fine hand weapon", "name": "Fine Hand Weapon", "load": 1 },
+        { "id": "fine heavy weapon", "name": "Fine Heavy Weapon", "load": 2 },
+        { "id": "scary weapon or tool", "name": "Scary Weapon or Tool", "load": 1 }, { "id": "manacles and chain", "name": "Manacles and Chain", "load": 0 },
+        { "id": "rage essence vial", "name": "Rage Essence Vial", "load": 0 },
+        { "id": "spiritbane charm", "name": "Spiritbane charm", "load": 0 }
+      ]
+    },
+    "ratings": {
+      "startingRatings": {
+        "skirmish": 2,
+        "command": 1
       }
-    ]
-  },
-  "contacts": {
-    "customName": "Dangerous Friends",
-    "contacts": [
-      { "id": "marlane", "name": "Marlane, a pugilist" },
-      { "id": "chael", "name": "Chael, a vicious thug" },
-      { "id": "mercy", "name": "Mercy, a cold killer" },
-      { "id": "grace", "name": "Grace, an extortionist" },
-      { "id": "sawtooth", "name": "Sawtooth, a physicker" }
-    ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "battleborn",
+          "name": "Battleborn",
+          "description": "You may expend your <strong>special armor</strong> to reduce harm from an attack in combat or to <strong>push yourself</strong> during a fight."
+        },
+        {
+          "id": "bodyguard",
+          "name": "Bodyguard",
+          "description": "When you <strong>protect</strong> a teammate, take <strong>+1d</strong> to your resistance roll. When you <strong>gather info</strong> to anticipate possible threats in the current situation, you get <strong>+1 effect</strong>."
+        },
+        {
+          "id": "ghost fighter",
+          "name": "Ghost Fighter",
+          "description": "You may imbue your hands, melee weapons, or tools with spirit energy. You gain <strong>potency</strong> in combat vs. the supernatural. You may grapple with spirits to restrain and capture them."
+        },
+        {
+          "id": "leader",
+          "name": "Leader",
+          "description": "When you <strong>Command</strong> a <strong>cohort</strong> in combat, they continue to fight when they would otherwise <strong>break</strong> (they're not taken out when they suffer level 3 harm). They gain <strong>+1 effect</strong> and <strong>1 armor</strong>."
+        },
+        {
+          "id": "mule",
+          "name": "Mule",
+          "description": "Your load limits are higher. Light: 5. Normal: 7. Heavy: 8."
+        },
+        {
+          "id": "not to be trifled with",
+          "name": "Not to be Trifled With",
+          "description": "You can <strong>push yourself</strong> to do one of the following: <em>perform a feat of physical force that verges on the superhuman</em>—<em>engage a small gang on equal footing in close combat</em>."
+        },
+        {
+          "id": "savage",
+          "name": "Savage",
+          "description": "When you unleash physical violence, it's especially frightening. When you <strong>Command</strong> a frightened target, take <strong>+1d</strong>."
+        },
+        {
+          "id": "vigorous",
+          "name": "Vigorous",
+          "description": "You recover from harm faster. Permanently fill in one of your healing clock segments. Take <strong>+1d</strong> to healing treatment rolls."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another source."
+        }
+      ]
+    },
+    "contacts": {
+      "customName": "Dangerous Friends",
+      "contacts": [
+        { "id": "marlane", "name": "Marlane, a pugilist" },
+        { "id": "chael", "name": "Chael, a vicious thug" },
+        { "id": "mercy", "name": "Mercy, a cold killer" },
+        { "id": "grace", "name": "Grace, an extortionist" },
+        { "id": "sawtooth", "name": "Sawtooth, a physicker" }
+      ]
+    }
   }
 }

@@ -25,7 +25,7 @@ export const UserValue = z
       z
         .number()
         .int()
-        .refine((val) => val > 0 && val < 10)
+        .refine((val) => val >= 0 && val < 10)
     )
   })
   .default({ selected: {} });
