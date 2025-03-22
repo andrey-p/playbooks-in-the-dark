@@ -1,11 +1,12 @@
 import { z } from 'zod';
 
-const UserData = z.object({
+const LocalStorageUserData = z.object({
   id: z.string().or(z.undefined()),
   systemId: z.string(),
   playbookType: z.string(),
   playbookId: z.string(),
-  modules: z.record(z.string(), z.any())
+  name: z.string(),
+  description: z.string()
 });
 
-export default UserData;
+export default LocalStorageUserData;
