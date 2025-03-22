@@ -26,18 +26,25 @@ export default function DeleteMenuItem(props: Props) {
   return (
     <BaseMenuItem
       onClick={() => setShowingConfirm(true)}
-      secondaryContent={(
+      secondaryContent={
         <>
           Are you sure? This is irreversible.
           <div>
-            <button className={styles.confirmBtn} onClick={onYesClick}>YES</button>
-            <button className={styles.confirmBtn} onClick={() => setShowingConfirm(false)}>NO</button>
+            <button className={styles.confirmBtn} onClick={onYesClick}>
+              YES
+            </button>
+            <button
+              className={styles.confirmBtn}
+              onClick={() => setShowingConfirm(false)}
+            >
+              NO
+            </button>
           </div>
         </>
-      )}
+      }
       showSecondaryContent={showingConfirm}
     >
-     Delete playbook
-   </BaseMenuItem>
+      Delete playbook
+    </BaseMenuItem>
   );
 }

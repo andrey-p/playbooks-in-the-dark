@@ -46,7 +46,10 @@ export async function put(tableName: string, item: object): Promise<void> {
   );
 }
 
-export async function deleteItem(tableName: string, key: object): Promise<void> {
+export async function deleteItem(
+  tableName: string,
+  key: object
+): Promise<void> {
   const client = getClient();
 
   await client.send(
