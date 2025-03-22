@@ -9,7 +9,7 @@
     "start": "sst dev",
     "test": "jest",
     "prettier": "prettier . --write",
-    "ci": "npm run test && npm run lint && tsc && prettier . -c"
+    "ci": "npm run test && npm run lint && tsc && npm run build && prettier . -c"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.758.0",
