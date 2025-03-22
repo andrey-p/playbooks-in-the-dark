@@ -8,6 +8,20 @@
   background-color: var(--background);
   border-left: 2px solid var(--foreground);
   z-index: 20;
+  padding: 3rem 1rem 1rem;
+}
+
+.heading {
+  width: 15rem;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.menuList {
+  border-top: 1px solid var(--foreground);
+  border-bottom: 1px solid var(--foreground);
+  margin-bottom: 2rem;
 }
 
 .closeBtn {

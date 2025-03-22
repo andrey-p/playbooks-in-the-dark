@@ -4,7 +4,7 @@ import styles from './playbook-actions.module.css';
 import Button from './button';
 import Menu from './menu/menu';
 
-import { FiSave, FiMenu, FiCopy } from 'react-icons/fi';
+import { FiSave, FiMenu } from 'react-icons/fi';
 
 type Props = {
   savePlaybook: () => void;

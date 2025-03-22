@@ -1,0 +1,31 @@
+import styles from './base-menu-item.module.css';
+import clsx from 'clsx';
+
+type Props = {
+  onClick: () => void;
+  children: React.ReactNode;
+  secondaryContent?: React.ReactNode;
+  showSecondaryContent?: boolean;
+};
+
+export default function BaseMenuItem(props: Props) {
+  const { onClick, children, secondaryContent, showSecondaryContent } = props;
+
+  return (
+    <div className={styles.container}>
+      <a href='#' onClick={onClick} role='button' className={styles.link}>
+        {children}
+      </a>
+      {secondaryContent && (
+        <div
+          className={clsx(
+            styles.secondaryContent,
+            showSecondaryContent && styles.secondaryContentVisible
+          )}
+        >
+          {secondaryContent}
+        </div>
+      )}
+    </div>
+  );
+}
