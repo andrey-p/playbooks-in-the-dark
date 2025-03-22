@@ -43,7 +43,8 @@ export default async function Page(props: Props) {
         id: undefined,
         playbookType,
         systemId: systemData.id,
-        playbookId: playbookData.id
+        playbookId: playbookData.id,
+        modules: {}
       }}
     />
   );

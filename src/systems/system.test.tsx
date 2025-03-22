@@ -35,7 +35,8 @@ describe('system data check', () => {
                   id: undefined,
                   playbookType,
                   systemId,
-                  playbookId
+                  playbookId,
+                  modules: {}
                 }}
                 dispatch={jest.fn()}
               />
