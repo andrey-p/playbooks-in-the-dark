@@ -24,7 +24,11 @@
 .subheading {
   font-family: var(--font-text);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
+}
+
+.highlight {
+  color: var(--highlight);
 }
 
 .footer {
