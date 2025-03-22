@@ -34,3 +34,8 @@
     top: 2rem;
   }
 }
+
+.explainerHeading,
+.explainerP {
+  margin-bottom: 1rem;
+}

@@ -54,28 +54,28 @@ export default function Menu(props: Props) {
         </li>
       </ul>
 
-      <h3>How does saving work?</h3>
-      <p>
+      <h3 className={styles.explainerHeading}>How does saving work?</h3>
+      <p className={styles.explainerP}>
         The first time you save a playbook, it gets assigned an ID, and you can
         share it to other devices or your friends and enemies.
       </p>
-      <p>
-        The linked playbooks on the homepage are stored in your browser&apos;s{' '}
-        <a
-          href='https://en.wikipedia.org/wiki/Web_storage#Local_and_session_storage'
-          target='_blank'
-        >
-          local storage
-        </a>
-        .
+      <p className={styles.explainerP}>
+        The linked playbooks on the homepage are stored in your browser&apos;s
+        local storage.
       </p>
-      <p>
+      <p className={styles.explainerP}>
         There is currently no way to assert ownership of a saved playbook. For
         now, anyone with the link can edit or, yes, delete your playbook.
       </p>
-      <p>
-        Hate this? Go and shout at Andrey on Github so it gets moved up the
-        development roadmap.
+      <p className={styles.explainerP}>
+        Hate this? Go and shout at Andrey{' '}
+        <a
+          target='_blank'
+          href='https://github.com/andrey-p/playbooks-in-the-dark'
+        >
+          on Github
+        </a>{' '}
+        so it gets moved up the development roadmap.
       </p>
     </div>
   );
