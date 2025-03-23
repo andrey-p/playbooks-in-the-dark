@@ -5,7 +5,8 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
     props: z.object({
       trackerType: z.enum(['dagger', 'circle', 'square', 'clock']),
-      max: z.number()
+      max: z.number(),
+      reverse: z.boolean().optional()
     })
   })
 );

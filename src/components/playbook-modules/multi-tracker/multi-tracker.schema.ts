@@ -10,7 +10,8 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
           trackerType: z.enum(['dagger', 'circle', 'square']),
           max: z.number(),
           wrap: z.boolean().optional(),
-          label: z.string()
+          label: z.string(),
+          reverse: z.boolean().optional()
         })
       )
     })

@@ -9,7 +9,7 @@ type Props = z.infer<typeof PropsSchema>;
 export default function Tracker(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
   const { props: moduleProps } = moduleDefinition;
-  const { max, trackerType } = moduleProps;
+  const { max, trackerType, reverse } = moduleProps;
   const { value } = userValue;
 
   const onValueSelect = (value: number) => {
@@ -28,6 +28,7 @@ export default function Tracker(props: Props) {
           value={value}
           max={max}
           type={trackerType}
+          reverse={reverse}
           onValueSelect={onValueSelect}
         />
       )}

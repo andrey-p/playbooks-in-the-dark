@@ -34,6 +34,7 @@ export default function MultiTracker(props: Props) {
             max={trackers[trackerId].max}
             type={trackers[trackerId].trackerType}
             wrap={trackers[trackerId].wrap}
+            reverse={trackers[trackerId].reverse}
             onValueSelect={(value: number) => onValueSelect(trackerId, value)}
           />
           <div>{trackers[trackerId].label}</div>

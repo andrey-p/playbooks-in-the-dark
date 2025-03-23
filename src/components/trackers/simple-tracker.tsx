@@ -10,12 +10,13 @@ type Props = {
   max: number;
   onValueSelect?: (value: number) => void;
   type: TrackerType;
+  reverse?: boolean;
   variant?: 'linked';
   wrap?: boolean;
 };
 
 export default function SimpleTracker(props: Props) {
-  const { value, max, type, variant, wrap, onValueSelect } = props;
+  const { value, max, type, variant, reverse, wrap, onValueSelect } = props;
   // is borke https://github.com/facebook/react/issues/31687
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [highlightedValue, setHighlightedValue] = useState<number | null>(null);
@@ -50,6 +51,10 @@ export default function SimpleTracker(props: Props) {
         />
       </div>
     );
+  }
+
+  if (reverse) {
+    toggles.reverse();
   }
 
   return (
