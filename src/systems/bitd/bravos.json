@@ -1,0 +1,16 @@
+{
+  "id": "bravos",
+  "name": "Bravos",
+  "description": "Merceneries, thugs & killers",
+  "modules": {
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "sadf",
+          "name": "asdf",
+          "description": "asdf"
+        }
+      ]
+    }
+  }
+}

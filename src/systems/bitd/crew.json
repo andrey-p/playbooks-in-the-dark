@@ -1,7 +1,55 @@
 {
   "id": "crew",
-  "playbooks": [],
+  "playbooks": ["bravos"],
   "name": "Crew",
-  "layout": [],
-  "modules": {}
+  "layout": [[
+    ["name", "reputation"],
+    "lair",
+    ["repTurf"]
+  ], [
+    "specialAbilities"
+  ]],
+  "modules": {
+    "name": {
+      "id": "name",
+      "type": "textField",
+      "label": "Name"
+    },
+    "reputation": {
+      "id": "reputation",
+      "type": "textField",
+      "label": "Reputation"
+    },
+    "lair": {
+      "id": "lair",
+      "type": "textField",
+      "label": "Lair"
+    },
+    "repTurf": {
+      "id": "repTurf",
+      "type": "multiTracker",
+      "label": "Reputation & Turf",
+      "props": {
+        "trackers": {
+          "rep": {
+            "max": 12,
+            "trackerType": "dagger",
+            "label": "Rep"
+          },
+          "turf": {
+            "max": 6,
+            "reverse": true,
+            "size": 15,
+            "trackerType": "square",
+            "label": "Turf"
+          }
+        }
+      }
+    },
+    "specialAbilities": {
+      "id": "specialAbilities",
+      "type": "specialAbilities",
+      "label": "Special abilities"
+    }
+  }
 }
