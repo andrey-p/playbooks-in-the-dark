@@ -59,7 +59,7 @@ export default function Playbook(props: Props) {
 
     // if this is a new character being saved, store the newly created ID in local state
     if (!userData.id && data.id) {
-      dispatch({ type: 'set_value', key: 'id', value: data.id });
+      dispatch({ type: 'set_id', value: data.id });
 
       // set the URL so the user can refresh or copy / paste without losing their character
       window.history.replaceState(null, '', pathName + '/' + data.id);
