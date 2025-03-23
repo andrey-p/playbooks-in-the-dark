@@ -3,6 +3,7 @@
 import * as TextFieldSchemas from './text-field/text-field.schema';
 import * as TextAreaSchemas from './text-area/text-area.schema';
 import * as TrackerSchemas from './tracker/tracker.schema';
+import * as RadioGroupSchemas from './radio-group/radio-group.schema';
 import * as ItemsSchemas from './items/items.schema';
 import * as SpecialAbilitiesSchemas from './special-abilities/special-abilities.schema';
 import * as RatingsSchemas from './ratings/ratings.schema';
@@ -14,6 +15,7 @@ export const schemasByModuleType = {
   textField: TextFieldSchemas,
   textArea: TextAreaSchemas,
   tracker: TrackerSchemas,
+  radioGroup: RadioGroupSchemas,
   items: ItemsSchemas,
   specialAbilities: SpecialAbilitiesSchemas,
   ratings: RatingsSchemas,

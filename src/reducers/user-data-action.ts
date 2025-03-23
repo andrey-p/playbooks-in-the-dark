@@ -4,6 +4,7 @@ type Action =
       key: string;
       value:
         | string
+        | { value: string | null }
         | { contacts: Record<string, number> }
         | { values: Record<string, number> }
         | {

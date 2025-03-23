@@ -3,6 +3,7 @@
 import * as TextField from './text-field/text-field';
 import * as TextArea from './text-area/text-area';
 import * as Tracker from './tracker/tracker';
+import * as RadioGroup from './radio-group/radio-group';
 import * as Items from './items/items';
 import * as SpecialAbilities from './special-abilities/special-abilities';
 import * as Ratings from './ratings/ratings';
@@ -13,6 +14,7 @@ import * as Contacts from './contacts/contacts';
 export const componentsByModuleType = {
   textField: TextField,
   tracker: Tracker,
+  radioGroup: RadioGroup,
   items: Items,
   specialAbilities: SpecialAbilities,
   ratings: Ratings,

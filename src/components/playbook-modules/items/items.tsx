@@ -41,7 +41,7 @@ export default function ItemList(props: Props) {
           <RadioGroup
             invertColours
             options={load}
-            selected={selectedLoad || null}
+            value={selectedLoad || null}
             type='rhombus'
             onValueSelect={onLoadSelect}
           />
