@@ -8,11 +8,12 @@ export default function userDataReducer(state: UserDataType, action: Action) {
   state = structuredClone(state);
 
   switch (action.type) {
+    case 'set_id':
+      state.id = action.value;
+      break;
     case 'set_value':
       state.modules[action.key] = action.value;
       break;
-    default:
-      throw new Error('unexpected action type: ' + action.type);
   }
 
   return state;
