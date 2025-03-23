@@ -1,25 +1,33 @@
+import { z } from 'zod';
 import { useState } from 'react';
 import styles from './simple-tracker.module.css';
 import clsx from 'clsx';
 import Toggle from '@/components/toggle/toggle';
+import { TrackerProps as TrackerPropsSchema } from './trackers.schema';
 
-type TrackerType = 'circle' | 'dagger' | 'square';
-
-type Props = {
-  value: number;
-  max: number;
+type Props = z.infer<typeof TrackerPropsSchema> & {
   onValueSelect?: (value: number) => void;
-  type: TrackerType;
-  reverse?: boolean;
-  variant?: 'linked';
-  wrap?: boolean;
 };
 
 export default function SimpleTracker(props: Props) {
   const { value, max, type, variant, reverse, wrap, onValueSelect } = props;
+  let { size } = props;
+
   // is borke https://github.com/facebook/react/issues/31687
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [highlightedValue, setHighlightedValue] = useState<number | null>(null);
+
+  if (type === 'clock') {
+    throw new Error(
+      'This component does not support a clock value - use the clock component instead'
+    );
+  }
+
+  // make the default size of dagger trackers
+  // visually similar to other sizes
+  if (!size && type === 'dagger') {
+    size = 30;
+  }
 
   const toggles = [];
 

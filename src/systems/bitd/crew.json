@@ -33,14 +33,14 @@
         "trackers": {
           "rep": {
             "max": 12,
-            "trackerType": "dagger",
+            "type": "dagger",
             "label": "Rep"
           },
           "turf": {
             "max": 6,
             "reverse": true,
             "size": 15,
-            "trackerType": "square",
+            "type": "square",
             "label": "Turf"
           }
         }

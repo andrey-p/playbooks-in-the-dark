@@ -1,13 +1,10 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
+import { TrackerProps } from '@/components/trackers/trackers.schema';
 
 export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
-    props: z.object({
-      trackerType: z.enum(['dagger', 'circle', 'square', 'clock']),
-      max: z.number(),
-      reverse: z.boolean().optional()
-    })
+    props: TrackerProps
   })
 );
 export const PlaybookProps = BasePlaybookProps.and(z.void());

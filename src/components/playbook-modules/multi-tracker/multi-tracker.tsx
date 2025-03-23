@@ -32,7 +32,7 @@ export default function MultiTracker(props: Props) {
           <SimpleTracker
             value={values[trackerId] || 0}
             max={trackers[trackerId].max}
-            type={trackers[trackerId].trackerType}
+            type={trackers[trackerId].type}
             wrap={trackers[trackerId].wrap}
             reverse={trackers[trackerId].reverse}
             onValueSelect={(value: number) => onValueSelect(trackerId, value)}
