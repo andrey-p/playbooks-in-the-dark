@@ -5,7 +5,8 @@
   "layout": [[
     ["name", "reputation"],
     "lair",
-    ["repTurf"]
+    "repTurf",
+    ["hold", "tier"]
   ], [
     "specialAbilities"
   ]],
@@ -44,6 +45,33 @@
             "label": "Turf"
           }
         }
+      }
+    },
+    "hold": {
+      "id": "hold",
+      "type": "radioGroup",
+      "label": "hold",
+      "props": {
+        "type": "dagger",
+        "size": 30,
+        "options": [
+          { "id": "weak", "name": "Weak" },
+          { "id": "strong", "name": "Strong" }
+        ]
+      }
+    },
+    "tier": {
+      "id": "tier",
+      "type": "radioGroup",
+      "label": "tier",
+      "props": {
+        "type": "circle",
+        "options": [
+          { "id": "1", "name": "1" },
+          { "id": "2", "name": "2" },
+          { "id": "3", "name": "3" },
+          { "id": "4", "name": "4" }
+        ]
       }
     },
     "specialAbilities": {

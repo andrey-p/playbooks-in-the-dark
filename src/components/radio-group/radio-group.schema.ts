@@ -9,6 +9,7 @@ export const RadioGroupProps = z.object({
       name: z.string()
     })
   ),
-  value: z.string().nullable(),
+  size: z.number().int().optional(),
+  value: z.string().nullable().optional(),
   invertColours: z.boolean().optional()
 });

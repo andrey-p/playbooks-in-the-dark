@@ -9,7 +9,7 @@ type Props = z.infer<typeof RadioGroupPropsSchema> & {
 };
 
 export default function RadioGroup(props: Props) {
-  const { options, value, type, onValueSelect, invertColours } = props;
+  const { options, value, size, type, onValueSelect, invertColours } = props;
   const [highlightedId, setHighlightedId] = useState<string | null>(null);
 
   const onChange = (id: string | null) => {
@@ -30,7 +30,7 @@ export default function RadioGroup(props: Props) {
               filled={value === option.id}
               highlighted={highlightedId === option.id}
               invertColours={invertColours}
-              size={20}
+              size={size || 20}
               onClick={() => onChange(option.id)}
               onMouseEnter={() => setHighlightedId(option.id)}
               onMouseLeave={() => setHighlightedId(null)}
