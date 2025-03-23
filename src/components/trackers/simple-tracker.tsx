@@ -43,7 +43,7 @@ export default function SimpleTracker(props: Props) {
           type={type}
           filled={i < value}
           highlighted={highlighted}
-          size={type === 'dagger' ? 30 : undefined}
+          size={size}
           onClick={() => {
             if (onValueSelect) {
               if (value === i + 1) {

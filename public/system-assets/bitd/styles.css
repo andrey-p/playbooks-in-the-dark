@@ -1,4 +1,6 @@
 .bitd {
+  /* GENERAL */
+
   .column:nth-child(1) {
     width: 40%;
     min-width: 350px;
@@ -14,9 +16,33 @@
     width: 20%;
   }
 
+  /* SCOUNDRELS */
+
   .multiTracker.coin {
     .stash {
       max-width: 250px;
+    }
+  }
+
+  /* CREWS */
+
+  .multiTracker.repTurf {
+    position: relative;
+
+    .rep {
+      padding-top: 1rem;
+    }
+
+    .turf {
+      position: absolute;
+      top: 2rem;
+      left: 101px;
+    }
+
+    .turf-label {
+      position: relative;
+      top: 36px;
+      text-align: right;
     }
   }
 }
