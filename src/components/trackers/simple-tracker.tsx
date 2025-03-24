@@ -38,7 +38,7 @@ export default function SimpleTracker(props: Props) {
       typeof highlightedValue === 'number' ? i < highlightedValue : false;
 
     toggles.push(
-      <div key={i} className={styles.toggle}>
+      <div key={i} className={clsx(styles.toggle, 'tracker-toggle')}>
         <Toggle
           type={type}
           filled={i < value}

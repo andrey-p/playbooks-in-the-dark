@@ -6,7 +6,8 @@
     ["name", "lair"],
     ["reputation", "repTurf"],
     ["hold", "tier"],
-    "claims"
+    "claims",
+    ["heatWanted", "coin"]
   ], [
     "specialAbilities"
   ]],
@@ -83,6 +84,45 @@
       "id": "specialAbilities",
       "type": "specialAbilities",
       "label": "Special abilities"
+    },
+    "heatWanted": {
+      "id": "heatWanted",
+      "type": "multiTracker",
+      "label": "Heat / Wanted Level",
+      "props": {
+        "trackers": {
+          "heat": {
+            "max": 9,
+            "type": "dagger",
+            "label": "Heat"
+          },
+          "wanted": {
+            "max": 4,
+            "type": "dagger",
+            "label": "Wanted"
+          }
+        }
+      }
+    },
+    "coin": {
+      "id": "coin",
+      "type": "multiTracker",
+      "label": "Coin",
+      "props": {
+        "trackers": {
+          "coin": {
+            "max": 4,
+            "type": "square",
+            "label": "Coin"
+          },
+          "vault": {
+            "max": 12,
+            "type": "square",
+            "label": "Vault"
+          }
+        }
+      }
+
     }
   }
 }
