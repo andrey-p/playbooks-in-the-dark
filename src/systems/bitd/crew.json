@@ -3,9 +3,8 @@
   "playbooks": ["bravos"],
   "name": "Crew",
   "layout": [[
-    ["name", "reputation"],
-    "lair",
-    "repTurf",
+    ["name", "lair"],
+    ["reputation", "repTurf"],
     ["hold", "tier"],
     "claims"
   ], [
