@@ -3,6 +3,7 @@
 import { useState, useReducer, useEffect, useCallback } from 'react';
 import { z } from 'zod';
 import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
 
 import {
   PlaybookData as PlaybookDataSchema,
@@ -85,7 +86,9 @@ export default function Playbook(props: Props) {
   }, [userData.id, save]);
 
   return (
-    <div className={systemData.id}>
+    <div
+      className={clsx(systemData.id, playbookDefinition.id, playbookData.id)}
+    >
       {systemData.customStyles && (
         <link
           rel='stylesheet'

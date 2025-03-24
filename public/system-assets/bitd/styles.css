@@ -1,48 +1,58 @@
 .bitd {
-  /* GENERAL */
-
-  .column:nth-child(1) {
-    width: 40%;
-    min-width: 350px;
-  }
-
-  .column:nth-child(2) {
-    min-width: 420px;
-    width: 40%;
-  }
-
-  .column:nth-child(3) {
-    min-width: 250px;
-    width: 20%;
-  }
-
   /* SCOUNDRELS */
+  &.scoundrel {
+    .column:nth-child(1) {
+      width: 40%;
+      min-width: 350px;
+    }
 
-  .multiTracker.coin {
-    .stash {
-      max-width: 250px;
+    .column:nth-child(2) {
+      min-width: 420px;
+      width: 40%;
+    }
+
+    .column:nth-child(3) {
+      min-width: 250px;
+      width: 20%;
+    }
+
+    .multiTracker.coin {
+      .stash {
+        max-width: 250px;
+      }
     }
   }
 
   /* CREWS */
-
-  .multiTracker.repTurf {
-    position: relative;
-
-    .rep {
-      padding-top: 1rem;
+  &.crew {
+    .column:nth-child(1) {
+      width: 60%;
+      min-width: 350px;
     }
 
-    .turf {
-      position: absolute;
-      top: 2rem;
-      left: 101px;
+    .column:nth-child(2) {
+      min-width: 420px;
+      width: 40%;
     }
 
-    .turf-label {
+    .multiTracker.repTurf {
       position: relative;
-      top: 36px;
-      text-align: right;
+
+      .rep {
+        padding-top: 1rem;
+      }
+
+      .turf {
+        position: absolute;
+        top: 2rem;
+        left: 101px;
+      }
+
+      .turf-label {
+        position: relative;
+        top: 36px;
+        text-align: right;
+      }
     }
   }
 }
