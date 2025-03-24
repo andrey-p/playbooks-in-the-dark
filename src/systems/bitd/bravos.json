@@ -11,6 +11,100 @@
           "description": "asdf"
         }
       ]
+    },
+    "claims": {
+      "claims": [
+        [
+          {
+            "id": "barracks",
+            "name": "Barracks",
+            "description": "<strong>+1 scale</strong> for your Thug cohorts",
+            "connections": ["right", "down"]
+          },
+          {
+            "id": "turf1",
+            "name": "Turf",
+            "connections": ["right"]
+          },
+          {
+            "id": "terrorized citizens",
+            "name": "Terrorized Citizens",
+            "description": "<strong>+2 coin</strong> for battle or extortion",
+            "connections": ["down"]
+          },
+          {
+            "id": "informants",
+            "name": "Informants",
+            "description": "<strong>+1d</strong> to gather info for scores",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "protection racket",
+            "name": "Protection Racket",
+            "description": "(Tier roll) - Heat = coin in downtime",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "fighting pits",
+            "name": "Fighting Pits",
+            "description": "(Tier roll) - Heat = coin in downtime",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "turf2",
+            "name": "Turf",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "lair",
+            "name": "Lair",
+            "selectable": false,
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "turf3",
+            "name": "Turf",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "turf4",
+            "name": "Turf",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "infirmary",
+            "name": "Infirmary",
+            "description": "<strong>+1d</strong> to healing rolls",
+            "connections": ["right"]
+          },
+          {
+            "id": "bluecoat intimidation",
+            "name": "Bluecoat Intimidation",
+            "description": "<strong>-2 heat</strong> per score"
+          },
+          {
+            "id": "street fence",
+            "name": "Street Fence",
+            "description": "<strong>+2 coin</strong> for lower-class targets",
+            "connections": ["right"]
+          },
+          {
+            "id": "warehouses",
+            "name": "Warehouses",
+            "description": "Stockpiles give you <strong>+1d</strong> to acquire assets",
+            "connections": ["right"]
+          },
+          {
+            "id": "bluecoat confederates",
+            "name": "Bluecoat Confederates",
+            "description": "<strong>+2d</strong> engagement for assault plans"
+          }
+        ]
+      ]
     }
   }
 }

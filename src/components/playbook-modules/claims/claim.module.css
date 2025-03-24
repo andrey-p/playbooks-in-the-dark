@@ -1,0 +1,57 @@
+.container {
+  position: relative;
+  background: var(--foreground);
+  color: var(--background);
+  flex-basis: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.selectable {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    box-shadow:
+      0px 0px 0px 5px var(--background),
+      0px 0px 0px 8px var(--highlight);
+  }
+}
+
+.notSelectable {
+  background-color: var(--midground);
+  z-index: 10;
+}
+
+.selected {
+  box-shadow:
+    0px 0px 0px 5px var(--background),
+    0px 0px 0px 8px var(--foreground);
+}
+
+.name {
+  font-weight: 800;
+}
+
+.connection {
+  position: absolute;
+  background: var(--foreground);
+  z-index: 1;
+}
+
+.down {
+  top: 100%;
+  left: calc(50% - 0.75rem);
+  height: 2rem;
+  width: 1.5rem;
+}
+
+.right {
+  right: -2rem;
+  top: calc(50% - 0.75rem);
+  height: 1.5rem;
+  width: 2rem;
+}

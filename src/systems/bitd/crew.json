@@ -6,7 +6,8 @@
     ["name", "reputation"],
     "lair",
     "repTurf",
-    ["hold", "tier"]
+    ["hold", "tier"],
+    "claims"
   ], [
     "specialAbilities"
   ]],
@@ -73,6 +74,11 @@
           { "id": "4", "name": "4" }
         ]
       }
+    },
+    "claims": {
+      "id": "claims",
+      "type": "claims",
+      "label": "Claims"
     },
     "specialAbilities": {
       "id": "specialAbilities",

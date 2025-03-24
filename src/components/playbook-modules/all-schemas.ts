@@ -10,6 +10,7 @@ import * as RatingsSchemas from './ratings/ratings.schema';
 import * as HarmSchemas from './harm/harm.schema';
 import * as MultiTrackerSchemas from './multi-tracker/multi-tracker.schema';
 import * as ContactsSchemas from './contacts/contacts.schema';
+import * as ClaimsSchemas from './claims/claims.schema';
 
 export const schemasByModuleType = {
   textField: TextFieldSchemas,
@@ -21,5 +22,6 @@ export const schemasByModuleType = {
   ratings: RatingsSchemas,
   harm: HarmSchemas,
   multiTracker: MultiTrackerSchemas,
-  contacts: ContactsSchemas
+  contacts: ContactsSchemas,
+  claims: ClaimsSchemas
 };

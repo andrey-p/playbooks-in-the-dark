@@ -10,6 +10,7 @@ import * as Ratings from './ratings/ratings';
 import * as Harm from './harm/harm';
 import * as MultiTracker from './multi-tracker/multi-tracker';
 import * as Contacts from './contacts/contacts';
+import * as Claims from './claims/claims';
 
 export const componentsByModuleType = {
   textField: TextField,
@@ -21,5 +22,6 @@ export const componentsByModuleType = {
   harm: Harm,
   multiTracker: MultiTracker,
   contacts: Contacts,
+  claims: Claims,
   textArea: TextArea
 };
