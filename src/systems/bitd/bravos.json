@@ -117,6 +117,9 @@
       ]
     },
     "crewUpgrades": {
+      "startingItems": {
+        "prowess": 1
+      },
       "custom": [
         { "id": "bravos rigging", "name": "Bravos Rigging (2 free load of weapons or armor)", "load": 1 },
         { "id": "ironhook contacts", "name": "Ironhook Contacts (+1 tier in prison)", "load": 1 },

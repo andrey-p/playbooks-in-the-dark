@@ -40,7 +40,8 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
 export const PlaybookProps = BasePlaybookProps.and(
   z
     .object({
-      custom: z.array(Item).optional()
+      custom: z.array(Item).optional(),
+      startingItems: z.record(z.string(), z.number()).optional()
     })
     .optional()
 );

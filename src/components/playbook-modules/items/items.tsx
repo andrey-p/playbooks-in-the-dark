@@ -10,7 +10,13 @@ type Props = z.infer<typeof PropsSchema>;
 export default function Items(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
   const { common, load, twoColumns, groups } = moduleDefinition.props;
-  const { items: selectedItems, load: selectedLoad } = userValue;
+  const { load: selectedLoad } = userValue;
+  let { items: selectedItems } = userValue;
+
+  // add any preselected items for the playbook
+  if (playbookProps?.startingItems) {
+    selectedItems = Object.assign(playbookProps.startingItems, selectedItems);
+  }
 
   const onItemSelect = (itemId: string, selected: number) => {
     onUpdate({
