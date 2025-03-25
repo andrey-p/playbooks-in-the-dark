@@ -12,7 +12,8 @@
     "crewXp",
     "specialAbilities",
     "contacts",
-    "crewUpgrades"
+    "crewUpgrades",
+    "cohorts"
   ]],
   "modules": {
     "name": {
@@ -176,6 +177,39 @@
           { "id": "personal", "name": "Personal", "load": 1, "group": "training" },
           { "id": "mastery", "name": "Mastery", "load": 4, "group": "training" }
         ]
+      }
+    },
+    "cohorts": {
+      "id": "cohorts",
+      "type": "cohorts",
+      "label": "Cohorts",
+      "props": {
+        "slots": 4,
+        "radioGroups": {
+          "gangExpert": {
+            "type": "circle",
+            "options": [
+              { "id": "gang", "name": "Gang" },
+              { "id": "expert", "name": "Expert" }
+            ]
+          },
+          "harm": {
+            "type": "dagger",
+            "size": 30,
+            "options": [
+              { "id": "weak", "name": "Weak" },
+              { "id": "impaired", "name": "Impaired" },
+              { "id": "broken", "name": "Broken" }
+            ]
+          },
+          "armor": {
+            "type": "dagger",
+            "size": 30,
+            "options": [
+              { "id": "armor", "name": "Armor" }
+            ]
+          }
+        }
       }
     }
   }

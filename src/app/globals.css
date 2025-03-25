@@ -47,6 +47,10 @@ input,
 textarea {
   font-size: 1.2rem;
   font-family: var(--font-text);
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--foreground);
+
   &:focus-visible {
     outline: 4px solid var(--highlight);
   }
