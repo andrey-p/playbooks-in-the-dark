@@ -11,7 +11,8 @@
   ], [
     "crewXp",
     "specialAbilities",
-    ["contacts"]
+    "contacts",
+    "crewUpgrades"
   ]],
   "modules": {
     "name": {
@@ -141,7 +142,35 @@
           }
         }
       }
+    },
+    "crewUpgrades": {
+      "id": "crewUpgrades",
+      "type": "items",
+      "label": "Crew Upgrades",
+      "props": {
+        "twoColumns": true,
+        "common": [
+          { "id": "carriage", "name": "Carriage", "load": 2, "showLinked": false },
+          { "id": "boat", "name": "Boat", "load": 2, "showLinked": false },
+          { "id": "hidden", "name": "Hidden", "load": 1 },
+          { "id": "quarters", "name": "Quarters", "load": 1 },
+          { "id": "secure", "name": "Secure", "load": 2, "showLinked": false },
+          { "id": "vault", "name": "Vault", "load": 2, "showLinked": false },
+          { "id": "workshop", "name": "Workshop", "load": 1 },
 
+          { "id": "documents", "name": "Documents", "load": 1 },
+          { "id": "gear", "name": "Gear", "load": 1 },
+          { "id": "supplies", "name": "Supplies", "load": 1 },
+          { "id": "tools", "name": "Tools", "load": 1 },
+          { "id": "weapons", "name": "Weapons", "load": 1 },
+
+          { "id": "insight", "name": "Insight", "load": 1 },
+          { "id": "prowess", "name": "Prowess", "load": 1 },
+          { "id": "resolve", "name": "Resolve", "load": 1 },
+          { "id": "personal", "name": "Personal", "load": 1 },
+          { "id": "mastery", "name": "Mastery", "load": 4 }
+        ]
+      }
     }
   }
 }

@@ -115,6 +115,15 @@
         { "id": "walker", "name": "Walker, a ward boss" },
         { "id": "lutes", "name": "Lutes, a tavern owner" }
       ]
+    },
+    "crewUpgrades": {
+      "custom": [
+        { "id": "bravos rigging", "name": "Bravos Rigging (2 free load of weapons or armor)", "load": 1 },
+        { "id": "ironhook contacts", "name": "Ironhook Contacts (+1 tier in prison)", "load": 1 },
+        { "id": "elite rovers", "name": "Elite Rovers", "load": 1 },
+        { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
+        { "id": "hardened", "name": "Hardened (+1 trauma box)", "load": 3 }
+      ]
     }
   }
 }
