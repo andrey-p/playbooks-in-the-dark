@@ -8,7 +8,16 @@ export const Item = z.object({
     .number()
     .int()
     .refine((val) => val >= 0 && val <= 10),
-  showLinked: z.boolean().optional()
+  showLinked: z.boolean().optional(),
+  group: z.string().optional()
+});
+
+export const Group = z.object({
+  id: z
+    .string()
+    .refine((val) => val.length <= 255)
+    .optional(),
+  name: z.string().refine((val) => val.length <= 255)
 });
 
 export const ModuleDefinition = BaseModuleDefinition.merge(
@@ -23,6 +32,7 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
           })
         )
         .optional(),
+      groups: z.array(Group).optional(),
       common: z.array(Item)
     })
   })

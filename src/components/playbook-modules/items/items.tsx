@@ -1,17 +1,15 @@
 import { z } from 'zod';
-import PropsSchema, { Item as ItemSchema } from './items.schema';
-import Item from './item';
+import PropsSchema from './items.schema';
 import RadioGroup from '@/components/radio-group/radio-group';
 import ModuleWrapper from '../layout/module-wrapper';
 import styles from './items.module.css';
-import clsx from 'clsx';
+import ItemList from './item-list';
 
 type Props = z.infer<typeof PropsSchema>;
-type ItemType = z.infer<typeof ItemSchema>;
 
-export default function ItemList(props: Props) {
+export default function Items(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
-  const { common, load, twoColumns } = moduleDefinition.props;
+  const { common, load, twoColumns, groups } = moduleDefinition.props;
   const { items: selectedItems, load: selectedLoad } = userValue;
 
   const onItemSelect = (itemId: string, selected: number) => {
@@ -48,36 +46,21 @@ export default function ItemList(props: Props) {
         </div>
       )}
       {playbookProps?.custom?.length && (
-        <ul className={styles.list}>
-          {playbookProps?.custom?.map((item: ItemType) => (
-            <li
-              className={clsx(styles.item, twoColumns && styles.twoColumnsItem)}
-              key={item.id}
-            >
-              <Item
-                item={item}
-                selected={selectedItems[item.id]}
-                onSelect={(selected) => onItemSelect(item.id, selected)}
-              />
-            </li>
-          ))}
-        </ul>
+        <ItemList
+          items={playbookProps.custom}
+          selectedItems={selectedItems}
+          onItemSelect={onItemSelect}
+          twoColumns={twoColumns}
+        />
       )}
       {common.length && (
-        <ul className={styles.list}>
-          {common.map((item: ItemType) => (
-            <li
-              className={clsx(styles.item, twoColumns && styles.twoColumnsItem)}
-              key={item.id}
-            >
-              <Item
-                item={item}
-                selected={selectedItems[item.id]}
-                onSelect={(selected) => onItemSelect(item.id, selected)}
-              />
-            </li>
-          ))}
-        </ul>
+        <ItemList
+          items={common}
+          groups={groups}
+          twoColumns={twoColumns}
+          selectedItems={selectedItems}
+          onItemSelect={onItemSelect}
+        />
       )}
     </ModuleWrapper>
   );

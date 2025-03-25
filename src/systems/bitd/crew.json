@@ -149,26 +149,31 @@
       "label": "Crew Upgrades",
       "props": {
         "twoColumns": true,
+        "groups": [
+          { "id": "lair", "name": "Lair" },
+          { "id": "training", "name": "Training" },
+          { "id": "quality", "name": "Quality" }
+        ],
         "common": [
-          { "id": "carriage", "name": "Carriage", "load": 2, "showLinked": false },
-          { "id": "boat", "name": "Boat", "load": 2, "showLinked": false },
-          { "id": "hidden", "name": "Hidden", "load": 1 },
-          { "id": "quarters", "name": "Quarters", "load": 1 },
-          { "id": "secure", "name": "Secure", "load": 2, "showLinked": false },
-          { "id": "vault", "name": "Vault", "load": 2, "showLinked": false },
-          { "id": "workshop", "name": "Workshop", "load": 1 },
+          { "id": "carriage", "name": "Carriage", "load": 2, "showLinked": false, "group": "lair" },
+          { "id": "boat", "name": "Boat", "load": 2, "showLinked": false, "group": "lair" },
+          { "id": "hidden", "name": "Hidden", "load": 1, "group": "lair" },
+          { "id": "quarters", "name": "Quarters", "load": 1, "group": "lair" },
+          { "id": "secure", "name": "Secure", "load": 2, "showLinked": false, "group": "lair" },
+          { "id": "vault", "name": "Vault", "load": 2, "showLinked": false, "group": "lair" },
+          { "id": "workshop", "name": "Workshop", "load": 1, "group": "lair" },
 
-          { "id": "documents", "name": "Documents", "load": 1 },
-          { "id": "gear", "name": "Gear", "load": 1 },
-          { "id": "supplies", "name": "Supplies", "load": 1 },
-          { "id": "tools", "name": "Tools", "load": 1 },
-          { "id": "weapons", "name": "Weapons", "load": 1 },
+          { "id": "documents", "name": "Documents", "load": 1, "group": "quality" },
+          { "id": "gear", "name": "Gear", "load": 1, "group": "quality" },
+          { "id": "supplies", "name": "Supplies", "load": 1, "group": "quality" },
+          { "id": "tools", "name": "Tools", "load": 1, "group": "quality" },
+          { "id": "weapons", "name": "Weapons", "load": 1, "group": "quality" },
 
-          { "id": "insight", "name": "Insight", "load": 1 },
-          { "id": "prowess", "name": "Prowess", "load": 1 },
-          { "id": "resolve", "name": "Resolve", "load": 1 },
-          { "id": "personal", "name": "Personal", "load": 1 },
-          { "id": "mastery", "name": "Mastery", "load": 4 }
+          { "id": "insight", "name": "Insight", "load": 1, "group": "training" },
+          { "id": "prowess", "name": "Prowess", "load": 1, "group": "training" },
+          { "id": "resolve", "name": "Resolve", "load": 1, "group": "training" },
+          { "id": "personal", "name": "Personal", "load": 1, "group": "training" },
+          { "id": "mastery", "name": "Mastery", "load": 4, "group": "training" }
         ]
       }
     }
