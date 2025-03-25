@@ -147,6 +147,7 @@
       "id": "crewUpgrades",
       "type": "items",
       "label": "Crew Upgrades",
+      "description": "Cohorts upgrade costs: New cohort - 2, Add type - 2",
       "props": {
         "twoColumns": true,
         "groups": [
