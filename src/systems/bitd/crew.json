@@ -9,6 +9,7 @@
     "claims",
     ["heatWanted", "coin"]
   ], [
+    "crewXp",
     "specialAbilities"
   ]],
   "modules": {
@@ -79,6 +80,15 @@
       "id": "claims",
       "type": "claims",
       "label": "Claims"
+    },
+    "crewXp": {
+      "id": "crewXp",
+      "type": "tracker",
+      "label": "Crew XP",
+      "props": {
+        "max": 10,
+        "type": "dagger"
+      }
     },
     "specialAbilities": {
       "id": "specialAbilities",
