@@ -11,6 +11,7 @@ export default function Contacts(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
   const { contacts: selectedContacts } = userValue;
   const { contacts: availableContacts } = playbookProps;
+  const { props: moduleProps } = moduleDefinition;
 
   const onRelationshipUpdate = (id: string, value: number) => {
     onUpdate({
@@ -31,6 +32,7 @@ export default function Contacts(props: Props) {
           <li className={styles.item} key={contact.id}>
             <Contact
               contact={contact}
+              variant={moduleProps?.variant}
               relationship={selectedContacts[contact.id]}
               onRelationshipUpdate={onRelationshipUpdate}
             />

@@ -8,7 +8,11 @@ export const Contact = z.object({
 
 export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
-    props: z.void()
+    props: z
+      .object({
+        variant: z.enum(['upDown', 'neutral']).default('upDown')
+      })
+      .default({})
   })
 );
 export const PlaybookProps = BasePlaybookProps.and(
