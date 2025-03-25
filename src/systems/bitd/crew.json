@@ -10,7 +10,8 @@
     ["heatWanted", "coin"]
   ], [
     "crewXp",
-    "specialAbilities"
+    "specialAbilities",
+    ["contacts"]
   ]],
   "modules": {
     "name": {
@@ -94,6 +95,14 @@
       "id": "specialAbilities",
       "type": "specialAbilities",
       "label": "Special abilities"
+    },
+    "contacts": {
+      "id": "contacts",
+      "type": "contacts",
+      "label": "Contacts",
+      "props": {
+        "variant": "neutral"
+      }
     },
     "heatWanted": {
       "id": "heatWanted",

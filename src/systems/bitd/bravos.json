@@ -105,6 +105,16 @@
           }
         ]
       ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "meg", "name": "Meg, a pit-fighter" },
+        { "id": "conway", "name": "Conway, a bluecoat" },
+        { "id": "keller", "name": "Keller, a blacksmith" },
+        { "id": "tomas", "name": "Tomas, a physicker" },
+        { "id": "walker", "name": "Walker, a ward boss" },
+        { "id": "lutes", "name": "Lutes, a tavern owner" }
+      ]
     }
   }
 }
