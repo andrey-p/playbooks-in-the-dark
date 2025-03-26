@@ -13,8 +13,6 @@ export default function SimpleTracker(props: Props) {
   const { value, max, type, variant, reverse, wrap, onValueSelect } = props;
   let { size } = props;
 
-  // is borke https://github.com/facebook/react/issues/31687
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [highlightedValue, setHighlightedValue] = useState<number | null>(null);
 
   if (type === 'clock') {
