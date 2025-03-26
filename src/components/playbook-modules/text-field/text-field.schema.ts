@@ -11,7 +11,14 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
   })
 );
 
-export const PlaybookProps = BasePlaybookProps.and(z.void());
+export const PlaybookProps = BasePlaybookProps.and(
+  z
+    .object({
+      examples: z.string().array().optional()
+    })
+    .optional()
+);
+
 export const UserValue = z
   .object({
     text: z.string().refine((val) => val.length <= 255)
