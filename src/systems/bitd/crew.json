@@ -1,9 +1,17 @@
 {
   "id": "crew",
-  "playbooks": ["bravos"],
+  "playbooks": [
+    "assassins",
+    "bravos",
+    "cult",
+    "hawkers",
+    "smugglers",
+    "shadows"
+  ],
   "name": "Crew",
   "layout": [[
     ["name", "lair"],
+    "deity",
     ["reputation", "repTurf"],
     ["hold", "tier"],
     "claims",
@@ -15,7 +23,8 @@
     "specialAbilities",
     "contacts",
     "crewUpgrades",
-    "cohorts"
+    "cohorts",
+    "vehicleCohort"
   ]],
   "modules": {
     "name": {
@@ -32,6 +41,24 @@
       "id": "lair",
       "type": "textField",
       "label": "Lair"
+    },
+    "deity": {
+      "id": "deity",
+      "type": "textField",
+      "label": "Deity (choose 2 features)",
+      "playbooks": ["cult"],
+      "props": {
+        "examples": [
+          "Alluring",
+          "Cruel",
+          "Ferocious",
+          "Monstrous",
+          "Radiant",
+          "Sinister",
+          "Serene",
+          "Transcendent"
+        ]
+      }
     },
     "repTurf": {
       "id": "repTurf",
@@ -226,6 +253,13 @@
           }
         }
       }
+    },
+    "vehicleCohort": {
+      "id": "vehicleCohort",
+      "type": "description",
+      "playbooks": ["smugglers"],
+      "label": "Vehicle Edges / Flaws",
+      "description": "<p><strong>Vehicle Edges</strong></p> <p><strong>Nimble:</strong> The vehicle handles easily. Consider this an <strong>assist</strong> for tricky maneuvers.</p> <p><strong>Simple:</strong> The vehicle is easy to repair. Remove all of its harm during downtime.</p> <p><strong>Sturdy:</strong> The vehicle keeps operating even when broken.</p> <p><strong>Vehicle Flaws</strong></p> <p><strong>Costly:</strong> The vehicle costs 1 coin per downtime to keep in operation.</p> <p><strong>Distinct:</strong> The vehicle has memorable features. Take +1 heat when you use it on a score.</p> <p><strong>Finicky:</strong> The vehicle has quirks that only one person understands. When operated without them, the vehicle has -1 quality.</p>"
     }
   }
 }

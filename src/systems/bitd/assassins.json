@@ -1,0 +1,180 @@
+{
+  "id": "assassins",
+  "name": "Assassins",
+  "description": "Murderers for hire",
+  "modules": {
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "deadly",
+          "name": "Deadly",
+          "description": "Each PC may add +1 action rating to <strong>Hunt</strong>, <strong>Prowl</strong>, or <strong>Skirmish</strong> (up to a max rating of 3)."
+        },
+        {
+          "id": "crow's veil",
+          "name": "Crow's Veil",
+          "description": "Due to hard-won experience or occult ritual, your activities are hidden from the notice of the death-seeker crows. You don't take extra heat when killing is involved on a score."
+        },
+        {
+          "id": "emberdeath",
+          "name": "Emberdeath",
+          "description": "Due to hard-won experience or occult ritual, you know the arcane method to destroy a living victim's spirit at the moment you kill them. Take 3 stress to channel electroplasmic energy from the ghost field to disintegrate the spirit and dead body in a shower of sparking embers."
+        },
+        {
+          "id": "no traces",
+          "name": "No Traces",
+          "description": "When you keep an operation quiet or make it look like an accident, you get half the rep value of the target (round up) instead of zero. When you end <strong>downtime</strong> with zero heat, take <strong>+1 rep</strong>."
+        },
+        {
+          "id": "patron",
+          "name": "Patron",
+          "description": "When you advance your <strong>Tier</strong>, it costs <strong>half the coin</strong> it normally would. <em>Who is your patron? Why do they help you?</em>"
+        },
+        {
+          "id": "predators",
+          "name": "Predators",
+          "description": "When you use stealth or subterfuge to commit murder, take +1d to the engagement roll."
+        },
+        {
+          "id": "vipers",
+          "name": "Vipers",
+          "description": "When you acquire or craft poisons, you get +1 result level to your roll. When you employ a poison, you are specially prepared to be immune to its effects."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another crew."
+        }
+      ]
+    },
+    "claims": {
+      "claims": [
+        [
+          {
+            "id": "training rooms",
+            "name": "Training Rooms",
+            "description": "<strong>+1 scale</strong> for your Skulks cohorts",
+            "connections": ["right", "down"]
+          },
+          {
+            "id": "vice den",
+            "name": "Vice Den",
+            "description": "(Tier roll) - Heat = coin in downtime",
+            "connections": ["down"]
+          },
+          {
+            "id": "fixer",
+            "name": "Fixer",
+            "description": "<strong>+2 coin</strong> for lower-class targets",
+            "connections": ["down"]
+          },
+          {
+            "id": "informants",
+            "name": "Informants",
+            "description": "<strong>+1d</strong> to gather info for scores",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "hagfish farms",
+            "name": "Hagfish Farms",
+            "description": "Body disposal, <strong>+1d</strong> to reduce heat after killing",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "victim trophies",
+            "name": "Victim Trophies",
+            "description": "<strong>+1 rep</strong> per score",
+            "connections": ["down"]
+          },
+          {
+            "id": "turf1",
+            "name": "Turf",
+            "connections": ["right"]
+          },
+          {
+            "id": "lair",
+            "name": "Lair",
+            "selectable": false,
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "turf2",
+            "name": "Turf",
+            "connections": ["right"]
+          },
+          {
+            "id": "cover operation",
+            "name": "Cover Operation",
+            "description": "<strong>-2</strong> heat per score",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "protection racket",
+            "name": "Protection Racket",
+            "description": "(Tier roll) - Heat = coin in downtime",
+            "connections": ["right"]
+          },
+          {
+            "id": "infirmary",
+            "name": "Infirmary",
+            "description": "<strong>+1d</strong> to healing rolls",
+            "connections": ["right"]
+          },
+          {
+            "id": "envoy",
+            "name": "Envoy",
+            "description": "<strong>+2 coin</strong> for high-class targets"
+          },
+          {
+            "id": "cover identities",
+            "name": "Cover Identities",
+            "description": "<strong>+1d</strong> engagement for deception and social plans",
+            "connections": ["right"]
+          },
+          {
+            "id": "city records",
+            "name": "City Records",
+            "description": "<strong>+1d</strong> engagement for stealth plans"
+          }
+        ]
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "trev", "name": "Trev, a gang boss" },
+        { "id": "lydra", "name": "Lydra, a deal broker" },
+        { "id": "irimina", "name": "Irimina, a vicious noble" },
+        { "id": "karlos", "name": "Karlos, a bounty hunter" },
+        { "id": "exeter", "name": "Exeter, a spirit warden" },
+        { "id": "sevoy", "name": "Sevoy, a merchant lord" }
+      ]
+    },
+    "crewUpgrades": {
+      "startingItems": {
+        "insight": 1,
+        "prowess": 1
+      },
+      "custom": [
+        { "id": "assassin rigging", "name": "Assassin Rigging (2 free load of weapons or gear)", "load": 1 },
+        { "id": "ironhook contacts", "name": "Ironhook Contacts (+1 tier in prison)", "load": 1 },
+        { "id": "elite skulks", "name": "Elite Skulks", "load": 1 },
+        { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
+        { "id": "hardened", "name": "Hardened (+1 trauma box)", "load": 3 }
+      ]
+    },
+    "favoredNotes": {
+      "customLabel": "Hunting Grounds",
+      "examples": [
+        "Accident",
+        "Disappearance",
+        "Murder",
+        "Ransom"
+      ]
+    }
+  }
+}

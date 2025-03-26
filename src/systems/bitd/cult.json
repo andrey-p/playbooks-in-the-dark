@@ -1,0 +1,187 @@
+{
+  "id": "cult",
+  "name": "Cult",
+  "description": "Acolytes of a deity",
+  "modules": {
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "chosen",
+          "name": "Chosen",
+          "description": "Each PC may add +1 action rating to <strong>Attune</strong>, <strong>Study</strong>, or <strong>Sway</strong> (up to a max rating of 3)."
+        },
+        {
+          "id": "anointed",
+          "name": "Anointed",
+          "description": "You get <strong>+1d</strong> to <strong>resistance</strong> rolls against supernatural threats. You get <strong>+1d</strong> to <strong>healing</strong> rolls when you have supernatural harm."
+        },
+        {
+          "id": "bound in darkness",
+          "name": "Bound in Darkness",
+          "description": "You may use <strong>teamwork</strong> with any cult member, regardless of the distance separating you. By taking 1 stress, your whispered message is heard by every cultist."
+        },
+        {
+          "id": "conviction",
+          "name": "Conviction",
+          "description": "Each PC gains an additional <strong>Vice</strong>: <em>Worship</em>. When you indulge this vice and bring a pleasing sacrifice, you don't overindulge if you clear excess stress. In addition, your deity will <strong>assist</strong> any one action roll you make—from now until you indulge this vice again."
+        },
+        {
+          "id": "glory incarnate",
+          "name": "Glory Incarnate",
+          "description": "Your deity sometimes manifests in the physical world. This can be a great boon, but the priorities and values of a god are not those of mortals. You have been warned."
+        },
+        {
+          "id": "sealed in blood",
+          "name": "Sealed in Blood",
+          "description": "Each human sacrifice yields -3 stress cost for any ritual you perform."
+        },
+        {
+          "id": "zealotry",
+          "name": "Zealotry",
+          "description": "Your cohorts have abandoned their reason to devote themselves to the cult. They will undertake any service, no matter how dangerous or strange. They gain <strong>+1d</strong> to rolls against enemies of the faith."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 2,
+          "description": "Choose a special ability from another crew."
+        }
+      ]
+    },
+    "claims": {
+      "claims": [
+        [
+          {
+            "id": "cloister",
+            "name": "Cloister",
+            "description": "<strong>+1 scale</strong> for your Adept cohorts",
+            "connections": ["right", "down"]
+          },
+          {
+            "id": "vice den",
+            "name": "Vice Den",
+            "description": "(Tier roll) - Heat = coin in downtime",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "offertory",
+            "name": "Offertory",
+            "description": "<strong>+2 coin</strong> for occult operations",
+            "connections": ["down"]
+          },
+          {
+            "id": "ancient obelisk",
+            "name": "Ancient Obelisk",
+            "description": "<strong>-1 stress</strong> cost for all arcane powers and rituals",
+            "connections": ["right"]
+          },
+          {
+            "id": "ancient tower",
+            "name": "Ancient Tower",
+            "description": "<strong>+1d</strong> to Consort w/ arcane entities on site",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "turf1",
+            "name": "Turf",
+            "connections": ["right"]
+          },
+          {
+            "id": "turf2",
+            "name": "Turf",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "lair",
+            "name": "Lair",
+            "selectable": false,
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "turf3",
+            "name": "Turf",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "turf4",
+            "name": "Turf",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "spirit well",
+            "name": "Spirit Well",
+            "description": "<strong>+1d</strong> to Attune on site",
+            "connections": ["right"]
+          },
+          {
+            "id": "ancient gate",
+            "name": "Ancient Gate",
+            "description": "Safe passage in the Deathlands"
+          },
+          {
+            "id": "sanctuary",
+            "name": "Sanctuary",
+            "description": "<strong>+1d</strong> to Command and Sway on site"
+          },
+          {
+            "id": "sacred nexus",
+            "name": "Sacred Nexus",
+            "description": "<strong>+1d</strong> to healing rolls",
+            "connections": ["right"]
+          },
+          {
+            "id": "ancient altar",
+            "name": "Ancient Altar",
+            "description": "<strong>+1d</strong> engagement for occult plans"
+          }
+        ]
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "gagan", "name": "Gagan, an academic" },
+        { "id": "adikin", "name": "Adikin, an occultist" },
+        { "id": "hutchins", "name": "Hutchins, an antiquarian" },
+        { "id": "moriya", "name": "Moriya, a spirit trafficker" },
+        { "id": "mateas kline", "name": "Mateas Kline, a noble" },
+        { "id": "bennett", "name": "Bennett, an astronomer" }
+      ]
+    },
+    "crewUpgrades": {
+      "startingItems": {
+        "resolve": 1
+      },
+      "custom": [
+        { "id": "cult rigging", "name": "Cult Rigging (2 free load of documents or implements)", "load": 1 },
+        { "id": "ritual sanctum in lair", "name": "Ritual sanctum in lair", "load": 1 },
+        { "id": "elite adepts", "name": "Elite Adepts", "load": 1 },
+        { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
+        { "id": "ordained", "name": "Ordained (+1 trauma box)", "load": 3 }
+      ]
+    },
+    "cohorts": {
+      "startingCohorts": [
+        {
+          "text": "Adepts",
+          "radioGroups": {
+            "gangExpert": "gang"
+          }
+        }
+      ]
+    },
+    "favoredNotes": {
+      "customLabel": "Sacred sites",
+      "examples": [
+        "Acquisition",
+        "Augury",
+        "Consecration",
+        "Sacrifice"
+      ]
+    }
+  }
+}
+

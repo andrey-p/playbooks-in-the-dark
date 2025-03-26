@@ -6,9 +6,45 @@
     "specialAbilities": {
       "abilities": [
         {
-          "id": "sadf",
-          "name": "asdf",
-          "description": "asdf"
+          "id": "dangerous",
+          "name": "Dangerous",
+          "description": "Each PC may add +1 action rating to <strong>Hunt</strong>, <strong>Skirmish</strong>, or <strong>Wreck</strong> (up to a max rating of 3)."
+        },
+        {
+          "id": "blood brothers",
+          "name": "Blood Brothers",
+          "description": "When you fight alongside your <strong>cohorts</strong> in combat, they get <strong>+1d</strong> for <strong>teamwork</strong> rolls (setup and group actions). All of your cohorts get the <em>Thugs</em> type for free (if they're already Thugs, add another type)."
+        },
+        {
+          "id": "door kickers",
+          "name": "Door Kickers",
+          "description": "When you execute an assault plan, take <strong>+1d</strong> to the <strong>engagement</strong> roll."
+        },
+        {
+          "id": "fiends",
+          "name": "Fiends",
+          "description": "Fear is as good as respect. You may count each <strong>wanted level</strong> as if it was <strong>turf</strong>."
+        },
+        {
+          "id": "forged in the fire",
+          "name": "Forged in the Fire",
+          "description": "Each PC has been toughened by cruel experience. You get <strong>+1d</strong> to resistance rolls."
+        },
+        {
+          "id": "patron",
+          "name": "Patron",
+          "description": "When you advance your <strong>Tier</strong>, it costs <strong>half the coin</strong> it normally would. <em>Who is your patron? Why do they help you?</em>"
+        },
+        {
+          "id": "war dogs",
+          "name": "War Dogs",
+          "description": "When you’re at war (-3 faction status), your crew does not suffer -1 hold and PCs still get two downtime activities, instead of just one."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 2,
+          "description": "Choose a special ability from another crew."
         }
       ]
     },
@@ -101,7 +137,7 @@
           {
             "id": "bluecoat confederates",
             "name": "Bluecoat Confederates",
-            "description": "<strong>+2d</strong> engagement for assault plans"
+            "description": "<strong>+1d</strong> engagement for assault plans"
           }
         ]
       ]
