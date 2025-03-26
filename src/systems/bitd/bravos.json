@@ -137,6 +137,15 @@
           }
         }
       ]
+    },
+    "favoredNotes": {
+      "customLabel": "Hunting Grounds",
+      "examples": [
+        "Battle",
+        "Extortion",
+        "Sabotage",
+        "Smash & Grab"
+      ]
     }
   }
 }

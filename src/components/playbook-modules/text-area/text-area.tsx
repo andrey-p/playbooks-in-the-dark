@@ -22,6 +22,7 @@ export default function TextArea(props: Props) {
     >
       <textarea
         className={styles.input}
+        style={{ height: moduleProps?.height }}
         id={consistentId}
         name={consistentId}
         onChange={(e) =>

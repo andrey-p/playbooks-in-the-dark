@@ -5,7 +5,8 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
     props: z
       .object({
-        examples: z.string().array().optional()
+        examples: z.string().array().optional(),
+        height: z.number().int().default(300)
       })
       .optional()
   })

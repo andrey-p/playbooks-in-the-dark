@@ -7,7 +7,9 @@
     ["reputation", "repTurf"],
     ["hold", "tier"],
     "claims",
-    ["heatWanted", "coin"]
+    ["heatWanted", "coin"],
+    "favoredNotes",
+    "notes"
   ], [
     "crewXp",
     "specialAbilities",
@@ -143,6 +145,19 @@
           }
         }
       }
+    },
+    "favoredNotes": {
+      "id": "favoredNotes",
+      "type": "textArea",
+      "label": "Favored grounds / operation",
+      "props": {
+        "height": 150
+      }
+    },
+    "notes": {
+      "id": "notes",
+      "type": "textArea",
+      "label": "Notes"
     },
     "crewUpgrades": {
       "id": "crewUpgrades",
