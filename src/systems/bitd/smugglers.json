@@ -1,0 +1,177 @@
+{
+  "id": "smugglers",
+  "name": "Smugglers",
+  "description": "Suppliers of illicit goods",
+  "modules": {
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "like part of the family",
+          "name": "Like Part of the Family",
+          "description": "Create one of your vehicles as a <strong>cohort</strong> (use the vehicle edges and flaws, below). Its <strong>quality</strong> is equal to your Tier +1."
+        },
+        {
+          "id": "all hands",
+          "name": "All Hands",
+          "description": "During <strong>downtime</strong>, one of your cohorts may perform a downtime activity for the crew to <strong>acquire an asset</strong>, <strong>reduce heat</strong>, or work on a <strong>long-term project</strong>."
+        },
+        {
+          "id": "ghost passage",
+          "name": "Ghost Passage",
+          "description": "From harsh experience or occult ritual, all crew members become immune to possession by spirits, but may choose to \"carry\" a second ghost as a passenger within their body."
+        },
+        {
+          "id": "just passing through",
+          "name": "Just Passing Through",
+          "description": "During <strong>downtime</strong>, take <strong>-1</strong> heat. When your heat is 4 or less, you get <strong>+1d</strong> to deceive people when you pass yourselves off as ordinary citizens."
+        },
+        {
+          "id": "leverage",
+          "name": "Leverage",
+          "description": "Your crew supplies contraband for other factions. Your success is good for them. Whenever you gain rep, gain <strong>+1 rep</strong>."
+        },
+        {
+          "id": "reavers",
+          "name": "Reavers",
+          "description": "When you go into conflict aboard a vehicle, you gain <strong>+1 effect</strong> for vehicle damage and speed. Your vehicle gains <strong>armor</strong>."
+        },
+        {
+          "id": "renegades",
+          "name": "Renegades",
+          "description": "Each PC may add +1 action rating to <strong>Finesse</strong>, <strong>Prowl</strong>, or <strong>Skirmish</strong> (up to a max rating of 3)."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 2,
+          "description": "Choose a special ability from another crew."
+        }
+      ]
+    },
+    "claims": {
+      "claims": [
+        [
+          {
+            "id": "turf1",
+            "name": "Turf",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "side business",
+            "name": "Side Business",
+            "description": "(Tier roll) - Heat = coin in downtime",
+            "connections": ["down"]
+          },
+          {
+            "id": "luxury fence",
+            "name": "Luxury Fence",
+            "description": "<strong>+2 coin</strong> for high-class targets",
+            "connections": ["down"]
+          },
+          {
+            "id": "vice den",
+            "name": "Vice Den",
+            "description": "(Tier roll) - Heat = coin in downtime",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "tavern",
+            "name": "Tavern",
+            "description": "<strong>+1d</strong> to Consort and Sway on site",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "ancient gate",
+            "name": "Ancient Gate",
+            "description": "Safe passage in the Deathlands",
+            "connections": ["down"]
+          },
+          {
+            "id": "turf2",
+            "name": "Turf",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "lair",
+            "name": "Lair",
+            "selectable": false,
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "turf3",
+            "name": "Turf",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "turf4",
+            "name": "Turf",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "secret routes",
+            "name": "Secret Routes",
+            "description": "<strong>+1d</strong> engagement for transport plans",
+            "connections": ["right"]
+          },
+          {
+            "id": "informants",
+            "name": "Informants",
+            "description": "<strong>+1d</strong> gather info for scores"
+          },
+          {
+            "id": "fleet",
+            "name": "Fleet",
+            "description": "Your cohorts have their own vehicles"
+          },
+          {
+            "id": "cover operation",
+            "name": "Cover Operation",
+            "description": "<strong>-2 heat</strong> per score",
+            "connections": ["right"]
+          },
+          {
+            "id": "warehouse",
+            "name": "Warehouse",
+            "description": "Stockpiles give you <strong>+1d</strong> to acquire assets"
+          }
+        ]
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "elynn", "name": "Elynn, a dock worker" },
+        { "id": "rolan", "name": "Rolan, a drug dealer" },
+        { "id": "sera", "name": "Sera, an arms dealer" },
+        { "id": "nyelle", "name": "Nyelle, a spirit trafficker" },
+        { "id": "decker", "name": "Decker, an anarchist" },
+        { "id": "esme", "name": "Esme, a tavern owner" }
+      ]
+    },
+    "crewUpgrades": {
+      "startingItems": {
+        "vehicle": 1,
+        "prowess": 1
+      },
+      "custom": [
+        { "id": "smugglers rigging", "name": "Smugglers' Rigging (2 items carried are perfectly concealed)", "load": 1 },
+        { "id": "camouflage", "name": "Camouflage (vehicles are perfectly concealed at rest)", "load": 1 },
+        { "id": "elite rovers", "name": "Elite Rovers", "load": 1 },
+        { "id": "barge", "name": "Barge (+ mobility or lair)", "load": 1 },
+        { "id": "steady", "name": "Steady (+1 stress box)", "load": 3 }
+      ]
+    },
+    "favoredNotes": {
+      "customLabel": "Cargo Types",
+      "examples": [
+        "Arcane/Weird",
+        "Arms",
+        "Contraband",
+        "Passengers"
+      ]
+    }
+  }
+}

@@ -1,25 +1,19 @@
+import { z } from 'zod';
 import { useState } from 'react';
 import styles from './radio-group.module.css';
 import Toggle from '@/components/toggle/toggle';
+import { RadioGroupProps as RadioGroupPropsSchema } from './radio-group.schema';
 
-type Option = { id: string | null; name: string };
-
-type RadioType = 'rhombus' | 'dagger';
-
-type Props = {
-  options: Option[];
-  selected: string | null;
+type Props = z.infer<typeof RadioGroupPropsSchema> & {
   onValueSelect: (id: string | null) => void;
-  type: RadioType;
-  invertColours?: boolean;
 };
 
 export default function RadioGroup(props: Props) {
-  const { options, selected, type, onValueSelect, invertColours } = props;
+  const { options, value, size, type, onValueSelect, invertColours } = props;
   const [highlightedId, setHighlightedId] = useState<string | null>(null);
 
   const onChange = (id: string | null) => {
-    if (id === selected) {
+    if (id === value) {
       onValueSelect(null);
     } else {
       onValueSelect(id);
@@ -28,15 +22,15 @@ export default function RadioGroup(props: Props) {
 
   return (
     <ul className={styles.list}>
-      {options.map((option: Option) => (
+      {options.map((option) => (
         <li key={option.id} className={styles.item}>
           <label className={styles.label}>
             <Toggle
               type={type}
-              filled={selected === option.id}
+              filled={value === option.id}
               highlighted={highlightedId === option.id}
               invertColours={invertColours}
-              size={20}
+              size={size || 20}
               onClick={() => onChange(option.id)}
               onMouseEnter={() => setHighlightedId(option.id)}
               onMouseLeave={() => setHighlightedId(null)}

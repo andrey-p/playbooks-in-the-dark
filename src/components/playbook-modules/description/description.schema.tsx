@@ -1,21 +1,15 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
-import { TrackerProps } from '@/components/trackers/trackers.schema';
 
 export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
-    props: TrackerProps
+    props: z.void(),
+    description: z.string()
   })
 );
-export const PlaybookProps = BasePlaybookProps.and(z.void());
-export const UserValue = z
-  .object({
-    value: z
-      .number()
-      .int()
-      .refine((val) => val >= 0 && val <= 255)
-  })
-  .default({ value: 0 });
+
+export const PlaybookProps = BasePlaybookProps;
+export const UserValue = z.void();
 
 export default z.object({
   moduleDefinition: ModuleDefinition,

@@ -1,0 +1,187 @@
+{
+  "id": "bravos",
+  "name": "Bravos",
+  "description": "Merceneries, thugs & killers",
+  "modules": {
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "dangerous",
+          "name": "Dangerous",
+          "description": "Each PC may add +1 action rating to <strong>Hunt</strong>, <strong>Skirmish</strong>, or <strong>Wreck</strong> (up to a max rating of 3)."
+        },
+        {
+          "id": "blood brothers",
+          "name": "Blood Brothers",
+          "description": "When you fight alongside your <strong>cohorts</strong> in combat, they get <strong>+1d</strong> for <strong>teamwork</strong> rolls (setup and group actions). All of your cohorts get the <em>Thugs</em> type for free (if they're already Thugs, add another type)."
+        },
+        {
+          "id": "door kickers",
+          "name": "Door Kickers",
+          "description": "When you execute an assault plan, take <strong>+1d</strong> to the <strong>engagement</strong> roll."
+        },
+        {
+          "id": "fiends",
+          "name": "Fiends",
+          "description": "Fear is as good as respect. You may count each <strong>wanted level</strong> as if it was <strong>turf</strong>."
+        },
+        {
+          "id": "forged in the fire",
+          "name": "Forged in the Fire",
+          "description": "Each PC has been toughened by cruel experience. You get <strong>+1d</strong> to resistance rolls."
+        },
+        {
+          "id": "patron",
+          "name": "Patron",
+          "description": "When you advance your <strong>Tier</strong>, it costs <strong>half the coin</strong> it normally would. <em>Who is your patron? Why do they help you?</em>"
+        },
+        {
+          "id": "war dogs",
+          "name": "War Dogs",
+          "description": "When you’re at war (-3 faction status), your crew does not suffer -1 hold and PCs still get two downtime activities, instead of just one."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 2,
+          "description": "Choose a special ability from another crew."
+        }
+      ]
+    },
+    "claims": {
+      "claims": [
+        [
+          {
+            "id": "barracks",
+            "name": "Barracks",
+            "description": "<strong>+1 scale</strong> for your Thug cohorts",
+            "connections": ["right", "down"]
+          },
+          {
+            "id": "turf1",
+            "name": "Turf",
+            "connections": ["right"]
+          },
+          {
+            "id": "terrorized citizens",
+            "name": "Terrorized Citizens",
+            "description": "<strong>+2 coin</strong> for battle or extortion",
+            "connections": ["down"]
+          },
+          {
+            "id": "informants",
+            "name": "Informants",
+            "description": "<strong>+1d</strong> to gather info for scores",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "protection racket",
+            "name": "Protection Racket",
+            "description": "(Tier roll) - Heat = coin in downtime",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "fighting pits",
+            "name": "Fighting Pits",
+            "description": "(Tier roll) - Heat = coin in downtime",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "turf2",
+            "name": "Turf",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "lair",
+            "name": "Lair",
+            "selectable": false,
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "turf3",
+            "name": "Turf",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "turf4",
+            "name": "Turf",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "infirmary",
+            "name": "Infirmary",
+            "description": "<strong>+1d</strong> to healing rolls",
+            "connections": ["right"]
+          },
+          {
+            "id": "bluecoat intimidation",
+            "name": "Bluecoat Intimidation",
+            "description": "<strong>-2 heat</strong> per score"
+          },
+          {
+            "id": "street fence",
+            "name": "Street Fence",
+            "description": "<strong>+2 coin</strong> for lower-class targets",
+            "connections": ["right"]
+          },
+          {
+            "id": "warehouses",
+            "name": "Warehouses",
+            "description": "Stockpiles give you <strong>+1d</strong> to acquire assets",
+            "connections": ["right"]
+          },
+          {
+            "id": "bluecoat confederates",
+            "name": "Bluecoat Confederates",
+            "description": "<strong>+1d</strong> engagement for assault plans"
+          }
+        ]
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "meg", "name": "Meg, a pit-fighter" },
+        { "id": "conway", "name": "Conway, a bluecoat" },
+        { "id": "keller", "name": "Keller, a blacksmith" },
+        { "id": "tomas", "name": "Tomas, a physicker" },
+        { "id": "walker", "name": "Walker, a ward boss" },
+        { "id": "lutes", "name": "Lutes, a tavern owner" }
+      ]
+    },
+    "crewUpgrades": {
+      "startingItems": {
+        "prowess": 1
+      },
+      "custom": [
+        { "id": "bravos rigging", "name": "Bravos Rigging (2 free load of weapons or armor)", "load": 1 },
+        { "id": "ironhook contacts", "name": "Ironhook Contacts (+1 tier in prison)", "load": 1 },
+        { "id": "elite rovers", "name": "Elite Rovers", "load": 1 },
+        { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
+        { "id": "hardened", "name": "Hardened (+1 trauma box)", "load": 3 }
+      ]
+    },
+    "cohorts": {
+      "startingCohorts": [
+        {
+          "text": "Thugs",
+          "radioGroups": {
+            "gangExpert": "gang"
+          }
+        }
+      ]
+    },
+    "favoredNotes": {
+      "customLabel": "Hunting Grounds",
+      "examples": [
+        "Battle",
+        "Extortion",
+        "Sabotage",
+        "Smash & Grab"
+      ]
+    }
+  }
+}

@@ -8,9 +8,9 @@ import clsx from 'clsx';
 type Props = z.infer<typeof PropsSchema>;
 
 export default function TextField(props: Props) {
-  const { moduleDefinition, userValue, onUpdate } = props;
+  const { moduleDefinition, playbookProps, userValue, onUpdate } = props;
   const { props: moduleProps, label } = moduleDefinition;
-  const examples = moduleProps?.examples;
+  const examples = moduleProps?.examples || playbookProps?.examples;
   const { text } = userValue;
 
   const consistentId = useId();

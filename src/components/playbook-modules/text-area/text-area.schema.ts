@@ -5,16 +5,24 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
     props: z
       .object({
-        examples: z.string().array().optional()
+        examples: z.string().array().optional(),
+        height: z.number().int().default(300)
       })
       .optional()
   })
 );
 
-export const PlaybookProps = BasePlaybookProps.and(z.void());
+export const PlaybookProps = BasePlaybookProps.and(
+  z
+    .object({
+      examples: z.string().array().optional()
+    })
+    .optional()
+);
+
 export const UserValue = z
   .object({
-    // 2k characters should be enough for anyone right?
+    // 3k characters should be enough for anyone right?
     text: z.string().refine((val) => val.length <= 3000)
   })
   .default({ text: '' });

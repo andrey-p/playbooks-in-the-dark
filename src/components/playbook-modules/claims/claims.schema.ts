@@ -1,33 +1,34 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
 
-export const Contact = z.object({
+export const Claim = z.object({
   id: z.string(),
-  name: z.string()
+  name: z.string(),
+  description: z.string().optional(),
+  connections: z.array(z.enum(['down', 'right'])).optional(),
+  selectable: z.boolean().default(true)
 });
 
 export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
-    props: z
-      .object({
-        variant: z.enum(['upDown', 'neutral']).default('upDown')
-      })
-      .default({})
+    props: z.void()
   })
 );
+
 export const PlaybookProps = BasePlaybookProps.and(
   z.object({
-    contacts: z.array(Contact)
+    claims: z.array(z.array(Claim))
   })
 );
+
 export const UserValue = z
   .object({
-    contacts: z.record(
+    selected: z.record(
       z.string().refine((val) => val.length <= 255),
-      z.number().refine((val) => val >= -1 && val <= 1)
+      z.boolean()
     )
   })
-  .default({ contacts: {} });
+  .default({ selected: {} });
 
 export default z.object({
   moduleDefinition: ModuleDefinition,

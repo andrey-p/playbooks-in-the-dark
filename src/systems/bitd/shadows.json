@@ -1,0 +1,180 @@
+{
+  "id": "shadows",
+  "name": "Shadows",
+  "description": "Thieves, spies and saboteurs",
+  "modules": {
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "everyone steals",
+          "name": "Everyone Steals",
+          "description": "Each PC may add +1 action rating to <strong>Prowl</strong>, <strong>Finesse</strong>, or <strong>Tinker</strong> (up to a max rating of 3)."
+        },
+        {
+          "id": "ghost echoes",
+          "name": "Ghost Echoes",
+          "description": "From weird experience or occult ritual, all crew members gain the ability to see and interact with the ghostly structures, streets, and objects within the echo of Doskvol that exists in the ghost field."
+        },
+        {
+          "id": "pack rats",
+          "name": "Pack Rats",
+          "description": "Your lair is a jumble of stolen items. When you roll to <strong>acquire an asset</strong>, take <strong>+1d</strong>."
+        },
+        {
+          "id": "patron",
+          "name": "Patron",
+          "description": "When you advance your <strong>Tier</strong>, it costs <strong>half the coin</strong> it normally would. <em>Who is your patron? Why do they help you?</em>"
+        },
+        {
+          "id": "second story",
+          "name": "Second Story",
+          "description": "When you execute a clandestine infiltration, you get <strong>+1d</strong> to the <strong>engagement roll</strong>."
+        },
+        {
+          "id": "slippery",
+          "name": "Slippery",
+          "description": "When you roll <strong>entanglements</strong>, roll twice and keep the one you want. When you <strong>reduce heat</strong> on the crew, take <strong>+1d</strong>."
+        },
+        {
+          "id": "synchronized",
+          "name": "Synchronized",
+          "description": "When you perform a <strong>group action</strong>, you may count multiple 6s from different rolls as a critical success."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 2,
+          "description": "Choose a special ability from another crew."
+        }
+      ]
+    },
+    "claims": {
+      "claims": [
+        [
+          {
+            "id": "interrogation chamber",
+            "name": "Interrogation Chamber",
+            "description": "<strong>+1d</strong> to Command and Sway on site",
+            "connections": ["down"]
+          },
+          {
+            "id": "turf1",
+            "name": "Turf",
+            "connections": ["right"]
+          },
+          {
+            "id": "loyal fence",
+            "name": "Loyal Fence",
+            "description": "<strong>+2 coin</strong> for burglary or robbery",
+            "connections": ["down"]
+          },
+          {
+            "id": "gambling den",
+            "name": "Gambling Den",
+            "description": "(Tier roll) - Heat = coin in downtime",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "tavern",
+            "name": "Tavern",
+            "description": "<strong>+1d</strong> to Consort and Sway on site",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "drug den",
+            "name": "Drug Den",
+            "description": "(Tier roll) - Heat = coin in downtime",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "informants",
+            "name": "Informants",
+            "description": "<strong>+1d</strong> gather info for scores",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "lair",
+            "name": "Lair",
+            "selectable": false,
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "turf2",
+            "name": "Turf",
+            "connections": ["right"]
+          },
+          {
+            "id": "lookouts",
+            "name": "Lookouts",
+            "description": "<strong>+1d</strong> to Survey or Hunt on your turf",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "hagfish farm",
+            "name": "Hagfish Farm",
+            "description": "Body disposal, <strong>+1d</strong> to reduce heat after killing",
+            "connections": ["right"]
+          },
+          {
+            "id": "infirmary",
+            "name": "Infirmary",
+            "description": "<strong>+1d</strong> to healing rolls"
+          },
+          {
+            "id": "covert drops",
+            "name": "Covert Drops",
+            "description": "<strong>+2 coin</strong> for espionage or sabotage",
+            "connections": ["right"]
+          },
+          {
+            "id": "turf3",
+            "name": "Turf",
+            "connections": ["right"]
+          },
+          {
+            "id": "secret pathways",
+            "name": "Secret Pathways",
+            "description": "<strong>+1d</strong> engagement for stealth plans"
+          }
+        ]
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "dowler", "name": "Dowler, an explorer" },
+        { "id": "laroze", "name": "Laroze, a bluecoat" },
+        { "id": "amancio", "name": "Amancio, a deal broker" },
+        { "id": "fitz", "name": "Fitz, a collector" },
+        { "id": "adelaide phroaig", "name": "Adelaide Phroaig, a noble" },
+        { "id": "rigney", "name": "Rigney, a tavern owner" }
+      ]
+    },
+    "crewUpgrades": {
+      "startingItems": {
+        "hidden": 1,
+        "prowess": 1
+      },
+      "custom": [
+        { "id": "thief rigging", "name": "Thief Rigging (2 free load of tools or gear)", "load": 1 },
+        { "id": "underground maps and passkeys", "name": "Underground maps & passkeys", "load": 1 },
+        { "id": "elite rooks", "name": "Elite Rooks", "load": 1 },
+        { "id": "elite skulks", "name": "Elite Skulks", "load": 1 },
+        { "id": "steady", "name": "Steady (+1 stress box)", "load": 3 }
+      ]
+    },
+    "favoredNotes": {
+      "customLabel": "Hunting Grounds",
+      "examples": [
+        "Burglary",
+        "Espionage",
+        "Robbery",
+        "Sabotage"
+      ]
+    }
+  }
+}
+

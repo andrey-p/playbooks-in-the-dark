@@ -1,7 +1,266 @@
 {
   "id": "crew",
-  "playbooks": [],
+  "playbooks": [
+    "assassins",
+    "bravos",
+    "cult",
+    "hawkers",
+    "smugglers",
+    "shadows"
+  ],
   "name": "Crew",
-  "layout": [],
-  "modules": {}
+  "layout": [[
+    ["name", "lair"],
+    "deity",
+    ["reputation", "repTurf"],
+    ["hold", "tier"],
+    "claims",
+    ["heatWanted", "coin"],
+    "favoredNotes",
+    "notes"
+  ], [
+    "crewXp",
+    "specialAbilities",
+    "contacts",
+    "crewUpgrades",
+    "cohorts",
+    "vehicleCohort"
+  ]],
+  "modules": {
+    "name": {
+      "id": "name",
+      "type": "textField",
+      "label": "Name"
+    },
+    "reputation": {
+      "id": "reputation",
+      "type": "textField",
+      "label": "Reputation"
+    },
+    "lair": {
+      "id": "lair",
+      "type": "textField",
+      "label": "Lair"
+    },
+    "deity": {
+      "id": "deity",
+      "type": "textField",
+      "label": "Deity (choose 2 features)",
+      "playbooks": ["cult"],
+      "props": {
+        "examples": [
+          "Alluring",
+          "Cruel",
+          "Ferocious",
+          "Monstrous",
+          "Radiant",
+          "Sinister",
+          "Serene",
+          "Transcendent"
+        ]
+      }
+    },
+    "repTurf": {
+      "id": "repTurf",
+      "type": "multiTracker",
+      "label": "Reputation & Turf",
+      "props": {
+        "trackers": {
+          "rep": {
+            "max": 12,
+            "type": "dagger",
+            "label": "Rep"
+          },
+          "turf": {
+            "max": 6,
+            "reverse": true,
+            "size": 12,
+            "type": "square",
+            "label": "Turf"
+          }
+        }
+      }
+    },
+    "hold": {
+      "id": "hold",
+      "type": "radioGroup",
+      "label": "hold",
+      "props": {
+        "type": "dagger",
+        "size": 30,
+        "options": [
+          { "id": "weak", "name": "Weak" },
+          { "id": "strong", "name": "Strong" }
+        ]
+      }
+    },
+    "tier": {
+      "id": "tier",
+      "type": "radioGroup",
+      "label": "tier",
+      "props": {
+        "type": "circle",
+        "options": [
+          { "id": "1", "name": "1" },
+          { "id": "2", "name": "2" },
+          { "id": "3", "name": "3" },
+          { "id": "4", "name": "4" }
+        ]
+      }
+    },
+    "claims": {
+      "id": "claims",
+      "type": "claims",
+      "label": "Claims"
+    },
+    "crewXp": {
+      "id": "crewXp",
+      "type": "tracker",
+      "label": "Crew XP",
+      "props": {
+        "max": 10,
+        "type": "dagger"
+      }
+    },
+    "specialAbilities": {
+      "id": "specialAbilities",
+      "type": "specialAbilities",
+      "label": "Special abilities"
+    },
+    "contacts": {
+      "id": "contacts",
+      "type": "contacts",
+      "label": "Contacts",
+      "props": {
+        "variant": "neutral"
+      }
+    },
+    "heatWanted": {
+      "id": "heatWanted",
+      "type": "multiTracker",
+      "label": "Heat / Wanted Level",
+      "props": {
+        "trackers": {
+          "heat": {
+            "max": 9,
+            "type": "dagger",
+            "label": "Heat"
+          },
+          "wanted": {
+            "max": 4,
+            "type": "dagger",
+            "label": "Wanted"
+          }
+        }
+      }
+    },
+    "coin": {
+      "id": "coin",
+      "type": "multiTracker",
+      "label": "Coin",
+      "description": "Upon crew advance, each PC gets stash = Tier + 2",
+      "props": {
+        "trackers": {
+          "coin": {
+            "max": 4,
+            "type": "square",
+            "label": "Coin"
+          },
+          "vault": {
+            "max": 12,
+            "type": "square",
+            "label": "Vault"
+          }
+        }
+      }
+    },
+    "favoredNotes": {
+      "id": "favoredNotes",
+      "type": "textArea",
+      "label": "Favored grounds / operation",
+      "props": {
+        "height": 150
+      }
+    },
+    "notes": {
+      "id": "notes",
+      "type": "textArea",
+      "label": "Notes"
+    },
+    "crewUpgrades": {
+      "id": "crewUpgrades",
+      "type": "items",
+      "label": "Crew Upgrades",
+      "description": "Cohorts upgrade costs: New cohort - 2, Add type - 2",
+      "props": {
+        "twoColumns": true,
+        "groups": [
+          { "id": "lair", "name": "Lair" },
+          { "id": "training", "name": "Training" },
+          { "id": "quality", "name": "Quality" }
+        ],
+        "common": [
+          { "id": "carriage", "name": "Carriage", "load": 2, "showLinked": false, "group": "lair" },
+          { "id": "boat", "name": "Boat", "load": 2, "showLinked": false, "group": "lair" },
+          { "id": "hidden", "name": "Hidden", "load": 1, "group": "lair" },
+          { "id": "quarters", "name": "Quarters", "load": 1, "group": "lair" },
+          { "id": "secure", "name": "Secure", "load": 2, "showLinked": false, "group": "lair" },
+          { "id": "vault", "name": "Vault", "load": 2, "showLinked": false, "group": "lair" },
+          { "id": "workshop", "name": "Workshop", "load": 1, "group": "lair" },
+
+          { "id": "documents", "name": "Documents", "load": 1, "group": "quality" },
+          { "id": "gear", "name": "Gear", "load": 1, "group": "quality" },
+          { "id": "supplies", "name": "Supplies", "load": 1, "group": "quality" },
+          { "id": "tools", "name": "Tools", "load": 1, "group": "quality" },
+          { "id": "weapons", "name": "Weapons", "load": 1, "group": "quality" },
+
+          { "id": "insight", "name": "Insight", "load": 1, "group": "training" },
+          { "id": "prowess", "name": "Prowess", "load": 1, "group": "training" },
+          { "id": "resolve", "name": "Resolve", "load": 1, "group": "training" },
+          { "id": "personal", "name": "Personal", "load": 1, "group": "training" },
+          { "id": "mastery", "name": "Mastery", "load": 4, "group": "training" }
+        ]
+      }
+    },
+    "cohorts": {
+      "id": "cohorts",
+      "type": "cohorts",
+      "label": "Cohorts",
+      "props": {
+        "slots": 4,
+        "radioGroups": {
+          "gangExpert": {
+            "type": "circle",
+            "options": [
+              { "id": "gang", "name": "Gang" },
+              { "id": "expert", "name": "Expert" }
+            ]
+          },
+          "harm": {
+            "type": "dagger",
+            "size": 30,
+            "options": [
+              { "id": "weak", "name": "Weak" },
+              { "id": "impaired", "name": "Impaired" },
+              { "id": "broken", "name": "Broken" }
+            ]
+          },
+          "armor": {
+            "type": "dagger",
+            "size": 30,
+            "options": [
+              { "id": "armor", "name": "Armor" }
+            ]
+          }
+        }
+      }
+    },
+    "vehicleCohort": {
+      "id": "vehicleCohort",
+      "type": "description",
+      "playbooks": ["smugglers"],
+      "label": "Vehicle Edges / Flaws",
+      "description": "<p><strong>Vehicle Edges</strong></p> <p><strong>Nimble:</strong> The vehicle handles easily. Consider this an <strong>assist</strong> for tricky maneuvers.</p> <p><strong>Simple:</strong> The vehicle is easy to repair. Remove all of its harm during downtime.</p> <p><strong>Sturdy:</strong> The vehicle keeps operating even when broken.</p> <p><strong>Vehicle Flaws</strong></p> <p><strong>Costly:</strong> The vehicle costs 1 coin per downtime to keep in operation.</p> <p><strong>Distinct:</strong> The vehicle has memorable features. Take +1 heat when you use it on a score.</p> <p><strong>Finicky:</strong> The vehicle has quirks that only one person understands. When operated without them, the vehicle has -1 quality.</p>"
+    }
+  }
 }

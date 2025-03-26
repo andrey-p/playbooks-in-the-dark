@@ -1,12 +1,10 @@
+import { z } from 'zod';
 import styles from './toggle.module.css';
 import clsx from 'clsx';
 
-type Props = {
-  type: 'circle' | 'dagger' | 'rhombus' | 'triangle' | 'square';
-  size?: number;
-  filled?: boolean;
-  highlighted?: boolean;
-  invertColours?: boolean;
+import { ToggleProps as TogglePropsSchema } from './toggle.schema';
+
+type Props = z.infer<typeof TogglePropsSchema> & {
   onMouseEnter?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   onMouseLeave?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;

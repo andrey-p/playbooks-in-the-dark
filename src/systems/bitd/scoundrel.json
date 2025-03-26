@@ -101,7 +101,7 @@
       "type": "tracker",
       "label": "Stress",
       "props": {
-        "trackerType": "dagger",
+        "type": "dagger",
         "max": 9
       }
     },
@@ -110,7 +110,7 @@
       "type": "tracker",
       "label": "Trauma",
       "props": {
-        "trackerType": "dagger",
+        "type": "dagger",
         "max": 4
       }
     },
@@ -144,7 +144,7 @@
       "type": "tracker",
       "label": "Healing",
       "props": {
-        "trackerType": "clock",
+        "type": "clock",
         "max": 4
       }
     },
@@ -225,7 +225,7 @@
       "label": "Playbook XP",
       "props": {
         "max": 7,
-        "trackerType": "dagger"
+        "type": "dagger"
       }
     },
     "coin": {
@@ -236,12 +236,12 @@
         "trackers": {
           "coin": {
             "max": 4,
-            "trackerType": "square",
+            "type": "square",
             "label": "Coin"
           },
           "stash": {
             "max": 40,
-            "trackerType": "square",
+            "type": "square",
             "wrap": true,
             "label": "Stash"
           }

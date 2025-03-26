@@ -6,6 +6,11 @@
   display: inline-block;
 }
 
+.neutral {
+  display: inline-block;
+  transform: rotate(90deg);
+}
+
 .down {
   transform: rotate(180deg);
   display: inline-block;

@@ -30,13 +30,13 @@ export default function MultiTracker(props: Props) {
       {Object.keys(trackers).map((trackerId) => (
         <div key={trackerId} className={clsx(styles.tracker, trackerId)}>
           <SimpleTracker
+            {...trackers[trackerId]}
             value={values[trackerId] || 0}
-            max={trackers[trackerId].max}
-            type={trackers[trackerId].trackerType}
-            wrap={trackers[trackerId].wrap}
             onValueSelect={(value: number) => onValueSelect(trackerId, value)}
           />
-          <div>{trackers[trackerId].label}</div>
+          <div className={clsx(`${trackerId}-label`)}>
+            {trackers[trackerId].label}
+          </div>
         </div>
       ))}
     </ModuleWrapper>

@@ -1,0 +1,176 @@
+{
+  "id": "hawkers",
+  "name": "Hawkers",
+  "description": "Vice dealers",
+  "modules": {
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "silver tongues",
+          "name": "Silver Tongues",
+          "description": "Each PC may add +1 action rating to <strong>Command</strong>, <strong>Consort</strong>, or <strong>Sway</strong> (up to a max rating of 3)."
+        },
+        {
+          "id": "accord",
+          "name": "Accord",
+          "description": "Sometimes friends are as good as territory. You may count up to three <strong>+3 faction statuses</strong> you hold as if they are <strong>turf</strong>."
+        },
+        {
+          "id": "the good stuff",
+          "name": "The Good Stuff",
+          "description": "Your merchandise is exquisite. The product <strong>quality</strong> is equal to your <strong>Tier+2</strong>. When you deal with a crew or faction, the GM will tell you who among them is hooked on your product (one, a few, many, or all)."
+        },
+        {
+          "id": "ghost market",
+          "name": "Ghost Market",
+          "description": "Through arcane ritual or hard-won experience, you have discovered how to prepare your product for sale to ghosts and/or demons. <em>They do not pay in coin. What do they pay with?</em>"
+        },
+        {
+          "id": "high society",
+          "name": "High Society",
+          "description": "It's all about who you know. Take <strong>-1 heat</strong> during downtime and <strong>+1d</strong> to gather info about the city's elite."
+        },
+        {
+          "id": "hooked",
+          "name": "Hooked",
+          "description": "Your gang members use your product. Add the <em>savage</em>, <em>unreliable</em>, or <em>wild</em> flaw to your gangs to give them <strong+1 quality</strong>."
+        },
+        {
+          "id": "patron",
+          "name": "Patron",
+          "description": "When you advance your <strong>Tier</strong>, it costs <strong>half the coin</strong> it normally would. <em>Who is your patron? Why do they help you?</em>"
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 2,
+          "description": "Choose a special ability from another crew."
+        }
+      ]
+    },
+    "claims": {
+      "claims": [
+        [
+          {
+            "id": "turf1",
+            "name": "Turf",
+            "connections": ["right", "down"]
+          },
+          {
+            "id": "personal clothier",
+            "name": "Personal Clothier",
+            "description": "<strong>+1d</strong> engagement roll for social plans",
+            "connections": ["down"]
+          },
+          {
+            "id": "local graft",
+            "name": "Local Graft",
+            "description": "<strong>+2 coin</strong> for show of force or socialize",
+            "connections": ["down"]
+          },
+          {
+            "id": "lookouts",
+            "name": "Lookouts",
+            "description": "<strong>+1d</strong> to Survey or Hunt on your turf",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "informants",
+            "name": "Informants",
+            "description": "<strong>+1d</strong> to gather info for scores",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "turf2",
+            "name": "Turf",
+            "connections": ["down"]
+          },
+          {
+            "id": "turf3",
+            "name": "Turf",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "lair",
+            "name": "Lair",
+            "selectable": false,
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "turf4",
+            "name": "Turf",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "luxury venue",
+            "name": "Luxury Venue",
+            "description": "<strong>+1d</strong> to Consort and Sway on site"
+          }
+        ],
+        [
+          {
+            "id": "foreign market",
+            "name": "Foreign Market",
+            "description": "(Tier roll) - Heat = coin in downtime",
+            "connections": ["right"]
+          },
+          {
+            "id": "vice den",
+            "name": "Vice Den",
+            "description": "(Tier roll) - Heat = coin in downtime"
+          },
+          {
+            "id": "surplus caches",
+            "name": "Surplus Caches",
+            "description": "<strong>+2 coin</strong> for product sale or supply"
+          },
+          {
+            "id": "cover operation",
+            "name": "Cover Operation",
+            "description": "<strong>-2</strong> heat per score",
+            "connections": ["right"]
+          },
+          {
+            "id": "cover identities",
+            "name": "Cover Identities",
+            "description": "<strong>+1d</strong> engagement for deception and transport plans"
+          }
+        ]
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "rolan wott", "name": "Rolan Wott, a magistrate" },
+        { "id": "laroze", "name": "Laroze, a bluecoat" },
+        { "id": "lydra", "name": "Lydra, a deal broker" },
+        { "id": "hoxley", "name": "Hoxley, a smuggler" },
+        { "id": "anya", "name": "Anya, a dillettante" },
+        { "id": "marlo", "name": "Marlo, a gang boss" }
+      ]
+    },
+    "crewUpgrades": {
+      "startingItems": {
+        "secure": 1,
+        "resolve": 1
+      },
+      "custom": [
+        { "id": "hawkers rigging", "name": "Hawkers' Rigging (1 carried item is concealed and has no load)", "load": 1 },
+        { "id": "ironhook contacts", "name": "Ironhook Contacts (+1 tier in prison)", "load": 1 },
+        { "id": "elite rooks", "name": "Elite Rooks", "load": 1 },
+        { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
+        { "id": "composed", "name": "Composed (+1 stress box)", "load": 3 }
+      ]
+    },
+    "favoredNotes": {
+      "customLabel": "Sales Territory",
+      "examples": [
+        "Sale",
+        "Supply",
+        "Show of Force",
+        "Socialize"
+      ]
+    }
+  }
+}

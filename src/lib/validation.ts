@@ -1,20 +1,10 @@
 import { z } from 'zod';
 import { UserData as UserDataSchema } from '@/schemas';
-import { schemasByModuleType } from '@/components/playbook-modules/all-schemas';
+import { getUnifiedUserValueSchema } from '@/components/playbook-modules/all-schemas';
 
 type UserDataType = z.infer<typeof UserDataSchema>;
 
-// pull in schemas for all kinds of user value (ie. data that will be saved to DB)
-// and create a big zod schema that checks for all of them
-const userValueSchemas = Object.values(schemasByModuleType).map(
-  (schemas) => schemas.UserValue
-);
-const unifiedUserValueSchema = userValueSchemas.reduce(
-  (acc: z.ZodTypeAny, val: z.ZodTypeAny) => {
-    return acc.or(val);
-  },
-  z.void()
-);
+const unifiedUserValueSchema = getUnifiedUserValueSchema();
 
 // add that to the usual, more clearly defined properties
 const userDataSchema = UserDataSchema.merge(

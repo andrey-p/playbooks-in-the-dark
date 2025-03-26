@@ -1,30 +1,22 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
-import { TrackerProps } from '@/components/trackers/trackers.schema';
+import { RadioGroupProps } from '@/components/radio-group/radio-group.schema';
 
 export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
-    props: z.object({
-      trackers: z.record(
-        z.string(),
-        TrackerProps.and(
-          z.object({
-            label: z.string()
-          })
-        )
-      )
-    })
+    props: RadioGroupProps
   })
 );
+
 export const PlaybookProps = BasePlaybookProps.and(z.void());
 export const UserValue = z
   .object({
-    values: z.record(
-      z.string().refine((val) => val.length < 255),
-      z.number().refine((val) => val >= 0 && val <= 255)
-    )
+    value: z
+      .string()
+      .nullable()
+      .refine((val) => !val || val.length <= 255)
   })
-  .default({ values: {} });
+  .default({ value: null });
 
 export default z.object({
   moduleDefinition: ModuleDefinition,

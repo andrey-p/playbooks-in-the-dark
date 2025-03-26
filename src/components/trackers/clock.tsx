@@ -1,12 +1,11 @@
+import { z } from 'zod';
 import { useState } from 'react';
 import styles from './clock.module.css';
 import clsx from 'clsx';
+import { TrackerProps as TrackerPropsSchema } from './trackers.schema';
 
-type Props = {
-  value: number;
-  max: number;
+type Props = z.infer<typeof TrackerPropsSchema> & {
   onValueSelect?: (value: number) => void;
-  size?: number;
 };
 
 export default function Clock(props: Props) {

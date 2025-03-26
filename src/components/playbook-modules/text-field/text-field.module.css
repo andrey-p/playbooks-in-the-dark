@@ -4,11 +4,8 @@
 }
 
 .input {
-  background: none;
-  border: none;
   height: 2.5rem;
   width: 100%;
-  border-bottom: 1px solid var(--foreground);
 }
 
 .label {
