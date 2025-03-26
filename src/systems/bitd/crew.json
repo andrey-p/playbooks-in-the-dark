@@ -158,6 +158,7 @@
       "id": "coin",
       "type": "multiTracker",
       "label": "Coin",
+      "description": "Upon crew advance, each PC gets stash = Tier + 2",
       "props": {
         "trackers": {
           "coin": {
