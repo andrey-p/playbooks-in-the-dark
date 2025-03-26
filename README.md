@@ -6,7 +6,7 @@ You can find **Playbooks in the Dark** running at [thedark.iswhywecanthaveniceth
 
 ## What is this?
 
-Blades in the Dark is an excellent, flexible system. There's a mind-boggling variety of Forged in the Dark systems that take apart the building blocks of the base ruleset and rearrange them into new ways.
+Blades in the Dark is an excellent, flexible system. There's a mind-boggling variety of Forged in the Dark systems that take apart the building blocks of the base ruleset and rearrange them in new ways.
 
 There's a few really good character builders out there for Blades in the Dark. If they were to exist for other FitD systems, they would have to be created from scratch, which makes the whole business a lot more difficult.
 
