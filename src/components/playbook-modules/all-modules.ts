@@ -12,6 +12,7 @@ import * as MultiTracker from './multi-tracker/multi-tracker';
 import * as Contacts from './contacts/contacts';
 import * as Claims from './claims/claims';
 import * as Cohorts from './cohorts/cohorts';
+import * as Description from './description/description';
 
 export const componentsByModuleType = {
   textField: TextField,
@@ -25,5 +26,6 @@ export const componentsByModuleType = {
   contacts: Contacts,
   claims: Claims,
   cohorts: Cohorts,
-  textArea: TextArea
+  textArea: TextArea,
+  description: Description
 };

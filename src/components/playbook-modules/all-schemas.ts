@@ -13,6 +13,7 @@ import * as MultiTrackerSchemas from './multi-tracker/multi-tracker.schema';
 import * as ContactsSchemas from './contacts/contacts.schema';
 import * as ClaimsSchemas from './claims/claims.schema';
 import * as CohortsSchemas from './cohorts/cohorts.schema';
+import * as DescriptionSchemas from './description/description.schema';
 
 export const schemasByModuleType = {
   textField: TextFieldSchemas,
@@ -26,7 +27,8 @@ export const schemasByModuleType = {
   multiTracker: MultiTrackerSchemas,
   contacts: ContactsSchemas,
   claims: ClaimsSchemas,
-  cohorts: CohortsSchemas
+  cohorts: CohortsSchemas,
+  description: DescriptionSchemas
 };
 
 export const getUnifiedUserValueSchema = () => {
