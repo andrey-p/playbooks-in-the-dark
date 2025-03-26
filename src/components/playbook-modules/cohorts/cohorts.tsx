@@ -15,6 +15,12 @@ export default function Cohorts(props: Props) {
   const { slots, radioGroups } = moduleProps;
   let { cohorts: cohortValues } = userValue;
 
+  // first time this module is rendered?
+  // show any starting cohorts that the playbook defined
+  if (!cohortValues.length && playbookProps?.startingCohorts?.length) {
+    cohortValues = playbookProps?.startingCohorts;
+  }
+
   const cohortProps = [];
 
   for (let i = 0; i < slots; i++) {
@@ -30,9 +36,9 @@ export default function Cohorts(props: Props) {
     // first time a cohort is saved, create empty slots for every entry
     // before setting the one that was just updated
     // nature abhors a sparse array
-    if (nextCohortValues.length === 0) {
-      for (let i = 0; i < slots; i++) {
-        nextCohortValues.push({ radioGroups: {}, text: '' });
+    for (let i = 0; i < slots; i++) {
+      if (!nextCohortValues[i]) {
+        nextCohortValues[i] = { radioGroups: {}, text: '' };
       }
     }
 

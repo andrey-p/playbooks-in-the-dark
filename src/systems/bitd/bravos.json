@@ -127,6 +127,16 @@
         { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
         { "id": "hardened", "name": "Hardened (+1 trauma box)", "load": 3 }
       ]
+    },
+    "cohorts": {
+      "startingCohorts": [
+        {
+          "text": "Thugs",
+          "radioGroups": {
+            "gangExpert": "gang"
+          }
+        }
+      ]
     }
   }
 }

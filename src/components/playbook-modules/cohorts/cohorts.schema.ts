@@ -25,14 +25,7 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
 export const PlaybookProps = BasePlaybookProps.and(
   z
     .object({
-      startingCohorts: z
-        .array(
-          z.object({
-            radioGroups: z.record(z.string(), z.string().optional()),
-            text: z.string()
-          })
-        )
-        .optional()
+      startingCohorts: z.array(CohortValue).optional()
     })
     .optional()
 );
