@@ -1,3 +1,6 @@
 {
-  "systems": [{ "id": "bitd" }]
+  "systems": [
+    { "id": "bitd" },
+    { "id": "afod" }
+  ]
 }

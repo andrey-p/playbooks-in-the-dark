@@ -1,0 +1,8 @@
+{
+  "id": "afod",
+  "name": "A Fistful of Darkness",
+  "description": "A game about gunslinging and impending doom in a weird west setting.",
+  "customStyles": "styles.css",
+  "playbookTypes": ["character", "posse"],
+  "license": ""
+}

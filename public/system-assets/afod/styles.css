@@ -1,0 +1,25 @@
+.afod {
+  /* CHARACTERS */
+  &.character {
+    .column:nth-child(1) {
+      width: 40%;
+      min-width: 350px;
+    }
+
+    .column:nth-child(2) {
+      min-width: 420px;
+      width: 40%;
+    }
+
+    .column:nth-child(3) {
+      min-width: 250px;
+      width: 20%;
+    }
+
+    .multiTracker.coin {
+      .ablass {
+        max-width: 250px;
+      }
+    }
+  }
+}
