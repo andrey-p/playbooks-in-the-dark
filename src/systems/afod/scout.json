@@ -1,0 +1,82 @@
+{
+  "id": "scout",
+  "name": "The Scout",
+  "description": "A stealthy tracker & hunter",
+  "modules": {
+    "ratings": {
+      "startingRatings": {
+        "hunt": 2,
+        "prowl": 1
+      }
+    },
+    "items": {
+      "custom": [
+        { "id": "fine hunting knife", "name": "Fine Hunting Knife", "load": 1 },
+        { "id": "fine rifle or bow", "name": "Fine Rifle or Bow", "load": 1 },
+        { "id": "fine leather clothes", "name": "Fine Leather Clothes", "load": 1 },
+        { "id": "trap", "name": "Trap", "load": 2 },
+        { "id": "fine horse with saddle", "name": "Fine Horse with Saddle", "load": 1 },
+        { "id": "outdoor survival kit", "name": "Outdoor Survival Kit", "load": 1 }
+      ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "darker than the shadows",
+          "name": "Darker than the shadows",
+          "description": "You may expend your special armor to resist a consequence from detection, or to push yourself for a feat of hunting or stealth."
+        },
+        {
+          "id": "silent hunter",
+          "name": "Silent Hunter",
+          "description": "When you gather info to locate a target, you get +1 effect. When you hide in a prepared position or use camouflage, you get +1d to rolls to avoid detection."
+        },
+        {
+          "id": "survivor",
+          "name": "Survivor",
+          "description": "From hard won experience or specialized training, you are able to subsist on what any environment provides and you can function on the barest sustenance. You get +1 Grit box."
+        },
+        {
+          "id": "learned my trade from the best",
+          "name": "Learned my trade from the best",
+          "description": "When you attack from hiding or spring a trap, you get +1d."
+        },
+        {
+          "id": "youre my game",
+          "name": "You're my game",
+          "description": "You can smell their blood. When you hunt a target you’ve previously tracked or wounded, you gain +1 effect level. Whenever you gather information on a weakness or vulnerability, you get at least standard effect."
+        },
+        {
+          "id": "like a brother",
+          "name": "Like a brother",
+          "description": "Explain how your mount is helpful in what you’re trying to achieve and gain +1 effect level or +1d. Your mount always knows the way home."
+        },
+        {
+          "id": "see another day",
+          "name": "See another day",
+          "description": "You gain an additional XP trigger: You let your prey escape because it was worthy to see another day. If your Posse has problems due to this, also mark Posse XP."
+        },
+        {
+          "id": "listen to the land",
+          "name": "Listen to the land",
+          "description": "Outside of civilization you always know where you are and how to care for yourself and your mount. You always Read the weather with a Great effect."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another source."
+        }
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "sherman townsend", "name": "Sherman Townsend, store owner" },
+        { "id": "he who talks", "name": "He Who Talks, a free spirit" },
+        { "id": "small fox hunting", "name": "Small Fox Hunting, a tribesman" },
+        { "id": "bullettooth jackson", "name": "'Bullettooth' Jackson, a ranger" },
+        { "id": "trouble", "name": "'Trouble', a pain in the neck" }
+      ]
+    }
+  }
+}
