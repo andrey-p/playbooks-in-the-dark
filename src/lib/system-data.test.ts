@@ -2,16 +2,18 @@ import { getJson } from './system-data';
 import { NotFoundError } from './errors';
 import { readFileSync } from 'fs';
 
-// set up fs.readFileSync so it can be mocked for the one test
-jest.mock('fs', () => {
-  const fs = jest.requireActual('fs');
-
-  return {
-    readFileSync: jest.fn((...args) => fs.readFileSync(...args))
-  };
-});
+jest.mock('fs');
 
 describe('system-data', () => {
+  // set up fs.readFileSync so it can be mocked for the one test
+  beforeEach(() => {
+    const fs = jest.requireActual('fs');
+
+    jest
+      .mocked(readFileSync)
+      .mockImplementation((...args) => fs.readFileSync(...args));
+  });
+
   describe('getJson', () => {
     test('gets existing JSON file OK', () => {
       expect(getJson('bitd', 'system')).toMatchObject({
@@ -29,6 +31,10 @@ describe('system-data', () => {
       });
 
       expect(() => getJson('bitd', 'system')).toThrow(/Error parsing/);
+    });
+
+    test('throws if user attempts shenanigans', () => {
+      expect(() => getJson('bitd', '../../../package')).toThrow();
     });
   });
 });
