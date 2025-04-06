@@ -1,7 +1,7 @@
 {
   "id": "character",
   "name": "Character",
-  "playbooks": ["fist", "shot", "law", "gamble", "scout"],
+  "playbooks": ["fist", "shot", "law", "gamble", "scout", "outlaw", "thunderheart", "speaker"],
   "layout": [[
     ["name", "posse"],
     "look",

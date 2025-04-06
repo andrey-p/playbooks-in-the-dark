@@ -1,0 +1,78 @@
+{
+  "id": "thunderheart",
+  "name": "The Thunderheart",
+  "description": "A totem fighter born from the land",
+  "modules": {
+    "ratings": {
+      "startingRatings": {
+        "survey": 1,
+        "prowl": 1,
+        "attune": 1
+      }
+    },
+    "items": {
+      "custom": [
+        { "id": "fine bow with arrows", "name": "Fine Bow with Arrows", "load": 1 },
+        { "id": "fine weapon", "name": "Fine Weapon", "load": 1 },
+        { "id": "a spirit bane or charm", "name": "A Spirit Bane or Charm", "load": 0 },
+        { "id": "outdoor survival kit", "name": "Outdoor Survival Kit", "load": 1 },
+        { "id": "tabaco poison medicine", "name": "Tabaco / Poison / Medicine", "load": 1 },
+        { "id": "a totem's gift", "name": "A Totem's Gift", "load": 1 }
+      ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "guided by the totem",
+          "name": "Guided by the totem",
+          "description": "You may expend your special armor to resist a supernatural consequence, or to push yourself for a feat of athletics or hunt."
+        },
+        {
+          "id": "totem's vessel",
+          "name": "Totem's vessel",
+          "description": "When you push yourself and open body and soul as a conduit for your totem, choose one of the following additional benefits: <em>perform a feat of athletics or stealth that verges on the superhuman</em> - <em>maneuver to confuse your enemies so they mistakenly attack each other</em> - <em>sense your prey (gather Information with at least Standard result) wherever it is</em>."
+        },
+        {
+          "id": "protector of the people",
+          "name": "Protector of the people",
+          "description": "When you protect a teammate or your people, take +1d to your resistance roll. When you gather info to anticipate possible threats in the current situation, you get +1 effect."
+        },
+        {
+          "id": "a devil with a blade",
+          "name": "A devil with a blade",
+          "description": "You’re very effective at finding vital organs with your blade. When using Sling, to throw or fight with a blade, you gain Potency and may choose to do it absolutely silently. On a miss you don’t get any positive result."
+        },
+        {
+          "id": "gruesome warpaint",
+          "name": "Gruesome warpaint",
+          "description": "Enemies falter, hesitate, or flinch when attacked by you in close combat. You have an air of menace and danger obvious to even the most oblivious. You gain Potency when trying to intimidate someone. If done immediately after a show of force, also take +1d."
+        },
+        {
+          "id": "totem sense",
+          "name": "Totem sense",
+          "description": "Pick an animal sense matching to your totem. This sense is sharpened beyond human range to animal sensitivity."
+        },
+        {
+          "id": "lone wolf",
+          "name": "Lone wolf",
+          "description": "You gain an additional XP trigger: You made things harder by acting alone. If your Posse has problems due to this, also mark Posse XP."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another source."
+        }
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "the petrified tree", "name": "The Petrified Tree" },
+        { "id": "maxwell", "name": "Maxwell, a scout" },
+        { "id": "black hoof", "name": "Black Hoof, a native chief/hunter" },
+        { "id": "red horse", "name": "Red Horse, a medicine man" },
+        { "id": "hunter", "name": "Hunter, a spirit of the land" }
+      ]
+    }
+  }
+}
