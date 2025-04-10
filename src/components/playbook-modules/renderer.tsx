@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { ValidationError } from 'zod-validation-error';
 import {
   UserData as UserDataSchema,
   PlaybookData as PlaybookDataSchema,
@@ -37,7 +38,9 @@ export default function Renderer(props: Props) {
 
   const renderModule = (moduleId: string) => {
     if (!modules[moduleId]) {
-      throw new Error('Got layout entry for missing module: ' + moduleId);
+      throw new ValidationError(
+        'Got layout entry for missing module with ID: ' + moduleId
+      );
     }
 
     const moduleDefinition = modules[moduleId];
@@ -57,7 +60,9 @@ export default function Renderer(props: Props) {
       baseModuleDefinition.type as keyof typeof schemasByModuleType;
 
     if (!(schemaModuleType in schemasByModuleType)) {
-      throw new Error(`module type ${moduleId} has no schema defined`);
+      throw new ValidationError(
+        `module with ID ${moduleId} has no schema defined`
+      );
     }
 
     const schemas = schemasByModuleType[schemaModuleType];
@@ -66,7 +71,9 @@ export default function Renderer(props: Props) {
     const componentModuleType =
       baseModuleDefinition.type as keyof typeof componentsByModuleType;
     if (!(componentModuleType in componentsByModuleType)) {
-      throw new Error(`module type ${moduleId} has no component defined`);
+      throw new ValidationError(
+        `module with ID ${moduleId} has no component defined`
+      );
     }
 
     // if this module is playbook-restricted,
