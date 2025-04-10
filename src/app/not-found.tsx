@@ -1,5 +1,5 @@
 import Layout from './(selection)/layout';
-import styles from './not-found.module.css';
+import styles from './errors.module.css';
 
 export default function NotFound() {
   return (
