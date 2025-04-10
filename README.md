@@ -65,8 +65,8 @@ Running up to a tentative beta release:
 - [x] data entry for BitD characters
 - [x] improve character saving flow
 - [x] add BitD crews
+- [x] add user-friendly error handling
 - [ ] add the first non-bitd system
-- [ ] add user-friendly error handling
 - [ ] add loading states
 
 Future:
