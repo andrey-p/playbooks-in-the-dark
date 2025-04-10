@@ -1,4 +1,5 @@
 import { getJson } from '@/lib/system-data';
+import { NotFoundError } from '@/lib/errors';
 import {
   PlaybookData as PlaybookDataSchema,
   PlaybookDefinition as PlaybookDefinitionSchema,
@@ -30,8 +31,12 @@ export default async function Page(props: Props) {
     playbookDefinition = PlaybookDefinitionSchema.parse(
       getJson(systemId, playbookType)
     );
-  } catch {
-    return notFound();
+  } catch (e) {
+    if (e instanceof NotFoundError) {
+      return notFound();
+    }
+
+    throw e;
   }
 
   return (
