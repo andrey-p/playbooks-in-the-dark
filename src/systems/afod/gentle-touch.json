@@ -1,0 +1,82 @@
+{
+  "id": "gentle-touch",
+  "name": "The Gentle Touch",
+  "description": "An empathic light in a dark world",
+  "modules": {
+    "ratings": {
+      "startingRatings": {
+        "read": 2,
+        "consort": 1
+      }
+    },
+    "items": {
+      "custom": [
+        { "id": "fine concealed palm pistol", "name": "Fine Concealed Palm Pistol", "load": 1 },
+        { "id": "fine bedside manners", "name": "Fine Bedside Manners", "load": 0 },
+        { "id": "fine doctors bag and apron", "name": "Fine Doctors Bag and Apron", "load": 2 },
+        { "id": "fine and very strong cough syrup", "name": "Fine and Very Strong Cough Syrup", "load": 0 },
+        { "id": "a comforting song", "name": "A Comforting Song", "load": 0 },
+        { "id": "an old favor", "name": "An Old Favor", "load": 0 }
+      ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "snake oil miracles",
+          "name": "Snake Oil Miracles",
+          "description": "When you assist, or engage in a group Action with someone, they may also ignore one harm penalty."
+        },
+        {
+          "id": "influential",
+          "name": "Influential",
+          "description": "You provide a valuable service to the town and are welcome even in dangerous places. Get +1 result level when you speak on behalf of a local community, acquire an asset, or reduce Doom."
+        },
+        {
+          "id": "little vultures",
+          "name": "Little Vultures",
+          "description": "Cohorts you command gain Potency to gather information and have special armor to resist a consequence of detection or deception."
+        },
+        {
+          "id": "well travelled",
+          "name": "Well Travelled",
+          "description": "You speak a multitude of languages and are broadly educated. When you gather information in a weird or foreign place, take +1d to your roll."
+        },
+        {
+          "id": "fandango",
+          "name": "Fandango",
+          "description": "When you indulge your Vice, you may adjust the dice outcome by 1 or 2 (up or down). An ally who joins your Vice may do the same."
+        },
+        {
+          "id": "quick-witted",
+          "name": "Quick-witted",
+          "description": "You may expend your special armor to resist a consequence of persuasion or suspicion. When you resist with Wit, take +1d."
+        },
+        {
+          "id": "viper",
+          "name": "Viper",
+          "description": "When you invent, craft, or try to apply a poison or narcotic, take +1d to your roll. You begin the game with one additional formula already known."
+        },
+        {
+          "id": "in good hands",
+          "name": "In good hands",
+          "description": "When you provide meaningful insight or heartfelt advice (to another PC), you both gain 1 Grit. Everyone in your Posse gets +1d to their healing treatment rolls."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another source."
+        }
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "mitch cochran", "name": "Mitch Cochran, an entrepreneur" },
+        { "id": "janet irsinghausen", "name": "Janet Irsinghausen, a scholar" },
+        { "id": "mr rosenberg", "name": "Mr. Rosenberg, a commissioner" },
+        { "id": "joe sawyer", "name": "Joe Sawyer, a farmer" },
+        { "id": "ron maddox", "name": "Ron Maddox, a surgeon" }
+      ]
+    }
+  }
+}

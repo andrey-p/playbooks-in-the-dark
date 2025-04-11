@@ -1,0 +1,82 @@
+{
+  "id": "wrench-saw",
+  "name": "The Wrench & Saw",
+  "description": "Mad scientist hellstone otaku",
+  "modules": {
+    "ratings": {
+      "startingRatings": {
+        "craft": 2,
+        "disable": 1
+      }
+    },
+    "items": {
+      "custom": [
+        { "id": "fine crafting tools", "name": "Fine Crafting Tools", "load": 1 },
+        { "id": "fine experimental rifle", "name": "Fine Experimental Rifle", "load": 2 },
+        { "id": "fine useful parts", "name": "Fine Useful Parts", "load": 1 },
+        { "id": "hellstone goggles", "name": "Hellstone Goggles", "load": 1 },
+        { "id": "an unopened box", "name": "An Unopened Box", "load": 1 },
+        { "id": "a disturbing truth", "name": "A Disturbing Truth", "load": 0 }
+      ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "driven",
+          "name": "Driven",
+          "description": "During Downtime, you get 2 ticks to distribute among any Long-term Project clocks that involve investigation, or learning a new formula or design plan. Using Read, push yourself for 1 Grit instead of 2."
+        },
+        {
+          "id": "skillful",
+          "name": "Skillful",
+          "description": "You may expend your special armor to resist a consequence from breaking machines or experimenting with Hellstone, or to push yourself when working on weird science or handling Hellstone."
+        },
+        {
+          "id": "mad scientist",
+          "name": "Mad scientist",
+          "description": "When you invent or craft a creation with steam-craft or Hellstone features, take +1 result level to your roll. You begin with one special design already known."
+        },
+        {
+          "id": "spiritmancer",
+          "name": "Spiritmancer",
+          "description": "When you invent or craft a creation with arcane, spiritual, or demonic features, take +1 result level to your roll. You begin with one special formula already known."
+        },
+        {
+          "id": "listening to their voices",
+          "name": "Listening to their voices",
+          "description": "When you touch them you may consort with machines to gather information with +1 result level. After that, you may push yourself to give it a feature or task it was not constructed for."
+        },
+        {
+          "id": "speaking their tongue",
+          "name": "Speaking their tongue",
+          "description": "You may attune yourself to any machine in sight to activate or disable it."
+        },
+        {
+          "id": "blood, sweat & gears",
+          "name": "Blood, sweat & gears",
+          "description": "You gain an additional XP trigger: If you achieved a breakthrough on a meaningful invention or scientific problem, mark XP. If your project caused trouble for your Posse, also mark Posse XP."
+        },
+        {
+          "id": "right time right tool",
+          "name": "Right time, right tool",
+          "description": "You may use one of your items for a purpose of which it was not designed for. Fine items stay fine. Describe how you do it and how this is helpful."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another source."
+        }
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "ignaz toodlebrock", "name": "Ignaz Toodlebrock, an inventor" },
+        { "id": "a voice in your head", "name": "A voice in your head" },
+        { "id": "a favorite tool named", "name": "A favorite tool named ______________" },
+        { "id": "virex", "name": "Virex, a failed experiment" },
+        { "id": "dakota", "name": "Dakota, your fiancé" }
+      ]
+    }
+  }
+}
