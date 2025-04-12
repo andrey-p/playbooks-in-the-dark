@@ -1,4 +1,15 @@
 .afod {
+  /* GENERAL */
+  --font-display: var(--font-rubik-dirt);
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
   /* CHARACTERS */
   &.character {
     .column:nth-child(1) {
