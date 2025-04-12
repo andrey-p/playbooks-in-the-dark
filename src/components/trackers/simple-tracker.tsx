@@ -68,7 +68,8 @@ export default function SimpleTracker(props: Props) {
       className={clsx(
         styles.container,
         variant && styles[variant],
-        wrap && styles.wrap
+        wrap && styles.wrap,
+        'tracker-container'
       )}
       onMouseLeave={() => {
         setHighlightedValue(null);
