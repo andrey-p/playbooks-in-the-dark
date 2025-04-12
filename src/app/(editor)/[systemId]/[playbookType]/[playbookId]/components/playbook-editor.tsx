@@ -12,6 +12,8 @@ import {
   System as SystemDataSchema
 } from '@/schemas';
 import ModuleRenderer from '@/components/playbook-modules/renderer';
+import RendererErrorBoundary from '@/components/playbook-modules/renderer-error-boundary';
+
 import { userDataReducer } from '@/reducers';
 import PlaybookActions from '@/components/playbook-actions/playbook-actions';
 import styles from './playbook-editor.module.css';
@@ -106,13 +108,15 @@ export default function Playbook(props: Props) {
         />
       </header>
 
-      <ModuleRenderer
-        layout={playbookDefinition.layout}
-        modules={playbookDefinition.modules}
-        playbookData={playbookData}
-        userData={userData}
-        dispatch={dispatch}
-      />
+      <RendererErrorBoundary>
+        <ModuleRenderer
+          layout={playbookDefinition.layout}
+          modules={playbookDefinition.modules}
+          playbookData={playbookData}
+          userData={userData}
+          dispatch={dispatch}
+        />
+      </RendererErrorBoundary>
     </div>
   );
 }

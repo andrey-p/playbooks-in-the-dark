@@ -28,17 +28,23 @@ export default $config({
       primaryIndex: { hashKey: 'id' }
     });
 
+    let domain = '';
+
+    if ($app.stage === 'production') {
+      domain = 'thedark.iswhywecanthavenicethings.fyi';
+    } else if ($app.stage === 'test') {
+      domain = 'thedark-test.iswhywecanthavenicethings.fyi';
+    }
+
     new sst.aws.Nextjs('Playbooks', {
       link: [table],
       domain: {
-        name: 'thedark.iswhywecanthavenicethings.fyi',
+        name: domain,
         dns: false,
         cert: certArn.value
       },
       environment: {
-        PLAYBOOKS_APP_URL: $dev
-          ? 'http://localhost:3000'
-          : 'https://thedark.iswhywecanthavenicethings.fyi'
+        PLAYBOOKS_APP_URL: $dev ? 'http://localhost:3000' : `https://${domain}`
       }
     });
   }
