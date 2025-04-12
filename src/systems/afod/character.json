@@ -239,7 +239,12 @@
             "name": "Sway",
             "attributeId": "guts"
           }
-        ]
+        ],
+        "trackerProps": {
+          "type": "rectangle",
+          "max": 6,
+          "size": 30
+        }
       }
     },
     "playbookXp": {

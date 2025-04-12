@@ -13,7 +13,7 @@ type ActionType = z.infer<typeof ActionSchema>;
 export default function Ratings(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
   const { props: moduleProps } = moduleDefinition;
-  const { attributes, actions } = moduleProps;
+  const { attributes, actions, trackerProps } = moduleProps;
   const startingRatings = playbookProps.startingRatings;
   const { actionRatings, attributeXp } = userValue;
 
@@ -53,6 +53,7 @@ export default function Ratings(props: Props) {
           attribute={attribute}
           xp={attributeXp[attribute.id]}
           currentRatings={currentRatings}
+          trackerProps={trackerProps}
           onRatingUpdate={onRatingUpdate}
           onXpUpdate={onXpUpdate}
           actions={actions.filter(
