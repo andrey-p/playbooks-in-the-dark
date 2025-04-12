@@ -1,0 +1,179 @@
+{
+  "id": "hellstone-scavengers",
+  "name": "Hellstone Scavengers",
+  "modules": {
+    "achievements": {
+      "claims": [
+        [
+          {
+            "id": "hell's own light",
+            "name": "Hell's Own Light",
+            "description": "Darkness",
+            "connections": ["down"]
+          },
+          {
+            "id": "spirit well",
+            "name": "Spirit Well",
+            "description": "Neutral",
+            "connections": ["right"]
+          },
+          {
+            "id": "the map",
+            "name": "The Map",
+            "description": "Neutral",
+            "connections": ["down"]
+          },
+          {
+            "id": "the great law of peace",
+            "name": "The Great Law of Peace",
+            "description": "Light",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "eternal flame",
+            "name": "Eternal Flame",
+            "description": "Light"
+          }
+        ],
+        [
+          {
+            "id": "hellish inventor",
+            "name": "Hellish Inventor",
+            "description": "Darkness",
+            "connections": ["right"]
+          },
+          {
+            "id": "hellstone claim 1",
+            "name": "Hellstone Claim",
+            "description": "Darkness",
+            "connections": ["right", "down"]
+          },
+          {
+            "id": "equilibrium",
+            "name": "Equilibrium",
+            "connections": ["down", "right"],
+            "selectable": false
+          },
+          {
+            "id": "the mark of beyond",
+            "name": "The Mark of Beyond",
+            "description": "Light",
+            "connections": ["right"]
+          },
+          {
+            "id": "hellstone claim 2",
+            "name": "Hellstone Claim",
+            "description": "Light",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "the wyrm",
+            "name": "The Wyrm",
+            "description": "Darkness",
+            "connections": ["right"]
+          },
+          {
+            "id": "the black lake",
+            "name": "The Black Lake",
+            "description": "Darkness"
+          },
+          {
+            "id": "the cornerstone",
+            "name": "The Cornerstone",
+            "description": "Neutral",
+            "connections": ["right"]
+          },
+          {
+            "id": "hellstone claim 3",
+            "name": "Hellstone Claim",
+            "description": "Neutral"
+          },
+          {
+            "id": "the gate",
+            "name": "The Gate",
+            "description": "Light"
+          }
+        ]
+      ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "heigh-ho",
+          "name": "Heigh-ho",
+          "description": "Each PC may add +1 Action rating to Attune, Disable, or Prowl (up to a max rating of 3)."
+        },
+        {
+          "id": "transporter",
+          "name": "Transporter",
+          "description": "When you execute a Travel Plan to start your run or Hellstone Scavenge, take +1d to the engagement roll."
+        },
+        {
+          "id": "dig dug",
+          "name": "Dig Dug",
+          "description": "No way to rip you off. When you acquire mining equipment or explosives, you get +1 result level to your roll."
+        },
+        {
+          "id": "leverage",
+          "name": "Leverage",
+          "description": "Your Posse supplies ’found stuff’ for other Factions. Your success is good for them. Whenever you gain Rep, gain +1 Rep. <em>Which Factions? Who’s angry about this arrangement? Which quality rating of which location is affected by this arrangement?</em>"
+        },
+        {
+          "id": "got used to the strange life",
+          "name": "Got used to the strange life",
+          "description": "You get +1d to resistance rolls against supernatural threats including Delving Too Deep. You get +1d to healing rolls when you have supernatural harm."
+        },
+        {
+          "id": "undue hellish confidence",
+          "name": "Undue hellish confidence",
+          "description": "No one can beat your Posse as long you have Hellstone around (at least it feels this way). Once per run you may regain 1 Grit if you make a Mutation Roll."
+        },
+        {
+          "id": "patron",
+          "name": "Patron",
+          "description": "When you advance your Tier, it costs half the coin it normally would. <em>Who is your patron? Why do they help you?</em>"
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another crew."
+        }
+      ]
+    },
+    "modus": {
+      "examples": [
+        "Scavenge",
+        "Mining",
+        "Supply",
+        "Sale"
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "bill scar morgan", "name": "Bill 'Scar' Morgan, a judge" },
+        { "id": "railroad gilliam", "name": "'Railroad' Gilliam, a marshal" },
+        { "id": "sweet dave", "name": "Sweet Dave, a piano player" },
+        { "id": "grover mcintyre", "name": "Grover McIntyre, hardware store owner" },
+        { "id": "ling lee", "name": "Ling Lee, a collector" },
+        { "id": "old man bruford", "name": "Old Man Bruford, gin mill owner" }
+      ]
+    },
+    "posseUpgrades": {
+      "startingItems": {
+        "rail connection": 1,
+        "guts": 1
+      },
+      "custom": [
+        { "id": "scavenger rigging", "name": "Scavenger Rigging (tools or weapons)", "load": 1 },
+        { "id": "elite scouts", "name": "Elite Scouts", "load": 1 },
+        { "id": "elite movers", "name": "Elite Movers", "load": 1 },
+        { "id": "fine carriages", "name": "Fine Carriages", "load": 1 },
+        { "id": "steady", "name": "Steady (+1 Grit Box)", "load": 3 }
+      ]
+    }
+  }
+}
+

@@ -33,4 +33,102 @@
       }
     }
   }
+
+  /* POSSES */
+  &.posse {
+    .column:nth-child(1) {
+      width: 60%;
+      min-width: 670px;
+    }
+
+    .column:nth-child(2) {
+      min-width: 500px;
+      width: 40%;
+    }
+
+    .multiTracker.coin {
+      .tracker-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 50px;
+        align-content: start;
+      }
+
+      .tracker-toggle {
+        padding-right: 0.3rem;
+      }
+
+      .vault {
+        .tracker-toggle:nth-child(7) {
+          padding-right: 0.8rem;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            border-right: 2px solid var(--foreground);
+            height: 50px;
+            right: 3px;
+            top: -1px;
+          }
+        }
+      }
+    }
+
+    .multiTracker.repClaims {
+      position: relative;
+
+      .rep {
+        padding-top: 1rem;
+      }
+
+      .claims {
+        position: absolute;
+        top: 2.2rem;
+        left: 151px;
+      }
+
+      .claims-label {
+        position: relative;
+        top: 36px;
+        text-align: right;
+      }
+    }
+
+    .claims.achievements {
+      --dark-box-bg: #333;
+      --dark-box-text: #fff;
+      --neutral-box-bg: #999;
+      --neutral-box-text: #000;
+      --light-box-bg: #fff;
+      --light-box-text: #000;
+
+      .claim-0-0,
+      .claim-0-1,
+      .claim-1-1,
+      .claim-0-2,
+      .claim-1-2 {
+        background-color: var(--dark-box-bg);
+        color: var(--dark-box-text);
+      }
+
+      .claim-1-0,
+      .claim-2-0,
+      .claim-2-1,
+      .claim-2-2,
+      .claim-3-2 {
+        background-color: var(--neutral-box-bg);
+        color: var(--neutral-box-text);
+      }
+
+      .claim-3-0,
+      .claim-4-0,
+      .claim-3-1,
+      .claim-4-1,
+      .claim-4-2 {
+        background-color: var(--light-box-bg);
+        color: var(--light-box-text);
+      }
+    }
+  }
 }
