@@ -84,7 +84,8 @@
       "type": "tracker",
       "label": "Grit",
       "props": {
-        "type": "dagger",
+        "type": "rectangle",
+        "size": 30,
         "max": 9
       }
     },
@@ -93,7 +94,8 @@
       "type": "tracker",
       "label": "Stigma",
       "props": {
-        "type": "dagger",
+        "type": "rectangle",
+        "size": 30,
         "max": 4
       }
     },
@@ -246,7 +248,8 @@
       "label": "Playbook XP",
       "props": {
         "max": 8,
-        "type": "dagger"
+        "size": 30,
+        "type": "rectangle"
       }
     },
     "coin": {
