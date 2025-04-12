@@ -28,10 +28,11 @@ export default function Claims(props: Props) {
       <div className={styles.container}>
         {availableClaims.map((row, i) => (
           <div className={styles.row} key={i}>
-            {row.map((claim) => (
+            {row.map((claim, j) => (
               <Claim
                 key={claim.id}
                 claim={claim}
+                position={[j, i]}
                 selected={selectedClaims[claim.id]}
                 onSelect={onClaimSelect}
               />

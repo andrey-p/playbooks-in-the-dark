@@ -6,19 +6,22 @@ import Description from '@/components/description/description';
 
 type Props = {
   claim: z.infer<typeof ClaimSchema>;
+  position: [number, number];
   selected?: boolean;
   onSelect: (id: string, selected: boolean) => void;
 };
 
 export default function Claim(props: Props) {
-  const { claim, selected, onSelect } = props;
+  const { claim, selected, position, onSelect } = props;
 
   return (
     <div
       className={clsx(
         styles.container,
         claim.selectable ? styles.selectable : styles.notSelectable,
-        selected && styles.selected
+        selected && styles.selected,
+        // x/y based coordinates for position-specific styling
+        `claim-${position[0]}-${position[1]}`
       )}
       onClick={() => {
         if (claim.selectable) {
