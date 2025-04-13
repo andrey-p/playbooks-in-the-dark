@@ -172,4 +172,30 @@ describe('PlaybookEditor', () => {
       });
     });
   });
+  describe('read only', () => {
+    test('disables any changes when loaded in read only mode', async () => {
+      const user = userEvent.setup();
+      const initialData = {
+        ...initialUserData,
+        modules: {
+          name: { text: 'steven' }
+        }
+      };
+      render(
+        <PlaybookEditor
+          userData={initialData}
+          playbookData={playbookData}
+          playbookDefinition={playbookDefinition}
+          systemData={systemData}
+          readOnly
+        />
+      );
+
+      const nameInput = screen.getByLabelText('Name');
+      await user.click(nameInput);
+      await user.keyboard('beatrice');
+
+      expect(nameInput).toHaveValue('steven');
+    });
+  });
 });

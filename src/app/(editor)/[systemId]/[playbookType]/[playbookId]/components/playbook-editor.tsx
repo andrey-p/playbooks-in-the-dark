@@ -31,6 +31,7 @@ type Props = {
   playbookDefinition: PlaybookDefinitionType;
   userData: UserDataType;
   systemData: SystemDataType;
+  readOnly?: boolean;
 };
 
 export default function Playbook(props: Props) {
@@ -38,7 +39,8 @@ export default function Playbook(props: Props) {
     userData: initialUserData,
     playbookData,
     playbookDefinition,
-    systemData
+    systemData,
+    readOnly
   } = props;
   const [lastSaved, setLastSaved] = useState<string>(
     JSON.stringify(initialUserData)
@@ -47,6 +49,10 @@ export default function Playbook(props: Props) {
   const pathName = usePathname();
 
   const save = useCallback(async () => {
+    if (readOnly) {
+      return;
+    }
+
     const data = await savePlaybookToDb(userData);
 
     const dataWithId = {
@@ -67,14 +73,14 @@ export default function Playbook(props: Props) {
       // set the URL so the user can refresh or copy / paste without losing their character
       window.history.replaceState(null, '', pathName + '/' + data.id);
     }
-  }, [userData, playbookData, playbookDefinition, pathName]);
+  }, [userData, playbookData, playbookDefinition, pathName, readOnly]);
 
   // after the first save, save automatically every 30s
   // (because of how the dependencies are constructed,
   // the timer will be reset with every change;
   // this is fine)
   useEffect(() => {
-    if (!userData.id) {
+    if (!userData.id || readOnly) {
       return;
     }
 
@@ -85,7 +91,7 @@ export default function Playbook(props: Props) {
     return () => {
       clearInterval(interval);
     };
-  }, [userData.id, save]);
+  }, [userData.id, save, readOnly]);
 
   return (
     <div
@@ -114,7 +120,7 @@ export default function Playbook(props: Props) {
           modules={playbookDefinition.modules}
           playbookData={playbookData}
           userData={userData}
-          dispatch={dispatch}
+          dispatch={readOnly ? () => {} : dispatch}
         />
       </RendererErrorBoundary>
     </div>
