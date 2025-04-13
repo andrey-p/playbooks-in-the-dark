@@ -20,6 +20,10 @@ export const savePlaybook = async (data: UserDataType) => {
     data.id = nanoid();
   }
 
+  if (!data.shareId) {
+    data.shareId = nanoid();
+  }
+
   try {
     validateUserData(data);
   } catch {
