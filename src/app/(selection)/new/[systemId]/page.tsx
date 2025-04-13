@@ -63,6 +63,9 @@ export default async function Page(props: Props) {
       <div className={styles.systemBlurb}>
         <h2 className={styles.heading}>{systemData.name}</h2>
         <p>{systemData.description}</p>
+        <a href={systemData.website} target='_blank'>
+          Go to website
+        </a>
       </div>
       <Separator />
 

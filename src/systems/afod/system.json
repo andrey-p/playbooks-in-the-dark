@@ -4,5 +4,6 @@
   "description": "A game about gunslinging and impending doom in a weird west setting.",
   "customStyles": "styles.css",
   "playbookTypes": ["character", "posse"],
-  "license": ""
+  "license": "A Fistful of Darkness created by Stefan Struck",
+  "website": "https://monkeyecho.itch.io/a-fistful-of-darkness"
 }
