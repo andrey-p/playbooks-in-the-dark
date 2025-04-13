@@ -1,7 +1,7 @@
 {
   "id": "posse",
   "name": "Posse",
-  "playbooks": ["hellstone-scavengers", "outlaw-posse"],
+  "playbooks": ["hellstone-scavengers", "outlaw-posse", "bounty-hunters", "tribe"],
   "layout": [[
     ["name", "reputation"],
     "hideout",

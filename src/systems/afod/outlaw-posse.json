@@ -1,0 +1,187 @@
+{
+  "id": "outlaw-posse",
+  "name": "Outlaw Posse",
+  "modules": {
+    "achievements": {
+      "claims": [
+        [
+          {
+            "id": "the morgue",
+            "name": "The Morgue",
+            "description": "Darkness",
+            "connections": ["down"]
+          },
+          {
+            "id": "free man funeral",
+            "name": "Free Man Funeral",
+            "description": "Neutral",
+            "connections": ["right"]
+          },
+          {
+            "id": "a drop of hell",
+            "name": "A Drop of Hell",
+            "description": "Neutral",
+            "connections": ["down"]
+          },
+          {
+            "id": "loaded dice",
+            "name": "Loaded Dice",
+            "description": "Light",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "the throne of skulls",
+            "name": "The Throne of Skulls",
+            "description": "Light"
+          }
+        ],
+        [
+          {
+            "id": "the beast",
+            "name": "The Beast",
+            "description": "Darkness",
+            "connections": ["right"]
+          },
+          {
+            "id": "hellstone claim 1",
+            "name": "Hellstone Claim",
+            "description": "Darkness",
+            "connections": ["right", "down"]
+          },
+          {
+            "id": "equilibrium",
+            "name": "Equilibrium",
+            "connections": ["down", "right"],
+            "selectable": false
+          },
+          {
+            "id": "last deals of dead men",
+            "name": "Last Deals of Dead Men",
+            "description": "Light",
+            "connections": ["right"]
+          },
+          {
+            "id": "hellstone claim 2",
+            "name": "Hellstone Claim",
+            "description": "Light",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "vengeful ghosts",
+            "name": "Vengeful Ghosts",
+            "description": "Darkness",
+            "connections": ["right"]
+          },
+          {
+            "id": "bringer of pain",
+            "name": "Bringer of Pain",
+            "description": "Darkness"
+          },
+          {
+            "id": "rail connection",
+            "name": "Rail Connection",
+            "description": "Neutral",
+            "connections": ["right"]
+          },
+          {
+            "id": "hellstone claim 3",
+            "name": "Hellstone Claim",
+            "description": "Neutral"
+          },
+          {
+            "id": "hanging tree",
+            "name": "Hanging Tree",
+            "description": "Light"
+          }
+        ]
+      ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "deadly serious",
+          "name": "Deadly Serious",
+          "description": "Each PC may add +1 Action rating to Command, Sling, or Brawl (up to a max rating of 3)."
+        },
+        {
+          "id": "blood brothers",
+          "name": "Blood Brothers",
+          "description": "When you fight alongside your cohorts in combat, they get +1d for teamwork rolls (setup and group Actions). All of your cohorts get the Thugs type for free (if they’re already Thugs, add another type)."
+        },
+        {
+          "id": "straightforward",
+          "name": "Straightforward",
+          "description": "When you execute an assault Plan, take +1d to the Engagement roll."
+        },
+        {
+          "id": "fiends",
+          "name": "Fiends",
+          "description": "Fear is as good as respect. You may count each active Rider as if it was a claim."
+        },
+        {
+          "id": "forged in the fire",
+          "name": "Forged in the Fire",
+          "description": "Each PC has been toughened by cruel experience. You get +1d to resistance rolls."
+        },
+        {
+          "id": "war dogs",
+          "name": "War Dogs",
+          "description": "When you’re in a feud (-3 Faction status), your Posse does not suffer -1 hold and PCs still get two Downtime activities, instead of just one."
+        },
+        {
+          "id": "patron",
+          "name": "Patron",
+          "description": "When you advance your Tier, it costs half the coin it normally would. <em>Who is your patron? Why do they help you?</em>"
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another crew."
+        }
+      ]
+    },
+    "modus": {
+      "examples": [
+        "Intimidation",
+        "Superiority",
+        "Swiftness",
+        "Spectacle"
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "bill scar morgan", "name": "Bill 'Scar' Morgan, a judge" },
+        { "id": "the cheat murray", "name": "'The Cheat' Murray, arms dealer" },
+        { "id": "silent bob", "name": "'Silent' Bob, a blacksmith" },
+        { "id": "moe", "name": "Moe, a saloon owner" },
+        { "id": "sam malone", "name": "Sam Malone, a smuggler" },
+        { "id": "old man bruford", "name": "Old Man Bruford, gin mill owner" }
+      ]
+    },
+    "posseUpgrades": {
+      "startingItems": {
+        "prowess": 1
+      },
+      "custom": [
+        { "id": "outlaw rigging", "name": "Outlaw Rigging (weapons or armor)", "load": 1 },
+        { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
+        { "id": "elite movers", "name": "Elite Movers", "load": 1 },
+        { "id": "mobile hideout", "name": "Mobile Hideout", "load": 1 },
+        { "id": "ruthless", "name": "Ruthless (+1 Grit Box)", "load": 3 }
+      ]
+    },
+    "cohorts": {
+      "startingCohorts": [
+        {
+          "text": "Thugs",
+          "radioGroups": {
+            "gangExpert": "gang"
+          }
+        }
+      ]
+    }
+  }
+}

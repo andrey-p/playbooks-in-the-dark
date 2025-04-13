@@ -1,0 +1,179 @@
+{
+  "id": "tribe",
+  "name": "Tribe",
+  "modules": {
+    "achievements": {
+      "claims": [
+        [
+          {
+            "id": "the broken storm",
+            "name": "The Broken Storm",
+            "description": "Darkness",
+            "connections": ["down"]
+          },
+          {
+            "id": "the oracle",
+            "name": "The Oracle",
+            "description": "Neutral",
+            "connections": ["right"]
+          },
+          {
+            "id": "guardian",
+            "name": "Guardian",
+            "description": "Neutral",
+            "connections": ["down"]
+          },
+          {
+            "id": "ancestor spirits",
+            "name": "Ancestor Spirits",
+            "description": "Light",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "shadow of the moon",
+            "name": "Shadow of the Moon",
+            "description": "Light"
+          }
+        ],
+        [
+          {
+            "id": "the bonding",
+            "name": "The Bonding",
+            "description": "Darkness",
+            "connections": ["right"]
+          },
+          {
+            "id": "hellstone claim 1",
+            "name": "Hellstone Claim",
+            "description": "Darkness",
+            "connections": ["right", "down"]
+          },
+          {
+            "id": "equilibrium",
+            "name": "Equilibrium",
+            "connections": ["down", "right"],
+            "selectable": false
+          },
+          {
+            "id": "the song of buffalo",
+            "name": "The Song of Buffalo",
+            "description": "Light",
+            "connections": ["right"]
+          },
+          {
+            "id": "hellstone claim 2",
+            "name": "Hellstone Claim",
+            "description": "Light",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "visions of end time",
+            "name": "Visions of End Time",
+            "description": "Darkness",
+            "connections": ["right"]
+          },
+          {
+            "id": "the sea of bones",
+            "name": "The Sea of Bones",
+            "description": "Darkness"
+          },
+          {
+            "id": "the dance of coyote",
+            "name": "The Dance of Coyote",
+            "description": "Neutral",
+            "connections": ["right"]
+          },
+          {
+            "id": "hellstone claim 3",
+            "name": "Hellstone Claim",
+            "description": "Neutral"
+          },
+          {
+            "id": "taming the thunderbird",
+            "name": "Taming the Thunderbird",
+            "description": "Light"
+          }
+        ]
+      ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "watchers",
+          "name": "Watchers",
+          "description": "Each PC may add +1 Action rating to Attune, Hunt, or Survey (up to a max rating of 3)."
+        },
+        {
+          "id": "into the burning beyond",
+          "name": "Into the Burning Beyond",
+          "description": "The spirits showed you the shifting paths into the Burning Beyond and back. You may attune to visit places of the Beyond, if you respect the inhabitants, and bring appropriate offerings. You don’t have to leave the way you came."
+        },
+        {
+          "id": "horseback is home",
+          "name": "Horseback Is Home",
+          "description": "You get +1d while on horseback. You speak the language of horses. You may ask them to gather information with +1 effect. You lose 3 Grit when your horse dies."
+        },
+        {
+          "id": "one with the land",
+          "name": "One with the Land",
+          "description": "You may command the spirits of the land or ask kindly for their help or advice. You may ignore one consequence if the spirits chose to provide cover. Or you may gain +1d if they chose to help you on your path."
+        },
+        {
+          "id": "one with the people",
+          "name": "One with the People",
+          "description": "When you have a Downtime in your people’s territory, your tribe has one additional Downtime Action, and gains +1d to Acquire Asset. Describe how this can be."
+        },
+        {
+          "id": "stalkers of demons",
+          "name": "Stalkers of Demons",
+          "description": "You were taught to sense the weakness of demons using taboomagic. Ifyousuccessfullyattunetoademon, theGMwilltellyouits weakness, and how it may be destroyed. On a CRIT you may learn its true name. <em>Which taboo must be broken?</em>"
+        },
+        {
+          "id": "theyre with us",
+          "name": "They're with Us",
+          "description": "You carry a symbol of your people / land; describe it and the grim bounding ritual. As long as you carry it, your Tribe gets +1d against Delving Too Deep and +1d resistance against creatures from the Burning Beyond or other spirits as well as against dread or despair. If you lose the symbol or it is destroyed, all get level 3 harm ’disheartened’. May only be healed by restoring the symbol somehow."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another crew."
+        }
+      ]
+    },
+    "modus": {
+      "examples": [
+        "Show of Force",
+        "Swiftness",
+        "Social",
+        "Sacrifice"
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "the cheat murray", "name": "'The Cheat' Murray, arms dealer" },
+        { "id": "hawk", "name": "Hawk, a feral spirit" },
+        { "id": "kills many", "name": "Kills Many, the threshold" },
+        { "id": "free cloud raining", "name": "Free Cloud Raining, medicine man" },
+        { "id": "seeker", "name": "Seeker, a guide" },
+        { "id": "coin slate", "name": "'Coin' Slate, a merchant" }
+      ]
+    },
+    "posseUpgrades": {
+      "startingItems": {
+        "wit": 1,
+        "quarters": 1
+      },
+      "custom": [
+        { "id": "tribe rigging", "name": "Tribe Rigging (weapons or implements)", "load": 1 },
+        { "id": "elite scouts", "name": "Elite Scouts", "load": 1 },
+        { "id": "elite movers", "name": "Elite Movers", "load": 1 },
+        { "id": "gateway to the burning beyond", "name": "Gateway to the Burning Beyond", "load": 1 },
+        { "id": "hardened", "name": "Hardened (+1 Grit Box)", "load": 3 }
+      ]
+    }
+  }
+}
+
