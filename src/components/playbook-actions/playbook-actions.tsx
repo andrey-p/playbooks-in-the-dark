@@ -10,10 +10,11 @@ type Props = {
   savePlaybook: () => void;
   isSaved: boolean;
   userDataId?: string;
+  readOnly?: boolean;
 };
 
 export default function PlaybookActions(props: Props) {
-  const { isSaved, savePlaybook, userDataId } = props;
+  const { isSaved, savePlaybook, userDataId, readOnly } = props;
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const onMenuClose = useCallback(() => {
@@ -23,23 +24,23 @@ export default function PlaybookActions(props: Props) {
   return (
     <div className={styles.container}>
       <div className={styles.buttons}>
-        <div className={clsx(!isSaved && styles.notSaved)}>
-          <Button
-            onClick={savePlaybook}
-            label={isSaved ? 'Save' : 'Save (you have unsaved changes)'}
-            icon={<FiSave />}
-          />
-        </div>
-        {userDataId && (
-          <Button
-            onClick={(e: React.MouseEvent) => {
-              e.preventDefault();
-              setIsMenuOpen(true);
-            }}
-            icon={<FiMenu />}
-            label='Open menu'
-          />
+        {!readOnly && (
+          <div className={clsx(!isSaved && styles.notSaved)}>
+            <Button
+              onClick={savePlaybook}
+              label={isSaved ? 'Save' : 'Save (you have unsaved changes)'}
+              icon={<FiSave />}
+            />
+          </div>
         )}
+        <Button
+          onClick={(e: React.MouseEvent) => {
+            e.preventDefault();
+            setIsMenuOpen(true);
+          }}
+          icon={<FiMenu />}
+          label='Open menu'
+        />
       </div>
       {isMenuOpen && userDataId && (
         <Menu userDataId={userDataId} onClose={onMenuClose} />

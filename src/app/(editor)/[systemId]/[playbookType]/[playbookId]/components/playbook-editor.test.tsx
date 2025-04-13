@@ -191,6 +191,9 @@ describe('PlaybookEditor', () => {
         />
       );
 
+      const saveBtn = screen.queryByLabelText('Save');
+      expect(saveBtn).toBeFalsy();
+
       const nameInput = screen.getByLabelText('Name');
       await user.click(nameInput);
       await user.keyboard('beatrice');
