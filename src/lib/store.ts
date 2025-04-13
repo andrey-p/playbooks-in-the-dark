@@ -1,8 +1,10 @@
 'use server';
 
 import { z } from 'zod';
-import { Resource } from 'sst';
-import { get, put, deleteItem } from './integrations/dynamodb';
+import { GetItemCommand } from 'dynamodb-toolbox/entity/actions/get';
+import { PutItemCommand } from 'dynamodb-toolbox/entity/actions/put';
+import { DeleteItemCommand } from 'dynamodb-toolbox/entity/actions/delete';
+import { UserData } from './dynamodb';
 import { nanoid } from 'nanoid';
 import { UserData as UserDataSchema } from '@/schemas';
 import { validateUserData } from './validation';
@@ -10,19 +12,15 @@ import { validateUserData } from './validation';
 type UserDataType = z.infer<typeof UserDataSchema>;
 
 export const getPlaybook = async (id: string) => {
-  const result = await get(Resource.playbookTable.name, { id });
+  const command = UserData.build(GetItemCommand).key({ id });
+  const { Item: result } = await command.send();
 
   return UserDataSchema.parse(result);
 };
 
 export const savePlaybook = async (data: UserDataType) => {
-  if (!data.id) {
-    data.id = nanoid();
-  }
-
-  if (!data.shareId) {
-    data.shareId = nanoid();
-  }
+  const id = data.id || nanoid();
+  const shareId = data.id || nanoid();
 
   try {
     validateUserData(data);
@@ -30,11 +28,17 @@ export const savePlaybook = async (data: UserDataType) => {
     throw new Error("Couldn't save playbook");
   }
 
-  await put(Resource.playbookTable.name, data);
+  const command = UserData.build(PutItemCommand).item({
+    ...data,
+    id,
+    shareId
+  });
+  await command.send();
 
-  return getPlaybook(data.id);
+  return getPlaybook(id);
 };
 
 export const deletePlaybook = async (id: string) => {
-  await deleteItem(Resource.playbookTable.name, { id });
+  const command = UserData.build(DeleteItemCommand).key({ id });
+  return command.send();
 };
