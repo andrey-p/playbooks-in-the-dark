@@ -50,6 +50,18 @@ The shape of these varies for every module, and is codified, again, by Zod schem
 
 ## Setting up for development
 
+### System development
+
+If all you want to do is add / tweak your favourite FitD system, you can just do:
+
+```
+npm install && npm run dev
+```
+
+Saving will not work.
+
+### More involved development
+
 This project is built with React and NextJS via [SST](https://sst.dev/) and so requires an AWS account. Once you've got your AWS credentials set up (under `playbooks-project-dev`), you can run this project locally in the usual style:
 
 ```
