@@ -110,7 +110,7 @@ export default function Playbook(props: Props) {
         <PlaybookActions
           isSaved={JSON.stringify(userData) === lastSaved}
           savePlaybook={save}
-          userDataId={userData.id}
+          userData={userData}
           readOnly={readOnly}
         />
       </header>

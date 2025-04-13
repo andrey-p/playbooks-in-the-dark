@@ -1,18 +1,22 @@
 import { useEffect, useCallback, useRef } from 'react';
+import { z } from 'zod';
 import styles from './menu.module.css';
 import Button from '../button';
 import CopyMenuItem from './copy-menu-item';
 import DeleteMenuItem from './delete-menu-item';
 
+import { UserData as UserDataSchema } from '@/schemas';
+
 import { FiX } from 'react-icons/fi';
 
+type UserDataType = z.infer<typeof UserDataSchema>;
 type Props = {
-  userDataId: string;
+  userData: UserDataType;
   onClose: () => void;
 };
 
 export default function Menu(props: Props) {
-  const { userDataId, onClose } = props;
+  const { userData, onClose } = props;
   const containerRef = useRef<HTMLDivElement>(null);
 
   // close on click out
@@ -49,14 +53,16 @@ export default function Menu(props: Props) {
         <Button onClick={onClose} label='Close menu' icon={<FiX />} />
       </div>
 
-      <ul className={styles.menuList}>
-        <li className={styles.menuItem}>
-          <CopyMenuItem userDataId={userDataId} />
-        </li>
-        <li className={styles.menuItem}>
-          <DeleteMenuItem userDataId={userDataId} />
-        </li>
-      </ul>
+      {userData.id && (
+        <ul className={styles.menuList}>
+          <li className={styles.menuItem}>
+            <CopyMenuItem userDataId={userData.id} />
+          </li>
+          <li className={styles.menuItem}>
+            <DeleteMenuItem userDataId={userData.id} />
+          </li>
+        </ul>
+      )}
 
       <h3 className={styles.explainerHeading}>How does saving work?</h3>
       <p className={styles.explainerP}>
