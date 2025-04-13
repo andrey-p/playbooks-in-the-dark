@@ -1,7 +1,7 @@
 {
   "id": "posse",
   "name": "Posse",
-  "playbooks": ["hellstone-scavengers"],
+  "playbooks": ["hellstone-scavengers", "outlaw-posse"],
   "layout": [[
     ["name", "reputation"],
     "hideout",
@@ -80,8 +80,8 @@
       "type": "radioGroup",
       "label": "Hold",
       "props": {
-        "type": "rectangle",
-        "size": 30,
+        "type": "rhombus",
+        "size": 25,
         "options": [
           { "id": "weak", "name": "Weak" },
           { "id": "strong", "name": "Strong" }
