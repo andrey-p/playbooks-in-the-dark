@@ -102,7 +102,7 @@
       "abilities": [
         {
           "id": "heigh-ho",
-          "name": "Heigh-ho",
+          "name": "Heigh-Ho",
           "description": "Each PC may add +1 Action rating to Attune, Disable, or Prowl (up to a max rating of 3)."
         },
         {
@@ -122,12 +122,12 @@
         },
         {
           "id": "got used to the strange life",
-          "name": "Got used to the strange life",
+          "name": "Got Used to the Strange Life",
           "description": "You get +1d to resistance rolls against supernatural threats including Delving Too Deep. You get +1d to healing rolls when you have supernatural harm."
         },
         {
           "id": "undue hellish confidence",
-          "name": "Undue hellish confidence",
+          "name": "Undue Hellish Confidence",
           "description": "No one can beat your Posse as long you have Hellstone around (at least it feels this way). Once per run you may regain 1 Grit if you make a Mutation Roll."
         },
         {

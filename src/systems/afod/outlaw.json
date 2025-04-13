@@ -24,7 +24,7 @@
       "abilities": [
         {
           "id": "one of those days",
-          "name": "One of those days",
+          "name": "One of Those Days",
           "description": "You may expend your special armor to resist a consequence from a desperate roll, or to escape from whatever (or to wherever) you want... for now."
         },
         {
@@ -34,7 +34,7 @@
         },
         {
           "id": "didnt see that coming",
-          "name": "Didn't see that coming",
+          "name": "Didn't See that Coming",
           "description": "When you make a surprising move that disregards propriety or other convention, you get +1d or +1 effect (your choice, as appropriate)."
         },
         {
@@ -49,12 +49,12 @@
         },
         {
           "id": "some fine reputation",
-          "name": "Some fine reputation",
+          "name": "Some Fine Reputation",
           "description": "Entering a location you may tell us what the people have heard about you. When you reveal your name and exploit your reputation you gain improved position or +1 effect (whatever makes sense)."
         },
         {
           "id": "blaze of glory",
-          "name": "Blaze of glory",
+          "name": "Blaze of Glory",
           "description": "When you mark a Stigma and utter a dying malediction you may retaliate against any and all enemies within range. Say how you bring ruin to your foes before they take you down. You may mark a Stigma prematurely to use this ability."
         },
         {

@@ -23,7 +23,7 @@
       "abilities": [
         {
           "id": "god save me from friends",
-          "name": "God save me from friends",
+          "name": "God Save Me from Friends",
           "description": "You may expend your special armor to resist a consequence for a teammate, or to push yourself when you gather information or work on a Long-term Project. When you use it to resist you don’t have to be present to use this ability, say how you prepared for this situation in the past."
         },
         {
@@ -33,27 +33,27 @@
         },
         {
           "id": "planning is everything",
-          "name": "Planning is everything",
+          "name": "Planning Is Everything",
           "description": "Due to your careful planning, during Downtime, you may give yourself or another Posse member +1 Downtime Action."
         },
         {
           "id": "runs in the family",
-          "name": "Runs in the family",
+          "name": "Runs in the Family",
           "description": "During Downtime, you get +1 result level when you acquire an asset or reduce Doom. You may choose ’distant cousin’ as an asset arriving by train."
         },
         {
           "id": "weaving the web",
-          "name": "Weaving the web",
+          "name": "Weaving the Web",
           "description": "’By failing to prepare, you are preparing to fail.’ You gain +1d to Consort when you gather information on a target for a run. You get +1d to the engagement roll for that operation. When the engagement roll is 6, gain 1 Grit."
         },
         {
           "id": "old friends everywhere",
-          "name": "Old friends everywhere",
+          "name": "Old Friends Everywhere",
           "description": "When you come to a new town or settlement, name a Friend, Connection, Vice Purveyor, or Enemy you have here. Tell us a story about how you met and about your relationship."
         },
         {
           "id": "fingers in every pie",
-          "name": "Fingers in every pie",
+          "name": "Fingers in Every Pie",
           "description": "At the end of each Downtime phase, you earn +2 Ablass."
         },
         {

@@ -24,7 +24,7 @@
       "abilities": [
         {
           "id": "walk through the valley",
-          "name": "Walk through the valley",
+          "name": "Walk through the Valley",
           "description": "You may expend your special armor to resist a supernatural consequence, or to push yourself when dealing with Hell’s forces."
         },
         {
@@ -34,7 +34,7 @@
         },
         {
           "id": "a dog's nose",
-          "name": "A dog's nose",
+          "name": "A Dog's Nose",
           "description": "You always sense the tainted. Take +1d when you gather info to uncover corruption or find the corrupted."
         },
         {
