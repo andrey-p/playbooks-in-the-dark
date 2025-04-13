@@ -33,9 +33,12 @@ export default function ItemList(props: Props) {
         });
 
         return (
-          <div key={group.id || ''}>
+          <div
+            key={group.id || ''}
+            className={clsx(group.id && `group-${group.id}`)}
+          >
             {group.name && <div className={styles.groupName}>{group.name}</div>}
-            <ul className={styles.list}>
+            <ul className={clsx(styles.list, 'item-list')}>
               {itemsForGroup.map((item: ItemType) => (
                 <li
                   className={clsx(

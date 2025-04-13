@@ -10,6 +10,27 @@
     font-size: 1.2rem;
   }
 
+  /*
+   * in AFOD, each coin entry is its own tracker,
+   * worth 1 squares (for coin) or 2 squares (for hellstone)
+   *
+   * this affects both characters and posses
+   */
+  .items.coin {
+    .item-list {
+      flex-direction: row;
+
+      & > li {
+        width: auto;
+        margin-right: 0.3rem;
+      }
+
+      .tracker-container {
+        flex-direction: column;
+      }
+    }
+  }
+
   /* CHARACTERS */
   &.character {
     .column:nth-child(1) {
@@ -27,10 +48,8 @@
       width: 20%;
     }
 
-    .multiTracker.coin {
-      .ablass {
-        max-width: 250px;
-      }
+    .tracker.ablass {
+      max-width: 250px;
     }
   }
 
@@ -46,21 +65,12 @@
       width: 40%;
     }
 
-    .multiTracker.coin {
-      .tracker-container {
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: 50px;
-        align-content: start;
-      }
-
-      .tracker-toggle {
-        padding-right: 0.3rem;
-      }
-
-      .vault {
-        .tracker-toggle:nth-child(7) {
+    .items.coin {
+      .group-vault {
+        /* separator between two vault upgrades */
+        .item-list > li:nth-child(4) {
           padding-right: 0.8rem;
+          margin-right: 0.8rem;
           position: relative;
 
           &:after {

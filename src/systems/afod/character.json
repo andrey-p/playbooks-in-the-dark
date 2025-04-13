@@ -25,6 +25,7 @@
     "items"
   ], [
     "coin",
+    "ablass",
     "ratings"
   ]],
   "modules": {
@@ -259,22 +260,26 @@
     },
     "coin": {
       "id": "coin",
-      "type": "multiTracker",
+      "type": "items",
       "label": "Coin",
       "props": {
-        "trackers": {
-          "coin": {
-            "max": 8,
-            "type": "square",
-            "label": "Coin"
-          },
-          "ablass": {
-            "max": 40,
-            "type": "square",
-            "wrap": true,
-            "label": "Ablass"
-          }
-        }
+        "common": [
+          { "id": "coin1", "name": "", "load": 2, "showLinked": false },
+          { "id": "coin2", "name": "", "load": 2, "showLinked": false },
+          { "id": "coin3", "name": "", "load": 2, "showLinked": false },
+          { "id": "coin4", "name": "", "load": 2, "showLinked": false }
+        ]
+      }
+    },
+    "ablass": {
+      "id": "ablass",
+      "type": "tracker",
+      "label": "Ablass",
+      "props": {
+        "max": 40,
+        "type": "square",
+        "wrap": true,
+        "label": "Ablass"
       }
     },
     "specialAbilities": {

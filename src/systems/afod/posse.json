@@ -58,21 +58,32 @@
     },
     "coin": {
       "id": "coin",
-      "type": "multiTracker",
+      "type": "items",
       "label": "Coin",
       "props": {
-        "trackers": {
-          "coin": {
-            "max": 8,
-            "type": "square",
-            "label": "Coin"
-          },
-          "vault": {
-            "max": 24,
-            "type": "square",
-            "label": "Vault"
-          }
-        }
+        "groups": [
+          { "id": "coin", "name": "Coin" },
+          { "id": "vault", "name": "Vault" }
+        ],
+        "common": [
+          { "id": "coin1", "name": "", "load": 2, "showLinked": false, "group": "coin" },
+          { "id": "coin2", "name": "", "load": 2, "showLinked": false, "group": "coin" },
+          { "id": "coin3", "name": "", "load": 2, "showLinked": false, "group": "coin" },
+          { "id": "coin4", "name": "", "load": 2, "showLinked": false, "group": "coin" },
+
+          { "id": "vault1", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault2", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault3", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault4", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault5", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault6", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault7", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault8", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault9", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault10", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault11", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault12", "name": "", "load": 2, "showLinked": false, "group": "vault" }
+        ]
       }
     },
     "hold": {
