@@ -68,27 +68,6 @@ This project is built with React and NextJS via [SST](https://sst.dev/) and so r
 npm install && npm start
 ```
 
-## Rough roadmap
-
-Running up to a tentative beta release:
-
-- [x] set up production site
-- [x] add mobile support
-- [x] data entry for BitD characters
-- [x] improve character saving flow
-- [x] add BitD crews
-- [x] add user-friendly error handling
-- [ ] add the first non-bitd system
-- [ ] add loading states
-
-Future:
-
-- [ ] add support for Deep Cuts content
-- [ ] improve saved playbook ownership model
-- [ ] add auto-update for anyone else viewing the same playbook
-- [ ] better accessibility
-- [ ] translation support
-
 ## License
 
 All Blades in the Dark content (and Forged in the Dark content, too) is attributed thusly:
