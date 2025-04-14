@@ -55,10 +55,10 @@ The shape of these varies for every module, and is codified, again, by Zod schem
 If all you want to do is add / tweak your favourite FitD system, you can just do:
 
 ```
-npm install && npm run dev
+npm install && npm run system-dev
 ```
 
-Saving will not work.
+Note: Any attempt at saving stuff will fail.
 
 ### More involved development
 
