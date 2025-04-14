@@ -81,20 +81,23 @@ export default function Menu(props: Props) {
 
       <h3 className={styles.explainerHeading}>How does saving work?</h3>
       <p className={styles.explainerP}>
-        After saving a playbook for the first time, you can copy either an
-        editable link or a read-only link.
+        After saving a playbook for the first time, you can copy either an{' '}
+        <strong>editable link</strong> or a <strong>read-only link</strong>.
       </p>
       <p className={styles.explainerP}>
-        The editable link allows anyone to update (and potentially delete!) your
-        playbook. Only send it to your close allies and your inner circle.
+        The <strong>editable link</strong> allows anyone to update (and
+        potentially delete!) your playbook. Only send it to yourself and your
+        close allies.
       </p>
       <p className={styles.explainerP}>
-        The read-only link allows anyone to look at, but not mess with, your
-        playbook. Send it to acquaintances and potential turncoats.
+        The <strong>read-only link</strong> allows anyone to look at, but not
+        mess with, your playbook. Send it to acquaintances and potential
+        turncoats.
       </p>
       <p className={styles.explainerP}>
         The linked playbooks on the homepage are stored in your browser&apos;s
-        local storage.
+        local storage. To access a playbook on a different device, use an{' '}
+        <strong>editable link</strong>.
       </p>
       <p className={styles.explainerP}>
         There is currently no way to assert ownership of a saved playbook. Hate
