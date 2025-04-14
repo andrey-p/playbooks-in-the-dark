@@ -1,1 +1,1 @@
-export { default as UserData } from './user-data';
+export * as UserData from './user-data';

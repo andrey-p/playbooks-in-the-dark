@@ -10,7 +10,13 @@ const docClient = DynamoDBDocumentClient.from(client);
 const UserDataTable = new Table({
   name: Resource.playbookTable.name,
   partitionKey: { name: 'id', type: 'string' },
-  documentClient: docClient
+  documentClient: docClient,
+  indexes: {
+    shareIndex: {
+      type: 'global',
+      partitionKey: { name: 'shareId', type: 'string' }
+    }
+  }
 });
 
 const UserDataSchema = s.item({
@@ -45,4 +51,8 @@ const UserDataEntity = new Entity({
   timestamps: false
 });
 
-export default UserDataEntity;
+export {
+  UserDataEntity as Entity,
+  UserDataTable as Table,
+  UserDataSchema as Schema
+};
