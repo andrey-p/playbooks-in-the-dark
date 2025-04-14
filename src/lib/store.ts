@@ -21,7 +21,8 @@ export const getPlaybook = async (id: string) => {
 
 export const getPlaybookByShareId = async (shareId: string) => {
   const command = UserData.Table.build(QueryCommand).query({
-    partition: shareId
+    partition: shareId,
+    index: 'shareIndex'
   });
   const { Items: result } = await command.send();
 
