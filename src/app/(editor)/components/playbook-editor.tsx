@@ -70,12 +70,14 @@ export default function Playbook(props: Props) {
     // if this is a new character being saved, store the newly created ID in local state
     if (!userData.id && data.id) {
       dispatch({ type: 'set_id', value: data.id });
-      if (data.shareId) {
-        dispatch({ type: 'set_share_id', value: data.shareId });
-      }
 
       // set the URL so the user can refresh or copy / paste without losing their character
       window.history.replaceState(null, '', pathName + '/' + data.id);
+    }
+
+    // likewise if the data didn't have a share ID before
+    if (!userData.shareId && data.shareId) {
+      dispatch({ type: 'set_share_id', value: data.shareId });
     }
   }, [userData, playbookData, playbookDefinition, pathName, readOnly]);
 
