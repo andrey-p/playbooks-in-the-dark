@@ -8,6 +8,9 @@ export default function userDataReducer(state: UserDataType, action: Action) {
   state = structuredClone(state);
 
   switch (action.type) {
+    case 'set_share_id':
+      state.shareId = action.value;
+      break;
     case 'set_id':
       state.id = action.value;
       break;

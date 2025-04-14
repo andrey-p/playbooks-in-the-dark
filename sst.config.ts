@@ -23,9 +23,13 @@ export default $config({
 
     const table = new sst.aws.Dynamo('playbookTable', {
       fields: {
-        id: 'string'
+        id: 'string',
+        shareId: 'string'
       },
-      primaryIndex: { hashKey: 'id' }
+      primaryIndex: { hashKey: 'id' },
+      globalIndexes: {
+        shareIndex: { hashKey: 'shareId' }
+      }
     });
 
     let domain = '';

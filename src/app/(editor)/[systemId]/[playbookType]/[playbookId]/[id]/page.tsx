@@ -1,6 +1,6 @@
 import { getJson } from '@/lib/system-data';
 import { NotFoundError } from '@/lib/errors';
-import PlaybookEditor from '../components/playbook-editor';
+import PlaybookEditor from '../../../../components/playbook-editor';
 import {
   PlaybookData as PlaybookDataSchema,
   PlaybookDefinition as PlaybookDefinitionSchema,

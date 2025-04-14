@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation';
 import { getJson } from '@/lib/system-data';
 import { NotFoundError } from '@/lib/errors';
 import {
@@ -5,31 +6,33 @@ import {
   PlaybookDefinition as PlaybookDefinitionSchema,
   System as SystemSchema
 } from '@/schemas';
-import PlaybookEditor from '../../../components/playbook-editor';
-import { notFound } from 'next/navigation';
-
-type Params = {
-  systemId: string;
-  playbookType: string;
-  playbookId: string;
-};
+import PlaybookEditor from '../../components/playbook-editor';
+import { getPlaybookByShareId } from '@/lib/store';
 
 type Props = {
-  params: Promise<Params>;
+  params: Promise<{ shareId: string }>;
 };
 
 export default async function Page(props: Props) {
-  const { playbookId, systemId, playbookType } = await props.params;
+  const { shareId } = await props.params;
+
+  const userData = await getPlaybookByShareId(shareId);
+
+  if (!userData) {
+    return notFound();
+  }
 
   let systemData;
   let playbookData;
   let playbookDefinition;
 
   try {
-    systemData = SystemSchema.parse(getJson(systemId, 'system'));
-    playbookData = PlaybookDataSchema.parse(getJson(systemId, playbookId));
+    systemData = SystemSchema.parse(getJson(userData.systemId, 'system'));
+    playbookData = PlaybookDataSchema.parse(
+      getJson(userData.systemId, userData.playbookId)
+    );
     playbookDefinition = PlaybookDefinitionSchema.parse(
-      getJson(systemId, playbookType)
+      getJson(userData.systemId, userData.playbookType)
     );
   } catch (e) {
     if (e instanceof NotFoundError) {
@@ -39,18 +42,16 @@ export default async function Page(props: Props) {
     throw e;
   }
 
+  // don't give out the main ID when sharing
+  delete userData.id;
+
   return (
     <PlaybookEditor
       systemData={systemData}
       playbookData={playbookData}
       playbookDefinition={playbookDefinition}
-      userData={{
-        id: undefined,
-        playbookType,
-        systemId: systemData.id,
-        playbookId: playbookData.id,
-        modules: {}
-      }}
+      userData={userData}
+      readOnly
     />
   );
 }

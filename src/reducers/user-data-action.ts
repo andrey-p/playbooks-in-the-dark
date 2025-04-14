@@ -13,6 +13,10 @@ type Action =
   | {
       type: 'set_id';
       value: string;
+    }
+  | {
+      type: 'set_share_id';
+      value: string;
     };
 
 export default Action;

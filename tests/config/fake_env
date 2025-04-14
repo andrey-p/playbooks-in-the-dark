@@ -1,0 +1,4 @@
+# source this to fake some SST env variables
+# dynamodb will fail at runtime, but at least the Next app will compile OK
+SST_RESOURCE_App={}
+SST_RESOURCE_playbookTable=\{\"name\":\ \"foo\"\}
