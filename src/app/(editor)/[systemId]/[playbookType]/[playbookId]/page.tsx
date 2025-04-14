@@ -5,7 +5,7 @@ import {
   PlaybookDefinition as PlaybookDefinitionSchema,
   System as SystemSchema
 } from '@/schemas';
-import PlaybookEditor from './components/playbook-editor';
+import PlaybookEditor from '../../../components/playbook-editor';
 import { notFound } from 'next/navigation';
 
 type Params = {

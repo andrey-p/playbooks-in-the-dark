@@ -1,14 +1,14 @@
 import { redirect, notFound } from 'next/navigation';
-import { getPlaybook } from '@/lib/store';
+import { getPlaybookByShareId } from '@/lib/store';
 
 type Props = {
-  params: Promise<{ id: string }>;
+  params: Promise<{ shareId: string }>;
 };
 
 export default async function Page(props: Props) {
-  const { id } = await props.params;
+  const { shareId } = await props.params;
 
-  const data = await getPlaybook(id);
+  const data = await getPlaybookByShareId(shareId);
 
   if (!data) {
     return notFound();
