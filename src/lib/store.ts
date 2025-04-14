@@ -34,7 +34,7 @@ export const getPlaybookByShareId = async (shareId: string) => {
 
 export const savePlaybook = async (data: UserDataType) => {
   const id = data.id || nanoid();
-  const shareId = data.id || nanoid();
+  const shareId = data.shareId || nanoid();
 
   try {
     validateUserData(data);
