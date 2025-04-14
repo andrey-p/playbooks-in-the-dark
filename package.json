@@ -11,7 +11,7 @@
     "prettier": "prettier . --write",
     "system-dev": "set -a && . ./tests/config/fake_env && npm run dev",
     "check-build": "set -a && . ./tests/config/fake_env && npm run build",
-    "ci": "npm run test && npm run lint && tsc && npm run checkbuild && prettier . -c"
+    "ci": "npm run test && npm run lint && tsc && npm run check-build && prettier . -c"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.758.0",
