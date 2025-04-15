@@ -5,7 +5,8 @@ export const ToggleType = z.enum([
   'dagger',
   'rhombus',
   'triangle',
-  'square'
+  'square',
+  'rectangle'
 ]);
 export const ToggleProps = z.object({
   type: ToggleType,

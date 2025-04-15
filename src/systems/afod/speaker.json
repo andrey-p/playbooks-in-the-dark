@@ -1,0 +1,78 @@
+{
+  "id": "speaker",
+  "name": "The Speaker",
+  "description": "A spiritual guide & protector",
+  "modules": {
+    "ratings": {
+      "startingRatings": {
+        "read": 1,
+        "attune": 1,
+        "consort": 1
+      }
+    },
+    "items": {
+      "custom": [
+        { "id": "a symbol of your faith", "name": "A Symbol of Your Faith", "load": 0 },
+        { "id": "an instrument of your faith", "name": "An Instrument of Your Faith", "load": 1 },
+        { "id": "blessed implements for a ritual", "name": "Blessed Implements for a Ritual", "load": 1 },
+        { "id": "a confession of old", "name": "A Confession of Old", "load": 0 },
+        { "id": "fine garments of ceremony", "name": "Fine Garments of Ceremony", "load": 1 },
+        { "id": "concealed palm pistol or blade", "name": "Concealed Palm Pistol or Blade", "load": 1 }
+      ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "walk through the valley",
+          "name": "Walk through the Valley",
+          "description": "You may expend your special armor to resist a supernatural consequence, or to push yourself when dealing with Hell’s forces."
+        },
+        {
+          "id": "shepherd",
+          "name": "Shepherd",
+          "description": "You can push yourself to do one of the following: <em>perform a feat of social grace</em>, <em>swaying a crowd</em>, or <em>capturing the attention of the Divine</em>."
+        },
+        {
+          "id": "a dog's nose",
+          "name": "A Dog's Nose",
+          "description": "You always sense the tainted. Take +1d when you gather info to uncover corruption or find the corrupted."
+        },
+        {
+          "id": "hallow",
+          "name": "Hallow",
+          "description": "You can push yourself to imbue an object or a place with divine power. Gain Potency when it comes up against the supernatural."
+        },
+        {
+          "id": "curandero",
+          "name": "Curandero",
+          "description": "When you receive an earnest oath from someone to follow one of your Faith’s precepts, they may clear any level of severity of harm, immediately or safely over a short while, you decide. Should they ever break the precept, they take level 2 harm, ’Bedamned’."
+        },
+        {
+          "id": "eli",
+          "name": "Eli",
+          "description": "One of your senses is so attuned to the world around you, that it can stand in for any one of your others. Get +1d to any Action you can mount as a surprise of this unexpected ability or where others are found lacking."
+        },
+        {
+          "id": "premonition",
+          "name": "Premonition",
+          "description": "Have one flashback per session to a vision, dream, prayer, or meditation that now comes together and has prepared you for this very moment. The first Grit spent this way is free."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another source."
+        }
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "nathaniel", "name": "Nathaniel, an atoned sinner" },
+        { "id": "patience", "name": "Patience, a lawyer" },
+        { "id": "cyrus", "name": "Cyrus, a gunslinger" },
+        { "id": "mistress bethia", "name": "Mistress Bethia" },
+        { "id": "speaks with the wind", "name": "Speaks with the Wind" }
+      ]
+    }
+  }
+}

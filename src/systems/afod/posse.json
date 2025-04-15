@@ -1,0 +1,230 @@
+{
+  "id": "posse",
+  "name": "Posse",
+  "playbooks": ["hellstone-scavengers", "outlaw-posse", "bounty-hunters", "tribe"],
+  "layout": [[
+    ["name", "reputation"],
+    "hideout",
+    "coin",
+    "repClaims",
+    ["tier", "hold"],
+    ["doom", "riders"],
+    "achievements",
+    "cohorts"
+  ], [
+    "posseXp",
+    "specialAbilities",
+    "modus",
+    "contacts",
+    "posseUpgrades"
+  ]],
+  "modules": {
+    "name": {
+      "id": "name",
+      "type": "textField",
+      "label": "Name"
+    },
+    "reputation": {
+      "id": "reputation",
+      "type": "textField",
+      "label": "Reputation"
+    },
+    "hideout": {
+      "id": "hideout",
+      "type": "textField",
+      "label": "Hideout"
+    },
+    "repClaims": {
+      "id": "repClaims",
+      "type": "multiTracker",
+      "label": "Reputation & Claims",
+      "props": {
+        "trackers": {
+          "rep": {
+            "max": 12,
+            "type": "rectangle",
+            "size": 30,
+            "label": "Rep"
+          },
+          "claims": {
+            "max": 3,
+            "reverse": true,
+            "size": 12,
+            "type": "square",
+            "label": "Claims"
+          }
+        }
+      }
+    },
+    "coin": {
+      "id": "coin",
+      "type": "items",
+      "label": "Coin",
+      "props": {
+        "groups": [
+          { "id": "coin", "name": "Coin" },
+          { "id": "vault", "name": "Vault" }
+        ],
+        "common": [
+          { "id": "coin1", "name": "", "load": 2, "showLinked": false, "group": "coin" },
+          { "id": "coin2", "name": "", "load": 2, "showLinked": false, "group": "coin" },
+          { "id": "coin3", "name": "", "load": 2, "showLinked": false, "group": "coin" },
+          { "id": "coin4", "name": "", "load": 2, "showLinked": false, "group": "coin" },
+
+          { "id": "vault1", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault2", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault3", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault4", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault5", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault6", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault7", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault8", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault9", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault10", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault11", "name": "", "load": 2, "showLinked": false, "group": "vault" },
+          { "id": "vault12", "name": "", "load": 2, "showLinked": false, "group": "vault" }
+        ]
+      }
+    },
+    "hold": {
+      "id": "hold",
+      "type": "radioGroup",
+      "label": "Hold",
+      "props": {
+        "type": "rhombus",
+        "size": 25,
+        "options": [
+          { "id": "weak", "name": "Weak" },
+          { "id": "strong", "name": "Strong" }
+        ]
+      }
+    },
+    "tier": {
+      "id": "tier",
+      "type": "tracker",
+      "label": "Tier",
+      "props": {
+        "type": "square",
+        "max": 4
+      }
+    },
+    "doom": {
+      "id": "doom",
+      "type": "tracker",
+      "label": "Doom",
+      "props": {
+        "type": "square",
+        "max": 10
+      }
+    },
+    "riders": {
+      "id": "riders",
+      "type": "tracker",
+      "label": "Riders",
+      "props": {
+        "type": "square",
+        "max": 4
+      }
+    },
+    "achievements": {
+      "id": "achievements",
+      "type": "claims",
+      "label": "Achievements"
+    },
+    "posseXp": {
+      "id": "posseXp",
+      "type": "tracker",
+      "label": "Posse XP",
+      "props": {
+        "max": 8,
+        "type": "rectangle",
+        "size": 30
+      }
+    },
+    "specialAbilities": {
+      "id": "specialAbilities",
+      "type": "specialAbilities",
+      "label": "Special abilities"
+    },
+    "contacts": {
+      "id": "contacts",
+      "type": "contacts",
+      "label": "Contacts"
+    },
+    "modus": {
+      "id": "modus",
+      "type": "textField",
+      "label": "Modus"
+    },
+    "posseUpgrades": {
+      "id": "posseUpgrades",
+      "type": "items",
+      "label": "Posse Upgrades",
+      "props": {
+        "twoColumns": true,
+        "groups": [
+          { "id": "hideout", "name": "Hideout" },
+          { "id": "training", "name": "Training" },
+          { "id": "quality", "name": "Quality" }
+        ],
+        "common": [
+          { "id": "carriage", "name": "Carriage", "load": 2, "showLinked": false, "group": "hideout" },
+          { "id": "hidden", "name": "Hidden", "load": 1, "group": "hideout" },
+          { "id": "quarters", "name": "Quarters", "load": 1, "group": "hideout" },
+          { "id": "secure", "name": "Secure", "load": 2, "showLinked": false, "group": "hideout" },
+          { "id": "vault", "name": "Vault", "load": 2, "showLinked": false, "group": "hideout" },
+          { "id": "escape tunnel", "name": "Escape Tunnel", "load": 1, "group": "hideout" },
+          { "id": "workshop", "name": "Workshop", "load": 1, "group": "hideout" },
+          { "id": "rail connection", "name": "Rail Connection", "load": 1, "group": "hideout" },
+          { "id": "hellstone storage", "name": "Hellstone Storage", "load": 2, "showLinked": false, "group": "hideout" },
+
+          { "id": "documents", "name": "Documents", "load": 1, "group": "quality" },
+          { "id": "gear", "name": "Gear", "load": 1, "group": "quality" },
+          { "id": "implements", "name": "Implements", "load": 1, "group": "quality" },
+          { "id": "supplies", "name": "Supplies", "load": 1, "group": "quality" },
+          { "id": "weapons", "name": "Weapons", "load": 1, "group": "quality" },
+          { "id": "tools", "name": "Tools", "load": 1, "group": "quality" },
+
+          { "id": "wit", "name": "Wit", "load": 1, "group": "training" },
+          { "id": "prowess", "name": "Prowess", "load": 1, "group": "training" },
+          { "id": "guts", "name": "Guts", "load": 1, "group": "training" },
+          { "id": "personal", "name": "Personal", "load": 1, "group": "training" },
+          { "id": "mastery", "name": "Mastery", "load": 4, "group": "training" }
+        ]
+      }
+    },
+    "cohorts": {
+      "id": "cohorts",
+      "type": "cohorts",
+      "label": "Cohorts",
+      "props": {
+        "slots": 4,
+        "radioGroups": {
+          "gangExpert": {
+            "type": "circle",
+            "options": [
+              { "id": "gang", "name": "Gang" },
+              { "id": "expert", "name": "Expert" }
+            ]
+          },
+          "harm": {
+            "type": "rectangle",
+            "size": 30,
+            "options": [
+              { "id": "weak", "name": "Weak" },
+              { "id": "impaired", "name": "Impaired" },
+              { "id": "broken", "name": "Broken" }
+            ]
+          },
+          "armor": {
+            "type": "rectangle",
+            "size": 30,
+            "options": [
+              { "id": "armor", "name": "Armor" }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

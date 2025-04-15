@@ -1,0 +1,78 @@
+{
+  "id": "gamble",
+  "name": "The Gamble",
+  "description": "A subtle manipulator & sly trickster",
+  "modules": {
+    "ratings": {
+      "startingRatings": {
+        "sling": 1,
+        "consort": 1,
+        "sway": 1
+      }
+    },
+    "items": {
+      "custom": [
+        { "id": "a fine extravagant melee weapon", "name": "A Fine Extravagant Melee Weapon", "load": 1 },
+        { "id": "fine playing cards & dice", "name": "Fine Playing Cards & Dice", "load": 0 },
+        { "id": "fine clothes and jewelry", "name": "Fine Clothes and Jewelry", "load": 1 },
+        { "id": "a set of won valuable documents", "name": "A Set of Won Valuable Documents", "load": 1 },
+        { "id": "a fine story", "name": "A Fine Story", "load": 0 },
+        { "id": "a small token of luck", "name": "A Small Token of Luck", "load": 0 }
+      ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "all eyes on me",
+          "name": "All Eyes on... Me!",
+          "description": "You may expend your special armor to resist an allied characters consequence from detection, or to push yourself to impress others. You can always make a grand entrance."
+        },
+        {
+          "id": "gamblers gift",
+          "name": "Gamblers Gift",
+          "description": "When someone fools you or takes you by surprise, gain a free 1 Grit flashback. When you gather information while partying or gambling, gain +1 Effect."
+        },
+        {
+          "id": "cutting cards",
+          "name": "Cutting Cards",
+          "description": "Your skill with cards is mesmerizing. While you perform a card trick, you may alter a memory, implant a suggestion, or sow a doubt. You may use your playing cards as dangerous throwing weapons."
+        },
+        {
+          "id": "heart of the cards",
+          "name": "Heart of the Cards",
+          "description": "When you accept Position and Effect given by the GM for a roll as is and just let the dice decide, don’t spend any Grit, or push the situation (you can still accept a Devil’s Bargain), regain 1 Grit."
+        },
+        {
+          "id": "fight with panache",
+          "name": "Fight with Panache",
+          "description": "When you fight in a duel, bystanders won’t interfere. If you use Sling while being in close combat, gain +1 Effect."
+        },
+        {
+          "id": "saloon swagger",
+          "name": "Saloon Swagger",
+          "description": "Gain +1d in situations where your appearance would be an advantage. If you try to sway someone with a profitable proposition or challenge others to a duel, gain Potency."
+        },
+        {
+          "id": "miss fortune",
+          "name": "Miss Fortune",
+          "description": "Some call you lucky but truth be told, bad shit just happens to folk, who try to mess with you. You may win every game of chance. Spend 1 Grit to cause a minor accident (a jammed gun), 2 for a major one (an exploding stick of dynamite) or 3 for a catastrophe (a collapsing mine shaft). During Payout, gain +Doom equal to the highest amount of Grit spent this way."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another source."
+        }
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "zane cooper", "name": "Zane Cooper, a croupier" },
+        { "id": "mrs millie", "name": "Mrs. Millie, a madam" },
+        { "id": "dandy jim buckley", "name": "'Dandy Jim' Buckley, a con artist " },
+        { "id": "sly eddison", "name": "Sly Eddison, a cardsharp" },
+        { "id": "owen oneill", "name": "Owen O'Neill, a moonshiner" }
+      ]
+    }
+  }
+}

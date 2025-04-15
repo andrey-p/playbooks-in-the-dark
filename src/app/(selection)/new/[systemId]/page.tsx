@@ -62,7 +62,13 @@ export default async function Page(props: Props) {
       <Separator />
       <div className={styles.systemBlurb}>
         <h2 className={styles.heading}>{systemData.name}</h2>
-        <p>{systemData.description}</p>
+        {systemData.attribution && (
+          <p className={styles.attribution}>{systemData.attribution}</p>
+        )}
+        <p className={styles.p}>{systemData.description}</p>
+        <a href={systemData.website} target='_blank'>
+          Go to website
+        </a>
       </div>
       <Separator />
 

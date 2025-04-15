@@ -1,0 +1,78 @@
+{
+  "id": "fist",
+  "name": "The Fist",
+  "description": "Like a cobra ready to strike",
+  "modules": {
+    "ratings": {
+      "startingRatings": {
+        "sling": 1,
+        "prowl": 1,
+        "brawl": 1
+      }
+    },
+    "items": {
+      "custom": [
+        { "id": "fine hand weapon", "name": "Fine Hand Weapon", "load": 1 },
+        { "id": "fine heavy weapon", "name": "Fine Heavy Weapon", "load": 1 },
+        { "id": "scary weapon or tool", "name": "Scary Weapon or Tool", "load": 1 },
+        { "id": "picture of a lost love", "name": "Picture of a lost love", "load": 1 },
+        { "id": "bottle of whiskey", "name": "Bottle of Whiskey", "load": 1 },
+        { "id": "pack of bandages", "name": "Pack of Bandages", "load": 1 }
+      ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "is that all you got",
+          "name": "Is That All You Got?",
+          "description": "You may expend your special armor to avoid harm from an attack in combat, or to push yourself during a fight."
+        },
+        {
+          "id": "everybody's kung fu fighting",
+          "name": "Everybody's Kung Fu Fighting",
+          "description": "You can push yourself to do one of the following: <em>perform a feat of body control or physical force that verges on the superhuman</em> — <em>engage a small gang on equal footing in close combat</em>."
+        },
+        {
+          "id": "where does that come from",
+          "name": "Where Does That Come From?",
+          "description": "Once per run, you may have a 1 load item left regardless of previously used load. If you can use the surprise to your advantage, gain the initiative even vs. experts."
+        },
+        {
+          "id": "st anger",
+          "name": "St Anger",
+          "description": "When you open your body and soul to the Burning Beyond, you may imbue your hands, melee weapons, or tools with spirit energy. You gain Potency in combat vs. the supernatural. You may grapple with spirits to restrain and capture them."
+        },
+        {
+          "id": "health is better than wealth",
+          "name": "Health Is Better than Wealth",
+          "description": "You recover from harm faster. Permanently fill in one of your healing clock segments. Take +1d to healing treatment rolls."
+        },
+        {
+          "id": "man of honor",
+          "name": "Man of Honor",
+          "description": "You gain an additional XP trigger: You fought for your, or someone else’s honor at cost to yourself. If your Posse has problems due to this, also mark Posse XP."
+        },
+        {
+          "id": "bad ass kata",
+          "name": "Bad Ass Kata",
+          "description": "Describe how you show off and impress with your physical abilities. If you can exploit this performance for your next move, take improved position or +1 effect (your choice)."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another source."
+        }
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "jim-bob thornton", "name": "Jim-Bob Thornton, a Rancher" },
+        { "id": "jane", "name": "Jane, a Saloon Girl" },
+        { "id": "octavius slone", "name": "Octavius Slone, a Doctor" },
+        { "id": "master lee", "name": "Master Lee" },
+        { "id": "sergeant meyers", "name": "Sergeant Meyers, Fort Hubert" }
+      ]
+    }
+  }
+}

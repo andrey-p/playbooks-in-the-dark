@@ -32,6 +32,10 @@ export default function Toggle(props: Props) {
         <path d={`M 0,0 ${width},0 ${width},${height / 1.5} 0,${height} Z`} />
       );
       break;
+    case 'rectangle':
+      width = height / 2.5;
+      shape = <path d={`M 0,0 ${width},0 ${width},${height} 0,${height} Z`} />;
+      break;
     case 'circle':
       shape = <circle cy={width / 2} cx={width / 2} r={width / 2} />;
       break;

@@ -1,0 +1,79 @@
+{
+  "id": "outlaw",
+  "name": "The Outlaw",
+  "description": "A maverick & desperado beyond rules",
+  "modules": {
+    "ratings": {
+      "startingRatings": {
+        "survey": 1,
+        "sling": 1,
+        "brawl": 1
+      }
+    },
+    "items": {
+      "custom": [
+        { "id": "a fine pistol", "name": "A Fine Pistol", "load": 1 },
+        { "id": "a fine rifle or shotgun", "name": "A Fine Rifle or Shotgun", "load": 2 },
+        { "id": "a fine poncho or sombrero", "name": "A Fine Poncho or Sombrero", "load": 1 },
+        { "id": "a guitar case", "name": "A Guitar Case", "load": 1 },
+        { "id": "a fine spirit bane", "name": "A Fine Spirit Bane", "load": 0 },
+        { "id": "a small piece of hellstone", "name": "A Small Piece of Hellstone", "load": 0 }
+      ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "one of those days",
+          "name": "One of Those Days",
+          "description": "You may expend your special armor to resist a consequence from a desperate roll, or to escape from whatever (or to wherever) you want... for now."
+        },
+        {
+          "id": "now now now",
+          "name": "Now! Now! Now!",
+          "description": "When you push yourself, you may spend +1 Grit (so 3 Grit total) to gain both +1 effect and +1d instead of one or the other."
+        },
+        {
+          "id": "didnt see that coming",
+          "name": "Didn't See that Coming",
+          "description": "When you make a surprising move that disregards propriety or other convention, you get +1d or +1 effect (your choice, as appropriate)."
+        },
+        {
+          "id": "daredevil",
+          "name": "Daredevil",
+          "description": "When you roll a desperate action, you get +1d to your roll if you also take -1d to any resistance rolls against consequences from your action."
+        },
+        {
+          "id": "vengeful",
+          "name": "Vengeful",
+          "description": "You gain an additional XP trigger: You got payback against someone who harmed you or someone you care about. If your Posse helped you get payback, also mark Posse XP."
+        },
+        {
+          "id": "some fine reputation",
+          "name": "Some Fine Reputation",
+          "description": "Entering a location you may tell us what the people have heard about you. When you reveal your name and exploit your reputation you gain improved position or +1 effect (whatever makes sense)."
+        },
+        {
+          "id": "blaze of glory",
+          "name": "Blaze of Glory",
+          "description": "When you mark a Stigma and utter a dying malediction you may retaliate against any and all enemies within range. Say how you bring ruin to your foes before they take you down. You may mark a Stigma prematurely to use this ability."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another source."
+        }
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "polly gains", "name": "Polly Gains, a dealer" },
+        { "id": "father mathew", "name": "Father Mathew, a priest" },
+        { "id": "the kid", "name": "'The Kid', a bounty hunter" },
+        { "id": "a friend", "name": "a Friend you still owe money" },
+        { "id": "adolphus vasquez", "name": "Adolphus Vasquez, railroad worker" },
+        { "id": "rufus johnson", "name": "Rufus Johnson, a coachman" }
+      ]
+    }
+  }
+}

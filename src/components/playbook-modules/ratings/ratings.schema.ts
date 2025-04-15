@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
+import { TrackerProps } from '@/components/trackers/trackers.schema';
 
 export const Attribute = z.object({
   id: z.string(),
@@ -16,7 +17,8 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
     props: z.object({
       attributes: z.array(Attribute),
-      actions: z.array(Action)
+      actions: z.array(Action),
+      trackerProps: TrackerProps.optional()
     })
   })
 );

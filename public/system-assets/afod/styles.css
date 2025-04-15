@@ -1,0 +1,144 @@
+.afod {
+  /* GENERAL */
+  --font-display: var(--font-rubik-dirt);
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  /*
+   * in AFOD, each coin entry is its own tracker,
+   * worth 1 squares (for coin) or 2 squares (for hellstone)
+   *
+   * this affects both characters and posses
+   */
+  .items.coin {
+    .item-list {
+      flex-direction: row;
+
+      & > li {
+        width: auto;
+        margin-right: 0.3rem;
+      }
+
+      .tracker-container {
+        flex-direction: column;
+      }
+    }
+  }
+
+  /* CHARACTERS */
+  &.character {
+    .column:nth-child(1) {
+      width: 40%;
+      min-width: 350px;
+    }
+
+    .column:nth-child(2) {
+      min-width: 420px;
+      width: 40%;
+    }
+
+    .column:nth-child(3) {
+      min-width: 250px;
+      width: 20%;
+    }
+
+    .tracker.ablass {
+      max-width: 250px;
+    }
+  }
+
+  /* POSSES */
+  &.posse {
+    .column:nth-child(1) {
+      width: 60%;
+      min-width: 670px;
+    }
+
+    .column:nth-child(2) {
+      min-width: 500px;
+      width: 40%;
+    }
+
+    .items.coin {
+      .group-vault {
+        /* separator between two vault upgrades */
+        .item-list > li:nth-child(4) {
+          padding-right: 0.8rem;
+          margin-right: 0.8rem;
+          position: relative;
+
+          &:after {
+            content: '';
+            position: absolute;
+            border-right: 2px solid var(--foreground);
+            height: 50px;
+            right: 3px;
+            top: -1px;
+          }
+        }
+      }
+    }
+
+    .multiTracker.repClaims {
+      position: relative;
+
+      .rep {
+        padding-top: 1rem;
+      }
+
+      .claims {
+        position: absolute;
+        top: 2.2rem;
+        left: 151px;
+      }
+
+      .claims-label {
+        position: relative;
+        top: 36px;
+        text-align: right;
+      }
+    }
+
+    .claims.achievements {
+      --dark-box-bg: #333;
+      --dark-box-text: #fff;
+      --neutral-box-bg: #999;
+      --neutral-box-text: #000;
+      --light-box-bg: #fff;
+      --light-box-text: #000;
+
+      .claim-0-0,
+      .claim-0-1,
+      .claim-1-1,
+      .claim-0-2,
+      .claim-1-2 {
+        background-color: var(--dark-box-bg);
+        color: var(--dark-box-text);
+      }
+
+      .claim-1-0,
+      .claim-2-0,
+      .claim-2-1,
+      .claim-2-2,
+      .claim-3-2 {
+        background-color: var(--neutral-box-bg);
+        color: var(--neutral-box-text);
+      }
+
+      .claim-3-0,
+      .claim-4-0,
+      .claim-3-1,
+      .claim-4-1,
+      .claim-4-2 {
+        background-color: var(--light-box-bg);
+        color: var(--light-box-text);
+      }
+    }
+  }
+}

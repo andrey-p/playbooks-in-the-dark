@@ -1,0 +1,77 @@
+{
+  "id": "shot",
+  "name": "The Shot",
+  "description": "A deadly gunslinger and showman",
+  "modules": {
+    "ratings": {
+      "startingRatings": {
+        "sling": 2,
+        "sway": 1
+      }
+    },
+    "items": {
+      "custom": [
+        { "id": "fine & flashy pair of pistols", "name": "Fine & Flashy Pair of Pistols", "load": 1 },
+        { "id": "fine rifle", "name": "Fine Rifle", "load": 2 },
+        { "id": "lightning a fine horse", "name": "\"Lightning\", a Fine Horse", "load": 0 },
+        { "id": "special ammunition", "name": "Special Ammunition", "load": 1 },
+        { "id": "fine disguise kit", "name": "Fine Disguise Kit", "load": 1 },
+        { "id": "a message from an admirer", "name": "A Message from an Admirer", "load": 0 }
+      ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "smoke & mirrors",
+          "name": "Smoke & Mirrors",
+          "description": "You may expend your special armor to resist harm from combat, or appearing to die (fall off a vehicle, disappear in an explosion, etc.). only to reappear in a location of your choosing with a +1d to your next Action."
+        },
+        {
+          "id": "fancy dead eye",
+          "name": "Fancy Dead Eye",
+          "description": "You can push yourself to do one of the following: <em>make a ranged attack at extreme distance</em> — <em>perform an impossible shot (ricochet around the corner, trick shots, shot into/through a group of people)</em> — <em>have one last bullet no one counted for</em>."
+        },
+        {
+          "id": "eastwood",
+          "name": "Eastwood",
+          "description": "Before weapons are drawn, you may lock eyes with someone, forcing them to hesitate or flinch. Both of you know, that you can interrupt whatever they do next. Take +1d for your next Action against them."
+        },
+        {
+          "id": "lightning nerves of steel",
+          "name": "Lightning Nerves of Steel",
+          "description": "You may always shoot first. You may wait ’til the latest possible moment and still be the first to (re-)act."
+        },
+        {
+          "id": "silver bullets",
+          "name": "Silver Bullets",
+          "description": "You may enrich your shots with spirit energy. Your shots gain Potency in combat vs. the supernatural."
+        },
+        {
+          "id": "fill the air with lead",
+          "name": "Fill the Air with Lead",
+          "description": "Expend your Special Ammunition to do one of the following: <em>unleash a barrage of rapid fire to suppress the enemy</em> — <em> attack a group with +1 scale.</em>"
+        },
+        {
+          "id": "stunning performance",
+          "name": "Stunning Performance",
+          "description": "You can perform a flashy show with your weapons or horse, that leaves your audience stunned and speechless. Take +1 effect, to act on this impressed folks or on escape."
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another source."
+        }
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "arthur fog", "name": "Arthur Fog, a fake native or showman" },
+        { "id": "ralph bad egg horn", "name": "Ralph 'Bad Egg' Horn, a gun smith" },
+        { "id": "sam lucky eye freeman", "name": "Sam 'Lucky Eye' Freeman, a cowboy" },
+        { "id": "black hoof", "name": "Black Hoof, a native chief or hunter" },
+        { "id": "the great lo scalzo", "name": "The Great Lo Scalzo" }
+      ]
+    }
+  }
+}

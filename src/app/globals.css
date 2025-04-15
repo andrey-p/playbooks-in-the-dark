@@ -41,6 +41,13 @@ body {
   font-family: var(--font-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /*
+   * default fonts
+   * systems can overwrite these
+   */
+  --font-display: var(--font-goblin-one);
+  --font-text: var(--font-garamond);
 }
 
 input,

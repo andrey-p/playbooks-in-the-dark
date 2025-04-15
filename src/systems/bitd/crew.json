@@ -84,7 +84,7 @@
     "hold": {
       "id": "hold",
       "type": "radioGroup",
-      "label": "hold",
+      "label": "Hold",
       "props": {
         "type": "dagger",
         "size": 30,
@@ -97,7 +97,7 @@
     "tier": {
       "id": "tier",
       "type": "radioGroup",
-      "label": "tier",
+      "label": "Tier",
       "props": {
         "type": "circle",
         "options": [

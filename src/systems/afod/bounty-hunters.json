@@ -1,0 +1,178 @@
+{
+  "id": "bounty-hunters",
+  "name": "Bounty Hunters",
+  "modules": {
+    "achievements": {
+      "claims": [
+        [
+          {
+            "id": "the tangled web",
+            "name": "The Tangled Web",
+            "description": "Darkness",
+            "connections": ["down"]
+          },
+          {
+            "id": "the wild hunt",
+            "name": "The Wild Hunt",
+            "description": "Neutral",
+            "connections": ["right"]
+          },
+          {
+            "id": "muddy informants",
+            "name": "Muddy Informants",
+            "description": "Neutral",
+            "connections": ["down"]
+          },
+          {
+            "id": "safe passage",
+            "name": "Safe Passage",
+            "description": "Light",
+            "connections": ["down", "right"]
+          },
+          {
+            "id": "undertaker",
+            "name": "Undertaker",
+            "description": "Light"
+          }
+        ],
+        [
+          {
+            "id": "biting shadows",
+            "name": "Biting Shadows",
+            "description": "Darkness",
+            "connections": ["right"]
+          },
+          {
+            "id": "hellstone claim 1",
+            "name": "Hellstone Claim",
+            "description": "Darkness",
+            "connections": ["right", "down"]
+          },
+          {
+            "id": "equilibrium",
+            "name": "Equilibrium",
+            "connections": ["down", "right"],
+            "selectable": false
+          },
+          {
+            "id": "holy weapon",
+            "name": "Holy Weapon",
+            "description": "Light",
+            "connections": ["right"]
+          },
+          {
+            "id": "hellstone claim 2",
+            "name": "Hellstone Claim",
+            "description": "Light",
+            "connections": ["down"]
+          }
+        ],
+        [
+          {
+            "id": "death's servant",
+            "name": "Death's Servant",
+            "description": "Darkness",
+            "connections": ["right"]
+          },
+          {
+            "id": "unholy weapon",
+            "name": "Unholy Weapon",
+            "description": "Darkness"
+          },
+          {
+            "id": "secret stash",
+            "name": "Secret Stash",
+            "description": "Neutral",
+            "connections": ["right"]
+          },
+          {
+            "id": "hellstone claim 3",
+            "name": "Hellstone Claim",
+            "description": "Neutral"
+          },
+          {
+            "id": "wasted bullet",
+            "name": "Wasted Bullet",
+            "description": "Light"
+          }
+        ]
+      ]
+    },
+    "specialAbilities": {
+      "abilities": [
+        {
+          "id": "bloodhounds",
+          "name": "bloodhounds",
+          "description": "Each PC may add +1 Action rating to Command, Sling, or Hunt (up to a max rating of 3)."
+        },
+        {
+          "id": "a walking rogues gallery",
+          "name": "A Walking Rogues' Gallery",
+          "description": "When your Posse has the chance to mull it over you will recognize any outlaw / lawman you’ve seen either in person or in a likeness. You know if there is a bounty on their head and its value."
+        },
+        {
+          "id": "life line",
+          "name": "Life Line",
+          "description": "You bring ‘em in alive. You may choose that your target is only incapacitated instead of dead. There’s always a little bit of life left in them."
+        },
+        {
+          "id": "an eye for it",
+          "name": "An Eye for It",
+          "description": "You may Read artifacts or Hellstone weapons to find out what they do and how they are dangerous. With that you always get good details."
+        },
+        {
+          "id": "really useful",
+          "name": "Really Useful",
+          "description": "Sometimes friends are as good as territory. You may count up to three +3 Faction statuses you hold as if they are claims."
+        },
+        {
+          "id": "lucky fellows",
+          "name": "Lucky Fellows",
+          "description": "When you roll Rider Events, roll twice and keep the one you want. When you reduce Doom on the Posse, take +1d."
+        },
+        {
+          "id": "patron",
+          "name": "Patron",
+          "description": "When you advance your Tier, it costs half the coin it normally would. <em>Who is your patron? Why do they help you?</em>"
+        },
+        {
+          "id": "veteran",
+          "name": "Veteran",
+          "max": 3,
+          "description": "Choose a special ability from another crew."
+        }
+      ]
+    },
+    "modus": {
+      "examples": [
+        "Violence",
+        "Negotiation",
+        "Connection",
+        "Trap"
+      ]
+    },
+    "contacts": {
+      "contacts": [
+        { "id": "bill scar morgan", "name": "Bill 'Scar' Morgan, a judge" },
+        { "id": "the cheat murray", "name": "'The Cheat' Murray, arms dealer" },
+        { "id": "silent bob", "name": "'Silent' Bob, a blacksmith" },
+        { "id": "moe", "name": "Moe, a saloon owner" },
+        { "id": "madam zona", "name": "Madam Zona, a fortune teller" },
+        { "id": "xiang", "name": "Xiang, an occultist" }
+      ]
+    },
+    "posseUpgrades": {
+      "startingItems": {
+        "wit": 1,
+        "vault": 1
+      },
+      "custom": [
+        { "id": "bounty rigging", "name": "Bounty Rigging (weapons or documents)", "load": 1 },
+        { "id": "elite rooks", "name": "Elite Rooks", "load": 1 },
+        { "id": "elite scouts", "name": "Elite Scouts", "load": 1 },
+        { "id": "get out of jail free card", "name": "'Get out of jail free' card", "load": 1 },
+        { "id": "hardened", "name": "Hardened (+1 Grit Box)", "load": 3 }
+      ]
+    }
+  }
+}
