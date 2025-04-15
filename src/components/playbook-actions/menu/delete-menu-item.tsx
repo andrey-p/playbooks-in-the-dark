@@ -2,25 +2,16 @@ import { useState } from 'react';
 import BaseMenuItem from './base-menu-item';
 import styles from './delete-menu-item.module.css';
 
-import { deletePlaybook as deletePlaybookFromDb } from '@/lib/store';
-import { deletePlaybook as deletePlaybookFromLocalStorage } from '@/lib/local-storage';
-
-import { useRouter } from 'next/navigation';
-
 type Props = {
-  userDataId: string;
+  deletePlaybook: () => Promise<void>;
 };
 
 export default function DeleteMenuItem(props: Props) {
-  const { userDataId } = props;
+  const { deletePlaybook } = props;
   const [showingConfirm, setShowingConfirm] = useState<boolean>(false);
-  const router = useRouter();
 
   const onYesClick = async () => {
-    await deletePlaybookFromDb(userDataId);
-    deletePlaybookFromLocalStorage(userDataId);
-
-    router.push('/');
+    await deletePlaybook();
   };
 
   return (

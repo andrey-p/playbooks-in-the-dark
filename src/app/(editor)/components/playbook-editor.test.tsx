@@ -1,17 +1,20 @@
-import { savePlaybook as savePlaybookToDb } from '@/lib/store';
 import { getPlaybooks as getPlaybooksFromLocalStorage } from '@/lib/local-storage';
-
-jest.mock('@/lib/store', () => {
-  return {
-    savePlaybook: jest.fn().mockImplementation((val: object) => {
-      return Promise.resolve({ ...val, id: 'asdf' });
-    })
-  };
-});
 
 import PlaybookEditor from './playbook-editor';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
+const pushFn = jest.fn();
+jest.mock('next/navigation', () => ({
+  usePathname: jest.fn().mockImplementation(() => '/bitd/scoundrel/cutter'),
+  useRouter: jest.fn().mockImplementation(() => ({ push: pushFn }))
+}));
+
+const spy = jest.spyOn(window.history, 'replaceState');
+
+const saveAction = jest.fn().mockImplementation((val: object) => {
+  return Promise.resolve({ ...val, id: 'asdf' });
+});
 
 const initialUserData = {
   id: undefined,
@@ -63,6 +66,7 @@ describe('PlaybookEditor', () => {
           playbookData={playbookData}
           playbookDefinition={playbookDefinition}
           systemData={systemData}
+          saveAction={saveAction}
         />
       );
 
@@ -80,6 +84,7 @@ describe('PlaybookEditor', () => {
           playbookData={playbookData}
           playbookDefinition={playbookDefinition}
           systemData={systemData}
+          saveAction={saveAction}
         />
       );
 
@@ -100,6 +105,7 @@ describe('PlaybookEditor', () => {
           playbookData={playbookData}
           playbookDefinition={playbookDefinition}
           systemData={systemData}
+          saveAction={saveAction}
         />
       );
 
@@ -119,7 +125,7 @@ describe('PlaybookEditor', () => {
       expect(saveBtn).toHaveAccessibleName('Save');
 
       // data should've been saved to DB
-      expect(savePlaybookToDb).toHaveBeenCalledWith(
+      expect(saveAction).toHaveBeenCalledWith(
         expect.objectContaining({
           id: undefined,
           systemId: 'bitd',
@@ -141,6 +147,9 @@ describe('PlaybookEditor', () => {
         description: 'Cutter'
       });
 
+      // the URL should've updated
+      expect(spy).toHaveBeenCalledWith(null, '', '/bitd/scoundrel/cutter/asdf');
+
       // test subsequent saves just to be safe
       await user.click(nameInput);
       await user.keyboard(' beatrice');
@@ -150,7 +159,7 @@ describe('PlaybookEditor', () => {
       await user.click(saveBtn);
       expect(saveBtn).toHaveAccessibleName('Save');
 
-      expect(savePlaybookToDb).toHaveBeenCalledWith(
+      expect(saveAction).toHaveBeenCalledWith(
         expect.objectContaining({
           id: 'asdf',
           systemId: 'bitd',
@@ -170,6 +179,84 @@ describe('PlaybookEditor', () => {
         name: 'beatrice beatrice',
         description: 'Cutter'
       });
+    });
+  });
+  describe('deleting', () => {
+    test('allows playbooks to be deleted', async () => {
+      const user = userEvent.setup();
+      const deleteAction = jest.fn();
+
+      const userData = { ...initialUserData, id: 'asdf' };
+
+      render(
+        <PlaybookEditor
+          userData={userData}
+          playbookData={playbookData}
+          playbookDefinition={playbookDefinition}
+          systemData={systemData}
+          deleteAction={deleteAction}
+        />
+      );
+
+      const menuButton = screen.getByLabelText('Open menu');
+      await user.click(menuButton);
+
+      const deleteBtn = screen.getByText('Delete playbook');
+      await user.click(deleteBtn);
+      const confirmBtn = screen.getByText('YES');
+      await user.click(confirmBtn);
+
+      // delete action should've been called
+      expect(deleteAction).toHaveBeenCalledWith('asdf');
+      // should've redirected back to homepage
+      expect(pushFn).toHaveBeenCalledWith('/');
+    });
+  });
+  describe('read only', () => {
+    test("doesn't render save nor delete buttons", async () => {
+      const user = userEvent.setup();
+      render(
+        <PlaybookEditor
+          userData={initialUserData}
+          playbookData={playbookData}
+          playbookDefinition={playbookDefinition}
+          systemData={systemData}
+          readOnly
+        />
+      );
+
+      const saveBtn = screen.queryByLabelText('Save');
+      expect(saveBtn).toBeFalsy();
+
+      const menuButton = screen.getByLabelText('Open menu');
+      await user.click(menuButton);
+
+      const deleteBtn = screen.queryByLabelText('Delete playbook');
+      expect(deleteBtn).toBeFalsy();
+    });
+    test('disables any changes when loaded in read only mode', async () => {
+      const user = userEvent.setup();
+      const initialData = {
+        ...initialUserData,
+        modules: {
+          name: { text: 'steven' }
+        }
+      };
+      render(
+        <PlaybookEditor
+          userData={initialData}
+          playbookData={playbookData}
+          playbookDefinition={playbookDefinition}
+          systemData={systemData}
+          readOnly
+        />
+      );
+
+      const nameInput = screen.getByLabelText('Name');
+      await user.click(nameInput);
+      await user.keyboard('beatrice');
+
+      expect(nameInput).toHaveValue('steven');
     });
   });
 });

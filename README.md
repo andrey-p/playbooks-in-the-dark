@@ -50,32 +50,23 @@ The shape of these varies for every module, and is codified, again, by Zod schem
 
 ## Setting up for development
 
+### System development
+
+If all you want to do is add / tweak your favourite FitD system, you can just do:
+
+```
+npm install && npm run system-dev
+```
+
+Note: Any attempt at saving stuff will fail.
+
+### More involved development
+
 This project is built with React and NextJS via [SST](https://sst.dev/) and so requires an AWS account. Once you've got your AWS credentials set up (under `playbooks-project-dev`), you can run this project locally in the usual style:
 
 ```
 npm install && npm start
 ```
-
-## Rough roadmap
-
-Running up to a tentative beta release:
-
-- [x] set up production site
-- [x] add mobile support
-- [x] data entry for BitD characters
-- [x] improve character saving flow
-- [x] add BitD crews
-- [x] add user-friendly error handling
-- [ ] add the first non-bitd system
-- [ ] add loading states
-
-Future:
-
-- [ ] add support for Deep Cuts content
-- [ ] improve saved playbook ownership model
-- [ ] add auto-update for anyone else viewing the same playbook
-- [ ] better accessibility
-- [ ] translation support
 
 ## License
 

@@ -3,16 +3,17 @@ import { getEnvVar } from '@/lib/env';
 import BaseMenuItem from './base-menu-item';
 
 type Props = {
-  userDataId: string;
+  path: string;
+  text: string;
 };
 
 export default function CopyMenuItem(props: Props) {
-  const { userDataId } = props;
+  const { path, text } = props;
   const [justCopied, setJustCopied] = useState<boolean>(false);
 
   const copyLink = async () => {
     const baseUrl = await getEnvVar('APP_URL');
-    const shareableUrl = `${baseUrl}/share/${userDataId}`;
+    const shareableUrl = `${baseUrl}/${path}`;
     await navigator.clipboard.writeText(shareableUrl);
 
     setJustCopied(true);
@@ -37,7 +38,7 @@ export default function CopyMenuItem(props: Props) {
       secondaryContent='Copied!'
       showSecondaryContent={justCopied}
     >
-      Copy shareable link
+      {text}
     </BaseMenuItem>
   );
 }

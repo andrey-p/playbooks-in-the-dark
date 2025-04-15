@@ -9,12 +9,15 @@
     "start": "sst dev",
     "test": "jest",
     "prettier": "prettier . --write",
-    "ci": "npm run test && npm run lint && tsc && npm run build && prettier . -c"
+    "system-dev": "set -a && . ./tests/config/fake_env && npm run dev",
+    "check-build": "set -a && . ./tests/config/fake_env && npm run build",
+    "ci": "npm run test && npm run lint && tsc && npm run check-build && prettier . -c"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.758.0",
     "@aws-sdk/lib-dynamodb": "^3.758.0",
     "clsx": "^2.1.1",
+    "dynamodb-toolbox": "^2.1.1",
     "nanoid": "^5.1.2",
     "next": "15.2.4",
     "react": "^19.0.0",
