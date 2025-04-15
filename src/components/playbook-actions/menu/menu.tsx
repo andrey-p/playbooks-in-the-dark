@@ -12,11 +12,12 @@ import { FiX } from 'react-icons/fi';
 type UserDataType = z.infer<typeof UserDataSchema>;
 type Props = {
   userData: UserDataType;
+  deletePlaybook: () => Promise<void>;
   onClose: () => void;
 };
 
 export default function Menu(props: Props) {
-  const { userData, onClose } = props;
+  const { userData, onClose, deletePlaybook } = props;
   const containerRef = useRef<HTMLDivElement>(null);
 
   // close on click out
@@ -73,7 +74,7 @@ export default function Menu(props: Props) {
           )}
           {userData.id && (
             <li className={styles.menuItem}>
-              <DeleteMenuItem userDataId={userData.id} />
+              <DeleteMenuItem deletePlaybook={deletePlaybook} />
             </li>
           )}
         </ul>

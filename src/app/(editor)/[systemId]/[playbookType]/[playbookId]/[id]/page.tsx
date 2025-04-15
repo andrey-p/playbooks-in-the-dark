@@ -1,13 +1,19 @@
+import { z } from 'zod';
 import { getJson } from '@/lib/system-data';
 import { NotFoundError } from '@/lib/errors';
 import PlaybookEditor from '../../../../components/playbook-editor';
 import {
   PlaybookData as PlaybookDataSchema,
   PlaybookDefinition as PlaybookDefinitionSchema,
-  System as SystemSchema
+  System as SystemSchema,
+  UserData as UserDataSchema
 } from '@/schemas';
 import { getPlaybook } from '@/lib/store';
 import { notFound } from 'next/navigation';
+import { revalidatePath } from 'next/cache';
+import { savePlaybook, deletePlaybook } from '@/lib/store';
+
+type UserDataType = z.infer<typeof UserDataSchema>;
 
 type Params = {
   id: string;
@@ -52,11 +58,28 @@ export default async function Page(props: Props) {
     return notFound();
   }
 
+  const saveAction = async (userData: UserDataType) => {
+    'use server';
+
+    const result = await savePlaybook(userData);
+    revalidatePath(`/${systemId}/${playbookType}/${playbookId}/${result.id}`);
+    return result;
+  };
+
+  const deleteAction = async (id: string) => {
+    'use server';
+
+    await deletePlaybook(id);
+    revalidatePath(`/${systemId}/${playbookType}/${playbookId}/${id}`);
+  };
+
   return (
     <PlaybookEditor
       systemData={systemData}
       playbookData={playbookData}
       playbookDefinition={playbookDefinition}
+      saveAction={saveAction}
+      deleteAction={deleteAction}
       userData={data}
     />
   );

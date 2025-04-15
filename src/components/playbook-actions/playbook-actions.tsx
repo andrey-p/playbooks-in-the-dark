@@ -11,14 +11,15 @@ import { UserData as UserDataSchema } from '@/schemas';
 type UserDataType = z.infer<typeof UserDataSchema>;
 
 type Props = {
-  savePlaybook: () => void;
+  savePlaybook: () => Promise<void>;
+  deletePlaybook: () => Promise<void>;
   isSaved: boolean;
   userData: UserDataType;
   readOnly?: boolean;
 };
 
 export default function PlaybookActions(props: Props) {
-  const { isSaved, savePlaybook, userData, readOnly } = props;
+  const { isSaved, savePlaybook, userData, readOnly, deletePlaybook } = props;
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const onMenuClose = useCallback(() => {
@@ -46,7 +47,13 @@ export default function PlaybookActions(props: Props) {
           label='Open menu'
         />
       </div>
-      {isMenuOpen && <Menu userData={userData} onClose={onMenuClose} />}
+      {isMenuOpen && (
+        <Menu
+          userData={userData}
+          onClose={onMenuClose}
+          deletePlaybook={deletePlaybook}
+        />
+      )}
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 import { useState, useReducer, useEffect, useCallback } from 'react';
 import { z } from 'zod';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
 
 import {
@@ -23,8 +23,10 @@ type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
 type PlaybookDataType = z.infer<typeof PlaybookDataSchema>;
 type UserDataType = z.infer<typeof UserDataSchema>;
 
-import { savePlaybook as savePlaybookToDb } from '@/lib/store';
-import { savePlaybook as savePlaybookToLocalStorage } from '@/lib/local-storage';
+import {
+  savePlaybook as savePlaybookToLocalStorage,
+  deletePlaybook as deletePlaybookFromLocalStorage
+} from '@/lib/local-storage';
 
 type Props = {
   playbookData: PlaybookDataType;
@@ -32,6 +34,8 @@ type Props = {
   userData: UserDataType;
   systemData: SystemDataType;
   readOnly?: boolean;
+  saveAction?: (userData: UserDataType) => Promise<UserDataType>;
+  deleteAction?: (id: string) => Promise<void>;
 };
 
 export default function Playbook(props: Props) {
@@ -40,6 +44,8 @@ export default function Playbook(props: Props) {
     playbookData,
     playbookDefinition,
     systemData,
+    saveAction,
+    deleteAction,
     readOnly
   } = props;
   const [lastSaved, setLastSaved] = useState<string>(
@@ -47,13 +53,14 @@ export default function Playbook(props: Props) {
   );
   const [userData, dispatch] = useReducer(userDataReducer, initialUserData);
   const pathName = usePathname();
+  const router = useRouter();
 
   const save = useCallback(async () => {
-    if (readOnly) {
+    if (readOnly || !saveAction) {
       return;
     }
 
-    const data = await savePlaybookToDb(userData);
+    const data = await saveAction(userData);
 
     const dataWithId = {
       ...userData,
@@ -79,7 +86,14 @@ export default function Playbook(props: Props) {
     if (!userData.shareId && data.shareId) {
       dispatch({ type: 'set_share_id', value: data.shareId });
     }
-  }, [userData, playbookData, playbookDefinition, pathName, readOnly]);
+  }, [
+    userData,
+    playbookData,
+    playbookDefinition,
+    pathName,
+    readOnly,
+    saveAction
+  ]);
 
   // after the first save, save automatically every 30s
   // (because of how the dependencies are constructed,
@@ -99,6 +113,17 @@ export default function Playbook(props: Props) {
     };
   }, [userData.id, save, readOnly]);
 
+  const deletePlaybook = useCallback(async () => {
+    if (!userData.id || !deleteAction) {
+      return;
+    }
+
+    await deleteAction(userData.id);
+    deletePlaybookFromLocalStorage(userData.id);
+
+    router.push('/');
+  }, [deleteAction, userData.id, router]);
+
   return (
     <div
       className={clsx(systemData.id, playbookDefinition.id, playbookData.id)}
@@ -116,6 +141,7 @@ export default function Playbook(props: Props) {
         <PlaybookActions
           isSaved={JSON.stringify(userData) === lastSaved}
           savePlaybook={save}
+          deletePlaybook={deletePlaybook}
           userData={userData}
           readOnly={readOnly}
         />
