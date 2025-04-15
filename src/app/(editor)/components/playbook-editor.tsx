@@ -2,8 +2,7 @@
 
 import { useState, useReducer, useEffect, useCallback } from 'react';
 import { z } from 'zod';
-import { usePathname } from 'next/navigation';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
 
 import {
