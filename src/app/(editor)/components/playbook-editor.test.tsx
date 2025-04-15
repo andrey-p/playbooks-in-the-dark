@@ -4,11 +4,12 @@ import PlaybookEditor from './playbook-editor';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-//jest.mock('@/lib/store');
 jest.mock('next/navigation', () => ({
-  usePathname: jest.fn(),
+  usePathname: jest.fn().mockImplementation(() => '/bitd/scoundrel/cutter'),
   useRouter: jest.fn()
 }));
+
+const spy = jest.spyOn(window.history, 'replaceState');
 
 const saveAction = jest.fn().mockImplementation((val: object) => {
   return Promise.resolve({ ...val, id: 'asdf' });
@@ -144,6 +145,9 @@ describe('PlaybookEditor', () => {
         name: 'beatrice',
         description: 'Cutter'
       });
+
+      // the URL should've updated
+      expect(spy).toHaveBeenCalledWith(null, '', '/bitd/scoundrel/cutter/asdf');
 
       // test subsequent saves just to be safe
       await user.click(nameInput);
