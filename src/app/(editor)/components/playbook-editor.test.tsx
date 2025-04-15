@@ -4,9 +4,10 @@ import PlaybookEditor from './playbook-editor';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
+const pushFn = jest.fn();
 jest.mock('next/navigation', () => ({
   usePathname: jest.fn().mockImplementation(() => '/bitd/scoundrel/cutter'),
-  useRouter: jest.fn()
+  useRouter: jest.fn().mockImplementation(() => ({ push: pushFn }))
 }));
 
 const spy = jest.spyOn(window.history, 'replaceState');
@@ -180,7 +181,59 @@ describe('PlaybookEditor', () => {
       });
     });
   });
+  describe('deleting', () => {
+    test('allows playbooks to be deleted', async () => {
+      const user = userEvent.setup();
+      const deleteAction = jest.fn();
+
+      const userData = { ...initialUserData, id: 'asdf' };
+
+      render(
+        <PlaybookEditor
+          userData={userData}
+          playbookData={playbookData}
+          playbookDefinition={playbookDefinition}
+          systemData={systemData}
+          deleteAction={deleteAction}
+        />
+      );
+
+      const menuButton = screen.getByLabelText('Open menu');
+      await user.click(menuButton);
+
+      const deleteBtn = screen.getByText('Delete playbook');
+      await user.click(deleteBtn);
+      const confirmBtn = screen.getByText('YES');
+      await user.click(confirmBtn);
+
+      // delete action should've been called
+      expect(deleteAction).toHaveBeenCalledWith('asdf');
+      // should've redirected back to homepage
+      expect(pushFn).toHaveBeenCalledWith('/');
+    });
+  });
   describe('read only', () => {
+    test("doesn't render save nor delete buttons", async () => {
+      const user = userEvent.setup();
+      render(
+        <PlaybookEditor
+          userData={initialUserData}
+          playbookData={playbookData}
+          playbookDefinition={playbookDefinition}
+          systemData={systemData}
+          readOnly
+        />
+      );
+
+      const saveBtn = screen.queryByLabelText('Save');
+      expect(saveBtn).toBeFalsy();
+
+      const menuButton = screen.getByLabelText('Open menu');
+      await user.click(menuButton);
+
+      const deleteBtn = screen.queryByLabelText('Delete playbook');
+      expect(deleteBtn).toBeFalsy();
+    });
     test('disables any changes when loaded in read only mode', async () => {
       const user = userEvent.setup();
       const initialData = {
@@ -198,9 +251,6 @@ describe('PlaybookEditor', () => {
           readOnly
         />
       );
-
-      const saveBtn = screen.queryByLabelText('Save');
-      expect(saveBtn).toBeFalsy();
 
       const nameInput = screen.getByLabelText('Name');
       await user.click(nameInput);
