@@ -1,17 +1,18 @@
-import { savePlaybook as savePlaybookToDb } from '@/lib/store';
 import { getPlaybooks as getPlaybooksFromLocalStorage } from '@/lib/local-storage';
-
-jest.mock('@/lib/store', () => {
-  return {
-    savePlaybook: jest.fn().mockImplementation((val: object) => {
-      return Promise.resolve({ ...val, id: 'asdf' });
-    })
-  };
-});
 
 import PlaybookEditor from './playbook-editor';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
+//jest.mock('@/lib/store');
+jest.mock('next/navigation', () => ({
+  usePathname: jest.fn(),
+  useRouter: jest.fn()
+}));
+
+const saveAction = jest.fn().mockImplementation((val: object) => {
+  return Promise.resolve({ ...val, id: 'asdf' });
+});
 
 const initialUserData = {
   id: undefined,
@@ -63,6 +64,7 @@ describe('PlaybookEditor', () => {
           playbookData={playbookData}
           playbookDefinition={playbookDefinition}
           systemData={systemData}
+          saveAction={saveAction}
         />
       );
 
@@ -80,6 +82,7 @@ describe('PlaybookEditor', () => {
           playbookData={playbookData}
           playbookDefinition={playbookDefinition}
           systemData={systemData}
+          saveAction={saveAction}
         />
       );
 
@@ -100,6 +103,7 @@ describe('PlaybookEditor', () => {
           playbookData={playbookData}
           playbookDefinition={playbookDefinition}
           systemData={systemData}
+          saveAction={saveAction}
         />
       );
 
@@ -119,7 +123,7 @@ describe('PlaybookEditor', () => {
       expect(saveBtn).toHaveAccessibleName('Save');
 
       // data should've been saved to DB
-      expect(savePlaybookToDb).toHaveBeenCalledWith(
+      expect(saveAction).toHaveBeenCalledWith(
         expect.objectContaining({
           id: undefined,
           systemId: 'bitd',
@@ -150,7 +154,7 @@ describe('PlaybookEditor', () => {
       await user.click(saveBtn);
       expect(saveBtn).toHaveAccessibleName('Save');
 
-      expect(savePlaybookToDb).toHaveBeenCalledWith(
+      expect(saveAction).toHaveBeenCalledWith(
         expect.objectContaining({
           id: 'asdf',
           systemId: 'bitd',
