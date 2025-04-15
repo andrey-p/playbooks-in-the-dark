@@ -9,14 +9,14 @@
     "repClaims",
     ["tier", "hold"],
     ["doom", "riders"],
-    "achievements"
+    "achievements",
+    "cohorts"
   ], [
     "posseXp",
     "specialAbilities",
     "modus",
     "contacts",
-    "posseUpgrades",
-    "cohorts"
+    "posseUpgrades"
   ]],
   "modules": {
     "name": {
