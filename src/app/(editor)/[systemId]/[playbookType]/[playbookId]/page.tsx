@@ -1,12 +1,18 @@
+import { z } from 'zod';
 import { getJson } from '@/lib/system-data';
 import { NotFoundError } from '@/lib/errors';
 import {
   PlaybookData as PlaybookDataSchema,
   PlaybookDefinition as PlaybookDefinitionSchema,
-  System as SystemSchema
+  System as SystemSchema,
+  UserData as UserDataSchema
 } from '@/schemas';
 import PlaybookEditor from '../../../components/playbook-editor';
 import { notFound } from 'next/navigation';
+import { revalidatePath } from 'next/cache';
+import { savePlaybook } from '@/lib/store';
+
+type UserDataType = z.infer<typeof UserDataSchema>;
 
 type Params = {
   systemId: string;
@@ -39,11 +45,20 @@ export default async function Page(props: Props) {
     throw e;
   }
 
+  const saveAction = async (userData: UserDataType) => {
+    'use server';
+
+    const result = await savePlaybook(userData);
+    revalidatePath(`/${systemId}/${playbookType}/${playbookId}/${result.id}`);
+    return result;
+  };
+
   return (
     <PlaybookEditor
       systemData={systemData}
       playbookData={playbookData}
       playbookDefinition={playbookDefinition}
+      saveAction={saveAction}
       userData={{
         id: undefined,
         playbookType,

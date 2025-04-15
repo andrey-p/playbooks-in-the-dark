@@ -23,7 +23,6 @@ type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
 type PlaybookDataType = z.infer<typeof PlaybookDataSchema>;
 type UserDataType = z.infer<typeof UserDataSchema>;
 
-import { savePlaybook as savePlaybookToDb } from '@/lib/store';
 import { savePlaybook as savePlaybookToLocalStorage } from '@/lib/local-storage';
 
 type Props = {
@@ -32,6 +31,7 @@ type Props = {
   userData: UserDataType;
   systemData: SystemDataType;
   readOnly?: boolean;
+  saveAction?: (userData: UserDataType) => Promise<UserDataType>;
 };
 
 export default function Playbook(props: Props) {
@@ -40,6 +40,7 @@ export default function Playbook(props: Props) {
     playbookData,
     playbookDefinition,
     systemData,
+    saveAction,
     readOnly
   } = props;
   const [lastSaved, setLastSaved] = useState<string>(
@@ -49,11 +50,11 @@ export default function Playbook(props: Props) {
   const pathName = usePathname();
 
   const save = useCallback(async () => {
-    if (readOnly) {
+    if (readOnly || !saveAction) {
       return;
     }
 
-    const data = await savePlaybookToDb(userData);
+    const data = await saveAction(userData);
 
     const dataWithId = {
       ...userData,
@@ -79,7 +80,14 @@ export default function Playbook(props: Props) {
     if (!userData.shareId && data.shareId) {
       dispatch({ type: 'set_share_id', value: data.shareId });
     }
-  }, [userData, playbookData, playbookDefinition, pathName, readOnly]);
+  }, [
+    userData,
+    playbookData,
+    playbookDefinition,
+    pathName,
+    readOnly,
+    saveAction
+  ]);
 
   // after the first save, save automatically every 30s
   // (because of how the dependencies are constructed,
