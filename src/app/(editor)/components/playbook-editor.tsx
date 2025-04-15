@@ -3,6 +3,7 @@
 import { useState, useReducer, useEffect, useCallback } from 'react';
 import { z } from 'zod';
 import { usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import clsx from 'clsx';
 
 import {
@@ -23,7 +24,10 @@ type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
 type PlaybookDataType = z.infer<typeof PlaybookDataSchema>;
 type UserDataType = z.infer<typeof UserDataSchema>;
 
-import { savePlaybook as savePlaybookToLocalStorage } from '@/lib/local-storage';
+import {
+  savePlaybook as savePlaybookToLocalStorage,
+  deletePlaybook as deletePlaybookFromLocalStorage
+} from '@/lib/local-storage';
 
 type Props = {
   playbookData: PlaybookDataType;
@@ -32,6 +36,7 @@ type Props = {
   systemData: SystemDataType;
   readOnly?: boolean;
   saveAction?: (userData: UserDataType) => Promise<UserDataType>;
+  deleteAction?: (id: string) => Promise<void>;
 };
 
 export default function Playbook(props: Props) {
@@ -41,6 +46,7 @@ export default function Playbook(props: Props) {
     playbookDefinition,
     systemData,
     saveAction,
+    deleteAction,
     readOnly
   } = props;
   const [lastSaved, setLastSaved] = useState<string>(
@@ -48,6 +54,7 @@ export default function Playbook(props: Props) {
   );
   const [userData, dispatch] = useReducer(userDataReducer, initialUserData);
   const pathName = usePathname();
+  const router = useRouter();
 
   const save = useCallback(async () => {
     if (readOnly || !saveAction) {
@@ -107,6 +114,17 @@ export default function Playbook(props: Props) {
     };
   }, [userData.id, save, readOnly]);
 
+  const deletePlaybook = useCallback(async () => {
+    if (!userData.id || !deleteAction) {
+      return;
+    }
+
+    await deleteAction(userData.id);
+    deletePlaybookFromLocalStorage(userData.id);
+
+    router.push('/');
+  }, [deleteAction, userData.id, router]);
+
   return (
     <div
       className={clsx(systemData.id, playbookDefinition.id, playbookData.id)}
@@ -124,6 +142,7 @@ export default function Playbook(props: Props) {
         <PlaybookActions
           isSaved={JSON.stringify(userData) === lastSaved}
           savePlaybook={save}
+          deletePlaybook={deletePlaybook}
           userData={userData}
           readOnly={readOnly}
         />

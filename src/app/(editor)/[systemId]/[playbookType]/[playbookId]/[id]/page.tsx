@@ -11,7 +11,7 @@ import {
 import { getPlaybook } from '@/lib/store';
 import { notFound } from 'next/navigation';
 import { revalidatePath } from 'next/cache';
-import { savePlaybook } from '@/lib/store';
+import { savePlaybook, deletePlaybook } from '@/lib/store';
 
 type UserDataType = z.infer<typeof UserDataSchema>;
 
@@ -66,12 +66,20 @@ export default async function Page(props: Props) {
     return result;
   };
 
+  const deleteAction = async (id: string) => {
+    'use server';
+
+    await deletePlaybook(id);
+    revalidatePath(`/${systemId}/${playbookType}/${playbookId}/${id}`);
+  };
+
   return (
     <PlaybookEditor
       systemData={systemData}
       playbookData={playbookData}
       playbookDefinition={playbookDefinition}
       saveAction={saveAction}
+      deleteAction={deleteAction}
       userData={data}
     />
   );
