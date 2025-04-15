@@ -7,6 +7,7 @@ const System = z.object({
   playbookTypes: z.array(z.string()),
   customStyles: z.string().optional(),
   license: z.string().optional(),
+  attribution: z.string().optional(),
   website: z.string().optional()
 });
 
