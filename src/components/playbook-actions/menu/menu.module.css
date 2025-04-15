@@ -4,12 +4,17 @@
   max-width: 100%;
   height: 100vh;
   top: 0;
-  right: 0;
+  right: -20rem;
   background-color: var(--background);
   border-left: 2px solid var(--foreground);
   z-index: 20;
   padding: 3rem 1rem 1rem;
   overflow-y: auto;
+  transition: right 0.3s ease-out;
+
+  &.open {
+    right: 0;
+  }
 }
 
 .heading {
