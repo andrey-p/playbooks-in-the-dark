@@ -2,6 +2,12 @@
   border: none;
   background: none;
   display: block;
+  cursor: pointer;
+  /* increase the clickable area of the button */
+  /* without changing its positioning respective to all else */
+  padding: 0.15rem;
+  margin: -0.15rem;
+  box-sizing: content-box;
 }
 
 /* styles for CSV paths, hence stroke / width */
@@ -9,7 +15,6 @@
   stroke: var(--foreground);
   fill: var(--background);
   stroke-width: 2px;
-  cursor: pointer;
 }
 
 .filled {
