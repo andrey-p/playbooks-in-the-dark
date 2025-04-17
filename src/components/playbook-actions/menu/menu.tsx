@@ -5,10 +5,11 @@ import Button from '../button';
 import CopyMenuItem from './copy-menu-item';
 import DeleteMenuItem from './delete-menu-item';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 import { UserData as UserDataSchema } from '@/schemas';
 
-import { FiX } from 'react-icons/fi';
+import { FiX, FiGithub } from 'react-icons/fi';
 
 type UserDataType = z.infer<typeof UserDataSchema>;
 type Props = {
@@ -57,8 +58,15 @@ export default function Menu(props: Props) {
         <br />
         Dark
       </h2>
-      <div className={styles.closeBtn}>
+      <div className={styles.btns}>
         <Button onClick={onClose} label='Close menu' icon={<FiX />} />
+
+        <Link
+          href='https://github.com/andrey-p/playbooks-in-the-dark'
+          target='_blank'
+        >
+          <Button label='Github repository' icon={<FiGithub />} />
+        </Link>
       </div>
 
       {(userData.id || userData.shareId) && (
