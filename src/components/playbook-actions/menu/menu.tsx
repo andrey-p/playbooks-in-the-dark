@@ -51,6 +51,7 @@ export default function Menu(props: Props) {
   return (
     <div
       className={clsx(styles.container, open && styles.open)}
+      aria-hidden={!open}
       ref={containerRef}
     >
       <h2 className={styles.heading}>
