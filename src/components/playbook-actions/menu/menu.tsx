@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef, useState } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 import { z } from 'zod';
 import styles from './menu.module.css';
 import Button from '../button';
@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 import { UserData as UserDataSchema } from '@/schemas';
 
-import { FiX, FiGithub, FiSun, FiMoon } from 'react-icons/fi';
+import { FiX, FiGithub } from 'react-icons/fi';
 
 type UserDataType = z.infer<typeof UserDataSchema>;
 type Props = {
@@ -23,8 +23,6 @@ export default function Menu(props: Props) {
   const { userData, onClose, open, deletePlaybook } = props;
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(true);
-
   // close on click out
 
   const onBodyClick = useCallback(
@@ -35,8 +33,6 @@ export default function Menu(props: Props) {
     },
     [onClose]
   );
-
-  const toggleTheme = useCallback(() => setIsDarkTheme((val) => !val), []);
 
   useEffect(() => {
     if (open) {
@@ -72,12 +68,6 @@ export default function Menu(props: Props) {
         >
           <Button label='Github repository' icon={<FiGithub />} />
         </Link>
-
-        <Button
-          onClick={toggleTheme}
-          label={isDarkTheme ? 'Switch to light theme' : 'Switch to dark theme'}
-          icon={isDarkTheme ? <FiSun /> : <FiMoon />}
-        />
       </div>
 
       {(userData.id || userData.shareId) && (
