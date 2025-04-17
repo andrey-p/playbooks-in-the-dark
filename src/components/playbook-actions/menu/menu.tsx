@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef, useContext } from 'react';
 import { z } from 'zod';
 import styles from './menu.module.css';
 import Button from '../button';
@@ -6,10 +6,11 @@ import CopyMenuItem from './copy-menu-item';
 import DeleteMenuItem from './delete-menu-item';
 import clsx from 'clsx';
 import Link from 'next/link';
+import { ThemeContext } from '@/context';
 
 import { UserData as UserDataSchema } from '@/schemas';
 
-import { FiX, FiGithub } from 'react-icons/fi';
+import { FiX, FiGithub, FiSun, FiMoon } from 'react-icons/fi';
 
 type UserDataType = z.infer<typeof UserDataSchema>;
 type Props = {
@@ -23,6 +24,8 @@ export default function Menu(props: Props) {
   const { userData, onClose, open, deletePlaybook } = props;
   const containerRef = useRef<HTMLDivElement>(null);
 
+  const { theme, setTheme } = useContext(ThemeContext.Context);
+
   // close on click out
 
   const onBodyClick = useCallback(
@@ -33,6 +36,10 @@ export default function Menu(props: Props) {
     },
     [onClose]
   );
+
+  const toggleTheme = useCallback(() => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  }, [theme, setTheme]);
 
   useEffect(() => {
     if (open) {
@@ -57,7 +64,17 @@ export default function Menu(props: Props) {
         <br />
         in the
         <br />
-        Dark
+        <span
+          className={clsx(
+            styles.darkLight,
+            theme === 'light' && styles.lightTheme
+          )}
+        >
+          <span className={styles.dark}>Dark</span>
+          <span aria-hidden className={styles.light}>
+            Light
+          </span>
+        </span>
       </h2>
       <div className={styles.btns}>
         <Button onClick={onClose} label='Close menu' icon={<FiX />} />
@@ -68,6 +85,14 @@ export default function Menu(props: Props) {
         >
           <Button label='Github repository' icon={<FiGithub />} />
         </Link>
+
+        <Button
+          onClick={toggleTheme}
+          label={
+            theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
+          }
+          icon={theme === 'dark' ? <FiSun /> : <FiMoon />}
+        />
       </div>
 
       {(userData.id || userData.shareId) && (
