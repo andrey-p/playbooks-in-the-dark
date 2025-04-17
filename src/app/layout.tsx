@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
+import { ThemeContext } from '@/context';
 import { getFontClassName } from './fonts';
 
 export const metadata: Metadata = {
@@ -15,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={getFontClassName()}>{children}</body>
+      <body className={getFontClassName()}>
+        <ThemeContext.Provider>{children}</ThemeContext.Provider>
+      </body>
     </html>
   );
 }

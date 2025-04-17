@@ -16,15 +16,18 @@
     0px 0px 0px 1px var(--background), 0px 0px 0px 4px var(--highlight);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --midground: #999;
+html[data-theme='dark'] {
+  color-scheme: dark;
 
-    --btn-background: var(--foreground);
-    --btn-text: var(--background);
-  }
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --midground: #999;
+
+  --btn-background: var(--foreground);
+  --btn-text: var(--background);
+}
+html[data-theme='light'] {
+  color-scheme: light;
 }
 
 html,
@@ -83,12 +86,6 @@ a {
 
 ul {
   list-style-type: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
 
 /*

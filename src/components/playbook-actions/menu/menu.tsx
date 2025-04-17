@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useRef, useState } from 'react';
+import { useEffect, useCallback, useRef, useContext } from 'react';
 import { z } from 'zod';
 import styles from './menu.module.css';
 import Button from '../button';
@@ -6,6 +6,7 @@ import CopyMenuItem from './copy-menu-item';
 import DeleteMenuItem from './delete-menu-item';
 import clsx from 'clsx';
 import Link from 'next/link';
+import { ThemeContext } from '@/context';
 
 import { UserData as UserDataSchema } from '@/schemas';
 
@@ -23,7 +24,7 @@ export default function Menu(props: Props) {
   const { userData, onClose, open, deletePlaybook } = props;
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(true);
+  const { theme, setTheme } = useContext(ThemeContext.Context);
 
   // close on click out
 
@@ -36,7 +37,9 @@ export default function Menu(props: Props) {
     [onClose]
   );
 
-  const toggleTheme = useCallback(() => setIsDarkTheme((val) => !val), []);
+  const toggleTheme = useCallback(() => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  }, [theme, setTheme]);
 
   useEffect(() => {
     if (open) {
@@ -75,8 +78,10 @@ export default function Menu(props: Props) {
 
         <Button
           onClick={toggleTheme}
-          label={isDarkTheme ? 'Switch to light theme' : 'Switch to dark theme'}
-          icon={isDarkTheme ? <FiSun /> : <FiMoon />}
+          label={
+            theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
+          }
+          icon={theme === 'dark' ? <FiSun /> : <FiMoon />}
         />
       </div>
 
