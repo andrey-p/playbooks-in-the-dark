@@ -47,13 +47,12 @@ export default function PlaybookActions(props: Props) {
           label='Open menu'
         />
       </div>
-      {isMenuOpen && (
-        <Menu
-          userData={userData}
-          onClose={onMenuClose}
-          deletePlaybook={deletePlaybook}
-        />
-      )}
+      <Menu
+        userData={userData}
+        open={isMenuOpen}
+        onClose={onMenuClose}
+        deletePlaybook={deletePlaybook}
+      />
     </div>
   );
 }

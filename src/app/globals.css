@@ -55,11 +55,14 @@ textarea {
   font-size: 1.2rem;
   font-family: var(--font-text);
   background: none;
-  border: none;
-  border-bottom: 1px solid var(--foreground);
+  border: 1px solid var(--foreground);
+  margin-bottom: 0.4rem;
+  border-bottom: 4px solid var(--foreground);
+  padding: 0 0.2rem;
 
   &:focus-visible {
-    outline: 4px solid var(--highlight);
+    border-color: var(--highlight);
+    outline: 2px solid var(--highlight);
   }
 }
 

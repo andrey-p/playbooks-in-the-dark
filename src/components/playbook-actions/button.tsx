@@ -1,7 +1,7 @@
 import styles from './button.module.css';
 
 type Props = {
-  onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   label: string;
   icon: React.ReactNode;
 };

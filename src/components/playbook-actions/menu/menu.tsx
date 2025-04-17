@@ -4,20 +4,23 @@ import styles from './menu.module.css';
 import Button from '../button';
 import CopyMenuItem from './copy-menu-item';
 import DeleteMenuItem from './delete-menu-item';
+import clsx from 'clsx';
+import Link from 'next/link';
 
 import { UserData as UserDataSchema } from '@/schemas';
 
-import { FiX } from 'react-icons/fi';
+import { FiX, FiGithub } from 'react-icons/fi';
 
 type UserDataType = z.infer<typeof UserDataSchema>;
 type Props = {
   userData: UserDataType;
+  open: boolean;
   deletePlaybook: () => Promise<void>;
   onClose: () => void;
 };
 
 export default function Menu(props: Props) {
-  const { userData, onClose, deletePlaybook } = props;
+  const { userData, onClose, open, deletePlaybook } = props;
   const containerRef = useRef<HTMLDivElement>(null);
 
   // close on click out
@@ -32,15 +35,21 @@ export default function Menu(props: Props) {
   );
 
   useEffect(() => {
-    document.body.addEventListener('click', onBodyClick);
+    if (open) {
+      document.body.addEventListener('click', onBodyClick);
+    }
 
     return () => {
       document.body.removeEventListener('click', onBodyClick);
     };
-  }, [onBodyClick]);
+  }, [onBodyClick, open]);
 
   return (
-    <div className={styles.container} ref={containerRef}>
+    <div
+      className={clsx(styles.container, open && styles.open)}
+      aria-hidden={!open}
+      ref={containerRef}
+    >
       <h2 className={styles.heading}>
         Play
         <br />
@@ -50,8 +59,15 @@ export default function Menu(props: Props) {
         <br />
         Dark
       </h2>
-      <div className={styles.closeBtn}>
+      <div className={styles.btns}>
         <Button onClick={onClose} label='Close menu' icon={<FiX />} />
+
+        <Link
+          href='https://github.com/andrey-p/playbooks-in-the-dark'
+          target='_blank'
+        >
+          <Button label='Github repository' icon={<FiGithub />} />
+        </Link>
       </div>
 
       {(userData.id || userData.shareId) && (
