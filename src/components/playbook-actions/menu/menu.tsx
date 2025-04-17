@@ -64,7 +64,17 @@ export default function Menu(props: Props) {
         <br />
         in the
         <br />
-        Dark
+        <span
+          className={clsx(
+            styles.darkLight,
+            theme === 'light' && styles.lightTheme
+          )}
+        >
+          <span className={styles.dark}>Dark</span>
+          <span aria-hidden className={styles.light}>
+            Light
+          </span>
+        </span>
       </h2>
       <div className={styles.btns}>
         <Button onClick={onClose} label='Close menu' icon={<FiX />} />

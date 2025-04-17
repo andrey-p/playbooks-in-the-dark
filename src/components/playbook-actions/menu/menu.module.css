@@ -24,6 +24,43 @@
   margin-bottom: 2rem;
 }
 
+.darkLight {
+  position: relative;
+}
+
+.dark {
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+
+  .lightTheme & {
+    opacity: 0.3;
+    text-decoration: line-through;
+  }
+}
+
+.light {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  left: 0;
+  color: var(--background);
+  rotate: -3deg;
+  text-shadow:
+    1px 1px 0 var(--foreground),
+    -1px -1px 0 var(--foreground),
+    1px -1px 0 var(--foreground),
+    -1px 1px 0 var(--foreground),
+    1px 1px 0 var(--foreground);
+  transition: opacity 0.3s ease-out;
+
+  .lightTheme & {
+    opacity: 1;
+  }
+}
+
 .menuList {
   border-top: 1px solid var(--foreground);
   border-bottom: 1px solid var(--foreground);
