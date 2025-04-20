@@ -15,15 +15,13 @@ export default function TextSlot(props: Props) {
   const { label } = slot;
 
   return (
-    <span>
-      <input
-        className={styles.input}
-        type='text'
-        aria-label={label}
-        value={value}
-        size={slot.size}
-        onChange={(e) => onUpdate(e.currentTarget.value)}
-      />
-    </span>
+    <input
+      className={styles.input}
+      type='text'
+      aria-label={label}
+      value={value}
+      size={slot.size}
+      onChange={(e) => onUpdate(e.currentTarget.value)}
+    />
   );
 }

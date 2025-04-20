@@ -46,7 +46,7 @@ export default function SlottedText(props: Props) {
   const splitText = text.split(/(\{[a-zA-Z0-9-]+\})/);
 
   return (
-    <span>
+    <>
       {splitText.map((chunk) => {
         if (slotComponentsById.has(chunk)) {
           return slotComponentsById.get(chunk);
@@ -54,6 +54,6 @@ export default function SlottedText(props: Props) {
 
         return chunk;
       })}
-    </span>
+    </>
   );
 }
