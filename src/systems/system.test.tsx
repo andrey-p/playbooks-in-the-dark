@@ -43,7 +43,7 @@ describe('system data check', () => {
 
         playbookDefinition.playbooks.forEach((playbookId: string) => {
           const { data: playbookData, error } = PlaybookData.safeParse(
-            getJson(systemId, playbookId)
+            getJson(systemId, playbookType, playbookId)
           );
 
           if (error) {

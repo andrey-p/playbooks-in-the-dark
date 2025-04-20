@@ -19,10 +19,21 @@ describe('system-data', () => {
       expect(getJson('bitd', 'system')).toMatchObject({
         name: 'Blades in the Dark'
       });
+
+      expect(getJson('bitd', 'scoundrel')).toMatchObject({
+        name: 'Scoundrel'
+      });
+
+      expect(getJson('bitd', 'scoundrel', 'cutter')).toMatchObject({
+        name: 'Cutter'
+      });
     });
 
     test("throws meaningful error if JSON file doesn't exist", () => {
       expect(() => getJson('bitd', 'sostem')).toThrow(NotFoundError);
+      expect(() => getJson('bitd', 'scoundrel', 'cotter')).toThrow(
+        NotFoundError
+      );
     });
 
     test("throws meaningful error if JSON file doesn't parse correctly", () => {
@@ -34,7 +45,11 @@ describe('system-data', () => {
     });
 
     test('throws if user attempts shenanigans', () => {
+      expect(() => getJson('../../..', 'package')).toThrow();
       expect(() => getJson('bitd', '../../../package')).toThrow();
+      expect(() =>
+        getJson('bitd', 'scoundrel', '../../../../package')
+      ).toThrow();
     });
   });
 });
