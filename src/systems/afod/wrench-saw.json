@@ -73,7 +73,13 @@
       "contacts": [
         { "id": "ignaz toodlebrock", "name": "Ignaz Toodlebrock, an inventor" },
         { "id": "a voice in your head", "name": "A voice in your head" },
-        { "id": "a favorite tool named", "name": "A favorite tool named ______________" },
+        {
+          "id": "a favorite tool named",
+          "name": "A favorite tool named {toolName}",
+          "slots": [
+            { "id": "toolName", "label": "Tool Name", "size": 10 }
+          ]
+        },
         { "id": "virex", "name": "Virex, a failed experiment" },
         { "id": "dakota", "name": "Dakota, your fiancé" }
       ]
