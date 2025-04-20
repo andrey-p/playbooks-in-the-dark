@@ -12,11 +12,20 @@ type Props = {
   selectedItems: Record<string, number>;
   groups?: GroupType[];
   onItemSelect: (itemId: string, selected: number) => void;
+  onSlotUpdate: (values: Record<string, string>) => void;
+  slotValues: Record<string, string>;
   twoColumns?: boolean;
 };
 
 export default function ItemList(props: Props) {
-  const { items, twoColumns, selectedItems, onItemSelect } = props;
+  const {
+    items,
+    twoColumns,
+    selectedItems,
+    slotValues,
+    onItemSelect,
+    onSlotUpdate
+  } = props;
   let { groups = [] } = props;
 
   groups = [
@@ -50,6 +59,8 @@ export default function ItemList(props: Props) {
                   <Item
                     item={item}
                     selected={selectedItems[item.id]}
+                    slotValues={slotValues}
+                    onSlotUpdate={onSlotUpdate}
                     onSelect={(selected) => onItemSelect(item.id, selected)}
                   />
                 </li>

@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import styles from './slotted-text.module.css';
+import styles from './slot.module.css';
 import { SlotProps as SlotPropsSchema } from './slotted-text.schema';
 
 type SlotPropsType = z.infer<typeof SlotPropsSchema>;
@@ -21,6 +21,7 @@ export default function TextSlot(props: Props) {
         type='text'
         aria-label={label}
         value={value}
+        size={slot.size}
         onChange={(e) => onUpdate(e.currentTarget.value)}
       />
     </span>

@@ -1,3 +1,5 @@
 .input {
+  border: none;
   border-bottom: 1px solid var(--foreground);
+  margin: 0;
 }

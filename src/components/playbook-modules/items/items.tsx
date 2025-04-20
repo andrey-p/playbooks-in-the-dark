@@ -10,7 +10,7 @@ type Props = z.infer<typeof PropsSchema>;
 export default function Items(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
   const { common, load, twoColumns, groups } = moduleDefinition.props;
-  const { load: selectedLoad } = userValue;
+  const { load: selectedLoad, slots: slotValues } = userValue;
   let { items: selectedItems } = userValue;
 
   // add any preselected items for the playbook
@@ -20,6 +20,7 @@ export default function Items(props: Props) {
 
   const onItemSelect = (itemId: string, selected: number) => {
     onUpdate({
+      slots: slotValues,
       items: {
         ...selectedItems,
         [itemId]: selected
@@ -30,8 +31,17 @@ export default function Items(props: Props) {
 
   const onLoadSelect = (loadId: string | null) => {
     onUpdate({
+      slots: slotValues,
       items: selectedItems,
       load: loadId
+    });
+  };
+
+  const onSlotUpdate = (newSlots: Record<string, string>) => {
+    onUpdate({
+      items: selectedItems,
+      load: selectedLoad,
+      slots: newSlots
     });
   };
 
@@ -56,6 +66,8 @@ export default function Items(props: Props) {
           items={playbookProps.custom}
           selectedItems={selectedItems}
           onItemSelect={onItemSelect}
+          slotValues={slotValues || {}}
+          onSlotUpdate={onSlotUpdate}
           twoColumns={twoColumns}
         />
       )}
@@ -65,6 +77,8 @@ export default function Items(props: Props) {
           groups={groups}
           twoColumns={twoColumns}
           selectedItems={selectedItems}
+          slotValues={slotValues || {}}
+          onSlotUpdate={onSlotUpdate}
           onItemSelect={onItemSelect}
         />
       )}
