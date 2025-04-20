@@ -1,15 +1,17 @@
 import { z } from 'zod';
 import PropsSchema, { Contact as ContactSchema } from './contacts.schema';
+import { SlotValue as SlotValueSchema } from '@/components/slotted-text/slotted-text.schema';
 import Contact from './contact';
 import ModuleWrapper from '../layout/module-wrapper';
 import styles from './contacts.module.css';
 
 type Props = z.infer<typeof PropsSchema>;
 type ContactType = z.infer<typeof ContactSchema>;
+type SlotValueType = z.infer<typeof SlotValueSchema>;
 
 export default function Contacts(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
-  const { contacts: selectedContacts } = userValue;
+  const { contacts: selectedContacts, slots: slotValues } = userValue;
   const { contacts: availableContacts } = playbookProps;
   const { props: moduleProps } = moduleDefinition;
 
@@ -18,7 +20,15 @@ export default function Contacts(props: Props) {
       contacts: {
         ...selectedContacts,
         [id]: value
-      }
+      },
+      slots: slotValues
+    });
+  };
+
+  const onSlotUpdate = (newSlots: SlotValueType) => {
+    onUpdate({
+      contacts: selectedContacts,
+      slots: newSlots
     });
   };
 
@@ -35,6 +45,8 @@ export default function Contacts(props: Props) {
               variant={moduleProps?.variant}
               relationship={selectedContacts[contact.id]}
               onRelationshipUpdate={onRelationshipUpdate}
+              slotValues={slotValues}
+              onSlotUpdate={onSlotUpdate}
             />
           </li>
         ))}

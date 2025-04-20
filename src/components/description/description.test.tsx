@@ -20,9 +20,7 @@ describe('Description', () => {
   });
   it('throws on the normal tags if they have classes etc', () => {
     expect(() => {
-      render(
-        <Description text='<p class="oh no">Hello <script>heh</script> <img /></p>' />
-      );
+      render(<Description text='<p class="oh no">Hello hi</p>' />);
     }).toThrow();
   });
 });
