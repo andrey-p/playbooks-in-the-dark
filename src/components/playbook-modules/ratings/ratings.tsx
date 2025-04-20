@@ -4,7 +4,7 @@ import PropsSchema, {
   Action as ActionSchema
 } from './ratings.schema';
 import AttributeGroup from './attribute-group';
-import ModuleWrapper from '../layout/module-wrapper';
+import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 
 type Props = z.infer<typeof PropsSchema>;
 type AttributeType = z.infer<typeof AttributeSchema>;

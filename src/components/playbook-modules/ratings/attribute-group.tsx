@@ -3,8 +3,8 @@ import {
   Attribute as AttributeSchema,
   Action as ActionSchema
 } from './ratings.schema';
-import { TrackerProps as TrackerPropsSchema } from '@/components/trackers/trackers.schema';
-import Tracker from '@/components/trackers/simple-tracker';
+import { TrackerProps as TrackerPropsSchema } from '@/components/playbook-elements/trackers/trackers.schema';
+import Tracker from '@/components/playbook-elements/trackers/simple-tracker';
 import styles from './attribute-group.module.css';
 
 type AttributeType = z.infer<typeof AttributeSchema>;

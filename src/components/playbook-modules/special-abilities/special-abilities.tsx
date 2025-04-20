@@ -3,7 +3,7 @@ import PropsSchema, {
   SpecialAbility as SpecialAbilitySchema
 } from './special-abilities.schema';
 import SpecialAbility from './special-ability';
-import ModuleWrapper from '../layout/module-wrapper';
+import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 import styles from './special-abilities.module.css';
 
 type Props = z.infer<typeof PropsSchema>;

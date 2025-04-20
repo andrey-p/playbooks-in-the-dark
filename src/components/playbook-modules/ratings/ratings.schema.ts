@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
-import { TrackerProps } from '@/components/trackers/trackers.schema';
+import { TrackerProps } from '@/components/playbook-elements/trackers/trackers.schema';
 
 export const Attribute = z.object({
   id: z.string(),

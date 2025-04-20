@@ -33,9 +33,11 @@ export default async function Page(props: Props) {
 
   try {
     systemData = SystemSchema.parse(getJson(systemId, 'system'));
-    playbookData = PlaybookDataSchema.parse(getJson(systemId, playbookId));
     playbookDefinition = PlaybookDefinitionSchema.parse(
       getJson(systemId, playbookType)
+    );
+    playbookData = PlaybookDataSchema.parse(
+      getJson(systemId, playbookType, playbookId)
     );
   } catch (e) {
     if (e instanceof NotFoundError) {

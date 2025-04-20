@@ -4,12 +4,26 @@ import { NotFoundError } from './errors';
 // only allow alphanumeric and - filenames
 const validFileRe = /^[a-zA-Z0-9-]+$/;
 
-export const getJson = function (system: string, fileName: string): object {
+export const getJson = function (
+  system: string,
+  fileType: string,
+  entity: string | undefined = undefined
+): object {
   let data: string;
 
-  const path = `${system}/${fileName}.json`;
+  let path;
 
-  if (!system.match(validFileRe) || !fileName.match(validFileRe)) {
+  if (typeof entity === 'string') {
+    path = `${system}/${fileType}/${entity}.json`;
+
+    if (!entity.match(validFileRe)) {
+      throw new NotFoundError(`Couldn't find system JSON file: ${path}`);
+    }
+  } else {
+    path = `${system}/${fileType}.json`;
+  }
+
+  if (!system.match(validFileRe) || !fileType.match(validFileRe)) {
     throw new NotFoundError(`Couldn't find system JSON file: ${path}`);
   }
 

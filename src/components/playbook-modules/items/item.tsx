@@ -1,8 +1,8 @@
 import { z } from 'zod';
 import { Item as ItemSchema } from './items.schema';
-import { SlotValue as SlotValueSchema } from '@/components/slotted-text/slotted-text.schema';
-import SimpleTracker from '@/components/trackers/simple-tracker';
-import SlottedText from '@/components/slotted-text/slotted-text';
+import { SlotValue as SlotValueSchema } from '@/components/playbook-elements/slotted-text/slotted-text.schema';
+import SimpleTracker from '@/components/playbook-elements/trackers/simple-tracker';
+import SlottedText from '@/components/playbook-elements/slotted-text/slotted-text';
 import styles from './item.module.css';
 import clsx from 'clsx';
 

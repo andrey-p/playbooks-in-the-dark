@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { useState } from 'react';
 import styles from './radio-group.module.css';
-import Toggle from '@/components/toggle/toggle';
+import Toggle from '@/components/playbook-elements/toggle/toggle';
 import { RadioGroupProps as RadioGroupPropsSchema } from './radio-group.schema';
 
 type Props = z.infer<typeof RadioGroupPropsSchema> & {

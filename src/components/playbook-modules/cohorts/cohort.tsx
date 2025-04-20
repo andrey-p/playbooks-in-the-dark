@@ -1,8 +1,8 @@
 import { z } from 'zod';
 import { useId } from 'react';
-import { RadioGroupProps as RadioGroupPropsSchema } from '@/components/radio-group/radio-group.schema';
+import { RadioGroupProps as RadioGroupPropsSchema } from '@/components/playbook-elements/radio-group/radio-group.schema';
 import { CohortValue as CohortValueSchema } from './cohorts.schema';
-import RadioGroup from '@/components/radio-group/radio-group';
+import RadioGroup from '@/components/playbook-elements/radio-group/radio-group';
 import styles from './cohort.module.css';
 
 type RadioGroupPropsType = z.infer<typeof RadioGroupPropsSchema>;

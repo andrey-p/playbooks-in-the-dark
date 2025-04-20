@@ -2,8 +2,8 @@ import { useId } from 'react';
 import { z } from 'zod';
 import styles from './text-area.module.css';
 import PropsSchema from './text-area.schema';
-import ExampleList from '@/components/example-list/example-list';
-import ModuleWrapper from '../layout/module-wrapper';
+import ExampleList from '@/components/playbook-elements/example-list/example-list';
+import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 
 type Props = z.infer<typeof PropsSchema>;
 

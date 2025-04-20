@@ -28,11 +28,11 @@ export default async function Page(props: Props) {
 
   try {
     systemData = SystemSchema.parse(getJson(userData.systemId, 'system'));
-    playbookData = PlaybookDataSchema.parse(
-      getJson(userData.systemId, userData.playbookId)
-    );
     playbookDefinition = PlaybookDefinitionSchema.parse(
       getJson(userData.systemId, userData.playbookType)
+    );
+    playbookData = PlaybookDataSchema.parse(
+      getJson(userData.systemId, userData.playbookType, userData.playbookId)
     );
   } catch (e) {
     if (e instanceof NotFoundError) {

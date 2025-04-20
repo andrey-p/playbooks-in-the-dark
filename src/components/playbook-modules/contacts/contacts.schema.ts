@@ -3,7 +3,7 @@ import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
 import {
   SlotValue,
   SlotProps
-} from '@/components/slotted-text/slotted-text.schema';
+} from '@/components/playbook-elements/slotted-text/slotted-text.schema';
 
 export const Contact = z.object({
   id: z.string(),

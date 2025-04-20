@@ -39,7 +39,7 @@ export default async function Page(props: Props) {
 
       definition.playbooks.forEach((playbookId) => {
         const playbookData = PlaybookDataSchema.parse(
-          getJson(systemId, playbookId)
+          getJson(systemId, type, playbookId)
         );
         playbooksByType[type].push({
           id: playbookId,

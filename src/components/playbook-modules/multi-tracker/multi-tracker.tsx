@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import PropsSchema from './multi-tracker.schema';
-import SimpleTracker from '@/components/trackers/simple-tracker';
-import ModuleWrapper from '../layout/module-wrapper';
+import SimpleTracker from '@/components/playbook-elements/trackers/simple-tracker';
+import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 import styles from './multi-tracker.module.css';
 import clsx from 'clsx';
 

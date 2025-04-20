@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { ToggleType } from '@/components/toggle/toggle.schema';
+import { ToggleType } from '@/components/playbook-elements/toggle/toggle.schema';
 
 export const RadioGroupProps = z.object({
   type: ToggleType,

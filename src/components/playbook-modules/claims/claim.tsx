@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { Claim as ClaimSchema } from './claims.schema';
 import clsx from 'clsx';
 import styles from './claim.module.css';
-import Description from '@/components/description/description';
+import Description from '@/components/playbook-elements/description/description';
 
 type Props = {
   claim: z.infer<typeof ClaimSchema>;

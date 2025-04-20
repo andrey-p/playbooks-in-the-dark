@@ -4,7 +4,7 @@ import {
   BasePlaybookProps as BasePlaybookPropsSchema
 } from '@/schemas';
 import styles from './module-wrapper.module.css';
-import Description from '@/components/description/description';
+import Description from '@/components/playbook-elements/description/description';
 import clsx from 'clsx';
 
 type Props = {

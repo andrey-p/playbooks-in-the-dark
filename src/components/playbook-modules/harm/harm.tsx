@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import PropsSchema from './harm.schema';
 import HarmItem from './harm-item';
-import ModuleWrapper from '../layout/module-wrapper';
+import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 
 import styles from './harm.module.css';
 

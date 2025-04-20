@@ -1,9 +1,9 @@
 import { z } from 'zod';
 import { useState } from 'react';
 import { Contact as ContactSchema } from './contacts.schema';
-import { SlotValue as SlotValueSchema } from '@/components/slotted-text/slotted-text.schema';
-import SlottedText from '@/components/slotted-text/slotted-text';
-import Toggle from '@/components/toggle/toggle';
+import { SlotValue as SlotValueSchema } from '@/components/playbook-elements/slotted-text/slotted-text.schema';
+import SlottedText from '@/components/playbook-elements/slotted-text/slotted-text';
+import Toggle from '@/components/playbook-elements/toggle/toggle';
 import styles from './contact.module.css';
 
 type ContactType = z.infer<typeof ContactSchema>;
