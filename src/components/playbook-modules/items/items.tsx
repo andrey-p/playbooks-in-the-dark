@@ -1,11 +1,13 @@
 import { z } from 'zod';
 import PropsSchema from './items.schema';
+import { SlotValue as SlotValueSchema } from '@/components/slotted-text/slotted-text.schema';
 import RadioGroup from '@/components/radio-group/radio-group';
 import ModuleWrapper from '../layout/module-wrapper';
 import styles from './items.module.css';
 import ItemList from './item-list';
 
 type Props = z.infer<typeof PropsSchema>;
+type SlotValueType = z.infer<typeof SlotValueSchema>;
 
 export default function Items(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
@@ -37,7 +39,7 @@ export default function Items(props: Props) {
     });
   };
 
-  const onSlotUpdate = (newSlots: Record<string, string>) => {
+  const onSlotUpdate = (newSlots: SlotValueType) => {
     onUpdate({
       items: selectedItems,
       load: selectedLoad,
