@@ -40,7 +40,7 @@ describe('SlottedText', () => {
             {
               id: 'foo',
               label: 'Foo',
-              length: 30
+              size: 30
             }
           ]}
           values={{}}
@@ -68,7 +68,7 @@ describe('SlottedText', () => {
             {
               id: 'foo',
               label: 'Foo',
-              length: 30
+              size: 30
             }
           ]}
           values={{
@@ -91,12 +91,12 @@ describe('SlottedText', () => {
             {
               id: 'foo',
               label: 'Foo',
-              length: 30
+              size: 30
             },
             {
               id: 'qux',
               label: 'Qux',
-              length: 30
+              size: 30
             }
           ]}
           values={{
