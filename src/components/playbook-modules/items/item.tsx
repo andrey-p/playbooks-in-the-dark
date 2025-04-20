@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { Item as ItemSchema } from './items.schema';
+import { SlotValue as SlotValueSchema } from '@/components/slotted-text/slotted-text.schema';
 import SimpleTracker from '@/components/trackers/simple-tracker';
 import SlottedText from '@/components/slotted-text/slotted-text';
 import styles from './item.module.css';
@@ -9,7 +10,7 @@ type Props = {
   item: z.infer<typeof ItemSchema>;
   selected?: number;
   onSelect: (selected: number) => void;
-  slotValues: Record<string, string>;
+  slotValues: z.infer<typeof SlotValueSchema>;
   onSlotUpdate: (values: Record<string, string>) => void;
 };
 

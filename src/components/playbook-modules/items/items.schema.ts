@@ -1,6 +1,9 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
-import { SlotProps } from '@/components/slotted-text/slotted-text.schema';
+import {
+  SlotProps,
+  SlotValue
+} from '@/components/slotted-text/slotted-text.schema';
 
 export const Item = z.object({
   id: z.string().refine((val) => val.length <= 255),
@@ -58,12 +61,7 @@ export const UserValue = z
       z.string().refine((val) => val.length <= 255),
       z.number().refine((val) => val >= 0 && val <= 10)
     ),
-    slots: z
-      .record(
-        z.string().refine((val) => val.length <= 255),
-        z.string().refine((val) => val.length <= 255)
-      )
-      .optional()
+    slots: SlotValue.optional()
   })
   .default({ items: {} });
 

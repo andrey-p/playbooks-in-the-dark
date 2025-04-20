@@ -1,14 +1,18 @@
 import { useCallback } from 'react';
 import { z } from 'zod';
-import { SlotProps as SlotPropsSchema } from './slotted-text.schema';
+import {
+  SlotProps as SlotPropsSchema,
+  SlotValue as SlotValueSchema
+} from './slotted-text.schema';
 import Slot from './slot';
 
 type SlotPropsType = z.infer<typeof SlotPropsSchema>;
+type SlotValueType = z.infer<typeof SlotValueSchema>;
 
 type Props = {
   text: string;
   slots?: SlotPropsType[];
-  values?: Record<string, string>;
+  values?: SlotValueType;
   onUpdate: (values: Record<string, string>) => void;
 };
 

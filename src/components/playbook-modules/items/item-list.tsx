@@ -1,19 +1,21 @@
 import { z } from 'zod';
 import { Group as GroupSchema, Item as ItemSchema } from './items.schema';
+import { SlotValue as SlotValueSchema } from '@/components/slotted-text/slotted-text.schema';
 import Item from './item';
 import styles from './item-list.module.css';
 import clsx from 'clsx';
 
 type ItemType = z.infer<typeof ItemSchema>;
 type GroupType = z.infer<typeof GroupSchema>;
+type SlotValueType = z.infer<typeof SlotValueSchema>;
 
 type Props = {
   items: ItemType[];
   selectedItems: Record<string, number>;
   groups?: GroupType[];
   onItemSelect: (itemId: string, selected: number) => void;
-  onSlotUpdate: (values: Record<string, string>) => void;
-  slotValues: Record<string, string>;
+  onSlotUpdate: (values: SlotValueType) => void;
+  slotValues: SlotValueType;
   twoColumns?: boolean;
 };
 
