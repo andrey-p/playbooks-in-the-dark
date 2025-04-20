@@ -16,9 +16,14 @@ type Props = {
   onUpdate: (values: Record<string, string>) => void;
 };
 
+// a component that intersperses inline text with inline input fields
+// fill-in-the-blanks style
+//
+// see tests for intended use
 export default function SlottedText(props: Props) {
   const { text, slots = [], values = {}, onUpdate } = props;
 
+  // put together components for all slots defined for this bit of text
   const slotComponentsById = new Map<string, React.ReactNode>();
 
   const onSlotUpdate = useCallback(
@@ -43,6 +48,14 @@ export default function SlottedText(props: Props) {
     );
   });
 
+  // separate the text into chunks separated by slot-like tokens e.g.:
+  //
+  // "hello {foo} bar"
+  // ->
+  // ["hello ", "{foo}", " bar"]
+  //
+  // (at this stage it doesn't matter if {foo} is an actual slot -
+  // we check that below)
   const splitText = text.split(/(\{[a-zA-Z0-9-]+\})/);
 
   return (
