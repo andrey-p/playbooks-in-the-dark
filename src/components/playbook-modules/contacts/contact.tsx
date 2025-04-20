@@ -1,20 +1,32 @@
 import { z } from 'zod';
 import { useState } from 'react';
 import { Contact as ContactSchema } from './contacts.schema';
+import { SlotValue as SlotValueSchema } from '@/components/slotted-text/slotted-text.schema';
+import SlottedText from '@/components/slotted-text/slotted-text';
 import Toggle from '@/components/toggle/toggle';
 import styles from './contact.module.css';
 
 type ContactType = z.infer<typeof ContactSchema>;
+type SlotValueType = z.infer<typeof SlotValueSchema>;
 
 type Props = {
   contact: ContactType;
   relationship?: number;
   variant?: 'upDown' | 'neutral';
+  slotValues?: SlotValueType;
   onRelationshipUpdate: (id: string, value: number) => void;
+  onSlotUpdate: (newSlotValue: SlotValueType) => void;
 };
 
 export default function Contact(props: Props) {
-  const { contact, variant, relationship, onRelationshipUpdate } = props;
+  const {
+    contact,
+    variant,
+    relationship,
+    slotValues,
+    onRelationshipUpdate,
+    onSlotUpdate
+  } = props;
   const [highlighted, setHighlighted] = useState<number | null>(null);
 
   return (
@@ -47,7 +59,14 @@ export default function Contact(props: Props) {
           />
         </div>
       )}
-      <span className={styles.name}>{contact.name}</span>
+      <span className={styles.name}>
+        <SlottedText
+          text={contact.name}
+          slots={contact.slots}
+          values={slotValues}
+          onUpdate={onSlotUpdate}
+        />
+      </span>
     </div>
   );
 }

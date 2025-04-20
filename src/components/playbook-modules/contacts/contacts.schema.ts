@@ -1,9 +1,14 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
+import {
+  SlotValue,
+  SlotProps
+} from '@/components/slotted-text/slotted-text.schema';
 
 export const Contact = z.object({
   id: z.string(),
-  name: z.string()
+  name: z.string(),
+  slots: z.array(SlotProps).optional()
 });
 
 export const ModuleDefinition = BaseModuleDefinition.merge(
@@ -25,7 +30,8 @@ export const UserValue = z
     contacts: z.record(
       z.string().refine((val) => val.length <= 255),
       z.number().refine((val) => val >= -1 && val <= 1)
-    )
+    ),
+    slots: SlotValue.optional()
   })
   .default({ contacts: {} });
 
