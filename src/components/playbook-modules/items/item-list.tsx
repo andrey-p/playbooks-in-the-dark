@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { Group as GroupSchema, Item as ItemSchema } from './items.schema';
-import { SlotValue as SlotValueSchema } from '@/components/slotted-text/slotted-text.schema';
+import { SlotValue as SlotValueSchema } from '@/components/playbook-elements/slotted-text/slotted-text.schema';
 import Item from './item';
 import styles from './item-list.module.css';
 import clsx from 'clsx';

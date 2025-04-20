@@ -1,8 +1,8 @@
 import { z } from 'zod';
-import SimpleTracker from '@/components/trackers/simple-tracker';
+import SimpleTracker from '@/components/playbook-elements/trackers/simple-tracker';
 import { SpecialAbility as SpecialAbilitySchema } from './special-abilities.schema';
 import styles from './special-ability.module.css';
-import Description from '@/components/description/description';
+import Description from '@/components/playbook-elements/description/description';
 
 type Props = {
   specialAbility: z.infer<typeof SpecialAbilitySchema>;

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
-import { RadioGroupProps } from '@/components/radio-group/radio-group.schema';
+import { RadioGroupProps } from '@/components/playbook-elements/radio-group/radio-group.schema';
 
 export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({

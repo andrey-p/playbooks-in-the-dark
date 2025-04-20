@@ -1,6 +1,6 @@
 import { z } from 'zod';
-import SimpleTracker from '@/components/trackers/simple-tracker';
-import Clock from '@/components/trackers/clock';
+import SimpleTracker from '@/components/playbook-elements/trackers/simple-tracker';
+import Clock from '@/components/playbook-elements/trackers/clock';
 import PropsSchema from './tracker.schema';
 import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 

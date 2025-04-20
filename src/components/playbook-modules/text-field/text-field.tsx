@@ -1,7 +1,7 @@
 import { useId } from 'react';
 import { z } from 'zod';
 import styles from './text-field.module.css';
-import ExampleList from '@/components/example-list/example-list';
+import ExampleList from '@/components/playbook-elements/example-list/example-list';
 import PropsSchema from './text-field.schema';
 import clsx from 'clsx';
 

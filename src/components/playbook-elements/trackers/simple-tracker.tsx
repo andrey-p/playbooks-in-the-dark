@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { useState } from 'react';
 import styles from './simple-tracker.module.css';
 import clsx from 'clsx';
-import Toggle from '@/components/toggle/toggle';
+import Toggle from '@/components/playbook-elements/toggle/toggle';
 import { TrackerProps as TrackerPropsSchema } from './trackers.schema';
 
 type Props = z.infer<typeof TrackerPropsSchema> & {
