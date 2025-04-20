@@ -2,7 +2,7 @@ import { z } from 'zod';
 import SimpleTracker from '@/components/trackers/simple-tracker';
 import Clock from '@/components/trackers/clock';
 import PropsSchema from './tracker.schema';
-import ModuleWrapper from '../layout/module-wrapper';
+import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 
 type Props = z.infer<typeof PropsSchema>;
 

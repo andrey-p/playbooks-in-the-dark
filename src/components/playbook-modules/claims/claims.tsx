@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import PropsSchema from './claims.schema';
 import Claim from './claim';
-import ModuleWrapper from '../layout/module-wrapper';
+import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 import styles from './claims.module.css';
 
 type Props = z.infer<typeof PropsSchema>;

@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import RadioGroupComponent from '@/components/radio-group/radio-group';
 import PropsSchema from './radio-group.schema';
-import ModuleWrapper from '../layout/module-wrapper';
+import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 
 type Props = z.infer<typeof PropsSchema>;
 

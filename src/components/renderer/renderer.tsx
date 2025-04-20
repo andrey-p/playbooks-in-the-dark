@@ -7,12 +7,12 @@ import {
 } from '@/schemas';
 import type Action from '@/reducers/user-data-action';
 
-import ColumnContainer from './layout/column-container';
-import Column from './layout/column';
-import Row from './layout/row';
+import ColumnContainer from '@/components/playbook-layout/column-container';
+import Column from '@/components/playbook-layout/column';
+import Row from '@/components/playbook-layout/row';
 
-import { componentsByModuleType } from './all-modules';
-import { schemasByModuleType } from './all-schemas';
+import { componentsByModuleType } from '@/components/playbook-modules/all-modules';
+import { schemasByModuleType } from '@/components/playbook-modules/all-schemas';
 
 type UserDataType = z.infer<typeof UserDataSchema>;
 type PlaybookDataType = z.infer<typeof PlaybookDataSchema>;

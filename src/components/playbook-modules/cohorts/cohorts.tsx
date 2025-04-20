@@ -2,7 +2,7 @@ import { z } from 'zod';
 import PropsSchema, {
   CohortValue as CohortValueSchema
 } from './cohorts.schema';
-import ModuleWrapper from '../layout/module-wrapper';
+import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 import styles from './cohorts.module.css';
 import Cohort from './cohort';
 

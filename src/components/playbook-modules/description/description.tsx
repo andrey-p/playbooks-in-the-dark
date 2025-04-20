@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import PropsSchema from './description.schema';
-import ModuleWrapper from '../layout/module-wrapper';
+import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 
 type Props = z.infer<typeof PropsSchema>;
 

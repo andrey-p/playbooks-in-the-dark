@@ -2,7 +2,7 @@ import { z } from 'zod';
 import PropsSchema, { Contact as ContactSchema } from './contacts.schema';
 import { SlotValue as SlotValueSchema } from '@/components/slotted-text/slotted-text.schema';
 import Contact from './contact';
-import ModuleWrapper from '../layout/module-wrapper';
+import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 import styles from './contacts.module.css';
 
 type Props = z.infer<typeof PropsSchema>;

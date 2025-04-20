@@ -2,7 +2,7 @@ import { z } from 'zod';
 import PropsSchema from './items.schema';
 import { SlotValue as SlotValueSchema } from '@/components/slotted-text/slotted-text.schema';
 import RadioGroup from '@/components/radio-group/radio-group';
-import ModuleWrapper from '../layout/module-wrapper';
+import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 import styles from './items.module.css';
 import ItemList from './item-list';
 

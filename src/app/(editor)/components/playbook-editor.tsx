@@ -11,8 +11,8 @@ import {
   UserData as UserDataSchema,
   System as SystemDataSchema
 } from '@/schemas';
-import ModuleRenderer from '@/components/playbook-modules/renderer';
-import RendererErrorBoundary from '@/components/playbook-modules/renderer-error-boundary';
+import ModuleRenderer from '@/components/renderer/renderer';
+import RendererErrorBoundary from '@/components/renderer/renderer-error-boundary';
 
 import { userDataReducer } from '@/reducers';
 import PlaybookActions from '@/components/playbook-actions/playbook-actions';

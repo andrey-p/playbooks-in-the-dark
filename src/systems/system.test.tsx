@@ -1,6 +1,6 @@
 import { getJson } from '@/lib/system-data';
-import Renderer from '@/components/playbook-modules/renderer';
-import RendererErrorBoundary from '@/components/playbook-modules/renderer-error-boundary';
+import Renderer from '@/components/renderer/renderer';
+import RendererErrorBoundary from '@/components/renderer/renderer-error-boundary';
 import { render } from '@testing-library/react';
 import systemsJson from './systems.json';
 
