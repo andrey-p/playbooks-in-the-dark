@@ -5,7 +5,7 @@ type Props = {
   text: string;
 };
 
-// a utility class that renders very basic markup in text
+// a utility component that renders very basic markup in text
 export default function Description(props: Props) {
   const { text } = props;
 
