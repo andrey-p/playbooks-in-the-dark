@@ -1,7 +1,21 @@
 {
   "UI": {
     "Global": {
-      "modularCharacterBuilder": "A modular character builder for Forged in the Dark games"
+      "modularCharacterBuilder": "A modular character builder for Forged in the Dark games",
+      "currentlyInAlpha": "(Currently in Alpha!)",
+      "faq": "FAQ",
+      "bladesAttributionText": "This work is based on <a target='_blank' href='http://www.bladesinthedark.com/'>Blades in the Dark</a>, product of One Seven Design, developed and authored by John Harper, and licensed for our use under the <a target='_blank' href='http://creativecommons.org/licenses/by/3.0/'>Creative Commons Attribution 3.0 Unported license</a>.",
+      "thisWebsiteAttributionText": "This website by Andrey Pissantchev. This is a fan project, very much unaffiliated with any of the original creators."
+    },
+    "Selection": {
+      "newPlaybook": "New playbook",
+      "yourSavedPlaybooks": "Your saved playbooks",
+      "notAvailableYet": "(Not available yet. Watch this space.)",
+      "pickYourSystem": "Pick your system",
+      "moreToCome": "(More to come soon)",
+      "goToWebsite": "Go to website ▸",
+      "or": "or",
+      "goBack": "◂ Go back"
     }
   }
 }

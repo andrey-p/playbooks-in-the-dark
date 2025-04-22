@@ -18,7 +18,9 @@ export default function Layout(props: Props) {
         <div className={styles.subheading}>
           {t('UI.Global.modularCharacterBuilder')}
           <br />
-          <span className={styles.highlight}>(Currently in Alpha!)</span>
+          <span className={styles.highlight}>
+            {t('UI.Global.currentlyInAlpha')}
+          </span>
         </div>
       </div>
       {children}

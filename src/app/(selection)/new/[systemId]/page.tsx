@@ -12,6 +12,7 @@ import OptionList from '../../components/option-list';
 import Separator from '../../components/separator';
 import type { Option as OptionType } from '../../components/options.types';
 import styles from './page.module.css';
+import { getTranslations } from 'next-intl/server';
 
 type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
 
@@ -21,6 +22,7 @@ type Props = {
 
 export default async function Page(props: Props) {
   const { systemId } = await props.params;
+  const t = await getTranslations('UI.Selection');
 
   let systemData;
   const playbookDefinitions: PlaybookDefinitionType[] = [];
@@ -67,7 +69,7 @@ export default async function Page(props: Props) {
         )}
         <p className={styles.p}>{systemData.description}</p>
         <a href={systemData.website} target='_blank'>
-          Go to website
+          {t('goToWebsite')}
         </a>
       </div>
       <Separator />
@@ -78,12 +80,12 @@ export default async function Page(props: Props) {
             heading={`Make a ${playbookDefinition.name}`}
             options={playbooksByType[playbookDefinition.id]}
           />
-          <div className={styles.or}>or</div>
+          <div className={styles.or}>{t('or')}</div>
         </div>
       ))}
 
       <Link className={styles.goBack} href={`/new`}>
-        ◂ Go back
+        {t('goBack')}
       </Link>
     </div>
   );

@@ -2,6 +2,7 @@ import type { Option } from './options.types';
 import OptionButton from './option-button';
 import Heading from './heading';
 import styles from './option-list.module.css';
+import { useTranslations } from 'next-intl';
 
 type Props = {
   heading: string;
@@ -10,6 +11,7 @@ type Props = {
 
 export default function Options(props: Props) {
   const { heading, options } = props;
+  const t = useTranslations();
 
   return (
     <div>
@@ -23,7 +25,7 @@ export default function Options(props: Props) {
           ))}
         </ul>
       ) : (
-        <p>(Not available yet. Watch this space.)</p>
+        <p>{t('UI.Selection.notAvailableYet')}</p>
       )}
     </div>
   );
