@@ -57,7 +57,10 @@ const questionsAnswers = [
       If it's an established system that many people are interested in playing, absolutely! Get in touch.
     </p>
     <p>
-      If it's a custom system, something in development or something for a one-shot, I'd rather not add these alongside more established systems. However, do not fret! This was pretty much the use case I started this project in mind with. I'm still trying to figure out how exactly this would work.
+      If it's a custom system, something in development or something for a one-shot, I'd rather not add these alongside more established systems. However, do not fret! This was pretty much the use case I started this project in mind with.
+    </p>
+    <p>
+      I've got a couple of ideas about how to manage custom systems without me having to maintain them, or you having to open pull requests, but that's currently a way off being implemented.
     </p>`
   },
   {
@@ -67,7 +70,7 @@ const questionsAnswers = [
       Documentation is still pending.
     </p>
     <p>
-      Until that happens, you can look at <a href='https://github.com/andrey-p/playbooks-in-the-dark/tree/main/src/systems' target='_blank'>how the existing systems are implemented</a>.
+      Until I've had a chance to put it together, you can look at <a href='https://github.com/andrey-p/playbooks-in-the-dark/tree/main/src/systems' target='_blank'>how the existing systems are implemented</a>.
     </p>
     <p>
       Alternatively, get in touch for help.
