@@ -11,13 +11,13 @@ const questionsAnswers = [
 <p>The goal of this project is to take advantage of the common elements between BitD and FitD to make setting up new systems, characters, crews, etc as easy as possible.</p>`
   },
   {
-    id: 'what-isnt-this',
-    question: "What isn't this?",
+    id: 'what-this-isnt',
+    question: "What this isn't",
     answer: `<p>
       This is not a VTT.
     </p>
     <p>
-      The goal of this project is to optimise for versatility over depth - which means it only cares about what the character sheet behaves like, leaving details like what dice to roll and when to its users.
+      The goal of this project is to optimise for versatility over depth - which means it only cares about what the playbook sheet behaves like, leaving details like what dice to roll and when to its users.
     </p>
     <p>
       For dice rolling etc, it's up to you - either physical dice or a Discord bot will scratch your itch.
@@ -57,7 +57,7 @@ const questionsAnswers = [
       If it's an established system that many people are interested in playing, absolutely! Get in touch.
     </p>
     <p>
-      If it's a custom system, something in development or something for a one-shot, don't fret. This was pretty much the use case I started building this in mind with. There's currently no support for these, but I'm planning to add it in the future.
+      If it's a custom system, something in development or something for a one-shot, I'd rather not add these alongside more established systems. However, do not fret! This was pretty much the use case I started this project in mind with. I'm still trying to figure out how exactly this would work.
     </p>`
   },
   {
