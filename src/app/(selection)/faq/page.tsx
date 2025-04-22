@@ -89,7 +89,7 @@ export default function FAQ() {
   return (
     <div>
       <Heading>FAQ</Heading>
-      {questionsAnswers.map((qa) => (
+      {questionsAnswers.map((qa, i) => (
         <div key={qa.id}>
           <QuestionAnswer
             id={qa.id}
@@ -97,7 +97,7 @@ export default function FAQ() {
             question={qa.question}
             answer={qa.answer}
           />
-          <Separator />
+          {i < questionsAnswers.length - 1 && <Separator />}
         </div>
       ))}
     </div>
