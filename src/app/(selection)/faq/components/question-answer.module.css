@@ -1,0 +1,15 @@
+.container {
+  margin-bottom: 2rem;
+}
+
+.question {
+  margin-bottom: 1rem;
+}
+
+.answer {
+  text-align: left;
+
+  & > p {
+    margin-bottom: 0.5rem;
+  }
+}
