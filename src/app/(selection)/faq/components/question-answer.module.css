@@ -3,7 +3,7 @@
 }
 
 .question {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .answer {
@@ -11,5 +11,16 @@
 
   & > p {
     margin-bottom: 0.5rem;
+  }
+}
+
+.link {
+  display: block;
+  color: var(--midground);
+  margin-bottom: 1rem;
+
+  &:hover,
+  &:focus {
+    color: var(--highlight);
   }
 }
