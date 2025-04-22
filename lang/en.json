@@ -16,6 +16,32 @@
       "goToWebsite": "Go to website ▸",
       "or": "or",
       "goBack": "◂ Go back"
+    },
+    "FAQ": {
+      "whatIsThis": {
+        "q": "What is this?",
+        "a": "<p>Blades in the Dark is an excellent, flexible system. There's a mind-boggling variety of Forged in the Dark systems that take apart the building blocks of the base ruleset and rearrange them in new ways.</p><p>There's a few really good character builders out there for Blades in the Dark. If they were to exist for other FitD systems, they would have to be created from scratch, which makes the whole business a lot more difficult.</p><p>The goal of this project is to take advantage of the common elements between BitD and FitD to make setting up new systems, characters, crews, etc as easy as possible.</p>"
+      },
+      "whatThisIsnt": {
+        "q": "What this isn't",
+        "a": "<p>This is not a VTT.</p><p>The goal of this project is to optimise for versatility over depth - which means it only cares about what the playbook sheet behaves like, leaving details like what dice to roll and when to its users.</p><p>For dice rolling etc, it's up to you - either physical dice or a Discord bot will scratch your itch.</p>"
+      },
+      "saving": {
+        "q": "How does saving work?",
+        "a": "<p>After saving a playbook for the first time, you can copy either an<strong>editable link</strong> or a <strong>read-only link</strong>.</p><p>The <strong>editable link</strong> allows anyone to update (and potentially delete!) your playbook. Only send it to yourself and your close allies.</p><p>The <strong>read-only link</strong> allows anyone to look at, but not mess with, your playbook. Send it to acquaintances and potential turncoats.</p><p>The linked playbooks on the homepage are stored in your browser&apos;s local storage. To access a playbook on a different device, use an <strong>editable link</strong>.</p><p>There is currently no way to assert ownership of a saved playbook.</p>"
+      },
+      "canYouAdd": {
+        "q": "Can you add this FitD system / hack that I'd really like to play?",
+        "a": "<p>If it's an established system that many people are interested in playing, absolutely! Get in touch.</p><p>If it's a custom system, something in development or something for a one-shot, I'd rather not add these alongside more established systems. However, do not fret! This was pretty much the use case I started this project in mind with.</p><p>I've got a couple of ideas about how to manage custom systems without me having to maintain them, or you having to open pull requests, but that's currently a way off being implemented.</p>"
+      },
+      "howDoIAdd": {
+        "q": "How do I add or improve on a system?",
+        "a": "<p>Documentation is still pending.</p><p>Until I've had a chance to put it together, you can look at <a href='https://github.com/andrey-p/playbooks-in-the-dark/tree/main/src/systems' target='_blank'>how the existing systems are implemented</a>.</p><p>Alternatively, get in touch for help.</p>"
+      },
+      "contact": {
+        "q": "How do I contact you?",
+        "a": "<p>Look for `andrey-p` on the <a href='https://discord.gg/BhPz76jU'>Blades in the Dark Discord</a>, open an issue on the <a href='https://github.com/andrey-p/playbooks-in-the-dark' target='_blank'>Github repo</a>, or email `pitd [dot] feedback [at] pm [dot once more] me` (no spaces).</p>"
+      }
     }
   }
 }
