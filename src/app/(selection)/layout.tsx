@@ -1,5 +1,6 @@
 import styles from './layout.module.css';
 import Attribution from './components/attribution';
+import FooterLinks from './components/footer-links';
 
 type Props = {
   children: React.ReactNode;
@@ -21,6 +22,7 @@ export default function Layout(props: Props) {
       {children}
       <footer className={styles.footer}>
         <Attribution />
+        <FooterLinks />
       </footer>
     </div>
   );
