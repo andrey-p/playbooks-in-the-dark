@@ -1,5 +1,6 @@
 import type { Option } from './options.types';
 import OptionButton from './option-button';
+import Heading from './heading';
 import styles from './option-list.module.css';
 
 type Props = {
@@ -12,7 +13,7 @@ export default function Options(props: Props) {
 
   return (
     <div>
-      <h2 className={styles.heading}>{heading}</h2>
+      <Heading>{heading}</Heading>
       {options.length ? (
         <ul className={styles.list}>
           {options.map((option: Option) => (
