@@ -1,0 +1,20 @@
+.container {
+  font-size: 1rem;
+  display: flex;
+}
+
+.item {
+  padding-right: 2rem;
+  position: relative;
+
+  &:after {
+    content: '·';
+    position: absolute;
+    right: 1rem;
+    color: var(--midground);
+  }
+
+  &:last-child:after {
+    content: '';
+  }
+}

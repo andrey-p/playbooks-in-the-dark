@@ -123,34 +123,12 @@ export default function Menu(props: Props) {
 
       <h3 className={styles.explainerHeading}>How does saving work?</h3>
       <p className={styles.explainerP}>
-        After saving a playbook for the first time, you can copy either an{' '}
-        <strong>editable link</strong> or a <strong>read-only link</strong>.
-      </p>
-      <p className={styles.explainerP}>
-        The <strong>editable link</strong> allows anyone to update (and
-        potentially delete!) your playbook. Only send it to yourself and your
-        close allies.
-      </p>
-      <p className={styles.explainerP}>
-        The <strong>read-only link</strong> allows anyone to look at, but not
-        mess with, your playbook. Send it to acquaintances and potential
-        turncoats.
-      </p>
-      <p className={styles.explainerP}>
-        The linked playbooks on the homepage are stored in your browser&apos;s
-        local storage. To access a playbook on a different device, use an{' '}
-        <strong>editable link</strong>.
-      </p>
-      <p className={styles.explainerP}>
-        There is currently no way to assert ownership of a saved playbook. Hate
-        this? Go and shout at Andrey{' '}
-        <a
-          target='_blank'
-          href='https://github.com/andrey-p/playbooks-in-the-dark'
-        >
-          on Github
-        </a>{' '}
-        so it gets moved up the development roadmap.
+        This project currently uses direct links to manage playbook ownership.
+        Please read up on it{' '}
+        <a href='/faq#saving' target='_blank'>
+          in the FAQ
+        </a>
+        .
       </p>
     </div>
   );

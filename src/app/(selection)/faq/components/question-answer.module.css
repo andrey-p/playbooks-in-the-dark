@@ -1,0 +1,26 @@
+.container {
+  margin-bottom: 2rem;
+}
+
+.question {
+  margin-bottom: 0.5rem;
+}
+
+.answer {
+  text-align: left;
+
+  & > p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.link {
+  display: block;
+  color: var(--midground);
+  margin-bottom: 1rem;
+
+  &:hover,
+  &:focus {
+    color: var(--highlight);
+  }
+}
