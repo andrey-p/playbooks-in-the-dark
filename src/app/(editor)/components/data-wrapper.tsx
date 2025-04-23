@@ -9,6 +9,8 @@ import { z } from 'zod';
 import { getJson } from '@/lib/system-data';
 import { NotFoundError } from '@/lib/errors';
 import { notFound } from 'next/navigation';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale } from 'next-intl/server';
 
 type UserDataType = z.infer<typeof UserDataSchema>;
 type SystemType = z.infer<typeof SystemSchema>;
@@ -62,9 +64,25 @@ export default async function DataWrapper(props: Props) {
     return notFound();
   }
 
-  return children({
-    systemData,
-    playbookData,
-    playbookDefinition
-  });
+  // get system-specific translation strings for this locale
+  const locale = getLocale();
+  const uiMessages = (await import(`@/../lang/${locale}.json`)).default;
+  const systemMessages = (
+    await import(`@/systems/${systemId}/lang/${locale}.json`)
+  ).default;
+
+  return (
+    <NextIntlClientProvider
+      messages={{
+        ...uiMessages,
+        ...systemMessages
+      }}
+    >
+      {children({
+        systemData,
+        playbookData,
+        playbookDefinition
+      })}
+    </NextIntlClientProvider>
+  );
 }
