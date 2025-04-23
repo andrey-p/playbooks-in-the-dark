@@ -39,22 +39,22 @@
     "name": {
       "id": "name",
       "type": "textField",
-      "label": "Name"
+      "label": "AFOD.Modules.nameLabel"
     },
     "reputation": {
       "id": "reputation",
       "type": "textField",
-      "label": "Reputation"
+      "label": "AFOD.Modules.reputationLabel"
     },
     "hideout": {
       "id": "hideout",
       "type": "textField",
-      "label": "Hideout"
+      "label": "AFOD.Modules.hideoutLabel"
     },
     "repClaims": {
       "id": "repClaims",
       "type": "multiTracker",
-      "label": "Reputation & Claims",
+      "label": "AFOD.Modules.repClaimsLabel",
       "props": {
         "trackers": {
           "rep": {
@@ -76,7 +76,7 @@
     "coin": {
       "id": "coin",
       "type": "items",
-      "label": "Coin",
+      "label": "AFOD.Modules.coinLabel",
       "props": {
         "groups": [
           {
@@ -207,7 +207,7 @@
     "hold": {
       "id": "hold",
       "type": "radioGroup",
-      "label": "Hold",
+      "label": "AFOD.Modules.holdLabel",
       "props": {
         "type": "rhombus",
         "size": 25,
@@ -226,7 +226,7 @@
     "tier": {
       "id": "tier",
       "type": "tracker",
-      "label": "Tier",
+      "label": "AFOD.Modules.tierLabel",
       "props": {
         "type": "square",
         "max": 4
@@ -235,7 +235,7 @@
     "doom": {
       "id": "doom",
       "type": "tracker",
-      "label": "Doom",
+      "label": "AFOD.Modules.doomLabel",
       "props": {
         "type": "square",
         "max": 10
@@ -244,7 +244,7 @@
     "riders": {
       "id": "riders",
       "type": "tracker",
-      "label": "Riders",
+      "label": "AFOD.Modules.ridersLabel",
       "props": {
         "type": "square",
         "max": 4
@@ -253,12 +253,12 @@
     "achievements": {
       "id": "achievements",
       "type": "claims",
-      "label": "Achievements"
+      "label": "AFOD.Modules.achievementsLabel"
     },
     "posseXp": {
       "id": "posseXp",
       "type": "tracker",
-      "label": "Posse XP",
+      "label": "AFOD.Modules.posseXpLabel",
       "props": {
         "max": 8,
         "type": "rectangle",
@@ -268,22 +268,22 @@
     "specialAbilities": {
       "id": "specialAbilities",
       "type": "specialAbilities",
-      "label": "Special abilities"
+      "label": "AFOD.Modules.specialAbilitiesLabel"
     },
     "contacts": {
       "id": "contacts",
       "type": "contacts",
-      "label": "Contacts"
+      "label": "AFOD.Modules.contactsLabel"
     },
     "modus": {
       "id": "modus",
       "type": "textField",
-      "label": "Modus"
+      "label": "AFOD.Modules.modusLabel"
     },
     "posseUpgrades": {
       "id": "posseUpgrades",
       "type": "items",
-      "label": "Posse Upgrades",
+      "label": "AFOD.Modules.posseUpgradesLabel",
       "props": {
         "twoColumns": true,
         "groups": [
@@ -431,7 +431,7 @@
     "cohorts": {
       "id": "cohorts",
       "type": "cohorts",
-      "label": "Cohorts",
+      "label": "AFOD.Modules.cohortsLabel",
       "props": {
         "slots": 4,
         "radioGroups": {

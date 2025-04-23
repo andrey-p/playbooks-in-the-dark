@@ -45,22 +45,22 @@
     "name": {
       "id": "name",
       "type": "textField",
-      "label": "Name"
+      "label": "BITD.Modules.nameLabel"
     },
     "reputation": {
       "id": "reputation",
       "type": "textField",
-      "label": "Reputation"
+      "label": "BITD.Modules.reputationLabel"
     },
     "lair": {
       "id": "lair",
       "type": "textField",
-      "label": "Lair"
+      "label": "BITD.Modules.lairLabel"
     },
     "deity": {
       "id": "deity",
       "type": "textField",
-      "label": "Deity (choose 2 features)",
+      "label": "BITD.Modules.deityLabel",
       "playbooks": [
         "cult"
       ],
@@ -80,7 +80,7 @@
     "repTurf": {
       "id": "repTurf",
       "type": "multiTracker",
-      "label": "Reputation & Turf",
+      "label": "BITD.Modules.repTurfLabel",
       "props": {
         "trackers": {
           "rep": {
@@ -101,7 +101,7 @@
     "hold": {
       "id": "hold",
       "type": "radioGroup",
-      "label": "Hold",
+      "label": "BITD.Modules.holdLabel",
       "props": {
         "type": "dagger",
         "size": 30,
@@ -120,7 +120,7 @@
     "tier": {
       "id": "tier",
       "type": "radioGroup",
-      "label": "Tier",
+      "label": "BITD.Modules.tierLabel",
       "props": {
         "type": "circle",
         "options": [
@@ -146,12 +146,12 @@
     "claims": {
       "id": "claims",
       "type": "claims",
-      "label": "Claims"
+      "label": "BITD.Modules.claimsLabel"
     },
     "crewXp": {
       "id": "crewXp",
       "type": "tracker",
-      "label": "Crew XP",
+      "label": "BITD.Modules.crewXpLabel",
       "props": {
         "max": 10,
         "type": "dagger"
@@ -160,12 +160,12 @@
     "specialAbilities": {
       "id": "specialAbilities",
       "type": "specialAbilities",
-      "label": "Special abilities"
+      "label": "BITD.Modules.specialAbilitiesLabel"
     },
     "contacts": {
       "id": "contacts",
       "type": "contacts",
-      "label": "Contacts",
+      "label": "BITD.Modules.contactsLabel",
       "props": {
         "variant": "neutral"
       }
@@ -173,7 +173,7 @@
     "heatWanted": {
       "id": "heatWanted",
       "type": "multiTracker",
-      "label": "Heat / Wanted Level",
+      "label": "BITD.Modules.heatWantedLabel",
       "props": {
         "trackers": {
           "heat": {
@@ -192,7 +192,7 @@
     "coin": {
       "id": "coin",
       "type": "multiTracker",
-      "label": "Coin",
+      "label": "BITD.Modules.coinLabel",
       "description": "Upon crew advance, each PC gets stash = Tier + 2",
       "props": {
         "trackers": {
@@ -212,7 +212,7 @@
     "favoredNotes": {
       "id": "favoredNotes",
       "type": "textArea",
-      "label": "Favored grounds / operation",
+      "label": "BITD.Modules.favoredNotesLabel",
       "props": {
         "height": 150
       }
@@ -220,12 +220,12 @@
     "notes": {
       "id": "notes",
       "type": "textArea",
-      "label": "Notes"
+      "label": "BITD.Modules.notesLabel"
     },
     "crewUpgrades": {
       "id": "crewUpgrades",
       "type": "items",
-      "label": "Crew Upgrades",
+      "label": "BITD.Modules.crewUpgradesLabel",
       "description": "Cohorts upgrade costs: New cohort - 2, Add type - 2",
       "props": {
         "twoColumns": true,
@@ -356,7 +356,7 @@
     "cohorts": {
       "id": "cohorts",
       "type": "cohorts",
-      "label": "Cohorts",
+      "label": "BITD.Modules.cohortsLabel",
       "props": {
         "slots": 4,
         "radioGroups": {
@@ -410,7 +410,7 @@
       "playbooks": [
         "smugglers"
       ],
-      "label": "Vehicle Edges / Flaws",
+      "label": "BITD.Modules.vehicleCohortLabel",
       "description": "<p><strong>Vehicle Edges</strong></p> <p><strong>Nimble:</strong> The vehicle handles easily. Consider this an <strong>assist</strong> for tricky maneuvers.</p> <p><strong>Simple:</strong> The vehicle is easy to repair. Remove all of its harm during downtime.</p> <p><strong>Sturdy:</strong> The vehicle keeps operating even when broken.</p> <p><strong>Vehicle Flaws</strong></p> <p><strong>Costly:</strong> The vehicle costs 1 coin per downtime to keep in operation.</p> <p><strong>Distinct:</strong> The vehicle has memorable features. Take +1 heat when you use it on a score.</p> <p><strong>Finicky:</strong> The vehicle has quirks that only one person understands. When operated without them, the vehicle has -1 quality.</p>"
     }
   }

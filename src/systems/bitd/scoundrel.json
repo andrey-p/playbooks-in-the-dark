@@ -209,13 +209,22 @@
     "items": {
       "id": "items",
       "type": "items",
-      "label": "BITD.Modules.itemsLabel"
+      "label": "BITD.Modules.itemsLabel",
       "props": {
         "twoColumns": true,
         "load": [
-          { "id": "light", "name": "BITD.Modules.itemsLoadLight" },
-          { "id": "normal", "name": "BITD.Modules.itemsLoadNormal" },
-          { "id": "heavy", "name": "BITD.Modules.itemsLoadHeavy" }
+          {
+            "id": "light",
+            "name": "BITD.Modules.itemsLoadLight"
+          },
+          {
+            "id": "normal",
+            "name": "BITD.Modules.itemsLoadNormal"
+          },
+          {
+            "id": "heavy",
+            "name": "BITD.Modules.itemsLoadHeavy"
+          }
         ],
         "common": [
           {
@@ -304,7 +313,7 @@
     "alchemicals": {
       "id": "alchemicals",
       "type": "items",
-      "label": "Alchemicals",
+      "label": "BITD.Modules.alchemicalsLabel",
       "playbooks": [
         "leech"
       ],
@@ -327,7 +336,7 @@
     "playbookXp": {
       "id": "playbookXp",
       "type": "tracker",
-      "label": "Playbook XP",
+      "label": "BITD.Modules.playbookXpLabel",
       "props": {
         "max": 7,
         "type": "dagger"
@@ -336,7 +345,7 @@
     "coin": {
       "id": "coin",
       "type": "multiTracker",
-      "label": "Coin",
+      "label": "BITD.Modules.coinLabel",
       "props": {
         "trackers": {
           "coin": {
@@ -356,7 +365,7 @@
     "ratings": {
       "id": "ratings",
       "type": "ratings",
-      "label": "Ratings",
+      "label": "BITD.Modules.ratingsLabel",
       "props": {
         "attributes": [
           {

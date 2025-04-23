@@ -93,6 +93,23 @@
       "itemsLoadLight": "3 light",
       "itemsLoadNormal": "5 normal",
       "itemsLoadHeavy": "6 heavy",
+      "alchemicalsLabel": "Alchemicals",
+      "playbookXpLabel": "Playbook XP",
+      "coinLabel": "Coin",
+      "ratingsLabel": "Ratings",
+      "reputationLabel": "Reputation",
+      "lairLabel": "Lair",
+      "deityLabel": "Deity (choose 2 features)",
+      "repTurfLabel": "Reputation & Turf",
+      "holdLabel": "Hold",
+      "tierLabel": "Tier",
+      "claimsLabel": "Claims",
+      "crewXpLabel": "Crew XP",
+      "heatWantedLabel": "Heat / Wanted Level",
+      "favoredNotesLabel": "Favored grounds / operation",
+      "crewUpgradesLabel": "Crew Upgrades",
+      "cohortsLabel": "Cohorts",
+      "vehicleCohortLabel": "Vehicle Edges / Flaws"
     }
   }
 }

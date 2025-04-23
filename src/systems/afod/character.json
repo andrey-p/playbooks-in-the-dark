@@ -51,22 +51,22 @@
     "name": {
       "id": "name",
       "type": "textField",
-      "label": "Name"
+      "label": "AFOD.Modules.nameLabel"
     },
     "posse": {
       "id": "posse",
       "type": "textField",
-      "label": "Name"
+      "label": "AFOD.Modules.posseLabel"
     },
     "look": {
       "id": "look",
       "type": "textField",
-      "label": "Look"
+      "label": "AFOD.Modules.lookLabel"
     },
     "heritage": {
       "id": "heritage",
       "type": "textField",
-      "label": "Heritage",
+      "label": "AFOD.Modules.heritageLabel",
       "props": {
         "examples": [
           "African",
@@ -81,7 +81,7 @@
     "background": {
       "id": "background",
       "type": "textField",
-      "label": "Background",
+      "label": "AFOD.Modules.backgroundLabel",
       "props": {
         "examples": [
           "Big town",
@@ -97,12 +97,12 @@
     "vice": {
       "id": "vice",
       "type": "textField",
-      "label": "Vice / Purveyor"
+      "label": "AFOD.Modules.viceLabel"
     },
     "grit": {
       "id": "grit",
       "type": "tracker",
-      "label": "Grit",
+      "label": "AFOD.Modules.gritLabel",
       "props": {
         "type": "rectangle",
         "size": 30,
@@ -112,7 +112,7 @@
     "stigma": {
       "id": "stigma",
       "type": "tracker",
-      "label": "Stigma",
+      "label": "AFOD.Modules.stigmaLabel",
       "props": {
         "type": "rectangle",
         "size": 30,
@@ -122,7 +122,7 @@
     "stigmaText": {
       "id": "stigmaText",
       "type": "textField",
-      "label": "Stigma",
+      "label": "AFOD.Modules.stigmaLabel",
       "props": {
         "examples": [
           "Scarred",
@@ -140,7 +140,7 @@
     "harm": {
       "id": "harm",
       "type": "harm",
-      "label": "Harm",
+      "label": "AFOD.Modules.harmLabel",
       "props": {
         "levelDescriptions": [
           "Less effect",
@@ -152,7 +152,7 @@
     "mutationClock": {
       "id": "mutationClock",
       "type": "tracker",
-      "label": "Mutation",
+      "label": "AFOD.Modules.mutationClockLabel",
       "props": {
         "type": "clock",
         "max": 8
@@ -161,7 +161,7 @@
     "healingClock": {
       "id": "healingClock",
       "type": "tracker",
-      "label": "Heal",
+      "label": "AFOD.Modules.healingClockLabel",
       "props": {
         "type": "clock",
         "max": 4
@@ -170,7 +170,7 @@
     "armor": {
       "id": "armor",
       "type": "items",
-      "label": "Armor Uses",
+      "label": "AFOD.Modules.armorLabel",
       "props": {
         "common": [
           {
@@ -189,12 +189,12 @@
     "notes": {
       "id": "notes",
       "type": "textArea",
-      "label": "Notes"
+      "label": "AFOD.Modules.notesLabel"
     },
     "ratings": {
       "id": "ratings",
       "type": "ratings",
-      "label": "Ratings",
+      "label": "AFOD.Modules.ratingsLabel",
       "props": {
         "attributes": [
           {
@@ -282,7 +282,7 @@
     "playbookXp": {
       "id": "playbookXp",
       "type": "tracker",
-      "label": "Playbook XP",
+      "label": "AFOD.Modules.playbookXpLabel",
       "props": {
         "max": 8,
         "size": 30,
@@ -292,7 +292,7 @@
     "coin": {
       "id": "coin",
       "type": "items",
-      "label": "Coin",
+      "label": "AFOD.Modules.coinLabel",
       "props": {
         "common": [
           {
@@ -325,7 +325,7 @@
     "ablass": {
       "id": "ablass",
       "type": "tracker",
-      "label": "Ablass",
+      "label": "AFOD.Modules.ablassLabel",
       "props": {
         "max": 40,
         "type": "square",
@@ -336,17 +336,17 @@
     "specialAbilities": {
       "id": "specialAbilities",
       "type": "specialAbilities",
-      "label": "Special abilities"
+      "label": "AFOD.Modules.specialAbilitiesLabel"
     },
     "contacts": {
       "id": "contacts",
       "type": "contacts",
-      "label": "Contacts"
+      "label": "AFOD.Modules.contactsLabel"
     },
     "items": {
       "id": "items",
       "type": "items",
-      "label": "Items",
+      "label": "AFOD.Modules.itemsLabel",
       "props": {
         "twoColumns": true,
         "load": [
