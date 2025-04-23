@@ -193,7 +193,7 @@
       "id": "coin",
       "type": "multiTracker",
       "label": "BITD.Modules.coinLabel",
-      "description": "Upon crew advance, each PC gets stash = Tier + 2",
+      "description": "BITD.Modules.coinDescription",
       "props": {
         "trackers": {
           "coin": {
@@ -226,7 +226,7 @@
       "id": "crewUpgrades",
       "type": "items",
       "label": "BITD.Modules.crewUpgradesLabel",
-      "description": "Cohorts upgrade costs: New cohort - 2, Add type - 2",
+      "description": "BITD.Modules.crewUpgradesDescription",
       "props": {
         "twoColumns": true,
         "groups": [
@@ -411,7 +411,7 @@
         "smugglers"
       ],
       "label": "BITD.Modules.vehicleCohortLabel",
-      "description": "<p><strong>Vehicle Edges</strong></p> <p><strong>Nimble:</strong> The vehicle handles easily. Consider this an <strong>assist</strong> for tricky maneuvers.</p> <p><strong>Simple:</strong> The vehicle is easy to repair. Remove all of its harm during downtime.</p> <p><strong>Sturdy:</strong> The vehicle keeps operating even when broken.</p> <p><strong>Vehicle Flaws</strong></p> <p><strong>Costly:</strong> The vehicle costs 1 coin per downtime to keep in operation.</p> <p><strong>Distinct:</strong> The vehicle has memorable features. Take +1 heat when you use it on a score.</p> <p><strong>Finicky:</strong> The vehicle has quirks that only one person understands. When operated without them, the vehicle has -1 quality.</p>"
+      "description": "BITD.Modules.vehicleCohortDescription"
     }
   }
 }

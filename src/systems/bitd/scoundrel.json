@@ -331,7 +331,7 @@
           }
         ]
       },
-      "description": "<p>When you use a bandolier slot, choose an alchemical:</p> <ul><li>Alcahest</li><li>Binding Oil</li><li>Drift Oil</li><li>Drown Powder</li><li>Eyeblind Poison</li><li>Fire Oil</li><li>Grenade</li><li>Quicksilver</li><li>Skullfire Poison</li><li>Smoke Bomb</li><li>Spark (drug)</li><li>Standstill Poison</li><li>Trance Powder</li></ul>"
+      "description": "BITD.Modules.alchemicalsDescription"
     },
     "playbookXp": {
       "id": "playbookXp",
