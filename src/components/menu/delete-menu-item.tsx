@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import BaseMenuItem from './base-menu-item';
 import styles from './delete-menu-item.module.css';
+import { useTranslations } from 'next-intl';
 
 type Props = {
   deletePlaybook: () => Promise<void>;
@@ -9,6 +10,7 @@ type Props = {
 export default function DeleteMenuItem(props: Props) {
   const { deletePlaybook } = props;
   const [showingConfirm, setShowingConfirm] = useState<boolean>(false);
+  const t = useTranslations('UI.Menu');
 
   const onYesClick = async () => {
     await deletePlaybook();
@@ -19,23 +21,23 @@ export default function DeleteMenuItem(props: Props) {
       onClick={() => setShowingConfirm(true)}
       secondaryContent={
         <>
-          Are you sure? This is irreversible.
+          {t('areYouSure')}
           <div>
             <button className={styles.confirmBtn} onClick={onYesClick}>
-              YES
+              {t('yes')}
             </button>
             <button
               className={styles.confirmBtn}
               onClick={() => setShowingConfirm(false)}
             >
-              NO
+              {t('no')}
             </button>
           </div>
         </>
       }
       showSecondaryContent={showingConfirm}
     >
-      Delete playbook
+      {t('deletePlaybook')}
     </BaseMenuItem>
   );
 }

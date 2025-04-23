@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import styles from './playbook-actions.module.css';
 import IconButton from '@/components/icon-button/icon-button';
 import Menu from '../menu/menu';
+import { useTranslations } from 'next-intl';
 
 import { FiSave, FiMenu } from 'react-icons/fi';
 
@@ -21,6 +22,7 @@ type Props = {
 export default function PlaybookActions(props: Props) {
   const { isSaved, savePlaybook, userData, readOnly, deletePlaybook } = props;
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const t = useTranslations('UI.PlaybookActions');
 
   const onMenuClose = useCallback(() => {
     setIsMenuOpen(false);
@@ -33,7 +35,7 @@ export default function PlaybookActions(props: Props) {
           <div className={clsx(!isSaved && styles.notSaved)}>
             <IconButton
               onClick={savePlaybook}
-              label={isSaved ? 'Save' : 'Save (you have unsaved changes)'}
+              label={isSaved ? t('save') : t('saveUnsavedChanges')}
               icon={<FiSave />}
             />
           </div>
@@ -44,7 +46,7 @@ export default function PlaybookActions(props: Props) {
             setIsMenuOpen(true);
           }}
           icon={<FiMenu />}
-          label='Open menu'
+          label={t('openMenu')}
         />
       </div>
       <Menu

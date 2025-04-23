@@ -42,6 +42,26 @@
         "q": "How do I contact you?",
         "a": "<p>Look for `andrey-p` on the <a href='https://discord.gg/BhPz76jU'>Blades in the Dark Discord</a>, open an issue on the <a href='https://github.com/andrey-p/playbooks-in-the-dark' target='_blank'>Github repo</a>, or email `pitd [dot] feedback [at] pm [dot once more] me` (no spaces).</p>"
       }
+    },
+    "PlaybookActions": {
+      "save": "Save",
+      "saveUnsavedChanges": "Save (you have unsaved changes)",
+      "openMenu": "Open menu"
+    },
+    "Menu": {
+      "closeMenu": "Close menu",
+      "githubRepository": "Github repository",
+      "switchToLightTheme": "Switch to light theme",
+      "switchToDarkTheme": "Switch to dark theme",
+      "copyEditableLink": "Copy editable link",
+      "copyReadOnlyLink": "Copy read-only link",
+      "howDoesSavingWork": "How does saving work?",
+      "savingExplainer": "This project currently uses direct links to manage playbook ownership. Please read up on it <a>in the FAQ</a>.",
+      "copied": "Copied!",
+      "deletePlaybook": "Delete playbook",
+      "areYouSure": "Are you sure? This is irreversible.",
+      "yes": "Yes",
+      "no": "No"
     }
   }
 }

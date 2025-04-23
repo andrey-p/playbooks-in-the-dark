@@ -7,6 +7,7 @@ import DeleteMenuItem from './delete-menu-item';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { ThemeContext } from '@/context';
+import { useTranslations } from 'next-intl';
 
 import { UserData as UserDataSchema } from '@/schemas';
 
@@ -23,6 +24,7 @@ type Props = {
 export default function Menu(props: Props) {
   const { userData, onClose, open, deletePlaybook } = props;
   const containerRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations('UI.Menu');
 
   const { theme, setTheme } = useContext(ThemeContext.Context);
 
@@ -77,19 +79,19 @@ export default function Menu(props: Props) {
         </span>
       </h2>
       <div className={styles.btns}>
-        <IconButton onClick={onClose} label='Close menu' icon={<FiX />} />
+        <IconButton onClick={onClose} label={t('closeMenu')} icon={<FiX />} />
 
         <Link
           href='https://github.com/andrey-p/playbooks-in-the-dark'
           target='_blank'
         >
-          <IconButton label='Github repository' icon={<FiGithub />} />
+          <IconButton label={t('githubRepository')} icon={<FiGithub />} />
         </Link>
 
         <IconButton
           onClick={toggleTheme}
           label={
-            theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
+            theme === 'dark' ? t('switchToLightTheme') : t('switchToDarkTheme')
           }
           icon={theme === 'dark' ? <FiSun /> : <FiMoon />}
         />
@@ -100,7 +102,7 @@ export default function Menu(props: Props) {
           {userData.id && (
             <li className={styles.menuItem}>
               <CopyMenuItem
-                text='Copy editable link'
+                text={t('copyEditableLink')}
                 path={`${userData.systemId}/${userData.playbookType}/${userData.playbookId}/${userData.id}`}
               />
             </li>
@@ -108,7 +110,7 @@ export default function Menu(props: Props) {
           {userData.shareId && (
             <li className={styles.menuItem}>
               <CopyMenuItem
-                text='Copy read-only link'
+                text={t('copyReadOnlyLink')}
                 path={`share/${userData.shareId}`}
               />
             </li>
@@ -121,14 +123,15 @@ export default function Menu(props: Props) {
         </ul>
       )}
 
-      <h3 className={styles.explainerHeading}>How does saving work?</h3>
+      <h3 className={styles.explainerHeading}>{t('howDoesSavingWork')}</h3>
       <p className={styles.explainerP}>
-        This project currently uses direct links to manage playbook ownership.
-        Please read up on it{' '}
-        <a href='/faq#saving' target='_blank'>
-          in the FAQ
-        </a>
-        .
+        {t.rich('savingExplainer', {
+          a: (chunks) => (
+            <a href='/faq#saving' target='_blank'>
+              {chunks}
+            </a>
+          )
+        })}
       </p>
     </div>
   );

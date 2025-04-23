@@ -203,7 +203,7 @@ describe('PlaybookEditor', () => {
 
       const deleteBtn = screen.getByText('Delete playbook');
       await user.click(deleteBtn);
-      const confirmBtn = screen.getByText('YES');
+      const confirmBtn = screen.getByText('Yes');
       await user.click(confirmBtn);
 
       // delete action should've been called
