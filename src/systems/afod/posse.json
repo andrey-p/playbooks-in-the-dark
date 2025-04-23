@@ -214,11 +214,11 @@
         "options": [
           {
             "id": "weak",
-            "name": "Weak"
+            "name": "AFOD.Modules.holdWeak"
           },
           {
             "id": "strong",
-            "name": "Strong"
+            "name": "AFOD.Modules.holdStrong"
           }
         ]
       }

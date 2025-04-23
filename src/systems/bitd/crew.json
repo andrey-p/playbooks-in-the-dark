@@ -108,11 +108,11 @@
         "options": [
           {
             "id": "weak",
-            "name": "Weak"
+            "name": "BITD.Modules.holdWeak"
           },
           {
             "id": "strong",
-            "name": "Strong"
+            "name": "BITD.Modules.holdStrong"
           }
         ]
       }
@@ -126,19 +126,19 @@
         "options": [
           {
             "id": "1",
-            "name": "1"
+            "name": "BITD.Modules.tier0"
           },
           {
             "id": "2",
-            "name": "2"
+            "name": "BITD.Modules.tier1"
           },
           {
             "id": "3",
-            "name": "3"
+            "name": "BITD.Modules.tier2"
           },
           {
             "id": "4",
-            "name": "4"
+            "name": "BITD.Modules.tier3"
           }
         ]
       }

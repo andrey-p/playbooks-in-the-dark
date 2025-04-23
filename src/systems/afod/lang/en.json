@@ -73,7 +73,9 @@
       "posseUpgradesLabel": "Posse Upgrades",
       "cohortsLabel": "Cohorts",
       "repLabel": "Rep",
-      "claimsLabel": "Claims"
+      "claimsLabel": "Claims",
+      "holdWeak": "Weak",
+      "holdStrong": "Strong"
     }
   }
 }

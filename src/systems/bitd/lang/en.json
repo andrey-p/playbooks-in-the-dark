@@ -119,7 +119,13 @@
       "turfLabel": "Turf",
       "heatLabel": "Heat",
       "wantedLabel": "Wanted",
-      "vaultLabel": "Vault"
+      "vaultLabel": "Vault",
+      "holdWeak": "Weak",
+      "holdStrong": "Strong",
+      "tier0": "1",
+      "tier1": "2",
+      "tier2": "3",
+      "tier3": "4"
     }
   }
 }
