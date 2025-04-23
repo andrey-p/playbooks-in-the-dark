@@ -330,7 +330,7 @@
         "max": 40,
         "type": "square",
         "wrap": true,
-        "label": "Ablass"
+        "label": "AFOD.Modules.ablassLabel"
       }
     },
     "specialAbilities": {
