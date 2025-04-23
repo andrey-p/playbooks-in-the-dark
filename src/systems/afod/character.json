@@ -143,9 +143,9 @@
       "label": "AFOD.Modules.harmLabel",
       "props": {
         "levelDescriptions": [
-          "Less effect",
-          "-1D",
-          "Need help"
+          "AFOD.Modules.harmLessEffect",
+          "AFOD.Modules.harmMinus1D",
+          "AFOD.Modules.harmNeedHelp"
         ]
       }
     },
@@ -199,76 +199,76 @@
         "attributes": [
           {
             "id": "wit",
-            "name": "Wit"
+            "name": "AFOD.Modules.ratingsWit"
           },
           {
             "id": "prowess",
-            "name": "Prowess"
+            "name": "AFOD.Modules.ratingsProwess"
           },
           {
             "id": "guts",
-            "name": "Guts"
+            "name": "AFOD.Modules.ratingsGuts"
           }
         ],
         "actions": [
           {
             "id": "hunt",
-            "name": "Hunt",
+            "name": "AFOD.Modules.ratingsHunt",
             "attributeId": "wit"
           },
           {
             "id": "read",
-            "name": "Read",
+            "name": "AFOD.Modules.ratingsRead",
             "attributeId": "wit"
           },
           {
             "id": "survey",
-            "name": "Survey",
+            "name": "AFOD.Modules.ratingsSurvey",
             "attributeId": "wit"
           },
           {
             "id": "craft",
-            "name": "Craft",
+            "name": "AFOD.Modules.ratingsCraft",
             "attributeId": "wit"
           },
           {
             "id": "sling",
-            "name": "Sling",
+            "name": "AFOD.Modules.ratingsSling",
             "attributeId": "prowess"
           },
           {
             "id": "prowl",
-            "name": "Prowl",
+            "name": "AFOD.Modules.ratingsProwl",
             "attributeId": "prowess"
           },
           {
             "id": "brawl",
-            "name": "Brawl",
+            "name": "AFOD.Modules.ratingsBrawl",
             "attributeId": "prowess"
           },
           {
             "id": "disable",
-            "name": "Disable",
+            "name": "AFOD.Modules.ratingsDisable",
             "attributeId": "prowess"
           },
           {
             "id": "attune",
-            "name": "Attune",
+            "name": "AFOD.Modules.ratingsAttune",
             "attributeId": "guts"
           },
           {
             "id": "command",
-            "name": "Command",
+            "name": "AFOD.Modules.ratingsCommand",
             "attributeId": "guts"
           },
           {
             "id": "consort",
-            "name": "Consort",
+            "name": "AFOD.Modules.ratingsConsort",
             "attributeId": "guts"
           },
           {
             "id": "sway",
-            "name": "Sway",
+            "name": "AFOD.Modules.ratingsSway",
             "attributeId": "guts"
           }
         ],

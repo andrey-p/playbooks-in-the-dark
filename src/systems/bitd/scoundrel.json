@@ -370,76 +370,76 @@
         "attributes": [
           {
             "id": "insight",
-            "name": "Insight"
+            "name": "BITD.Modules.ratingsInsight"
           },
           {
             "id": "prowess",
-            "name": "Prowess"
+            "name": "BITD.Modules.ratingsProwess"
           },
           {
             "id": "resolve",
-            "name": "Resolve"
+            "name": "BITD.Modules.ratingsResolve"
           }
         ],
         "actions": [
           {
             "id": "hunt",
-            "name": "Hunt",
+            "name": "BITD.Modules.ratingsHunt",
             "attributeId": "insight"
           },
           {
             "id": "survey",
-            "name": "Survey",
+            "name": "BITD.Modules.ratingsSurvey",
             "attributeId": "insight"
           },
           {
             "id": "study",
-            "name": "Study",
+            "name": "BITD.Modules.ratingsStudy",
             "attributeId": "insight"
           },
           {
             "id": "tinker",
-            "name": "Tinker",
+            "name": "BITD.Modules.ratingsTinker",
             "attributeId": "insight"
           },
           {
             "id": "finesse",
-            "name": "Finesse",
+            "name": "BITD.Modules.ratingsFinesse",
             "attributeId": "prowess"
           },
           {
             "id": "prowl",
-            "name": "Prowl",
+            "name": "BITD.Modules.ratingsProwl",
             "attributeId": "prowess"
           },
           {
             "id": "skirmish",
-            "name": "Skirmish",
+            "name": "BITD.Modules.ratingsSkirmish",
             "attributeId": "prowess"
           },
           {
             "id": "wreck",
-            "name": "Wreck",
+            "name": "BITD.Modules.ratingsWreck",
             "attributeId": "prowess"
           },
           {
             "id": "attune",
-            "name": "Attune",
+            "name": "BITD.Modules.ratingsAttune",
             "attributeId": "resolve"
           },
           {
             "id": "command",
-            "name": "Command",
+            "name": "BITD.Modules.ratingsCommand",
             "attributeId": "resolve"
           },
           {
             "id": "consort",
-            "name": "Consort",
+            "name": "BITD.Modules.ratingsConsort",
             "attributeId": "resolve"
           },
           {
             "id": "sway",
-            "name": "Sway",
+            "name": "BITD.Modules.ratingsSway",
             "attributeId": "resolve"
           }
         ]
