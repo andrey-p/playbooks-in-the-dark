@@ -1,5 +1,5 @@
 import Description from './description';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from 'test-utils';
 
 describe('Description', () => {
   it('renders text with very basic markup', () => {

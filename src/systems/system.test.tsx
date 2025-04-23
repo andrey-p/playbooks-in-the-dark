@@ -1,7 +1,7 @@
 import { getJson } from '@/lib/system-data';
 import Renderer from '@/components/renderer/renderer';
 import RendererErrorBoundary from '@/components/renderer/renderer-error-boundary';
-import { render } from '@testing-library/react';
+import { render } from 'test-utils';
 import systemsJson from './systems.json';
 
 import { fromError } from 'zod-validation-error';

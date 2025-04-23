@@ -1,6 +1,6 @@
 import Page from '@/app/(selection)/page';
 import { savePlaybook } from '@/lib/local-storage';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from 'test-utils';
 
 const scoundrel = {
   id: 'scoundrel',

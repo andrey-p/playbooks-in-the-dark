@@ -1,7 +1,7 @@
 import { getPlaybooks as getPlaybooksFromLocalStorage } from '@/lib/local-storage';
 
 import PlaybookEditor from './playbook-editor';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from 'test-utils';
 import userEvent from '@testing-library/user-event';
 
 const pushFn = jest.fn();

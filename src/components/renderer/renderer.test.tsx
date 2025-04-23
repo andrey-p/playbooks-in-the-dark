@@ -1,5 +1,5 @@
 import Renderer from './renderer';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from 'test-utils';
 import userEvent from '@testing-library/user-event';
 
 const playbookData = {
