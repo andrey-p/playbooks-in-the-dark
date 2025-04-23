@@ -86,14 +86,14 @@
           "rep": {
             "max": 12,
             "type": "dagger",
-            "label": "Rep"
+            "label": "BITD.Modules.repLabel"
           },
           "turf": {
             "max": 6,
             "reverse": true,
             "size": 12,
             "type": "square",
-            "label": "Turf"
+            "label": "BITD.Modules.turfLabel"
           }
         }
       }
@@ -179,12 +179,12 @@
           "heat": {
             "max": 9,
             "type": "dagger",
-            "label": "Heat"
+            "label": "BITD.Modules.heatLabel"
           },
           "wanted": {
             "max": 4,
             "type": "dagger",
-            "label": "Wanted"
+            "label": "BITD.Modules.wantedLabel"
           }
         }
       }
@@ -199,12 +199,12 @@
           "coin": {
             "max": 4,
             "type": "square",
-            "label": "Coin"
+            "label": "BITD.Modules.coinLabel"
           },
           "vault": {
             "max": 12,
             "type": "square",
-            "label": "Vault"
+            "label": "BITD.Modules.vaultLabel"
           }
         }
       }

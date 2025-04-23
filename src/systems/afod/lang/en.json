@@ -71,7 +71,9 @@
       "posseXpLabel": "Posse XP",
       "modusLabel": "Modus",
       "posseUpgradesLabel": "Posse Upgrades",
-      "cohortsLabel": "Cohorts"
+      "cohortsLabel": "Cohorts",
+      "repLabel": "Rep",
+      "claimsLabel": "Claims"
     }
   }
 }

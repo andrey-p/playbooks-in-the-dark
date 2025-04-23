@@ -61,14 +61,14 @@
             "max": 12,
             "type": "rectangle",
             "size": 30,
-            "label": "Rep"
+            "label": "AFOD.Modules.repLabel"
           },
           "claims": {
             "max": 3,
             "reverse": true,
             "size": 12,
             "type": "square",
-            "label": "Claims"
+            "label": "AFOD.Modules.claimsLabel"
           }
         }
       }
