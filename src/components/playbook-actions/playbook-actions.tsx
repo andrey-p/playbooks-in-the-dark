@@ -2,8 +2,8 @@ import { useState, useCallback } from 'react';
 import { z } from 'zod';
 import clsx from 'clsx';
 import styles from './playbook-actions.module.css';
-import Button from './button';
-import Menu from './menu/menu';
+import IconButton from '@/components/icon-button/icon-button';
+import Menu from '../menu/menu';
 
 import { FiSave, FiMenu } from 'react-icons/fi';
 
@@ -31,14 +31,14 @@ export default function PlaybookActions(props: Props) {
       <div className={styles.buttons}>
         {!readOnly && (
           <div className={clsx(!isSaved && styles.notSaved)}>
-            <Button
+            <IconButton
               onClick={savePlaybook}
               label={isSaved ? 'Save' : 'Save (you have unsaved changes)'}
               icon={<FiSave />}
             />
           </div>
         )}
-        <Button
+        <IconButton
           onClick={(e: React.MouseEvent) => {
             e.preventDefault();
             setIsMenuOpen(true);

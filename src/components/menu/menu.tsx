@@ -1,7 +1,7 @@
 import { useEffect, useCallback, useRef, useContext } from 'react';
 import { z } from 'zod';
 import styles from './menu.module.css';
-import Button from '../button';
+import IconButton from '@/components/icon-button/icon-button';
 import CopyMenuItem from './copy-menu-item';
 import DeleteMenuItem from './delete-menu-item';
 import clsx from 'clsx';
@@ -77,16 +77,16 @@ export default function Menu(props: Props) {
         </span>
       </h2>
       <div className={styles.btns}>
-        <Button onClick={onClose} label='Close menu' icon={<FiX />} />
+        <IconButton onClick={onClose} label='Close menu' icon={<FiX />} />
 
         <Link
           href='https://github.com/andrey-p/playbooks-in-the-dark'
           target='_blank'
         >
-          <Button label='Github repository' icon={<FiGithub />} />
+          <IconButton label='Github repository' icon={<FiGithub />} />
         </Link>
 
-        <Button
+        <IconButton
           onClick={toggleTheme}
           label={
             theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
