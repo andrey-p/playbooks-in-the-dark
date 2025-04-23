@@ -22,7 +22,7 @@ type Props = {
 
 export default async function Page(props: Props) {
   const { systemId } = await props.params;
-  const t = await getTranslations('UI.Selection');
+  const t = await getTranslations();
 
   let systemData;
   const playbookDefinitions: PlaybookDefinitionType[] = [];
@@ -63,13 +63,13 @@ export default async function Page(props: Props) {
     <div className={styles.container}>
       <Separator />
       <div className={styles.systemBlurb}>
-        <h2 className={styles.heading}>{systemData.name}</h2>
+        <h2 className={styles.heading}>{t(systemData.name)}</h2>
         {systemData.attribution && (
-          <p className={styles.attribution}>{systemData.attribution}</p>
+          <p className={styles.attribution}>{t(systemData.attribution)}</p>
         )}
-        <p className={styles.p}>{systemData.description}</p>
+        <p className={styles.p}>{t(systemData.description)}</p>
         <a href={systemData.website} target='_blank'>
-          {t('goToWebsite')}
+          {t('UI.Selection.goToWebsite')}
         </a>
       </div>
       <Separator />
@@ -77,15 +77,17 @@ export default async function Page(props: Props) {
       {playbookDefinitions.map((playbookDefinition: PlaybookDefinitionType) => (
         <div key={playbookDefinition.id}>
           <OptionList
-            heading={`Make a ${playbookDefinition.name}`}
+            heading={t(
+              `${systemData.translationNamespace}.Playbook.makeA.${playbookDefinition.id}`
+            )}
             options={playbooksByType[playbookDefinition.id]}
           />
-          <div className={styles.or}>{t('or')}</div>
+          <div className={styles.or}>{t('UI.Selection.or')}</div>
         </div>
       ))}
 
       <Link className={styles.goBack} href={`/new`}>
-        {t('goBack')}
+        {t('UI.Selection.goBack')}
       </Link>
     </div>
   );

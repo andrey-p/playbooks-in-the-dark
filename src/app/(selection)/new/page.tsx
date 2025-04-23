@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 
 export default function Home() {
   const t = useTranslations();
+
   const availableSystems = systemsJson.systems
     .map((system) => {
       return System.parse(getJson(system.id, 'system'));
@@ -14,8 +15,8 @@ export default function Home() {
     .map((system) => ({
       id: system.id,
       href: `/new/${system.id}`,
-      name: system.name,
-      description: system.description
+      name: t(system.name),
+      description: t(system.description)
     }));
 
   return (

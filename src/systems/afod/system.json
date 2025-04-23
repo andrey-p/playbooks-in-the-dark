@@ -1,9 +1,10 @@
 {
   "id": "afod",
-  "name": "A Fistful of Darkness",
-  "description": "A game about gunslinging and impending doom in a weird west setting.",
+  "name": "AFOD.System.name",
+  "description": "AFOD.System.description",
   "customStyles": "styles.css",
+  "translationNamespace": "AFOD",
   "playbookTypes": ["character", "posse"],
-  "attribution": "Created by Stefan Struck",
+  "attribution": "AFOD.System.attribution",
   "website": "https://monkeyecho.itch.io/a-fistful-of-darkness"
 }

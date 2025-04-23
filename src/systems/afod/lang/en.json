@@ -1,0 +1,15 @@
+{
+  "AFOD": {
+    "System": {
+      "name": "A Fistful of Darkness",
+      "description": "A game about gunslinging and impending doom in a weird west setting.",
+      "attribution": "Created by Stefan Struck"
+    },
+    "Playbooks": {
+      "makeA": {
+        "character": "Make a character",
+        "posse": "Make a posse"
+      }
+    }
+  }
+}
