@@ -13,32 +13,32 @@
       "custom": [
         {
           "id": "fine & flashy pair of pistols",
-          "name": "Fine & Flashy Pair of Pistols",
+          "name": "AFOD.Modules.itemsFineFlashyPairOfPistols",
           "load": 1
         },
         {
           "id": "fine rifle",
-          "name": "Fine Rifle",
+          "name": "AFOD.Modules.itemsFineRifle",
           "load": 2
         },
         {
           "id": "lightning a fine horse",
-          "name": "\"Lightning\", a Fine Horse",
+          "name": "AFOD.Modules.itemsLightningAFineHorse",
           "load": 0
         },
         {
           "id": "special ammunition",
-          "name": "Special Ammunition",
+          "name": "AFOD.Modules.itemsSpecialAmmunition",
           "load": 1
         },
         {
           "id": "fine disguise kit",
-          "name": "Fine Disguise Kit",
+          "name": "AFOD.Modules.itemsFineDisguiseKit",
           "load": 1
         },
         {
           "id": "a message from an admirer",
-          "name": "A Message from an Admirer",
+          "name": "AFOD.Modules.itemsAMessageFromAnAdmirer",
           "load": 0
         }
       ]

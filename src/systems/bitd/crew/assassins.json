@@ -209,27 +209,27 @@
       "custom": [
         {
           "id": "assassin rigging",
-          "name": "Assassin Rigging (2 free load of weapons or gear)",
+          "name": "BITD.Modules.crewUpgradesAssassinRigging",
           "load": 1
         },
         {
           "id": "ironhook contacts",
-          "name": "Ironhook Contacts (+1 tier in prison)",
+          "name": "BITD.Modules.crewUpgradesIronhookContacts",
           "load": 1
         },
         {
           "id": "elite skulks",
-          "name": "Elite Skulks",
+          "name": "BITD.Modules.crewUpgradesEliteSkulks",
           "load": 1
         },
         {
           "id": "elite thugs",
-          "name": "Elite Thugs",
+          "name": "BITD.Modules.crewUpgradesEliteThugs",
           "load": 1
         },
         {
           "id": "hardened",
-          "name": "Hardened (+1 trauma box)",
+          "name": "BITD.Modules.crewUpgradesHardened",
           "load": 3
         }
       ]

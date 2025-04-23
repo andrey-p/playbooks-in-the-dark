@@ -14,32 +14,32 @@
       "custom": [
         {
           "id": "a symbol of your faith",
-          "name": "A Symbol of Your Faith",
+          "name": "AFOD.Modules.itemsASymbolOfYourFaith",
           "load": 0
         },
         {
           "id": "an instrument of your faith",
-          "name": "An Instrument of Your Faith",
+          "name": "AFOD.Modules.itemsAnInstrumentOfYourFaith",
           "load": 1
         },
         {
           "id": "blessed implements for a ritual",
-          "name": "Blessed Implements for a Ritual",
+          "name": "AFOD.Modules.itemsBlessedImplementsForARitual",
           "load": 1
         },
         {
           "id": "a confession of old",
-          "name": "A Confession of Old",
+          "name": "AFOD.Modules.itemsAConfessionOfOld",
           "load": 0
         },
         {
           "id": "fine garments of ceremony",
-          "name": "Fine Garments of Ceremony",
+          "name": "AFOD.Modules.itemsFineGarmentsOfCeremony",
           "load": 1
         },
         {
           "id": "concealed palm pistol or blade",
-          "name": "Concealed Palm Pistol or Blade",
+          "name": "AFOD.Modules.itemsConcealedPalmPistolOrBlade",
           "load": 1
         }
       ]

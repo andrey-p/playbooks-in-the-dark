@@ -7,32 +7,32 @@
       "custom": [
         {
           "id": "fine cover identity",
-          "name": "Fine cover identity",
+          "name": "BITD.Modules.itemsFineCoverIdentity",
           "load": 0
         },
         {
           "id": "fine bottle of whiskey",
-          "name": "Fine Bottle of Whiskey",
+          "name": "BITD.Modules.itemsFineBottleOfWhiskey",
           "load": 1
         },
         {
           "id": "blueprints",
-          "name": "Blueprints",
+          "name": "BITD.Modules.itemsBlueprints",
           "load": 1
         },
         {
           "id": "vial of slumber essence",
-          "name": "Vial of Slumber Essence",
+          "name": "BITD.Modules.itemsVialOfSlumberEssence",
           "load": 0
         },
         {
           "id": "conealed palm pistol",
-          "name": "Concealed Palm Pistol",
+          "name": "BITD.Modules.itemsConealedPalmPistol",
           "load": 0
         },
         {
           "id": "spiritbane charm",
-          "name": "Spiritbane Charm",
+          "name": "BITD.Modules.itemsSpiritBaneCharm",
           "load": 0
         }
       ]

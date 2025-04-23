@@ -212,27 +212,27 @@
       "custom": [
         {
           "id": "tribe rigging",
-          "name": "Tribe Rigging (weapons or implements)",
+          "name": "AFOD.Modules.posseUpgradesTribeRigging",
           "load": 1
         },
         {
           "id": "elite scouts",
-          "name": "Elite Scouts",
+          "name": "AFOD.Modules.posseUpgradesEliteScouts",
           "load": 1
         },
         {
           "id": "elite movers",
-          "name": "Elite Movers",
+          "name": "AFOD.Modules.posseUpgradesEliteMovers",
           "load": 1
         },
         {
           "id": "gateway to the burning beyond",
-          "name": "Gateway to the Burning Beyond",
+          "name": "AFOD.Modules.posseUpgradesGatewayToTheBurningBeyond",
           "load": 1
         },
         {
           "id": "hardened",
-          "name": "Hardened (+1 Grit Box)",
+          "name": "AFOD.Modules.posseUpgradesHardened",
           "load": 3
         }
       ]

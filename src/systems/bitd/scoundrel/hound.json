@@ -7,32 +7,32 @@
       "custom": [
         {
           "id": "fine pair of pistols",
-          "name": "Fine Pair of Pistols",
+          "name": "BITD.Modules.itemsFinePairOfPistols",
           "load": 1
         },
         {
           "id": "fine long rifle",
-          "name": "Fine Long Rifle",
+          "name": "BITD.Modules.itemsFineLongRifle",
           "load": 2
         },
         {
           "id": "electroplasmic ammunition",
-          "name": "Electroplasmic Ammunition",
+          "name": "BITD.Modules.itemsElectroplasmicAmmunition",
           "load": 1
         },
         {
           "id": "a trained hunting pet",
-          "name": "A Trained Hunting Pet",
+          "name": "BITD.Modules.itemsATrainedHuntingPet",
           "load": 0
         },
         {
           "id": "spyglass",
-          "name": "Spyglass",
+          "name": "BITD.Modules.itemsSpyglass",
           "load": 1
         },
         {
           "id": "spiritbane charm",
-          "name": "Spiritbane charm",
+          "name": "BITD.Modules.itemsSpiritbaneCharm",
           "load": 0
         }
       ]

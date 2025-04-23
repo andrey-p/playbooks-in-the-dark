@@ -13,32 +13,32 @@
       "custom": [
         {
           "id": "a concealed holdout pistol",
-          "name": "A Concealed Holdout Pistol",
+          "name": "AFOD.Modules.itemsAConcealedHoldoutPistol",
           "load": 0
         },
         {
           "id": "fine status symbol",
-          "name": "Fine Status Symbol",
+          "name": "AFOD.Modules.itemsFineStatusSymbol",
           "load": 1
         },
         {
           "id": "fine documents",
-          "name": "Fine Documents",
+          "name": "AFOD.Modules.itemsFineDocuments",
           "load": 1
         },
         {
           "id": "blackmail information",
-          "name": "Blackmail Information",
+          "name": "AFOD.Modules.itemsBlackmailInformation",
           "load": 0
         },
         {
           "id": "fine ornamented carriage",
-          "name": "Fine Ornamented Carriage",
+          "name": "AFOD.Modules.itemsFineOrnamentedCarriage",
           "load": 0
         },
         {
           "id": "a spirit charm",
-          "name": "A Spirit Charm",
+          "name": "AFOD.Modules.itemsASpiritCharm",
           "load": 0
         }
       ]

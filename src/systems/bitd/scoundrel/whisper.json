@@ -7,32 +7,32 @@
       "custom": [
         {
           "id": "fine lightning hook",
-          "name": "Fine Lightning Hook",
+          "name": "BITD.Modules.itemsFineLightningHook",
           "load": 2
         },
         {
           "id": "fine spirit mask",
-          "name": "Fine Spirit Mask",
+          "name": "BITD.Modules.itemsFineSpiritMask",
           "load": 1
         },
         {
           "id": "electroplasm vials",
-          "name": "Electroplasm Vials",
+          "name": "BITD.Modules.itemsElectroplasmVials",
           "load": 0
         },
         {
           "id": "spirit bottles",
-          "name": "Spirit Bottles (2)",
+          "name": "BITD.Modules.itemsSpiritBottles",
           "load": 1
         },
         {
           "id": "ghost key",
-          "name": "Ghost Key",
+          "name": "BITD.Modules.itemsGhostKey",
           "load": 0
         },
         {
           "id": "demonbane charm",
-          "name": "Demonbane Charm",
+          "name": "BITD.Modules.itemsDemonbaneCharm",
           "load": 0
         }
       ]

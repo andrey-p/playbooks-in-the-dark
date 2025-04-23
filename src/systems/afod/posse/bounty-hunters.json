@@ -212,27 +212,27 @@
       "custom": [
         {
           "id": "bounty rigging",
-          "name": "Bounty Rigging (weapons or documents)",
+          "name": "AFOD.Modules.posseUpgradesBountyRigging",
           "load": 1
         },
         {
           "id": "elite rooks",
-          "name": "Elite Rooks",
+          "name": "AFOD.Modules.posseUpgradesEliteRooks",
           "load": 1
         },
         {
           "id": "elite scouts",
-          "name": "Elite Scouts",
+          "name": "AFOD.Modules.posseUpgradesEliteScouts",
           "load": 1
         },
         {
           "id": "get out of jail free card",
-          "name": "'Get out of jail free' card",
+          "name": "AFOD.Modules.posseUpgradesGetOutOfJailFreeCard",
           "load": 1
         },
         {
           "id": "hardened",
-          "name": "Hardened (+1 Grit Box)",
+          "name": "AFOD.Modules.posseUpgradesHardened",
           "load": 3
         }
       ]

@@ -211,27 +211,27 @@
       "custom": [
         {
           "id": "outlaw rigging",
-          "name": "Outlaw Rigging (weapons or armor)",
+          "name": "AFOD.Modules.posseUpgradesOutlawRigging",
           "load": 1
         },
         {
           "id": "elite thugs",
-          "name": "Elite Thugs",
+          "name": "AFOD.Modules.posseUpgradesEliteThugs",
           "load": 1
         },
         {
           "id": "elite movers",
-          "name": "Elite Movers",
+          "name": "AFOD.Modules.posseUpgradesEliteMovers",
           "load": 1
         },
         {
           "id": "mobile hideout",
-          "name": "Mobile Hideout",
+          "name": "AFOD.Modules.posseUpgradesMobileHideout",
           "load": 1
         },
         {
           "id": "ruthless",
-          "name": "Ruthless (+1 Grit Box)",
+          "name": "AFOD.Modules.posseUpgradesRuthless",
           "load": 3
         }
       ]

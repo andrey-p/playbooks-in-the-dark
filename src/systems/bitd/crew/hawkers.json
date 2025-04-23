@@ -203,27 +203,27 @@
       "custom": [
         {
           "id": "hawkers rigging",
-          "name": "Hawkers' Rigging (1 carried item is concealed and has no load)",
+          "name": "BITD.Modules.crewUpgradesHawkersRigging",
           "load": 1
         },
         {
           "id": "ironhook contacts",
-          "name": "Ironhook Contacts (+1 tier in prison)",
+          "name": "BITD.Modules.crewUpgradesIronhookContacts",
           "load": 1
         },
         {
           "id": "elite rooks",
-          "name": "Elite Rooks",
+          "name": "BITD.Modules.crewUpgradesEliteRooks",
           "load": 1
         },
         {
           "id": "elite thugs",
-          "name": "Elite Thugs",
+          "name": "BITD.Modules.crewUpgradesEliteThugs",
           "load": 1
         },
         {
           "id": "composed",
-          "name": "Composed (+1 stress box)",
+          "name": "BITD.Modules.crewUpgradesComposed",
           "load": 3
         }
       ]

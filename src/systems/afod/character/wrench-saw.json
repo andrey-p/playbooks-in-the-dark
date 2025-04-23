@@ -13,32 +13,32 @@
       "custom": [
         {
           "id": "fine crafting tools",
-          "name": "Fine Crafting Tools",
+          "name": "AFOD.Modules.itemsFineCraftingTools",
           "load": 1
         },
         {
           "id": "fine experimental rifle",
-          "name": "Fine Experimental Rifle",
+          "name": "AFOD.Modules.itemsFineExperimentalRifle",
           "load": 2
         },
         {
           "id": "fine useful parts",
-          "name": "Fine Useful Parts",
+          "name": "AFOD.Modules.itemsFineUsefulParts",
           "load": 1
         },
         {
           "id": "hellstone goggles",
-          "name": "Hellstone Goggles",
+          "name": "AFOD.Modules.itemsHellstoneGoggles",
           "load": 1
         },
         {
           "id": "an unopened box",
-          "name": "An Unopened Box",
+          "name": "AFOD.Modules.itemsAnUnopenedBox",
           "load": 1
         },
         {
           "id": "a disturbing truth",
-          "name": "A Disturbing Truth",
+          "name": "AFOD.Modules.itemsADisturbingTruth",
           "load": 0
         }
       ]

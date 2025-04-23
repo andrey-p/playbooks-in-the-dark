@@ -206,27 +206,27 @@
       "custom": [
         {
           "id": "smugglers rigging",
-          "name": "Smugglers' Rigging (2 items carried are perfectly concealed)",
+          "name": "BITD.Modules.crewUpgradesSmugglersRigging",
           "load": 1
         },
         {
           "id": "camouflage",
-          "name": "Camouflage (vehicles are perfectly concealed at rest)",
+          "name": "BITD.Modules.crewUpgradesCamouflage",
           "load": 1
         },
         {
           "id": "elite rovers",
-          "name": "Elite Rovers",
+          "name": "BITD.Modules.crewUpgradesEliteRovers",
           "load": 1
         },
         {
           "id": "barge",
-          "name": "Barge (+ mobility or lair)",
+          "name": "BITD.Modules.crewUpgradesBarge",
           "load": 1
         },
         {
           "id": "steady",
-          "name": "Steady (+1 stress box)",
+          "name": "BITD.Modules.crewUpgradesSteady",
           "load": 3
         }
       ]

@@ -14,32 +14,32 @@
       "custom": [
         {
           "id": "fine hand weapon",
-          "name": "Fine Hand Weapon",
+          "name": "AFOD.Modules.itemsFineHandWeapon",
           "load": 1
         },
         {
           "id": "fine heavy weapon",
-          "name": "Fine Heavy Weapon",
+          "name": "AFOD.Modules.itemsFineHeavyWeapon",
           "load": 1
         },
         {
           "id": "scary weapon or tool",
-          "name": "Scary Weapon or Tool",
+          "name": "AFOD.Modules.itemsScaryWeaponOrTool",
           "load": 1
         },
         {
           "id": "picture of a lost love",
-          "name": "Picture of a lost love",
+          "name": "AFOD.Modules.itemsPictureOfALostLove",
           "load": 1
         },
         {
           "id": "bottle of whiskey",
-          "name": "Bottle of Whiskey",
+          "name": "AFOD.Modules.itemsBottleOfWhiskey",
           "load": 1
         },
         {
           "id": "pack of bandages",
-          "name": "Pack of Bandages",
+          "name": "AFOD.Modules.itemsPackOfBandages",
           "load": 1
         }
       ]

@@ -13,32 +13,32 @@
       "custom": [
         {
           "id": "fine concealed palm pistol",
-          "name": "Fine Concealed Palm Pistol",
+          "name": "AFOD.Modules.itemsFineConcealedPalmPistol",
           "load": 1
         },
         {
           "id": "fine bedside manners",
-          "name": "Fine Bedside Manners",
+          "name": "AFOD.Modules.itemsFineBedsideManners",
           "load": 0
         },
         {
           "id": "fine doctors bag and apron",
-          "name": "Fine Doctors Bag and Apron",
+          "name": "AFOD.Modules.itemsFineDoctorsBagAndApron",
           "load": 2
         },
         {
           "id": "fine and very strong cough syrup",
-          "name": "Fine and Very Strong Cough Syrup",
+          "name": "AFOD.Modules.itemsFineAndVeryStrongCoughSyrup",
           "load": 0
         },
         {
           "id": "a comforting song",
-          "name": "A Comforting Song",
+          "name": "AFOD.Modules.itemsAComfortingSong",
           "load": 0
         },
         {
           "id": "an old favor",
-          "name": "An Old Favor",
+          "name": "AFOD.Modules.itemsAnOldFavor",
           "load": 0
         }
       ]

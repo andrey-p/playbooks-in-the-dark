@@ -212,27 +212,27 @@
       "custom": [
         {
           "id": "scavenger rigging",
-          "name": "Scavenger Rigging (tools or weapons)",
+          "name": "AFOD.Modules.posseUpgradesScavengerRigging",
           "load": 1
         },
         {
           "id": "elite scouts",
-          "name": "Elite Scouts",
+          "name": "AFOD.Modules.posseUpgradesEliteScouts",
           "load": 1
         },
         {
           "id": "elite movers",
-          "name": "Elite Movers",
+          "name": "AFOD.Modules.posseUpgradesEliteMovers",
           "load": 1
         },
         {
           "id": "fine carriages",
-          "name": "Fine Carriages",
+          "name": "AFOD.Modules.posseUpgradesFineCarriages",
           "load": 1
         },
         {
           "id": "steady",
-          "name": "Steady (+1 Grit Box)",
+          "name": "AFOD.Modules.posseUpgradesSteady",
           "load": 3
         }
       ]

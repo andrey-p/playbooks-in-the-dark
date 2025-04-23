@@ -7,32 +7,32 @@
       "custom": [
         {
           "id": "fine clothes & jewelry",
-          "name": "Fine Clothes & Jewelry",
+          "name": "BITD.Modules.itemsFineClothesJewelry",
           "load": 0
         },
         {
           "id": "fine disguise kit",
-          "name": "Fine Disguise Kit",
+          "name": "BITD.Modules.itemsFineDisguiseKit",
           "load": 1
         },
         {
           "id": "fine loaded dice trick cards",
-          "name": "Fine Loaded Dice, Trick Cards",
+          "name": "BITD.Modules.itemsFineLoadedDiceTrickCards",
           "load": 0
         },
         {
           "id": "trance powder",
-          "name": "Trance Powder",
+          "name": "BITD.Modules.itemsTrancePowder",
           "load": 0
         },
         {
           "id": "a cane-sword",
-          "name": "A cane-sword",
+          "name": "BITD.Modules.itemsACaneSword",
           "load": 1
         },
         {
           "id": "spiritbane charm",
-          "name": "Spiritbane Charm",
+          "name": "BITD.Modules.itemsSpiritBaneCharm",
           "load": 0
         }
       ]

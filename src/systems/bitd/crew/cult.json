@@ -205,27 +205,27 @@
       "custom": [
         {
           "id": "cult rigging",
-          "name": "Cult Rigging (2 free load of documents or implements)",
+          "name": "BITD.Modules.crewUpgradesCultRigging",
           "load": 1
         },
         {
           "id": "ritual sanctum in lair",
-          "name": "Ritual sanctum in lair",
+          "name": "BITD.Modules.crewUpgradesRitualSanctumInLair",
           "load": 1
         },
         {
           "id": "elite adepts",
-          "name": "Elite Adepts",
+          "name": "BITD.Modules.crewUpgradesEliteAdepts",
           "load": 1
         },
         {
           "id": "elite thugs",
-          "name": "Elite Thugs",
+          "name": "BITD.Modules.crewUpgradesEliteThugs",
           "load": 1
         },
         {
           "id": "ordained",
-          "name": "Ordained (+1 trauma box)",
+          "name": "BITD.Modules.crewUpgradesOrdained",
           "load": 3
         }
       ]

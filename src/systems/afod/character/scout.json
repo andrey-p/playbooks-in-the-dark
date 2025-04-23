@@ -13,32 +13,32 @@
       "custom": [
         {
           "id": "fine hunting knife",
-          "name": "Fine Hunting Knife",
+          "name": "AFOD.Modules.itemsFineHuntingKnife",
           "load": 1
         },
         {
           "id": "fine rifle or bow",
-          "name": "Fine Rifle or Bow",
+          "name": "AFOD.Modules.itemsFineRifleorBow",
           "load": 1
         },
         {
           "id": "fine leather clothes",
-          "name": "Fine Leather Clothes",
+          "name": "AFOD.Modules.itemsFineLeatherClothes",
           "load": 1
         },
         {
           "id": "trap",
-          "name": "Trap",
+          "name": "AFOD.Modules.itemsTrap",
           "load": 2
         },
         {
           "id": "fine horse with saddle",
-          "name": "Fine Horse with Saddle",
+          "name": "AFOD.Modules.itemsFineHorseWithSaddle",
           "load": 1
         },
         {
           "id": "outdoor survival kit",
-          "name": "Outdoor Survival Kit",
+          "name": "AFOD.Modules.itemsOutdoorSurvivalKit",
           "load": 1
         }
       ]

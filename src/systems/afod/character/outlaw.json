@@ -14,32 +14,32 @@
       "custom": [
         {
           "id": "a fine pistol",
-          "name": "A Fine Pistol",
+          "name": "AFOD.Modules.itemsAFinePistol",
           "load": 1
         },
         {
           "id": "a fine rifle or shotgun",
-          "name": "A Fine Rifle or Shotgun",
+          "name": "AFOD.Modules.itemsAFineRifleOrShotgun",
           "load": 2
         },
         {
           "id": "a fine poncho or sombrero",
-          "name": "A Fine Poncho or Sombrero",
+          "name": "AFOD.Modules.itemsAFinePonchoOrSombrero",
           "load": 1
         },
         {
           "id": "a guitar case",
-          "name": "A Guitar Case",
+          "name": "AFOD.Modules.itemsAGuitarCase",
           "load": 1
         },
         {
           "id": "a fine spirit bane",
-          "name": "A Fine Spirit Bane",
+          "name": "AFOD.Modules.itemsAFineSpiritBane",
           "load": 0
         },
         {
           "id": "a small piece of hellstone",
-          "name": "A Small Piece of Hellstone",
+          "name": "AFOD.Modules.itemsASmallPieceOfHellstone",
           "load": 0
         }
       ]

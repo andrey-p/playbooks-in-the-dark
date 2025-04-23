@@ -14,32 +14,32 @@
       "custom": [
         {
           "id": "a fine extravagant melee weapon",
-          "name": "A Fine Extravagant Melee Weapon",
+          "name": "AFOD.Modules.itemsAFineExtravagantMeleeWeapon",
           "load": 1
         },
         {
           "id": "fine playing cards & dice",
-          "name": "Fine Playing Cards & Dice",
+          "name": "AFOD.Modules.itemsFinePlayingCardsDice",
           "load": 0
         },
         {
           "id": "fine clothes and jewelry",
-          "name": "Fine Clothes and Jewelry",
+          "name": "AFOD.Modules.itemsFineClothesAndJewelry",
           "load": 1
         },
         {
           "id": "a set of won valuable documents",
-          "name": "A Set of Won Valuable Documents",
+          "name": "AFOD.Modules.itemsASetOfWonValuableDocuments",
           "load": 1
         },
         {
           "id": "a fine story",
-          "name": "A Fine Story",
+          "name": "AFOD.Modules.itemsAFineStory",
           "load": 0
         },
         {
           "id": "a small token of luck",
-          "name": "A Small Token of Luck",
+          "name": "AFOD.Modules.itemsASmallTokenOfLuck",
           "load": 0
         }
       ]

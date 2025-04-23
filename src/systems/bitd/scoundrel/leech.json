@@ -7,32 +7,32 @@
       "custom": [
         {
           "id": "fine tinkering tools",
-          "name": "Fine Tinkering Tools",
+          "name": "BITD.Modules.itemsFineTinkeringTools",
           "load": 1
         },
         {
           "id": "fine wrecking tools",
-          "name": "Fine Wrecking Tools",
+          "name": "BITD.Modules.itemsFineWreckingTools",
           "load": 2
         },
         {
           "id": "blowguns & darts syringes",
-          "name": "Blowgun & Darts, syringes",
+          "name": "BITD.Modules.itemsBlowgunsDartsSyringes",
           "load": 0
         },
         {
           "id": "bandolier 1",
-          "name": "Bandolier (3 uses)",
+          "name": "BITD.Modules.itemsBandolier",
           "load": 1
         },
         {
           "id": "bandolier 2",
-          "name": "Bandolier (3 uses)",
+          "name": "BITD.Modules.itemsBandolier",
           "load": 1
         },
         {
           "id": "gadgets",
-          "name": "Gadgets",
+          "name": "BITD.Modules.itemsGadgets",
           "load": 3,
           "showLinked": false
         }

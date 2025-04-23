@@ -14,32 +14,32 @@
       "custom": [
         {
           "id": "fine pair of pistols",
-          "name": "Fine Pair of Pistols",
+          "name": "AFOD.Modules.itemsFinePairOfPistols",
           "load": 2
         },
         {
           "id": "fine shotgun",
-          "name": "Fine Shotgun",
+          "name": "AFOD.Modules.itemsFineShotgun",
           "load": 2
         },
         {
           "id": "badge of authority",
-          "name": "Badge of Authority",
+          "name": "AFOD.Modules.itemsBadgeOfAuthority",
           "load": 0
         },
         {
           "id": "fine documents",
-          "name": "Fine Documents",
+          "name": "AFOD.Modules.itemsFineDocuments",
           "load": 1
         },
         {
           "id": "manacle and chains",
-          "name": "Manacle and Chains",
+          "name": "AFOD.Modules.itemsManacleAndChains",
           "load": 1
         },
         {
           "id": "a keepsake",
-          "name": "A Keepsake",
+          "name": "AFOD.Modules.itemsAKeepSake",
           "load": 0
         }
       ]

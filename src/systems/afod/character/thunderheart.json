@@ -14,32 +14,32 @@
       "custom": [
         {
           "id": "fine bow with arrows",
-          "name": "Fine Bow with Arrows",
+          "name": "AFOD.Modules.itemsFinebowWithArrows",
           "load": 1
         },
         {
           "id": "fine weapon",
-          "name": "Fine Weapon",
+          "name": "AFOD.Modules.itemsFineWeapon",
           "load": 1
         },
         {
           "id": "a spirit bane or charm",
-          "name": "A Spirit Bane or Charm",
+          "name": "AFOD.Modules.itemsASpiritBaneOrCharm",
           "load": 0
         },
         {
           "id": "outdoor survival kit",
-          "name": "Outdoor Survival Kit",
+          "name": "AFOD.Modules.itemsOutdoorSurvivalKit",
           "load": 1
         },
         {
           "id": "tabaco poison medicine",
-          "name": "Tabaco / Poison / Medicine",
+          "name": "AFOD.Modules.itemsTabacoPoisonMedicine",
           "load": 1
         },
         {
           "id": "a totem's gift",
-          "name": "A Totem's Gift",
+          "name": "AFOD.Modules.itemsATotemsGift",
           "load": 1
         }
       ]

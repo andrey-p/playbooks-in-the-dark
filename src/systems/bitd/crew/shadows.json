@@ -209,27 +209,27 @@
       "custom": [
         {
           "id": "thief rigging",
-          "name": "Thief Rigging (2 free load of tools or gear)",
+          "name": "BITD.Modules.crewUpgradesThiefRigging",
           "load": 1
         },
         {
           "id": "underground maps and passkeys",
-          "name": "Underground maps & passkeys",
+          "name": "BITD.Modules.crewUpgradesUndergroundMapsAndPasskeys",
           "load": 1
         },
         {
           "id": "elite rooks",
-          "name": "Elite Rooks",
+          "name": "BITD.Modules.crewUpgradesEliteRooks",
           "load": 1
         },
         {
           "id": "elite skulks",
-          "name": "Elite Skulks",
+          "name": "BITD.Modules.crewUpgradesEliteSkulks",
           "load": 1
         },
         {
           "id": "steady",
-          "name": "Steady (+1 stress box)",
+          "name": "BITD.Modules.crewUpgradesSteady",
           "load": 3
         }
       ]

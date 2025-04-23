@@ -7,32 +7,32 @@
       "custom": [
         {
           "id": "fine hand weapon",
-          "name": "Fine Hand Weapon",
+          "name": "BITD.Modules.itemsFineHandWeapon",
           "load": 1
         },
         {
           "id": "fine heavy weapon",
-          "name": "Fine Heavy Weapon",
+          "name": "BITD.Modules.itemsFineHeavyWeapon",
           "load": 2
         },
         {
           "id": "scary weapon or tool",
-          "name": "Scary Weapon or Tool",
+          "name": "BITD.Modules.itemsScaryWeaponOrTool",
           "load": 1
         },
         {
           "id": "manacles and chain",
-          "name": "Manacles and Chain",
+          "name": "BITD.Modules.itemsManaclesAndChain",
           "load": 0
         },
         {
           "id": "rage essence vial",
-          "name": "Rage Essence Vial",
+          "name": "BITD.Modules.itemsRageEssenceVial",
           "load": 0
         },
         {
           "id": "spiritbane charm",
-          "name": "Spiritbane charm",
+          "name": "BITD.Modules.itemsSpiritBaneCharm",
           "load": 0
         }
       ]

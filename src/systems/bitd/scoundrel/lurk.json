@@ -7,32 +7,32 @@
       "custom": [
         {
           "id": "fine lockpicks",
-          "name": "Fine Lockpicks",
+          "name": "BITD.Modules.itemsFineLockpicks",
           "load": 0
         },
         {
           "id": "fine shadow cloak",
-          "name": "Fine Shadow Cloak",
+          "name": "BITD.Modules.itemsFineShadowCloak",
           "load": 1
         },
         {
           "id": "light climbing gear",
-          "name": "Light Climbing Gear",
+          "name": "BITD.Modules.itemsLightClimbingGear",
           "load": 1
         },
         {
           "id": "silence potion vial",
-          "name": "Silence Potion Vial",
+          "name": "BITD.Modules.itemsSilencePotionVial",
           "load": 0
         },
         {
           "id": "dark-sight goggles",
-          "name": "Dark-sight Goggles",
+          "name": "BITD.Modules.itemsDarkSightGoggles",
           "load": 1
         },
         {
           "id": "spiritbane charm",
-          "name": "Spiritbane Charm",
+          "name": "BITD.Modules.itemsSpiritbaneCharm",
           "load": 0
         }
       ]
