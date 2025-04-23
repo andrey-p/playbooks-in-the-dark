@@ -289,139 +289,139 @@
         "groups": [
           {
             "id": "hideout",
-            "name": "Hideout"
+            "name": "AFOD.Modules.posseUpgradesHideout"
           },
           {
             "id": "training",
-            "name": "Training"
+            "name": "AFOD.Modules.posseUpgradesTraining"
           },
           {
             "id": "quality",
-            "name": "Quality"
+            "name": "AFOD.Modules.posseUpgradesQuality"
           }
         ],
         "common": [
           {
             "id": "carriage",
-            "name": "Carriage",
+            "name": "AFOD.Modules.posseUpgradesCarriage",
             "load": 2,
             "showLinked": false,
             "group": "hideout"
           },
           {
             "id": "hidden",
-            "name": "Hidden",
+            "name": "AFOD.Modules.posseUpgradesHidden",
             "load": 1,
             "group": "hideout"
           },
           {
             "id": "quarters",
-            "name": "Quarters",
+            "name": "AFOD.Modules.posseUpgradesQuarters",
             "load": 1,
             "group": "hideout"
           },
           {
             "id": "secure",
-            "name": "Secure",
+            "name": "AFOD.Modules.posseUpgradesSecure",
             "load": 2,
             "showLinked": false,
             "group": "hideout"
           },
           {
             "id": "vault",
-            "name": "Vault",
+            "name": "AFOD.Modules.posseUpgradesVault",
             "load": 2,
             "showLinked": false,
             "group": "hideout"
           },
           {
             "id": "escape tunnel",
-            "name": "Escape Tunnel",
+            "name": "AFOD.Modules.posseUpgradesEscapeTunnel",
             "load": 1,
             "group": "hideout"
           },
           {
             "id": "workshop",
-            "name": "Workshop",
+            "name": "AFOD.Modules.posseUpgradesWorkshop",
             "load": 1,
             "group": "hideout"
           },
           {
             "id": "rail connection",
-            "name": "Rail Connection",
+            "name": "AFOD.Modules.posseUpgradesRailConnection",
             "load": 1,
             "group": "hideout"
           },
           {
             "id": "hellstone storage",
-            "name": "Hellstone Storage",
+            "name": "AFOD.Modules.posseUpgradesHellstoneStorage",
             "load": 2,
             "showLinked": false,
             "group": "hideout"
           },
           {
             "id": "documents",
-            "name": "Documents",
+            "name": "AFOD.Modules.posseUpgradesDocuments",
             "load": 1,
             "group": "quality"
           },
           {
             "id": "gear",
-            "name": "Gear",
+            "name": "AFOD.Modules.posseUpgradesGear",
             "load": 1,
             "group": "quality"
           },
           {
             "id": "implements",
-            "name": "Implements",
+            "name": "AFOD.Modules.posseUpgradesImplements",
             "load": 1,
             "group": "quality"
           },
           {
             "id": "supplies",
-            "name": "Supplies",
+            "name": "AFOD.Modules.posseUpgradesSupplies",
             "load": 1,
             "group": "quality"
           },
           {
             "id": "weapons",
-            "name": "Weapons",
+            "name": "AFOD.Modules.posseUpgradesWeapons",
             "load": 1,
             "group": "quality"
           },
           {
             "id": "tools",
-            "name": "Tools",
+            "name": "AFOD.Modules.posseUpgradesTools",
             "load": 1,
             "group": "quality"
           },
           {
             "id": "wit",
-            "name": "Wit",
+            "name": "AFOD.Modules.posseUpgradesWit",
             "load": 1,
             "group": "training"
           },
           {
             "id": "prowess",
-            "name": "Prowess",
+            "name": "AFOD.Modules.posseUpgradesProwess",
             "load": 1,
             "group": "training"
           },
           {
             "id": "guts",
-            "name": "Guts",
+            "name": "AFOD.Modules.posseUpgradesGuts",
             "load": 1,
             "group": "training"
           },
           {
             "id": "personal",
-            "name": "Personal",
+            "name": "AFOD.Modules.posseUpgradesPersonal",
             "load": 1,
             "group": "training"
           },
           {
             "id": "mastery",
-            "name": "Mastery",
+            "name": "AFOD.Modules.posseUpgradesMastery",
             "load": 4,
             "group": "training"
           }

@@ -175,12 +175,12 @@
         "common": [
           {
             "id": "armor",
-            "name": "Armor",
+            "name": "AFOD.Modules.armorArmor",
             "load": 1
           },
           {
             "id": "special",
-            "name": "Special",
+            "name": "AFOD.Modules.armorSpecial",
             "load": 1
           }
         ]
@@ -352,106 +352,106 @@
         "load": [
           {
             "id": "light",
-            "name": "3 light"
+            "name": "AFOD.Modules.itemsLoadLight"
           },
           {
             "id": "normal",
-            "name": "5 normal"
+            "name": "AFOD.Modules.itemsLoadNormal"
           },
           {
             "id": "heavy",
-            "name": "6 heavy"
+            "name": "AFOD.Modules.itemsLoadHeavy"
           }
         ],
         "common": [
           {
             "id": "a pistol",
-            "name": "A Pistol",
+            "name": "AFOD.Modules.itemsAPistol",
             "load": 1
           },
           {
             "id": "a 2nd pistol",
-            "name": "A 2nd Pistol",
+            "name": "AFOD.Modules.itemsA2ndPistol",
             "load": 1
           },
           {
             "id": "a melee weapon",
-            "name": "A Melee Weapon",
+            "name": "AFOD.Modules.itemsAMeleeWeapon",
             "load": 1
           },
           {
             "id": "a 2nd melee weapon",
-            "name": "A 2nd Melee Weapon",
+            "name": "AFOD.Modules.itemsA2ndMeleeWeapon",
             "load": 1
           },
           {
             "id": "lantern",
-            "name": "Lantern",
+            "name": "AFOD.Modules.itemsLantern",
             "load": 1
           },
           {
             "id": "throwing knives",
-            "name": "Throwing Knives",
+            "name": "AFOD.Modules.itemsThrowingKnives",
             "load": 1
           },
           {
             "id": "armor",
-            "name": "Armour",
+            "name": "AFOD.Modules.itemsArmor",
             "load": 2
           },
           {
             "id": "a large weapon",
-            "name": "A Large Weapon",
+            "name": "AFOD.Modules.itemsALargeWeapon",
             "load": 2
           },
           {
             "id": "an unusual weapon",
-            "name": "An Unusual Weapon",
+            "name": "AFOD.Modules.itemsAnUnusualWeapon",
             "load": 1
           },
           {
             "id": "a horse with saddle",
-            "name": "A Horse with Saddle",
+            "name": "AFOD.Modules.itemsAHorseWithSaddle",
             "load": 0
           },
           {
             "id": "a rope",
-            "name": "A Rope",
+            "name": "AFOD.Modules.itemsARope",
             "load": 1
           },
           {
             "id": "documents",
-            "name": "Documents",
+            "name": "AFOD.Modules.itemsDocuments",
             "load": 1
           },
           {
             "id": "arcane ingredients",
-            "name": "Arcane Ingredients",
+            "name": "AFOD.Modules.itemsArcaneIngredients",
             "load": 1
           },
           {
             "id": "subterfuge supplies",
-            "name": "Subterfuge Supplies",
+            "name": "AFOD.Modules.itemsSubterfugeSupplies",
             "load": 1
           },
           {
             "id": "demolition tools",
-            "name": "Demolition Tools",
+            "name": "AFOD.Modules.itemsDemolitionTools",
             "load": 2
           },
           {
             "id": "crafting tools",
-            "name": "Crafting Tools",
+            "name": "AFOD.Modules.itemsCraftingTools",
             "load": 1
           },
           {
             "id": "a spirit bane",
-            "name": "A Spirit Bane",
+            "name": "AFOD.Modules.itemsASpiritBane",
             "load": 1
           },
           {
             "id": "a useful item",
-            "name": "A Userful Item",
+            "name": "AFOD.Modules.itemsAUsefulItem",
             "load": 2
           }
         ]

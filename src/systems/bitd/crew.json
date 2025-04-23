@@ -232,121 +232,121 @@
         "groups": [
           {
             "id": "lair",
-            "name": "Lair"
+            "name": "BITD.Modules.crewUpgradesLair"
           },
           {
             "id": "training",
-            "name": "Training"
+            "name": "BITD.Modules.crewUpgradesTraining"
           },
           {
             "id": "quality",
-            "name": "Quality"
+            "name": "BITD.Modules.crewUpgradesQuality"
           }
         ],
         "common": [
           {
             "id": "carriage",
-            "name": "Carriage",
+            "name": "BITD.Modules.crewUpgradesCarriage",
             "load": 2,
             "showLinked": false,
             "group": "lair"
           },
           {
             "id": "boat",
-            "name": "Boat",
+            "name": "BITD.Modules.crewUpgradesBoat",
             "load": 2,
             "showLinked": false,
             "group": "lair"
           },
           {
             "id": "hidden",
-            "name": "Hidden",
+            "name": "BITD.Modules.crewUpgradesHidden",
             "load": 1,
             "group": "lair"
           },
           {
             "id": "quarters",
-            "name": "Quarters",
+            "name": "BITD.Modules.crewUpgradesQuarters",
             "load": 1,
             "group": "lair"
           },
           {
             "id": "secure",
-            "name": "Secure",
+            "name": "BITD.Modules.crewUpgradesSecure",
             "load": 2,
             "showLinked": false,
             "group": "lair"
           },
           {
             "id": "vault",
-            "name": "Vault",
+            "name": "BITD.Modules.crewUpgradesVault",
             "load": 2,
             "showLinked": false,
             "group": "lair"
           },
           {
             "id": "workshop",
-            "name": "Workshop",
+            "name": "BITD.Modules.crewUpgradesWorkshop",
             "load": 1,
             "group": "lair"
           },
           {
             "id": "documents",
-            "name": "Documents",
+            "name": "BITD.Modules.crewUpgradesDocuments",
             "load": 1,
             "group": "quality"
           },
           {
             "id": "gear",
-            "name": "Gear",
+            "name": "BITD.Modules.crewUpgradesGear",
             "load": 1,
             "group": "quality"
           },
           {
             "id": "supplies",
-            "name": "Supplies",
+            "name": "BITD.Modules.crewUpgradesSupplies",
             "load": 1,
             "group": "quality"
           },
           {
             "id": "tools",
-            "name": "Tools",
+            "name": "BITD.Modules.crewUpgradesTools",
             "load": 1,
             "group": "quality"
           },
           {
             "id": "weapons",
-            "name": "Weapons",
+            "name": "BITD.Modules.crewUpgradesWeapons",
             "load": 1,
             "group": "quality"
           },
           {
             "id": "insight",
-            "name": "Insight",
+            "name": "BITD.Modules.crewUpgradesInsight",
             "load": 1,
             "group": "training"
           },
           {
             "id": "prowess",
-            "name": "Prowess",
+            "name": "BITD.Modules.crewUpgradesProwess",
             "load": 1,
             "group": "training"
           },
           {
             "id": "resolve",
-            "name": "Resolve",
+            "name": "BITD.Modules.crewUpgradesResolve",
             "load": 1,
             "group": "training"
           },
           {
             "id": "personal",
-            "name": "Personal",
+            "name": "BITD.Modules.crewUpgradesPersonal",
             "load": 1,
             "group": "training"
           },
           {
             "id": "mastery",
-            "name": "Mastery",
+            "name": "BITD.Modules.crewUpgradesMastery",
             "load": 4,
             "group": "training"
           }

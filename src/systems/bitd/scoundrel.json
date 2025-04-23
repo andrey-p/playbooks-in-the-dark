@@ -229,82 +229,82 @@
         "common": [
           {
             "id": "a blade or two",
-            "name": "A Blade or Two",
+            "name": "BITD.Modules.itemsABladeOrTwo",
             "load": 1
           },
           {
             "id": "throwing knives",
-            "name": "Throwing Knives",
+            "name": "BITD.Modules.itemsThrowingKnives",
             "load": 1
           },
           {
             "id": "a pistol",
-            "name": "A Pistol",
+            "name": "BITD.Modules.itemsAPistol",
             "load": 1
           },
           {
             "id": "a 2nd pistol",
-            "name": "A 2nd Pistol",
+            "name": "BITD.Modules.itemsA2ndPistol",
             "load": 1
           },
           {
             "id": "a large weapon",
-            "name": "A Large Weapon",
+            "name": "BITD.Modules.itemsALargeWeapon",
             "load": 2
           },
           {
             "id": "an unusual weapon",
-            "name": "An Unusual Weapon",
+            "name": "BITD.Modules.itemsAnUnusualWeapon",
             "load": 1
           },
           {
             "id": "armor",
-            "name": "Armour",
+            "name": "BITD.Modules.itemsArmor",
             "load": 2
           },
           {
             "id": "heavy",
-            "name": "+ Heavy",
+            "name": "BITD.Modules.itemsHeavy",
             "load": 3
           },
           {
             "id": "burglary gear",
-            "name": "Burglary Gear",
+            "name": "BITD.Modules.itemsBurglaryGear",
             "load": 1
           },
           {
             "id": "climbing gear",
-            "name": "Climbing Gear",
+            "name": "BITD.Modules.itemsClimbingGear",
             "load": 2
           },
           {
             "id": "arcane implements",
-            "name": "Arcane Implements",
+            "name": "BITD.Modules.itemsArcaneImplements",
             "load": 1
           },
           {
             "id": "documents",
-            "name": "Documents",
+            "name": "BITD.Modules.itemsDocuments",
             "load": 1
           },
           {
             "id": "subterfuge supplies",
-            "name": "Subterfuge Supplies",
+            "name": "BITD.Modules.itemsSubterfugeSupplies",
             "load": 1
           },
           {
             "id": "demolition tools",
-            "name": "Demolition Tools",
+            "name": "BITD.Modules.itemsDemolitionTools",
             "load": 2
           },
           {
             "id": "tinkering tools",
-            "name": "Tinkering Tools",
+            "name": "BITD.Modules.itemsTinkeringTools",
             "load": 1
           },
           {
             "id": "lantern",
-            "name": "Lantern",
+            "name": "BITD.Modules.itemsLantern",
             "load": 1
           }
         ]
@@ -321,12 +321,12 @@
         "common": [
           {
             "id": "bandolier1",
-            "name": "Bandolier",
+            "name": "BITD.Modules.alchemicalsBandolier",
             "load": 3
           },
           {
             "id": "bandolier2",
-            "name": "Bandolier",
+            "name": "BITD.Modules.alchemicalsBandolier",
             "load": 3
           }
         ]
