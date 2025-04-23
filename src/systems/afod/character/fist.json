@@ -1,7 +1,7 @@
 {
   "id": "fist",
-  "name": "The Fist",
-  "description": "Like a cobra ready to strike",
+  "name": "AFOD.Playbooks.fist",
+  "description": "AFOD.Playbooks.fistDescription",
   "modules": {
     "ratings": {
       "startingRatings": {
@@ -12,12 +12,36 @@
     },
     "items": {
       "custom": [
-        { "id": "fine hand weapon", "name": "Fine Hand Weapon", "load": 1 },
-        { "id": "fine heavy weapon", "name": "Fine Heavy Weapon", "load": 1 },
-        { "id": "scary weapon or tool", "name": "Scary Weapon or Tool", "load": 1 },
-        { "id": "picture of a lost love", "name": "Picture of a lost love", "load": 1 },
-        { "id": "bottle of whiskey", "name": "Bottle of Whiskey", "load": 1 },
-        { "id": "pack of bandages", "name": "Pack of Bandages", "load": 1 }
+        {
+          "id": "fine hand weapon",
+          "name": "Fine Hand Weapon",
+          "load": 1
+        },
+        {
+          "id": "fine heavy weapon",
+          "name": "Fine Heavy Weapon",
+          "load": 1
+        },
+        {
+          "id": "scary weapon or tool",
+          "name": "Scary Weapon or Tool",
+          "load": 1
+        },
+        {
+          "id": "picture of a lost love",
+          "name": "Picture of a lost love",
+          "load": 1
+        },
+        {
+          "id": "bottle of whiskey",
+          "name": "Bottle of Whiskey",
+          "load": 1
+        },
+        {
+          "id": "pack of bandages",
+          "name": "Pack of Bandages",
+          "load": 1
+        }
       ]
     },
     "specialAbilities": {
@@ -67,11 +91,26 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "jim-bob thornton", "name": "Jim-Bob Thornton, a Rancher" },
-        { "id": "jane", "name": "Jane, a Saloon Girl" },
-        { "id": "octavius slone", "name": "Octavius Slone, a Doctor" },
-        { "id": "master lee", "name": "Master Lee" },
-        { "id": "sergeant meyers", "name": "Sergeant Meyers, Fort Hubert" }
+        {
+          "id": "jim-bob thornton",
+          "name": "Jim-Bob Thornton, a Rancher"
+        },
+        {
+          "id": "jane",
+          "name": "Jane, a Saloon Girl"
+        },
+        {
+          "id": "octavius slone",
+          "name": "Octavius Slone, a Doctor"
+        },
+        {
+          "id": "master lee",
+          "name": "Master Lee"
+        },
+        {
+          "id": "sergeant meyers",
+          "name": "Sergeant Meyers, Fort Hubert"
+        }
       ]
     }
   }

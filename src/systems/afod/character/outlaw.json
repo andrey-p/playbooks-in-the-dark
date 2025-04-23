@@ -1,7 +1,7 @@
 {
   "id": "outlaw",
-  "name": "The Outlaw",
-  "description": "A maverick & desperado beyond rules",
+  "name": "AFOD.Playbooks.outlaw",
+  "description": "AFOD.Playbooks.outlawDescription",
   "modules": {
     "ratings": {
       "startingRatings": {
@@ -12,12 +12,36 @@
     },
     "items": {
       "custom": [
-        { "id": "a fine pistol", "name": "A Fine Pistol", "load": 1 },
-        { "id": "a fine rifle or shotgun", "name": "A Fine Rifle or Shotgun", "load": 2 },
-        { "id": "a fine poncho or sombrero", "name": "A Fine Poncho or Sombrero", "load": 1 },
-        { "id": "a guitar case", "name": "A Guitar Case", "load": 1 },
-        { "id": "a fine spirit bane", "name": "A Fine Spirit Bane", "load": 0 },
-        { "id": "a small piece of hellstone", "name": "A Small Piece of Hellstone", "load": 0 }
+        {
+          "id": "a fine pistol",
+          "name": "A Fine Pistol",
+          "load": 1
+        },
+        {
+          "id": "a fine rifle or shotgun",
+          "name": "A Fine Rifle or Shotgun",
+          "load": 2
+        },
+        {
+          "id": "a fine poncho or sombrero",
+          "name": "A Fine Poncho or Sombrero",
+          "load": 1
+        },
+        {
+          "id": "a guitar case",
+          "name": "A Guitar Case",
+          "load": 1
+        },
+        {
+          "id": "a fine spirit bane",
+          "name": "A Fine Spirit Bane",
+          "load": 0
+        },
+        {
+          "id": "a small piece of hellstone",
+          "name": "A Small Piece of Hellstone",
+          "load": 0
+        }
       ]
     },
     "specialAbilities": {
@@ -67,12 +91,30 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "polly gains", "name": "Polly Gains, a dealer" },
-        { "id": "father mathew", "name": "Father Mathew, a priest" },
-        { "id": "the kid", "name": "'The Kid', a bounty hunter" },
-        { "id": "a friend", "name": "a Friend you still owe money" },
-        { "id": "adolphus vasquez", "name": "Adolphus Vasquez, railroad worker" },
-        { "id": "rufus johnson", "name": "Rufus Johnson, a coachman" }
+        {
+          "id": "polly gains",
+          "name": "Polly Gains, a dealer"
+        },
+        {
+          "id": "father mathew",
+          "name": "Father Mathew, a priest"
+        },
+        {
+          "id": "the kid",
+          "name": "'The Kid', a bounty hunter"
+        },
+        {
+          "id": "a friend",
+          "name": "a Friend you still owe money"
+        },
+        {
+          "id": "adolphus vasquez",
+          "name": "Adolphus Vasquez, railroad worker"
+        },
+        {
+          "id": "rufus johnson",
+          "name": "Rufus Johnson, a coachman"
+        }
       ]
     }
   }

@@ -1,6 +1,6 @@
 {
   "id": "tribe",
-  "name": "Tribe",
+  "name": "AFOD.Playbooks.tribe",
   "modules": {
     "achievements": {
       "claims": [
@@ -9,25 +9,34 @@
             "id": "the broken storm",
             "name": "The Broken Storm",
             "description": "Darkness",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "the oracle",
             "name": "The Oracle",
             "description": "Neutral",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "guardian",
             "name": "Guardian",
             "description": "Neutral",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "ancestor spirits",
             "name": "Ancestor Spirits",
             "description": "Light",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "shadow of the moon",
@@ -40,31 +49,43 @@
             "id": "the bonding",
             "name": "The Bonding",
             "description": "Darkness",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "hellstone claim 1",
             "name": "Hellstone Claim",
             "description": "Darkness",
-            "connections": ["right", "down"]
+            "connections": [
+              "right",
+              "down"
+            ]
           },
           {
             "id": "equilibrium",
             "name": "Equilibrium",
-            "connections": ["down", "right"],
+            "connections": [
+              "down",
+              "right"
+            ],
             "selectable": false
           },
           {
             "id": "the song of buffalo",
             "name": "The Song of Buffalo",
             "description": "Light",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "hellstone claim 2",
             "name": "Hellstone Claim",
             "description": "Light",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           }
         ],
         [
@@ -72,7 +93,9 @@
             "id": "visions of end time",
             "name": "Visions of End Time",
             "description": "Darkness",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "the sea of bones",
@@ -83,7 +106,9 @@
             "id": "the dance of coyote",
             "name": "The Dance of Coyote",
             "description": "Neutral",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "hellstone claim 3",
@@ -153,12 +178,30 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "the cheat murray", "name": "'The Cheat' Murray, arms dealer" },
-        { "id": "hawk", "name": "Hawk, a feral spirit" },
-        { "id": "kills many", "name": "Kills Many, the threshold" },
-        { "id": "free cloud raining", "name": "Free Cloud Raining, medicine man" },
-        { "id": "seeker", "name": "Seeker, a guide" },
-        { "id": "coin slate", "name": "'Coin' Slate, a merchant" }
+        {
+          "id": "the cheat murray",
+          "name": "'The Cheat' Murray, arms dealer"
+        },
+        {
+          "id": "hawk",
+          "name": "Hawk, a feral spirit"
+        },
+        {
+          "id": "kills many",
+          "name": "Kills Many, the threshold"
+        },
+        {
+          "id": "free cloud raining",
+          "name": "Free Cloud Raining, medicine man"
+        },
+        {
+          "id": "seeker",
+          "name": "Seeker, a guide"
+        },
+        {
+          "id": "coin slate",
+          "name": "'Coin' Slate, a merchant"
+        }
       ]
     },
     "posseUpgrades": {
@@ -167,13 +210,33 @@
         "quarters": 1
       },
       "custom": [
-        { "id": "tribe rigging", "name": "Tribe Rigging (weapons or implements)", "load": 1 },
-        { "id": "elite scouts", "name": "Elite Scouts", "load": 1 },
-        { "id": "elite movers", "name": "Elite Movers", "load": 1 },
-        { "id": "gateway to the burning beyond", "name": "Gateway to the Burning Beyond", "load": 1 },
-        { "id": "hardened", "name": "Hardened (+1 Grit Box)", "load": 3 }
+        {
+          "id": "tribe rigging",
+          "name": "Tribe Rigging (weapons or implements)",
+          "load": 1
+        },
+        {
+          "id": "elite scouts",
+          "name": "Elite Scouts",
+          "load": 1
+        },
+        {
+          "id": "elite movers",
+          "name": "Elite Movers",
+          "load": 1
+        },
+        {
+          "id": "gateway to the burning beyond",
+          "name": "Gateway to the Burning Beyond",
+          "load": 1
+        },
+        {
+          "id": "hardened",
+          "name": "Hardened (+1 Grit Box)",
+          "load": 3
+        }
       ]
     }
-  }
+  },
+  "description": "AFOD.Playbooks.tribeDescription"
 }
-

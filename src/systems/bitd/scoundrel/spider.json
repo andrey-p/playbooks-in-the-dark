@@ -1,16 +1,40 @@
 {
   "id": "spider",
-  "name": "Spider",
-  "description": "A devious mastermind",
+  "name": "BITD.Playbooks.spider",
+  "description": "BITD.Playbooks.spiderDescription",
   "modules": {
     "items": {
       "custom": [
-        { "id": "fine cover identity", "name": "Fine cover identity", "load": 0 },
-        { "id": "fine bottle of whiskey", "name": "Fine Bottle of Whiskey", "load": 1 },
-        { "id": "blueprints", "name": "Blueprints", "load": 1 },
-        { "id": "vial of slumber essence", "name": "Vial of Slumber Essence", "load": 0 },
-        { "id": "conealed palm pistol", "name": "Concealed Palm Pistol", "load": 0 },
-        { "id": "spiritbane charm", "name": "Spiritbane Charm", "load": 0 }
+        {
+          "id": "fine cover identity",
+          "name": "Fine cover identity",
+          "load": 0
+        },
+        {
+          "id": "fine bottle of whiskey",
+          "name": "Fine Bottle of Whiskey",
+          "load": 1
+        },
+        {
+          "id": "blueprints",
+          "name": "Blueprints",
+          "load": 1
+        },
+        {
+          "id": "vial of slumber essence",
+          "name": "Vial of Slumber Essence",
+          "load": 0
+        },
+        {
+          "id": "conealed palm pistol",
+          "name": "Concealed Palm Pistol",
+          "load": 0
+        },
+        {
+          "id": "spiritbane charm",
+          "name": "Spiritbane Charm",
+          "load": 0
+        }
       ]
     },
     "ratings": {
@@ -72,11 +96,26 @@
     "contacts": {
       "customName": "Shrewd Friends",
       "contacts": [
-        { "id": "salia", "name": "Salia, an information broker" },
-        { "id": "augus", "name": "Augus, a master architect" },
-        { "id": "jennah", "name": "Jennah, a servant" },
-        { "id": "riven", "name": "Riven, a chemist" },
-        { "id": "jeren", "name": "Jeren, a bluecoat archivist" }
+        {
+          "id": "salia",
+          "name": "Salia, an information broker"
+        },
+        {
+          "id": "augus",
+          "name": "Augus, a master architect"
+        },
+        {
+          "id": "jennah",
+          "name": "Jennah, a servant"
+        },
+        {
+          "id": "riven",
+          "name": "Riven, a chemist"
+        },
+        {
+          "id": "jeren",
+          "name": "Jeren, a bluecoat archivist"
+        }
       ]
     }
   }

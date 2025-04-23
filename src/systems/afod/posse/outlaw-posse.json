@@ -1,6 +1,6 @@
 {
   "id": "outlaw-posse",
-  "name": "Outlaw Posse",
+  "name": "AFOD.Playbooks.outlaw-posse",
   "modules": {
     "achievements": {
       "claims": [
@@ -9,25 +9,34 @@
             "id": "the morgue",
             "name": "The Morgue",
             "description": "Darkness",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "free man funeral",
             "name": "Free Man Funeral",
             "description": "Neutral",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "a drop of hell",
             "name": "A Drop of Hell",
             "description": "Neutral",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "loaded dice",
             "name": "Loaded Dice",
             "description": "Light",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "the throne of skulls",
@@ -40,31 +49,43 @@
             "id": "the beast",
             "name": "The Beast",
             "description": "Darkness",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "hellstone claim 1",
             "name": "Hellstone Claim",
             "description": "Darkness",
-            "connections": ["right", "down"]
+            "connections": [
+              "right",
+              "down"
+            ]
           },
           {
             "id": "equilibrium",
             "name": "Equilibrium",
-            "connections": ["down", "right"],
+            "connections": [
+              "down",
+              "right"
+            ],
             "selectable": false
           },
           {
             "id": "last deals of dead men",
             "name": "Last Deals of Dead Men",
             "description": "Light",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "hellstone claim 2",
             "name": "Hellstone Claim",
             "description": "Light",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           }
         ],
         [
@@ -72,7 +93,9 @@
             "id": "vengeful ghosts",
             "name": "Vengeful Ghosts",
             "description": "Darkness",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "bringer of pain",
@@ -83,7 +106,9 @@
             "id": "rail connection",
             "name": "Rail Connection",
             "description": "Neutral",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "hellstone claim 3",
@@ -153,12 +178,30 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "bill scar morgan", "name": "Bill 'Scar' Morgan, a judge" },
-        { "id": "the cheat murray", "name": "'The Cheat' Murray, arms dealer" },
-        { "id": "silent bob", "name": "'Silent' Bob, a blacksmith" },
-        { "id": "moe", "name": "Moe, a saloon owner" },
-        { "id": "sam malone", "name": "Sam Malone, a smuggler" },
-        { "id": "old man bruford", "name": "Old Man Bruford, gin mill owner" }
+        {
+          "id": "bill scar morgan",
+          "name": "Bill 'Scar' Morgan, a judge"
+        },
+        {
+          "id": "the cheat murray",
+          "name": "'The Cheat' Murray, arms dealer"
+        },
+        {
+          "id": "silent bob",
+          "name": "'Silent' Bob, a blacksmith"
+        },
+        {
+          "id": "moe",
+          "name": "Moe, a saloon owner"
+        },
+        {
+          "id": "sam malone",
+          "name": "Sam Malone, a smuggler"
+        },
+        {
+          "id": "old man bruford",
+          "name": "Old Man Bruford, gin mill owner"
+        }
       ]
     },
     "posseUpgrades": {
@@ -166,11 +209,31 @@
         "prowess": 1
       },
       "custom": [
-        { "id": "outlaw rigging", "name": "Outlaw Rigging (weapons or armor)", "load": 1 },
-        { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
-        { "id": "elite movers", "name": "Elite Movers", "load": 1 },
-        { "id": "mobile hideout", "name": "Mobile Hideout", "load": 1 },
-        { "id": "ruthless", "name": "Ruthless (+1 Grit Box)", "load": 3 }
+        {
+          "id": "outlaw rigging",
+          "name": "Outlaw Rigging (weapons or armor)",
+          "load": 1
+        },
+        {
+          "id": "elite thugs",
+          "name": "Elite Thugs",
+          "load": 1
+        },
+        {
+          "id": "elite movers",
+          "name": "Elite Movers",
+          "load": 1
+        },
+        {
+          "id": "mobile hideout",
+          "name": "Mobile Hideout",
+          "load": 1
+        },
+        {
+          "id": "ruthless",
+          "name": "Ruthless (+1 Grit Box)",
+          "load": 3
+        }
       ]
     },
     "cohorts": {
@@ -183,5 +246,6 @@
         }
       ]
     }
-  }
+  },
+  "description": "AFOD.Playbooks.outlaw-posseDescription"
 }

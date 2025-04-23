@@ -1,16 +1,40 @@
 {
   "id": "lurk",
-  "name": "Lurk",
-  "description": "A stealthy infiltrator and burglar",
+  "name": "BITD.Playbooks.lurk",
+  "description": "BITD.Playbooks.lurkDescription",
   "modules": {
     "items": {
       "custom": [
-        { "id": "fine lockpicks", "name": "Fine Lockpicks", "load": 0 },
-        { "id": "fine shadow cloak", "name": "Fine Shadow Cloak", "load": 1 },
-        { "id": "light climbing gear", "name": "Light Climbing Gear", "load": 1 },
-        { "id": "silence potion vial", "name": "Silence Potion Vial", "load": 0 },
-        { "id": "dark-sight goggles", "name": "Dark-sight Goggles", "load": 1 },
-        { "id": "spiritbane charm", "name": "Spiritbane Charm", "load": 0 }
+        {
+          "id": "fine lockpicks",
+          "name": "Fine Lockpicks",
+          "load": 0
+        },
+        {
+          "id": "fine shadow cloak",
+          "name": "Fine Shadow Cloak",
+          "load": 1
+        },
+        {
+          "id": "light climbing gear",
+          "name": "Light Climbing Gear",
+          "load": 1
+        },
+        {
+          "id": "silence potion vial",
+          "name": "Silence Potion Vial",
+          "load": 0
+        },
+        {
+          "id": "dark-sight goggles",
+          "name": "Dark-sight Goggles",
+          "load": 1
+        },
+        {
+          "id": "spiritbane charm",
+          "name": "Spiritbane Charm",
+          "load": 0
+        }
       ]
     },
     "ratings": {
@@ -72,11 +96,26 @@
     "contacts": {
       "customName": "Shady Friends",
       "contacts": [
-        { "id": "telda", "name": "Telda, a beggar" },
-        { "id": "darmot", "name": "Darmot, a bluecoat" },
-        { "id": "frake", "name": "Frake, a locksmith" },
-        { "id": "roslyn kellis", "name": "Roslyn Kellis, a noble" },
-        { "id": "petra", "name": "Petra, a city clerk" }
+        {
+          "id": "telda",
+          "name": "Telda, a beggar"
+        },
+        {
+          "id": "darmot",
+          "name": "Darmot, a bluecoat"
+        },
+        {
+          "id": "frake",
+          "name": "Frake, a locksmith"
+        },
+        {
+          "id": "roslyn kellis",
+          "name": "Roslyn Kellis, a noble"
+        },
+        {
+          "id": "petra",
+          "name": "Petra, a city clerk"
+        }
       ]
     }
   }

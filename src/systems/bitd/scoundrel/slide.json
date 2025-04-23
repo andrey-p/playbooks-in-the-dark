@@ -1,16 +1,40 @@
 {
   "id": "slide",
-  "name": "Slide",
-  "description": "A subtle manipulator and spy",
+  "name": "BITD.Playbooks.slide",
+  "description": "BITD.Playbooks.slideDescription",
   "modules": {
     "items": {
       "custom": [
-        { "id": "fine clothes & jewelry", "name": "Fine Clothes & Jewelry", "load": 0 },
-        { "id": "fine disguise kit", "name": "Fine Disguise Kit", "load": 1 },
-        { "id": "fine loaded dice trick cards", "name": "Fine Loaded Dice, Trick Cards", "load": 0 },
-        { "id": "trance powder", "name": "Trance Powder", "load": 0 },
-        { "id": "a cane-sword", "name": "A cane-sword", "load": 1 },
-        { "id": "spiritbane charm", "name": "Spiritbane Charm", "load": 0 }
+        {
+          "id": "fine clothes & jewelry",
+          "name": "Fine Clothes & Jewelry",
+          "load": 0
+        },
+        {
+          "id": "fine disguise kit",
+          "name": "Fine Disguise Kit",
+          "load": 1
+        },
+        {
+          "id": "fine loaded dice trick cards",
+          "name": "Fine Loaded Dice, Trick Cards",
+          "load": 0
+        },
+        {
+          "id": "trance powder",
+          "name": "Trance Powder",
+          "load": 0
+        },
+        {
+          "id": "a cane-sword",
+          "name": "A cane-sword",
+          "load": 1
+        },
+        {
+          "id": "spiritbane charm",
+          "name": "Spiritbane Charm",
+          "load": 0
+        }
       ]
     },
     "ratings": {
@@ -72,11 +96,26 @@
     "contacts": {
       "customName": "Sly Friends",
       "contacts": [
-        { "id": "bryl", "name": "Bryl, a drug dealer" },
-        { "id": "baszo baz", "name": "Bazso Baz, a gang leader" },
-        { "id": "klyra", "name": "Klyra, a tavern owner" },
-        { "id": "nyryx", "name": "Nyryx, a prostitute" },
-        { "id": "harker", "name": "Harker, a jail-bird" }
+        {
+          "id": "bryl",
+          "name": "Bryl, a drug dealer"
+        },
+        {
+          "id": "baszo baz",
+          "name": "Bazso Baz, a gang leader"
+        },
+        {
+          "id": "klyra",
+          "name": "Klyra, a tavern owner"
+        },
+        {
+          "id": "nyryx",
+          "name": "Nyryx, a prostitute"
+        },
+        {
+          "id": "harker",
+          "name": "Harker, a jail-bird"
+        }
       ]
     }
   }

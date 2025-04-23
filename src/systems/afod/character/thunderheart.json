@@ -1,7 +1,7 @@
 {
   "id": "thunderheart",
-  "name": "The Thunderheart",
-  "description": "A totem fighter born from the land",
+  "name": "AFOD.Playbooks.thunderheart",
+  "description": "AFOD.Playbooks.thunderheartDescription",
   "modules": {
     "ratings": {
       "startingRatings": {
@@ -12,12 +12,36 @@
     },
     "items": {
       "custom": [
-        { "id": "fine bow with arrows", "name": "Fine Bow with Arrows", "load": 1 },
-        { "id": "fine weapon", "name": "Fine Weapon", "load": 1 },
-        { "id": "a spirit bane or charm", "name": "A Spirit Bane or Charm", "load": 0 },
-        { "id": "outdoor survival kit", "name": "Outdoor Survival Kit", "load": 1 },
-        { "id": "tabaco poison medicine", "name": "Tabaco / Poison / Medicine", "load": 1 },
-        { "id": "a totem's gift", "name": "A Totem's Gift", "load": 1 }
+        {
+          "id": "fine bow with arrows",
+          "name": "Fine Bow with Arrows",
+          "load": 1
+        },
+        {
+          "id": "fine weapon",
+          "name": "Fine Weapon",
+          "load": 1
+        },
+        {
+          "id": "a spirit bane or charm",
+          "name": "A Spirit Bane or Charm",
+          "load": 0
+        },
+        {
+          "id": "outdoor survival kit",
+          "name": "Outdoor Survival Kit",
+          "load": 1
+        },
+        {
+          "id": "tabaco poison medicine",
+          "name": "Tabaco / Poison / Medicine",
+          "load": 1
+        },
+        {
+          "id": "a totem's gift",
+          "name": "A Totem's Gift",
+          "load": 1
+        }
       ]
     },
     "specialAbilities": {
@@ -67,11 +91,26 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "the petrified tree", "name": "The Petrified Tree" },
-        { "id": "maxwell", "name": "Maxwell, a scout" },
-        { "id": "black hoof", "name": "Black Hoof, a native chief/hunter" },
-        { "id": "red horse", "name": "Red Horse, a medicine man" },
-        { "id": "hunter", "name": "Hunter, a spirit of the land" }
+        {
+          "id": "the petrified tree",
+          "name": "The Petrified Tree"
+        },
+        {
+          "id": "maxwell",
+          "name": "Maxwell, a scout"
+        },
+        {
+          "id": "black hoof",
+          "name": "Black Hoof, a native chief/hunter"
+        },
+        {
+          "id": "red horse",
+          "name": "Red Horse, a medicine man"
+        },
+        {
+          "id": "hunter",
+          "name": "Hunter, a spirit of the land"
+        }
       ]
     }
   }

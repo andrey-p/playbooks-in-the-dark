@@ -1,16 +1,40 @@
 {
   "id": "whisper",
-  "name": "Whisper",
-  "description": "An arcane adept and channeler",
+  "name": "BITD.Playbooks.whisper",
+  "description": "BITD.Playbooks.whisperDescription",
   "modules": {
     "items": {
       "custom": [
-        { "id": "fine lightning hook", "name": "Fine Lightning Hook", "load": 2 },
-        { "id": "fine spirit mask", "name": "Fine Spirit Mask", "load": 1 },
-        { "id": "electroplasm vials", "name": "Electroplasm Vials", "load": 0 },
-        { "id": "spirit bottles", "name": "Spirit Bottles (2)", "load": 1 },
-        { "id": "ghost key", "name": "Ghost Key", "load": 0 },
-        { "id": "demonbane charm", "name": "Demonbane Charm", "load": 0 }
+        {
+          "id": "fine lightning hook",
+          "name": "Fine Lightning Hook",
+          "load": 2
+        },
+        {
+          "id": "fine spirit mask",
+          "name": "Fine Spirit Mask",
+          "load": 1
+        },
+        {
+          "id": "electroplasm vials",
+          "name": "Electroplasm Vials",
+          "load": 0
+        },
+        {
+          "id": "spirit bottles",
+          "name": "Spirit Bottles (2)",
+          "load": 1
+        },
+        {
+          "id": "ghost key",
+          "name": "Ghost Key",
+          "load": 0
+        },
+        {
+          "id": "demonbane charm",
+          "name": "Demonbane Charm",
+          "load": 0
+        }
       ]
     },
     "ratings": {
@@ -72,11 +96,26 @@
     "contacts": {
       "customName": "Strange Friends",
       "contacts": [
-        { "id": "nyryx", "name": "Nyryx, a possessor ghost" },
-        { "id": "scurlock", "name": "Scurlock, a vampire" },
-        { "id": "setarra", "name": "Setarra, a demon" },
-        { "id": "quellyn", "name": "Quellyn, a witch" },
-        { "id": "flint", "name": "Flint, a spirit trafficker" }
+        {
+          "id": "nyryx",
+          "name": "Nyryx, a possessor ghost"
+        },
+        {
+          "id": "scurlock",
+          "name": "Scurlock, a vampire"
+        },
+        {
+          "id": "setarra",
+          "name": "Setarra, a demon"
+        },
+        {
+          "id": "quellyn",
+          "name": "Quellyn, a witch"
+        },
+        {
+          "id": "flint",
+          "name": "Flint, a spirit trafficker"
+        }
       ]
     }
   }

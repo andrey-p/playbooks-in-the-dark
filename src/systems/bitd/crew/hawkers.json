@@ -1,7 +1,7 @@
 {
   "id": "hawkers",
-  "name": "Hawkers",
-  "description": "Vice dealers",
+  "name": "BITD.Playbooks.hawkers",
+  "description": "BITD.Playbooks.hawkersDescription",
   "modules": {
     "specialAbilities": {
       "abilities": [
@@ -54,54 +54,77 @@
           {
             "id": "turf1",
             "name": "Turf",
-            "connections": ["right", "down"]
+            "connections": [
+              "right",
+              "down"
+            ]
           },
           {
             "id": "personal clothier",
             "name": "Personal Clothier",
             "description": "<strong>+1d</strong> engagement roll for social plans",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "local graft",
             "name": "Local Graft",
             "description": "<strong>+2 coin</strong> for show of force or socialize",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "lookouts",
             "name": "Lookouts",
             "description": "<strong>+1d</strong> to Survey or Hunt on your turf",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "informants",
             "name": "Informants",
             "description": "<strong>+1d</strong> to gather info for scores",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           }
         ],
         [
           {
             "id": "turf2",
             "name": "Turf",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "turf3",
             "name": "Turf",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "lair",
             "name": "Lair",
             "selectable": false,
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "turf4",
             "name": "Turf",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "luxury venue",
@@ -114,7 +137,9 @@
             "id": "foreign market",
             "name": "Foreign Market",
             "description": "(Tier roll) - Heat = coin in downtime",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "vice den",
@@ -130,7 +155,9 @@
             "id": "cover operation",
             "name": "Cover Operation",
             "description": "<strong>-2</strong> heat per score",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "cover identities",
@@ -142,12 +169,30 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "rolan wott", "name": "Rolan Wott, a magistrate" },
-        { "id": "laroze", "name": "Laroze, a bluecoat" },
-        { "id": "lydra", "name": "Lydra, a deal broker" },
-        { "id": "hoxley", "name": "Hoxley, a smuggler" },
-        { "id": "anya", "name": "Anya, a dillettante" },
-        { "id": "marlo", "name": "Marlo, a gang boss" }
+        {
+          "id": "rolan wott",
+          "name": "Rolan Wott, a magistrate"
+        },
+        {
+          "id": "laroze",
+          "name": "Laroze, a bluecoat"
+        },
+        {
+          "id": "lydra",
+          "name": "Lydra, a deal broker"
+        },
+        {
+          "id": "hoxley",
+          "name": "Hoxley, a smuggler"
+        },
+        {
+          "id": "anya",
+          "name": "Anya, a dillettante"
+        },
+        {
+          "id": "marlo",
+          "name": "Marlo, a gang boss"
+        }
       ]
     },
     "crewUpgrades": {
@@ -156,11 +201,31 @@
         "resolve": 1
       },
       "custom": [
-        { "id": "hawkers rigging", "name": "Hawkers' Rigging (1 carried item is concealed and has no load)", "load": 1 },
-        { "id": "ironhook contacts", "name": "Ironhook Contacts (+1 tier in prison)", "load": 1 },
-        { "id": "elite rooks", "name": "Elite Rooks", "load": 1 },
-        { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
-        { "id": "composed", "name": "Composed (+1 stress box)", "load": 3 }
+        {
+          "id": "hawkers rigging",
+          "name": "Hawkers' Rigging (1 carried item is concealed and has no load)",
+          "load": 1
+        },
+        {
+          "id": "ironhook contacts",
+          "name": "Ironhook Contacts (+1 tier in prison)",
+          "load": 1
+        },
+        {
+          "id": "elite rooks",
+          "name": "Elite Rooks",
+          "load": 1
+        },
+        {
+          "id": "elite thugs",
+          "name": "Elite Thugs",
+          "load": 1
+        },
+        {
+          "id": "composed",
+          "name": "Composed (+1 stress box)",
+          "load": 3
+        }
       ]
     },
     "favoredNotes": {

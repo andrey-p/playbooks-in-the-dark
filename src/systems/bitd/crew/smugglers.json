@@ -1,7 +1,7 @@
 {
   "id": "smugglers",
-  "name": "Smugglers",
-  "description": "Suppliers of illicit goods",
+  "name": "BITD.Playbooks.smugglers",
+  "description": "BITD.Playbooks.smugglersDescription",
   "modules": {
     "specialAbilities": {
       "abilities": [
@@ -54,31 +54,43 @@
           {
             "id": "turf1",
             "name": "Turf",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "side business",
             "name": "Side Business",
             "description": "(Tier roll) - Heat = coin in downtime",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "luxury fence",
             "name": "Luxury Fence",
             "description": "<strong>+2 coin</strong> for high-class targets",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "vice den",
             "name": "Vice Den",
             "description": "(Tier roll) - Heat = coin in downtime",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "tavern",
             "name": "Tavern",
             "description": "<strong>+1d</strong> to Consort and Sway on site",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           }
         ],
         [
@@ -86,28 +98,41 @@
             "id": "ancient gate",
             "name": "Ancient Gate",
             "description": "Safe passage in the Deathlands",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "turf2",
             "name": "Turf",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "lair",
             "name": "Lair",
             "selectable": false,
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "turf3",
             "name": "Turf",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "turf4",
             "name": "Turf",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           }
         ],
         [
@@ -115,7 +140,9 @@
             "id": "secret routes",
             "name": "Secret Routes",
             "description": "<strong>+1d</strong> engagement for transport plans",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "informants",
@@ -131,7 +158,9 @@
             "id": "cover operation",
             "name": "Cover Operation",
             "description": "<strong>-2 heat</strong> per score",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "warehouse",
@@ -143,12 +172,30 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "elynn", "name": "Elynn, a dock worker" },
-        { "id": "rolan", "name": "Rolan, a drug dealer" },
-        { "id": "sera", "name": "Sera, an arms dealer" },
-        { "id": "nyelle", "name": "Nyelle, a spirit trafficker" },
-        { "id": "decker", "name": "Decker, an anarchist" },
-        { "id": "esme", "name": "Esme, a tavern owner" }
+        {
+          "id": "elynn",
+          "name": "Elynn, a dock worker"
+        },
+        {
+          "id": "rolan",
+          "name": "Rolan, a drug dealer"
+        },
+        {
+          "id": "sera",
+          "name": "Sera, an arms dealer"
+        },
+        {
+          "id": "nyelle",
+          "name": "Nyelle, a spirit trafficker"
+        },
+        {
+          "id": "decker",
+          "name": "Decker, an anarchist"
+        },
+        {
+          "id": "esme",
+          "name": "Esme, a tavern owner"
+        }
       ]
     },
     "crewUpgrades": {
@@ -157,11 +204,31 @@
         "prowess": 1
       },
       "custom": [
-        { "id": "smugglers rigging", "name": "Smugglers' Rigging (2 items carried are perfectly concealed)", "load": 1 },
-        { "id": "camouflage", "name": "Camouflage (vehicles are perfectly concealed at rest)", "load": 1 },
-        { "id": "elite rovers", "name": "Elite Rovers", "load": 1 },
-        { "id": "barge", "name": "Barge (+ mobility or lair)", "load": 1 },
-        { "id": "steady", "name": "Steady (+1 stress box)", "load": 3 }
+        {
+          "id": "smugglers rigging",
+          "name": "Smugglers' Rigging (2 items carried are perfectly concealed)",
+          "load": 1
+        },
+        {
+          "id": "camouflage",
+          "name": "Camouflage (vehicles are perfectly concealed at rest)",
+          "load": 1
+        },
+        {
+          "id": "elite rovers",
+          "name": "Elite Rovers",
+          "load": 1
+        },
+        {
+          "id": "barge",
+          "name": "Barge (+ mobility or lair)",
+          "load": 1
+        },
+        {
+          "id": "steady",
+          "name": "Steady (+1 stress box)",
+          "load": 3
+        }
       ]
     },
     "favoredNotes": {

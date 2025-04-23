@@ -1,6 +1,6 @@
 {
   "id": "hellstone-scavengers",
-  "name": "Hellstone Scavengers",
+  "name": "AFOD.Playbooks.hellstone-scavengers",
   "modules": {
     "achievements": {
       "claims": [
@@ -9,25 +9,34 @@
             "id": "hell's own light",
             "name": "Hell's Own Light",
             "description": "Darkness",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "spirit well",
             "name": "Spirit Well",
             "description": "Neutral",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "the map",
             "name": "The Map",
             "description": "Neutral",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "the great law of peace",
             "name": "The Great Law of Peace",
             "description": "Light",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "eternal flame",
@@ -40,31 +49,43 @@
             "id": "hellish inventor",
             "name": "Hellish Inventor",
             "description": "Darkness",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "hellstone claim 1",
             "name": "Hellstone Claim",
             "description": "Darkness",
-            "connections": ["right", "down"]
+            "connections": [
+              "right",
+              "down"
+            ]
           },
           {
             "id": "equilibrium",
             "name": "Equilibrium",
-            "connections": ["down", "right"],
+            "connections": [
+              "down",
+              "right"
+            ],
             "selectable": false
           },
           {
             "id": "the mark of beyond",
             "name": "The Mark of Beyond",
             "description": "Light",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "hellstone claim 2",
             "name": "Hellstone Claim",
             "description": "Light",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           }
         ],
         [
@@ -72,7 +93,9 @@
             "id": "the wyrm",
             "name": "The Wyrm",
             "description": "Darkness",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "the black lake",
@@ -83,7 +106,9 @@
             "id": "the cornerstone",
             "name": "The Cornerstone",
             "description": "Neutral",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "hellstone claim 3",
@@ -153,12 +178,30 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "bill scar morgan", "name": "Bill 'Scar' Morgan, a judge" },
-        { "id": "railroad gilliam", "name": "'Railroad' Gilliam, a marshal" },
-        { "id": "sweet dave", "name": "Sweet Dave, a piano player" },
-        { "id": "grover mcintyre", "name": "Grover McIntyre, hardware store owner" },
-        { "id": "ling lee", "name": "Ling Lee, a collector" },
-        { "id": "old man bruford", "name": "Old Man Bruford, gin mill owner" }
+        {
+          "id": "bill scar morgan",
+          "name": "Bill 'Scar' Morgan, a judge"
+        },
+        {
+          "id": "railroad gilliam",
+          "name": "'Railroad' Gilliam, a marshal"
+        },
+        {
+          "id": "sweet dave",
+          "name": "Sweet Dave, a piano player"
+        },
+        {
+          "id": "grover mcintyre",
+          "name": "Grover McIntyre, hardware store owner"
+        },
+        {
+          "id": "ling lee",
+          "name": "Ling Lee, a collector"
+        },
+        {
+          "id": "old man bruford",
+          "name": "Old Man Bruford, gin mill owner"
+        }
       ]
     },
     "posseUpgrades": {
@@ -167,13 +210,33 @@
         "guts": 1
       },
       "custom": [
-        { "id": "scavenger rigging", "name": "Scavenger Rigging (tools or weapons)", "load": 1 },
-        { "id": "elite scouts", "name": "Elite Scouts", "load": 1 },
-        { "id": "elite movers", "name": "Elite Movers", "load": 1 },
-        { "id": "fine carriages", "name": "Fine Carriages", "load": 1 },
-        { "id": "steady", "name": "Steady (+1 Grit Box)", "load": 3 }
+        {
+          "id": "scavenger rigging",
+          "name": "Scavenger Rigging (tools or weapons)",
+          "load": 1
+        },
+        {
+          "id": "elite scouts",
+          "name": "Elite Scouts",
+          "load": 1
+        },
+        {
+          "id": "elite movers",
+          "name": "Elite Movers",
+          "load": 1
+        },
+        {
+          "id": "fine carriages",
+          "name": "Fine Carriages",
+          "load": 1
+        },
+        {
+          "id": "steady",
+          "name": "Steady (+1 Grit Box)",
+          "load": 3
+        }
       ]
     }
-  }
+  },
+  "description": "AFOD.Playbooks.hellstone-scavengersDescription"
 }
-

@@ -1,7 +1,7 @@
 {
   "id": "assassins",
-  "name": "Assassins",
-  "description": "Murderers for hire",
+  "name": "BITD.Playbooks.assassins",
+  "description": "BITD.Playbooks.assassinsDescription",
   "modules": {
     "specialAbilities": {
       "abilities": [
@@ -55,31 +55,43 @@
             "id": "training rooms",
             "name": "Training Rooms",
             "description": "<strong>+1 scale</strong> for your Skulks cohorts",
-            "connections": ["right", "down"]
+            "connections": [
+              "right",
+              "down"
+            ]
           },
           {
             "id": "vice den",
             "name": "Vice Den",
             "description": "(Tier roll) - Heat = coin in downtime",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "fixer",
             "name": "Fixer",
             "description": "<strong>+2 coin</strong> for lower-class targets",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "informants",
             "name": "Informants",
             "description": "<strong>+1d</strong> to gather info for scores",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "hagfish farms",
             "name": "Hagfish Farms",
             "description": "Body disposal, <strong>+1d</strong> to reduce heat after killing",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           }
         ],
         [
@@ -87,29 +99,40 @@
             "id": "victim trophies",
             "name": "Victim Trophies",
             "description": "<strong>+1 rep</strong> per score",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "turf1",
             "name": "Turf",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "lair",
             "name": "Lair",
             "selectable": false,
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "turf2",
             "name": "Turf",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "cover operation",
             "name": "Cover Operation",
             "description": "<strong>-2</strong> heat per score",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           }
         ],
         [
@@ -117,13 +140,17 @@
             "id": "protection racket",
             "name": "Protection Racket",
             "description": "(Tier roll) - Heat = coin in downtime",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "infirmary",
             "name": "Infirmary",
             "description": "<strong>+1d</strong> to healing rolls",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "envoy",
@@ -134,7 +161,9 @@
             "id": "cover identities",
             "name": "Cover Identities",
             "description": "<strong>+1d</strong> engagement for deception and social plans",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "city records",
@@ -146,12 +175,30 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "trev", "name": "Trev, a gang boss" },
-        { "id": "lydra", "name": "Lydra, a deal broker" },
-        { "id": "irimina", "name": "Irimina, a vicious noble" },
-        { "id": "karlos", "name": "Karlos, a bounty hunter" },
-        { "id": "exeter", "name": "Exeter, a spirit warden" },
-        { "id": "sevoy", "name": "Sevoy, a merchant lord" }
+        {
+          "id": "trev",
+          "name": "Trev, a gang boss"
+        },
+        {
+          "id": "lydra",
+          "name": "Lydra, a deal broker"
+        },
+        {
+          "id": "irimina",
+          "name": "Irimina, a vicious noble"
+        },
+        {
+          "id": "karlos",
+          "name": "Karlos, a bounty hunter"
+        },
+        {
+          "id": "exeter",
+          "name": "Exeter, a spirit warden"
+        },
+        {
+          "id": "sevoy",
+          "name": "Sevoy, a merchant lord"
+        }
       ]
     },
     "crewUpgrades": {
@@ -160,11 +207,31 @@
         "prowess": 1
       },
       "custom": [
-        { "id": "assassin rigging", "name": "Assassin Rigging (2 free load of weapons or gear)", "load": 1 },
-        { "id": "ironhook contacts", "name": "Ironhook Contacts (+1 tier in prison)", "load": 1 },
-        { "id": "elite skulks", "name": "Elite Skulks", "load": 1 },
-        { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
-        { "id": "hardened", "name": "Hardened (+1 trauma box)", "load": 3 }
+        {
+          "id": "assassin rigging",
+          "name": "Assassin Rigging (2 free load of weapons or gear)",
+          "load": 1
+        },
+        {
+          "id": "ironhook contacts",
+          "name": "Ironhook Contacts (+1 tier in prison)",
+          "load": 1
+        },
+        {
+          "id": "elite skulks",
+          "name": "Elite Skulks",
+          "load": 1
+        },
+        {
+          "id": "elite thugs",
+          "name": "Elite Thugs",
+          "load": 1
+        },
+        {
+          "id": "hardened",
+          "name": "Hardened (+1 trauma box)",
+          "load": 3
+        }
       ]
     },
     "favoredNotes": {

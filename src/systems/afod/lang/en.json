@@ -9,7 +9,35 @@
       "makeA": {
         "character": "Make a character",
         "posse": "Make a posse"
-      }
+      },
+      "character": "Character",
+      "fist": "The Fist",
+      "fistDescription": "Like a cobra ready to strike",
+      "shot": "The Shot",
+      "shotDescription": "A deadly gunslinger and showman",
+      "law": "The Law",
+      "lawDescription": "A lawman & enforcer",
+      "gamble": "The Gamble",
+      "gambleDescription": "A subtle manipulator & sly trickster",
+      "scout": "The Scout",
+      "scoutDescription": "A stealthy tracker & hunter",
+      "outlaw": "The Outlaw",
+      "outlawDescription": "A maverick & desperado beyond rules",
+      "thunderheart": "The Thunderheart",
+      "thunderheartDescription": "A totem fighter born from the land",
+      "speaker": "The Speaker",
+      "speakerDescription": "A spiritual guide & protector",
+      "plan": "The Plan",
+      "planDescription": "A well-connected mastermind",
+      "gentle-touch": "The Gentle Touch",
+      "gentle-touchDescription": "An empathic light in a dark world",
+      "wrench-saw": "The Wrench & Saw",
+      "wrench-sawDescription": "Mad scientist hellstone otaku",
+      "posse": "Posse",
+      "hellstone-scavengers": "Hellstone Scavengers",
+      "outlaw-posse": "Outlaw Posse",
+      "bounty-hunters": "Bounty Hunters",
+      "tribe": "Tribe"
     }
   }
 }

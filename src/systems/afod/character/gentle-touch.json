@@ -1,7 +1,7 @@
 {
   "id": "gentle-touch",
-  "name": "The Gentle Touch",
-  "description": "An empathic light in a dark world",
+  "name": "AFOD.Playbooks.gentle-touch",
+  "description": "AFOD.Playbooks.gentle-touchDescription",
   "modules": {
     "ratings": {
       "startingRatings": {
@@ -11,12 +11,36 @@
     },
     "items": {
       "custom": [
-        { "id": "fine concealed palm pistol", "name": "Fine Concealed Palm Pistol", "load": 1 },
-        { "id": "fine bedside manners", "name": "Fine Bedside Manners", "load": 0 },
-        { "id": "fine doctors bag and apron", "name": "Fine Doctors Bag and Apron", "load": 2 },
-        { "id": "fine and very strong cough syrup", "name": "Fine and Very Strong Cough Syrup", "load": 0 },
-        { "id": "a comforting song", "name": "A Comforting Song", "load": 0 },
-        { "id": "an old favor", "name": "An Old Favor", "load": 0 }
+        {
+          "id": "fine concealed palm pistol",
+          "name": "Fine Concealed Palm Pistol",
+          "load": 1
+        },
+        {
+          "id": "fine bedside manners",
+          "name": "Fine Bedside Manners",
+          "load": 0
+        },
+        {
+          "id": "fine doctors bag and apron",
+          "name": "Fine Doctors Bag and Apron",
+          "load": 2
+        },
+        {
+          "id": "fine and very strong cough syrup",
+          "name": "Fine and Very Strong Cough Syrup",
+          "load": 0
+        },
+        {
+          "id": "a comforting song",
+          "name": "A Comforting Song",
+          "load": 0
+        },
+        {
+          "id": "an old favor",
+          "name": "An Old Favor",
+          "load": 0
+        }
       ]
     },
     "specialAbilities": {
@@ -71,11 +95,26 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "mitch cochran", "name": "Mitch Cochran, an entrepreneur" },
-        { "id": "janet irsinghausen", "name": "Janet Irsinghausen, a scholar" },
-        { "id": "mr rosenberg", "name": "Mr. Rosenberg, a commissioner" },
-        { "id": "joe sawyer", "name": "Joe Sawyer, a farmer" },
-        { "id": "ron maddox", "name": "Ron Maddox, a surgeon" }
+        {
+          "id": "mitch cochran",
+          "name": "Mitch Cochran, an entrepreneur"
+        },
+        {
+          "id": "janet irsinghausen",
+          "name": "Janet Irsinghausen, a scholar"
+        },
+        {
+          "id": "mr rosenberg",
+          "name": "Mr. Rosenberg, a commissioner"
+        },
+        {
+          "id": "joe sawyer",
+          "name": "Joe Sawyer, a farmer"
+        },
+        {
+          "id": "ron maddox",
+          "name": "Ron Maddox, a surgeon"
+        }
       ]
     }
   }

@@ -1,16 +1,40 @@
 {
   "id": "hound",
-  "name": "Hound",
-  "description": "A deadly sharpshooter and tracker",
+  "name": "BITD.Playbooks.hound",
+  "description": "BITD.Playbooks.houndDescription",
   "modules": {
     "items": {
       "custom": [
-        { "id": "fine pair of pistols", "name": "Fine Pair of Pistols", "load": 1 },
-        { "id": "fine long rifle", "name": "Fine Long Rifle", "load": 2 },
-        { "id": "electroplasmic ammunition", "name": "Electroplasmic Ammunition", "load": 1 },
-        { "id": "a trained hunting pet", "name": "A Trained Hunting Pet", "load": 0 },
-        { "id": "spyglass", "name": "Spyglass", "load": 1 },
-        { "id": "spiritbane charm", "name": "Spiritbane charm", "load": 0 }
+        {
+          "id": "fine pair of pistols",
+          "name": "Fine Pair of Pistols",
+          "load": 1
+        },
+        {
+          "id": "fine long rifle",
+          "name": "Fine Long Rifle",
+          "load": 2
+        },
+        {
+          "id": "electroplasmic ammunition",
+          "name": "Electroplasmic Ammunition",
+          "load": 1
+        },
+        {
+          "id": "a trained hunting pet",
+          "name": "A Trained Hunting Pet",
+          "load": 0
+        },
+        {
+          "id": "spyglass",
+          "name": "Spyglass",
+          "load": 1
+        },
+        {
+          "id": "spiritbane charm",
+          "name": "Spiritbane charm",
+          "load": 0
+        }
       ]
     },
     "ratings": {
@@ -68,11 +92,26 @@
     "contacts": {
       "customName": "Dangerous Friends",
       "contacts": [
-        { "id": "steiner", "name": "Steiner, an assassin" },
-        { "id": "celene", "name": "Celene, a sentinel" },
-        { "id": "melvir", "name": "Melvir, a physicker" },
-        { "id": "veleris", "name": "Veleris, a spy" },
-        { "id": "casta", "name": "Casta, a bounty hunter" }
+        {
+          "id": "steiner",
+          "name": "Steiner, an assassin"
+        },
+        {
+          "id": "celene",
+          "name": "Celene, a sentinel"
+        },
+        {
+          "id": "melvir",
+          "name": "Melvir, a physicker"
+        },
+        {
+          "id": "veleris",
+          "name": "Veleris, a spy"
+        },
+        {
+          "id": "casta",
+          "name": "Casta, a bounty hunter"
+        }
       ]
     }
   }

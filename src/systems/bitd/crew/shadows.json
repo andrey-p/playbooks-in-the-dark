@@ -1,7 +1,7 @@
 {
   "id": "shadows",
-  "name": "Shadows",
-  "description": "Thieves, spies and saboteurs",
+  "name": "BITD.Playbooks.shadows",
+  "description": "BITD.Playbooks.shadowsDescription",
   "modules": {
     "specialAbilities": {
       "abilities": [
@@ -55,30 +55,41 @@
             "id": "interrogation chamber",
             "name": "Interrogation Chamber",
             "description": "<strong>+1d</strong> to Command and Sway on site",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "turf1",
             "name": "Turf",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "loyal fence",
             "name": "Loyal Fence",
             "description": "<strong>+2 coin</strong> for burglary or robbery",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "gambling den",
             "name": "Gambling Den",
             "description": "(Tier roll) - Heat = coin in downtime",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "tavern",
             "name": "Tavern",
             "description": "<strong>+1d</strong> to Consort and Sway on site",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           }
         ],
         [
@@ -86,30 +97,43 @@
             "id": "drug den",
             "name": "Drug Den",
             "description": "(Tier roll) - Heat = coin in downtime",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "informants",
             "name": "Informants",
             "description": "<strong>+1d</strong> gather info for scores",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "lair",
             "name": "Lair",
             "selectable": false,
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "turf2",
             "name": "Turf",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "lookouts",
             "name": "Lookouts",
             "description": "<strong>+1d</strong> to Survey or Hunt on your turf",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           }
         ],
         [
@@ -117,7 +141,9 @@
             "id": "hagfish farm",
             "name": "Hagfish Farm",
             "description": "Body disposal, <strong>+1d</strong> to reduce heat after killing",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "infirmary",
@@ -128,12 +154,16 @@
             "id": "covert drops",
             "name": "Covert Drops",
             "description": "<strong>+2 coin</strong> for espionage or sabotage",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "turf3",
             "name": "Turf",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "secret pathways",
@@ -145,12 +175,30 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "dowler", "name": "Dowler, an explorer" },
-        { "id": "laroze", "name": "Laroze, a bluecoat" },
-        { "id": "amancio", "name": "Amancio, a deal broker" },
-        { "id": "fitz", "name": "Fitz, a collector" },
-        { "id": "adelaide phroaig", "name": "Adelaide Phroaig, a noble" },
-        { "id": "rigney", "name": "Rigney, a tavern owner" }
+        {
+          "id": "dowler",
+          "name": "Dowler, an explorer"
+        },
+        {
+          "id": "laroze",
+          "name": "Laroze, a bluecoat"
+        },
+        {
+          "id": "amancio",
+          "name": "Amancio, a deal broker"
+        },
+        {
+          "id": "fitz",
+          "name": "Fitz, a collector"
+        },
+        {
+          "id": "adelaide phroaig",
+          "name": "Adelaide Phroaig, a noble"
+        },
+        {
+          "id": "rigney",
+          "name": "Rigney, a tavern owner"
+        }
       ]
     },
     "crewUpgrades": {
@@ -159,11 +207,31 @@
         "prowess": 1
       },
       "custom": [
-        { "id": "thief rigging", "name": "Thief Rigging (2 free load of tools or gear)", "load": 1 },
-        { "id": "underground maps and passkeys", "name": "Underground maps & passkeys", "load": 1 },
-        { "id": "elite rooks", "name": "Elite Rooks", "load": 1 },
-        { "id": "elite skulks", "name": "Elite Skulks", "load": 1 },
-        { "id": "steady", "name": "Steady (+1 stress box)", "load": 3 }
+        {
+          "id": "thief rigging",
+          "name": "Thief Rigging (2 free load of tools or gear)",
+          "load": 1
+        },
+        {
+          "id": "underground maps and passkeys",
+          "name": "Underground maps & passkeys",
+          "load": 1
+        },
+        {
+          "id": "elite rooks",
+          "name": "Elite Rooks",
+          "load": 1
+        },
+        {
+          "id": "elite skulks",
+          "name": "Elite Skulks",
+          "load": 1
+        },
+        {
+          "id": "steady",
+          "name": "Steady (+1 stress box)",
+          "load": 3
+        }
       ]
     },
     "favoredNotes": {
@@ -177,4 +245,3 @@
     }
   }
 }
-

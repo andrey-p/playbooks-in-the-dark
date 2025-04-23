@@ -1,7 +1,7 @@
 {
   "id": "cult",
-  "name": "Cult",
-  "description": "Acolytes of a deity",
+  "name": "BITD.Playbooks.cult",
+  "description": "BITD.Playbooks.cultDescription",
   "modules": {
     "specialAbilities": {
       "abilities": [
@@ -55,59 +55,84 @@
             "id": "cloister",
             "name": "Cloister",
             "description": "<strong>+1 scale</strong> for your Adept cohorts",
-            "connections": ["right", "down"]
+            "connections": [
+              "right",
+              "down"
+            ]
           },
           {
             "id": "vice den",
             "name": "Vice Den",
             "description": "(Tier roll) - Heat = coin in downtime",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "offertory",
             "name": "Offertory",
             "description": "<strong>+2 coin</strong> for occult operations",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "ancient obelisk",
             "name": "Ancient Obelisk",
             "description": "<strong>-1 stress</strong> cost for all arcane powers and rituals",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "ancient tower",
             "name": "Ancient Tower",
             "description": "<strong>+1d</strong> to Consort w/ arcane entities on site",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           }
         ],
         [
           {
             "id": "turf1",
             "name": "Turf",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "turf2",
             "name": "Turf",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "lair",
             "name": "Lair",
             "selectable": false,
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "turf3",
             "name": "Turf",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "turf4",
             "name": "Turf",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           }
         ],
         [
@@ -115,7 +140,9 @@
             "id": "spirit well",
             "name": "Spirit Well",
             "description": "<strong>+1d</strong> to Attune on site",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "ancient gate",
@@ -131,7 +158,9 @@
             "id": "sacred nexus",
             "name": "Sacred Nexus",
             "description": "<strong>+1d</strong> to healing rolls",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "ancient altar",
@@ -143,12 +172,30 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "gagan", "name": "Gagan, an academic" },
-        { "id": "adikin", "name": "Adikin, an occultist" },
-        { "id": "hutchins", "name": "Hutchins, an antiquarian" },
-        { "id": "moriya", "name": "Moriya, a spirit trafficker" },
-        { "id": "mateas kline", "name": "Mateas Kline, a noble" },
-        { "id": "bennett", "name": "Bennett, an astronomer" }
+        {
+          "id": "gagan",
+          "name": "Gagan, an academic"
+        },
+        {
+          "id": "adikin",
+          "name": "Adikin, an occultist"
+        },
+        {
+          "id": "hutchins",
+          "name": "Hutchins, an antiquarian"
+        },
+        {
+          "id": "moriya",
+          "name": "Moriya, a spirit trafficker"
+        },
+        {
+          "id": "mateas kline",
+          "name": "Mateas Kline, a noble"
+        },
+        {
+          "id": "bennett",
+          "name": "Bennett, an astronomer"
+        }
       ]
     },
     "crewUpgrades": {
@@ -156,11 +203,31 @@
         "resolve": 1
       },
       "custom": [
-        { "id": "cult rigging", "name": "Cult Rigging (2 free load of documents or implements)", "load": 1 },
-        { "id": "ritual sanctum in lair", "name": "Ritual sanctum in lair", "load": 1 },
-        { "id": "elite adepts", "name": "Elite Adepts", "load": 1 },
-        { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
-        { "id": "ordained", "name": "Ordained (+1 trauma box)", "load": 3 }
+        {
+          "id": "cult rigging",
+          "name": "Cult Rigging (2 free load of documents or implements)",
+          "load": 1
+        },
+        {
+          "id": "ritual sanctum in lair",
+          "name": "Ritual sanctum in lair",
+          "load": 1
+        },
+        {
+          "id": "elite adepts",
+          "name": "Elite Adepts",
+          "load": 1
+        },
+        {
+          "id": "elite thugs",
+          "name": "Elite Thugs",
+          "load": 1
+        },
+        {
+          "id": "ordained",
+          "name": "Ordained (+1 trauma box)",
+          "load": 3
+        }
       ]
     },
     "cohorts": {
@@ -184,4 +251,3 @@
     }
   }
 }
-

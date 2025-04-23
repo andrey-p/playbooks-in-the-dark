@@ -1,7 +1,7 @@
 {
   "id": "wrench-saw",
-  "name": "The Wrench & Saw",
-  "description": "Mad scientist hellstone otaku",
+  "name": "AFOD.Playbooks.wrench-saw",
+  "description": "AFOD.Playbooks.wrench-sawDescription",
   "modules": {
     "ratings": {
       "startingRatings": {
@@ -11,12 +11,36 @@
     },
     "items": {
       "custom": [
-        { "id": "fine crafting tools", "name": "Fine Crafting Tools", "load": 1 },
-        { "id": "fine experimental rifle", "name": "Fine Experimental Rifle", "load": 2 },
-        { "id": "fine useful parts", "name": "Fine Useful Parts", "load": 1 },
-        { "id": "hellstone goggles", "name": "Hellstone Goggles", "load": 1 },
-        { "id": "an unopened box", "name": "An Unopened Box", "load": 1 },
-        { "id": "a disturbing truth", "name": "A Disturbing Truth", "load": 0 }
+        {
+          "id": "fine crafting tools",
+          "name": "Fine Crafting Tools",
+          "load": 1
+        },
+        {
+          "id": "fine experimental rifle",
+          "name": "Fine Experimental Rifle",
+          "load": 2
+        },
+        {
+          "id": "fine useful parts",
+          "name": "Fine Useful Parts",
+          "load": 1
+        },
+        {
+          "id": "hellstone goggles",
+          "name": "Hellstone Goggles",
+          "load": 1
+        },
+        {
+          "id": "an unopened box",
+          "name": "An Unopened Box",
+          "load": 1
+        },
+        {
+          "id": "a disturbing truth",
+          "name": "A Disturbing Truth",
+          "load": 0
+        }
       ]
     },
     "specialAbilities": {
@@ -71,17 +95,33 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "ignaz toodlebrock", "name": "Ignaz Toodlebrock, an inventor" },
-        { "id": "a voice in your head", "name": "A voice in your head" },
+        {
+          "id": "ignaz toodlebrock",
+          "name": "Ignaz Toodlebrock, an inventor"
+        },
+        {
+          "id": "a voice in your head",
+          "name": "A voice in your head"
+        },
         {
           "id": "a favorite tool named",
           "name": "A favorite tool named {toolName}",
           "slots": [
-            { "id": "toolName", "label": "Tool Name", "size": 10 }
+            {
+              "id": "toolName",
+              "label": "Tool Name",
+              "size": 10
+            }
           ]
         },
-        { "id": "virex", "name": "Virex, a failed experiment" },
-        { "id": "dakota", "name": "Dakota, your fiancé" }
+        {
+          "id": "virex",
+          "name": "Virex, a failed experiment"
+        },
+        {
+          "id": "dakota",
+          "name": "Dakota, your fiancé"
+        }
       ]
     }
   }

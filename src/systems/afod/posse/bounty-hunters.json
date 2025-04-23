@@ -1,6 +1,6 @@
 {
   "id": "bounty-hunters",
-  "name": "Bounty Hunters",
+  "name": "AFOD.Playbooks.bounty-hunters",
   "modules": {
     "achievements": {
       "claims": [
@@ -9,25 +9,34 @@
             "id": "the tangled web",
             "name": "The Tangled Web",
             "description": "Darkness",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "the wild hunt",
             "name": "The Wild Hunt",
             "description": "Neutral",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "muddy informants",
             "name": "Muddy Informants",
             "description": "Neutral",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           },
           {
             "id": "safe passage",
             "name": "Safe Passage",
             "description": "Light",
-            "connections": ["down", "right"]
+            "connections": [
+              "down",
+              "right"
+            ]
           },
           {
             "id": "undertaker",
@@ -40,31 +49,43 @@
             "id": "biting shadows",
             "name": "Biting Shadows",
             "description": "Darkness",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "hellstone claim 1",
             "name": "Hellstone Claim",
             "description": "Darkness",
-            "connections": ["right", "down"]
+            "connections": [
+              "right",
+              "down"
+            ]
           },
           {
             "id": "equilibrium",
             "name": "Equilibrium",
-            "connections": ["down", "right"],
+            "connections": [
+              "down",
+              "right"
+            ],
             "selectable": false
           },
           {
             "id": "holy weapon",
             "name": "Holy Weapon",
             "description": "Light",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "hellstone claim 2",
             "name": "Hellstone Claim",
             "description": "Light",
-            "connections": ["down"]
+            "connections": [
+              "down"
+            ]
           }
         ],
         [
@@ -72,7 +93,9 @@
             "id": "death's servant",
             "name": "Death's Servant",
             "description": "Darkness",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "unholy weapon",
@@ -83,7 +106,9 @@
             "id": "secret stash",
             "name": "Secret Stash",
             "description": "Neutral",
-            "connections": ["right"]
+            "connections": [
+              "right"
+            ]
           },
           {
             "id": "hellstone claim 3",
@@ -153,12 +178,30 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "bill scar morgan", "name": "Bill 'Scar' Morgan, a judge" },
-        { "id": "the cheat murray", "name": "'The Cheat' Murray, arms dealer" },
-        { "id": "silent bob", "name": "'Silent' Bob, a blacksmith" },
-        { "id": "moe", "name": "Moe, a saloon owner" },
-        { "id": "madam zona", "name": "Madam Zona, a fortune teller" },
-        { "id": "xiang", "name": "Xiang, an occultist" }
+        {
+          "id": "bill scar morgan",
+          "name": "Bill 'Scar' Morgan, a judge"
+        },
+        {
+          "id": "the cheat murray",
+          "name": "'The Cheat' Murray, arms dealer"
+        },
+        {
+          "id": "silent bob",
+          "name": "'Silent' Bob, a blacksmith"
+        },
+        {
+          "id": "moe",
+          "name": "Moe, a saloon owner"
+        },
+        {
+          "id": "madam zona",
+          "name": "Madam Zona, a fortune teller"
+        },
+        {
+          "id": "xiang",
+          "name": "Xiang, an occultist"
+        }
       ]
     },
     "posseUpgrades": {
@@ -167,12 +210,33 @@
         "vault": 1
       },
       "custom": [
-        { "id": "bounty rigging", "name": "Bounty Rigging (weapons or documents)", "load": 1 },
-        { "id": "elite rooks", "name": "Elite Rooks", "load": 1 },
-        { "id": "elite scouts", "name": "Elite Scouts", "load": 1 },
-        { "id": "get out of jail free card", "name": "'Get out of jail free' card", "load": 1 },
-        { "id": "hardened", "name": "Hardened (+1 Grit Box)", "load": 3 }
+        {
+          "id": "bounty rigging",
+          "name": "Bounty Rigging (weapons or documents)",
+          "load": 1
+        },
+        {
+          "id": "elite rooks",
+          "name": "Elite Rooks",
+          "load": 1
+        },
+        {
+          "id": "elite scouts",
+          "name": "Elite Scouts",
+          "load": 1
+        },
+        {
+          "id": "get out of jail free card",
+          "name": "'Get out of jail free' card",
+          "load": 1
+        },
+        {
+          "id": "hardened",
+          "name": "Hardened (+1 Grit Box)",
+          "load": 3
+        }
       ]
     }
-  }
+  },
+  "description": "AFOD.Playbooks.bounty-huntersDescription"
 }

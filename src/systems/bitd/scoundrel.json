@@ -9,11 +9,14 @@
     "spider",
     "whisper"
   ],
-  "name": "Scoundrel",
+  "name": "BITD.Playbooks.scoundrel",
   "layout": [
     [
       "name",
-      ["crew", "alias"],
+      [
+        "crew",
+        "alias"
+      ],
       "look",
       "heritage",
       "background",
@@ -22,84 +25,96 @@
       "trauma",
       "traumaText",
       "harm",
-      ["healingClock", "armor"],
+      [
+        "healingClock",
+        "armor"
+      ],
       "notes"
     ],
-    ["specialAbilities", "contacts", "items", "alchemicals"],
-    ["coin", "playbookXp", "ratings"]
+    [
+      "specialAbilities",
+      "contacts",
+      "items",
+      "alchemicals"
+    ],
+    [
+      "coin",
+      "playbookXp",
+      "ratings"
+    ]
   ],
   "modules": {
     "name": {
       "id": "name",
       "type": "textField",
-      "label": "Name"
+      "label": "BITD.Modules.nameLabel"
     },
     "crew": {
       "id": "crew",
       "type": "textField",
-      "label": "Crew"
+      "label": "BITD.Modules.crewLabel"
     },
     "alias": {
       "id": "alias",
       "type": "textField",
-      "label": "Alias"
+      "label": "BITD.Modules.aliasLabel"
     },
     "look": {
       "id": "look",
       "type": "textField",
-      "label": "Look"
+      "label": "BITD.Modules.lookLabel"
     },
     "heritage": {
       "id": "heritage",
       "type": "textField",
-      "label": "Heritage",
+      "label": "BITD.Modules.heritageLabel",
       "props": {
         "examples": [
-          "Akoros",
-          "The Dagger Isles",
-          "Iruvia",
-          "Severos",
-          "Skovlan",
-          "Tycheros"
+          "BITD.Modules.heritageExampleAkoros",
+          "BITD.Modules.heritageExampleDaggerIsles",
+          "BITD.Modules.heritageExampleIruvia",
+          "BITD.Modules.heritageExampleSeveros",
+          "BITD.Modules.heritageExampleSkovlan",
+          "BITD.Modules.heritageExampleTycheros"
         ]
       }
     },
     "background": {
       "id": "background",
       "type": "textField",
-      "label": "Background",
+      "label": "BITD.Modules.backgroundLabel",
       "props": {
         "examples": [
-          "Academic",
-          "Labor",
-          "Law",
-          "Trade",
-          "Military",
-          "Noble",
-          "Underworld"
+          "BITD.Modules.backgroundExampleAcademic",
+          "BITD.Modules.backgroundExampleLabor",
+          "BITD.Modules.backgroundExampleLaw",
+          "BITD.Modules.backgroundExampleTrade",
+          "BITD.Modules.backgroundExampleMilitary",
+          "BITD.Modules.backgroundExampleNoble",
+          "BITD.Modules.backgroundExampleUnderworld"
         ]
       }
     },
     "vice": {
       "id": "vice",
       "type": "textField",
-      "label": "Vice / Purveyor",
+      "label": "BITD.Modules.viceLabel",
       "props": {
         "examples": [
-          "Faith",
-          "Gambling",
-          "Luxury",
-          "Obligation",
-          "Pleasure",
-          "Stupor",
-          "Weird"
+          "BITD.Modules.viceExampleFaith",
+          "BITD.Modules.viceExampleGambling",
+          "BITD.Modules.viceExampleLuxury",
+          "BITD.Modules.viceExampleObligation",
+          "BITD.Modules.viceExamplePleasure",
+          "BITD.Modules.viceExampleStupor",
+          "BITD.Modules.viceExampleWeird"
         ]
       }
     },
     "stress": {
       "id": "stress",
       "type": "tracker",
-      "label": "Stress",
+      "label": "BITD.Modules.stressLabel",
       "props": {
         "type": "dagger",
         "max": 9
@@ -108,7 +123,7 @@
     "trauma": {
       "id": "trauma",
       "type": "tracker",
-      "label": "Trauma",
+      "label": "BITD.Modules.traumaLabel",
       "props": {
         "type": "dagger",
         "max": 4
@@ -117,32 +132,36 @@
     "traumaText": {
       "id": "traumaText",
       "type": "textField",
-      "label": "Trauma",
+      "label": "BITD.Modules.traumaLabel",
       "props": {
         "examples": [
-          "Cold",
-          "Haunted",
-          "Obsessed",
-          "Paranoid",
-          "Reckless",
-          "Soft",
-          "Unstable",
-          "Vicious"
+          "BITD.Modules.traumaExampleCold",
+          "BITD.Modules.traumaExampleHaunted",
+          "BITD.Modules.traumaExampleObsessed",
+          "BITD.Modules.traumaExampleParanoid",
+          "BITD.Modules.traumaExampleReckless",
+          "BITD.Modules.traumaExampleSoft",
+          "BITD.Modules.traumaExampleUnstable",
+          "BITD.Modules.traumaExampleVicious"
         ]
       }
     },
     "harm": {
       "id": "harm",
       "type": "harm",
-      "label": "Harm",
+      "label": "BITD.Modules.harmLabel",
       "props": {
-        "levelDescriptions": ["Less effect", "-1D", "Need help"]
+        "levelDescriptions": [
+          "BITD.Modules.harmLessEffect",
+          "BITD.Modules.harmMinus1D",
+          "BITD.Modules.harmNeedHelp"
+        ]
       }
     },
     "healingClock": {
       "id": "healingClock",
       "type": "tracker",
-      "label": "Healing",
+      "label": "BITD.Modules.healingClockLabel",
       "props": {
         "type": "clock",
         "max": 4
@@ -151,58 +170,134 @@
     "armor": {
       "id": "armor",
       "type": "items",
-      "label": "Armor Uses",
+      "label": "BITD.Modules.armorLabel",
       "props": {
         "common": [
-          { "id": "armor", "name": "Armor", "load": 1 },
-          { "id": "heavy", "name": "Heavy", "load": 1 },
-          { "id": "special", "name": "Special", "load": 1 }
+          {
+            "id": "armor",
+            "name": "BITD.Modules.armorArmor",
+            "load": 1
+          },
+          {
+            "id": "heavy",
+            "name": "BITD.Modules.armorHeavy",
+            "load": 1
+          },
+          {
+            "id": "special",
+            "name": "BITD.Modules.armorSpecial",
+            "load": 1
+          }
         ]
       }
     },
     "notes": {
       "id": "notes",
       "type": "textArea",
-      "label": "Notes"
+      "label": "BITD.Modules.notesLabel"
     },
     "specialAbilities": {
       "id": "specialAbilities",
       "type": "specialAbilities",
-      "label": "Special abilities"
+      "label": "BITD.Modules.specialAbilitiesLabel"
     },
     "contacts": {
       "id": "contacts",
       "type": "contacts",
-      "label": "Contacts"
+      "label": "BITD.Modules.contactsLabel"
     },
     "items": {
       "id": "items",
       "type": "items",
-      "label": "Items",
+      "label": "BITD.Modules.itemsLabel"
       "props": {
         "twoColumns": true,
         "load": [
-          { "id": "light", "name": "3 light" },
-          { "id": "normal", "name": "5 normal" },
-          { "id": "heavy", "name": "6 heavy" }
+          { "id": "light", "name": "BITD.Modules.itemsLoadLight" },
+          { "id": "normal", "name": "BITD.Modules.itemsLoadNormal" },
+          { "id": "heavy", "name": "BITD.Modules.itemsLoadHeavy" }
         ],
         "common": [
-          { "id": "a blade or two", "name": "A Blade or Two", "load": 1 },
-          { "id": "throwing knives", "name": "Throwing Knives", "load": 1 },
-          { "id": "a pistol", "name": "A Pistol", "load": 1 },
-          { "id": "a 2nd pistol", "name": "A 2nd Pistol", "load": 1 },
-          { "id": "a large weapon", "name": "A Large Weapon", "load": 2 },
-          { "id": "an unusual weapon", "name": "An Unusual Weapon", "load": 1 },
-          { "id": "armor", "name": "Armour", "load": 2 },
-          { "id": "heavy", "name": "+ Heavy", "load": 3 },
-          { "id": "burglary gear", "name": "Burglary Gear", "load": 1 },
-          { "id": "climbing gear", "name": "Climbing Gear", "load": 2 },
-          { "id": "arcane implements", "name": "Arcane Implements", "load": 1 },
-          { "id": "documents", "name": "Documents", "load": 1 },
-          { "id": "subterfuge supplies", "name": "Subterfuge Supplies", "load": 1 },
-          { "id": "demolition tools", "name": "Demolition Tools", "load": 2 },
-          { "id": "tinkering tools", "name": "Tinkering Tools", "load": 1 },
-          { "id": "lantern", "name": "Lantern", "load": 1 }
+          {
+            "id": "a blade or two",
+            "name": "A Blade or Two",
+            "load": 1
+          },
+          {
+            "id": "throwing knives",
+            "name": "Throwing Knives",
+            "load": 1
+          },
+          {
+            "id": "a pistol",
+            "name": "A Pistol",
+            "load": 1
+          },
+          {
+            "id": "a 2nd pistol",
+            "name": "A 2nd Pistol",
+            "load": 1
+          },
+          {
+            "id": "a large weapon",
+            "name": "A Large Weapon",
+            "load": 2
+          },
+          {
+            "id": "an unusual weapon",
+            "name": "An Unusual Weapon",
+            "load": 1
+          },
+          {
+            "id": "armor",
+            "name": "Armour",
+            "load": 2
+          },
+          {
+            "id": "heavy",
+            "name": "+ Heavy",
+            "load": 3
+          },
+          {
+            "id": "burglary gear",
+            "name": "Burglary Gear",
+            "load": 1
+          },
+          {
+            "id": "climbing gear",
+            "name": "Climbing Gear",
+            "load": 2
+          },
+          {
+            "id": "arcane implements",
+            "name": "Arcane Implements",
+            "load": 1
+          },
+          {
+            "id": "documents",
+            "name": "Documents",
+            "load": 1
+          },
+          {
+            "id": "subterfuge supplies",
+            "name": "Subterfuge Supplies",
+            "load": 1
+          },
+          {
+            "id": "demolition tools",
+            "name": "Demolition Tools",
+            "load": 2
+          },
+          {
+            "id": "tinkering tools",
+            "name": "Tinkering Tools",
+            "load": 1
+          },
+          {
+            "id": "lantern",
+            "name": "Lantern",
+            "load": 1
+          }
         ]
       }
     },
@@ -210,11 +305,21 @@
       "id": "alchemicals",
       "type": "items",
       "label": "Alchemicals",
-      "playbooks": ["leech"],
+      "playbooks": [
+        "leech"
+      ],
       "props": {
         "common": [
-          { "id": "bandolier1", "name": "Bandolier", "load": 3 },
-          { "id": "bandolier2", "name": "Bandolier", "load": 3 }
+          {
+            "id": "bandolier1",
+            "name": "Bandolier",
+            "load": 3
+          },
+          {
+            "id": "bandolier2",
+            "name": "Bandolier",
+            "load": 3
+          }
         ]
       },
       "description": "<p>When you use a bandolier slot, choose an alchemical:</p> <ul><li>Alcahest</li><li>Binding Oil</li><li>Drift Oil</li><li>Drown Powder</li><li>Eyeblind Poison</li><li>Fire Oil</li><li>Grenade</li><li>Quicksilver</li><li>Skullfire Poison</li><li>Smoke Bomb</li><li>Spark (drug)</li><li>Standstill Poison</li><li>Trance Powder</li></ul>"

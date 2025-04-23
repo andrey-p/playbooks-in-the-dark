@@ -1,7 +1,7 @@
 {
   "id": "plan",
-  "name": "The Plan",
-  "description": "A well-connected mastermind",
+  "name": "AFOD.Playbooks.plan",
+  "description": "AFOD.Playbooks.planDescription",
   "modules": {
     "ratings": {
       "startingRatings": {
@@ -11,12 +11,36 @@
     },
     "items": {
       "custom": [
-        { "id": "a concealed holdout pistol", "name": "A Concealed Holdout Pistol", "load": 0 },
-        { "id": "fine status symbol", "name": "Fine Status Symbol", "load": 1 },
-        { "id": "fine documents", "name": "Fine Documents", "load": 1 },
-        { "id": "blackmail information", "name": "Blackmail Information", "load": 0 },
-        { "id": "fine ornamented carriage", "name": "Fine Ornamented Carriage", "load": 0 },
-        { "id": "a spirit charm", "name": "A Spirit Charm", "load": 0 }
+        {
+          "id": "a concealed holdout pistol",
+          "name": "A Concealed Holdout Pistol",
+          "load": 0
+        },
+        {
+          "id": "fine status symbol",
+          "name": "Fine Status Symbol",
+          "load": 1
+        },
+        {
+          "id": "fine documents",
+          "name": "Fine Documents",
+          "load": 1
+        },
+        {
+          "id": "blackmail information",
+          "name": "Blackmail Information",
+          "load": 0
+        },
+        {
+          "id": "fine ornamented carriage",
+          "name": "Fine Ornamented Carriage",
+          "load": 0
+        },
+        {
+          "id": "a spirit charm",
+          "name": "A Spirit Charm",
+          "load": 0
+        }
       ]
     },
     "specialAbilities": {
@@ -66,12 +90,30 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "john p little", "name": "John P. Little, a cattle baron" },
-        { "id": "the dutch", "name": "'The Dutch', an executor" },
-        { "id": "pepper", "name": "Pepper, a lucky charm" },
-        { "id": "captain hodgens", "name": "Captain Hodgens, Fort Hubert" },
-        { "id": "horatio freeman", "name": "Horatio Freeman, a sheriff" },
-        { "id": "sylvester stubbs", "name": "Sylvester Stubbs, an official" }
+        {
+          "id": "john p little",
+          "name": "John P. Little, a cattle baron"
+        },
+        {
+          "id": "the dutch",
+          "name": "'The Dutch', an executor"
+        },
+        {
+          "id": "pepper",
+          "name": "Pepper, a lucky charm"
+        },
+        {
+          "id": "captain hodgens",
+          "name": "Captain Hodgens, Fort Hubert"
+        },
+        {
+          "id": "horatio freeman",
+          "name": "Horatio Freeman, a sheriff"
+        },
+        {
+          "id": "sylvester stubbs",
+          "name": "Sylvester Stubbs, an official"
+        }
       ]
     }
   }

@@ -1,7 +1,7 @@
 {
   "id": "gamble",
-  "name": "The Gamble",
-  "description": "A subtle manipulator & sly trickster",
+  "name": "AFOD.Playbooks.gamble",
+  "description": "AFOD.Playbooks.gambleDescription",
   "modules": {
     "ratings": {
       "startingRatings": {
@@ -12,12 +12,36 @@
     },
     "items": {
       "custom": [
-        { "id": "a fine extravagant melee weapon", "name": "A Fine Extravagant Melee Weapon", "load": 1 },
-        { "id": "fine playing cards & dice", "name": "Fine Playing Cards & Dice", "load": 0 },
-        { "id": "fine clothes and jewelry", "name": "Fine Clothes and Jewelry", "load": 1 },
-        { "id": "a set of won valuable documents", "name": "A Set of Won Valuable Documents", "load": 1 },
-        { "id": "a fine story", "name": "A Fine Story", "load": 0 },
-        { "id": "a small token of luck", "name": "A Small Token of Luck", "load": 0 }
+        {
+          "id": "a fine extravagant melee weapon",
+          "name": "A Fine Extravagant Melee Weapon",
+          "load": 1
+        },
+        {
+          "id": "fine playing cards & dice",
+          "name": "Fine Playing Cards & Dice",
+          "load": 0
+        },
+        {
+          "id": "fine clothes and jewelry",
+          "name": "Fine Clothes and Jewelry",
+          "load": 1
+        },
+        {
+          "id": "a set of won valuable documents",
+          "name": "A Set of Won Valuable Documents",
+          "load": 1
+        },
+        {
+          "id": "a fine story",
+          "name": "A Fine Story",
+          "load": 0
+        },
+        {
+          "id": "a small token of luck",
+          "name": "A Small Token of Luck",
+          "load": 0
+        }
       ]
     },
     "specialAbilities": {
@@ -67,11 +91,26 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "zane cooper", "name": "Zane Cooper, a croupier" },
-        { "id": "mrs millie", "name": "Mrs. Millie, a madam" },
-        { "id": "dandy jim buckley", "name": "'Dandy Jim' Buckley, a con artist " },
-        { "id": "sly eddison", "name": "Sly Eddison, a cardsharp" },
-        { "id": "owen oneill", "name": "Owen O'Neill, a moonshiner" }
+        {
+          "id": "zane cooper",
+          "name": "Zane Cooper, a croupier"
+        },
+        {
+          "id": "mrs millie",
+          "name": "Mrs. Millie, a madam"
+        },
+        {
+          "id": "dandy jim buckley",
+          "name": "'Dandy Jim' Buckley, a con artist "
+        },
+        {
+          "id": "sly eddison",
+          "name": "Sly Eddison, a cardsharp"
+        },
+        {
+          "id": "owen oneill",
+          "name": "Owen O'Neill, a moonshiner"
+        }
       ]
     }
   }

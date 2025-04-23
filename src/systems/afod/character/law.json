@@ -1,7 +1,7 @@
 {
   "id": "law",
-  "name": "The Law",
-  "description": "A lawman & enforcer",
+  "name": "AFOD.Playbooks.law",
+  "description": "AFOD.Playbooks.lawDescription",
   "modules": {
     "ratings": {
       "startingRatings": {
@@ -12,12 +12,36 @@
     },
     "items": {
       "custom": [
-        { "id": "fine pair of pistols", "name": "Fine Pair of Pistols", "load": 2 },
-        { "id": "fine shotgun", "name": "Fine Shotgun", "load": 2 },
-        { "id": "badge of authority", "name": "Badge of Authority", "load": 0 },
-        { "id": "fine documents", "name": "Fine Documents", "load": 1 },
-        { "id": "manacle and chains", "name": "Manacle and Chains", "load": 1 },
-        { "id": "a keepsake", "name": "A Keepsake", "load": 0 }
+        {
+          "id": "fine pair of pistols",
+          "name": "Fine Pair of Pistols",
+          "load": 2
+        },
+        {
+          "id": "fine shotgun",
+          "name": "Fine Shotgun",
+          "load": 2
+        },
+        {
+          "id": "badge of authority",
+          "name": "Badge of Authority",
+          "load": 0
+        },
+        {
+          "id": "fine documents",
+          "name": "Fine Documents",
+          "load": 1
+        },
+        {
+          "id": "manacle and chains",
+          "name": "Manacle and Chains",
+          "load": 1
+        },
+        {
+          "id": "a keepsake",
+          "name": "A Keepsake",
+          "load": 0
+        }
       ]
     },
     "specialAbilities": {
@@ -67,11 +91,26 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "levi ambush boyle", "name": "Levi 'Ambush' Boyle, a ranger" },
-        { "id": "gladis blood wells", "name": "Gladis 'Blood' Wells, bounty hunter" },
-        { "id": "karl no teeth mccann", "name": "Karl 'No Teeth' McCann, a killer" },
-        { "id": "carlos vasquez", "name": "Carlos Vasquez, an outlaw boss" },
-        { "id": "hunter", "name": "Hunter, a vengeful spirit" }
+        {
+          "id": "levi ambush boyle",
+          "name": "Levi 'Ambush' Boyle, a ranger"
+        },
+        {
+          "id": "gladis blood wells",
+          "name": "Gladis 'Blood' Wells, bounty hunter"
+        },
+        {
+          "id": "karl no teeth mccann",
+          "name": "Karl 'No Teeth' McCann, a killer"
+        },
+        {
+          "id": "carlos vasquez",
+          "name": "Carlos Vasquez, an outlaw boss"
+        },
+        {
+          "id": "hunter",
+          "name": "Hunter, a vengeful spirit"
+        }
       ]
     }
   }

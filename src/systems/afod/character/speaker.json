@@ -1,7 +1,7 @@
 {
   "id": "speaker",
-  "name": "The Speaker",
-  "description": "A spiritual guide & protector",
+  "name": "AFOD.Playbooks.speaker",
+  "description": "AFOD.Playbooks.speakerDescription",
   "modules": {
     "ratings": {
       "startingRatings": {
@@ -12,12 +12,36 @@
     },
     "items": {
       "custom": [
-        { "id": "a symbol of your faith", "name": "A Symbol of Your Faith", "load": 0 },
-        { "id": "an instrument of your faith", "name": "An Instrument of Your Faith", "load": 1 },
-        { "id": "blessed implements for a ritual", "name": "Blessed Implements for a Ritual", "load": 1 },
-        { "id": "a confession of old", "name": "A Confession of Old", "load": 0 },
-        { "id": "fine garments of ceremony", "name": "Fine Garments of Ceremony", "load": 1 },
-        { "id": "concealed palm pistol or blade", "name": "Concealed Palm Pistol or Blade", "load": 1 }
+        {
+          "id": "a symbol of your faith",
+          "name": "A Symbol of Your Faith",
+          "load": 0
+        },
+        {
+          "id": "an instrument of your faith",
+          "name": "An Instrument of Your Faith",
+          "load": 1
+        },
+        {
+          "id": "blessed implements for a ritual",
+          "name": "Blessed Implements for a Ritual",
+          "load": 1
+        },
+        {
+          "id": "a confession of old",
+          "name": "A Confession of Old",
+          "load": 0
+        },
+        {
+          "id": "fine garments of ceremony",
+          "name": "Fine Garments of Ceremony",
+          "load": 1
+        },
+        {
+          "id": "concealed palm pistol or blade",
+          "name": "Concealed Palm Pistol or Blade",
+          "load": 1
+        }
       ]
     },
     "specialAbilities": {
@@ -67,11 +91,26 @@
     },
     "contacts": {
       "contacts": [
-        { "id": "nathaniel", "name": "Nathaniel, an atoned sinner" },
-        { "id": "patience", "name": "Patience, a lawyer" },
-        { "id": "cyrus", "name": "Cyrus, a gunslinger" },
-        { "id": "mistress bethia", "name": "Mistress Bethia" },
-        { "id": "speaks with the wind", "name": "Speaks with the Wind" }
+        {
+          "id": "nathaniel",
+          "name": "Nathaniel, an atoned sinner"
+        },
+        {
+          "id": "patience",
+          "name": "Patience, a lawyer"
+        },
+        {
+          "id": "cyrus",
+          "name": "Cyrus, a gunslinger"
+        },
+        {
+          "id": "mistress bethia",
+          "name": "Mistress Bethia"
+        },
+        {
+          "id": "speaks with the wind",
+          "name": "Speaks with the Wind"
+        }
       ]
     }
   }
