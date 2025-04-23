@@ -69,12 +69,12 @@
       "label": "AFOD.Modules.heritageLabel",
       "props": {
         "examples": [
-          "African",
-          "Far East",
-          "European",
-          "Southern",
-          "Native",
-          "Mysterious"
+          "AFOD.Modules.heritageExampleAfrican",
+          "AFOD.Modules.heritageExampleFarEast",
+          "AFOD.Modules.heritageExampleEuropean",
+          "AFOD.Modules.heritageExampleSouthern",
+          "AFOD.Modules.heritageExampleNative",
+          "AFOD.Modules.heritageExampleMysterious"
         ]
       }
     },
@@ -84,13 +84,13 @@
       "label": "AFOD.Modules.backgroundLabel",
       "props": {
         "examples": [
-          "Big town",
-          "Frontier town",
-          "Ranch",
-          "Fort",
-          "Tribe",
-          "Loner",
-          "Immigrant"
+          "AFOD.Modules.backgroundExampleBigTown",
+          "AFOD.Modules.backgroundExampleFrontierTown",
+          "AFOD.Modules.backgroundExampleRanch",
+          "AFOD.Modules.backgroundExampleFort",
+          "AFOD.Modules.backgroundExampleTribe",
+          "AFOD.Modules.backgroundExampleLoner",
+          "AFOD.Modules.backgroundExampleImmigrant"
         ]
       }
     },
@@ -125,15 +125,15 @@
       "label": "AFOD.Modules.stigmaLabel",
       "props": {
         "examples": [
-          "Scarred",
-          "Corrupted",
-          "Visions",
-          "Gloryhound",
-          "Voices",
-          "Cursed",
-          "Numb",
-          "Hunted",
-          "Shamed"
+          "AFOD.Modules.stigmaExampleScarred",
+          "AFOD.Modules.stigmaExampleCorrupted",
+          "AFOD.Modules.stigmaExampleVisions",
+          "AFOD.Modules.stigmaExampleGloryhound",
+          "AFOD.Modules.stigmaExampleVoices",
+          "AFOD.Modules.stigmaExampleCursed",
+          "AFOD.Modules.stigmaExampleNumb",
+          "AFOD.Modules.stigmaExampleHunted",
+          "AFOD.Modules.stigmaExampleShamed"
         ]
       }
     },

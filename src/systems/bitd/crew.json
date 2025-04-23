@@ -66,14 +66,14 @@
       ],
       "props": {
         "examples": [
-          "Alluring",
-          "Cruel",
-          "Ferocious",
-          "Monstrous",
-          "Radiant",
-          "Sinister",
-          "Serene",
-          "Transcendent"
+          "BITD.Modules.deityExampleAlluring",
+          "BITD.Modules.deityExampleCruel",
+          "BITD.Modules.deityExampleFerocious",
+          "BITD.Modules.deityExampleMonstrous",
+          "BITD.Modules.deityExampleRadiant",
+          "BITD.Modules.deityExampleSinister",
+          "BITD.Modules.deityExampleSerene",
+          "BITD.Modules.deityExampleTranscendent"
         ]
       }
     },
