@@ -1,13 +1,7 @@
 import { z } from 'zod';
-import { getJson } from '@/lib/system-data';
-import { NotFoundError } from '@/lib/errors';
 import PlaybookEditor from '../../../../components/playbook-editor';
-import {
-  PlaybookData as PlaybookDataSchema,
-  PlaybookDefinition as PlaybookDefinitionSchema,
-  System as SystemSchema,
-  UserData as UserDataSchema
-} from '@/schemas';
+import DataWrapper from '../../../../components/data-wrapper';
+import { UserData as UserDataSchema } from '@/schemas';
 import { getPlaybook } from '@/lib/store';
 import { notFound } from 'next/navigation';
 import { revalidatePath } from 'next/cache';
@@ -29,34 +23,9 @@ type Props = {
 export default async function Page(props: Props) {
   const { id, playbookId, systemId, playbookType } = await props.params;
 
-  let systemData;
-  let playbookData;
-  let playbookDefinition;
+  const userData = await getPlaybook(id);
 
-  try {
-    systemData = SystemSchema.parse(getJson(systemId, 'system'));
-    playbookDefinition = PlaybookDefinitionSchema.parse(
-      getJson(systemId, playbookType)
-    );
-    playbookData = PlaybookDataSchema.parse(
-      getJson(systemId, playbookType, playbookId)
-    );
-  } catch (e) {
-    if (e instanceof NotFoundError) {
-      return notFound();
-    }
-
-    throw e;
-  }
-
-  const data = await getPlaybook(id);
-
-  if (!data) {
-    return notFound();
-  }
-
-  // this should really only happen if someone's mucking about with the URLs
-  if (data.systemId !== systemData.id || data.playbookId !== playbookId) {
+  if (!userData) {
     return notFound();
   }
 
@@ -76,13 +45,20 @@ export default async function Page(props: Props) {
   };
 
   return (
-    <PlaybookEditor
-      systemData={systemData}
-      playbookData={playbookData}
-      playbookDefinition={playbookDefinition}
-      saveAction={saveAction}
-      deleteAction={deleteAction}
-      userData={data}
-    />
+    <DataWrapper
+      systemId={systemId}
+      playbookType={playbookType}
+      playbookId={playbookId}
+      userData={userData}
+    >
+      {(data) => (
+        <PlaybookEditor
+          {...data}
+          saveAction={saveAction}
+          deleteAction={deleteAction}
+          userData={userData}
+        />
+      )}
+    </DataWrapper>
   );
 }
