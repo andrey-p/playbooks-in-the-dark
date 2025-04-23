@@ -75,7 +75,13 @@
       "repLabel": "Rep",
       "claimsLabel": "Claims",
       "holdWeak": "Weak",
-      "holdStrong": "Strong"
+      "holdStrong": "Strong",
+      "cohortsGang": "Gang",
+      "cohortsExpert": "Expert",
+      "cohortsWeak": "Weak",
+      "cohortsImpaired": "Impaired",
+      "cohortsBroken": "Broken",
+      "cohortsArmor": "Armor"
     }
   }
 }

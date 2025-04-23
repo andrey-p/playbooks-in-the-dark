@@ -440,11 +440,11 @@
             "options": [
               {
                 "id": "gang",
-                "name": "Gang"
+                "name": "AFOD.Modules.cohortsGang"
               },
               {
                 "id": "expert",
-                "name": "Expert"
+                "name": "AFOD.Modules.cohortsExpert"
               }
             ]
           },
@@ -454,15 +454,15 @@
             "options": [
               {
                 "id": "weak",
-                "name": "Weak"
+                "name": "AFOD.Modules.cohortsWeak"
               },
               {
                 "id": "impaired",
-                "name": "Impaired"
+                "name": "AFOD.Modules.cohortsImpaired"
               },
               {
                 "id": "broken",
-                "name": "Broken"
+                "name": "AFOD.Modules.cohortsBroken"
               }
             ]
           },
@@ -472,7 +472,7 @@
             "options": [
               {
                 "id": "armor",
-                "name": "Armor"
+                "name": "AFOD.Modules.cohortsArmor"
               }
             ]
           }

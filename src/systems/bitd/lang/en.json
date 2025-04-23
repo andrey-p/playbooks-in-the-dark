@@ -125,7 +125,13 @@
       "tier0": "1",
       "tier1": "2",
       "tier2": "3",
-      "tier3": "4"
+      "tier3": "4",
+      "cohortsGang": "Gang",
+      "cohortsExpert": "Expert",
+      "cohortsWeak": "Weak",
+      "cohortsImpaired": "Impaired",
+      "cohortsBroken": "Broken",
+      "cohortsArmor": "Armor"
     }
   }
 }

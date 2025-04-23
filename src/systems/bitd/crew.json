@@ -365,11 +365,11 @@
             "options": [
               {
                 "id": "gang",
-                "name": "Gang"
+                "name": "BITD.Modules.cohortsGang"
               },
               {
                 "id": "expert",
-                "name": "Expert"
+                "name": "BITD.Modules.cohortsExpert"
               }
             ]
           },
@@ -379,15 +379,15 @@
             "options": [
               {
                 "id": "weak",
-                "name": "Weak"
+                "name": "BITD.Modules.cohortsWeak"
               },
               {
                 "id": "impaired",
-                "name": "Impaired"
+                "name": "BITD.Modules.cohortsImpaired"
               },
               {
                 "id": "broken",
-                "name": "Broken"
+                "name": "BITD.Modules.cohortsBroken"
               }
             ]
           },
@@ -397,7 +397,7 @@
             "options": [
               {
                 "id": "armor",
-                "name": "Armor"
+                "name": "BITD.Modules.cohortsArmor"
               }
             ]
           }
