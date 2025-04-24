@@ -1,5 +1,5 @@
 import { getRequestConfig } from 'next-intl/server';
-import systemsJson from '@/systems/systems.json';
+import { getAllSystemsText } from '@/lib/system-data';
 
 export default getRequestConfig(async () => {
   // all we support for now
@@ -9,19 +9,7 @@ export default getRequestConfig(async () => {
 
   // TODO this gets all of the translations for all the systems
   // should try to limit those to e.g. system and playbook definitions
-  const systemPromises = systemsJson.systems.map(async ({ id }) => {
-    return (await import(`@/systems/${id}/lang/${locale}.json`)).default;
-  });
-
-  const systemMessages = (await Promise.all(systemPromises)).reduce(
-    (acc, data) => {
-      return {
-        ...acc,
-        ...data
-      };
-    },
-    {}
-  );
+  const systemMessages = await getAllSystemsText(locale);
 
   const messages = {
     ...uiMessages,

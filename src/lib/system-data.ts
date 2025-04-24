@@ -1,5 +1,6 @@
 import { readFileSync } from 'fs';
 import { NotFoundError } from './errors';
+import systemsJson from '@/systems/systems.json';
 
 // only allow alphanumeric and - filenames
 const validFileRe = /^[a-zA-Z0-9-]+$/;
@@ -40,4 +41,35 @@ export const getJson = function (
   } catch (e) {
     throw new Error(`Error parsing ${path}`, { cause: e });
   }
+};
+
+export const getSystemText = async (
+  systemId: string,
+  locale: string
+): Promise<object> => {
+  let text;
+  const path = `@/systems/${systemId}/lang/${locale}.json`;
+
+  try {
+    text = (await import(path)).default;
+  } catch {
+    throw new NotFoundError(`Couldn't find system JSON file: ${path}`);
+  }
+
+  return text;
+};
+
+export const getAllSystemsText = async (locale: string): Promise<object> => {
+  const systemPromises = systemsJson.systems.map(async ({ id }) => {
+    return getSystemText(id, locale);
+  });
+
+  const text = (await Promise.all(systemPromises)).reduce((acc, data) => {
+    return {
+      ...acc,
+      ...data
+    };
+  }, {});
+
+  return text;
 };

@@ -1,6 +1,16 @@
 import { render, RenderOptions } from '@testing-library/react';
 import { NextIntlClientProvider } from 'next-intl';
-import messages from '../../lang/en.json';
+import uiMessages from '../../lang/en.json';
+import { getAllSystemsText } from '@/lib/system-data';
+
+let messages: object;
+
+beforeAll(async () => {
+  messages = {
+    ...(await getAllSystemsText('en')),
+    ...uiMessages
+  };
+});
 
 type WrapperProps = {
   children: React.ReactNode;
