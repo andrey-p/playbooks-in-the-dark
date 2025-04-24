@@ -171,10 +171,10 @@
     },
     "modus": {
       "examples": [
-        "Scavenge",
-        "Mining",
-        "Supply",
-        "Sale"
+        "AFOD.Modules.modusExampleScavenge",
+        "AFOD.Modules.modusExampleMining",
+        "AFOD.Modules.modusExampleSupply",
+        "AFOD.Modules.modusExampleSale"
       ]
     },
     "contacts": {

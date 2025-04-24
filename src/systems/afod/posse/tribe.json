@@ -171,10 +171,10 @@
     },
     "modus": {
       "examples": [
-        "Show of Force",
-        "Swiftness",
-        "Social",
-        "Sacrifice"
+        "AFOD.Modules.modusExampleShowOfForce",
+        "AFOD.Modules.modusExampleSwiftness",
+        "AFOD.Modules.modusExampleSocial",
+        "AFOD.Modules.modusExampleSacrifice"
       ]
     },
     "contacts": {

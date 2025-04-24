@@ -236,10 +236,10 @@
     "favoredNotes": {
       "customLabel": "Sales Territory",
       "examples": [
-        "Sale",
-        "Supply",
-        "Show of Force",
-        "Socialize"
+        "BITD.Modules.favoredNotesExampleSale",
+        "BITD.Modules.favoredNotesExampleSupply",
+        "BITD.Modules.favoredNotesExampleShowOfForce",
+        "BITD.Modules.favoredNotesExampleSocialize"
       ]
     }
   }

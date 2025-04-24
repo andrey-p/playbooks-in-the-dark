@@ -241,10 +241,10 @@
     "favoredNotes": {
       "customLabel": "Hunting Grounds",
       "examples": [
-        "Burglary",
-        "Espionage",
-        "Robbery",
-        "Sabotage"
+        "BITD.Modules.favoredNotesExampleBurglary",
+        "BITD.Modules.favoredNotesExampleEspionage",
+        "BITD.Modules.favoredNotesExampleRobbery",
+        "BITD.Modules.favoredNotesExampleSabotage"
       ]
     }
   }

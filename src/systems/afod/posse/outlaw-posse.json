@@ -171,10 +171,10 @@
     },
     "modus": {
       "examples": [
-        "Intimidation",
-        "Superiority",
-        "Swiftness",
-        "Spectacle"
+        "AFOD.Modules.modusExampleIntimidation",
+        "AFOD.Modules.modusExampleSuperiority",
+        "AFOD.Modules.modusExampleSwiftness",
+        "AFOD.Modules.modusExampleSpectacle"
       ]
     },
     "contacts": {

@@ -252,10 +252,10 @@
     "favoredNotes": {
       "customLabel": "Hunting Grounds",
       "examples": [
-        "Battle",
-        "Extortion",
-        "Sabotage",
-        "Smash & Grab"
+        "BITD.Modules.favoredNotesExampleBattle",
+        "BITD.Modules.favoredNotesExampleExtortion",
+        "BITD.Modules.favoredNotesExampleSabotage",
+        "BITD.Modules.favoredNotesExampleSmashAndGrab"
       ]
     }
   }

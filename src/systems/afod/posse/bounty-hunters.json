@@ -171,10 +171,10 @@
     },
     "modus": {
       "examples": [
-        "Violence",
-        "Negotiation",
-        "Connection",
-        "Trap"
+        "AFOD.Modules.modusExampleViolence",
+        "AFOD.Modules.modusExampleNegotiation",
+        "AFOD.Modules.modusExampleConnection",
+        "AFOD.Modules.modusExampleTrap"
       ]
     },
     "contacts": {

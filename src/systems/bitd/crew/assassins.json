@@ -240,10 +240,10 @@
     "favoredNotes": {
       "customLabel": "Hunting Grounds",
       "examples": [
-        "Accident",
-        "Disappearance",
-        "Murder",
-        "Ransom"
+        "BITD.Modules.favoredNotesExampleAccident",
+        "BITD.Modules.favoredNotesExampleDisappearance",
+        "BITD.Modules.favoredNotesExampleMurder",
+        "BITD.Modules.favoredNotesExampleRansom"
       ]
     }
   }

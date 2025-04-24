@@ -1,5 +1,6 @@
 import styles from './example-list.module.css';
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 
 type Props = {
   items: string[];
@@ -10,6 +11,7 @@ type Props = {
 
 export default function ExampleList(props: Props) {
   const { items, onItemSelected, selectable, selectedItems = [] } = props;
+  const t = useTranslations();
 
   return (
     <div className={styles.container}>
@@ -31,7 +33,7 @@ export default function ExampleList(props: Props) {
                 }
               }}
             >
-              {item}
+              {t(item)}
             </li>
           );
         })}

@@ -239,10 +239,10 @@
     "favoredNotes": {
       "customLabel": "Cargo Types",
       "examples": [
-        "Arcane/Weird",
-        "Arms",
-        "Contraband",
-        "Passengers"
+        "BITD.Modules.favoredNotesExampleArcaneWeird",
+        "BITD.Modules.favoredNotesExampleArms",
+        "BITD.Modules.favoredNotesExampleContraband",
+        "BITD.Modules.favoredNotesExamplePassengers"
       ]
     }
   }

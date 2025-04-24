@@ -248,10 +248,10 @@
     "favoredNotes": {
       "customLabel": "Sacred sites",
       "examples": [
-        "Acquisition",
-        "Augury",
-        "Consecration",
-        "Sacrifice"
+        "BITD.Modules.favoredNotesExampleAcquisition",
+        "BITD.Modules.favoredNotesExampleAugury",
+        "BITD.Modules.favoredNotesExampleConsecration",
+        "BITD.Modules.favoredNotesExampleSacrifice"
       ]
     }
   }
