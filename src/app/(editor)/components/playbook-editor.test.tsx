@@ -49,7 +49,8 @@ const systemData = {
   id: 'bitd',
   name: 'bitd',
   description: 'bitd',
-  playbookTypes: ['scoundrel']
+  playbookTypes: ['scoundrel'],
+  translationNamespace: 'BITD'
 };
 
 describe('PlaybookEditor', () => {
