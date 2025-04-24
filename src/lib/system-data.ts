@@ -1,16 +1,15 @@
-import { readFileSync } from 'fs';
-import { readFile } from 'fs/promises';
+import fs from 'fs/promises';
 import { NotFoundError } from './errors';
 import systemsJson from '@/systems/systems.json';
 
 // only allow alphanumeric and - filenames
 const validFileRe = /^[a-zA-Z0-9-]+$/;
 
-export const getJson = function (
+export const getJson = async (
   system: string,
   fileType: string,
   entity: string | undefined = undefined
-): object {
+): Promise<object> => {
   let data: string;
 
   let path;
@@ -30,7 +29,7 @@ export const getJson = function (
   }
 
   try {
-    data = readFileSync(`${process.cwd()}/src/systems/${path}`, {
+    data = await fs.readFile(`${process.cwd()}/src/systems/${path}`, {
       encoding: 'utf8'
     });
   } catch {
@@ -56,7 +55,7 @@ export const getSystemText = async (
   }
 
   try {
-    data = await readFile(path, { encoding: 'utf8' });
+    data = await fs.readFile(path, { encoding: 'utf8' });
   } catch {
     throw new NotFoundError(
       `Couldn't find system translations JSON file: ${path}`

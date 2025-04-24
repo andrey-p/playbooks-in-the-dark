@@ -3,21 +3,23 @@ import { System } from '@/schemas';
 import systemsJson from '@/systems/systems.json';
 import OptionList from '../components/option-list';
 import Separator from '../components/separator';
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
-export default function Home() {
-  const t = useTranslations();
+export default async function Page() {
+  const t = await getTranslations();
 
-  const availableSystems = systemsJson.systems
-    .map((system) => {
-      return System.parse(getJson(system.id, 'system'));
-    })
-    .map((system) => ({
+  const availableSystems = [];
+
+  for (const system of systemsJson.systems) {
+    const systemData = System.parse(await getJson(system.id, 'system'));
+
+    availableSystems.push({
       id: system.id,
-      href: `/new/${system.id}`,
-      name: t(system.name),
-      description: t(system.description)
-    }));
+      href: `/new/${systemData.id}`,
+      name: t(systemData.name),
+      description: t(systemData.description)
+    });
+  }
 
   return (
     <div>

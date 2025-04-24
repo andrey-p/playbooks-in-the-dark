@@ -39,12 +39,12 @@ export default async function DataWrapper(props: Props) {
   let playbookDefinition;
 
   try {
-    systemData = SystemSchema.parse(getJson(systemId, 'system'));
+    systemData = SystemSchema.parse(await getJson(systemId, 'system'));
     playbookDefinition = PlaybookDefinitionSchema.parse(
-      getJson(systemId, playbookType)
+      await getJson(systemId, playbookType)
     );
     playbookData = PlaybookDataSchema.parse(
-      getJson(systemId, playbookType, playbookId)
+      await getJson(systemId, playbookType, playbookId)
     );
   } catch (e) {
     if (e instanceof NotFoundError) {

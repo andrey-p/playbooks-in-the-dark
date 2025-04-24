@@ -29,19 +29,19 @@ export default async function Page(props: Props) {
   const playbooksByType: Record<string, OptionType[]> = {};
 
   try {
-    systemData = SystemSchema.parse(getJson(systemId, 'system'));
+    systemData = SystemSchema.parse(await getJson(systemId, 'system'));
 
-    systemData.playbookTypes.forEach((type) => {
+    for (const type of systemData.playbookTypes) {
       const definition = PlaybookDefinitionSchema.parse(
-        getJson(systemId, type)
+        await getJson(systemId, type)
       );
       playbookDefinitions.push(definition);
 
       playbooksByType[type] = [];
 
-      definition.playbooks.forEach((playbookId) => {
+      for (const playbookId of definition.playbooks) {
         const playbookData = PlaybookDataSchema.parse(
-          getJson(systemId, type, playbookId)
+          await getJson(systemId, type, playbookId)
         );
         playbooksByType[type].push({
           id: playbookId,
@@ -49,8 +49,8 @@ export default async function Page(props: Props) {
           name: t(playbookData.name),
           description: playbookData.description && t(playbookData.description)
         });
-      });
-    });
+      }
+    }
   } catch (e) {
     if (e instanceof NotFoundError) {
       return notFound();

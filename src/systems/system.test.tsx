@@ -1,12 +1,16 @@
+import { z } from 'zod';
 import { getJson } from '@/lib/system-data';
 import Renderer from '@/components/renderer/renderer';
 import RendererErrorBoundary from '@/components/renderer/renderer-error-boundary';
-import { render, showTranslationWarnings } from 'test-utils';
+import { render, cleanup, showTranslationWarnings } from 'test-utils';
 import systemsJson from './systems.json';
 
 import { fromError } from 'zod-validation-error';
 
 import { PlaybookData, System, PlaybookDefinition } from '@/schemas';
+
+type PlaybookDataType = z.infer<typeof PlaybookData>;
+type PlaybookDefinitionType = z.infer<typeof PlaybookDefinition>;
 
 showTranslationWarnings();
 
@@ -20,60 +24,81 @@ showTranslationWarnings();
 
 const { systems } = systemsJson;
 
+type TestInput = {
+  systemId: string;
+  playbookData: PlaybookDataType;
+  playbookDefinition: PlaybookDefinitionType;
+};
+
+const collectTests = async (systemId: string) => {
+  const tests: TestInput[] = [];
+
+  const { data: systemData, error } = System.safeParse(
+    await getJson(systemId, 'system')
+  );
+
+  if (error) {
+    throw fromError(error, { prefix: 'Validation error with system.json' });
+  }
+
+  for (const playbookType of systemData.playbookTypes) {
+    const { data: playbookDefinition, error } = PlaybookDefinition.safeParse(
+      await getJson(systemId, playbookType)
+    );
+
+    if (error) {
+      throw fromError(error, {
+        prefix: `Validation error with ${playbookType}.json`
+      });
+    }
+
+    for (const playbookId of playbookDefinition.playbooks) {
+      const { data: playbookData, error } = PlaybookData.safeParse(
+        await getJson(systemId, playbookType, playbookId)
+      );
+
+      if (error) {
+        throw fromError(error, {
+          prefix: `Validation error with ${playbookId}.json`
+        });
+      }
+
+      tests.push({ systemId, playbookDefinition, playbookData });
+    }
+  }
+
+  return tests;
+};
+
 describe('system data check', () => {
   systems.forEach((system) => {
     const systemId = system.id;
 
-    describe(systemId, () => {
-      const { data: systemData, error } = System.safeParse(
-        getJson(systemId, 'system')
-      );
+    test(systemId, async () => {
+      const tests = await collectTests(systemId);
 
-      if (error) {
-        throw fromError(error, { prefix: 'Validation error with system.json' });
-      }
+      tests.forEach((testInput) => {
+        const { playbookData, playbookDefinition } = testInput;
 
-      systemData.playbookTypes.forEach((playbookType: string) => {
-        const { data: playbookDefinition, error } =
-          PlaybookDefinition.safeParse(getJson(systemId, playbookType));
+        render(
+          <RendererErrorBoundary>
+            <Renderer
+              playbookData={playbookData}
+              layout={playbookDefinition.layout}
+              modules={playbookDefinition.modules}
+              userData={{
+                id: undefined,
+                playbookType: playbookDefinition.id,
+                systemId,
+                playbookId: playbookData.id,
+                modules: {}
+              }}
+              dispatch={jest.fn()}
+            />
+          </RendererErrorBoundary>
+        );
 
-        if (error) {
-          throw fromError(error, {
-            prefix: `Validation error with ${playbookType}.json`
-          });
-        }
-
-        playbookDefinition.playbooks.forEach((playbookId: string) => {
-          const { data: playbookData, error } = PlaybookData.safeParse(
-            getJson(systemId, playbookType, playbookId)
-          );
-
-          if (error) {
-            throw fromError(error, {
-              prefix: `Validation error with ${playbookId}.json`
-            });
-          }
-
-          test(`playbook ${playbookId} should render OK`, () => {
-            render(
-              <RendererErrorBoundary>
-                <Renderer
-                  playbookData={playbookData}
-                  layout={playbookDefinition.layout}
-                  modules={playbookDefinition.modules}
-                  userData={{
-                    id: undefined,
-                    playbookType,
-                    systemId,
-                    playbookId,
-                    modules: {}
-                  }}
-                  dispatch={jest.fn()}
-                />
-              </RendererErrorBoundary>
-            );
-          });
-        });
+        cleanup();
       });
     });
   });
