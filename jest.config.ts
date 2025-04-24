@@ -15,6 +15,7 @@ const config: Config = {
   testEnvironment: './tests/config/fix-js-dom-environment.ts',
   // Add more setup options before each test is run
   setupFilesAfterEnv: ['<rootDir>/jest-setup.js'],
+  testPathIgnorePatterns: ['/node_modules/', '/\\.open-next/'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'
   }
