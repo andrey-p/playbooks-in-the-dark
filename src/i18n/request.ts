@@ -6,10 +6,13 @@ export default getRequestConfig(async () => {
   const locale = 'en';
 
   const uiMessages = (await import(`@/../lang/${locale}.json`)).default;
-
-  // TODO this gets all of the translations for all the systems
-  // should try to limit those to e.g. system and playbook definitions
   const systemMessages = await getAllSystemsText(locale);
+
+  // the Modules namespace is only ever used for while the editor is open
+  // loading them is overkill for the selection screens
+  Object.values(systemMessages).forEach((messages) => {
+    delete messages.Modules;
+  });
 
   const messages = {
     ...uiMessages,
