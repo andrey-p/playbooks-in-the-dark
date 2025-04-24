@@ -83,9 +83,9 @@
         },
         {
           "id": "veteran",
-          "name": "BITD.Modules.specialAbilitiesVeteran",
+          "name": "BITD.Modules.specialAbilitiesVeteranScoundrel",
           "max": 3,
-          "description": "BITD.Modules.specialAbilitiesVeteranDescription"
+          "description": "BITD.Modules.specialAbilitiesVeteranScoundrelDescription"
         }
       ]
     },

@@ -163,9 +163,9 @@
         },
         {
           "id": "veteran",
-          "name": "AFOD.Modules.specialAbilitiesVeteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteranPosse",
           "max": 3,
-          "description": "AFOD.Modules.specialAbilitiesVeteranDescription"
+          "description": "AFOD.Modules.specialAbilitiesVeteranPosseDescription"
         }
       ]
     },
