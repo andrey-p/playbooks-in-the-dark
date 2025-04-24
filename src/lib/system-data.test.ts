@@ -17,15 +17,15 @@ describe('system-data', () => {
   describe('getJson', () => {
     test('gets existing JSON file OK', () => {
       expect(getJson('bitd', 'system')).toMatchObject({
-        name: 'Blades in the Dark'
+        id: 'bitd'
       });
 
       expect(getJson('bitd', 'scoundrel')).toMatchObject({
-        name: 'Scoundrel'
+        id: 'scoundrel'
       });
 
       expect(getJson('bitd', 'scoundrel', 'cutter')).toMatchObject({
-        name: 'Cutter'
+        id: 'cutter'
       });
     });
 
