@@ -6,6 +6,7 @@ import {
 import { TrackerProps as TrackerPropsSchema } from '@/components/playbook-elements/trackers/trackers.schema';
 import Tracker from '@/components/playbook-elements/trackers/simple-tracker';
 import styles from './attribute-group.module.css';
+import { useTranslations } from 'next-intl';
 
 type AttributeType = z.infer<typeof AttributeSchema>;
 type ActionType = z.infer<typeof ActionSchema>;
@@ -31,10 +32,11 @@ export default function AttributeGroup(props: Props) {
     onXpUpdate,
     trackerProps
   } = props;
+  const t = useTranslations();
 
   return (
     <div className={styles.container}>
-      <h3 className={styles.title}>{attribute.name}</h3>
+      <h3 className={styles.title}>{t(attribute.name)}</h3>
       <div className={styles.xp}>
         <Tracker
           max={6}
@@ -58,7 +60,7 @@ export default function AttributeGroup(props: Props) {
                 onRatingUpdate(action.id, value);
               }}
             />
-            <div className={styles.actionName}>{action.name}</div>
+            <div className={styles.actionName}>{t(action.name)}</div>
           </li>
         ))}
       </ul>

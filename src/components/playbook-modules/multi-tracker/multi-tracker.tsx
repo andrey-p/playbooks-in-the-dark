@@ -4,6 +4,7 @@ import SimpleTracker from '@/components/playbook-elements/trackers/simple-tracke
 import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 import styles from './multi-tracker.module.css';
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 
 type Props = z.infer<typeof PropsSchema>;
 
@@ -12,6 +13,7 @@ export default function MultiTracker(props: Props) {
   const { props: moduleProps } = moduleDefinition;
   const { trackers } = moduleProps;
   const { values } = userValue;
+  const t = useTranslations();
 
   const onValueSelect = (trackerId: string, value: number) => {
     onUpdate({
@@ -35,7 +37,7 @@ export default function MultiTracker(props: Props) {
             onValueSelect={(value: number) => onValueSelect(trackerId, value)}
           />
           <div className={clsx(`${trackerId}-label`)}>
-            {trackers[trackerId].label}
+            {t(trackers[trackerId].label)}
           </div>
         </div>
       ))}
