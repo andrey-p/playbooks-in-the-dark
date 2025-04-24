@@ -39,13 +39,16 @@ export default async function DataWrapper(props: Props) {
   let playbookDefinition;
 
   try {
-    systemData = SystemSchema.parse(await getJson(systemId, 'system'));
-    playbookDefinition = PlaybookDefinitionSchema.parse(
-      await getJson(systemId, playbookType)
-    );
-    playbookData = PlaybookDataSchema.parse(
-      await getJson(systemId, playbookType, playbookId)
-    );
+    const [systemDataJson, playbookDefinitionJson, playbookDataJson] =
+      await Promise.all([
+        getJson(systemId, 'system'),
+        getJson(systemId, playbookType),
+        getJson(systemId, playbookType, playbookId)
+      ]);
+
+    systemData = SystemSchema.parse(systemDataJson);
+    playbookDefinition = PlaybookDefinitionSchema.parse(playbookDefinitionJson);
+    playbookData = PlaybookDataSchema.parse(playbookDataJson);
   } catch (e) {
     if (e instanceof NotFoundError) {
       return notFound();

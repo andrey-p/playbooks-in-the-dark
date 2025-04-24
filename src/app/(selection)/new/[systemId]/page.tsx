@@ -25,32 +25,37 @@ export default async function Page(props: Props) {
   const t = await getTranslations();
 
   let systemData;
-  const playbookDefinitions: PlaybookDefinitionType[] = [];
+  let playbookDefinitions: PlaybookDefinitionType[] = [];
   const playbooksByType: Record<string, OptionType[]> = {};
 
   try {
     systemData = SystemSchema.parse(await getJson(systemId, 'system'));
 
-    for (const type of systemData.playbookTypes) {
-      const definition = PlaybookDefinitionSchema.parse(
-        await getJson(systemId, type)
-      );
-      playbookDefinitions.push(definition);
-
-      playbooksByType[type] = [];
-
-      for (const playbookId of definition.playbooks) {
-        const playbookData = PlaybookDataSchema.parse(
-          await getJson(systemId, type, playbookId)
+    playbookDefinitions = await Promise.all(
+      systemData.playbookTypes.map(async (type) => {
+        const definition = PlaybookDefinitionSchema.parse(
+          await getJson(systemId, type)
         );
-        playbooksByType[type].push({
-          id: playbookId,
-          href: `/${systemId}/${type}/${playbookData.id}`,
-          name: t(playbookData.name),
-          description: playbookData.description && t(playbookData.description)
-        });
-      }
-    }
+
+        playbooksByType[type] = await Promise.all(
+          definition.playbooks.map(async (playbookId) => {
+            const playbookData = PlaybookDataSchema.parse(
+              await getJson(systemId, type, playbookId)
+            );
+
+            return {
+              id: playbookId,
+              href: `/${systemId}/${type}/${playbookData.id}`,
+              name: t(playbookData.name),
+              description:
+                playbookData.description && t(playbookData.description)
+            };
+          })
+        );
+
+        return definition;
+      })
+    );
   } catch (e) {
     if (e instanceof NotFoundError) {
       return notFound();

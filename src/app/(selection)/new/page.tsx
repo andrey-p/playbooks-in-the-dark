@@ -8,18 +8,18 @@ import { getTranslations } from 'next-intl/server';
 export default async function Page() {
   const t = await getTranslations();
 
-  const availableSystems = [];
+  const availableSystems = await Promise.all(
+    systemsJson.systems.map(async (system) => {
+      const systemData = System.parse(await getJson(system.id, 'system'));
 
-  for (const system of systemsJson.systems) {
-    const systemData = System.parse(await getJson(system.id, 'system'));
-
-    availableSystems.push({
-      id: system.id,
-      href: `/new/${systemData.id}`,
-      name: t(systemData.name),
-      description: t(systemData.description)
-    });
-  }
+      return {
+        id: system.id,
+        href: `/new/${systemData.id}`,
+        name: t(systemData.name),
+        description: t(systemData.description)
+      };
+    })
+  );
 
   return (
     <div>
