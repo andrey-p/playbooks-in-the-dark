@@ -69,7 +69,7 @@ export default async function DataWrapper(props: Props) {
 
   // get system-specific translation strings for this locale
   const locale = await getLocale();
-  const uiMessages = (await import(`@/../lang/${locale}.json`)).default;
+  const uiMessages = (await import(`@/lang/${locale}.json`)).default;
   const systemMessages = await getSystemText(systemId, locale);
 
   return (

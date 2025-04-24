@@ -5,7 +5,7 @@ export default getRequestConfig(async () => {
   // all we support for now
   const locale = 'en';
 
-  const uiMessages = (await import(`@/../lang/${locale}.json`)).default;
+  const uiMessages = (await import(`@/lang/${locale}.json`)).default;
   const systemMessages = await getAllSystemsText(locale);
 
   // the Modules namespace is only ever used for while the editor is open

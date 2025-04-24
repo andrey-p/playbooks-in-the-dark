@@ -1,6 +1,6 @@
 import { render, RenderOptions } from '@testing-library/react';
 import { NextIntlClientProvider } from 'next-intl';
-import uiMessages from '../../lang/en.json';
+import uiMessages from '@/lang/en.json';
 import { getAllSystemsText } from '@/lib/system-data';
 
 let messages: object;
