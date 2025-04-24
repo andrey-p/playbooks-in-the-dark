@@ -480,7 +480,7 @@
       "specialAbilitiesHighSociety": "High Society",
       "specialAbilitiesHighSocietyDescription": "It's all about who you know. Take <strong>-1 heat</strong> during downtime and <strong>+1d</strong> to gather info about the city's elite.",
       "specialAbilitiesHooked": "Hooked",
-      "specialAbilitiesHookedDescription": "Your gang members use your product. Add the <em>savage</em>, <em>unreliable</em>, or <em>wild</em> flaw to your gangs to give them <strong+1 quality</strong>.",
+      "specialAbilitiesHookedDescription": "Your gang members use your product. Add the <em>savage</em>, <em>unreliable</em>, or <em>wild</em> flaw to your gangs to give them <strong>+1 quality</strong>.",
       "specialAbilitiesLikePartOfTheFamily": "Like Part of the Family",
       "specialAbilitiesLikePartOfTheFamilyDescription": "Create one of your vehicles as a <strong>cohort</strong> (use the vehicle edges and flaws, below). Its <strong>quality</strong> is equal to your Tier +1.",
       "specialAbilitiesAllHands": "All Hands",
