@@ -6,7 +6,7 @@ import {
 } from '@/schemas';
 
 import { z } from 'zod';
-import { getJson } from '@/lib/system-data';
+import { getJson, getSystemText } from '@/lib/system-data';
 import { NotFoundError } from '@/lib/errors';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
@@ -65,11 +65,9 @@ export default async function DataWrapper(props: Props) {
   }
 
   // get system-specific translation strings for this locale
-  const locale = getLocale();
+  const locale = await getLocale();
   const uiMessages = (await import(`@/../lang/${locale}.json`)).default;
-  const systemMessages = (
-    await import(`@/systems/${systemId}/lang/${locale}.json`)
-  ).default;
+  const systemMessages = await getSystemText(systemId, locale);
 
   return (
     <NextIntlClientProvider
