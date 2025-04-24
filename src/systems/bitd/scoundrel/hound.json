@@ -90,7 +90,7 @@
       ]
     },
     "contacts": {
-      "customName": "Dangerous Friends",
+      "customLabel": "BITD.Modules.contactsLabelDeadlyFriends",
       "contacts": [
         {
           "id": "steiner",

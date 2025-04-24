@@ -246,7 +246,7 @@
       ]
     },
     "favoredNotes": {
-      "customLabel": "Sacred sites",
+      "customLabel": "BITD.Modules.favoredNotesLabelSacredSites",
       "examples": [
         "BITD.Modules.favoredNotesExampleAcquisition",
         "BITD.Modules.favoredNotesExampleAugury",

@@ -94,7 +94,7 @@
       ]
     },
     "contacts": {
-      "customName": "Shrewd Friends",
+      "customName": "BITD.Modules.contactsLabelShrewdFriends",
       "contacts": [
         {
           "id": "salia",

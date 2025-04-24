@@ -238,7 +238,7 @@
       ]
     },
     "favoredNotes": {
-      "customLabel": "Hunting Grounds",
+      "customLabel": "BITD.Modules.favoredNotesLabelHuntingGrounds",
       "examples": [
         "BITD.Modules.favoredNotesExampleAccident",
         "BITD.Modules.favoredNotesExampleDisappearance",

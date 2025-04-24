@@ -237,7 +237,7 @@
       ]
     },
     "favoredNotes": {
-      "customLabel": "Cargo Types",
+      "customLabel": "BITD.Modules.favoredNotesLabelCargoTypes",
       "examples": [
         "BITD.Modules.favoredNotesExampleArcaneWeird",
         "BITD.Modules.favoredNotesExampleArms",

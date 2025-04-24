@@ -95,7 +95,7 @@
       ]
     },
     "contacts": {
-      "customName": "Clever Friends",
+      "customLabel": "BITD.Modules.contactsLabelCleverFriends",
       "contacts": [
         {
           "id": "stazia",

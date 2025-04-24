@@ -234,7 +234,7 @@
       ]
     },
     "favoredNotes": {
-      "customLabel": "Sales Territory",
+      "customLabel": "BITD.Modules.favoredNotesLabelSalesTerritory",
       "examples": [
         "BITD.Modules.favoredNotesExampleSale",
         "BITD.Modules.favoredNotesExampleSupply",

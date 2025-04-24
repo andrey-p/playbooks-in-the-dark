@@ -5,6 +5,7 @@ import {
 } from '@/schemas';
 import styles from './module-wrapper.module.css';
 import Description from '@/components/playbook-elements/description/description';
+import { useTranslations } from 'next-intl';
 import clsx from 'clsx';
 
 type Props = {
@@ -15,6 +16,7 @@ type Props = {
 
 export default function ModuleWrapper(props: Props) {
   const { moduleDefinition, playbookProps = {}, children } = props;
+  const t = useTranslations();
 
   return (
     <div
@@ -26,7 +28,7 @@ export default function ModuleWrapper(props: Props) {
       )}
     >
       <h2 className={styles.heading}>
-        {playbookProps.customLabel || moduleDefinition.label}
+        {t(playbookProps.customLabel || moduleDefinition.label)}
       </h2>
       {children}
       {moduleDefinition.description && (
