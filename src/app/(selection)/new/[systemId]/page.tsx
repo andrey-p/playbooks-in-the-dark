@@ -46,8 +46,8 @@ export default async function Page(props: Props) {
         playbooksByType[type].push({
           id: playbookId,
           href: `/${systemId}/${type}/${playbookData.id}`,
-          name: playbookData.name,
-          description: playbookData.description
+          name: t(playbookData.name),
+          description: playbookData.description && t(playbookData.description)
         });
       });
     });
@@ -78,7 +78,7 @@ export default async function Page(props: Props) {
         <div key={playbookDefinition.id}>
           <OptionList
             heading={t(
-              `${systemData.translationNamespace}.Playbook.makeA.${playbookDefinition.id}`
+              `${systemData.translationNamespace}.Playbooks.makeA.${playbookDefinition.id}`
             )}
             options={playbooksByType[playbookDefinition.id]}
           />
