@@ -53,31 +53,32 @@
         [
           {
             "id": "interrogation chamber",
-            "name": "Interrogation Chamber",
-            "description": "<strong>+1d</strong> to Command and Sway on site",
+            "name": "BITD.Modules.claimsInterrogationChamber",
+            "description": "BITD.Modules.claimsInterrogationChamberDescription",
             "connections": [
               "down"
             ]
           },
           {
             "id": "turf1",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "loyal fence",
-            "name": "Loyal Fence",
-            "description": "<strong>+2 coin</strong> for burglary or robbery",
+            "name": "BITD.Modules.claimsLoyalFence",
+            "description": "BITD.Modules.claimsLoyalFenceDescription",
             "connections": [
               "down"
             ]
           },
           {
             "id": "gambling den",
-            "name": "Gambling Den",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsGamblingDen",
+            "description": "BITD.Modules.claimsGamblingDenDescription",
             "connections": [
               "down",
               "right"
@@ -85,8 +86,8 @@
           },
           {
             "id": "tavern",
-            "name": "Tavern",
-            "description": "<strong>+1d</strong> to Consort and Sway on site",
+            "name": "BITD.Modules.claimsTavern",
+            "description": "BITD.Modules.claimsTavernDescription",
             "connections": [
               "down"
             ]
@@ -95,8 +96,8 @@
         [
           {
             "id": "drug den",
-            "name": "Drug Den",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsDrugDen",
+            "description": "BITD.Modules.claimsDrugDenDescription",
             "connections": [
               "down",
               "right"
@@ -104,8 +105,8 @@
           },
           {
             "id": "informants",
-            "name": "Informants",
-            "description": "<strong>+1d</strong> gather info for scores",
+            "name": "BITD.Modules.claimsInformants",
+            "description": "BITD.Modules.claimsInformantsDescription",
             "connections": [
               "down",
               "right"
@@ -113,24 +114,26 @@
           },
           {
             "id": "lair",
-            "name": "Lair",
+            "name": "BITD.Modules.claimsLair",
             "selectable": false,
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "turf2",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "lookouts",
-            "name": "Lookouts",
-            "description": "<strong>+1d</strong> to Survey or Hunt on your turf",
+            "name": "BITD.Modules.claimsLookouts",
+            "description": "BITD.Modules.claimsLookoutsDescription",
             "connections": [
               "down"
             ]
@@ -139,36 +142,37 @@
         [
           {
             "id": "hagfish farm",
-            "name": "Hagfish Farm",
-            "description": "Body disposal, <strong>+1d</strong> to reduce heat after killing",
+            "name": "BITD.Modules.claimsHagfishFarm",
+            "description": "BITD.Modules.claimsHagfishFarmDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "infirmary",
-            "name": "Infirmary",
-            "description": "<strong>+1d</strong> to healing rolls"
+            "name": "BITD.Modules.claimsInfirmary",
+            "description": "BITD.Modules.claimsInfirmaryDescription"
           },
           {
             "id": "covert drops",
-            "name": "Covert Drops",
-            "description": "<strong>+2 coin</strong> for espionage or sabotage",
+            "name": "BITD.Modules.claimsCovertDrops",
+            "description": "BITD.Modules.claimsCovertDropsDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "turf3",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "secret pathways",
-            "name": "Secret Pathways",
-            "description": "<strong>+1d</strong> engagement for stealth plans"
+            "name": "BITD.Modules.claimsSecretPathways",
+            "description": "BITD.Modules.claimsSecretPathwaysDescription"
           }
         ]
       ]

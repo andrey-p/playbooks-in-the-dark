@@ -7,32 +7,32 @@
         [
           {
             "id": "hell's own light",
-            "name": "Hell's Own Light",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsHellsOwnLight",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": [
               "down"
             ]
           },
           {
             "id": "spirit well",
-            "name": "Spirit Well",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsSpiritWell",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": [
               "right"
             ]
           },
           {
             "id": "the map",
-            "name": "The Map",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsTheMap",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": [
               "down"
             ]
           },
           {
             "id": "the great law of peace",
-            "name": "The Great Law of Peace",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsTheGreatLawOfPeace",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": [
               "down",
               "right"
@@ -40,23 +40,23 @@
           },
           {
             "id": "eternal flame",
-            "name": "Eternal Flame",
-            "description": "Light"
+            "name": "AFOD.Modules.achievementsEternalFlame",
+            "description": "AFOD.Modules.achievementsLight"
           }
         ],
         [
           {
             "id": "hellish inventor",
-            "name": "Hellish Inventor",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsHellishInventor",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": [
               "right"
             ]
           },
           {
             "id": "hellstone claim 1",
-            "name": "Hellstone Claim",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": [
               "right",
               "down"
@@ -64,25 +64,26 @@
           },
           {
             "id": "equilibrium",
-            "name": "Equilibrium",
+            "name": "AFOD.Modules.achievementsEquilibrium",
             "connections": [
               "down",
               "right"
             ],
-            "selectable": false
+            "selectable": false,
+            "description": ""
           },
           {
             "id": "the mark of beyond",
-            "name": "The Mark of Beyond",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsTheMarkOfBeyond",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": [
               "right"
             ]
           },
           {
             "id": "hellstone claim 2",
-            "name": "Hellstone Claim",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": [
               "down"
             ]
@@ -91,34 +92,34 @@
         [
           {
             "id": "the wyrm",
-            "name": "The Wyrm",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsTheWyrm",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": [
               "right"
             ]
           },
           {
             "id": "the black lake",
-            "name": "The Black Lake",
-            "description": "Darkness"
+            "name": "AFOD.Modules.achievementsTheBlackLake",
+            "description": "AFOD.Modules.achievementsDarkness"
           },
           {
             "id": "the cornerstone",
-            "name": "The Cornerstone",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsTheCornerstone",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": [
               "right"
             ]
           },
           {
             "id": "hellstone claim 3",
-            "name": "Hellstone Claim",
-            "description": "Neutral"
+            "name": "AFOD.Modules.achievementsHellstoneClaim3",
+            "description": "AFOD.Modules.achievementsNeutral"
           },
           {
             "id": "the gate",
-            "name": "The Gate",
-            "description": "Light"
+            "name": "AFOD.Modules.achievementsTheGate",
+            "description": "AFOD.Modules.achievementsLight"
           }
         ]
       ]

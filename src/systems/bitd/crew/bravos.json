@@ -53,8 +53,8 @@
         [
           {
             "id": "barracks",
-            "name": "Barracks",
-            "description": "<strong>+1 scale</strong> for your Thug cohorts",
+            "name": "BITD.Modules.claimsBarracks",
+            "description": "BITD.Modules.claimsBarracksDescription",
             "connections": [
               "right",
               "down"
@@ -62,23 +62,24 @@
           },
           {
             "id": "turf1",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "terrorized citizens",
-            "name": "Terrorized Citizens",
-            "description": "<strong>+2 coin</strong> for battle or extortion",
+            "name": "BITD.Modules.claimsTerrorizedCitizens",
+            "description": "BITD.Modules.claimsTerrorizedCitizensDescription",
             "connections": [
               "down"
             ]
           },
           {
             "id": "informants",
-            "name": "Informants",
-            "description": "<strong>+1d</strong> to gather info for scores",
+            "name": "BITD.Modules.claimsInformants",
+            "description": "BITD.Modules.claimsInformantsDescription",
             "connections": [
               "down",
               "right"
@@ -86,8 +87,8 @@
           },
           {
             "id": "protection racket",
-            "name": "Protection Racket",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsProtectionRacket",
+            "description": "BITD.Modules.claimsProtectionRacketDescription",
             "connections": [
               "down"
             ]
@@ -96,8 +97,8 @@
         [
           {
             "id": "fighting pits",
-            "name": "Fighting Pits",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsFightingPits",
+            "description": "BITD.Modules.claimsFightingPitsDescription",
             "connections": [
               "down",
               "right"
@@ -105,71 +106,75 @@
           },
           {
             "id": "turf2",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "lair",
-            "name": "Lair",
+            "name": "BITD.Modules.claimsLair",
             "selectable": false,
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "turf3",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "turf4",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "down"
-            ]
+            ],
+            "description": ""
           }
         ],
         [
           {
             "id": "infirmary",
-            "name": "Infirmary",
-            "description": "<strong>+1d</strong> to healing rolls",
+            "name": "BITD.Modules.claimsInfirmary",
+            "description": "BITD.Modules.claimsInfirmaryDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "bluecoat intimidation",
-            "name": "Bluecoat Intimidation",
-            "description": "<strong>-2 heat</strong> per score"
+            "name": "BITD.Modules.claimsBluecoatIntimidation",
+            "description": "BITD.Modules.claimsBluecoatIntimidationDescription"
           },
           {
             "id": "street fence",
-            "name": "Street Fence",
-            "description": "<strong>+2 coin</strong> for lower-class targets",
+            "name": "BITD.Modules.claimsStreetFence",
+            "description": "BITD.Modules.claimsStreetFenceDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "warehouses",
-            "name": "Warehouses",
-            "description": "Stockpiles give you <strong>+1d</strong> to acquire assets",
+            "name": "BITD.Modules.claimsWarehouses",
+            "description": "BITD.Modules.claimsWarehousesDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "bluecoat confederates",
-            "name": "Bluecoat Confederates",
-            "description": "<strong>+1d</strong> engagement for assault plans"
+            "name": "BITD.Modules.claimsBluecoatConfederates",
+            "description": "BITD.Modules.claimsBluecoatConfederatesDescription"
           }
         ]
       ]

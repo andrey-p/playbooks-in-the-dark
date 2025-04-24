@@ -53,8 +53,8 @@
         [
           {
             "id": "training rooms",
-            "name": "Training Rooms",
-            "description": "<strong>+1 scale</strong> for your Skulks cohorts",
+            "name": "BITD.Modules.claimsTrainingRooms",
+            "description": "BITD.Modules.claimsTrainingRoomsDescription",
             "connections": [
               "right",
               "down"
@@ -62,24 +62,24 @@
           },
           {
             "id": "vice den",
-            "name": "Vice Den",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsViceDen",
+            "description": "BITD.Modules.claimsViceDenDescription",
             "connections": [
               "down"
             ]
           },
           {
             "id": "fixer",
-            "name": "Fixer",
-            "description": "<strong>+2 coin</strong> for lower-class targets",
+            "name": "BITD.Modules.claimsFixer",
+            "description": "BITD.Modules.claimsFixerDescription",
             "connections": [
               "down"
             ]
           },
           {
             "id": "informants",
-            "name": "Informants",
-            "description": "<strong>+1d</strong> to gather info for scores",
+            "name": "BITD.Modules.claimsInformants",
+            "description": "BITD.Modules.claimsInformantsDescription",
             "connections": [
               "down",
               "right"
@@ -87,8 +87,8 @@
           },
           {
             "id": "hagfish farms",
-            "name": "Hagfish Farms",
-            "description": "Body disposal, <strong>+1d</strong> to reduce heat after killing",
+            "name": "BITD.Modules.claimsHagfishFarms",
+            "description": "BITD.Modules.claimsHagfishFarmsDescription",
             "connections": [
               "down"
             ]
@@ -97,39 +97,42 @@
         [
           {
             "id": "victim trophies",
-            "name": "Victim Trophies",
-            "description": "<strong>+1 rep</strong> per score",
+            "name": "BITD.Modules.claimsVictimTrophies",
+            "description": "BITD.Modules.claimsVictimTrophiesDescription",
             "connections": [
               "down"
             ]
           },
           {
             "id": "turf1",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "lair",
-            "name": "Lair",
+            "name": "BITD.Modules.claimsLair",
             "selectable": false,
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "turf2",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "cover operation",
-            "name": "Cover Operation",
-            "description": "<strong>-2</strong> heat per score",
+            "name": "BITD.Modules.claimsCoverOperation",
+            "description": "BITD.Modules.claimsCoverOperationDescription",
             "connections": [
               "down"
             ]
@@ -138,37 +141,37 @@
         [
           {
             "id": "protection racket",
-            "name": "Protection Racket",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsProtectionRacket",
+            "description": "BITD.Modules.claimsProtectionRacketDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "infirmary",
-            "name": "Infirmary",
-            "description": "<strong>+1d</strong> to healing rolls",
+            "name": "BITD.Modules.claimsInfirmary",
+            "description": "BITD.Modules.claimsInfirmaryDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "envoy",
-            "name": "Envoy",
-            "description": "<strong>+2 coin</strong> for high-class targets"
+            "name": "BITD.Modules.claimsEnvoy",
+            "description": "BITD.Modules.claimsEnvoyDescription"
           },
           {
             "id": "cover identities",
-            "name": "Cover Identities",
-            "description": "<strong>+1d</strong> engagement for deception and social plans",
+            "name": "BITD.Modules.claimsCoverIdentities",
+            "description": "BITD.Modules.claimsCoverIdentitiesDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "city records",
-            "name": "City Records",
-            "description": "<strong>+1d</strong> engagement for stealth plans"
+            "name": "BITD.Modules.claimsCityRecords",
+            "description": "BITD.Modules.claimsCityRecordsDescription"
           }
         ]
       ]

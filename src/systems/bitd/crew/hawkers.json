@@ -53,32 +53,33 @@
         [
           {
             "id": "turf1",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "right",
               "down"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "personal clothier",
-            "name": "Personal Clothier",
-            "description": "<strong>+1d</strong> engagement roll for social plans",
+            "name": "BITD.Modules.claimsPersonalClothier",
+            "description": "BITD.Modules.claimsPersonalClothierDescription",
             "connections": [
               "down"
             ]
           },
           {
             "id": "local graft",
-            "name": "Local Graft",
-            "description": "<strong>+2 coin</strong> for show of force or socialize",
+            "name": "BITD.Modules.claimsLocalGraft",
+            "description": "BITD.Modules.claimsLocalGraftDescription",
             "connections": [
               "down"
             ]
           },
           {
             "id": "lookouts",
-            "name": "Lookouts",
-            "description": "<strong>+1d</strong> to Survey or Hunt on your turf",
+            "name": "BITD.Modules.claimsLookouts",
+            "description": "BITD.Modules.claimsLookoutsDescription",
             "connections": [
               "down",
               "right"
@@ -86,8 +87,8 @@
           },
           {
             "id": "informants",
-            "name": "Informants",
-            "description": "<strong>+1d</strong> to gather info for scores",
+            "name": "BITD.Modules.claimsInformants",
+            "description": "BITD.Modules.claimsInformantsDescription",
             "connections": [
               "down"
             ]
@@ -96,73 +97,77 @@
         [
           {
             "id": "turf2",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "down"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "turf3",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "lair",
-            "name": "Lair",
+            "name": "BITD.Modules.claimsLair",
             "selectable": false,
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "turf4",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "luxury venue",
-            "name": "Luxury Venue",
-            "description": "<strong>+1d</strong> to Consort and Sway on site"
+            "name": "BITD.Modules.claimsLuxuryVenue",
+            "description": "BITD.Modules.claimsLuxuryVenueDescription"
           }
         ],
         [
           {
             "id": "foreign market",
-            "name": "Foreign Market",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsForeignMarket",
+            "description": "BITD.Modules.claimsForeignMarketDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "vice den",
-            "name": "Vice Den",
-            "description": "(Tier roll) - Heat = coin in downtime"
+            "name": "BITD.Modules.claimsViceDen",
+            "description": "BITD.Modules.claimsViceDenDescription"
           },
           {
             "id": "surplus caches",
-            "name": "Surplus Caches",
-            "description": "<strong>+2 coin</strong> for product sale or supply"
+            "name": "BITD.Modules.claimsSurplusCaches",
+            "description": "BITD.Modules.claimsSurplusCachesDescription"
           },
           {
             "id": "cover operation",
-            "name": "Cover Operation",
-            "description": "<strong>-2</strong> heat per score",
+            "name": "BITD.Modules.claimsCoverOperation",
+            "description": "BITD.Modules.claimsCoverOperationDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "cover identities",
-            "name": "Cover Identities",
-            "description": "<strong>+1d</strong> engagement for deception and transport plans"
+            "name": "BITD.Modules.claimsCoverIdentities",
+            "description": "BITD.Modules.claimsCoverIdentitiesDescription"
           }
         ]
       ]

@@ -53,8 +53,8 @@
         [
           {
             "id": "cloister",
-            "name": "Cloister",
-            "description": "<strong>+1 scale</strong> for your Adept cohorts",
+            "name": "BITD.Modules.claimsCloister",
+            "description": "BITD.Modules.claimsCloisterDescription",
             "connections": [
               "right",
               "down"
@@ -62,8 +62,8 @@
           },
           {
             "id": "vice den",
-            "name": "Vice Den",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsViceDen",
+            "description": "BITD.Modules.claimsViceDenDescription",
             "connections": [
               "down",
               "right"
@@ -71,24 +71,24 @@
           },
           {
             "id": "offertory",
-            "name": "Offertory",
-            "description": "<strong>+2 coin</strong> for occult operations",
+            "name": "BITD.Modules.claimsOffertory",
+            "description": "BITD.Modules.claimsOffertoryDescription",
             "connections": [
               "down"
             ]
           },
           {
             "id": "ancient obelisk",
-            "name": "Ancient Obelisk",
-            "description": "<strong>-1 stress</strong> cost for all arcane powers and rituals",
+            "name": "BITD.Modules.claimsAncientObelisk",
+            "description": "BITD.Modules.claimsAncientObeliskDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "ancient tower",
-            "name": "Ancient Tower",
-            "description": "<strong>+1d</strong> to Consort w/ arcane entities on site",
+            "name": "BITD.Modules.claimsAncientTower",
+            "description": "BITD.Modules.claimsAncientTowerDescription",
             "connections": [
               "down"
             ]
@@ -97,75 +97,80 @@
         [
           {
             "id": "turf1",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "turf2",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "lair",
-            "name": "Lair",
+            "name": "BITD.Modules.claimsLair",
             "selectable": false,
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "turf3",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "turf4",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "down"
-            ]
+            ],
+            "description": ""
           }
         ],
         [
           {
             "id": "spirit well",
-            "name": "Spirit Well",
-            "description": "<strong>+1d</strong> to Attune on site",
+            "name": "BITD.Modules.claimsSpiritWell",
+            "description": "BITD.Modules.claimsSpiritWellDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "ancient gate",
-            "name": "Ancient Gate",
-            "description": "Safe passage in the Deathlands"
+            "name": "BITD.Modules.claimsAncientGate",
+            "description": "BITD.Modules.claimsAncientGateDescription"
           },
           {
             "id": "sanctuary",
-            "name": "Sanctuary",
-            "description": "<strong>+1d</strong> to Command and Sway on site"
+            "name": "BITD.Modules.claimsSanctuary",
+            "description": "BITD.Modules.claimsSanctuaryDescription"
           },
           {
             "id": "sacred nexus",
-            "name": "Sacred Nexus",
-            "description": "<strong>+1d</strong> to healing rolls",
+            "name": "BITD.Modules.claimsSacredNexus",
+            "description": "BITD.Modules.claimsSacredNexusDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "ancient altar",
-            "name": "Ancient Altar",
-            "description": "<strong>+1d</strong> engagement for occult plans"
+            "name": "BITD.Modules.claimsAncientAltar",
+            "description": "BITD.Modules.claimsAncientAltarDescription"
           }
         ]
       ]

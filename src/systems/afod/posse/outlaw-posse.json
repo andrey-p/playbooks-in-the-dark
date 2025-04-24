@@ -7,32 +7,32 @@
         [
           {
             "id": "the morgue",
-            "name": "The Morgue",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsTheMorgue",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": [
               "down"
             ]
           },
           {
             "id": "free man funeral",
-            "name": "Free Man Funeral",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsFreeManFuneral",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": [
               "right"
             ]
           },
           {
             "id": "a drop of hell",
-            "name": "A Drop of Hell",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsADropOfHell",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": [
               "down"
             ]
           },
           {
             "id": "loaded dice",
-            "name": "Loaded Dice",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsLoadedDice",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": [
               "down",
               "right"
@@ -40,23 +40,23 @@
           },
           {
             "id": "the throne of skulls",
-            "name": "The Throne of Skulls",
-            "description": "Light"
+            "name": "AFOD.Modules.achievementsTheThroneOfSkulls",
+            "description": "AFOD.Modules.achievementsLight"
           }
         ],
         [
           {
             "id": "the beast",
-            "name": "The Beast",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsTheBeast",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": [
               "right"
             ]
           },
           {
             "id": "hellstone claim 1",
-            "name": "Hellstone Claim",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": [
               "right",
               "down"
@@ -64,25 +64,26 @@
           },
           {
             "id": "equilibrium",
-            "name": "Equilibrium",
+            "name": "AFOD.Modules.achievementsEquilibrium",
             "connections": [
               "down",
               "right"
             ],
-            "selectable": false
+            "selectable": false,
+            "description": ""
           },
           {
             "id": "last deals of dead men",
-            "name": "Last Deals of Dead Men",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsLastDealsOfDeadMen",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": [
               "right"
             ]
           },
           {
             "id": "hellstone claim 2",
-            "name": "Hellstone Claim",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": [
               "down"
             ]
@@ -91,34 +92,34 @@
         [
           {
             "id": "vengeful ghosts",
-            "name": "Vengeful Ghosts",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsVengefulGhosts",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": [
               "right"
             ]
           },
           {
             "id": "bringer of pain",
-            "name": "Bringer of Pain",
-            "description": "Darkness"
+            "name": "AFOD.Modules.achievementsBringerOfPain",
+            "description": "AFOD.Modules.achievementsDarkness"
           },
           {
             "id": "rail connection",
-            "name": "Rail Connection",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsRailConnection",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": [
               "right"
             ]
           },
           {
             "id": "hellstone claim 3",
-            "name": "Hellstone Claim",
-            "description": "Neutral"
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsNeutral"
           },
           {
             "id": "hanging tree",
-            "name": "Hanging Tree",
-            "description": "Light"
+            "name": "AFOD.Modules.achievementsHangingTree",
+            "description": "AFOD.Modules.achievementsLight"
           }
         ]
       ]

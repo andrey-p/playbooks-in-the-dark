@@ -53,32 +53,33 @@
         [
           {
             "id": "turf1",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "side business",
-            "name": "Side Business",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsSideBusiness",
+            "description": "BITD.Modules.claimsSideBusinessDescription",
             "connections": [
               "down"
             ]
           },
           {
             "id": "luxury fence",
-            "name": "Luxury Fence",
-            "description": "<strong>+2 coin</strong> for high-class targets",
+            "name": "BITD.Modules.claimsLuxuryFence",
+            "description": "BITD.Modules.claimsLuxuryFenceDescription",
             "connections": [
               "down"
             ]
           },
           {
             "id": "vice den",
-            "name": "Vice Den",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsViceDen",
+            "description": "BITD.Modules.claimsViceDenDescription",
             "connections": [
               "down",
               "right"
@@ -86,8 +87,8 @@
           },
           {
             "id": "tavern",
-            "name": "Tavern",
-            "description": "<strong>+1d</strong> to Consort and Sway on site",
+            "name": "BITD.Modules.claimsTavern",
+            "description": "BITD.Modules.claimsTavernDescription",
             "connections": [
               "down"
             ]
@@ -96,76 +97,80 @@
         [
           {
             "id": "ancient gate",
-            "name": "Ancient Gate",
-            "description": "Safe passage in the Deathlands",
+            "name": "BITD.Modules.claimsAncientGate",
+            "description": "BITD.Modules.claimsAncientGateDescription",
             "connections": [
               "down"
             ]
           },
           {
             "id": "turf2",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "lair",
-            "name": "Lair",
+            "name": "BITD.Modules.claimsLair",
             "selectable": false,
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "turf3",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "down",
               "right"
-            ]
+            ],
+            "description": ""
           },
           {
             "id": "turf4",
-            "name": "Turf",
+            "name": "BITD.Modules.claimsTurf",
             "connections": [
               "down"
-            ]
+            ],
+            "description": ""
           }
         ],
         [
           {
             "id": "secret routes",
-            "name": "Secret Routes",
-            "description": "<strong>+1d</strong> engagement for transport plans",
+            "name": "BITD.Modules.claimsSecretRoutes",
+            "description": "BITD.Modules.claimsSecretRoutesDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "informants",
-            "name": "Informants",
-            "description": "<strong>+1d</strong> gather info for scores"
+            "name": "BITD.Modules.claimsInformants",
+            "description": "BITD.Modules.claimsInformantsDescription"
           },
           {
             "id": "fleet",
-            "name": "Fleet",
-            "description": "Your cohorts have their own vehicles"
+            "name": "BITD.Modules.claimsFleet",
+            "description": "BITD.Modules.claimsFleetDescription"
           },
           {
             "id": "cover operation",
-            "name": "Cover Operation",
-            "description": "<strong>-2 heat</strong> per score",
+            "name": "BITD.Modules.claimsCoverOperation",
+            "description": "BITD.Modules.claimsCoverOperationDescription",
             "connections": [
               "right"
             ]
           },
           {
             "id": "warehouse",
-            "name": "Warehouse",
-            "description": "Stockpiles give you <strong>+1d</strong> to acquire assets"
+            "name": "BITD.Modules.claimsWarehouse",
+            "description": "BITD.Modules.claimsWarehouseDescription"
           }
         ]
       ]

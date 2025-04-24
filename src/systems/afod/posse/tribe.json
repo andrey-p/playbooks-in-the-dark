@@ -7,32 +7,32 @@
         [
           {
             "id": "the broken storm",
-            "name": "The Broken Storm",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsTheBrokenStorm",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": [
               "down"
             ]
           },
           {
             "id": "the oracle",
-            "name": "The Oracle",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsTheOracle",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": [
               "right"
             ]
           },
           {
             "id": "guardian",
-            "name": "Guardian",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsGuardian",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": [
               "down"
             ]
           },
           {
             "id": "ancestor spirits",
-            "name": "Ancestor Spirits",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsAncestorSpirits",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": [
               "down",
               "right"
@@ -40,23 +40,23 @@
           },
           {
             "id": "shadow of the moon",
-            "name": "Shadow of the Moon",
-            "description": "Light"
+            "name": "AFOD.Modules.achievementsShadowOfTheMoon",
+            "description": "AFOD.Modules.achievementsLight"
           }
         ],
         [
           {
             "id": "the bonding",
-            "name": "The Bonding",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsTheBonding",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": [
               "right"
             ]
           },
           {
             "id": "hellstone claim 1",
-            "name": "Hellstone Claim",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": [
               "right",
               "down"
@@ -64,25 +64,26 @@
           },
           {
             "id": "equilibrium",
-            "name": "Equilibrium",
+            "name": "AFOD.Modules.achievementsEquilibrium",
             "connections": [
               "down",
               "right"
             ],
-            "selectable": false
+            "selectable": false,
+            "description": ""
           },
           {
             "id": "the song of buffalo",
-            "name": "The Song of Buffalo",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsTheSongOfBuffalo",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": [
               "right"
             ]
           },
           {
             "id": "hellstone claim 2",
-            "name": "Hellstone Claim",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": [
               "down"
             ]
@@ -91,34 +92,34 @@
         [
           {
             "id": "visions of end time",
-            "name": "Visions of End Time",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsVisionsOfEndTime",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": [
               "right"
             ]
           },
           {
             "id": "the sea of bones",
-            "name": "The Sea of Bones",
-            "description": "Darkness"
+            "name": "AFOD.Modules.achievementsTheSeaOfBones",
+            "description": "AFOD.Modules.achievementsDarkness"
           },
           {
             "id": "the dance of coyote",
-            "name": "The Dance of Coyote",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsTheDanceOfCoyote",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": [
               "right"
             ]
           },
           {
             "id": "hellstone claim 3",
-            "name": "Hellstone Claim",
-            "description": "Neutral"
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsNeutral"
           },
           {
             "id": "taming the thunderbird",
-            "name": "Taming the Thunderbird",
-            "description": "Light"
+            "name": "AFOD.Modules.achievementsTamingTheThunderbird",
+            "description": "AFOD.Modules.achievementsLight"
           }
         ]
       ]
