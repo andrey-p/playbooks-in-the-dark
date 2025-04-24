@@ -3,6 +3,7 @@ import { useState } from 'react';
 import styles from './radio-group.module.css';
 import Toggle from '@/components/playbook-elements/toggle/toggle';
 import { RadioGroupProps as RadioGroupPropsSchema } from './radio-group.schema';
+import { useTranslations } from 'next-intl';
 
 type Props = z.infer<typeof RadioGroupPropsSchema> & {
   onValueSelect: (id: string | null) => void;
@@ -11,6 +12,7 @@ type Props = z.infer<typeof RadioGroupPropsSchema> & {
 export default function RadioGroup(props: Props) {
   const { options, value, size, type, onValueSelect, invertColours } = props;
   const [highlightedId, setHighlightedId] = useState<string | null>(null);
+  const t = useTranslations();
 
   const onChange = (id: string | null) => {
     if (id === value) {
@@ -35,7 +37,7 @@ export default function RadioGroup(props: Props) {
               onMouseEnter={() => setHighlightedId(option.id)}
               onMouseLeave={() => setHighlightedId(null)}
             />
-            <span className={styles.name}>{option.name}</span>
+            <span className={styles.name}>{t(option.name)}</span>
           </label>
         </li>
       ))}

@@ -1,7 +1,7 @@
 {
   "id": "wrench-saw",
-  "name": "The Wrench & Saw",
-  "description": "Mad scientist hellstone otaku",
+  "name": "AFOD.Playbooks.wrench-saw",
+  "description": "AFOD.Playbooks.wrench-sawDescription",
   "modules": {
     "ratings": {
       "startingRatings": {
@@ -11,77 +11,117 @@
     },
     "items": {
       "custom": [
-        { "id": "fine crafting tools", "name": "Fine Crafting Tools", "load": 1 },
-        { "id": "fine experimental rifle", "name": "Fine Experimental Rifle", "load": 2 },
-        { "id": "fine useful parts", "name": "Fine Useful Parts", "load": 1 },
-        { "id": "hellstone goggles", "name": "Hellstone Goggles", "load": 1 },
-        { "id": "an unopened box", "name": "An Unopened Box", "load": 1 },
-        { "id": "a disturbing truth", "name": "A Disturbing Truth", "load": 0 }
+        {
+          "id": "fine crafting tools",
+          "name": "AFOD.Modules.itemsFineCraftingTools",
+          "load": 1
+        },
+        {
+          "id": "fine experimental rifle",
+          "name": "AFOD.Modules.itemsFineExperimentalRifle",
+          "load": 2
+        },
+        {
+          "id": "fine useful parts",
+          "name": "AFOD.Modules.itemsFineUsefulParts",
+          "load": 1
+        },
+        {
+          "id": "hellstone goggles",
+          "name": "AFOD.Modules.itemsHellstoneGoggles",
+          "load": 1
+        },
+        {
+          "id": "an unopened box",
+          "name": "AFOD.Modules.itemsAnUnopenedBox",
+          "load": 1
+        },
+        {
+          "id": "a disturbing truth",
+          "name": "AFOD.Modules.itemsADisturbingTruth",
+          "load": 0
+        }
       ]
     },
     "specialAbilities": {
       "abilities": [
         {
           "id": "driven",
-          "name": "Driven",
-          "description": "During Downtime, you get 2 ticks to distribute among any Long-term Project clocks that involve investigation, or learning a new formula or design plan. Using Read, push yourself for 1 Grit instead of 2."
+          "name": "AFOD.Modules.specialAbilitiesDriven",
+          "description": "AFOD.Modules.specialAbilitiesDrivenDescription"
         },
         {
           "id": "skillful",
-          "name": "Skillful",
-          "description": "You may expend your special armor to resist a consequence from breaking machines or experimenting with Hellstone, or to push yourself when working on weird science or handling Hellstone."
+          "name": "AFOD.Modules.specialAbilitiesSkillful",
+          "description": "AFOD.Modules.specialAbilitiesSkillfulDescription"
         },
         {
           "id": "mad scientist",
-          "name": "Mad Scientist",
-          "description": "When you invent or craft a creation with steam-craft or Hellstone features, take +1 result level to your roll. You begin with one special design already known."
+          "name": "AFOD.Modules.specialAbilitiesMadScientist",
+          "description": "AFOD.Modules.specialAbilitiesMadScientistDescription"
         },
         {
           "id": "spiritmancer",
-          "name": "Spiritmancer",
-          "description": "When you invent or craft a creation with arcane, spiritual, or demonic features, take +1 result level to your roll. You begin with one special formula already known."
+          "name": "AFOD.Modules.specialAbilitiesSpiritmancer",
+          "description": "AFOD.Modules.specialAbilitiesSpiritmancerDescription"
         },
         {
           "id": "listening to their voices",
-          "name": "Listening to Their Voices",
-          "description": "When you touch them you may consort with machines to gather information with +1 result level. After that, you may push yourself to give it a feature or task it was not constructed for."
+          "name": "AFOD.Modules.specialAbilitiesListeningToTheirVoices",
+          "description": "AFOD.Modules.specialAbilitiesListeningToTheirVoicesDescription"
         },
         {
           "id": "speaking their tongue",
-          "name": "Speaking Their Tongue",
-          "description": "You may attune yourself to any machine in sight to activate or disable it."
+          "name": "AFOD.Modules.specialAbilitiesSpeakingTheirTongue",
+          "description": "AFOD.Modules.specialAbilitiesSpeakingTheirTongueDescription"
         },
         {
           "id": "blood, sweat & gears",
-          "name": "Blood, Sweat & Gears",
-          "description": "You gain an additional XP trigger: If you achieved a breakthrough on a meaningful invention or scientific problem, mark XP. If your project caused trouble for your Posse, also mark Posse XP."
+          "name": "AFOD.Modules.specialAbilitiesBloodSweatAndGears",
+          "description": "AFOD.Modules.specialAbilitiesBloodSweatAndGearsDescription"
         },
         {
           "id": "right time right tool",
-          "name": "Right Time, Right Tool",
-          "description": "You may use one of your items for a purpose of which it was not designed for. Fine items stay fine. Describe how you do it and how this is helpful."
+          "name": "AFOD.Modules.specialAbilitiesRightTimeRightTool",
+          "description": "AFOD.Modules.specialAbilitiesRightTimeRightToolDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteranCharacter",
           "max": 3,
-          "description": "Choose a special ability from another source."
+          "description": "AFOD.Modules.specialAbilitiesVeteranCharacterDescription"
         }
       ]
     },
     "contacts": {
       "contacts": [
-        { "id": "ignaz toodlebrock", "name": "Ignaz Toodlebrock, an inventor" },
-        { "id": "a voice in your head", "name": "A voice in your head" },
+        {
+          "id": "ignaz toodlebrock",
+          "name": "AFOD.Modules.contactsIgnazToodlebrock"
+        },
+        {
+          "id": "a voice in your head",
+          "name": "AFOD.Modules.contactsAVoiceInYourHead"
+        },
         {
           "id": "a favorite tool named",
-          "name": "A favorite tool named {toolName}",
+          "name": "AFOD.Modules.contactsAFavoriteToolNamed",
           "slots": [
-            { "id": "toolName", "label": "Tool Name", "size": 10 }
+            {
+              "id": "toolName",
+              "label": "Tool Name",
+              "size": 10
+            }
           ]
         },
-        { "id": "virex", "name": "Virex, a failed experiment" },
-        { "id": "dakota", "name": "Dakota, your fiancé" }
+        {
+          "id": "virex",
+          "name": "AFOD.Modules.contactsVirex"
+        },
+        {
+          "id": "dakota",
+          "name": "AFOD.Modules.contactsDakota"
+        }
       ]
     }
   }

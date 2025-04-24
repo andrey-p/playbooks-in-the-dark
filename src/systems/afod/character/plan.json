@@ -1,7 +1,7 @@
 {
   "id": "plan",
-  "name": "The Plan",
-  "description": "A well-connected mastermind",
+  "name": "AFOD.Playbooks.plan",
+  "description": "AFOD.Playbooks.planDescription",
   "modules": {
     "ratings": {
       "startingRatings": {
@@ -11,67 +11,109 @@
     },
     "items": {
       "custom": [
-        { "id": "a concealed holdout pistol", "name": "A Concealed Holdout Pistol", "load": 0 },
-        { "id": "fine status symbol", "name": "Fine Status Symbol", "load": 1 },
-        { "id": "fine documents", "name": "Fine Documents", "load": 1 },
-        { "id": "blackmail information", "name": "Blackmail Information", "load": 0 },
-        { "id": "fine ornamented carriage", "name": "Fine Ornamented Carriage", "load": 0 },
-        { "id": "a spirit charm", "name": "A Spirit Charm", "load": 0 }
+        {
+          "id": "a concealed holdout pistol",
+          "name": "AFOD.Modules.itemsAConcealedHoldoutPistol",
+          "load": 0
+        },
+        {
+          "id": "fine status symbol",
+          "name": "AFOD.Modules.itemsFineStatusSymbol",
+          "load": 1
+        },
+        {
+          "id": "fine documents",
+          "name": "AFOD.Modules.itemsFineDocuments",
+          "load": 1
+        },
+        {
+          "id": "blackmail information",
+          "name": "AFOD.Modules.itemsBlackmailInformation",
+          "load": 0
+        },
+        {
+          "id": "fine ornamented carriage",
+          "name": "AFOD.Modules.itemsFineOrnamentedCarriage",
+          "load": 0
+        },
+        {
+          "id": "a spirit charm",
+          "name": "AFOD.Modules.itemsASpiritCharm",
+          "load": 0
+        }
       ]
     },
     "specialAbilities": {
       "abilities": [
         {
           "id": "god save me from friends",
-          "name": "God Save Me from Friends",
-          "description": "You may expend your special armor to resist a consequence for a teammate, or to push yourself when you gather information or work on a Long-term Project. When you use it to resist you don’t have to be present to use this ability, say how you prepared for this situation in the past."
+          "name": "AFOD.Modules.specialAbilitiesGodSaveMeFromFriends",
+          "description": "AFOD.Modules.specialAbilitiesGodSaveMeFromFriendsDescription"
         },
         {
           "id": "foresight",
-          "name": "Foresight",
-          "description": "Twice per Run you can assist a teammate without paying Grit. When you run out of Grit, instead of suffering a Stigma you may choose to come back with 1 Grit left. Either way tell us how you prepared for this."
+          "name": "AFOD.Modules.specialAbilitiesForesight",
+          "description": "AFOD.Modules.specialAbilitiesForesightDescription"
         },
         {
           "id": "planning is everything",
-          "name": "Planning Is Everything",
-          "description": "Due to your careful planning, during Downtime, you may give yourself or another Posse member +1 Downtime Action."
+          "name": "AFOD.Modules.specialAbilitiesPlanningIsEverything",
+          "description": "AFOD.Modules.specialAbilitiesPlanningIsEverythingDescription"
         },
         {
           "id": "runs in the family",
-          "name": "Runs in the Family",
-          "description": "During Downtime, you get +1 result level when you acquire an asset or reduce Doom. You may choose ’distant cousin’ as an asset arriving by train."
+          "name": "AFOD.Modules.specialAbilitiesRunsInTheFamily",
+          "description": "AFOD.Modules.specialAbilitiesRunsInTheFamilyDescription"
         },
         {
           "id": "weaving the web",
-          "name": "Weaving the Web",
-          "description": "’By failing to prepare, you are preparing to fail.’ You gain +1d to Consort when you gather information on a target for a run. You get +1d to the engagement roll for that operation. When the engagement roll is 6, gain 1 Grit."
+          "name": "AFOD.Modules.specialAbilitiesWeavingTheWeb",
+          "description": "AFOD.Modules.specialAbilitiesWeavingTheWebDescription"
         },
         {
           "id": "old friends everywhere",
-          "name": "Old Friends Everywhere",
-          "description": "When you come to a new town or settlement, name a Friend, Connection, Vice Purveyor, or Enemy you have here. Tell us a story about how you met and about your relationship."
+          "name": "AFOD.Modules.specialAbilitiesOldFriendsEverywhere",
+          "description": "AFOD.Modules.specialAbilitiesOldFriendsEverywhereDescription"
         },
         {
           "id": "fingers in every pie",
-          "name": "Fingers in Every Pie",
-          "description": "At the end of each Downtime phase, you earn +2 Ablass."
+          "name": "AFOD.Modules.specialAbilitiesFingersInEveryPie",
+          "description": "AFOD.Modules.specialAbilitiesFingersInEveryPieDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteranCharacter",
           "max": 3,
-          "description": "Choose a special ability from another source."
+          "description": "AFOD.Modules.specialAbilitiesVeteranCharacterDescription"
         }
       ]
     },
     "contacts": {
       "contacts": [
-        { "id": "john p little", "name": "John P. Little, a cattle baron" },
-        { "id": "the dutch", "name": "'The Dutch', an executor" },
-        { "id": "pepper", "name": "Pepper, a lucky charm" },
-        { "id": "captain hodgens", "name": "Captain Hodgens, Fort Hubert" },
-        { "id": "horatio freeman", "name": "Horatio Freeman, a sheriff" },
-        { "id": "sylvester stubbs", "name": "Sylvester Stubbs, an official" }
+        {
+          "id": "john p little",
+          "name": "AFOD.Modules.contactsJohnPLittle"
+        },
+        {
+          "id": "the dutch",
+          "name": "AFOD.Modules.contactsTheDutch"
+        },
+        {
+          "id": "pepper",
+          "name": "AFOD.Modules.contactsPepper"
+        },
+        {
+          "id": "captain hodgens",
+          "name": "AFOD.Modules.contactsCaptainHodgens"
+        },
+        {
+          "id": "horatio freeman",
+          "name": "AFOD.Modules.contactsHoratioFreeman"
+        },
+        {
+          "id": "sylvester stubbs",
+          "name": "AFOD.Modules.contactsSylvesterStubbs"
+        }
       ]
     }
   }

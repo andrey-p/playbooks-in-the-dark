@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "test-utils": ["./tests/config/test-utils.tsx"]
     }
   },
   "include": [

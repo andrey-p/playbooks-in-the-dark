@@ -1,8 +1,11 @@
 import OptionList from './option-list';
 import Separator from './separator';
 import { getPlaybooks } from '@/lib/local-storage';
+import { useTranslations } from 'next-intl';
 
 export default function SavedPlaybooks() {
+  const t = useTranslations();
+
   const savedOptions = getPlaybooks().map((playbook) => {
     return {
       id: playbook.id || '',
@@ -18,7 +21,10 @@ export default function SavedPlaybooks() {
 
   return (
     <>
-      <OptionList heading='Your saved playbooks' options={savedOptions} />
+      <OptionList
+        heading={t('UI.Selection.yourSavedPlaybooks')}
+        options={savedOptions}
+      />
       <Separator />
     </>
   );

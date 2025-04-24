@@ -12,6 +12,7 @@ import OptionList from '../../components/option-list';
 import Separator from '../../components/separator';
 import type { Option as OptionType } from '../../components/options.types';
 import styles from './page.module.css';
+import { getTranslations } from 'next-intl/server';
 
 type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
 
@@ -21,34 +22,40 @@ type Props = {
 
 export default async function Page(props: Props) {
   const { systemId } = await props.params;
+  const t = await getTranslations();
 
   let systemData;
-  const playbookDefinitions: PlaybookDefinitionType[] = [];
+  let playbookDefinitions: PlaybookDefinitionType[] = [];
   const playbooksByType: Record<string, OptionType[]> = {};
 
   try {
-    systemData = SystemSchema.parse(getJson(systemId, 'system'));
+    systemData = SystemSchema.parse(await getJson(systemId, 'system'));
 
-    systemData.playbookTypes.forEach((type) => {
-      const definition = PlaybookDefinitionSchema.parse(
-        getJson(systemId, type)
-      );
-      playbookDefinitions.push(definition);
-
-      playbooksByType[type] = [];
-
-      definition.playbooks.forEach((playbookId) => {
-        const playbookData = PlaybookDataSchema.parse(
-          getJson(systemId, type, playbookId)
+    playbookDefinitions = await Promise.all(
+      systemData.playbookTypes.map(async (type) => {
+        const definition = PlaybookDefinitionSchema.parse(
+          await getJson(systemId, type)
         );
-        playbooksByType[type].push({
-          id: playbookId,
-          href: `/${systemId}/${type}/${playbookData.id}`,
-          name: playbookData.name,
-          description: playbookData.description
-        });
-      });
-    });
+
+        playbooksByType[type] = await Promise.all(
+          definition.playbooks.map(async (playbookId) => {
+            const playbookData = PlaybookDataSchema.parse(
+              await getJson(systemId, type, playbookId)
+            );
+
+            return {
+              id: playbookId,
+              href: `/${systemId}/${type}/${playbookData.id}`,
+              name: t(playbookData.name),
+              description:
+                playbookData.description && t(playbookData.description)
+            };
+          })
+        );
+
+        return definition;
+      })
+    );
   } catch (e) {
     if (e instanceof NotFoundError) {
       return notFound();
@@ -61,13 +68,13 @@ export default async function Page(props: Props) {
     <div className={styles.container}>
       <Separator />
       <div className={styles.systemBlurb}>
-        <h2 className={styles.heading}>{systemData.name}</h2>
+        <h2 className={styles.heading}>{t(systemData.name)}</h2>
         {systemData.attribution && (
-          <p className={styles.attribution}>{systemData.attribution}</p>
+          <p className={styles.attribution}>{t(systemData.attribution)}</p>
         )}
-        <p className={styles.p}>{systemData.description}</p>
+        <p className={styles.p}>{t(systemData.description)}</p>
         <a href={systemData.website} target='_blank'>
-          Go to website
+          {t('UI.Selection.goToWebsite')}
         </a>
       </div>
       <Separator />
@@ -75,15 +82,17 @@ export default async function Page(props: Props) {
       {playbookDefinitions.map((playbookDefinition: PlaybookDefinitionType) => (
         <div key={playbookDefinition.id}>
           <OptionList
-            heading={`Make a ${playbookDefinition.name}`}
+            heading={t(
+              `${systemData.translationNamespace}.Playbooks.makeA.${playbookDefinition.id}`
+            )}
             options={playbooksByType[playbookDefinition.id]}
           />
-          <div className={styles.or}>or</div>
+          <div className={styles.or}>{t('UI.Selection.or')}</div>
         </div>
       ))}
 
       <Link className={styles.goBack} href={`/new`}>
-        ◂ Go back
+        {t('UI.Selection.goBack')}
       </Link>
     </div>
   );

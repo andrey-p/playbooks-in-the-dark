@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getEnvVar } from '@/lib/env';
 import BaseMenuItem from './base-menu-item';
+import { useTranslations } from 'next-intl';
 
 type Props = {
   path: string;
@@ -10,6 +11,7 @@ type Props = {
 export default function CopyMenuItem(props: Props) {
   const { path, text } = props;
   const [justCopied, setJustCopied] = useState<boolean>(false);
+  const t = useTranslations('UI.Menu');
 
   const copyLink = async () => {
     const baseUrl = await getEnvVar('APP_URL');
@@ -35,7 +37,7 @@ export default function CopyMenuItem(props: Props) {
   return (
     <BaseMenuItem
       onClick={copyLink}
-      secondaryContent='Copied!'
+      secondaryContent={t('copied')}
       showSecondaryContent={justCopied}
     >
       {text}

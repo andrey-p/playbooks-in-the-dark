@@ -1,57 +1,59 @@
 {
   "id": "posse",
-  "name": "Posse",
-  "playbooks": ["hellstone-scavengers", "outlaw-posse", "bounty-hunters", "tribe"],
-  "layout": [[
-    ["name", "reputation"],
-    "hideout",
-    "coin",
-    "repClaims",
-    ["tier", "hold"],
-    ["doom", "riders"],
-    "achievements",
-    "cohorts"
-  ], [
-    "posseXp",
-    "specialAbilities",
-    "modus",
-    "contacts",
-    "posseUpgrades"
-  ]],
+  "name": "AFOD.Playbooks.posse",
+  "playbooks": [
+    "hellstone-scavengers",
+    "outlaw-posse",
+    "bounty-hunters",
+    "tribe"
+  ],
+  "layout": [
+    [
+      ["name", "reputation"],
+      "hideout",
+      "coin",
+      "repClaims",
+      ["tier", "hold"],
+      ["doom", "riders"],
+      "achievements",
+      "cohorts"
+    ],
+    ["posseXp", "specialAbilities", "modus", "contacts", "posseUpgrades"]
+  ],
   "modules": {
     "name": {
       "id": "name",
       "type": "textField",
-      "label": "Name"
+      "label": "AFOD.Modules.nameLabel"
     },
     "reputation": {
       "id": "reputation",
       "type": "textField",
-      "label": "Reputation"
+      "label": "AFOD.Modules.reputationLabel"
     },
     "hideout": {
       "id": "hideout",
       "type": "textField",
-      "label": "Hideout"
+      "label": "AFOD.Modules.hideoutLabel"
     },
     "repClaims": {
       "id": "repClaims",
       "type": "multiTracker",
-      "label": "Reputation & Claims",
+      "label": "AFOD.Modules.repClaimsLabel",
       "props": {
         "trackers": {
           "rep": {
             "max": 12,
             "type": "rectangle",
             "size": 30,
-            "label": "Rep"
+            "label": "AFOD.Modules.repLabel"
           },
           "claims": {
             "max": 3,
             "reverse": true,
             "size": 12,
             "type": "square",
-            "label": "Claims"
+            "label": "AFOD.Modules.claimsLabel"
           }
         }
       }
@@ -59,50 +61,157 @@
     "coin": {
       "id": "coin",
       "type": "items",
-      "label": "Coin",
+      "label": "AFOD.Modules.coinLabel",
       "props": {
         "groups": [
-          { "id": "coin", "name": "Coin" },
-          { "id": "vault", "name": "Vault" }
+          {
+            "id": "coin",
+            "name": "AFOD.Modules.coinLabel"
+          },
+          {
+            "id": "vault",
+            "name": "AFOD.Modules.vaultLabel"
+          }
         ],
         "common": [
-          { "id": "coin1", "name": "", "load": 2, "showLinked": false, "group": "coin" },
-          { "id": "coin2", "name": "", "load": 2, "showLinked": false, "group": "coin" },
-          { "id": "coin3", "name": "", "load": 2, "showLinked": false, "group": "coin" },
-          { "id": "coin4", "name": "", "load": 2, "showLinked": false, "group": "coin" },
-
-          { "id": "vault1", "name": "", "load": 2, "showLinked": false, "group": "vault" },
-          { "id": "vault2", "name": "", "load": 2, "showLinked": false, "group": "vault" },
-          { "id": "vault3", "name": "", "load": 2, "showLinked": false, "group": "vault" },
-          { "id": "vault4", "name": "", "load": 2, "showLinked": false, "group": "vault" },
-          { "id": "vault5", "name": "", "load": 2, "showLinked": false, "group": "vault" },
-          { "id": "vault6", "name": "", "load": 2, "showLinked": false, "group": "vault" },
-          { "id": "vault7", "name": "", "load": 2, "showLinked": false, "group": "vault" },
-          { "id": "vault8", "name": "", "load": 2, "showLinked": false, "group": "vault" },
-          { "id": "vault9", "name": "", "load": 2, "showLinked": false, "group": "vault" },
-          { "id": "vault10", "name": "", "load": 2, "showLinked": false, "group": "vault" },
-          { "id": "vault11", "name": "", "load": 2, "showLinked": false, "group": "vault" },
-          { "id": "vault12", "name": "", "load": 2, "showLinked": false, "group": "vault" }
+          {
+            "id": "coin1",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "coin"
+          },
+          {
+            "id": "coin2",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "coin"
+          },
+          {
+            "id": "coin3",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "coin"
+          },
+          {
+            "id": "coin4",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "coin"
+          },
+          {
+            "id": "vault1",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "vault"
+          },
+          {
+            "id": "vault2",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "vault"
+          },
+          {
+            "id": "vault3",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "vault"
+          },
+          {
+            "id": "vault4",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "vault"
+          },
+          {
+            "id": "vault5",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "vault"
+          },
+          {
+            "id": "vault6",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "vault"
+          },
+          {
+            "id": "vault7",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "vault"
+          },
+          {
+            "id": "vault8",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "vault"
+          },
+          {
+            "id": "vault9",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "vault"
+          },
+          {
+            "id": "vault10",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "vault"
+          },
+          {
+            "id": "vault11",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "vault"
+          },
+          {
+            "id": "vault12",
+            "name": "",
+            "load": 2,
+            "showLinked": false,
+            "group": "vault"
+          }
         ]
       }
     },
     "hold": {
       "id": "hold",
       "type": "radioGroup",
-      "label": "Hold",
+      "label": "AFOD.Modules.holdLabel",
       "props": {
         "type": "rhombus",
         "size": 25,
         "options": [
-          { "id": "weak", "name": "Weak" },
-          { "id": "strong", "name": "Strong" }
+          {
+            "id": "weak",
+            "name": "AFOD.Modules.holdWeak"
+          },
+          {
+            "id": "strong",
+            "name": "AFOD.Modules.holdStrong"
+          }
         ]
       }
     },
     "tier": {
       "id": "tier",
       "type": "tracker",
-      "label": "Tier",
+      "label": "AFOD.Modules.tierLabel",
       "props": {
         "type": "square",
         "max": 4
@@ -111,7 +220,7 @@
     "doom": {
       "id": "doom",
       "type": "tracker",
-      "label": "Doom",
+      "label": "AFOD.Modules.doomLabel",
       "props": {
         "type": "square",
         "max": 10
@@ -120,7 +229,7 @@
     "riders": {
       "id": "riders",
       "type": "tracker",
-      "label": "Riders",
+      "label": "AFOD.Modules.ridersLabel",
       "props": {
         "type": "square",
         "max": 4
@@ -129,12 +238,12 @@
     "achievements": {
       "id": "achievements",
       "type": "claims",
-      "label": "Achievements"
+      "label": "AFOD.Modules.achievementsLabel"
     },
     "posseXp": {
       "id": "posseXp",
       "type": "tracker",
-      "label": "Posse XP",
+      "label": "AFOD.Modules.posseXpLabel",
       "props": {
         "max": 8,
         "type": "rectangle",
@@ -144,83 +253,212 @@
     "specialAbilities": {
       "id": "specialAbilities",
       "type": "specialAbilities",
-      "label": "Special abilities"
+      "label": "AFOD.Modules.specialAbilitiesLabel"
     },
     "contacts": {
       "id": "contacts",
       "type": "contacts",
-      "label": "Contacts"
+      "label": "AFOD.Modules.contactsLabel"
     },
     "modus": {
       "id": "modus",
       "type": "textField",
-      "label": "Modus"
+      "label": "AFOD.Modules.modusLabel"
     },
     "posseUpgrades": {
       "id": "posseUpgrades",
       "type": "items",
-      "label": "Posse Upgrades",
+      "label": "AFOD.Modules.posseUpgradesLabel",
       "props": {
         "twoColumns": true,
         "groups": [
-          { "id": "hideout", "name": "Hideout" },
-          { "id": "training", "name": "Training" },
-          { "id": "quality", "name": "Quality" }
+          {
+            "id": "hideout",
+            "name": "AFOD.Modules.posseUpgradesHideout"
+          },
+          {
+            "id": "training",
+            "name": "AFOD.Modules.posseUpgradesTraining"
+          },
+          {
+            "id": "quality",
+            "name": "AFOD.Modules.posseUpgradesQuality"
+          }
         ],
         "common": [
-          { "id": "carriage", "name": "Carriage", "load": 2, "showLinked": false, "group": "hideout" },
-          { "id": "hidden", "name": "Hidden", "load": 1, "group": "hideout" },
-          { "id": "quarters", "name": "Quarters", "load": 1, "group": "hideout" },
-          { "id": "secure", "name": "Secure", "load": 2, "showLinked": false, "group": "hideout" },
-          { "id": "vault", "name": "Vault", "load": 2, "showLinked": false, "group": "hideout" },
-          { "id": "escape tunnel", "name": "Escape Tunnel", "load": 1, "group": "hideout" },
-          { "id": "workshop", "name": "Workshop", "load": 1, "group": "hideout" },
-          { "id": "rail connection", "name": "Rail Connection", "load": 1, "group": "hideout" },
-          { "id": "hellstone storage", "name": "Hellstone Storage", "load": 2, "showLinked": false, "group": "hideout" },
-
-          { "id": "documents", "name": "Documents", "load": 1, "group": "quality" },
-          { "id": "gear", "name": "Gear", "load": 1, "group": "quality" },
-          { "id": "implements", "name": "Implements", "load": 1, "group": "quality" },
-          { "id": "supplies", "name": "Supplies", "load": 1, "group": "quality" },
-          { "id": "weapons", "name": "Weapons", "load": 1, "group": "quality" },
-          { "id": "tools", "name": "Tools", "load": 1, "group": "quality" },
-
-          { "id": "wit", "name": "Wit", "load": 1, "group": "training" },
-          { "id": "prowess", "name": "Prowess", "load": 1, "group": "training" },
-          { "id": "guts", "name": "Guts", "load": 1, "group": "training" },
-          { "id": "personal", "name": "Personal", "load": 1, "group": "training" },
-          { "id": "mastery", "name": "Mastery", "load": 4, "group": "training" }
+          {
+            "id": "carriage",
+            "name": "AFOD.Modules.posseUpgradesCarriage",
+            "load": 2,
+            "showLinked": false,
+            "group": "hideout"
+          },
+          {
+            "id": "hidden",
+            "name": "AFOD.Modules.posseUpgradesHidden",
+            "load": 1,
+            "group": "hideout"
+          },
+          {
+            "id": "quarters",
+            "name": "AFOD.Modules.posseUpgradesQuarters",
+            "load": 1,
+            "group": "hideout"
+          },
+          {
+            "id": "secure",
+            "name": "AFOD.Modules.posseUpgradesSecure",
+            "load": 2,
+            "showLinked": false,
+            "group": "hideout"
+          },
+          {
+            "id": "vault",
+            "name": "AFOD.Modules.posseUpgradesVault",
+            "load": 2,
+            "showLinked": false,
+            "group": "hideout"
+          },
+          {
+            "id": "escape tunnel",
+            "name": "AFOD.Modules.posseUpgradesEscapeTunnel",
+            "load": 1,
+            "group": "hideout"
+          },
+          {
+            "id": "workshop",
+            "name": "AFOD.Modules.posseUpgradesWorkshop",
+            "load": 1,
+            "group": "hideout"
+          },
+          {
+            "id": "rail connection",
+            "name": "AFOD.Modules.posseUpgradesRailConnection",
+            "load": 1,
+            "group": "hideout"
+          },
+          {
+            "id": "hellstone storage",
+            "name": "AFOD.Modules.posseUpgradesHellstoneStorage",
+            "load": 2,
+            "showLinked": false,
+            "group": "hideout"
+          },
+          {
+            "id": "documents",
+            "name": "AFOD.Modules.posseUpgradesDocuments",
+            "load": 1,
+            "group": "quality"
+          },
+          {
+            "id": "gear",
+            "name": "AFOD.Modules.posseUpgradesGear",
+            "load": 1,
+            "group": "quality"
+          },
+          {
+            "id": "implements",
+            "name": "AFOD.Modules.posseUpgradesImplements",
+            "load": 1,
+            "group": "quality"
+          },
+          {
+            "id": "supplies",
+            "name": "AFOD.Modules.posseUpgradesSupplies",
+            "load": 1,
+            "group": "quality"
+          },
+          {
+            "id": "weapons",
+            "name": "AFOD.Modules.posseUpgradesWeapons",
+            "load": 1,
+            "group": "quality"
+          },
+          {
+            "id": "tools",
+            "name": "AFOD.Modules.posseUpgradesTools",
+            "load": 1,
+            "group": "quality"
+          },
+          {
+            "id": "wit",
+            "name": "AFOD.Modules.posseUpgradesWit",
+            "load": 1,
+            "group": "training"
+          },
+          {
+            "id": "prowess",
+            "name": "AFOD.Modules.posseUpgradesProwess",
+            "load": 1,
+            "group": "training"
+          },
+          {
+            "id": "guts",
+            "name": "AFOD.Modules.posseUpgradesGuts",
+            "load": 1,
+            "group": "training"
+          },
+          {
+            "id": "personal",
+            "name": "AFOD.Modules.posseUpgradesPersonal",
+            "load": 1,
+            "group": "training"
+          },
+          {
+            "id": "mastery",
+            "name": "AFOD.Modules.posseUpgradesMastery",
+            "load": 4,
+            "group": "training"
+          }
         ]
       }
     },
     "cohorts": {
       "id": "cohorts",
       "type": "cohorts",
-      "label": "Cohorts",
+      "label": "AFOD.Modules.cohortsLabel",
       "props": {
         "slots": 4,
         "radioGroups": {
           "gangExpert": {
             "type": "circle",
             "options": [
-              { "id": "gang", "name": "Gang" },
-              { "id": "expert", "name": "Expert" }
+              {
+                "id": "gang",
+                "name": "AFOD.Modules.cohortsGang"
+              },
+              {
+                "id": "expert",
+                "name": "AFOD.Modules.cohortsExpert"
+              }
             ]
           },
           "harm": {
             "type": "rectangle",
             "size": 30,
             "options": [
-              { "id": "weak", "name": "Weak" },
-              { "id": "impaired", "name": "Impaired" },
-              { "id": "broken", "name": "Broken" }
+              {
+                "id": "weak",
+                "name": "AFOD.Modules.cohortsWeak"
+              },
+              {
+                "id": "impaired",
+                "name": "AFOD.Modules.cohortsImpaired"
+              },
+              {
+                "id": "broken",
+                "name": "AFOD.Modules.cohortsBroken"
+              }
             ]
           },
           "armor": {
             "type": "rectangle",
             "size": 30,
             "options": [
-              { "id": "armor", "name": "Armor" }
+              {
+                "id": "armor",
+                "name": "AFOD.Modules.cohortsArmor"
+              }
             ]
           }
         }

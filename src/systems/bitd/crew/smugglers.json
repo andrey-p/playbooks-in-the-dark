@@ -1,50 +1,50 @@
 {
   "id": "smugglers",
-  "name": "Smugglers",
-  "description": "Suppliers of illicit goods",
+  "name": "BITD.Playbooks.smugglers",
+  "description": "BITD.Playbooks.smugglersDescription",
   "modules": {
     "specialAbilities": {
       "abilities": [
         {
           "id": "like part of the family",
-          "name": "Like Part of the Family",
-          "description": "Create one of your vehicles as a <strong>cohort</strong> (use the vehicle edges and flaws, below). Its <strong>quality</strong> is equal to your Tier +1."
+          "name": "BITD.Modules.specialAbilitiesLikePartOfTheFamily",
+          "description": "BITD.Modules.specialAbilitiesLikePartOfTheFamilyDescription"
         },
         {
           "id": "all hands",
-          "name": "All Hands",
-          "description": "During <strong>downtime</strong>, one of your cohorts may perform a downtime activity for the crew to <strong>acquire an asset</strong>, <strong>reduce heat</strong>, or work on a <strong>long-term project</strong>."
+          "name": "BITD.Modules.specialAbilitiesAllHands",
+          "description": "BITD.Modules.specialAbilitiesAllHandsDescription"
         },
         {
           "id": "ghost passage",
-          "name": "Ghost Passage",
-          "description": "From harsh experience or occult ritual, all crew members become immune to possession by spirits, but may choose to \"carry\" a second ghost as a passenger within their body."
+          "name": "BITD.Modules.specialAbilitiesGhostPassage",
+          "description": "BITD.Modules.specialAbilitiesGhostPassageDescription"
         },
         {
           "id": "just passing through",
-          "name": "Just Passing Through",
-          "description": "During <strong>downtime</strong>, take <strong>-1</strong> heat. When your heat is 4 or less, you get <strong>+1d</strong> to deceive people when you pass yourselves off as ordinary citizens."
+          "name": "BITD.Modules.specialAbilitiesJustPassingThrough",
+          "description": "BITD.Modules.specialAbilitiesJustPassingThroughDescription"
         },
         {
           "id": "leverage",
-          "name": "Leverage",
-          "description": "Your crew supplies contraband for other factions. Your success is good for them. Whenever you gain rep, gain <strong>+1 rep</strong>."
+          "name": "BITD.Modules.specialAbilitiesLeverage",
+          "description": "BITD.Modules.specialAbilitiesLeverageDescription"
         },
         {
           "id": "reavers",
-          "name": "Reavers",
-          "description": "When you go into conflict aboard a vehicle, you gain <strong>+1 effect</strong> for vehicle damage and speed. Your vehicle gains <strong>armor</strong>."
+          "name": "BITD.Modules.specialAbilitiesReavers",
+          "description": "BITD.Modules.specialAbilitiesReaversDescription"
         },
         {
           "id": "renegades",
-          "name": "Renegades",
-          "description": "Each PC may add +1 action rating to <strong>Finesse</strong>, <strong>Prowl</strong>, or <strong>Skirmish</strong> (up to a max rating of 3)."
+          "name": "BITD.Modules.specialAbilitiesRenegades",
+          "description": "BITD.Modules.specialAbilitiesRenegadesDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "BITD.Modules.specialAbilitiesVeteranCrew",
           "max": 2,
-          "description": "Choose a special ability from another crew."
+          "description": "BITD.Modules.specialAbilitiesVeteranCrewDescription"
         }
       ]
     },
@@ -53,102 +53,125 @@
         [
           {
             "id": "turf1",
-            "name": "Turf",
-            "connections": ["down", "right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "side business",
-            "name": "Side Business",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsSideBusiness",
+            "description": "BITD.Modules.claimsSideBusinessDescription",
             "connections": ["down"]
           },
           {
             "id": "luxury fence",
-            "name": "Luxury Fence",
-            "description": "<strong>+2 coin</strong> for high-class targets",
+            "name": "BITD.Modules.claimsLuxuryFence",
+            "description": "BITD.Modules.claimsLuxuryFenceDescription",
             "connections": ["down"]
           },
           {
             "id": "vice den",
-            "name": "Vice Den",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsViceDen",
+            "description": "BITD.Modules.claimsViceDenDescription",
             "connections": ["down", "right"]
           },
           {
             "id": "tavern",
-            "name": "Tavern",
-            "description": "<strong>+1d</strong> to Consort and Sway on site",
+            "name": "BITD.Modules.claimsTavern",
+            "description": "BITD.Modules.claimsTavernDescription",
             "connections": ["down"]
           }
         ],
         [
           {
             "id": "ancient gate",
-            "name": "Ancient Gate",
-            "description": "Safe passage in the Deathlands",
+            "name": "BITD.Modules.claimsAncientGate",
+            "description": "BITD.Modules.claimsAncientGateDescription",
             "connections": ["down"]
           },
           {
             "id": "turf2",
-            "name": "Turf",
-            "connections": ["down", "right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "lair",
-            "name": "Lair",
+            "name": "BITD.Modules.claimsLair",
             "selectable": false,
-            "connections": ["down", "right"]
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "turf3",
-            "name": "Turf",
-            "connections": ["down", "right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "turf4",
-            "name": "Turf",
-            "connections": ["down"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["down"],
+            "description": ""
           }
         ],
         [
           {
             "id": "secret routes",
-            "name": "Secret Routes",
-            "description": "<strong>+1d</strong> engagement for transport plans",
+            "name": "BITD.Modules.claimsSecretRoutes",
+            "description": "BITD.Modules.claimsSecretRoutesDescription",
             "connections": ["right"]
           },
           {
             "id": "informants",
-            "name": "Informants",
-            "description": "<strong>+1d</strong> gather info for scores"
+            "name": "BITD.Modules.claimsInformants",
+            "description": "BITD.Modules.claimsInformantsDescription"
           },
           {
             "id": "fleet",
-            "name": "Fleet",
-            "description": "Your cohorts have their own vehicles"
+            "name": "BITD.Modules.claimsFleet",
+            "description": "BITD.Modules.claimsFleetDescription"
           },
           {
             "id": "cover operation",
-            "name": "Cover Operation",
-            "description": "<strong>-2 heat</strong> per score",
+            "name": "BITD.Modules.claimsCoverOperation",
+            "description": "BITD.Modules.claimsCoverOperationDescription",
             "connections": ["right"]
           },
           {
             "id": "warehouse",
-            "name": "Warehouse",
-            "description": "Stockpiles give you <strong>+1d</strong> to acquire assets"
+            "name": "BITD.Modules.claimsWarehouse",
+            "description": "BITD.Modules.claimsWarehouseDescription"
           }
         ]
       ]
     },
     "contacts": {
       "contacts": [
-        { "id": "elynn", "name": "Elynn, a dock worker" },
-        { "id": "rolan", "name": "Rolan, a drug dealer" },
-        { "id": "sera", "name": "Sera, an arms dealer" },
-        { "id": "nyelle", "name": "Nyelle, a spirit trafficker" },
-        { "id": "decker", "name": "Decker, an anarchist" },
-        { "id": "esme", "name": "Esme, a tavern owner" }
+        {
+          "id": "elynn",
+          "name": "BITD.Modules.contactsElynn"
+        },
+        {
+          "id": "rolan",
+          "name": "BITD.Modules.contactsRolan"
+        },
+        {
+          "id": "sera",
+          "name": "BITD.Modules.contactsSera"
+        },
+        {
+          "id": "nyelle",
+          "name": "BITD.Modules.contactsNyelle"
+        },
+        {
+          "id": "decker",
+          "name": "BITD.Modules.contactsDecker"
+        },
+        {
+          "id": "esme",
+          "name": "BITD.Modules.contactsEsme"
+        }
       ]
     },
     "crewUpgrades": {
@@ -157,20 +180,40 @@
         "prowess": 1
       },
       "custom": [
-        { "id": "smugglers rigging", "name": "Smugglers' Rigging (2 items carried are perfectly concealed)", "load": 1 },
-        { "id": "camouflage", "name": "Camouflage (vehicles are perfectly concealed at rest)", "load": 1 },
-        { "id": "elite rovers", "name": "Elite Rovers", "load": 1 },
-        { "id": "barge", "name": "Barge (+ mobility or lair)", "load": 1 },
-        { "id": "steady", "name": "Steady (+1 stress box)", "load": 3 }
+        {
+          "id": "smugglers rigging",
+          "name": "BITD.Modules.crewUpgradesSmugglersRigging",
+          "load": 1
+        },
+        {
+          "id": "camouflage",
+          "name": "BITD.Modules.crewUpgradesCamouflage",
+          "load": 1
+        },
+        {
+          "id": "elite rovers",
+          "name": "BITD.Modules.crewUpgradesEliteRovers",
+          "load": 1
+        },
+        {
+          "id": "barge",
+          "name": "BITD.Modules.crewUpgradesBarge",
+          "load": 1
+        },
+        {
+          "id": "steady",
+          "name": "BITD.Modules.crewUpgradesSteady",
+          "load": 3
+        }
       ]
     },
     "favoredNotes": {
-      "customLabel": "Cargo Types",
+      "customLabel": "BITD.Modules.favoredNotesLabelCargoTypes",
       "examples": [
-        "Arcane/Weird",
-        "Arms",
-        "Contraband",
-        "Passengers"
+        "BITD.Modules.favoredNotesExampleArcaneWeird",
+        "BITD.Modules.favoredNotesExampleArms",
+        "BITD.Modules.favoredNotesExampleContraband",
+        "BITD.Modules.favoredNotesExamplePassengers"
       ]
     }
   }

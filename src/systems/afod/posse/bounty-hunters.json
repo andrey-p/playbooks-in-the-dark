@@ -1,99 +1,100 @@
 {
   "id": "bounty-hunters",
-  "name": "Bounty Hunters",
+  "name": "AFOD.Playbooks.bounty-hunters",
   "modules": {
     "achievements": {
       "claims": [
         [
           {
             "id": "the tangled web",
-            "name": "The Tangled Web",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsTheTangledWeb",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": ["down"]
           },
           {
             "id": "the wild hunt",
-            "name": "The Wild Hunt",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsTheWildHunt",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": ["right"]
           },
           {
             "id": "muddy informants",
-            "name": "Muddy Informants",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsMuddyInformants",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": ["down"]
           },
           {
             "id": "safe passage",
-            "name": "Safe Passage",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsSafePassage",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": ["down", "right"]
           },
           {
             "id": "undertaker",
-            "name": "Undertaker",
-            "description": "Light"
+            "name": "AFOD.Modules.achievementsUndertaker",
+            "description": "AFOD.Modules.achievementsLight"
           }
         ],
         [
           {
             "id": "biting shadows",
-            "name": "Biting Shadows",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsBitingShadows",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": ["right"]
           },
           {
             "id": "hellstone claim 1",
-            "name": "Hellstone Claim",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": ["right", "down"]
           },
           {
             "id": "equilibrium",
-            "name": "Equilibrium",
+            "name": "AFOD.Modules.achievementsEquilibrium",
             "connections": ["down", "right"],
-            "selectable": false
+            "selectable": false,
+            "description": ""
           },
           {
             "id": "holy weapon",
-            "name": "Holy Weapon",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsHolyWeapon",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": ["right"]
           },
           {
             "id": "hellstone claim 2",
-            "name": "Hellstone Claim",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": ["down"]
           }
         ],
         [
           {
             "id": "death's servant",
-            "name": "Death's Servant",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsDeathsServant",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": ["right"]
           },
           {
             "id": "unholy weapon",
-            "name": "Unholy Weapon",
-            "description": "Darkness"
+            "name": "AFOD.Modules.achievementsUnholyWeapon",
+            "description": "AFOD.Modules.achievementsDarkness"
           },
           {
             "id": "secret stash",
-            "name": "Secret Stash",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsSecretStash",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": ["right"]
           },
           {
             "id": "hellstone claim 3",
-            "name": "Hellstone Claim",
-            "description": "Neutral"
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsNeutral"
           },
           {
             "id": "wasted bullet",
-            "name": "Wasted Bullet",
-            "description": "Light"
+            "name": "AFOD.Modules.achievementsWastedBullet",
+            "description": "AFOD.Modules.achievementsLight"
           }
         ]
       ]
@@ -102,63 +103,81 @@
       "abilities": [
         {
           "id": "bloodhounds",
-          "name": "bloodhounds",
-          "description": "Each PC may add +1 Action rating to Command, Sling, or Hunt (up to a max rating of 3)."
+          "name": "AFOD.Modules.specialAbilitiesBloodhounds",
+          "description": "AFOD.Modules.specialAbilitiesBloodhoundsDescription"
         },
         {
           "id": "a walking rogues gallery",
-          "name": "A Walking Rogues' Gallery",
-          "description": "When your Posse has the chance to mull it over you will recognize any outlaw / lawman you’ve seen either in person or in a likeness. You know if there is a bounty on their head and its value."
+          "name": "AFOD.Modules.specialAbilitiesAWalkingRoguesGallery",
+          "description": "AFOD.Modules.specialAbilitiesAWalkingRoguesGalleryDescription"
         },
         {
           "id": "life line",
-          "name": "Life Line",
-          "description": "You bring ‘em in alive. You may choose that your target is only incapacitated instead of dead. There’s always a little bit of life left in them."
+          "name": "AFOD.Modules.specialAbilitiesLifeLine",
+          "description": "AFOD.Modules.specialAbilitiesLifeLineDescription"
         },
         {
           "id": "an eye for it",
-          "name": "An Eye for It",
-          "description": "You may Read artifacts or Hellstone weapons to find out what they do and how they are dangerous. With that you always get good details."
+          "name": "AFOD.Modules.specialAbilitiesAnEyeForIt",
+          "description": "AFOD.Modules.specialAbilitiesAnEyeForItDescription"
         },
         {
           "id": "really useful",
-          "name": "Really Useful",
-          "description": "Sometimes friends are as good as territory. You may count up to three +3 Faction statuses you hold as if they are claims."
+          "name": "AFOD.Modules.specialAbilitiesReallyUseful",
+          "description": "AFOD.Modules.specialAbilitiesReallyUsefulDescription"
         },
         {
           "id": "lucky fellows",
-          "name": "Lucky Fellows",
-          "description": "When you roll Rider Events, roll twice and keep the one you want. When you reduce Doom on the Posse, take +1d."
+          "name": "AFOD.Modules.specialAbilitiesLuckyFellows",
+          "description": "AFOD.Modules.specialAbilitiesLuckyFellowsDescription"
         },
         {
           "id": "patron",
-          "name": "Patron",
-          "description": "When you advance your Tier, it costs half the coin it normally would. <em>Who is your patron? Why do they help you?</em>"
+          "name": "AFOD.Modules.specialAbilitiesPatron",
+          "description": "AFOD.Modules.specialAbilitiesPatronDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteranPosse",
           "max": 3,
-          "description": "Choose a special ability from another crew."
+          "description": "AFOD.Modules.specialAbilitiesVeteranPosseDescription"
         }
       ]
     },
     "modus": {
       "examples": [
-        "Violence",
-        "Negotiation",
-        "Connection",
-        "Trap"
+        "AFOD.Modules.modusExampleViolence",
+        "AFOD.Modules.modusExampleNegotiation",
+        "AFOD.Modules.modusExampleConnection",
+        "AFOD.Modules.modusExampleTrap"
       ]
     },
     "contacts": {
       "contacts": [
-        { "id": "bill scar morgan", "name": "Bill 'Scar' Morgan, a judge" },
-        { "id": "the cheat murray", "name": "'The Cheat' Murray, arms dealer" },
-        { "id": "silent bob", "name": "'Silent' Bob, a blacksmith" },
-        { "id": "moe", "name": "Moe, a saloon owner" },
-        { "id": "madam zona", "name": "Madam Zona, a fortune teller" },
-        { "id": "xiang", "name": "Xiang, an occultist" }
+        {
+          "id": "bill scar morgan",
+          "name": "AFOD.Modules.contactsBillScarMorgan"
+        },
+        {
+          "id": "the cheat murray",
+          "name": "AFOD.Modules.contactsTheCheatMurray"
+        },
+        {
+          "id": "silent bob",
+          "name": "AFOD.Modules.contactsSilentBob"
+        },
+        {
+          "id": "moe",
+          "name": "AFOD.Modules.contactsMoe"
+        },
+        {
+          "id": "madam zona",
+          "name": "AFOD.Modules.contactsMadamZona"
+        },
+        {
+          "id": "xiang",
+          "name": "AFOD.Modules.contactsXiang"
+        }
       ]
     },
     "posseUpgrades": {
@@ -167,12 +186,33 @@
         "vault": 1
       },
       "custom": [
-        { "id": "bounty rigging", "name": "Bounty Rigging (weapons or documents)", "load": 1 },
-        { "id": "elite rooks", "name": "Elite Rooks", "load": 1 },
-        { "id": "elite scouts", "name": "Elite Scouts", "load": 1 },
-        { "id": "get out of jail free card", "name": "'Get out of jail free' card", "load": 1 },
-        { "id": "hardened", "name": "Hardened (+1 Grit Box)", "load": 3 }
+        {
+          "id": "bounty rigging",
+          "name": "AFOD.Modules.posseUpgradesBountyRigging",
+          "load": 1
+        },
+        {
+          "id": "elite rooks",
+          "name": "AFOD.Modules.posseUpgradesEliteRooks",
+          "load": 1
+        },
+        {
+          "id": "elite scouts",
+          "name": "AFOD.Modules.posseUpgradesEliteScouts",
+          "load": 1
+        },
+        {
+          "id": "get out of jail free card",
+          "name": "AFOD.Modules.posseUpgradesGetOutOfJailFreeCard",
+          "load": 1
+        },
+        {
+          "id": "hardened",
+          "name": "AFOD.Modules.posseUpgradesHardened",
+          "load": 3
+        }
       ]
     }
-  }
+  },
+  "description": ""
 }

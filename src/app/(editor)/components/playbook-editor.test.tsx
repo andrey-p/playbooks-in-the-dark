@@ -1,7 +1,7 @@
 import { getPlaybooks as getPlaybooksFromLocalStorage } from '@/lib/local-storage';
 
 import PlaybookEditor from './playbook-editor';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from 'test-utils';
 import userEvent from '@testing-library/user-event';
 
 const pushFn = jest.fn();
@@ -49,7 +49,8 @@ const systemData = {
   id: 'bitd',
   name: 'bitd',
   description: 'bitd',
-  playbookTypes: ['scoundrel']
+  playbookTypes: ['scoundrel'],
+  translationNamespace: 'BITD'
 };
 
 describe('PlaybookEditor', () => {
@@ -203,7 +204,7 @@ describe('PlaybookEditor', () => {
 
       const deleteBtn = screen.getByText('Delete playbook');
       await user.click(deleteBtn);
-      const confirmBtn = screen.getByText('YES');
+      const confirmBtn = screen.getByText('Yes');
       await user.click(confirmBtn);
 
       // delete action should've been called

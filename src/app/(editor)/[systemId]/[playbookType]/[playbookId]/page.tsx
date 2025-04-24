@@ -1,14 +1,7 @@
 import { z } from 'zod';
-import { getJson } from '@/lib/system-data';
-import { NotFoundError } from '@/lib/errors';
-import {
-  PlaybookData as PlaybookDataSchema,
-  PlaybookDefinition as PlaybookDefinitionSchema,
-  System as SystemSchema,
-  UserData as UserDataSchema
-} from '@/schemas';
+import { UserData as UserDataSchema } from '@/schemas';
 import PlaybookEditor from '../../../components/playbook-editor';
-import { notFound } from 'next/navigation';
+import DataWrapper from '../../../components/data-wrapper';
 import { revalidatePath } from 'next/cache';
 import { savePlaybook, deletePlaybook } from '@/lib/store';
 
@@ -27,26 +20,6 @@ type Props = {
 export default async function Page(props: Props) {
   const { playbookId, systemId, playbookType } = await props.params;
 
-  let systemData;
-  let playbookData;
-  let playbookDefinition;
-
-  try {
-    systemData = SystemSchema.parse(getJson(systemId, 'system'));
-    playbookDefinition = PlaybookDefinitionSchema.parse(
-      getJson(systemId, playbookType)
-    );
-    playbookData = PlaybookDataSchema.parse(
-      getJson(systemId, playbookType, playbookId)
-    );
-  } catch (e) {
-    if (e instanceof NotFoundError) {
-      return notFound();
-    }
-
-    throw e;
-  }
-
   const saveAction = async (userData: UserDataType) => {
     'use server';
 
@@ -63,19 +36,25 @@ export default async function Page(props: Props) {
   };
 
   return (
-    <PlaybookEditor
-      systemData={systemData}
-      playbookData={playbookData}
-      playbookDefinition={playbookDefinition}
-      saveAction={saveAction}
-      deleteAction={deleteAction}
-      userData={{
-        id: undefined,
-        playbookType,
-        systemId: systemData.id,
-        playbookId: playbookData.id,
-        modules: {}
-      }}
-    />
+    <DataWrapper
+      systemId={systemId}
+      playbookType={playbookType}
+      playbookId={playbookId}
+    >
+      {(data) => (
+        <PlaybookEditor
+          {...data}
+          saveAction={saveAction}
+          deleteAction={deleteAction}
+          userData={{
+            id: undefined,
+            playbookType,
+            systemId: systemId,
+            playbookId: playbookId,
+            modules: {}
+          }}
+        />
+      )}
+    </DataWrapper>
   );
 }

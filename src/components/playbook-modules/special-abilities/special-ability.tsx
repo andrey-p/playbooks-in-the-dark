@@ -3,6 +3,7 @@ import SimpleTracker from '@/components/playbook-elements/trackers/simple-tracke
 import { SpecialAbility as SpecialAbilitySchema } from './special-abilities.schema';
 import styles from './special-ability.module.css';
 import Description from '@/components/playbook-elements/description/description';
+import { useTranslations } from 'next-intl';
 
 type Props = {
   specialAbility: z.infer<typeof SpecialAbilitySchema>;
@@ -12,6 +13,7 @@ type Props = {
 
 export default function SpecialAbility(props: Props) {
   const { specialAbility, selected, onSelect } = props;
+  const t = useTranslations();
 
   return (
     <div className={styles.container}>
@@ -24,7 +26,7 @@ export default function SpecialAbility(props: Props) {
         />
       </div>
       <div>
-        <span className={styles.name}>{specialAbility.name}: </span>
+        <span className={styles.name}>{t(specialAbility.name)}: </span>
         <Description text={specialAbility.description} />
       </div>
     </div>

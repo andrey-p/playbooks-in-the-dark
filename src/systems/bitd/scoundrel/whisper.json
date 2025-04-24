@@ -1,16 +1,40 @@
 {
   "id": "whisper",
-  "name": "Whisper",
-  "description": "An arcane adept and channeler",
+  "name": "BITD.Playbooks.whisper",
+  "description": "BITD.Playbooks.whisperDescription",
   "modules": {
     "items": {
       "custom": [
-        { "id": "fine lightning hook", "name": "Fine Lightning Hook", "load": 2 },
-        { "id": "fine spirit mask", "name": "Fine Spirit Mask", "load": 1 },
-        { "id": "electroplasm vials", "name": "Electroplasm Vials", "load": 0 },
-        { "id": "spirit bottles", "name": "Spirit Bottles (2)", "load": 1 },
-        { "id": "ghost key", "name": "Ghost Key", "load": 0 },
-        { "id": "demonbane charm", "name": "Demonbane Charm", "load": 0 }
+        {
+          "id": "fine lightning hook",
+          "name": "BITD.Modules.itemsFineLightningHook",
+          "load": 2
+        },
+        {
+          "id": "fine spirit mask",
+          "name": "BITD.Modules.itemsFineSpiritMask",
+          "load": 1
+        },
+        {
+          "id": "electroplasm vials",
+          "name": "BITD.Modules.itemsElectroplasmVials",
+          "load": 0
+        },
+        {
+          "id": "spirit bottles",
+          "name": "BITD.Modules.itemsSpiritBottles",
+          "load": 1
+        },
+        {
+          "id": "ghost key",
+          "name": "BITD.Modules.itemsGhostKey",
+          "load": 0
+        },
+        {
+          "id": "demonbane charm",
+          "name": "BITD.Modules.itemsDemonbaneCharm",
+          "load": 0
+        }
       ]
     },
     "ratings": {
@@ -23,60 +47,75 @@
       "abilities": [
         {
           "id": "compel",
-          "name": "Compel",
-          "description": "You can <strong>Attune</strong> to the ghost field to force a nearby ghost to appear and obey a command you give it. You are not supernaturally terrified by a ghost you summon or compel (though your allies may be)."
+          "name": "BITD.Modules.specialAbilitiesCompel",
+          "description": "BITD.Modules.specialAbilitiesCompelDescription"
         },
         {
           "id": "ghost mind",
-          "name": "Ghost Mind",
-          "description": "You’re always aware of supernatural entities in your presence. Take <strong>+1d</strong> when you <strong>gather info</strong> about the supernatural."
+          "name": "BITD.Modules.specialAbilitiesGhostMind",
+          "description": "BITD.Modules.specialAbilitiesGhostMindDescription"
         },
         {
           "id": "iron will",
-          "name": "Iron Will",
-          "description": "You're immune to the terror that some supernatural entities inflict on sight. Take <strong>+1d</strong> to resistance rolls with <strong>Resolve</strong>."
+          "name": "BITD.Modules.specialAbilitiesIronWill",
+          "description": "BITD.Modules.specialAbilitiesIronWillDescription"
         },
         {
           "id": "occultist",
-          "name": "Occultist",
-          "description": "You know the secret ways to <strong>Consort</strong> with ancient powers, forgotten gods or demons. Once you've consorted with one, you get <strong>+1d</strong> to <strong>command</strong> cultists who worship it."
+          "name": "BITD.Modules.specialAbilitiesOccultist",
+          "description": "BITD.Modules.specialAbilitiesOccultistDescription"
         },
         {
           "id": "ritual",
-          "name": "Ritual",
-          "description": "You can <strong>Study</strong> an occult ritual (or create a new one) to summon a supernatural effect or being. You know the arcane methods to perform ritual sorcery. You begin with one ritual already learned."
+          "name": "BITD.Modules.specialAbilitiesRitual",
+          "description": "BITD.Modules.specialAbilitiesRitualDescription"
         },
         {
           "id": "strange methods",
-          "name": "Strange Methods",
-          "description": "When you invent or craft a creation with <em>arcane</em> features, take <strong>+1 result level</strong> to your roll. You begin with one arcane design already known"
+          "name": "BITD.Modules.specialAbilitiesStrangeMethods",
+          "description": "BITD.Modules.specialAbilitiesStrangeMethodsDescription"
         },
         {
           "id": "tempest",
-          "name": "Tempest",
-          "description": "You can <strong>push yourself</strong> to do one of the following: <em>unleash a stroke of lightning as a weapon</em>—<em>summon a storm in your immediate vicinity (torrential rain, roaring winds, heavy fog, chilling frost/snow, etc.)</em>."
+          "name": "BITD.Modules.specialAbilitiesTempest",
+          "description": "BITD.Modules.specialAbilitiesTempestDescription"
         },
         {
           "id": "warded",
-          "name": "Warded",
-          "description": "You may expend your <strong>special armor</strong> to resist a supernatural consequence, or to <strong>push yourself</strong> when you deal with arcane forces."
+          "name": "BITD.Modules.specialAbilitiesWarded",
+          "description": "BITD.Modules.specialAbilitiesWardedDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "BITD.Modules.specialAbilitiesVeteranScoundrel",
           "max": 3,
-          "description": "Choose a special ability from another source."
+          "description": "BITD.Modules.specialAbilitiesVeteranScoundrelDescription"
         }
       ]
     },
     "contacts": {
-      "customName": "Strange Friends",
+      "customName": "BITD.Modules.contactsLabelStrangeFriends",
       "contacts": [
-        { "id": "nyryx", "name": "Nyryx, a possessor ghost" },
-        { "id": "scurlock", "name": "Scurlock, a vampire" },
-        { "id": "setarra", "name": "Setarra, a demon" },
-        { "id": "quellyn", "name": "Quellyn, a witch" },
-        { "id": "flint", "name": "Flint, a spirit trafficker" }
+        {
+          "id": "nyryx",
+          "name": "BITD.Modules.contactsNyryx"
+        },
+        {
+          "id": "scurlock",
+          "name": "BITD.Modules.contactsScurlock"
+        },
+        {
+          "id": "setarra",
+          "name": "BITD.Modules.contactsSetarra"
+        },
+        {
+          "id": "quellyn",
+          "name": "BITD.Modules.contactsQuellyn"
+        },
+        {
+          "id": "flint",
+          "name": "BITD.Modules.contactsFlint"
+        }
       ]
     }
   }

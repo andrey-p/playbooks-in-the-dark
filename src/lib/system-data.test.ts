@@ -1,55 +1,46 @@
 import { getJson } from './system-data';
 import { NotFoundError } from './errors';
-import { readFileSync } from 'fs';
+import fs from 'fs/promises';
 
-jest.mock('fs');
+jest.mock('fs/promises');
 
 describe('system-data', () => {
-  // set up fs.readFileSync so it can be mocked for the one test
-  beforeEach(() => {
-    const fs = jest.requireActual('fs');
-
-    jest
-      .mocked(readFileSync)
-      .mockImplementation((...args) => fs.readFileSync(...args));
-  });
-
   describe('getJson', () => {
-    test('gets existing JSON file OK', () => {
-      expect(getJson('bitd', 'system')).toMatchObject({
-        name: 'Blades in the Dark'
+    test('gets existing JSON file OK', async () => {
+      expect(await getJson('bitd', 'system')).toMatchObject({
+        id: 'bitd'
       });
 
-      expect(getJson('bitd', 'scoundrel')).toMatchObject({
-        name: 'Scoundrel'
+      expect(await getJson('bitd', 'scoundrel')).toMatchObject({
+        id: 'scoundrel'
       });
 
-      expect(getJson('bitd', 'scoundrel', 'cutter')).toMatchObject({
-        name: 'Cutter'
+      expect(await getJson('bitd', 'scoundrel', 'cutter')).toMatchObject({
+        id: 'cutter'
       });
     });
 
     test("throws meaningful error if JSON file doesn't exist", () => {
-      expect(() => getJson('bitd', 'sostem')).toThrow(NotFoundError);
-      expect(() => getJson('bitd', 'scoundrel', 'cotter')).toThrow(
+      expect(() => getJson('bitd', 'sostem')).rejects.toThrow(NotFoundError);
+      expect(() => getJson('bitd', 'scoundrel', 'cotter')).rejects.toThrow(
         NotFoundError
       );
     });
 
     test("throws meaningful error if JSON file doesn't parse correctly", () => {
-      jest.mocked(readFileSync).mockImplementation(() => {
+      fs.readFile = jest.fn().mockImplementation(async () => {
         return '{ "foo": bar }';
       });
 
-      expect(() => getJson('bitd', 'system')).toThrow(/Error parsing/);
+      expect(() => getJson('bitd', 'system')).rejects.toThrow(/Error parsing/);
     });
 
     test('throws if user attempts shenanigans', () => {
-      expect(() => getJson('../../..', 'package')).toThrow();
-      expect(() => getJson('bitd', '../../../package')).toThrow();
+      expect(() => getJson('../../..', 'package')).rejects.toThrow();
+      expect(() => getJson('bitd', '../../../package')).rejects.toThrow();
       expect(() =>
         getJson('bitd', 'scoundrel', '../../../../package')
-      ).toThrow();
+      ).rejects.toThrow();
     });
   });
 });

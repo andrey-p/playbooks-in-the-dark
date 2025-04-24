@@ -1,50 +1,50 @@
 {
   "id": "cult",
-  "name": "Cult",
-  "description": "Acolytes of a deity",
+  "name": "BITD.Playbooks.cult",
+  "description": "BITD.Playbooks.cultDescription",
   "modules": {
     "specialAbilities": {
       "abilities": [
         {
           "id": "chosen",
-          "name": "Chosen",
-          "description": "Each PC may add +1 action rating to <strong>Attune</strong>, <strong>Study</strong>, or <strong>Sway</strong> (up to a max rating of 3)."
+          "name": "BITD.Modules.specialAbilitiesChosen",
+          "description": "BITD.Modules.specialAbilitiesChosenDescription"
         },
         {
           "id": "anointed",
-          "name": "Anointed",
-          "description": "You get <strong>+1d</strong> to <strong>resistance</strong> rolls against supernatural threats. You get <strong>+1d</strong> to <strong>healing</strong> rolls when you have supernatural harm."
+          "name": "BITD.Modules.specialAbilitiesAnointed",
+          "description": "BITD.Modules.specialAbilitiesAnointedDescription"
         },
         {
           "id": "bound in darkness",
-          "name": "Bound in Darkness",
-          "description": "You may use <strong>teamwork</strong> with any cult member, regardless of the distance separating you. By taking 1 stress, your whispered message is heard by every cultist."
+          "name": "BITD.Modules.specialAbilitiesBoundInDarkness",
+          "description": "BITD.Modules.specialAbilitiesBoundInDarknessDescription"
         },
         {
           "id": "conviction",
-          "name": "Conviction",
-          "description": "Each PC gains an additional <strong>Vice</strong>: <em>Worship</em>. When you indulge this vice and bring a pleasing sacrifice, you don't overindulge if you clear excess stress. In addition, your deity will <strong>assist</strong> any one action roll you make—from now until you indulge this vice again."
+          "name": "BITD.Modules.specialAbilitiesConviction",
+          "description": "BITD.Modules.specialAbilitiesConvictionDescription"
         },
         {
           "id": "glory incarnate",
-          "name": "Glory Incarnate",
-          "description": "Your deity sometimes manifests in the physical world. This can be a great boon, but the priorities and values of a god are not those of mortals. You have been warned."
+          "name": "BITD.Modules.specialAbilitiesGloryIncarnate",
+          "description": "BITD.Modules.specialAbilitiesGloryIncarnateDescription"
         },
         {
           "id": "sealed in blood",
-          "name": "Sealed in Blood",
-          "description": "Each human sacrifice yields -3 stress cost for any ritual you perform."
+          "name": "BITD.Modules.specialAbilitiesSealedInBlood",
+          "description": "BITD.Modules.specialAbilitiesSealedInBloodDescription"
         },
         {
           "id": "zealotry",
-          "name": "Zealotry",
-          "description": "Your cohorts have abandoned their reason to devote themselves to the cult. They will undertake any service, no matter how dangerous or strange. They gain <strong>+1d</strong> to rolls against enemies of the faith."
+          "name": "BITD.Modules.specialAbilitiesZealotry",
+          "description": "BITD.Modules.specialAbilitiesZealotryDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "BITD.Modules.specialAbilitiesVeteranCrew",
           "max": 2,
-          "description": "Choose a special ability from another crew."
+          "description": "BITD.Modules.specialAbilitiesVeteranCrewDescription"
         }
       ]
     },
@@ -53,102 +53,125 @@
         [
           {
             "id": "cloister",
-            "name": "Cloister",
-            "description": "<strong>+1 scale</strong> for your Adept cohorts",
+            "name": "BITD.Modules.claimsCloister",
+            "description": "BITD.Modules.claimsCloisterDescription",
             "connections": ["right", "down"]
           },
           {
             "id": "vice den",
-            "name": "Vice Den",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsViceDen",
+            "description": "BITD.Modules.claimsViceDenDescription",
             "connections": ["down", "right"]
           },
           {
             "id": "offertory",
-            "name": "Offertory",
-            "description": "<strong>+2 coin</strong> for occult operations",
+            "name": "BITD.Modules.claimsOffertory",
+            "description": "BITD.Modules.claimsOffertoryDescription",
             "connections": ["down"]
           },
           {
             "id": "ancient obelisk",
-            "name": "Ancient Obelisk",
-            "description": "<strong>-1 stress</strong> cost for all arcane powers and rituals",
+            "name": "BITD.Modules.claimsAncientObelisk",
+            "description": "BITD.Modules.claimsAncientObeliskDescription",
             "connections": ["right"]
           },
           {
             "id": "ancient tower",
-            "name": "Ancient Tower",
-            "description": "<strong>+1d</strong> to Consort w/ arcane entities on site",
+            "name": "BITD.Modules.claimsAncientTower",
+            "description": "BITD.Modules.claimsAncientTowerDescription",
             "connections": ["down"]
           }
         ],
         [
           {
             "id": "turf1",
-            "name": "Turf",
-            "connections": ["right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["right"],
+            "description": ""
           },
           {
             "id": "turf2",
-            "name": "Turf",
-            "connections": ["down", "right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "lair",
-            "name": "Lair",
+            "name": "BITD.Modules.claimsLair",
             "selectable": false,
-            "connections": ["down", "right"]
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "turf3",
-            "name": "Turf",
-            "connections": ["down", "right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "turf4",
-            "name": "Turf",
-            "connections": ["down"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["down"],
+            "description": ""
           }
         ],
         [
           {
             "id": "spirit well",
-            "name": "Spirit Well",
-            "description": "<strong>+1d</strong> to Attune on site",
+            "name": "BITD.Modules.claimsSpiritWell",
+            "description": "BITD.Modules.claimsSpiritWellDescription",
             "connections": ["right"]
           },
           {
             "id": "ancient gate",
-            "name": "Ancient Gate",
-            "description": "Safe passage in the Deathlands"
+            "name": "BITD.Modules.claimsAncientGate",
+            "description": "BITD.Modules.claimsAncientGateDescription"
           },
           {
             "id": "sanctuary",
-            "name": "Sanctuary",
-            "description": "<strong>+1d</strong> to Command and Sway on site"
+            "name": "BITD.Modules.claimsSanctuary",
+            "description": "BITD.Modules.claimsSanctuaryDescription"
           },
           {
             "id": "sacred nexus",
-            "name": "Sacred Nexus",
-            "description": "<strong>+1d</strong> to healing rolls",
+            "name": "BITD.Modules.claimsSacredNexus",
+            "description": "BITD.Modules.claimsSacredNexusDescription",
             "connections": ["right"]
           },
           {
             "id": "ancient altar",
-            "name": "Ancient Altar",
-            "description": "<strong>+1d</strong> engagement for occult plans"
+            "name": "BITD.Modules.claimsAncientAltar",
+            "description": "BITD.Modules.claimsAncientAltarDescription"
           }
         ]
       ]
     },
     "contacts": {
       "contacts": [
-        { "id": "gagan", "name": "Gagan, an academic" },
-        { "id": "adikin", "name": "Adikin, an occultist" },
-        { "id": "hutchins", "name": "Hutchins, an antiquarian" },
-        { "id": "moriya", "name": "Moriya, a spirit trafficker" },
-        { "id": "mateas kline", "name": "Mateas Kline, a noble" },
-        { "id": "bennett", "name": "Bennett, an astronomer" }
+        {
+          "id": "gagan",
+          "name": "BITD.Modules.contactsGagan"
+        },
+        {
+          "id": "adikin",
+          "name": "BITD.Modules.contactsAdikin"
+        },
+        {
+          "id": "hutchins",
+          "name": "BITD.Modules.contactsHutchins"
+        },
+        {
+          "id": "moriya",
+          "name": "BITD.Modules.contactsMoriya"
+        },
+        {
+          "id": "mateas kline",
+          "name": "BITD.Modules.contactsMateasKline"
+        },
+        {
+          "id": "bennett",
+          "name": "BITD.Modules.contactsBennett"
+        }
       ]
     },
     "crewUpgrades": {
@@ -156,11 +179,31 @@
         "resolve": 1
       },
       "custom": [
-        { "id": "cult rigging", "name": "Cult Rigging (2 free load of documents or implements)", "load": 1 },
-        { "id": "ritual sanctum in lair", "name": "Ritual sanctum in lair", "load": 1 },
-        { "id": "elite adepts", "name": "Elite Adepts", "load": 1 },
-        { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
-        { "id": "ordained", "name": "Ordained (+1 trauma box)", "load": 3 }
+        {
+          "id": "cult rigging",
+          "name": "BITD.Modules.crewUpgradesCultRigging",
+          "load": 1
+        },
+        {
+          "id": "ritual sanctum in lair",
+          "name": "BITD.Modules.crewUpgradesRitualSanctumInLair",
+          "load": 1
+        },
+        {
+          "id": "elite adepts",
+          "name": "BITD.Modules.crewUpgradesEliteAdepts",
+          "load": 1
+        },
+        {
+          "id": "elite thugs",
+          "name": "BITD.Modules.crewUpgradesEliteThugs",
+          "load": 1
+        },
+        {
+          "id": "ordained",
+          "name": "BITD.Modules.crewUpgradesOrdained",
+          "load": 3
+        }
       ]
     },
     "cohorts": {
@@ -174,14 +217,13 @@
       ]
     },
     "favoredNotes": {
-      "customLabel": "Sacred sites",
+      "customLabel": "BITD.Modules.favoredNotesLabelSacredSites",
       "examples": [
-        "Acquisition",
-        "Augury",
-        "Consecration",
-        "Sacrifice"
+        "BITD.Modules.favoredNotesExampleAcquisition",
+        "BITD.Modules.favoredNotesExampleAugury",
+        "BITD.Modules.favoredNotesExampleConsecration",
+        "BITD.Modules.favoredNotesExampleSacrifice"
       ]
     }
   }
 }
-

@@ -4,6 +4,7 @@ import { useState, useReducer, useEffect, useCallback } from 'react';
 import { z } from 'zod';
 import { usePathname, useRouter } from 'next/navigation';
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 
 import {
   PlaybookData as PlaybookDataSchema,
@@ -54,6 +55,7 @@ export default function Playbook(props: Props) {
   const [userData, dispatch] = useReducer(userDataReducer, initialUserData);
   const pathName = usePathname();
   const router = useRouter();
+  const t = useTranslations();
 
   const save = useCallback(async () => {
     if (readOnly || !saveAction) {
@@ -135,8 +137,10 @@ export default function Playbook(props: Props) {
         />
       )}
       <header className={styles.header}>
-        <h1 className={styles.heading}>{playbookData.name}</h1>
-        <p className={styles.description}>{playbookData.description}</p>
+        <h1 className={styles.heading}>{t(playbookData.name)}</h1>
+        {playbookData.description && (
+          <p className={styles.description}>{t(playbookData.description)}</p>
+        )}
 
         <PlaybookActions
           isSaved={JSON.stringify(userData) === lastSaved}

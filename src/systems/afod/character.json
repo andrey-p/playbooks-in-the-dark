@@ -1,89 +1,92 @@
 {
   "id": "character",
-  "name": "Character",
+  "name": "AFOD.Playbooks.character",
   "playbooks": [
-    "fist", "shot", "law", "gamble",
-    "scout", "outlaw", "thunderheart", "speaker",
-    "plan", "gentle-touch", "wrench-saw"
+    "fist",
+    "shot",
+    "law",
+    "gamble",
+    "scout",
+    "outlaw",
+    "thunderheart",
+    "speaker",
+    "plan",
+    "gentle-touch",
+    "wrench-saw"
   ],
-  "layout": [[
-    ["name", "posse"],
-    "look",
-    "heritage",
-    "background",
-    "vice",
-    "grit",
-    "stigma",
-    "stigmaText",
-    "harm",
-    ["mutationClock", "healingClock", "armor"],
-    "notes"
-  ], [
-    "playbookXp",
-    "specialAbilities",
-    "contacts",
-    "items"
-  ], [
-    "coin",
-    "ablass",
-    "ratings"
-  ]],
+  "layout": [
+    [
+      ["name", "posse"],
+      "look",
+      "heritage",
+      "background",
+      "vice",
+      "grit",
+      "stigma",
+      "stigmaText",
+      "harm",
+      ["mutationClock", "healingClock", "armor"],
+      "notes"
+    ],
+    ["playbookXp", "specialAbilities", "contacts", "items"],
+    ["coin", "ablass", "ratings"]
+  ],
   "modules": {
     "name": {
       "id": "name",
       "type": "textField",
-      "label": "Name"
+      "label": "AFOD.Modules.nameLabel"
     },
     "posse": {
       "id": "posse",
       "type": "textField",
-      "label": "Name"
+      "label": "AFOD.Modules.posseLabel"
     },
     "look": {
       "id": "look",
       "type": "textField",
-      "label": "Look"
+      "label": "AFOD.Modules.lookLabel"
     },
     "heritage": {
       "id": "heritage",
       "type": "textField",
-      "label": "Heritage",
+      "label": "AFOD.Modules.heritageLabel",
       "props": {
         "examples": [
-          "African",
-          "Far East",
-          "European",
-          "Southern",
-          "Native",
-          "Mysterious"
+          "AFOD.Modules.heritageExampleAfrican",
+          "AFOD.Modules.heritageExampleFarEast",
+          "AFOD.Modules.heritageExampleEuropean",
+          "AFOD.Modules.heritageExampleSouthern",
+          "AFOD.Modules.heritageExampleNative",
+          "AFOD.Modules.heritageExampleMysterious"
         ]
       }
     },
     "background": {
       "id": "background",
       "type": "textField",
-      "label": "Background",
+      "label": "AFOD.Modules.backgroundLabel",
       "props": {
         "examples": [
-          "Big town",
-          "Frontier town",
-          "Ranch",
-          "Fort",
-          "Tribe",
-          "Loner",
-          "Immigrant"
+          "AFOD.Modules.backgroundExampleBigTown",
+          "AFOD.Modules.backgroundExampleFrontierTown",
+          "AFOD.Modules.backgroundExampleRanch",
+          "AFOD.Modules.backgroundExampleFort",
+          "AFOD.Modules.backgroundExampleTribe",
+          "AFOD.Modules.backgroundExampleLoner",
+          "AFOD.Modules.backgroundExampleImmigrant"
         ]
       }
     },
     "vice": {
       "id": "vice",
       "type": "textField",
-      "label": "Vice / Purveyor"
+      "label": "AFOD.Modules.viceLabel"
     },
     "grit": {
       "id": "grit",
       "type": "tracker",
-      "label": "Grit",
+      "label": "AFOD.Modules.gritLabel",
       "props": {
         "type": "rectangle",
         "size": 30,
@@ -93,7 +96,7 @@
     "stigma": {
       "id": "stigma",
       "type": "tracker",
-      "label": "Stigma",
+      "label": "AFOD.Modules.stigmaLabel",
       "props": {
         "type": "rectangle",
         "size": 30,
@@ -103,33 +106,37 @@
     "stigmaText": {
       "id": "stigmaText",
       "type": "textField",
-      "label": "Stigma",
+      "label": "AFOD.Modules.stigmaLabel",
       "props": {
         "examples": [
-          "Scarred",
-          "Corrupted",
-          "Visions",
-          "Gloryhound",
-          "Voices",
-          "Cursed",
-          "Numb",
-          "Hunted",
-          "Shamed"
+          "AFOD.Modules.stigmaExampleScarred",
+          "AFOD.Modules.stigmaExampleCorrupted",
+          "AFOD.Modules.stigmaExampleVisions",
+          "AFOD.Modules.stigmaExampleGloryhound",
+          "AFOD.Modules.stigmaExampleVoices",
+          "AFOD.Modules.stigmaExampleCursed",
+          "AFOD.Modules.stigmaExampleNumb",
+          "AFOD.Modules.stigmaExampleHunted",
+          "AFOD.Modules.stigmaExampleShamed"
         ]
       }
     },
     "harm": {
       "id": "harm",
       "type": "harm",
-      "label": "Harm",
+      "label": "AFOD.Modules.harmLabel",
       "props": {
-        "levelDescriptions": ["Less effect", "-1D", "Need help"]
+        "levelDescriptions": [
+          "AFOD.Modules.harmLessEffect",
+          "AFOD.Modules.harmMinus1D",
+          "AFOD.Modules.harmNeedHelp"
+        ]
       }
     },
     "mutationClock": {
       "id": "mutationClock",
       "type": "tracker",
-      "label": "Mutation",
+      "label": "AFOD.Modules.mutationClockLabel",
       "props": {
         "type": "clock",
         "max": 8
@@ -138,7 +145,7 @@
     "healingClock": {
       "id": "healingClock",
       "type": "tracker",
-      "label": "Heal",
+      "label": "AFOD.Modules.healingClockLabel",
       "props": {
         "type": "clock",
         "max": 4
@@ -147,97 +154,105 @@
     "armor": {
       "id": "armor",
       "type": "items",
-      "label": "Armor Uses",
+      "label": "AFOD.Modules.armorLabel",
       "props": {
         "common": [
-          { "id": "armor", "name": "Armor", "load": 1 },
-          { "id": "special", "name": "Special", "load": 1 }
+          {
+            "id": "armor",
+            "name": "AFOD.Modules.armorArmor",
+            "load": 1
+          },
+          {
+            "id": "special",
+            "name": "AFOD.Modules.armorSpecial",
+            "load": 1
+          }
         ]
       }
     },
     "notes": {
       "id": "notes",
       "type": "textArea",
-      "label": "Notes"
+      "label": "AFOD.Modules.notesLabel"
     },
     "ratings": {
       "id": "ratings",
       "type": "ratings",
-      "label": "Ratings",
+      "label": "AFOD.Modules.ratingsLabel",
       "props": {
         "attributes": [
           {
             "id": "wit",
-            "name": "Wit"
+            "name": "AFOD.Modules.ratingsWit"
           },
           {
             "id": "prowess",
-            "name": "Prowess"
+            "name": "AFOD.Modules.ratingsProwess"
           },
           {
             "id": "guts",
-            "name": "Guts"
+            "name": "AFOD.Modules.ratingsGuts"
           }
         ],
         "actions": [
           {
             "id": "hunt",
-            "name": "Hunt",
+            "name": "AFOD.Modules.ratingsHunt",
             "attributeId": "wit"
           },
           {
             "id": "read",
-            "name": "Read",
+            "name": "AFOD.Modules.ratingsRead",
             "attributeId": "wit"
           },
           {
             "id": "survey",
-            "name": "Survey",
+            "name": "AFOD.Modules.ratingsSurvey",
             "attributeId": "wit"
           },
           {
             "id": "craft",
-            "name": "Craft",
+            "name": "AFOD.Modules.ratingsCraft",
             "attributeId": "wit"
           },
           {
             "id": "sling",
-            "name": "Sling",
+            "name": "AFOD.Modules.ratingsSling",
             "attributeId": "prowess"
           },
           {
             "id": "prowl",
-            "name": "Prowl",
+            "name": "AFOD.Modules.ratingsProwl",
             "attributeId": "prowess"
           },
           {
             "id": "brawl",
-            "name": "Brawl",
+            "name": "AFOD.Modules.ratingsBrawl",
             "attributeId": "prowess"
           },
           {
             "id": "disable",
-            "name": "Disable",
+            "name": "AFOD.Modules.ratingsDisable",
             "attributeId": "prowess"
           },
           {
             "id": "attune",
-            "name": "Attune",
+            "name": "AFOD.Modules.ratingsAttune",
             "attributeId": "guts"
           },
           {
             "id": "command",
-            "name": "Command",
+            "name": "AFOD.Modules.ratingsCommand",
             "attributeId": "guts"
           },
           {
             "id": "consort",
-            "name": "Consort",
+            "name": "AFOD.Modules.ratingsConsort",
             "attributeId": "guts"
           },
           {
             "id": "sway",
-            "name": "Sway",
+            "name": "AFOD.Modules.ratingsSway",
             "attributeId": "guts"
           }
         ],
@@ -251,7 +266,7 @@
     "playbookXp": {
       "id": "playbookXp",
       "type": "tracker",
-      "label": "Playbook XP",
+      "label": "AFOD.Modules.playbookXpLabel",
       "props": {
         "max": 8,
         "size": 30,
@@ -261,67 +276,168 @@
     "coin": {
       "id": "coin",
       "type": "items",
-      "label": "Coin",
+      "label": "AFOD.Modules.coinLabel",
       "props": {
         "common": [
-          { "id": "coin1", "name": "", "load": 2, "showLinked": false },
-          { "id": "coin2", "name": "", "load": 2, "showLinked": false },
-          { "id": "coin3", "name": "", "load": 2, "showLinked": false },
-          { "id": "coin4", "name": "", "load": 2, "showLinked": false }
+          {
+            "id": "coin1",
+            "name": "",
+            "load": 2,
+            "showLinked": false
+          },
+          {
+            "id": "coin2",
+            "name": "",
+            "load": 2,
+            "showLinked": false
+          },
+          {
+            "id": "coin3",
+            "name": "",
+            "load": 2,
+            "showLinked": false
+          },
+          {
+            "id": "coin4",
+            "name": "",
+            "load": 2,
+            "showLinked": false
+          }
         ]
       }
     },
     "ablass": {
       "id": "ablass",
       "type": "tracker",
-      "label": "Ablass",
+      "label": "AFOD.Modules.ablassLabel",
       "props": {
         "max": 40,
         "type": "square",
         "wrap": true,
-        "label": "Ablass"
+        "label": "AFOD.Modules.ablassLabel"
       }
     },
     "specialAbilities": {
       "id": "specialAbilities",
       "type": "specialAbilities",
-      "label": "Special abilities"
+      "label": "AFOD.Modules.specialAbilitiesLabel"
     },
     "contacts": {
       "id": "contacts",
       "type": "contacts",
-      "label": "Contacts"
+      "label": "AFOD.Modules.contactsLabel"
     },
     "items": {
       "id": "items",
       "type": "items",
-      "label": "Items",
+      "label": "AFOD.Modules.itemsLabel",
       "props": {
         "twoColumns": true,
         "load": [
-          { "id": "light", "name": "3 light" },
-          { "id": "normal", "name": "5 normal" },
-          { "id": "heavy", "name": "6 heavy" }
+          {
+            "id": "light",
+            "name": "AFOD.Modules.itemsLoadLight"
+          },
+          {
+            "id": "normal",
+            "name": "AFOD.Modules.itemsLoadNormal"
+          },
+          {
+            "id": "heavy",
+            "name": "AFOD.Modules.itemsLoadHeavy"
+          }
         ],
         "common": [
-          { "id": "a pistol", "name": "A Pistol", "load": 1 },
-          { "id": "a 2nd pistol", "name": "A 2nd Pistol", "load": 1 },
-          { "id": "a melee weapon", "name": "A Melee Weapon", "load": 1 },
-          { "id": "a 2nd melee weapon", "name": "A 2nd Melee Weapon", "load": 1 },
-          { "id": "lantern", "name": "Lantern", "load": 1 },
-          { "id": "throwing knives", "name": "Throwing Knives", "load": 1 },
-          { "id": "armor", "name": "Armour", "load": 2 },
-          { "id": "a large weapon", "name": "A Large Weapon", "load": 2 },
-          { "id": "an unusual weapon", "name": "An Unusual Weapon", "load": 1 },
-          { "id": "a horse with saddle", "name": "A Horse with Saddle", "load": 0 },
-          { "id": "a rope", "name": "A Rope", "load": 1 },
-          { "id": "documents", "name": "Documents", "load": 1 },
-          { "id": "arcane ingredients", "name": "Arcane Ingredients", "load": 1 },
-          { "id": "subterfuge supplies", "name": "Subterfuge Supplies", "load": 1 },
-          { "id": "demolition tools", "name": "Demolition Tools", "load": 2 },
-          { "id": "crafting tools", "name": "Crafting Tools", "load": 1 },
-          { "id": "a spirit bane", "name": "A Spirit Bane", "load": 1 },
-          { "id": "a useful item", "name": "A Userful Item", "load": 2 }
+          {
+            "id": "a pistol",
+            "name": "AFOD.Modules.itemsAPistol",
+            "load": 1
+          },
+          {
+            "id": "a 2nd pistol",
+            "name": "AFOD.Modules.itemsA2ndPistol",
+            "load": 1
+          },
+          {
+            "id": "a melee weapon",
+            "name": "AFOD.Modules.itemsAMeleeWeapon",
+            "load": 1
+          },
+          {
+            "id": "a 2nd melee weapon",
+            "name": "AFOD.Modules.itemsA2ndMeleeWeapon",
+            "load": 1
+          },
+          {
+            "id": "lantern",
+            "name": "AFOD.Modules.itemsLantern",
+            "load": 1
+          },
+          {
+            "id": "throwing knives",
+            "name": "AFOD.Modules.itemsThrowingKnives",
+            "load": 1
+          },
+          {
+            "id": "armor",
+            "name": "AFOD.Modules.itemsArmor",
+            "load": 2
+          },
+          {
+            "id": "a large weapon",
+            "name": "AFOD.Modules.itemsALargeWeapon",
+            "load": 2
+          },
+          {
+            "id": "an unusual weapon",
+            "name": "AFOD.Modules.itemsAnUnusualWeapon",
+            "load": 1
+          },
+          {
+            "id": "a horse with saddle",
+            "name": "AFOD.Modules.itemsAHorseWithSaddle",
+            "load": 0
+          },
+          {
+            "id": "a rope",
+            "name": "AFOD.Modules.itemsARope",
+            "load": 1
+          },
+          {
+            "id": "documents",
+            "name": "AFOD.Modules.itemsDocuments",
+            "load": 1
+          },
+          {
+            "id": "arcane ingredients",
+            "name": "AFOD.Modules.itemsArcaneIngredients",
+            "load": 1
+          },
+          {
+            "id": "subterfuge supplies",
+            "name": "AFOD.Modules.itemsSubterfugeSupplies",
+            "load": 1
+          },
+          {
+            "id": "demolition tools",
+            "name": "AFOD.Modules.itemsDemolitionTools",
+            "load": 2
+          },
+          {
+            "id": "crafting tools",
+            "name": "AFOD.Modules.itemsCraftingTools",
+            "load": 1
+          },
+          {
+            "id": "a spirit bane",
+            "name": "AFOD.Modules.itemsASpiritBane",
+            "load": 1
+          },
+          {
+            "id": "a useful item",
+            "name": "AFOD.Modules.itemsAUsefulItem",
+            "load": 2
+          }
         ]
       }
     }

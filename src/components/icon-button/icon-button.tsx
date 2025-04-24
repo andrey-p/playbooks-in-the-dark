@@ -1,4 +1,4 @@
-import styles from './button.module.css';
+import styles from './icon-button.module.css';
 
 type Props = {
   onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
@@ -6,7 +6,7 @@ type Props = {
   icon: React.ReactNode;
 };
 
-export default function Button(props: Props) {
+export default function IconButton(props: Props) {
   const { onClick, label, icon } = props;
 
   return (

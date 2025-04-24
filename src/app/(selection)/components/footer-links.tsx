@@ -1,7 +1,10 @@
 import Link from 'next/link';
 import styles from './footer-links.module.css';
+import { useTranslations } from 'next-intl';
 
 export default function FooterLinks() {
+  const t = useTranslations();
+
   return (
     <ul className={styles.container}>
       <li className={styles.item}>
@@ -13,7 +16,7 @@ export default function FooterLinks() {
         </Link>
       </li>
       <li className={styles.item}>
-        <Link href='/faq'>FAQ</Link>
+        <Link href='/faq'>{t('UI.Global.faq')}</Link>
       </li>
     </ul>
   );

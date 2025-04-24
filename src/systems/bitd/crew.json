@@ -8,75 +8,78 @@
     "smugglers",
     "shadows"
   ],
-  "name": "Crew",
-  "layout": [[
-    ["name", "lair"],
-    "deity",
-    ["reputation", "repTurf"],
-    ["hold", "tier"],
-    "claims",
-    ["heatWanted", "coin"],
-    "favoredNotes",
-    "notes"
-  ], [
-    "crewXp",
-    "specialAbilities",
-    "contacts",
-    "crewUpgrades",
-    "cohorts",
-    "vehicleCohort"
-  ]],
+  "name": "BITD.Playbooks.crew",
+  "layout": [
+    [
+      ["name", "lair"],
+      "deity",
+      ["reputation", "repTurf"],
+      ["hold", "tier"],
+      "claims",
+      ["heatWanted", "coin"],
+      "favoredNotes",
+      "notes"
+    ],
+    [
+      "crewXp",
+      "specialAbilities",
+      "contacts",
+      "crewUpgrades",
+      "cohorts",
+      "vehicleCohort"
+    ]
+  ],
   "modules": {
     "name": {
       "id": "name",
       "type": "textField",
-      "label": "Name"
+      "label": "BITD.Modules.nameLabel"
     },
     "reputation": {
       "id": "reputation",
       "type": "textField",
-      "label": "Reputation"
+      "label": "BITD.Modules.reputationLabel"
     },
     "lair": {
       "id": "lair",
       "type": "textField",
-      "label": "Lair"
+      "label": "BITD.Modules.lairLabel"
     },
     "deity": {
       "id": "deity",
       "type": "textField",
-      "label": "Deity (choose 2 features)",
+      "label": "BITD.Modules.deityLabel",
       "playbooks": ["cult"],
       "props": {
         "examples": [
-          "Alluring",
-          "Cruel",
-          "Ferocious",
-          "Monstrous",
-          "Radiant",
-          "Sinister",
-          "Serene",
-          "Transcendent"
+          "BITD.Modules.deityExampleAlluring",
+          "BITD.Modules.deityExampleCruel",
+          "BITD.Modules.deityExampleFerocious",
+          "BITD.Modules.deityExampleMonstrous",
+          "BITD.Modules.deityExampleRadiant",
+          "BITD.Modules.deityExampleSinister",
+          "BITD.Modules.deityExampleSerene",
+          "BITD.Modules.deityExampleTranscendent"
         ]
       }
     },
     "repTurf": {
       "id": "repTurf",
       "type": "multiTracker",
-      "label": "Reputation & Turf",
+      "label": "BITD.Modules.repTurfLabel",
       "props": {
         "trackers": {
           "rep": {
             "max": 12,
             "type": "dagger",
-            "label": "Rep"
+            "label": "BITD.Modules.repLabel"
           },
           "turf": {
             "max": 6,
             "reverse": true,
             "size": 12,
             "type": "square",
-            "label": "Turf"
+            "label": "BITD.Modules.turfLabel"
           }
         }
       }
@@ -84,39 +87,57 @@
     "hold": {
       "id": "hold",
       "type": "radioGroup",
-      "label": "Hold",
+      "label": "BITD.Modules.holdLabel",
       "props": {
         "type": "dagger",
         "size": 30,
         "options": [
-          { "id": "weak", "name": "Weak" },
-          { "id": "strong", "name": "Strong" }
+          {
+            "id": "weak",
+            "name": "BITD.Modules.holdWeak"
+          },
+          {
+            "id": "strong",
+            "name": "BITD.Modules.holdStrong"
+          }
         ]
       }
     },
     "tier": {
       "id": "tier",
       "type": "radioGroup",
-      "label": "Tier",
+      "label": "BITD.Modules.tierLabel",
       "props": {
         "type": "circle",
         "options": [
-          { "id": "1", "name": "1" },
-          { "id": "2", "name": "2" },
-          { "id": "3", "name": "3" },
-          { "id": "4", "name": "4" }
+          {
+            "id": "1",
+            "name": "BITD.Modules.tier0"
+          },
+          {
+            "id": "2",
+            "name": "BITD.Modules.tier1"
+          },
+          {
+            "id": "3",
+            "name": "BITD.Modules.tier2"
+          },
+          {
+            "id": "4",
+            "name": "BITD.Modules.tier3"
+          }
         ]
       }
     },
     "claims": {
       "id": "claims",
       "type": "claims",
-      "label": "Claims"
+      "label": "BITD.Modules.claimsLabel"
     },
     "crewXp": {
       "id": "crewXp",
       "type": "tracker",
-      "label": "Crew XP",
+      "label": "BITD.Modules.crewXpLabel",
       "props": {
         "max": 10,
         "type": "dagger"
@@ -125,12 +146,12 @@
     "specialAbilities": {
       "id": "specialAbilities",
       "type": "specialAbilities",
-      "label": "Special abilities"
+      "label": "BITD.Modules.specialAbilitiesLabel"
     },
     "contacts": {
       "id": "contacts",
       "type": "contacts",
-      "label": "Contacts",
+      "label": "BITD.Modules.contactsLabel",
       "props": {
         "variant": "neutral"
       }
@@ -138,18 +159,18 @@
     "heatWanted": {
       "id": "heatWanted",
       "type": "multiTracker",
-      "label": "Heat / Wanted Level",
+      "label": "BITD.Modules.heatWantedLabel",
       "props": {
         "trackers": {
           "heat": {
             "max": 9,
             "type": "dagger",
-            "label": "Heat"
+            "label": "BITD.Modules.heatLabel"
           },
           "wanted": {
             "max": 4,
             "type": "dagger",
-            "label": "Wanted"
+            "label": "BITD.Modules.wantedLabel"
           }
         }
       }
@@ -157,19 +178,19 @@
     "coin": {
       "id": "coin",
       "type": "multiTracker",
-      "label": "Coin",
-      "description": "Upon crew advance, each PC gets stash = Tier + 2",
+      "label": "BITD.Modules.coinLabel",
+      "description": "BITD.Modules.coinDescription",
       "props": {
         "trackers": {
           "coin": {
             "max": 4,
             "type": "square",
-            "label": "Coin"
+            "label": "BITD.Modules.coinLabel"
           },
           "vault": {
             "max": 12,
             "type": "square",
-            "label": "Vault"
+            "label": "BITD.Modules.vaultLabel"
           }
         }
       }
@@ -177,7 +198,7 @@
     "favoredNotes": {
       "id": "favoredNotes",
       "type": "textArea",
-      "label": "Favored grounds / operation",
+      "label": "BITD.Modules.favoredNotesLabel",
       "props": {
         "height": 150
       }
@@ -185,71 +206,185 @@
     "notes": {
       "id": "notes",
       "type": "textArea",
-      "label": "Notes"
+      "label": "BITD.Modules.notesLabel"
     },
     "crewUpgrades": {
       "id": "crewUpgrades",
       "type": "items",
-      "label": "Crew Upgrades",
-      "description": "Cohorts upgrade costs: New cohort - 2, Add type - 2",
+      "label": "BITD.Modules.crewUpgradesLabel",
+      "description": "BITD.Modules.crewUpgradesDescription",
       "props": {
         "twoColumns": true,
         "groups": [
-          { "id": "lair", "name": "Lair" },
-          { "id": "training", "name": "Training" },
-          { "id": "quality", "name": "Quality" }
+          {
+            "id": "lair",
+            "name": "BITD.Modules.crewUpgradesLair"
+          },
+          {
+            "id": "training",
+            "name": "BITD.Modules.crewUpgradesTraining"
+          },
+          {
+            "id": "quality",
+            "name": "BITD.Modules.crewUpgradesQuality"
+          }
         ],
         "common": [
-          { "id": "carriage", "name": "Carriage", "load": 2, "showLinked": false, "group": "lair" },
-          { "id": "boat", "name": "Boat", "load": 2, "showLinked": false, "group": "lair" },
-          { "id": "hidden", "name": "Hidden", "load": 1, "group": "lair" },
-          { "id": "quarters", "name": "Quarters", "load": 1, "group": "lair" },
-          { "id": "secure", "name": "Secure", "load": 2, "showLinked": false, "group": "lair" },
-          { "id": "vault", "name": "Vault", "load": 2, "showLinked": false, "group": "lair" },
-          { "id": "workshop", "name": "Workshop", "load": 1, "group": "lair" },
-
-          { "id": "documents", "name": "Documents", "load": 1, "group": "quality" },
-          { "id": "gear", "name": "Gear", "load": 1, "group": "quality" },
-          { "id": "supplies", "name": "Supplies", "load": 1, "group": "quality" },
-          { "id": "tools", "name": "Tools", "load": 1, "group": "quality" },
-          { "id": "weapons", "name": "Weapons", "load": 1, "group": "quality" },
-
-          { "id": "insight", "name": "Insight", "load": 1, "group": "training" },
-          { "id": "prowess", "name": "Prowess", "load": 1, "group": "training" },
-          { "id": "resolve", "name": "Resolve", "load": 1, "group": "training" },
-          { "id": "personal", "name": "Personal", "load": 1, "group": "training" },
-          { "id": "mastery", "name": "Mastery", "load": 4, "group": "training" }
+          {
+            "id": "carriage",
+            "name": "BITD.Modules.crewUpgradesCarriage",
+            "load": 2,
+            "showLinked": false,
+            "group": "lair"
+          },
+          {
+            "id": "boat",
+            "name": "BITD.Modules.crewUpgradesBoat",
+            "load": 2,
+            "showLinked": false,
+            "group": "lair"
+          },
+          {
+            "id": "hidden",
+            "name": "BITD.Modules.crewUpgradesHidden",
+            "load": 1,
+            "group": "lair"
+          },
+          {
+            "id": "quarters",
+            "name": "BITD.Modules.crewUpgradesQuarters",
+            "load": 1,
+            "group": "lair"
+          },
+          {
+            "id": "secure",
+            "name": "BITD.Modules.crewUpgradesSecure",
+            "load": 2,
+            "showLinked": false,
+            "group": "lair"
+          },
+          {
+            "id": "vault",
+            "name": "BITD.Modules.crewUpgradesVault",
+            "load": 2,
+            "showLinked": false,
+            "group": "lair"
+          },
+          {
+            "id": "workshop",
+            "name": "BITD.Modules.crewUpgradesWorkshop",
+            "load": 1,
+            "group": "lair"
+          },
+          {
+            "id": "documents",
+            "name": "BITD.Modules.crewUpgradesDocuments",
+            "load": 1,
+            "group": "quality"
+          },
+          {
+            "id": "gear",
+            "name": "BITD.Modules.crewUpgradesGear",
+            "load": 1,
+            "group": "quality"
+          },
+          {
+            "id": "supplies",
+            "name": "BITD.Modules.crewUpgradesSupplies",
+            "load": 1,
+            "group": "quality"
+          },
+          {
+            "id": "tools",
+            "name": "BITD.Modules.crewUpgradesTools",
+            "load": 1,
+            "group": "quality"
+          },
+          {
+            "id": "weapons",
+            "name": "BITD.Modules.crewUpgradesWeapons",
+            "load": 1,
+            "group": "quality"
+          },
+          {
+            "id": "insight",
+            "name": "BITD.Modules.crewUpgradesInsight",
+            "load": 1,
+            "group": "training"
+          },
+          {
+            "id": "prowess",
+            "name": "BITD.Modules.crewUpgradesProwess",
+            "load": 1,
+            "group": "training"
+          },
+          {
+            "id": "resolve",
+            "name": "BITD.Modules.crewUpgradesResolve",
+            "load": 1,
+            "group": "training"
+          },
+          {
+            "id": "personal",
+            "name": "BITD.Modules.crewUpgradesPersonal",
+            "load": 1,
+            "group": "training"
+          },
+          {
+            "id": "mastery",
+            "name": "BITD.Modules.crewUpgradesMastery",
+            "load": 4,
+            "group": "training"
+          }
         ]
       }
     },
     "cohorts": {
       "id": "cohorts",
       "type": "cohorts",
-      "label": "Cohorts",
+      "label": "BITD.Modules.cohortsLabel",
       "props": {
         "slots": 4,
         "radioGroups": {
           "gangExpert": {
             "type": "circle",
             "options": [
-              { "id": "gang", "name": "Gang" },
-              { "id": "expert", "name": "Expert" }
+              {
+                "id": "gang",
+                "name": "BITD.Modules.cohortsGang"
+              },
+              {
+                "id": "expert",
+                "name": "BITD.Modules.cohortsExpert"
+              }
             ]
           },
           "harm": {
             "type": "dagger",
             "size": 30,
             "options": [
-              { "id": "weak", "name": "Weak" },
-              { "id": "impaired", "name": "Impaired" },
-              { "id": "broken", "name": "Broken" }
+              {
+                "id": "weak",
+                "name": "BITD.Modules.cohortsWeak"
+              },
+              {
+                "id": "impaired",
+                "name": "BITD.Modules.cohortsImpaired"
+              },
+              {
+                "id": "broken",
+                "name": "BITD.Modules.cohortsBroken"
+              }
             ]
           },
           "armor": {
             "type": "dagger",
             "size": 30,
             "options": [
-              { "id": "armor", "name": "Armor" }
+              {
+                "id": "armor",
+                "name": "BITD.Modules.cohortsArmor"
+              }
             ]
           }
         }
@@ -259,8 +394,8 @@
       "id": "vehicleCohort",
       "type": "description",
       "playbooks": ["smugglers"],
-      "label": "Vehicle Edges / Flaws",
-      "description": "<p><strong>Vehicle Edges</strong></p> <p><strong>Nimble:</strong> The vehicle handles easily. Consider this an <strong>assist</strong> for tricky maneuvers.</p> <p><strong>Simple:</strong> The vehicle is easy to repair. Remove all of its harm during downtime.</p> <p><strong>Sturdy:</strong> The vehicle keeps operating even when broken.</p> <p><strong>Vehicle Flaws</strong></p> <p><strong>Costly:</strong> The vehicle costs 1 coin per downtime to keep in operation.</p> <p><strong>Distinct:</strong> The vehicle has memorable features. Take +1 heat when you use it on a score.</p> <p><strong>Finicky:</strong> The vehicle has quirks that only one person understands. When operated without them, the vehicle has -1 quality.</p>"
+      "label": "BITD.Modules.vehicleCohortLabel",
+      "description": "BITD.Modules.vehicleCohortDescription"
     }
   }
 }

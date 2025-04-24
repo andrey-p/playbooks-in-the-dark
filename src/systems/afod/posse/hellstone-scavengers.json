@@ -1,99 +1,100 @@
 {
   "id": "hellstone-scavengers",
-  "name": "Hellstone Scavengers",
+  "name": "AFOD.Playbooks.hellstone-scavengers",
   "modules": {
     "achievements": {
       "claims": [
         [
           {
             "id": "hell's own light",
-            "name": "Hell's Own Light",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsHellsOwnLight",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": ["down"]
           },
           {
             "id": "spirit well",
-            "name": "Spirit Well",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsSpiritWell",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": ["right"]
           },
           {
             "id": "the map",
-            "name": "The Map",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsTheMap",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": ["down"]
           },
           {
             "id": "the great law of peace",
-            "name": "The Great Law of Peace",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsTheGreatLawOfPeace",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": ["down", "right"]
           },
           {
             "id": "eternal flame",
-            "name": "Eternal Flame",
-            "description": "Light"
+            "name": "AFOD.Modules.achievementsEternalFlame",
+            "description": "AFOD.Modules.achievementsLight"
           }
         ],
         [
           {
             "id": "hellish inventor",
-            "name": "Hellish Inventor",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsHellishInventor",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": ["right"]
           },
           {
             "id": "hellstone claim 1",
-            "name": "Hellstone Claim",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": ["right", "down"]
           },
           {
             "id": "equilibrium",
-            "name": "Equilibrium",
+            "name": "AFOD.Modules.achievementsEquilibrium",
             "connections": ["down", "right"],
-            "selectable": false
+            "selectable": false,
+            "description": ""
           },
           {
             "id": "the mark of beyond",
-            "name": "The Mark of Beyond",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsTheMarkOfBeyond",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": ["right"]
           },
           {
             "id": "hellstone claim 2",
-            "name": "Hellstone Claim",
-            "description": "Light",
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsLight",
             "connections": ["down"]
           }
         ],
         [
           {
             "id": "the wyrm",
-            "name": "The Wyrm",
-            "description": "Darkness",
+            "name": "AFOD.Modules.achievementsTheWyrm",
+            "description": "AFOD.Modules.achievementsDarkness",
             "connections": ["right"]
           },
           {
             "id": "the black lake",
-            "name": "The Black Lake",
-            "description": "Darkness"
+            "name": "AFOD.Modules.achievementsTheBlackLake",
+            "description": "AFOD.Modules.achievementsDarkness"
           },
           {
             "id": "the cornerstone",
-            "name": "The Cornerstone",
-            "description": "Neutral",
+            "name": "AFOD.Modules.achievementsTheCornerstone",
+            "description": "AFOD.Modules.achievementsNeutral",
             "connections": ["right"]
           },
           {
             "id": "hellstone claim 3",
-            "name": "Hellstone Claim",
-            "description": "Neutral"
+            "name": "AFOD.Modules.achievementsHellstoneClaim",
+            "description": "AFOD.Modules.achievementsNeutral"
           },
           {
             "id": "the gate",
-            "name": "The Gate",
-            "description": "Light"
+            "name": "AFOD.Modules.achievementsTheGate",
+            "description": "AFOD.Modules.achievementsLight"
           }
         ]
       ]
@@ -102,63 +103,81 @@
       "abilities": [
         {
           "id": "heigh-ho",
-          "name": "Heigh-Ho",
-          "description": "Each PC may add +1 Action rating to Attune, Disable, or Prowl (up to a max rating of 3)."
+          "name": "AFOD.Modules.specialAbilitiesHeighHo",
+          "description": "AFOD.Modules.specialAbilitiesHeighHoDescription"
         },
         {
           "id": "transporter",
-          "name": "Transporter",
-          "description": "When you execute a Travel Plan to start your run or Hellstone Scavenge, take +1d to the engagement roll."
+          "name": "AFOD.Modules.specialAbilitiesTransporter",
+          "description": "AFOD.Modules.specialAbilitiesTransporterDescription"
         },
         {
           "id": "dig dug",
-          "name": "Dig Dug",
-          "description": "No way to rip you off. When you acquire mining equipment or explosives, you get +1 result level to your roll."
+          "name": "AFOD.Modules.specialAbilitiesDigDug",
+          "description": "AFOD.Modules.specialAbilitiesDigDugDescription"
         },
         {
           "id": "leverage",
-          "name": "Leverage",
-          "description": "Your Posse supplies ’found stuff’ for other Factions. Your success is good for them. Whenever you gain Rep, gain +1 Rep. <em>Which Factions? Who’s angry about this arrangement? Which quality rating of which location is affected by this arrangement?</em>"
+          "name": "AFOD.Modules.specialAbilitiesLeverage",
+          "description": "AFOD.Modules.specialAbilitiesLeverageDescription"
         },
         {
           "id": "got used to the strange life",
-          "name": "Got Used to the Strange Life",
-          "description": "You get +1d to resistance rolls against supernatural threats including Delving Too Deep. You get +1d to healing rolls when you have supernatural harm."
+          "name": "AFOD.Modules.specialAbilitiesGotUsedToTheStrangeLife",
+          "description": "AFOD.Modules.specialAbilitiesGotUsedToTheStrangeLifeDescription"
         },
         {
           "id": "undue hellish confidence",
-          "name": "Undue Hellish Confidence",
-          "description": "No one can beat your Posse as long you have Hellstone around (at least it feels this way). Once per run you may regain 1 Grit if you make a Mutation Roll."
+          "name": "AFOD.Modules.specialAbilitiesUndueHellishConfidence",
+          "description": "AFOD.Modules.specialAbilitiesUndueHellishConfidenceDescription"
         },
         {
           "id": "patron",
-          "name": "Patron",
-          "description": "When you advance your Tier, it costs half the coin it normally would. <em>Who is your patron? Why do they help you?</em>"
+          "name": "AFOD.Modules.specialAbilitiesPatron",
+          "description": "AFOD.Modules.specialAbilitiesPatronDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteranPosse",
           "max": 3,
-          "description": "Choose a special ability from another crew."
+          "description": "AFOD.Modules.specialAbilitiesVeteranPosseDescription"
         }
       ]
     },
     "modus": {
       "examples": [
-        "Scavenge",
-        "Mining",
-        "Supply",
-        "Sale"
+        "AFOD.Modules.modusExampleScavenge",
+        "AFOD.Modules.modusExampleMining",
+        "AFOD.Modules.modusExampleSupply",
+        "AFOD.Modules.modusExampleSale"
       ]
     },
     "contacts": {
       "contacts": [
-        { "id": "bill scar morgan", "name": "Bill 'Scar' Morgan, a judge" },
-        { "id": "railroad gilliam", "name": "'Railroad' Gilliam, a marshal" },
-        { "id": "sweet dave", "name": "Sweet Dave, a piano player" },
-        { "id": "grover mcintyre", "name": "Grover McIntyre, hardware store owner" },
-        { "id": "ling lee", "name": "Ling Lee, a collector" },
-        { "id": "old man bruford", "name": "Old Man Bruford, gin mill owner" }
+        {
+          "id": "bill scar morgan",
+          "name": "AFOD.Modules.contactsBillScarMorgan"
+        },
+        {
+          "id": "railroad gilliam",
+          "name": "AFOD.Modules.contactsRailroadGilliam"
+        },
+        {
+          "id": "sweet dave",
+          "name": "AFOD.Modules.contactsSweetDave"
+        },
+        {
+          "id": "grover mcintyre",
+          "name": "AFOD.Modules.contactsGroverMcintyre"
+        },
+        {
+          "id": "ling lee",
+          "name": "AFOD.Modules.contactsLingLee"
+        },
+        {
+          "id": "old man bruford",
+          "name": "AFOD.Modules.contactsOldManBruford"
+        }
       ]
     },
     "posseUpgrades": {
@@ -167,13 +186,33 @@
         "guts": 1
       },
       "custom": [
-        { "id": "scavenger rigging", "name": "Scavenger Rigging (tools or weapons)", "load": 1 },
-        { "id": "elite scouts", "name": "Elite Scouts", "load": 1 },
-        { "id": "elite movers", "name": "Elite Movers", "load": 1 },
-        { "id": "fine carriages", "name": "Fine Carriages", "load": 1 },
-        { "id": "steady", "name": "Steady (+1 Grit Box)", "load": 3 }
+        {
+          "id": "scavenger rigging",
+          "name": "AFOD.Modules.posseUpgradesScavengerRigging",
+          "load": 1
+        },
+        {
+          "id": "elite scouts",
+          "name": "AFOD.Modules.posseUpgradesEliteScouts",
+          "load": 1
+        },
+        {
+          "id": "elite movers",
+          "name": "AFOD.Modules.posseUpgradesEliteMovers",
+          "load": 1
+        },
+        {
+          "id": "fine carriages",
+          "name": "AFOD.Modules.posseUpgradesFineCarriages",
+          "load": 1
+        },
+        {
+          "id": "steady",
+          "name": "AFOD.Modules.posseUpgradesSteady",
+          "load": 3
+        }
       ]
     }
-  }
+  },
+  "description": ""
 }
-

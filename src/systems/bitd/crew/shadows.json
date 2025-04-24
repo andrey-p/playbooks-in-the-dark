@@ -1,50 +1,50 @@
 {
   "id": "shadows",
-  "name": "Shadows",
-  "description": "Thieves, spies and saboteurs",
+  "name": "BITD.Playbooks.shadows",
+  "description": "BITD.Playbooks.shadowsDescription",
   "modules": {
     "specialAbilities": {
       "abilities": [
         {
           "id": "everyone steals",
-          "name": "Everyone Steals",
-          "description": "Each PC may add +1 action rating to <strong>Prowl</strong>, <strong>Finesse</strong>, or <strong>Tinker</strong> (up to a max rating of 3)."
+          "name": "BITD.Modules.specialAbilitiesEveryoneSteals",
+          "description": "BITD.Modules.specialAbilitiesEveryoneStealsDescription"
         },
         {
           "id": "ghost echoes",
-          "name": "Ghost Echoes",
-          "description": "From weird experience or occult ritual, all crew members gain the ability to see and interact with the ghostly structures, streets, and objects within the echo of Doskvol that exists in the ghost field."
+          "name": "BITD.Modules.specialAbilitiesGhostEchoes",
+          "description": "BITD.Modules.specialAbilitiesGhostEchoesDescription"
         },
         {
           "id": "pack rats",
-          "name": "Pack Rats",
-          "description": "Your lair is a jumble of stolen items. When you roll to <strong>acquire an asset</strong>, take <strong>+1d</strong>."
+          "name": "BITD.Modules.specialAbilitiesPackRats",
+          "description": "BITD.Modules.specialAbilitiesPackRatsDescription"
         },
         {
           "id": "patron",
-          "name": "Patron",
-          "description": "When you advance your <strong>Tier</strong>, it costs <strong>half the coin</strong> it normally would. <em>Who is your patron? Why do they help you?</em>"
+          "name": "BITD.Modules.specialAbilitiesPatron",
+          "description": "BITD.Modules.specialAbilitiesPatronDescription"
         },
         {
           "id": "second story",
-          "name": "Second Story",
-          "description": "When you execute a clandestine infiltration, you get <strong>+1d</strong> to the <strong>engagement roll</strong>."
+          "name": "BITD.Modules.specialAbilitiesSecondStory",
+          "description": "BITD.Modules.specialAbilitiesSecondStoryDescription"
         },
         {
           "id": "slippery",
-          "name": "Slippery",
-          "description": "When you roll <strong>entanglements</strong>, roll twice and keep the one you want. When you <strong>reduce heat</strong> on the crew, take <strong>+1d</strong>."
+          "name": "BITD.Modules.specialAbilitiesSlippery",
+          "description": "BITD.Modules.specialAbilitiesSlipperyDescription"
         },
         {
           "id": "synchronized",
-          "name": "Synchronized",
-          "description": "When you perform a <strong>group action</strong>, you may count multiple 6s from different rolls as a critical success."
+          "name": "BITD.Modules.specialAbilitiesSynchronized",
+          "description": "BITD.Modules.specialAbilitiesSynchronizedDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "BITD.Modules.specialAbilitiesVeteranCrew",
           "max": 2,
-          "description": "Choose a special ability from another crew."
+          "description": "BITD.Modules.specialAbilitiesVeteranCrewDescription"
         }
       ]
     },
@@ -53,104 +53,126 @@
         [
           {
             "id": "interrogation chamber",
-            "name": "Interrogation Chamber",
-            "description": "<strong>+1d</strong> to Command and Sway on site",
+            "name": "BITD.Modules.claimsInterrogationChamber",
+            "description": "BITD.Modules.claimsInterrogationChamberDescription",
             "connections": ["down"]
           },
           {
             "id": "turf1",
-            "name": "Turf",
-            "connections": ["right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["right"],
+            "description": ""
           },
           {
             "id": "loyal fence",
-            "name": "Loyal Fence",
-            "description": "<strong>+2 coin</strong> for burglary or robbery",
+            "name": "BITD.Modules.claimsLoyalFence",
+            "description": "BITD.Modules.claimsLoyalFenceDescription",
             "connections": ["down"]
           },
           {
             "id": "gambling den",
-            "name": "Gambling Den",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsGamblingDen",
+            "description": "BITD.Modules.claimsGamblingDenDescription",
             "connections": ["down", "right"]
           },
           {
             "id": "tavern",
-            "name": "Tavern",
-            "description": "<strong>+1d</strong> to Consort and Sway on site",
+            "name": "BITD.Modules.claimsTavern",
+            "description": "BITD.Modules.claimsTavernDescription",
             "connections": ["down"]
           }
         ],
         [
           {
             "id": "drug den",
-            "name": "Drug Den",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsDrugDen",
+            "description": "BITD.Modules.claimsDrugDenDescription",
             "connections": ["down", "right"]
           },
           {
             "id": "informants",
-            "name": "Informants",
-            "description": "<strong>+1d</strong> gather info for scores",
+            "name": "BITD.Modules.claimsInformants",
+            "description": "BITD.Modules.claimsInformantsDescription",
             "connections": ["down", "right"]
           },
           {
             "id": "lair",
-            "name": "Lair",
+            "name": "BITD.Modules.claimsLair",
             "selectable": false,
-            "connections": ["down", "right"]
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "turf2",
-            "name": "Turf",
-            "connections": ["right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["right"],
+            "description": ""
           },
           {
             "id": "lookouts",
-            "name": "Lookouts",
-            "description": "<strong>+1d</strong> to Survey or Hunt on your turf",
+            "name": "BITD.Modules.claimsLookouts",
+            "description": "BITD.Modules.claimsLookoutsDescription",
             "connections": ["down"]
           }
         ],
         [
           {
             "id": "hagfish farm",
-            "name": "Hagfish Farm",
-            "description": "Body disposal, <strong>+1d</strong> to reduce heat after killing",
+            "name": "BITD.Modules.claimsHagfishFarm",
+            "description": "BITD.Modules.claimsHagfishFarmDescription",
             "connections": ["right"]
           },
           {
             "id": "infirmary",
-            "name": "Infirmary",
-            "description": "<strong>+1d</strong> to healing rolls"
+            "name": "BITD.Modules.claimsInfirmary",
+            "description": "BITD.Modules.claimsInfirmaryDescription"
           },
           {
             "id": "covert drops",
-            "name": "Covert Drops",
-            "description": "<strong>+2 coin</strong> for espionage or sabotage",
+            "name": "BITD.Modules.claimsCovertDrops",
+            "description": "BITD.Modules.claimsCovertDropsDescription",
             "connections": ["right"]
           },
           {
             "id": "turf3",
-            "name": "Turf",
-            "connections": ["right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["right"],
+            "description": ""
           },
           {
             "id": "secret pathways",
-            "name": "Secret Pathways",
-            "description": "<strong>+1d</strong> engagement for stealth plans"
+            "name": "BITD.Modules.claimsSecretPathways",
+            "description": "BITD.Modules.claimsSecretPathwaysDescription"
           }
         ]
       ]
     },
     "contacts": {
       "contacts": [
-        { "id": "dowler", "name": "Dowler, an explorer" },
-        { "id": "laroze", "name": "Laroze, a bluecoat" },
-        { "id": "amancio", "name": "Amancio, a deal broker" },
-        { "id": "fitz", "name": "Fitz, a collector" },
-        { "id": "adelaide phroaig", "name": "Adelaide Phroaig, a noble" },
-        { "id": "rigney", "name": "Rigney, a tavern owner" }
+        {
+          "id": "dowler",
+          "name": "BITD.Modules.contactsDowler"
+        },
+        {
+          "id": "laroze",
+          "name": "BITD.Modules.contactsLaroze"
+        },
+        {
+          "id": "amancio",
+          "name": "BITD.Modules.contactsAmancio"
+        },
+        {
+          "id": "fitz",
+          "name": "BITD.Modules.contactsFitz"
+        },
+        {
+          "id": "adelaide phroaig",
+          "name": "BITD.Modules.contactsAdelaidePhroaig"
+        },
+        {
+          "id": "rigney",
+          "name": "BITD.Modules.contactsRigney"
+        }
       ]
     },
     "crewUpgrades": {
@@ -159,22 +181,41 @@
         "prowess": 1
       },
       "custom": [
-        { "id": "thief rigging", "name": "Thief Rigging (2 free load of tools or gear)", "load": 1 },
-        { "id": "underground maps and passkeys", "name": "Underground maps & passkeys", "load": 1 },
-        { "id": "elite rooks", "name": "Elite Rooks", "load": 1 },
-        { "id": "elite skulks", "name": "Elite Skulks", "load": 1 },
-        { "id": "steady", "name": "Steady (+1 stress box)", "load": 3 }
+        {
+          "id": "thief rigging",
+          "name": "BITD.Modules.crewUpgradesThiefRigging",
+          "load": 1
+        },
+        {
+          "id": "underground maps and passkeys",
+          "name": "BITD.Modules.crewUpgradesUndergroundMapsAndPasskeys",
+          "load": 1
+        },
+        {
+          "id": "elite rooks",
+          "name": "BITD.Modules.crewUpgradesEliteRooks",
+          "load": 1
+        },
+        {
+          "id": "elite skulks",
+          "name": "BITD.Modules.crewUpgradesEliteSkulks",
+          "load": 1
+        },
+        {
+          "id": "steady",
+          "name": "BITD.Modules.crewUpgradesSteady",
+          "load": 3
+        }
       ]
     },
     "favoredNotes": {
-      "customLabel": "Hunting Grounds",
+      "customLabel": "BITD.Modules.favoredNotesLabelHuntingGrounds",
       "examples": [
-        "Burglary",
-        "Espionage",
-        "Robbery",
-        "Sabotage"
+        "BITD.Modules.favoredNotesExampleBurglary",
+        "BITD.Modules.favoredNotesExampleEspionage",
+        "BITD.Modules.favoredNotesExampleRobbery",
+        "BITD.Modules.favoredNotesExampleSabotage"
       ]
     }
   }
 }
-

@@ -2,6 +2,7 @@ import { z } from 'zod';
 import PropsSchema from './harm.schema';
 import HarmItem from './harm-item';
 import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
+import { useTranslations } from 'next-intl';
 
 import styles from './harm.module.css';
 
@@ -11,6 +12,7 @@ export default function Harm(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
   const { harmsTaken } = userValue;
   const { levelDescriptions } = moduleDefinition.props;
+  const t = useTranslations();
 
   // zero-based
   const levels = [2, 1, 0];
@@ -81,7 +83,9 @@ export default function Harm(props: Props) {
                   </td>
                 </>
               )}
-              <td className={styles.infoColumn}>{levelDescriptions[level]}</td>
+              <td className={styles.infoColumn}>
+                {t(levelDescriptions[level])}
+              </td>
             </tr>
           ))}
         </tbody>

@@ -1,50 +1,50 @@
 {
   "id": "hawkers",
-  "name": "Hawkers",
-  "description": "Vice dealers",
+  "name": "BITD.Playbooks.hawkers",
+  "description": "BITD.Playbooks.hawkersDescription",
   "modules": {
     "specialAbilities": {
       "abilities": [
         {
           "id": "silver tongues",
-          "name": "Silver Tongues",
-          "description": "Each PC may add +1 action rating to <strong>Command</strong>, <strong>Consort</strong>, or <strong>Sway</strong> (up to a max rating of 3)."
+          "name": "BITD.Modules.specialAbilitiesSilverTongues",
+          "description": "BITD.Modules.specialAbilitiesSilverTonguesDescription"
         },
         {
           "id": "accord",
-          "name": "Accord",
-          "description": "Sometimes friends are as good as territory. You may count up to three <strong>+3 faction statuses</strong> you hold as if they are <strong>turf</strong>."
+          "name": "BITD.Modules.specialAbilitiesAccord",
+          "description": "BITD.Modules.specialAbilitiesAccordDescription"
         },
         {
           "id": "the good stuff",
-          "name": "The Good Stuff",
-          "description": "Your merchandise is exquisite. The product <strong>quality</strong> is equal to your <strong>Tier+2</strong>. When you deal with a crew or faction, the GM will tell you who among them is hooked on your product (one, a few, many, or all)."
+          "name": "BITD.Modules.specialAbilitiesTheGoodStuff",
+          "description": "BITD.Modules.specialAbilitiesTheGoodStuffDescription"
         },
         {
           "id": "ghost market",
-          "name": "Ghost Market",
-          "description": "Through arcane ritual or hard-won experience, you have discovered how to prepare your product for sale to ghosts and/or demons. <em>They do not pay in coin. What do they pay with?</em>"
+          "name": "BITD.Modules.specialAbilitiesGhostMarket",
+          "description": "BITD.Modules.specialAbilitiesGhostMarketDescription"
         },
         {
           "id": "high society",
-          "name": "High Society",
-          "description": "It's all about who you know. Take <strong>-1 heat</strong> during downtime and <strong>+1d</strong> to gather info about the city's elite."
+          "name": "BITD.Modules.specialAbilitiesHighSociety",
+          "description": "BITD.Modules.specialAbilitiesHighSocietyDescription"
         },
         {
           "id": "hooked",
-          "name": "Hooked",
-          "description": "Your gang members use your product. Add the <em>savage</em>, <em>unreliable</em>, or <em>wild</em> flaw to your gangs to give them <strong+1 quality</strong>."
+          "name": "BITD.Modules.specialAbilitiesHooked",
+          "description": "BITD.Modules.specialAbilitiesHookedDescription"
         },
         {
           "id": "patron",
-          "name": "Patron",
-          "description": "When you advance your <strong>Tier</strong>, it costs <strong>half the coin</strong> it normally would. <em>Who is your patron? Why do they help you?</em>"
+          "name": "BITD.Modules.specialAbilitiesPatron",
+          "description": "BITD.Modules.specialAbilitiesPatronDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "BITD.Modules.specialAbilitiesVeteranCrew",
           "max": 2,
-          "description": "Choose a special ability from another crew."
+          "description": "BITD.Modules.specialAbilitiesVeteranCrewDescription"
         }
       ]
     },
@@ -53,101 +53,124 @@
         [
           {
             "id": "turf1",
-            "name": "Turf",
-            "connections": ["right", "down"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["right", "down"],
+            "description": ""
           },
           {
             "id": "personal clothier",
-            "name": "Personal Clothier",
-            "description": "<strong>+1d</strong> engagement roll for social plans",
+            "name": "BITD.Modules.claimsPersonalClothier",
+            "description": "BITD.Modules.claimsPersonalClothierDescription",
             "connections": ["down"]
           },
           {
             "id": "local graft",
-            "name": "Local Graft",
-            "description": "<strong>+2 coin</strong> for show of force or socialize",
+            "name": "BITD.Modules.claimsLocalGraft",
+            "description": "BITD.Modules.claimsLocalGraftDescription",
             "connections": ["down"]
           },
           {
             "id": "lookouts",
-            "name": "Lookouts",
-            "description": "<strong>+1d</strong> to Survey or Hunt on your turf",
+            "name": "BITD.Modules.claimsLookouts",
+            "description": "BITD.Modules.claimsLookoutsDescription",
             "connections": ["down", "right"]
           },
           {
             "id": "informants",
-            "name": "Informants",
-            "description": "<strong>+1d</strong> to gather info for scores",
+            "name": "BITD.Modules.claimsInformants",
+            "description": "BITD.Modules.claimsInformantsDescription",
             "connections": ["down"]
           }
         ],
         [
           {
             "id": "turf2",
-            "name": "Turf",
-            "connections": ["down"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["down"],
+            "description": ""
           },
           {
             "id": "turf3",
-            "name": "Turf",
-            "connections": ["down", "right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "lair",
-            "name": "Lair",
+            "name": "BITD.Modules.claimsLair",
             "selectable": false,
-            "connections": ["down", "right"]
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "turf4",
-            "name": "Turf",
-            "connections": ["down", "right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "luxury venue",
-            "name": "Luxury Venue",
-            "description": "<strong>+1d</strong> to Consort and Sway on site"
+            "name": "BITD.Modules.claimsLuxuryVenue",
+            "description": "BITD.Modules.claimsLuxuryVenueDescription"
           }
         ],
         [
           {
             "id": "foreign market",
-            "name": "Foreign Market",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsForeignMarket",
+            "description": "BITD.Modules.claimsForeignMarketDescription",
             "connections": ["right"]
           },
           {
             "id": "vice den",
-            "name": "Vice Den",
-            "description": "(Tier roll) - Heat = coin in downtime"
+            "name": "BITD.Modules.claimsViceDen",
+            "description": "BITD.Modules.claimsViceDenDescription"
           },
           {
             "id": "surplus caches",
-            "name": "Surplus Caches",
-            "description": "<strong>+2 coin</strong> for product sale or supply"
+            "name": "BITD.Modules.claimsSurplusCaches",
+            "description": "BITD.Modules.claimsSurplusCachesDescription"
           },
           {
             "id": "cover operation",
-            "name": "Cover Operation",
-            "description": "<strong>-2</strong> heat per score",
+            "name": "BITD.Modules.claimsCoverOperation",
+            "description": "BITD.Modules.claimsCoverOperationDescription",
             "connections": ["right"]
           },
           {
             "id": "cover identities",
-            "name": "Cover Identities",
-            "description": "<strong>+1d</strong> engagement for deception and transport plans"
+            "name": "BITD.Modules.claimsCoverIdentities",
+            "description": "BITD.Modules.claimsCoverIdentitiesDescription"
           }
         ]
       ]
     },
     "contacts": {
       "contacts": [
-        { "id": "rolan wott", "name": "Rolan Wott, a magistrate" },
-        { "id": "laroze", "name": "Laroze, a bluecoat" },
-        { "id": "lydra", "name": "Lydra, a deal broker" },
-        { "id": "hoxley", "name": "Hoxley, a smuggler" },
-        { "id": "anya", "name": "Anya, a dillettante" },
-        { "id": "marlo", "name": "Marlo, a gang boss" }
+        {
+          "id": "rolan wott",
+          "name": "BITD.Modules.contactsRolanWott"
+        },
+        {
+          "id": "laroze",
+          "name": "BITD.Modules.contactsLaroze"
+        },
+        {
+          "id": "lydra",
+          "name": "BITD.Modules.contactsLydra"
+        },
+        {
+          "id": "hoxley",
+          "name": "BITD.Modules.contactsHoxley"
+        },
+        {
+          "id": "anya",
+          "name": "BITD.Modules.contactsAnya"
+        },
+        {
+          "id": "marlo",
+          "name": "BITD.Modules.contactsMarlo"
+        }
       ]
     },
     "crewUpgrades": {
@@ -156,20 +179,40 @@
         "resolve": 1
       },
       "custom": [
-        { "id": "hawkers rigging", "name": "Hawkers' Rigging (1 carried item is concealed and has no load)", "load": 1 },
-        { "id": "ironhook contacts", "name": "Ironhook Contacts (+1 tier in prison)", "load": 1 },
-        { "id": "elite rooks", "name": "Elite Rooks", "load": 1 },
-        { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
-        { "id": "composed", "name": "Composed (+1 stress box)", "load": 3 }
+        {
+          "id": "hawkers rigging",
+          "name": "BITD.Modules.crewUpgradesHawkersRigging",
+          "load": 1
+        },
+        {
+          "id": "ironhook contacts",
+          "name": "BITD.Modules.crewUpgradesIronhookContacts",
+          "load": 1
+        },
+        {
+          "id": "elite rooks",
+          "name": "BITD.Modules.crewUpgradesEliteRooks",
+          "load": 1
+        },
+        {
+          "id": "elite thugs",
+          "name": "BITD.Modules.crewUpgradesEliteThugs",
+          "load": 1
+        },
+        {
+          "id": "composed",
+          "name": "BITD.Modules.crewUpgradesComposed",
+          "load": 3
+        }
       ]
     },
     "favoredNotes": {
-      "customLabel": "Sales Territory",
+      "customLabel": "BITD.Modules.favoredNotesLabelSalesTerritory",
       "examples": [
-        "Sale",
-        "Supply",
-        "Show of Force",
-        "Socialize"
+        "BITD.Modules.favoredNotesExampleSale",
+        "BITD.Modules.favoredNotesExampleSupply",
+        "BITD.Modules.favoredNotesExampleShowOfForce",
+        "BITD.Modules.favoredNotesExampleSocialize"
       ]
     }
   }

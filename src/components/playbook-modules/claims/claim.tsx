@@ -3,6 +3,7 @@ import { Claim as ClaimSchema } from './claims.schema';
 import clsx from 'clsx';
 import styles from './claim.module.css';
 import Description from '@/components/playbook-elements/description/description';
+import { useTranslations } from 'next-intl';
 
 type Props = {
   claim: z.infer<typeof ClaimSchema>;
@@ -13,6 +14,7 @@ type Props = {
 
 export default function Claim(props: Props) {
   const { claim, selected, position, onSelect } = props;
+  const t = useTranslations();
 
   return (
     <div
@@ -29,7 +31,7 @@ export default function Claim(props: Props) {
         }
       }}
     >
-      <div className={styles.name}>{claim.name}</div>
+      <div className={styles.name}>{t(claim.name)}</div>
       {claim.description && <Description text={claim.description} />}
       {claim.connections &&
         claim.connections.map((direction) => (

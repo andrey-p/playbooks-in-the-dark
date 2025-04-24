@@ -1,50 +1,50 @@
 {
   "id": "bravos",
-  "name": "Bravos",
-  "description": "Merceneries, thugs & killers",
+  "name": "BITD.Playbooks.bravos",
+  "description": "BITD.Playbooks.bravosDescription",
   "modules": {
     "specialAbilities": {
       "abilities": [
         {
           "id": "dangerous",
-          "name": "Dangerous",
-          "description": "Each PC may add +1 action rating to <strong>Hunt</strong>, <strong>Skirmish</strong>, or <strong>Wreck</strong> (up to a max rating of 3)."
+          "name": "BITD.Modules.specialAbilitiesDangerous",
+          "description": "BITD.Modules.specialAbilitiesDangerousDescription"
         },
         {
           "id": "blood brothers",
-          "name": "Blood Brothers",
-          "description": "When you fight alongside your <strong>cohorts</strong> in combat, they get <strong>+1d</strong> for <strong>teamwork</strong> rolls (setup and group actions). All of your cohorts get the <em>Thugs</em> type for free (if they're already Thugs, add another type)."
+          "name": "BITD.Modules.specialAbilitiesBloodBrothers",
+          "description": "BITD.Modules.specialAbilitiesBloodBrothersDescription"
         },
         {
           "id": "door kickers",
-          "name": "Door Kickers",
-          "description": "When you execute an assault plan, take <strong>+1d</strong> to the <strong>engagement</strong> roll."
+          "name": "BITD.Modules.specialAbilitiesDoorKickers",
+          "description": "BITD.Modules.specialAbilitiesDoorKickersDescription"
         },
         {
           "id": "fiends",
-          "name": "Fiends",
-          "description": "Fear is as good as respect. You may count each <strong>wanted level</strong> as if it was <strong>turf</strong>."
+          "name": "BITD.Modules.specialAbilitiesFiends",
+          "description": "BITD.Modules.specialAbilitiesFiendsDescription"
         },
         {
           "id": "forged in the fire",
-          "name": "Forged in the Fire",
-          "description": "Each PC has been toughened by cruel experience. You get <strong>+1d</strong> to resistance rolls."
+          "name": "BITD.Modules.specialAbilitiesForgedInTheFire",
+          "description": "BITD.Modules.specialAbilitiesForgedInTheFireDescription"
         },
         {
           "id": "patron",
-          "name": "Patron",
-          "description": "When you advance your <strong>Tier</strong>, it costs <strong>half the coin</strong> it normally would. <em>Who is your patron? Why do they help you?</em>"
+          "name": "BITD.Modules.specialAbilitiesPatron",
+          "description": "BITD.Modules.specialAbilitiesPatronDescription"
         },
         {
           "id": "war dogs",
-          "name": "War Dogs",
-          "description": "When you’re at war (-3 faction status), your crew does not suffer -1 hold and PCs still get two downtime activities, instead of just one."
+          "name": "BITD.Modules.specialAbilitiesWarDogs",
+          "description": "BITD.Modules.specialAbilitiesWarDogsDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "BITD.Modules.specialAbilitiesVeteranCrew",
           "max": 2,
-          "description": "Choose a special ability from another crew."
+          "description": "BITD.Modules.specialAbilitiesVeteranCrewDescription"
         }
       ]
     },
@@ -53,103 +53,126 @@
         [
           {
             "id": "barracks",
-            "name": "Barracks",
-            "description": "<strong>+1 scale</strong> for your Thug cohorts",
+            "name": "BITD.Modules.claimsBarracks",
+            "description": "BITD.Modules.claimsBarracksDescription",
             "connections": ["right", "down"]
           },
           {
             "id": "turf1",
-            "name": "Turf",
-            "connections": ["right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["right"],
+            "description": ""
           },
           {
             "id": "terrorized citizens",
-            "name": "Terrorized Citizens",
-            "description": "<strong>+2 coin</strong> for battle or extortion",
+            "name": "BITD.Modules.claimsTerrorizedCitizens",
+            "description": "BITD.Modules.claimsTerrorizedCitizensDescription",
             "connections": ["down"]
           },
           {
             "id": "informants",
-            "name": "Informants",
-            "description": "<strong>+1d</strong> to gather info for scores",
+            "name": "BITD.Modules.claimsInformants",
+            "description": "BITD.Modules.claimsInformantsDescription",
             "connections": ["down", "right"]
           },
           {
             "id": "protection racket",
-            "name": "Protection Racket",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsProtectionRacket",
+            "description": "BITD.Modules.claimsProtectionRacketDescription",
             "connections": ["down"]
           }
         ],
         [
           {
             "id": "fighting pits",
-            "name": "Fighting Pits",
-            "description": "(Tier roll) - Heat = coin in downtime",
+            "name": "BITD.Modules.claimsFightingPits",
+            "description": "BITD.Modules.claimsFightingPitsDescription",
             "connections": ["down", "right"]
           },
           {
             "id": "turf2",
-            "name": "Turf",
-            "connections": ["down", "right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "lair",
-            "name": "Lair",
+            "name": "BITD.Modules.claimsLair",
             "selectable": false,
-            "connections": ["down", "right"]
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "turf3",
-            "name": "Turf",
-            "connections": ["down", "right"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["down", "right"],
+            "description": ""
           },
           {
             "id": "turf4",
-            "name": "Turf",
-            "connections": ["down"]
+            "name": "BITD.Modules.claimsTurf",
+            "connections": ["down"],
+            "description": ""
           }
         ],
         [
           {
             "id": "infirmary",
-            "name": "Infirmary",
-            "description": "<strong>+1d</strong> to healing rolls",
+            "name": "BITD.Modules.claimsInfirmary",
+            "description": "BITD.Modules.claimsInfirmaryDescription",
             "connections": ["right"]
           },
           {
             "id": "bluecoat intimidation",
-            "name": "Bluecoat Intimidation",
-            "description": "<strong>-2 heat</strong> per score"
+            "name": "BITD.Modules.claimsBluecoatIntimidation",
+            "description": "BITD.Modules.claimsBluecoatIntimidationDescription"
           },
           {
             "id": "street fence",
-            "name": "Street Fence",
-            "description": "<strong>+2 coin</strong> for lower-class targets",
+            "name": "BITD.Modules.claimsStreetFence",
+            "description": "BITD.Modules.claimsStreetFenceDescription",
             "connections": ["right"]
           },
           {
             "id": "warehouses",
-            "name": "Warehouses",
-            "description": "Stockpiles give you <strong>+1d</strong> to acquire assets",
+            "name": "BITD.Modules.claimsWarehouses",
+            "description": "BITD.Modules.claimsWarehousesDescription",
             "connections": ["right"]
           },
           {
             "id": "bluecoat confederates",
-            "name": "Bluecoat Confederates",
-            "description": "<strong>+1d</strong> engagement for assault plans"
+            "name": "BITD.Modules.claimsBluecoatConfederates",
+            "description": "BITD.Modules.claimsBluecoatConfederatesDescription"
           }
         ]
       ]
     },
     "contacts": {
       "contacts": [
-        { "id": "meg", "name": "Meg, a pit-fighter" },
-        { "id": "conway", "name": "Conway, a bluecoat" },
-        { "id": "keller", "name": "Keller, a blacksmith" },
-        { "id": "tomas", "name": "Tomas, a physicker" },
-        { "id": "walker", "name": "Walker, a ward boss" },
-        { "id": "lutes", "name": "Lutes, a tavern owner" }
+        {
+          "id": "meg",
+          "name": "BITD.Modules.contactsMeg"
+        },
+        {
+          "id": "conway",
+          "name": "BITD.Modules.contactsConway"
+        },
+        {
+          "id": "keller",
+          "name": "BITD.Modules.contactsKeller"
+        },
+        {
+          "id": "tomas",
+          "name": "BITD.Modules.contactsTomas"
+        },
+        {
+          "id": "walker",
+          "name": "BITD.Modules.contactsWalker"
+        },
+        {
+          "id": "lutes",
+          "name": "BITD.Modules.contactsLutes"
+        }
       ]
     },
     "crewUpgrades": {
@@ -157,11 +180,31 @@
         "prowess": 1
       },
       "custom": [
-        { "id": "bravos rigging", "name": "Bravos Rigging (2 free load of weapons or armor)", "load": 1 },
-        { "id": "ironhook contacts", "name": "Ironhook Contacts (+1 tier in prison)", "load": 1 },
-        { "id": "elite rovers", "name": "Elite Rovers", "load": 1 },
-        { "id": "elite thugs", "name": "Elite Thugs", "load": 1 },
-        { "id": "hardened", "name": "Hardened (+1 trauma box)", "load": 3 }
+        {
+          "id": "bravos rigging",
+          "name": "BITD.Modules.crewUpgradesBravosRigging",
+          "load": 1
+        },
+        {
+          "id": "ironhook contacts",
+          "name": "BITD.Modules.crewUpgradesIronhookContacts",
+          "load": 1
+        },
+        {
+          "id": "elite rovers",
+          "name": "BITD.Modules.crewUpgradesEliteRovers",
+          "load": 1
+        },
+        {
+          "id": "elite thugs",
+          "name": "BITD.Modules.crewUpgradesEliteThugs",
+          "load": 1
+        },
+        {
+          "id": "hardened",
+          "name": "BITD.Modules.crewUpgradesHardened",
+          "load": 3
+        }
       ]
     },
     "cohorts": {
@@ -175,12 +218,12 @@
       ]
     },
     "favoredNotes": {
-      "customLabel": "Hunting Grounds",
+      "customLabel": "BITD.Modules.favoredNotesLabelHuntingGrounds",
       "examples": [
-        "Battle",
-        "Extortion",
-        "Sabotage",
-        "Smash & Grab"
+        "BITD.Modules.favoredNotesExampleBattle",
+        "BITD.Modules.favoredNotesExampleExtortion",
+        "BITD.Modules.favoredNotesExampleSabotage",
+        "BITD.Modules.favoredNotesExampleSmashAndGrab"
       ]
     }
   }

@@ -1,16 +1,40 @@
 {
   "id": "lurk",
-  "name": "Lurk",
-  "description": "A stealthy infiltrator and burglar",
+  "name": "BITD.Playbooks.lurk",
+  "description": "BITD.Playbooks.lurkDescription",
   "modules": {
     "items": {
       "custom": [
-        { "id": "fine lockpicks", "name": "Fine Lockpicks", "load": 0 },
-        { "id": "fine shadow cloak", "name": "Fine Shadow Cloak", "load": 1 },
-        { "id": "light climbing gear", "name": "Light Climbing Gear", "load": 1 },
-        { "id": "silence potion vial", "name": "Silence Potion Vial", "load": 0 },
-        { "id": "dark-sight goggles", "name": "Dark-sight Goggles", "load": 1 },
-        { "id": "spiritbane charm", "name": "Spiritbane Charm", "load": 0 }
+        {
+          "id": "fine lockpicks",
+          "name": "BITD.Modules.itemsFineLockpicks",
+          "load": 0
+        },
+        {
+          "id": "fine shadow cloak",
+          "name": "BITD.Modules.itemsFineShadowCloak",
+          "load": 1
+        },
+        {
+          "id": "light climbing gear",
+          "name": "BITD.Modules.itemsLightClimbingGear",
+          "load": 1
+        },
+        {
+          "id": "silence potion vial",
+          "name": "BITD.Modules.itemsSilencePotionVial",
+          "load": 0
+        },
+        {
+          "id": "dark-sight goggles",
+          "name": "BITD.Modules.itemsDarkSightGoggles",
+          "load": 1
+        },
+        {
+          "id": "spiritbane charm",
+          "name": "BITD.Modules.itemsSpiritBaneCharm",
+          "load": 0
+        }
       ]
     },
     "ratings": {
@@ -23,60 +47,75 @@
       "abilities": [
         {
           "id": "infiltrator",
-          "name": "Infiltrator",
-          "description": "You are not affected by <strong>quality</strong> or <strong>Tier</strong> when you bypass security measures."
+          "name": "BITD.Modules.specialAbilitiesInfiltrator",
+          "description": "BITD.Modules.specialAbilitiesInfiltratorDescription"
         },
         {
           "id": "ambush",
-          "name": "Ambush",
-          "description": "When you attack from hiding or spring a trap, you get <strong>+1d</strong>."
+          "name": "BITD.Modules.specialAbilitiesAmbush",
+          "description": "BITD.Modules.specialAbilitiesAmbushDescription"
         },
         {
           "id": "daredevil",
-          "name": "Daredevil",
-          "description": "When you roll a desperate action, you get <strong>+1d</strong> to your roll if you also take <strong>-1d</strong> to any resistance rolls against consequences from your action."
+          "name": "BITD.Modules.specialAbilitiesDaredevil",
+          "description": "BITD.Modules.specialAbilitiesDaredevilDescription"
         },
         {
           "id": "the devil's footsteps",
-          "name": "The Devil's Footsteps",
-          "description": "When you <strong>push yourself</strong>, choose one of the following additional benefits: <em>perform a feat of athletics that verges on the superhuman</em>—<em>maneuver to confuse your enemies so they mistakenly attack each other</em>."
+          "name": "BITD.Modules.specialAbilitiesTheDevilsFootsteps",
+          "description": "BITD.Modules.specialAbilitiesTheDevilsFootstepsDescription"
         },
         {
           "id": "expertise",
-          "name": "Expertise",
-          "description": "Choose one of your action ratings. When you lead a <strong>group action</strong> using that action, you can suffer only 1 stress at most regardless of the number of failed rolls."
+          "name": "BITD.Modules.specialAbilitiesExpertise",
+          "description": "BITD.Modules.specialAbilitiesExpertiseDescription"
         },
         {
           "id": "ghost veil",
-          "name": "Ghost Veil",
-          "description": "You may shift partially into the ghost field, becoming shadowy and insubstantial for a few moments. Take 2 stress when you shift, plus 1 stress for each extra feature: <em>It lasts for a few minutes rather than moments</em>—<em>you are invisible rather than shadowy</em>—<em>you may float through the air like a ghost</em>."
+          "name": "BITD.Modules.specialAbilitiesGhostVeil",
+          "description": "BITD.Modules.specialAbilitiesGhostVeilDescription"
         },
         {
           "id": "reflexes",
-          "name": "Reflexes",
-          "description": "When there's a question about who acts first, the answer is you (two characters with Reflexes act simultaneously)."
+          "name": "BITD.Modules.specialAbilitiesReflexes",
+          "description": "BITD.Modules.specialAbilitiesReflexesDescription"
         },
         {
           "id": "shadow",
-          "name": "Shadow",
-          "description": "You may expend your <strong>special armor</strong> to resist a consequence from detection or security measures, or to <strong>push yourself</strong> for a feat of athletics or stealth."
+          "name": "BITD.Modules.specialAbilitiesShadow",
+          "description": "BITD.Modules.specialAbilitiesShadowDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "BITD.Modules.specialAbilitiesVeteranScoundrel",
           "max": 3,
-          "description": "Choose a special ability from another source."
+          "description": "BITD.Modules.specialAbilitiesVeteranScoundrelDescription"
         }
       ]
     },
     "contacts": {
-      "customName": "Shady Friends",
+      "customLabel": "BITD.Modules.contactsLabelShadyFriends",
       "contacts": [
-        { "id": "telda", "name": "Telda, a beggar" },
-        { "id": "darmot", "name": "Darmot, a bluecoat" },
-        { "id": "frake", "name": "Frake, a locksmith" },
-        { "id": "roslyn kellis", "name": "Roslyn Kellis, a noble" },
-        { "id": "petra", "name": "Petra, a city clerk" }
+        {
+          "id": "telda",
+          "name": "BITD.Modules.contactsTelda"
+        },
+        {
+          "id": "darmot",
+          "name": "BITD.Modules.contactsDarmot"
+        },
+        {
+          "id": "frake",
+          "name": "BITD.Modules.contactsFrake"
+        },
+        {
+          "id": "roslyn kellis",
+          "name": "BITD.Modules.contactsRoslynKellis"
+        },
+        {
+          "id": "petra",
+          "name": "BITD.Modules.contactsPetra"
+        }
       ]
     }
   }

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import './globals.css';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale } from 'next-intl/server';
 
 import { ThemeContext } from '@/context';
 import { getFontClassName } from './fonts';
@@ -18,15 +20,19 @@ export default async function RootLayout({
   const cookieStore = await cookies();
   const themeVal = cookieStore.get('theme')?.value;
 
+  const locale = await getLocale();
+
   // because of course dark theme is default
   const initialTheme = themeVal === 'light' ? 'light' : 'dark';
 
   return (
-    <html lang='en' data-theme={initialTheme}>
+    <html lang={locale} data-theme={initialTheme}>
       <body className={getFontClassName()}>
-        <ThemeContext.Provider initialTheme={initialTheme}>
-          {children}
-        </ThemeContext.Provider>
+        <NextIntlClientProvider>
+          <ThemeContext.Provider initialTheme={initialTheme}>
+            {children}
+          </ThemeContext.Provider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
