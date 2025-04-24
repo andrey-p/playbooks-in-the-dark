@@ -1,4 +1,5 @@
 import { readFileSync } from 'fs';
+import { readFile } from 'fs/promises';
 import { NotFoundError } from './errors';
 import systemsJson from '@/systems/systems.json';
 
@@ -44,19 +45,29 @@ export const getJson = function (
 };
 
 export const getSystemText = async (
-  systemId: string,
+  system: string,
   locale: string
 ): Promise<object> => {
-  let text;
-  const path = `@/systems/${systemId}/lang/${locale}.json`;
+  let data;
+  const path = `${process.cwd()}/src/systems/${system}/lang/${locale}.json`;
 
-  try {
-    text = (await import(path)).default;
-  } catch {
+  if (!system.match(validFileRe) || !locale.match(validFileRe)) {
     throw new NotFoundError(`Couldn't find system JSON file: ${path}`);
   }
 
-  return text;
+  try {
+    data = await readFile(path, { encoding: 'utf8' });
+  } catch {
+    throw new NotFoundError(
+      `Couldn't find system translations JSON file: ${path}`
+    );
+  }
+
+  try {
+    return JSON.parse(data);
+  } catch (e) {
+    throw new Error(`Error parsing ${path}`, { cause: e });
+  }
 };
 
 export const getAllSystemsText = async (locale: string): Promise<object> => {
