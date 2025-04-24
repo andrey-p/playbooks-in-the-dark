@@ -178,27 +178,27 @@
       "contacts": [
         {
           "id": "meg",
-          "name": "Meg, a pit-fighter"
+          "name": "BITD.Modules.contactsMeg"
         },
         {
           "id": "conway",
-          "name": "Conway, a bluecoat"
+          "name": "BITD.Modules.contactsConway"
         },
         {
           "id": "keller",
-          "name": "Keller, a blacksmith"
+          "name": "BITD.Modules.contactsKeller"
         },
         {
           "id": "tomas",
-          "name": "Tomas, a physicker"
+          "name": "BITD.Modules.contactsTomas"
         },
         {
           "id": "walker",
-          "name": "Walker, a ward boss"
+          "name": "BITD.Modules.contactsWalker"
         },
         {
           "id": "lutes",
-          "name": "Lutes, a tavern owner"
+          "name": "BITD.Modules.contactsLutes"
         }
       ]
     },

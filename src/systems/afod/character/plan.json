@@ -92,27 +92,27 @@
       "contacts": [
         {
           "id": "john p little",
-          "name": "John P. Little, a cattle baron"
+          "name": "AFOD.Modules.contactsJohnPLittle"
         },
         {
           "id": "the dutch",
-          "name": "'The Dutch', an executor"
+          "name": "AFOD.Modules.contactsTheDutch"
         },
         {
           "id": "pepper",
-          "name": "Pepper, a lucky charm"
+          "name": "AFOD.Modules.contactsPepper"
         },
         {
           "id": "captain hodgens",
-          "name": "Captain Hodgens, Fort Hubert"
+          "name": "AFOD.Modules.contactsCaptainHodgens"
         },
         {
           "id": "horatio freeman",
-          "name": "Horatio Freeman, a sheriff"
+          "name": "AFOD.Modules.contactsHoratioFreeman"
         },
         {
           "id": "sylvester stubbs",
-          "name": "Sylvester Stubbs, an official"
+          "name": "AFOD.Modules.contactsSylvesterStubbs"
         }
       ]
     }

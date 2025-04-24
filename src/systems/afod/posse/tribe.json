@@ -180,27 +180,27 @@
       "contacts": [
         {
           "id": "the cheat murray",
-          "name": "'The Cheat' Murray, arms dealer"
+          "name": "AFOD.Modules.contactsTheCheatMurray"
         },
         {
           "id": "hawk",
-          "name": "Hawk, a feral spirit"
+          "name": "AFOD.Modules.contactsHawk"
         },
         {
           "id": "kills many",
-          "name": "Kills Many, the threshold"
+          "name": "AFOD.Modules.contactsKillsMany"
         },
         {
           "id": "free cloud raining",
-          "name": "Free Cloud Raining, medicine man"
+          "name": "AFOD.Modules.contactsFreeCloudRaining"
         },
         {
           "id": "seeker",
-          "name": "Seeker, a guide"
+          "name": "AFOD.Modules.contactsSeeker"
         },
         {
           "id": "coin slate",
-          "name": "'Coin' Slate, a merchant"
+          "name": "AFOD.Modules.contactsCoinSlate"
         }
       ]
     },

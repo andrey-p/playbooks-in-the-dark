@@ -98,23 +98,23 @@
       "contacts": [
         {
           "id": "bryl",
-          "name": "Bryl, a drug dealer"
+          "name": "BITD.Modules.contactsBryl"
         },
         {
           "id": "baszo baz",
-          "name": "Bazso Baz, a gang leader"
+          "name": "BITD.Modules.contactsBaszoBaz"
         },
         {
           "id": "klyra",
-          "name": "Klyra, a tavern owner"
+          "name": "BITD.Modules.contactsKlyra"
         },
         {
           "id": "nyryx",
-          "name": "Nyryx, a prostitute"
+          "name": "BITD.Modules.contactsNyryx"
         },
         {
           "id": "harker",
-          "name": "Harker, a jail-bird"
+          "name": "BITD.Modules.contactsHarker"
         }
       ]
     }

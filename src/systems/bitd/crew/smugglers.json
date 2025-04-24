@@ -174,27 +174,27 @@
       "contacts": [
         {
           "id": "elynn",
-          "name": "Elynn, a dock worker"
+          "name": "BITD.Modules.contactsElynn"
         },
         {
           "id": "rolan",
-          "name": "Rolan, a drug dealer"
+          "name": "BITD.Modules.contactsRolan"
         },
         {
           "id": "sera",
-          "name": "Sera, an arms dealer"
+          "name": "BITD.Modules.contactsSera"
         },
         {
           "id": "nyelle",
-          "name": "Nyelle, a spirit trafficker"
+          "name": "BITD.Modules.contactsNyelle"
         },
         {
           "id": "decker",
-          "name": "Decker, an anarchist"
+          "name": "BITD.Modules.contactsDecker"
         },
         {
           "id": "esme",
-          "name": "Esme, a tavern owner"
+          "name": "BITD.Modules.contactsEsme"
         }
       ]
     },

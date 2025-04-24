@@ -93,23 +93,23 @@
       "contacts": [
         {
           "id": "jim-bob thornton",
-          "name": "Jim-Bob Thornton, a Rancher"
+          "name": "AFOD.Modules.contactsJimBobThornton"
         },
         {
           "id": "jane",
-          "name": "Jane, a Saloon Girl"
+          "name": "AFOD.Modules.contactsJane"
         },
         {
           "id": "octavius slone",
-          "name": "Octavius Slone, a Doctor"
+          "name": "AFOD.Modules.contactsOctaviusSlone"
         },
         {
           "id": "master lee",
-          "name": "Master Lee"
+          "name": "AFOD.Modules.contactsMasterLee"
         },
         {
           "id": "sergeant meyers",
-          "name": "Sergeant Meyers, Fort Hubert"
+          "name": "AFOD.Modules.contactsSergeantMeyers"
         }
       ]
     }

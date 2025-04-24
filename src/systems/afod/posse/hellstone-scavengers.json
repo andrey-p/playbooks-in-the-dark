@@ -180,27 +180,27 @@
       "contacts": [
         {
           "id": "bill scar morgan",
-          "name": "Bill 'Scar' Morgan, a judge"
+          "name": "AFOD.Modules.contactsBillScarMorgan"
         },
         {
           "id": "railroad gilliam",
-          "name": "'Railroad' Gilliam, a marshal"
+          "name": "AFOD.Modules.contactsRailroadGilliam"
         },
         {
           "id": "sweet dave",
-          "name": "Sweet Dave, a piano player"
+          "name": "AFOD.Modules.contactsSweetDave"
         },
         {
           "id": "grover mcintyre",
-          "name": "Grover McIntyre, hardware store owner"
+          "name": "AFOD.Modules.contactsGroverMcintyre"
         },
         {
           "id": "ling lee",
-          "name": "Ling Lee, a collector"
+          "name": "AFOD.Modules.contactsLingLee"
         },
         {
           "id": "old man bruford",
-          "name": "Old Man Bruford, gin mill owner"
+          "name": "AFOD.Modules.contactsOldManBruford"
         }
       ]
     },

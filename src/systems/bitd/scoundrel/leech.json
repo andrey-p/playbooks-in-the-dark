@@ -99,23 +99,23 @@
       "contacts": [
         {
           "id": "stazia",
-          "name": "Stazia, an apothecary"
+          "name": "BITD.Modules.contactsStazia"
         },
         {
           "id": "veldren",
-          "name": "Veldren, a psychonaut"
+          "name": "BITD.Modules.contactsVeldren"
         },
         {
           "id": "eckerd",
-          "name": "Eckerd, a corpse thief"
+          "name": "BITD.Modules.contactsEckerd"
         },
         {
           "id": "jul",
-          "name": "Jul, a blood dealer"
+          "name": "BITD.Modules.contactsJul"
         },
         {
           "id": "malista",
-          "name": "Malista, a priestess"
+          "name": "BITD.Modules.contactsMalista"
         }
       ]
     }

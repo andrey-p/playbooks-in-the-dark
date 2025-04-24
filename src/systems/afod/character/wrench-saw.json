@@ -97,15 +97,15 @@
       "contacts": [
         {
           "id": "ignaz toodlebrock",
-          "name": "Ignaz Toodlebrock, an inventor"
+          "name": "AFOD.Modules.contactsIgnazToodlebrock"
         },
         {
           "id": "a voice in your head",
-          "name": "A voice in your head"
+          "name": "AFOD.Modules.contactsAVoiceInYourHead"
         },
         {
           "id": "a favorite tool named",
-          "name": "A favorite tool named {toolName}",
+          "name": "AFOD.Modules.contactsAFavoriteToolNamed",
           "slots": [
             {
               "id": "toolName",
@@ -116,11 +116,11 @@
         },
         {
           "id": "virex",
-          "name": "Virex, a failed experiment"
+          "name": "AFOD.Modules.contactsVirex"
         },
         {
           "id": "dakota",
-          "name": "Dakota, your fiancé"
+          "name": "AFOD.Modules.contactsDakota"
         }
       ]
     }

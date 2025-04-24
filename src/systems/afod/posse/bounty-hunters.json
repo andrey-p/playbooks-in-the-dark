@@ -180,27 +180,27 @@
       "contacts": [
         {
           "id": "bill scar morgan",
-          "name": "Bill 'Scar' Morgan, a judge"
+          "name": "AFOD.Modules.contactsBillScarMorgan"
         },
         {
           "id": "the cheat murray",
-          "name": "'The Cheat' Murray, arms dealer"
+          "name": "AFOD.Modules.contactsTheCheatMurray"
         },
         {
           "id": "silent bob",
-          "name": "'Silent' Bob, a blacksmith"
+          "name": "AFOD.Modules.contactsSilentBob"
         },
         {
           "id": "moe",
-          "name": "Moe, a saloon owner"
+          "name": "AFOD.Modules.contactsMoe"
         },
         {
           "id": "madam zona",
-          "name": "Madam Zona, a fortune teller"
+          "name": "AFOD.Modules.contactsMadamZona"
         },
         {
           "id": "xiang",
-          "name": "Xiang, an occultist"
+          "name": "AFOD.Modules.contactsXiang"
         }
       ]
     },

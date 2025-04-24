@@ -98,23 +98,23 @@
       "contacts": [
         {
           "id": "nyryx",
-          "name": "Nyryx, a possessor ghost"
+          "name": "BITD.Modules.contactsNyryx"
         },
         {
           "id": "scurlock",
-          "name": "Scurlock, a vampire"
+          "name": "BITD.Modules.contactsScurlock"
         },
         {
           "id": "setarra",
-          "name": "Setarra, a demon"
+          "name": "BITD.Modules.contactsSetarra"
         },
         {
           "id": "quellyn",
-          "name": "Quellyn, a witch"
+          "name": "BITD.Modules.contactsQuellyn"
         },
         {
           "id": "flint",
-          "name": "Flint, a spirit trafficker"
+          "name": "BITD.Modules.contactsFlint"
         }
       ]
     }

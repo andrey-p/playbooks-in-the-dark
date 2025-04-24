@@ -93,23 +93,23 @@
       "contacts": [
         {
           "id": "levi ambush boyle",
-          "name": "Levi 'Ambush' Boyle, a ranger"
+          "name": "AFOD.Modules.contactsLeviAmbushBoyle"
         },
         {
           "id": "gladis blood wells",
-          "name": "Gladis 'Blood' Wells, bounty hunter"
+          "name": "AFOD.Modules.contactsGladisBloodWells"
         },
         {
           "id": "karl no teeth mccann",
-          "name": "Karl 'No Teeth' McCann, a killer"
+          "name": "AFOD.Modules.contactsKarlNoTeethMccann"
         },
         {
           "id": "carlos vasquez",
-          "name": "Carlos Vasquez, an outlaw boss"
+          "name": "AFOD.Modules.contactsCarlosVasquez"
         },
         {
           "id": "hunter",
-          "name": "Hunter, a vengeful spirit"
+          "name": "AFOD.Modules.contactsHunter"
         }
       ]
     }

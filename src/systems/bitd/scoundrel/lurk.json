@@ -98,23 +98,23 @@
       "contacts": [
         {
           "id": "telda",
-          "name": "Telda, a beggar"
+          "name": "BITD.Modules.contactsTelda"
         },
         {
           "id": "darmot",
-          "name": "Darmot, a bluecoat"
+          "name": "BITD.Modules.contactsDarmot"
         },
         {
           "id": "frake",
-          "name": "Frake, a locksmith"
+          "name": "BITD.Modules.contactsFrake"
         },
         {
           "id": "roslyn kellis",
-          "name": "Roslyn Kellis, a noble"
+          "name": "BITD.Modules.contactsRoslynKellis"
         },
         {
           "id": "petra",
-          "name": "Petra, a city clerk"
+          "name": "BITD.Modules.contactsPetra"
         }
       ]
     }

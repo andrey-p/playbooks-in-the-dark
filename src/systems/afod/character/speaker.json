@@ -93,23 +93,23 @@
       "contacts": [
         {
           "id": "nathaniel",
-          "name": "Nathaniel, an atoned sinner"
+          "name": "AFOD.Modules.contactsNathaniel"
         },
         {
           "id": "patience",
-          "name": "Patience, a lawyer"
+          "name": "AFOD.Modules.contactsPatience"
         },
         {
           "id": "cyrus",
-          "name": "Cyrus, a gunslinger"
+          "name": "AFOD.Modules.contactsCyrus"
         },
         {
           "id": "mistress bethia",
-          "name": "Mistress Bethia"
+          "name": "AFOD.Modules.contactsMistressBethia"
         },
         {
           "id": "speaks with the wind",
-          "name": "Speaks with the Wind"
+          "name": "AFOD.Modules.contactsSpeaksWithTheWind"
         }
       ]
     }

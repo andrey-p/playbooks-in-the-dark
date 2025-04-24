@@ -174,27 +174,27 @@
       "contacts": [
         {
           "id": "gagan",
-          "name": "Gagan, an academic"
+          "name": "BITD.Modules.contactsGagan"
         },
         {
           "id": "adikin",
-          "name": "Adikin, an occultist"
+          "name": "BITD.Modules.contactsAdikin"
         },
         {
           "id": "hutchins",
-          "name": "Hutchins, an antiquarian"
+          "name": "BITD.Modules.contactsHutchins"
         },
         {
           "id": "moriya",
-          "name": "Moriya, a spirit trafficker"
+          "name": "BITD.Modules.contactsMoriya"
         },
         {
           "id": "mateas kline",
-          "name": "Mateas Kline, a noble"
+          "name": "BITD.Modules.contactsMateasKline"
         },
         {
           "id": "bennett",
-          "name": "Bennett, an astronomer"
+          "name": "BITD.Modules.contactsBennett"
         }
       ]
     },

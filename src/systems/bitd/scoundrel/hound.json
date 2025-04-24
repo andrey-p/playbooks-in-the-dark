@@ -94,23 +94,23 @@
       "contacts": [
         {
           "id": "steiner",
-          "name": "Steiner, an assassin"
+          "name": "BITD.Modules.contactsSteiner"
         },
         {
           "id": "celene",
-          "name": "Celene, a sentinel"
+          "name": "BITD.Modules.contactsCelene"
         },
         {
           "id": "melvir",
-          "name": "Melvir, a physicker"
+          "name": "BITD.Modules.contactsMelvir"
         },
         {
           "id": "veleris",
-          "name": "Veleris, a spy"
+          "name": "BITD.Modules.contactsVeleris"
         },
         {
           "id": "casta",
-          "name": "Casta, a bounty hunter"
+          "name": "BITD.Modules.contactsCasta"
         }
       ]
     }

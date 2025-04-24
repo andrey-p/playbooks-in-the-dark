@@ -98,23 +98,23 @@
       "contacts": [
         {
           "id": "marlane",
-          "name": "Marlane, a pugilist"
+          "name": "BITD.Modules.contactsMarlane"
         },
         {
           "id": "chael",
-          "name": "Chael, a vicious thug"
+          "name": "BITD.Modules.contactsChael"
         },
         {
           "id": "mercy",
-          "name": "Mercy, a cold killer"
+          "name": "BITD.Modules.contactsMercy"
         },
         {
           "id": "grace",
-          "name": "Grace, an extortionist"
+          "name": "BITD.Modules.contactsGrace"
         },
         {
           "id": "sawtooth",
-          "name": "Sawtooth, a physicker"
+          "name": "BITD.Modules.contactsSawtooth"
         }
       ]
     }

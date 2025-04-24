@@ -97,23 +97,23 @@
       "contacts": [
         {
           "id": "sherman townsend",
-          "name": "Sherman Townsend, store owner"
+          "name": "AFOD.Modules.contactsShermanTownsend"
         },
         {
           "id": "he who talks",
-          "name": "He Who Talks, a free spirit"
+          "name": "AFOD.Modules.contactsHeWhoTalks"
         },
         {
           "id": "small fox hunting",
-          "name": "Small Fox Hunting, a tribesman"
+          "name": "AFOD.Modules.contactsSmallFoxHunting"
         },
         {
           "id": "bullettooth jackson",
-          "name": "'Bullettooth' Jackson, a ranger"
+          "name": "AFOD.Modules.contactsBullettoothJackson"
         },
         {
           "id": "trouble",
-          "name": "'Trouble', a pain in the neck"
+          "name": "AFOD.Modules.contactsTrouble"
         }
       ]
     }

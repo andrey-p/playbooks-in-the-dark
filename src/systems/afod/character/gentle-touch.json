@@ -97,23 +97,23 @@
       "contacts": [
         {
           "id": "mitch cochran",
-          "name": "Mitch Cochran, an entrepreneur"
+          "name": "AFOD.Modules.contactsMitchCochran"
         },
         {
           "id": "janet irsinghausen",
-          "name": "Janet Irsinghausen, a scholar"
+          "name": "AFOD.Modules.contactsJanetIrsinghausen"
         },
         {
           "id": "mr rosenberg",
-          "name": "Mr. Rosenberg, a commissioner"
+          "name": "AFOD.Modules.contactsMrRosenberg"
         },
         {
           "id": "joe sawyer",
-          "name": "Joe Sawyer, a farmer"
+          "name": "AFOD.Modules.contactsJoeSawyer"
         },
         {
           "id": "ron maddox",
-          "name": "Ron Maddox, a surgeon"
+          "name": "AFOD.Modules.contactsRonMaddox"
         }
       ]
     }

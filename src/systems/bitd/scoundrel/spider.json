@@ -98,23 +98,23 @@
       "contacts": [
         {
           "id": "salia",
-          "name": "Salia, an information broker"
+          "name": "BITD.Modules.contactsSalia"
         },
         {
           "id": "augus",
-          "name": "Augus, a master architect"
+          "name": "BITD.Modules.contactsAugus"
         },
         {
           "id": "jennah",
-          "name": "Jennah, a servant"
+          "name": "BITD.Modules.contactsJennah"
         },
         {
           "id": "riven",
-          "name": "Riven, a chemist"
+          "name": "BITD.Modules.contactsRiven"
         },
         {
           "id": "jeren",
-          "name": "Jeren, a bluecoat archivist"
+          "name": "BITD.Modules.contactsJeren"
         }
       ]
     }

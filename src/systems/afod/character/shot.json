@@ -92,23 +92,23 @@
       "contacts": [
         {
           "id": "arthur fog",
-          "name": "Arthur Fog, a fake native or showman"
+          "name": "AFOD.Modules.contactsArthurFog"
         },
         {
           "id": "ralph bad egg horn",
-          "name": "Ralph 'Bad Egg' Horn, a gun smith"
+          "name": "AFOD.Modules.contactsRalphBadEggHorn"
         },
         {
           "id": "sam lucky eye freeman",
-          "name": "Sam 'Lucky Eye' Freeman, a cowboy"
+          "name": "AFOD.Modules.contactsSamLuckyEyeFreeman"
         },
         {
           "id": "black hoof",
-          "name": "Black Hoof, a native chief or hunter"
+          "name": "AFOD.Modules.contactsBlackHoof"
         },
         {
           "id": "the great lo scalzo",
-          "name": "The Great Lo Scalzo"
+          "name": "AFOD.Modules.contactsTheGreatLoScalzo"
         }
       ]
     }

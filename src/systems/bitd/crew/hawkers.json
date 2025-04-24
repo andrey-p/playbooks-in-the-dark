@@ -171,27 +171,27 @@
       "contacts": [
         {
           "id": "rolan wott",
-          "name": "Rolan Wott, a magistrate"
+          "name": "BITD.Modules.contactsRolanWott"
         },
         {
           "id": "laroze",
-          "name": "Laroze, a bluecoat"
+          "name": "BITD.Modules.contactsLaroze"
         },
         {
           "id": "lydra",
-          "name": "Lydra, a deal broker"
+          "name": "BITD.Modules.contactsLydra"
         },
         {
           "id": "hoxley",
-          "name": "Hoxley, a smuggler"
+          "name": "BITD.Modules.contactsHoxley"
         },
         {
           "id": "anya",
-          "name": "Anya, a dillettante"
+          "name": "BITD.Modules.contactsAnya"
         },
         {
           "id": "marlo",
-          "name": "Marlo, a gang boss"
+          "name": "BITD.Modules.contactsMarlo"
         }
       ]
     },

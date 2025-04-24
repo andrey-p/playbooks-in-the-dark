@@ -93,23 +93,23 @@
       "contacts": [
         {
           "id": "the petrified tree",
-          "name": "The Petrified Tree"
+          "name": "AFOD.Modules.contactsThePetrifiedTree"
         },
         {
           "id": "maxwell",
-          "name": "Maxwell, a scout"
+          "name": "AFOD.Modules.contactsMaxwell"
         },
         {
           "id": "black hoof",
-          "name": "Black Hoof, a native chief/hunter"
+          "name": "AFOD.Modules.contactsBlackHoof"
         },
         {
           "id": "red horse",
-          "name": "Red Horse, a medicine man"
+          "name": "AFOD.Modules.contactsRedHorse"
         },
         {
           "id": "hunter",
-          "name": "Hunter, a spirit of the land"
+          "name": "AFOD.Modules.contactsHunter"
         }
       ]
     }

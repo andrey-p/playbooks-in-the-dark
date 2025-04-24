@@ -93,23 +93,23 @@
       "contacts": [
         {
           "id": "zane cooper",
-          "name": "Zane Cooper, a croupier"
+          "name": "AFOD.Modules.contactsZaneCooper"
         },
         {
           "id": "mrs millie",
-          "name": "Mrs. Millie, a madam"
+          "name": "AFOD.Modules.contactsMrsMillie"
         },
         {
           "id": "dandy jim buckley",
-          "name": "'Dandy Jim' Buckley, a con artist "
+          "name": "AFOD.Modules.contactsDandyJimBuckley"
         },
         {
           "id": "sly eddison",
-          "name": "Sly Eddison, a cardsharp"
+          "name": "AFOD.Modules.contactsSlyEddison"
         },
         {
           "id": "owen oneill",
-          "name": "Owen O'Neill, a moonshiner"
+          "name": "AFOD.Modules.contactsOwenOneill"
         }
       ]
     }

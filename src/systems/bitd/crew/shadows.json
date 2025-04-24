@@ -177,27 +177,27 @@
       "contacts": [
         {
           "id": "dowler",
-          "name": "Dowler, an explorer"
+          "name": "BITD.Modules.contactsDowler"
         },
         {
           "id": "laroze",
-          "name": "Laroze, a bluecoat"
+          "name": "BITD.Modules.contactsLaroze"
         },
         {
           "id": "amancio",
-          "name": "Amancio, a deal broker"
+          "name": "BITD.Modules.contactsAmancio"
         },
         {
           "id": "fitz",
-          "name": "Fitz, a collector"
+          "name": "BITD.Modules.contactsFitz"
         },
         {
           "id": "adelaide phroaig",
-          "name": "Adelaide Phroaig, a noble"
+          "name": "BITD.Modules.contactsAdelaidePhroaig"
         },
         {
           "id": "rigney",
-          "name": "Rigney, a tavern owner"
+          "name": "BITD.Modules.contactsRigney"
         }
       ]
     },

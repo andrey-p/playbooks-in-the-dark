@@ -93,27 +93,27 @@
       "contacts": [
         {
           "id": "polly gains",
-          "name": "Polly Gains, a dealer"
+          "name": "AFOD.Modules.contactsPollyGains"
         },
         {
           "id": "father mathew",
-          "name": "Father Mathew, a priest"
+          "name": "AFOD.Modules.contactsFatherMathew"
         },
         {
           "id": "the kid",
-          "name": "'The Kid', a bounty hunter"
+          "name": "AFOD.Modules.contactsTheKid"
         },
         {
           "id": "a friend",
-          "name": "a Friend you still owe money"
+          "name": "AFOD.Modules.contactsAFriend"
         },
         {
           "id": "adolphus vasquez",
-          "name": "Adolphus Vasquez, railroad worker"
+          "name": "AFOD.Modules.contactsAdolphusVasquez"
         },
         {
           "id": "rufus johnson",
-          "name": "Rufus Johnson, a coachman"
+          "name": "AFOD.Modules.contactsRufusJohnson"
         }
       ]
     }
