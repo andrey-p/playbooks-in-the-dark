@@ -4,13 +4,24 @@ import uiMessages from '../../lang/en.json';
 import { getAllSystemsText } from '@/lib/system-data';
 
 let messages: object;
+let testTranslations = {};
 
 beforeAll(async () => {
   messages = {
     ...(await getAllSystemsText('en')),
-    ...uiMessages
+    ...uiMessages,
+    ...testTranslations
   };
 });
+
+// add ad-hoc translations from within a test
+// to check the behaviour of specific translated components
+export const addTestTranslations = (extraTranslations: object) => {
+  testTranslations = {
+    ...testTranslations,
+    ...extraTranslations
+  };
+};
 
 type WrapperProps = {
   children: React.ReactNode;
@@ -18,7 +29,7 @@ type WrapperProps = {
 
 const Wrapper = ({ children }: WrapperProps) => {
   return (
-    <NextIntlClientProvider locale='en' messages={messages}>
+    <NextIntlClientProvider locale='en' messages={messages} onError={() => {}}>
       {children}
     </NextIntlClientProvider>
   );
