@@ -66,11 +66,11 @@
         "groups": [
           {
             "id": "coin",
-            "name": "Coin"
+            "name": "AFOD.Modules.coinLabel"
           },
           {
             "id": "vault",
-            "name": "Vault"
+            "name": "AFOD.Modules.vaultLabel"
           }
         ],
         "common": [
