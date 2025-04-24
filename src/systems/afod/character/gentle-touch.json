@@ -47,49 +47,49 @@
       "abilities": [
         {
           "id": "snake oil miracles",
-          "name": "Snake Oil Miracles",
-          "description": "When you assist, or engage in a group Action with someone, they may also ignore one harm penalty."
+          "name": "AFOD.Modules.specialAbilitiesSnakeOilMiracles",
+          "description": "AFOD.Modules.specialAbilitiesSnakeOilMiraclesDescription"
         },
         {
           "id": "influential",
-          "name": "Influential",
-          "description": "You provide a valuable service to the town and are welcome even in dangerous places. Get +1 result level when you speak on behalf of a local community, acquire an asset, or reduce Doom."
+          "name": "AFOD.Modules.specialAbilitiesInfluential",
+          "description": "AFOD.Modules.specialAbilitiesInfluentialDescription"
         },
         {
           "id": "little vultures",
-          "name": "Little Vultures",
-          "description": "Cohorts you command gain Potency to gather information and have special armor to resist a consequence of detection or deception."
+          "name": "AFOD.Modules.specialAbilitiesLittleVultures",
+          "description": "AFOD.Modules.specialAbilitiesLittleVulturesDescription"
         },
         {
           "id": "well travelled",
-          "name": "Well Travelled",
-          "description": "You speak a multitude of languages and are broadly educated. When you gather information in a weird or foreign place, take +1d to your roll."
+          "name": "AFOD.Modules.specialAbilitiesWellTravelled",
+          "description": "AFOD.Modules.specialAbilitiesWellTravelledDescription"
         },
         {
           "id": "fandango",
-          "name": "Fandango",
-          "description": "When you indulge your Vice, you may adjust the dice outcome by 1 or 2 (up or down). An ally who joins your Vice may do the same."
+          "name": "AFOD.Modules.specialAbilitiesFandango",
+          "description": "AFOD.Modules.specialAbilitiesFandangoDescription"
         },
         {
           "id": "quick-witted",
-          "name": "Quick-Witted",
-          "description": "You may expend your special armor to resist a consequence of persuasion or suspicion. When you resist with Wit, take +1d."
+          "name": "AFOD.Modules.specialAbilitiesQuickWitted",
+          "description": "AFOD.Modules.specialAbilitiesQuickWittedDescription"
         },
         {
           "id": "viper",
-          "name": "Viper",
-          "description": "When you invent, craft, or try to apply a poison or narcotic, take +1d to your roll. You begin the game with one additional formula already known."
+          "name": "AFOD.Modules.specialAbilitiesViper",
+          "description": "AFOD.Modules.specialAbilitiesViperDescription"
         },
         {
           "id": "in good hands",
-          "name": "In Good Hands",
-          "description": "When you provide meaningful insight or heartfelt advice (to another PC), you both gain 1 Grit. Everyone in your Posse gets +1d to their healing treatment rolls."
+          "name": "AFOD.Modules.specialAbilitiesInGoodHands",
+          "description": "AFOD.Modules.specialAbilitiesInGoodHandsDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteran",
           "max": 3,
-          "description": "Choose a special ability from another source."
+          "description": "AFOD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },

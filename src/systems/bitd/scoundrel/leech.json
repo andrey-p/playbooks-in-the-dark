@@ -48,49 +48,49 @@
       "abilities": [
         {
           "id": "alchemist",
-          "name": "Alchemist",
-          "description": "When you <strong>invent</strong> or <strong>craft</strong> a creation with alchemical features, take <strong>+1 result level</strong> to your roll. You begin with one special formula already known."
+          "name": "BITD.Modules.specialAbilitiesAlchemist",
+          "description": "BITD.Modules.specialAbilitiesAlchemistDescription"
         },
         {
           "id": "analyst",
-          "name": "Analyst",
-          "description": "During <strong>downtime</strong>, you get <strong>two ticks</strong> to distribute among any long term project clocks that involve investigation or learning a new formula or design plan."
+          "name": "BITD.Modules.specialAbilitiesAnalyst",
+          "description": "BITD.Modules.specialAbilitiesAnalystDescription"
         },
         {
           "id": "artificer",
-          "name": "Artificer",
-          "description": "When you <strong>invent</strong> or <strong>craft</strong> a creation with spark-craft features, take <strong>+1 result level</strong> to your roll. You begin with one special design already known."
+          "name": "BITD.Modules.specialAbilitiesArtificer",
+          "description": "BITD.Modules.specialAbilitiesArtificerDescription"
         },
         {
           "id": "fortitude",
-          "name": "Fortitude",
-          "description": "You may expend your <strong>special armor</strong> to resist a consequence of fatigue, weakness, or chemical effects, or to push yourself when working with technical skill or handling alchemicals."
+          "name": "BITD.Modules.specialAbilitiesFortitude",
+          "description": "BITD.Modules.specialAbilitiesFortitudeDescription"
         },
         {
           "id": "ghost ward",
-          "name": "Ghost Ward",
-          "description": "You know how to <strong>Wreck</strong> an area with arcane substances and methods so it is either anathema or enticing to spirits (your choice)."
+          "name": "BITD.Modules.specialAbilitiesGhostWard",
+          "description": "BITD.Modules.specialAbilitiesGhostWardDescription"
         },
         {
           "id": "physicker",
-          "name": "Physicker",
-          "description": "You can <strong>Tinker</strong> with bones, blood, and bodily humours to treat wounds or stabilize the dying. You may <strong>study</strong> a malady or corpse. Everyone in your crew gets <strong>+1d</strong> to their healing treatment rolls"
+          "name": "BITD.Modules.specialAbilitiesPhysicker",
+          "description": "BITD.Modules.specialAbilitiesPhysickerDescription"
         },
         {
           "id": "saboteur",
-          "name": "Saboteur",
-          "description": "When you <strong>Wreck</strong>, the work is much quieter than it should be and the damage is hidden from casual inspection."
+          "name": "BITD.Modules.specialAbilitiesSaboteur",
+          "description": "BITD.Modules.specialAbilitiesSaboteurDescription"
         },
         {
           "id": "venomous",
-          "name": "Venomous",
-          "description": "Choose a drug or poison (from your bandolier stock) to which you have become immune. You can <strong>push yourself</strong> to secrete it through your skin or saliva or exhale it as a vapor."
+          "name": "BITD.Modules.specialAbilitiesVenomous",
+          "description": "BITD.Modules.specialAbilitiesVenomousDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "BITD.Modules.specialAbilitiesVeteran",
           "max": 3,
-          "description": "Choose a special ability from another source."
+          "description": "BITD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },

@@ -127,44 +127,44 @@
       "abilities": [
         {
           "id": "watchers",
-          "name": "Watchers",
-          "description": "Each PC may add +1 Action rating to Attune, Hunt, or Survey (up to a max rating of 3)."
+          "name": "AFOD.Modules.specialAbilitiesWatchers",
+          "description": "AFOD.Modules.specialAbilitiesWatchersDescription"
         },
         {
           "id": "into the burning beyond",
-          "name": "Into the Burning Beyond",
-          "description": "The spirits showed you the shifting paths into the Burning Beyond and back. You may attune to visit places of the Beyond, if you respect the inhabitants, and bring appropriate offerings. You don’t have to leave the way you came."
+          "name": "AFOD.Modules.specialAbilitiesIntoTheBurningBeyond",
+          "description": "AFOD.Modules.specialAbilitiesIntoTheBurningBeyondDescription"
         },
         {
           "id": "horseback is home",
-          "name": "Horseback Is Home",
-          "description": "You get +1d while on horseback. You speak the language of horses. You may ask them to gather information with +1 effect. You lose 3 Grit when your horse dies."
+          "name": "AFOD.Modules.specialAbilitiesHorsebackIsHome",
+          "description": "AFOD.Modules.specialAbilitiesHorsebackIsHomeDescription"
         },
         {
           "id": "one with the land",
-          "name": "One with the Land",
-          "description": "You may command the spirits of the land or ask kindly for their help or advice. You may ignore one consequence if the spirits chose to provide cover. Or you may gain +1d if they chose to help you on your path."
+          "name": "AFOD.Modules.specialAbilitiesOneWithTheLand",
+          "description": "AFOD.Modules.specialAbilitiesOneWithTheLandDescription"
         },
         {
           "id": "one with the people",
-          "name": "One with the People",
-          "description": "When you have a Downtime in your people’s territory, your tribe has one additional Downtime Action, and gains +1d to Acquire Asset. Describe how this can be."
+          "name": "AFOD.Modules.specialAbilitiesOneWithThePeople",
+          "description": "AFOD.Modules.specialAbilitiesOneWithThePeopleDescription"
         },
         {
           "id": "stalkers of demons",
-          "name": "Stalkers of Demons",
-          "description": "You were taught to sense the weakness of demons using taboomagic. Ifyousuccessfullyattunetoademon, theGMwilltellyouits weakness, and how it may be destroyed. On a CRIT you may learn its true name. <em>Which taboo must be broken?</em>"
+          "name": "AFOD.Modules.specialAbilitiesStalkersOfDemons",
+          "description": "AFOD.Modules.specialAbilitiesStalkersOfDemonsDescription"
         },
         {
           "id": "theyre with us",
-          "name": "They're with Us",
-          "description": "You carry a symbol of your people / land; describe it and the grim bounding ritual. As long as you carry it, your Tribe gets +1d against Delving Too Deep and +1d resistance against creatures from the Burning Beyond or other spirits as well as against dread or despair. If you lose the symbol or it is destroyed, all get level 3 harm ’disheartened’. May only be healed by restoring the symbol somehow."
+          "name": "AFOD.Modules.specialAbilitiesTheyreWithUs",
+          "description": "AFOD.Modules.specialAbilitiesTheyreWithUsDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteran",
           "max": 3,
-          "description": "Choose a special ability from another crew."
+          "description": "AFOD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },

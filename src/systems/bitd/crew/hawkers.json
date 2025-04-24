@@ -7,44 +7,44 @@
       "abilities": [
         {
           "id": "silver tongues",
-          "name": "Silver Tongues",
-          "description": "Each PC may add +1 action rating to <strong>Command</strong>, <strong>Consort</strong>, or <strong>Sway</strong> (up to a max rating of 3)."
+          "name": "BITD.Modules.specialAbilitiesSilverTongues",
+          "description": "BITD.Modules.specialAbilitiesSilverTonguesDescription"
         },
         {
           "id": "accord",
-          "name": "Accord",
-          "description": "Sometimes friends are as good as territory. You may count up to three <strong>+3 faction statuses</strong> you hold as if they are <strong>turf</strong>."
+          "name": "BITD.Modules.specialAbilitiesAccord",
+          "description": "BITD.Modules.specialAbilitiesAccordDescription"
         },
         {
           "id": "the good stuff",
-          "name": "The Good Stuff",
-          "description": "Your merchandise is exquisite. The product <strong>quality</strong> is equal to your <strong>Tier+2</strong>. When you deal with a crew or faction, the GM will tell you who among them is hooked on your product (one, a few, many, or all)."
+          "name": "BITD.Modules.specialAbilitiesTheGoodStuff",
+          "description": "BITD.Modules.specialAbilitiesTheGoodStuffDescription"
         },
         {
           "id": "ghost market",
-          "name": "Ghost Market",
-          "description": "Through arcane ritual or hard-won experience, you have discovered how to prepare your product for sale to ghosts and/or demons. <em>They do not pay in coin. What do they pay with?</em>"
+          "name": "BITD.Modules.specialAbilitiesGhostMarket",
+          "description": "BITD.Modules.specialAbilitiesGhostMarketDescription"
         },
         {
           "id": "high society",
-          "name": "High Society",
-          "description": "It's all about who you know. Take <strong>-1 heat</strong> during downtime and <strong>+1d</strong> to gather info about the city's elite."
+          "name": "BITD.Modules.specialAbilitiesHighSociety",
+          "description": "BITD.Modules.specialAbilitiesHighSocietyDescription"
         },
         {
           "id": "hooked",
-          "name": "Hooked",
-          "description": "Your gang members use your product. Add the <em>savage</em>, <em>unreliable</em>, or <em>wild</em> flaw to your gangs to give them <strong+1 quality</strong>."
+          "name": "BITD.Modules.specialAbilitiesHooked",
+          "description": "BITD.Modules.specialAbilitiesHookedDescription"
         },
         {
           "id": "patron",
-          "name": "Patron",
-          "description": "When you advance your <strong>Tier</strong>, it costs <strong>half the coin</strong> it normally would. <em>Who is your patron? Why do they help you?</em>"
+          "name": "BITD.Modules.specialAbilitiesPatron",
+          "description": "BITD.Modules.specialAbilitiesPatronDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "BITD.Modules.specialAbilitiesVeteran",
           "max": 2,
-          "description": "Choose a special ability from another crew."
+          "description": "BITD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },

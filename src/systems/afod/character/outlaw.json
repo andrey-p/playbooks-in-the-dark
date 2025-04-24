@@ -48,44 +48,44 @@
       "abilities": [
         {
           "id": "one of those days",
-          "name": "One of Those Days",
-          "description": "You may expend your special armor to resist a consequence from a desperate roll, or to escape from whatever (or to wherever) you want... for now."
+          "name": "AFOD.Modules.specialAbilitiesOneOfThoseDays",
+          "description": "AFOD.Modules.specialAbilitiesOneOfThoseDaysDescription"
         },
         {
           "id": "now now now",
-          "name": "Now! Now! Now!",
-          "description": "When you push yourself, you may spend +1 Grit (so 3 Grit total) to gain both +1 effect and +1d instead of one or the other."
+          "name": "AFOD.Modules.specialAbilitiesNowNowNow",
+          "description": "AFOD.Modules.specialAbilitiesNowNowNowDescription"
         },
         {
           "id": "didnt see that coming",
-          "name": "Didn't See that Coming",
-          "description": "When you make a surprising move that disregards propriety or other convention, you get +1d or +1 effect (your choice, as appropriate)."
+          "name": "AFOD.Modules.specialAbilitiesDidntSeeThatComing",
+          "description": "AFOD.Modules.specialAbilitiesDidntSeeThatComingDescription"
         },
         {
           "id": "daredevil",
-          "name": "Daredevil",
-          "description": "When you roll a desperate action, you get +1d to your roll if you also take -1d to any resistance rolls against consequences from your action."
+          "name": "AFOD.Modules.specialAbilitiesDaredevil",
+          "description": "AFOD.Modules.specialAbilitiesDaredevilDescription"
         },
         {
           "id": "vengeful",
-          "name": "Vengeful",
-          "description": "You gain an additional XP trigger: You got payback against someone who harmed you or someone you care about. If your Posse helped you get payback, also mark Posse XP."
+          "name": "AFOD.Modules.specialAbilitiesVengeful",
+          "description": "AFOD.Modules.specialAbilitiesVengefulDescription"
         },
         {
           "id": "some fine reputation",
-          "name": "Some Fine Reputation",
-          "description": "Entering a location you may tell us what the people have heard about you. When you reveal your name and exploit your reputation you gain improved position or +1 effect (whatever makes sense)."
+          "name": "AFOD.Modules.specialAbilitiesSomeFineReputation",
+          "description": "AFOD.Modules.specialAbilitiesSomeFineReputationDescription"
         },
         {
           "id": "blaze of glory",
-          "name": "Blaze of Glory",
-          "description": "When you mark a Stigma and utter a dying malediction you may retaliate against any and all enemies within range. Say how you bring ruin to your foes before they take you down. You may mark a Stigma prematurely to use this ability."
+          "name": "AFOD.Modules.specialAbilitiesBlazeOfGlory",
+          "description": "AFOD.Modules.specialAbilitiesBlazeOfGloryDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteran",
           "max": 3,
-          "description": "Choose a special ability from another source."
+          "description": "AFOD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },

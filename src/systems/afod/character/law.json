@@ -48,44 +48,44 @@
       "abilities": [
         {
           "id": "i am the law",
-          "name": "I Am the Law",
-          "description": "You may expend your special armor to show your badge of authority to enforce obedience, or to push yourself during a fight."
+          "name": "AFOD.Modules.specialAbilitiesIAmTheLaw",
+          "description": "AFOD.Modules.specialAbilitiesIAmTheLawDescription"
         },
         {
           "id": "a story to tell",
-          "name": "A Story to Tell",
-          "description": "Once per run you can push yourself to tell a story about a dire mess you survived to achieve one of the following: <em>motivate a cohort/mob into fighting or fleeing</em> — <em>give a fighting cohort +1 effect</em> <em>restore 1 Grit for everybody in the Posse</em>."
+          "name": "AFOD.Modules.specialAbilitiesAStoryToTell",
+          "description": "AFOD.Modules.specialAbilitiesAStoryToTellDescription"
         },
         {
           "id": "this aint no pique-nique",
-          "name": "This Ain’t No Pique-nique",
-          "description": "When you Command a cohort in combat, they continue to fight when they would otherwise break (they’re not taken out when they suffer level 3 harm). They gain +1 effect and 1 armor."
+          "name": "AFOD.Modules.specialAbilitiesThisAintNoPique-nique",
+          "description": "AFOD.Modules.specialAbilitiesThisAintNoPique-niqueDescription"
         },
         {
           "id": "what your country can do for you",
-          "name": "What Your Country Can Do for You",
-          "description": "You have access to law enforcement resources. Get +1d when you acquire assets during Downtime. All assets have a minimum quality of 1."
+          "name": "AFOD.Modules.specialAbilitiesWhatYourCountryCanDoForYou",
+          "description": "AFOD.Modules.specialAbilitiesWhatYourCountryCanDoForYouDescription"
         },
         {
           "id": "sonly a flesh wound",
-          "name": "S’Only a Flesh Wound",
-          "description": "Penalties from harm are one level less severe (though level 4 harm is still fatal). When you accept level 2 or 3 harm instead of resisting, clear 1 Grit."
+          "name": "AFOD.Modules.specialAbilitiesSonlyAFleshWound",
+          "description": "AFOD.Modules.specialAbilitiesSonlyAFleshWoundDescription"
         },
         {
           "id": "moral compass",
-          "name": "Moral Compass",
-          "description": "You gain an additional XP trigger: You did the right thing at cost to yourself. If your Posse has problems due to this, also mark Posse XP."
+          "name": "AFOD.Modules.specialAbilitiesMoralCompass",
+          "description": "AFOD.Modules.specialAbilitiesMoralCompassDescription"
         },
         {
           "id": "tactical genius",
-          "name": "Tactical Genius",
-          "description": "You always know the best position during a fight or hunt. If you’re able to occupy this position gain +1 Effect for you and everybody who’s there with you."
+          "name": "AFOD.Modules.specialAbilitiesTacticalGenius",
+          "description": "AFOD.Modules.specialAbilitiesTacticalGeniusDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteran",
           "max": 3,
-          "description": "Choose a special ability from another source."
+          "description": "AFOD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },

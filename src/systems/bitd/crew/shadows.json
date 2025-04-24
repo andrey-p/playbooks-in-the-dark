@@ -7,44 +7,44 @@
       "abilities": [
         {
           "id": "everyone steals",
-          "name": "Everyone Steals",
-          "description": "Each PC may add +1 action rating to <strong>Prowl</strong>, <strong>Finesse</strong>, or <strong>Tinker</strong> (up to a max rating of 3)."
+          "name": "BITD.Modules.specialAbilitiesEveryoneSteals",
+          "description": "BITD.Modules.specialAbilitiesEveryoneStealsDescription"
         },
         {
           "id": "ghost echoes",
-          "name": "Ghost Echoes",
-          "description": "From weird experience or occult ritual, all crew members gain the ability to see and interact with the ghostly structures, streets, and objects within the echo of Doskvol that exists in the ghost field."
+          "name": "BITD.Modules.specialAbilitiesGhostEchoes",
+          "description": "BITD.Modules.specialAbilitiesGhostEchoesDescription"
         },
         {
           "id": "pack rats",
-          "name": "Pack Rats",
-          "description": "Your lair is a jumble of stolen items. When you roll to <strong>acquire an asset</strong>, take <strong>+1d</strong>."
+          "name": "BITD.Modules.specialAbilitiesPackRats",
+          "description": "BITD.Modules.specialAbilitiesPackRatsDescription"
         },
         {
           "id": "patron",
-          "name": "Patron",
-          "description": "When you advance your <strong>Tier</strong>, it costs <strong>half the coin</strong> it normally would. <em>Who is your patron? Why do they help you?</em>"
+          "name": "BITD.Modules.specialAbilitiesPatron",
+          "description": "BITD.Modules.specialAbilitiesPatronDescription"
         },
         {
           "id": "second story",
-          "name": "Second Story",
-          "description": "When you execute a clandestine infiltration, you get <strong>+1d</strong> to the <strong>engagement roll</strong>."
+          "name": "BITD.Modules.specialAbilitiesSecondStory",
+          "description": "BITD.Modules.specialAbilitiesSecondStoryDescription"
         },
         {
           "id": "slippery",
-          "name": "Slippery",
-          "description": "When you roll <strong>entanglements</strong>, roll twice and keep the one you want. When you <strong>reduce heat</strong> on the crew, take <strong>+1d</strong>."
+          "name": "BITD.Modules.specialAbilitiesSlippery",
+          "description": "BITD.Modules.specialAbilitiesSlipperyDescription"
         },
         {
           "id": "synchronized",
-          "name": "Synchronized",
-          "description": "When you perform a <strong>group action</strong>, you may count multiple 6s from different rolls as a critical success."
+          "name": "BITD.Modules.specialAbilitiesSynchronized",
+          "description": "BITD.Modules.specialAbilitiesSynchronizedDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "BITD.Modules.specialAbilitiesVeteran",
           "max": 2,
-          "description": "Choose a special ability from another crew."
+          "description": "BITD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },

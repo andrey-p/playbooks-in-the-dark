@@ -127,44 +127,44 @@
       "abilities": [
         {
           "id": "heigh-ho",
-          "name": "Heigh-Ho",
-          "description": "Each PC may add +1 Action rating to Attune, Disable, or Prowl (up to a max rating of 3)."
+          "name": "AFOD.Modules.specialAbilitiesHeighHo",
+          "description": "AFOD.Modules.specialAbilitiesHeighHoDescription"
         },
         {
           "id": "transporter",
-          "name": "Transporter",
-          "description": "When you execute a Travel Plan to start your run or Hellstone Scavenge, take +1d to the engagement roll."
+          "name": "AFOD.Modules.specialAbilitiesTransporter",
+          "description": "AFOD.Modules.specialAbilitiesTransporterDescription"
         },
         {
           "id": "dig dug",
-          "name": "Dig Dug",
-          "description": "No way to rip you off. When you acquire mining equipment or explosives, you get +1 result level to your roll."
+          "name": "AFOD.Modules.specialAbilitiesDigDug",
+          "description": "AFOD.Modules.specialAbilitiesDigDugDescription"
         },
         {
           "id": "leverage",
-          "name": "Leverage",
-          "description": "Your Posse supplies ’found stuff’ for other Factions. Your success is good for them. Whenever you gain Rep, gain +1 Rep. <em>Which Factions? Who’s angry about this arrangement? Which quality rating of which location is affected by this arrangement?</em>"
+          "name": "AFOD.Modules.specialAbilitiesLeverage",
+          "description": "AFOD.Modules.specialAbilitiesLeverageDescription"
         },
         {
           "id": "got used to the strange life",
-          "name": "Got Used to the Strange Life",
-          "description": "You get +1d to resistance rolls against supernatural threats including Delving Too Deep. You get +1d to healing rolls when you have supernatural harm."
+          "name": "AFOD.Modules.specialAbilitiesGotUsedToTheStrangeLife",
+          "description": "AFOD.Modules.specialAbilitiesGotUsedToTheStrangeLifeDescription"
         },
         {
           "id": "undue hellish confidence",
-          "name": "Undue Hellish Confidence",
-          "description": "No one can beat your Posse as long you have Hellstone around (at least it feels this way). Once per run you may regain 1 Grit if you make a Mutation Roll."
+          "name": "AFOD.Modules.specialAbilitiesUndueHellishConfidence",
+          "description": "AFOD.Modules.specialAbilitiesUndueHellishConfidenceDescription"
         },
         {
           "id": "patron",
-          "name": "Patron",
-          "description": "When you advance your Tier, it costs half the coin it normally would. <em>Who is your patron? Why do they help you?</em>"
+          "name": "AFOD.Modules.specialAbilitiesPatron",
+          "description": "AFOD.Modules.specialAbilitiesPatronDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteran",
           "max": 3,
-          "description": "Choose a special ability from another crew."
+          "description": "AFOD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },

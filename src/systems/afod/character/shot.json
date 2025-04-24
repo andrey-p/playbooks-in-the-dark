@@ -47,44 +47,44 @@
       "abilities": [
         {
           "id": "smoke & mirrors",
-          "name": "Smoke & Mirrors",
-          "description": "You may expend your special armor to resist harm from combat, or appearing to die (fall off a vehicle, disappear in an explosion, etc.). only to reappear in a location of your choosing with a +1d to your next Action."
+          "name": "AFOD.Modules.specialAbilitiesSmokeMirrors",
+          "description": "AFOD.Modules.specialAbilitiesSmokeMirrorsDescription"
         },
         {
           "id": "fancy dead eye",
-          "name": "Fancy Dead Eye",
-          "description": "You can push yourself to do one of the following: <em>make a ranged attack at extreme distance</em> — <em>perform an impossible shot (ricochet around the corner, trick shots, shot into/through a group of people)</em> — <em>have one last bullet no one counted for</em>."
+          "name": "AFOD.Modules.specialAbilitiesFancyDeadEye",
+          "description": "AFOD.Modules.specialAbilitiesFancyDeadEyeDescription"
         },
         {
           "id": "eastwood",
-          "name": "Eastwood",
-          "description": "Before weapons are drawn, you may lock eyes with someone, forcing them to hesitate or flinch. Both of you know, that you can interrupt whatever they do next. Take +1d for your next Action against them."
+          "name": "AFOD.Modules.specialAbilitiesEastwood",
+          "description": "AFOD.Modules.specialAbilitiesEastwoodDescription"
         },
         {
           "id": "lightning nerves of steel",
-          "name": "Lightning Nerves of Steel",
-          "description": "You may always shoot first. You may wait ’til the latest possible moment and still be the first to (re-)act."
+          "name": "AFOD.Modules.specialAbilitiesLightningNervesOfSteel",
+          "description": "AFOD.Modules.specialAbilitiesLightningNervesOfSteelDescription"
         },
         {
           "id": "silver bullets",
-          "name": "Silver Bullets",
-          "description": "You may enrich your shots with spirit energy. Your shots gain Potency in combat vs. the supernatural."
+          "name": "AFOD.Modules.specialAbilitiesSilverBullets",
+          "description": "AFOD.Modules.specialAbilitiesSilverBulletsDescription"
         },
         {
           "id": "fill the air with lead",
-          "name": "Fill the Air with Lead",
-          "description": "Expend your Special Ammunition to do one of the following: <em>unleash a barrage of rapid fire to suppress the enemy</em> — <em> attack a group with +1 scale.</em>"
+          "name": "AFOD.Modules.specialAbilitiesFillTheAirWithLead",
+          "description": "AFOD.Modules.specialAbilitiesFillTheAirWithLeadDescription"
         },
         {
           "id": "stunning performance",
-          "name": "Stunning Performance",
-          "description": "You can perform a flashy show with your weapons or horse, that leaves your audience stunned and speechless. Take +1 effect, to act on this impressed folks or on escape."
+          "name": "AFOD.Modules.specialAbilitiesStunningPerformance",
+          "description": "AFOD.Modules.specialAbilitiesStunningPerformanceDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteran",
           "max": 3,
-          "description": "Choose a special ability from another source."
+          "description": "AFOD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },

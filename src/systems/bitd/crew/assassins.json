@@ -7,44 +7,44 @@
       "abilities": [
         {
           "id": "deadly",
-          "name": "Deadly",
-          "description": "Each PC may add +1 action rating to <strong>Hunt</strong>, <strong>Prowl</strong>, or <strong>Skirmish</strong> (up to a max rating of 3)."
+          "name": "BITD.Modules.specialAbilitiesDeadly",
+          "description": "BITD.Modules.specialAbilitiesDeadlyDescription"
         },
         {
           "id": "crow's veil",
-          "name": "Crow's Veil",
-          "description": "Due to hard-won experience or occult ritual, your activities are hidden from the notice of the death-seeker crows. You don't take extra heat when killing is involved on a score."
+          "name": "BITD.Modules.specialAbilitiesCrowsVeil",
+          "description": "BITD.Modules.specialAbilitiesCrowsVeilDescription"
         },
         {
           "id": "emberdeath",
-          "name": "Emberdeath",
-          "description": "Due to hard-won experience or occult ritual, you know the arcane method to destroy a living victim's spirit at the moment you kill them. Take 3 stress to channel electroplasmic energy from the ghost field to disintegrate the spirit and dead body in a shower of sparking embers."
+          "name": "BITD.Modules.specialAbilitiesEmberdeath",
+          "description": "BITD.Modules.specialAbilitiesEmberdeathDescription"
         },
         {
           "id": "no traces",
-          "name": "No Traces",
-          "description": "When you keep an operation quiet or make it look like an accident, you get half the rep value of the target (round up) instead of zero. When you end <strong>downtime</strong> with zero heat, take <strong>+1 rep</strong>."
+          "name": "BITD.Modules.specialAbilitiesNoTraces",
+          "description": "BITD.Modules.specialAbilitiesNoTracesDescription"
         },
         {
           "id": "patron",
-          "name": "Patron",
-          "description": "When you advance your <strong>Tier</strong>, it costs <strong>half the coin</strong> it normally would. <em>Who is your patron? Why do they help you?</em>"
+          "name": "BITD.Modules.specialAbilitiesPatron",
+          "description": "BITD.Modules.specialAbilitiesPatronDescription"
         },
         {
           "id": "predators",
-          "name": "Predators",
-          "description": "When you use stealth or subterfuge to commit murder, take +1d to the engagement roll."
+          "name": "BITD.Modules.specialAbilitiesPredators",
+          "description": "BITD.Modules.specialAbilitiesPredatorsDescription"
         },
         {
           "id": "vipers",
-          "name": "Vipers",
-          "description": "When you acquire or craft poisons, you get +1 result level to your roll. When you employ a poison, you are specially prepared to be immune to its effects."
+          "name": "BITD.Modules.specialAbilitiesVipers",
+          "description": "BITD.Modules.specialAbilitiesVipersDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "BITD.Modules.specialAbilitiesVeteran",
           "max": 3,
-          "description": "Choose a special ability from another crew."
+          "description": "BITD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },

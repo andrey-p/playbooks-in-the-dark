@@ -127,44 +127,44 @@
       "abilities": [
         {
           "id": "deadly serious",
-          "name": "Deadly Serious",
-          "description": "Each PC may add +1 Action rating to Command, Sling, or Brawl (up to a max rating of 3)."
+          "name": "AFOD.Modules.specialAbilitiesDeadlySerious",
+          "description": "AFOD.Modules.specialAbilitiesDeadlySeriousDescription"
         },
         {
           "id": "blood brothers",
-          "name": "Blood Brothers",
-          "description": "When you fight alongside your cohorts in combat, they get +1d for teamwork rolls (setup and group Actions). All of your cohorts get the Thugs type for free (if they’re already Thugs, add another type)."
+          "name": "AFOD.Modules.specialAbilitiesBloodBrothers",
+          "description": "AFOD.Modules.specialAbilitiesBloodBrothersDescription"
         },
         {
           "id": "straightforward",
-          "name": "Straightforward",
-          "description": "When you execute an assault Plan, take +1d to the Engagement roll."
+          "name": "AFOD.Modules.specialAbilitiesStraightforward",
+          "description": "AFOD.Modules.specialAbilitiesStraightforwardDescription"
         },
         {
           "id": "fiends",
-          "name": "Fiends",
-          "description": "Fear is as good as respect. You may count each active Rider as if it was a claim."
+          "name": "AFOD.Modules.specialAbilitiesFiends",
+          "description": "AFOD.Modules.specialAbilitiesFiendsDescription"
         },
         {
           "id": "forged in the fire",
-          "name": "Forged in the Fire",
-          "description": "Each PC has been toughened by cruel experience. You get +1d to resistance rolls."
+          "name": "AFOD.Modules.specialAbilitiesForgedInTheFire",
+          "description": "AFOD.Modules.specialAbilitiesForgedInTheFireDescription"
         },
         {
           "id": "war dogs",
-          "name": "War Dogs",
-          "description": "When you’re in a feud (-3 Faction status), your Posse does not suffer -1 hold and PCs still get two Downtime activities, instead of just one."
+          "name": "AFOD.Modules.specialAbilitiesWarDogs",
+          "description": "AFOD.Modules.specialAbilitiesWarDogsDescription"
         },
         {
           "id": "patron",
-          "name": "Patron",
-          "description": "When you advance your Tier, it costs half the coin it normally would. <em>Who is your patron? Why do they help you?</em>"
+          "name": "AFOD.Modules.specialAbilitiesPatron",
+          "description": "AFOD.Modules.specialAbilitiesPatronDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteran",
           "max": 3,
-          "description": "Choose a special ability from another crew."
+          "description": "AFOD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },

@@ -7,44 +7,44 @@
       "abilities": [
         {
           "id": "like part of the family",
-          "name": "Like Part of the Family",
-          "description": "Create one of your vehicles as a <strong>cohort</strong> (use the vehicle edges and flaws, below). Its <strong>quality</strong> is equal to your Tier +1."
+          "name": "BITD.Modules.specialAbilitiesLikePartOfTheFamily",
+          "description": "BITD.Modules.specialAbilitiesLikePartOfTheFamilyDescription"
         },
         {
           "id": "all hands",
-          "name": "All Hands",
-          "description": "During <strong>downtime</strong>, one of your cohorts may perform a downtime activity for the crew to <strong>acquire an asset</strong>, <strong>reduce heat</strong>, or work on a <strong>long-term project</strong>."
+          "name": "BITD.Modules.specialAbilitiesAllHands",
+          "description": "BITD.Modules.specialAbilitiesAllHandsDescription"
         },
         {
           "id": "ghost passage",
-          "name": "Ghost Passage",
-          "description": "From harsh experience or occult ritual, all crew members become immune to possession by spirits, but may choose to \"carry\" a second ghost as a passenger within their body."
+          "name": "BITD.Modules.specialAbilitiesGhostPassage",
+          "description": "BITD.Modules.specialAbilitiesGhostPassageDescription"
         },
         {
           "id": "just passing through",
-          "name": "Just Passing Through",
-          "description": "During <strong>downtime</strong>, take <strong>-1</strong> heat. When your heat is 4 or less, you get <strong>+1d</strong> to deceive people when you pass yourselves off as ordinary citizens."
+          "name": "BITD.Modules.specialAbilitiesJustPassingThrough",
+          "description": "BITD.Modules.specialAbilitiesJustPassingThroughDescription"
         },
         {
           "id": "leverage",
-          "name": "Leverage",
-          "description": "Your crew supplies contraband for other factions. Your success is good for them. Whenever you gain rep, gain <strong>+1 rep</strong>."
+          "name": "BITD.Modules.specialAbilitiesLeverage",
+          "description": "BITD.Modules.specialAbilitiesLeverageDescription"
         },
         {
           "id": "reavers",
-          "name": "Reavers",
-          "description": "When you go into conflict aboard a vehicle, you gain <strong>+1 effect</strong> for vehicle damage and speed. Your vehicle gains <strong>armor</strong>."
+          "name": "BITD.Modules.specialAbilitiesReavers",
+          "description": "BITD.Modules.specialAbilitiesReaversDescription"
         },
         {
           "id": "renegades",
-          "name": "Renegades",
-          "description": "Each PC may add +1 action rating to <strong>Finesse</strong>, <strong>Prowl</strong>, or <strong>Skirmish</strong> (up to a max rating of 3)."
+          "name": "BITD.Modules.specialAbilitiesRenegades",
+          "description": "BITD.Modules.specialAbilitiesRenegadesDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "BITD.Modules.specialAbilitiesVeteran",
           "max": 2,
-          "description": "Choose a special ability from another crew."
+          "description": "BITD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },

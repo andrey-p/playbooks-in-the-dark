@@ -48,44 +48,44 @@
       "abilities": [
         {
           "id": "guided by the totem",
-          "name": "Guided by the Totem",
-          "description": "You may expend your special armor to resist a supernatural consequence, or to push yourself for a feat of athletics or hunt."
+          "name": "AFOD.Modules.specialAbilitiesGuidedByTheTotem",
+          "description": "AFOD.Modules.specialAbilitiesGuidedByTheTotemDescription"
         },
         {
           "id": "totem's vessel",
-          "name": "Totem's Vessel",
-          "description": "When you push yourself and open body and soul as a conduit for your totem, choose one of the following additional benefits: <em>perform a feat of athletics or stealth that verges on the superhuman</em> - <em>maneuver to confuse your enemies so they mistakenly attack each other</em> - <em>sense your prey (gather Information with at least Standard result) wherever it is</em>."
+          "name": "AFOD.Modules.specialAbilitiesTotemsVessel",
+          "description": "AFOD.Modules.specialAbilitiesTotemsVesselDescription"
         },
         {
           "id": "protector of the people",
-          "name": "Protector of the People",
-          "description": "When you protect a teammate or your people, take +1d to your resistance roll. When you gather info to anticipate possible threats in the current situation, you get +1 effect."
+          "name": "AFOD.Modules.specialAbilitiesProtectorOfThePeople",
+          "description": "AFOD.Modules.specialAbilitiesProtectorOfThePeopleDescription"
         },
         {
           "id": "a devil with a blade",
-          "name": "A Devil with a Blade",
-          "description": "You’re very effective at finding vital organs with your blade. When using Sling, to throw or fight with a blade, you gain Potency and may choose to do it absolutely silently. On a miss you don’t get any positive result."
+          "name": "AFOD.Modules.specialAbilitiesADevilWithABlade",
+          "description": "AFOD.Modules.specialAbilitiesADevilWithABladeDescription"
         },
         {
           "id": "gruesome warpaint",
-          "name": "Gruesome Warpaint",
-          "description": "Enemies falter, hesitate, or flinch when attacked by you in close combat. You have an air of menace and danger obvious to even the most oblivious. You gain Potency when trying to intimidate someone. If done immediately after a show of force, also take +1d."
+          "name": "AFOD.Modules.specialAbilitiesGruesomeWarpaint",
+          "description": "AFOD.Modules.specialAbilitiesGruesomeWarpaintDescription"
         },
         {
           "id": "totem sense",
-          "name": "Totem Sense",
-          "description": "Pick an animal sense matching to your totem. This sense is sharpened beyond human range to animal sensitivity."
+          "name": "AFOD.Modules.specialAbilitiesTotemSense",
+          "description": "AFOD.Modules.specialAbilitiesTotemSenseDescription"
         },
         {
           "id": "lone wolf",
-          "name": "Lone Wolf",
-          "description": "You gain an additional XP trigger: You made things harder by acting alone. If your Posse has problems due to this, also mark Posse XP."
+          "name": "AFOD.Modules.specialAbilitiesLoneWolf",
+          "description": "AFOD.Modules.specialAbilitiesLoneWolfDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteran",
           "max": 3,
-          "description": "Choose a special ability from another source."
+          "description": "AFOD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },

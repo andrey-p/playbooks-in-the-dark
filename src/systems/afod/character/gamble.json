@@ -48,44 +48,44 @@
       "abilities": [
         {
           "id": "all eyes on me",
-          "name": "All Eyes on... Me!",
-          "description": "You may expend your special armor to resist an allied characters consequence from detection, or to push yourself to impress others. You can always make a grand entrance."
+          "name": "AFOD.Modules.specialAbilitiesAllEyesOnMe",
+          "description": "AFOD.Modules.specialAbilitiesAllEyesOnMeDescription"
         },
         {
           "id": "gamblers gift",
-          "name": "Gamblers Gift",
-          "description": "When someone fools you or takes you by surprise, gain a free 1 Grit flashback. When you gather information while partying or gambling, gain +1 Effect."
+          "name": "AFOD.Modules.specialAbilitiesGamblersGift",
+          "description": "AFOD.Modules.specialAbilitiesGamblersGiftDescription"
         },
         {
           "id": "cutting cards",
-          "name": "Cutting Cards",
-          "description": "Your skill with cards is mesmerizing. While you perform a card trick, you may alter a memory, implant a suggestion, or sow a doubt. You may use your playing cards as dangerous throwing weapons."
+          "name": "AFOD.Modules.specialAbilitiesCuttingCards",
+          "description": "AFOD.Modules.specialAbilitiesCuttingCardsDescription"
         },
         {
           "id": "heart of the cards",
-          "name": "Heart of the Cards",
-          "description": "When you accept Position and Effect given by the GM for a roll as is and just let the dice decide, don’t spend any Grit, or push the situation (you can still accept a Devil’s Bargain), regain 1 Grit."
+          "name": "AFOD.Modules.specialAbilitiesHeartOfTheCards",
+          "description": "AFOD.Modules.specialAbilitiesHeartOfTheCardsDescription"
         },
         {
           "id": "fight with panache",
-          "name": "Fight with Panache",
-          "description": "When you fight in a duel, bystanders won’t interfere. If you use Sling while being in close combat, gain +1 Effect."
+          "name": "AFOD.Modules.specialAbilitiesFightWithPanache",
+          "description": "AFOD.Modules.specialAbilitiesFightWithPanacheDescription"
         },
         {
           "id": "saloon swagger",
-          "name": "Saloon Swagger",
-          "description": "Gain +1d in situations where your appearance would be an advantage. If you try to sway someone with a profitable proposition or challenge others to a duel, gain Potency."
+          "name": "AFOD.Modules.specialAbilitiesSaloonSwagger",
+          "description": "AFOD.Modules.specialAbilitiesSaloonSwaggerDescription"
         },
         {
           "id": "miss fortune",
-          "name": "Miss Fortune",
-          "description": "Some call you lucky but truth be told, bad shit just happens to folk, who try to mess with you. You may win every game of chance. Spend 1 Grit to cause a minor accident (a jammed gun), 2 for a major one (an exploding stick of dynamite) or 3 for a catastrophe (a collapsing mine shaft). During Payout, gain +Doom equal to the highest amount of Grit spent this way."
+          "name": "AFOD.Modules.specialAbilitiesMissFortune",
+          "description": "AFOD.Modules.specialAbilitiesMissFortuneDescription"
         },
         {
           "id": "veteran",
-          "name": "Veteran",
+          "name": "AFOD.Modules.specialAbilitiesVeteran",
           "max": 3,
-          "description": "Choose a special ability from another source."
+          "description": "AFOD.Modules.specialAbilitiesVeteranDescription"
         }
       ]
     },
