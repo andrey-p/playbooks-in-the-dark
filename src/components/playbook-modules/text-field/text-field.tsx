@@ -4,6 +4,7 @@ import styles from './text-field.module.css';
 import ExampleList from '@/components/playbook-elements/example-list/example-list';
 import PropsSchema from './text-field.schema';
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 
 type Props = z.infer<typeof PropsSchema>;
 
@@ -12,6 +13,7 @@ export default function TextField(props: Props) {
   const { props: moduleProps, label } = moduleDefinition;
   const examples = moduleProps?.examples || playbookProps?.examples;
   const { text } = userValue;
+  const t = useTranslations();
 
   const consistentId = useId();
 
@@ -39,7 +41,7 @@ export default function TextField(props: Props) {
       </div>
       <div className={styles.labelContainer}>
         <label className={styles.label} htmlFor={consistentId}>
-          {label}
+          {t(label)}
         </label>
         {examples && <ExampleList items={examples} />}
       </div>
