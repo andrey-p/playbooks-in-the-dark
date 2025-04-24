@@ -4,6 +4,7 @@ import { SlotValue as SlotValueSchema } from '@/components/playbook-elements/slo
 import Item from './item';
 import styles from './item-list.module.css';
 import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
 
 type ItemType = z.infer<typeof ItemSchema>;
 type GroupType = z.infer<typeof GroupSchema>;
@@ -29,6 +30,7 @@ export default function ItemList(props: Props) {
     onSlotUpdate
   } = props;
   let { groups = [] } = props;
+  const t = useTranslations();
 
   groups = [
     ...groups,
@@ -48,7 +50,9 @@ export default function ItemList(props: Props) {
             key={group.id || ''}
             className={clsx(group.id && `group-${group.id}`)}
           >
-            {group.name && <div className={styles.groupName}>{group.name}</div>}
+            {group.name && (
+              <div className={styles.groupName}>{t(group.name)}</div>
+            )}
             <ul className={clsx(styles.list, 'item-list')}>
               {itemsForGroup.map((item: ItemType) => (
                 <li
