@@ -1,26 +1,30 @@
 import SlottedText from './slotted-text';
-import { render, screen } from 'test-utils';
+import { render, screen, addTestTranslations } from 'test-utils';
 import userEvent from '@testing-library/user-event';
+
+addTestTranslations({
+  SLOT_TEST: {
+    noSlots: 'Hello foo bar baz',
+    slotLike: 'Hello {foo} bar baz',
+    multipleSlots: 'Hello {foo} bar {qux} baz'
+  }
+});
 
 describe('SlottedText', () => {
   describe('no slots', () => {
     test('no slots at all', () => {
-      render(<SlottedText text='Hello foo bar baz' onUpdate={() => {}} />);
+      render(<SlottedText text='SLOT_TEST.noSlots' onUpdate={() => {}} />);
 
       expect(screen.getByText('Hello foo bar baz')).toBeTruthy();
     });
     test('slot-like text', () => {
-      render(<SlottedText text='Hello {foo} bar baz' onUpdate={() => {}} />);
+      render(<SlottedText text='SLOT_TEST.slotLike' onUpdate={() => {}} />);
 
       expect(screen.getByText('Hello {foo} bar baz')).toBeTruthy();
     });
     test('empty array of slots', () => {
       render(
-        <SlottedText
-          text='Hello {foo} bar baz'
-          slots={[]}
-          onUpdate={() => {}}
-        />
+        <SlottedText text='SLOT_TEST.slotLike' slots={[]} onUpdate={() => {}} />
       );
 
       expect(screen.getByText('Hello {foo} bar baz')).toBeTruthy();
@@ -34,7 +38,7 @@ describe('SlottedText', () => {
 
       const { rerender } = render(
         <SlottedText
-          text='Hello {foo} bar baz'
+          text='SLOT_TEST.slotLike'
           onUpdate={onUpdate}
           slots={[
             {
@@ -62,7 +66,7 @@ describe('SlottedText', () => {
 
       rerender(
         <SlottedText
-          text='Hello {foo} bar baz'
+          text='SLOT_TEST.slotLike'
           onUpdate={onUpdate}
           slots={[
             {
@@ -85,7 +89,7 @@ describe('SlottedText', () => {
 
       render(
         <SlottedText
-          text='Hello {foo} bar {qux} baz'
+          text='SLOT_TEST.multipleSlots'
           onUpdate={onUpdate}
           slots={[
             {

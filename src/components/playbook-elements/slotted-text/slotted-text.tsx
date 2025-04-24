@@ -5,6 +5,7 @@ import {
   SlotValue as SlotValueSchema
 } from './slotted-text.schema';
 import Slot from './slot';
+import { useTranslations } from 'next-intl';
 
 type SlotPropsType = z.infer<typeof SlotPropsSchema>;
 type SlotValueType = z.infer<typeof SlotValueSchema>;
@@ -22,6 +23,7 @@ type Props = {
 // see tests for intended use
 export default function SlottedText(props: Props) {
   const { text, slots = [], values = {}, onUpdate } = props;
+  const t = useTranslations();
 
   // put together components for all slots defined for this bit of text
   const slotComponentsById = new Map<string, React.ReactNode>();
@@ -35,6 +37,12 @@ export default function SlottedText(props: Props) {
     },
     [onUpdate, values]
   );
+
+  if (!text) {
+    return null;
+  }
+
+  const translatedText = t(text) as string;
 
   slots.forEach((slot) => {
     slotComponentsById.set(
@@ -56,7 +64,7 @@ export default function SlottedText(props: Props) {
   //
   // (at this stage it doesn't matter if {foo} is an actual slot -
   // we check that below)
-  const splitText = text.split(/(\{[a-zA-Z0-9-]+\})/);
+  const splitText = translatedText.split(/(\{[a-zA-Z0-9-]+\})/);
 
   return (
     <>
