@@ -1,12 +1,14 @@
 import { getJson } from '@/lib/system-data';
 import Renderer from '@/components/renderer/renderer';
 import RendererErrorBoundary from '@/components/renderer/renderer-error-boundary';
-import { render } from 'test-utils';
+import { render, showTranslationWarnings } from 'test-utils';
 import systemsJson from './systems.json';
 
 import { fromError } from 'zod-validation-error';
 
 import { PlaybookData, System, PlaybookDefinition } from '@/schemas';
+
+showTranslationWarnings();
 
 // a lot of the data is checked at runtime, when the sheet is rendered
 // and <Renderer /> will immediately crash if it doesn't like something

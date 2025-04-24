@@ -23,13 +23,26 @@ export const addTestTranslations = (extraTranslations: object) => {
   };
 };
 
+// only some tests care about the translation warning showing
+let isHidingTranslationWarnings = true;
+export const showTranslationWarnings = () => {
+  isHidingTranslationWarnings = false;
+};
+
 type WrapperProps = {
   children: React.ReactNode;
 };
 
 const Wrapper = ({ children }: WrapperProps) => {
+  let onError;
+
+  // sets onError to no-op so it doesn't complain
+  if (isHidingTranslationWarnings) {
+    onError = () => {};
+  }
+
   return (
-    <NextIntlClientProvider locale='en' messages={messages} onError={() => {}}>
+    <NextIntlClientProvider locale='en' messages={messages} onError={onError}>
       {children}
     </NextIntlClientProvider>
   );
