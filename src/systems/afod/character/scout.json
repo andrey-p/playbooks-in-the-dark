@@ -18,7 +18,7 @@
         },
         {
           "id": "fine rifle or bow",
-          "name": "AFOD.Modules.itemsFineRifleorBow",
+          "name": "AFOD.Modules.itemsFineRifleOrBow",
           "load": 1
         },
         {

@@ -14,7 +14,7 @@
       "custom": [
         {
           "id": "fine bow with arrows",
-          "name": "AFOD.Modules.itemsFinebowWithArrows",
+          "name": "AFOD.Modules.itemsFineBowWithArrows",
           "load": 1
         },
         {

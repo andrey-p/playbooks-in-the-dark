@@ -32,7 +32,7 @@
         },
         {
           "id": "spiritbane charm",
-          "name": "BITD.Modules.itemsSpiritbaneCharm",
+          "name": "BITD.Modules.itemsSpiritBaneCharm",
           "load": 0
         }
       ]
