@@ -25,7 +25,6 @@ showTranslationWarnings();
 const { systems } = systemsJson;
 
 type TestInput = {
-  systemId: string;
   playbookData: PlaybookDataType;
   playbookDefinition: PlaybookDefinitionType;
 };
@@ -63,7 +62,7 @@ const collectTests = async (systemId: string) => {
         });
       }
 
-      tests.push({ systemId, playbookDefinition, playbookData });
+      tests.push({ playbookDefinition, playbookData });
     }
   }
 
