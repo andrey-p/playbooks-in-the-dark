@@ -9,31 +9,16 @@
   ],
   "layout": [
     [
-      [
-        "name",
-        "reputation"
-      ],
+      ["name", "reputation"],
       "hideout",
       "coin",
       "repClaims",
-      [
-        "tier",
-        "hold"
-      ],
-      [
-        "doom",
-        "riders"
-      ],
+      ["tier", "hold"],
+      ["doom", "riders"],
       "achievements",
       "cohorts"
     ],
-    [
-      "posseXp",
-      "specialAbilities",
-      "modus",
-      "contacts",
-      "posseUpgrades"
-    ]
+    ["posseXp", "specialAbilities", "modus", "contacts", "posseUpgrades"]
   ],
   "modules": {
     "name": {

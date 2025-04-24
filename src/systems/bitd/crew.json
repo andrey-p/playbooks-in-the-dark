@@ -11,24 +11,12 @@
   "name": "BITD.Playbooks.crew",
   "layout": [
     [
-      [
-        "name",
-        "lair"
-      ],
+      ["name", "lair"],
       "deity",
-      [
-        "reputation",
-        "repTurf"
-      ],
-      [
-        "hold",
-        "tier"
-      ],
+      ["reputation", "repTurf"],
+      ["hold", "tier"],
       "claims",
-      [
-        "heatWanted",
-        "coin"
-      ],
+      ["heatWanted", "coin"],
       "favoredNotes",
       "notes"
     ],
@@ -61,9 +49,7 @@
       "id": "deity",
       "type": "textField",
       "label": "BITD.Modules.deityLabel",
-      "playbooks": [
-        "cult"
-      ],
+      "playbooks": ["cult"],
       "props": {
         "examples": [
           "BITD.Modules.deityExampleAlluring",
@@ -407,9 +393,7 @@
     "vehicleCohort": {
       "id": "vehicleCohort",
       "type": "description",
-      "playbooks": [
-        "smugglers"
-      ],
+      "playbooks": ["smugglers"],
       "label": "BITD.Modules.vehicleCohortLabel",
       "description": "BITD.Modules.vehicleCohortDescription"
     }

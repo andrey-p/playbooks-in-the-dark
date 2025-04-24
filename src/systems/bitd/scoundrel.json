@@ -13,10 +13,7 @@
   "layout": [
     [
       "name",
-      [
-        "crew",
-        "alias"
-      ],
+      ["crew", "alias"],
       "look",
       "heritage",
       "background",
@@ -25,23 +22,11 @@
       "trauma",
       "traumaText",
       "harm",
-      [
-        "healingClock",
-        "armor"
-      ],
+      ["healingClock", "armor"],
       "notes"
     ],
-    [
-      "specialAbilities",
-      "contacts",
-      "items",
-      "alchemicals"
-    ],
-    [
-      "coin",
-      "playbookXp",
-      "ratings"
-    ]
+    ["specialAbilities", "contacts", "items", "alchemicals"],
+    ["coin", "playbookXp", "ratings"]
   ],
   "modules": {
     "name": {
@@ -314,9 +299,7 @@
       "id": "alchemicals",
       "type": "items",
       "label": "BITD.Modules.alchemicalsLabel",
-      "playbooks": [
-        "leech"
-      ],
+      "playbooks": ["leech"],
       "props": {
         "common": [
           {

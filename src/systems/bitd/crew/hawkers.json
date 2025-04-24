@@ -54,81 +54,58 @@
           {
             "id": "turf1",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "right",
-              "down"
-            ],
+            "connections": ["right", "down"],
             "description": ""
           },
           {
             "id": "personal clothier",
             "name": "BITD.Modules.claimsPersonalClothier",
             "description": "BITD.Modules.claimsPersonalClothierDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           },
           {
             "id": "local graft",
             "name": "BITD.Modules.claimsLocalGraft",
             "description": "BITD.Modules.claimsLocalGraftDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           },
           {
             "id": "lookouts",
             "name": "BITD.Modules.claimsLookouts",
             "description": "BITD.Modules.claimsLookoutsDescription",
-            "connections": [
-              "down",
-              "right"
-            ]
+            "connections": ["down", "right"]
           },
           {
             "id": "informants",
             "name": "BITD.Modules.claimsInformants",
             "description": "BITD.Modules.claimsInformantsDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           }
         ],
         [
           {
             "id": "turf2",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "down"
-            ],
+            "connections": ["down"],
             "description": ""
           },
           {
             "id": "turf3",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "down",
-              "right"
-            ],
+            "connections": ["down", "right"],
             "description": ""
           },
           {
             "id": "lair",
             "name": "BITD.Modules.claimsLair",
             "selectable": false,
-            "connections": [
-              "down",
-              "right"
-            ],
+            "connections": ["down", "right"],
             "description": ""
           },
           {
             "id": "turf4",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "down",
-              "right"
-            ],
+            "connections": ["down", "right"],
             "description": ""
           },
           {
@@ -142,9 +119,7 @@
             "id": "foreign market",
             "name": "BITD.Modules.claimsForeignMarket",
             "description": "BITD.Modules.claimsForeignMarketDescription",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "vice den",
@@ -160,9 +135,7 @@
             "id": "cover operation",
             "name": "BITD.Modules.claimsCoverOperation",
             "description": "BITD.Modules.claimsCoverOperationDescription",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "cover identities",

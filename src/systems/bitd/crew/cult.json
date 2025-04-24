@@ -55,88 +55,63 @@
             "id": "cloister",
             "name": "BITD.Modules.claimsCloister",
             "description": "BITD.Modules.claimsCloisterDescription",
-            "connections": [
-              "right",
-              "down"
-            ]
+            "connections": ["right", "down"]
           },
           {
             "id": "vice den",
             "name": "BITD.Modules.claimsViceDen",
             "description": "BITD.Modules.claimsViceDenDescription",
-            "connections": [
-              "down",
-              "right"
-            ]
+            "connections": ["down", "right"]
           },
           {
             "id": "offertory",
             "name": "BITD.Modules.claimsOffertory",
             "description": "BITD.Modules.claimsOffertoryDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           },
           {
             "id": "ancient obelisk",
             "name": "BITD.Modules.claimsAncientObelisk",
             "description": "BITD.Modules.claimsAncientObeliskDescription",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "ancient tower",
             "name": "BITD.Modules.claimsAncientTower",
             "description": "BITD.Modules.claimsAncientTowerDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           }
         ],
         [
           {
             "id": "turf1",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "right"
-            ],
+            "connections": ["right"],
             "description": ""
           },
           {
             "id": "turf2",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "down",
-              "right"
-            ],
+            "connections": ["down", "right"],
             "description": ""
           },
           {
             "id": "lair",
             "name": "BITD.Modules.claimsLair",
             "selectable": false,
-            "connections": [
-              "down",
-              "right"
-            ],
+            "connections": ["down", "right"],
             "description": ""
           },
           {
             "id": "turf3",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "down",
-              "right"
-            ],
+            "connections": ["down", "right"],
             "description": ""
           },
           {
             "id": "turf4",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "down"
-            ],
+            "connections": ["down"],
             "description": ""
           }
         ],
@@ -145,9 +120,7 @@
             "id": "spirit well",
             "name": "BITD.Modules.claimsSpiritWell",
             "description": "BITD.Modules.claimsSpiritWellDescription",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "ancient gate",
@@ -163,9 +136,7 @@
             "id": "sacred nexus",
             "name": "BITD.Modules.claimsSacredNexus",
             "description": "BITD.Modules.claimsSacredNexusDescription",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "ancient altar",

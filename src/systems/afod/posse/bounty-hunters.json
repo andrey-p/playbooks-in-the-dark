@@ -9,34 +9,25 @@
             "id": "the tangled web",
             "name": "AFOD.Modules.achievementsTheTangledWeb",
             "description": "AFOD.Modules.achievementsDarkness",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           },
           {
             "id": "the wild hunt",
             "name": "AFOD.Modules.achievementsTheWildHunt",
             "description": "AFOD.Modules.achievementsNeutral",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "muddy informants",
             "name": "AFOD.Modules.achievementsMuddyInformants",
             "description": "AFOD.Modules.achievementsNeutral",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           },
           {
             "id": "safe passage",
             "name": "AFOD.Modules.achievementsSafePassage",
             "description": "AFOD.Modules.achievementsLight",
-            "connections": [
-              "down",
-              "right"
-            ]
+            "connections": ["down", "right"]
           },
           {
             "id": "undertaker",
@@ -49,26 +40,18 @@
             "id": "biting shadows",
             "name": "AFOD.Modules.achievementsBitingShadows",
             "description": "AFOD.Modules.achievementsDarkness",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "hellstone claim 1",
             "name": "AFOD.Modules.achievementsHellstoneClaim",
             "description": "AFOD.Modules.achievementsDarkness",
-            "connections": [
-              "right",
-              "down"
-            ]
+            "connections": ["right", "down"]
           },
           {
             "id": "equilibrium",
             "name": "AFOD.Modules.achievementsEquilibrium",
-            "connections": [
-              "down",
-              "right"
-            ],
+            "connections": ["down", "right"],
             "selectable": false,
             "description": ""
           },
@@ -76,17 +59,13 @@
             "id": "holy weapon",
             "name": "AFOD.Modules.achievementsHolyWeapon",
             "description": "AFOD.Modules.achievementsLight",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "hellstone claim 2",
             "name": "AFOD.Modules.achievementsHellstoneClaim",
             "description": "AFOD.Modules.achievementsLight",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           }
         ],
         [
@@ -94,9 +73,7 @@
             "id": "death's servant",
             "name": "AFOD.Modules.achievementsDeathsServant",
             "description": "AFOD.Modules.achievementsDarkness",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "unholy weapon",
@@ -107,9 +84,7 @@
             "id": "secret stash",
             "name": "AFOD.Modules.achievementsSecretStash",
             "description": "AFOD.Modules.achievementsNeutral",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "hellstone claim 3",

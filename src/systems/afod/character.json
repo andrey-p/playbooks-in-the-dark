@@ -16,10 +16,7 @@
   ],
   "layout": [
     [
-      [
-        "name",
-        "posse"
-      ],
+      ["name", "posse"],
       "look",
       "heritage",
       "background",
@@ -28,24 +25,11 @@
       "stigma",
       "stigmaText",
       "harm",
-      [
-        "mutationClock",
-        "healingClock",
-        "armor"
-      ],
+      ["mutationClock", "healingClock", "armor"],
       "notes"
     ],
-    [
-      "playbookXp",
-      "specialAbilities",
-      "contacts",
-      "items"
-    ],
-    [
-      "coin",
-      "ablass",
-      "ratings"
-    ]
+    ["playbookXp", "specialAbilities", "contacts", "items"],
+    ["coin", "ablass", "ratings"]
   ],
   "modules": {
     "name": {

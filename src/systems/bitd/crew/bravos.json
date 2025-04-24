@@ -55,43 +55,31 @@
             "id": "barracks",
             "name": "BITD.Modules.claimsBarracks",
             "description": "BITD.Modules.claimsBarracksDescription",
-            "connections": [
-              "right",
-              "down"
-            ]
+            "connections": ["right", "down"]
           },
           {
             "id": "turf1",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "right"
-            ],
+            "connections": ["right"],
             "description": ""
           },
           {
             "id": "terrorized citizens",
             "name": "BITD.Modules.claimsTerrorizedCitizens",
             "description": "BITD.Modules.claimsTerrorizedCitizensDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           },
           {
             "id": "informants",
             "name": "BITD.Modules.claimsInformants",
             "description": "BITD.Modules.claimsInformantsDescription",
-            "connections": [
-              "down",
-              "right"
-            ]
+            "connections": ["down", "right"]
           },
           {
             "id": "protection racket",
             "name": "BITD.Modules.claimsProtectionRacket",
             "description": "BITD.Modules.claimsProtectionRacketDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           }
         ],
         [
@@ -99,45 +87,31 @@
             "id": "fighting pits",
             "name": "BITD.Modules.claimsFightingPits",
             "description": "BITD.Modules.claimsFightingPitsDescription",
-            "connections": [
-              "down",
-              "right"
-            ]
+            "connections": ["down", "right"]
           },
           {
             "id": "turf2",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "down",
-              "right"
-            ],
+            "connections": ["down", "right"],
             "description": ""
           },
           {
             "id": "lair",
             "name": "BITD.Modules.claimsLair",
             "selectable": false,
-            "connections": [
-              "down",
-              "right"
-            ],
+            "connections": ["down", "right"],
             "description": ""
           },
           {
             "id": "turf3",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "down",
-              "right"
-            ],
+            "connections": ["down", "right"],
             "description": ""
           },
           {
             "id": "turf4",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "down"
-            ],
+            "connections": ["down"],
             "description": ""
           }
         ],
@@ -146,9 +120,7 @@
             "id": "infirmary",
             "name": "BITD.Modules.claimsInfirmary",
             "description": "BITD.Modules.claimsInfirmaryDescription",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "bluecoat intimidation",
@@ -159,17 +131,13 @@
             "id": "street fence",
             "name": "BITD.Modules.claimsStreetFence",
             "description": "BITD.Modules.claimsStreetFenceDescription",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "warehouses",
             "name": "BITD.Modules.claimsWarehouses",
             "description": "BITD.Modules.claimsWarehousesDescription",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "bluecoat confederates",

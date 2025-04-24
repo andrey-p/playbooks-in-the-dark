@@ -55,43 +55,31 @@
             "id": "training rooms",
             "name": "BITD.Modules.claimsTrainingRooms",
             "description": "BITD.Modules.claimsTrainingRoomsDescription",
-            "connections": [
-              "right",
-              "down"
-            ]
+            "connections": ["right", "down"]
           },
           {
             "id": "vice den",
             "name": "BITD.Modules.claimsViceDen",
             "description": "BITD.Modules.claimsViceDenDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           },
           {
             "id": "fixer",
             "name": "BITD.Modules.claimsFixer",
             "description": "BITD.Modules.claimsFixerDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           },
           {
             "id": "informants",
             "name": "BITD.Modules.claimsInformants",
             "description": "BITD.Modules.claimsInformantsDescription",
-            "connections": [
-              "down",
-              "right"
-            ]
+            "connections": ["down", "right"]
           },
           {
             "id": "hagfish farms",
             "name": "BITD.Modules.claimsHagfishFarms",
             "description": "BITD.Modules.claimsHagfishFarmsDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           }
         ],
         [
@@ -99,43 +87,32 @@
             "id": "victim trophies",
             "name": "BITD.Modules.claimsVictimTrophies",
             "description": "BITD.Modules.claimsVictimTrophiesDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           },
           {
             "id": "turf1",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "right"
-            ],
+            "connections": ["right"],
             "description": ""
           },
           {
             "id": "lair",
             "name": "BITD.Modules.claimsLair",
             "selectable": false,
-            "connections": [
-              "down",
-              "right"
-            ],
+            "connections": ["down", "right"],
             "description": ""
           },
           {
             "id": "turf2",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "right"
-            ],
+            "connections": ["right"],
             "description": ""
           },
           {
             "id": "cover operation",
             "name": "BITD.Modules.claimsCoverOperation",
             "description": "BITD.Modules.claimsCoverOperationDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           }
         ],
         [
@@ -143,17 +120,13 @@
             "id": "protection racket",
             "name": "BITD.Modules.claimsProtectionRacket",
             "description": "BITD.Modules.claimsProtectionRacketDescription",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "infirmary",
             "name": "BITD.Modules.claimsInfirmary",
             "description": "BITD.Modules.claimsInfirmaryDescription",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "envoy",
@@ -164,9 +137,7 @@
             "id": "cover identities",
             "name": "BITD.Modules.claimsCoverIdentities",
             "description": "BITD.Modules.claimsCoverIdentitiesDescription",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "city records",

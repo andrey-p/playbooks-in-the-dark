@@ -9,34 +9,25 @@
             "id": "the morgue",
             "name": "AFOD.Modules.achievementsTheMorgue",
             "description": "AFOD.Modules.achievementsDarkness",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           },
           {
             "id": "free man funeral",
             "name": "AFOD.Modules.achievementsFreeManFuneral",
             "description": "AFOD.Modules.achievementsNeutral",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "a drop of hell",
             "name": "AFOD.Modules.achievementsADropOfHell",
             "description": "AFOD.Modules.achievementsNeutral",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           },
           {
             "id": "loaded dice",
             "name": "AFOD.Modules.achievementsLoadedDice",
             "description": "AFOD.Modules.achievementsLight",
-            "connections": [
-              "down",
-              "right"
-            ]
+            "connections": ["down", "right"]
           },
           {
             "id": "the throne of skulls",
@@ -49,26 +40,18 @@
             "id": "the beast",
             "name": "AFOD.Modules.achievementsTheBeast",
             "description": "AFOD.Modules.achievementsDarkness",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "hellstone claim 1",
             "name": "AFOD.Modules.achievementsHellstoneClaim",
             "description": "AFOD.Modules.achievementsDarkness",
-            "connections": [
-              "right",
-              "down"
-            ]
+            "connections": ["right", "down"]
           },
           {
             "id": "equilibrium",
             "name": "AFOD.Modules.achievementsEquilibrium",
-            "connections": [
-              "down",
-              "right"
-            ],
+            "connections": ["down", "right"],
             "selectable": false,
             "description": ""
           },
@@ -76,17 +59,13 @@
             "id": "last deals of dead men",
             "name": "AFOD.Modules.achievementsLastDealsOfDeadMen",
             "description": "AFOD.Modules.achievementsLight",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "hellstone claim 2",
             "name": "AFOD.Modules.achievementsHellstoneClaim",
             "description": "AFOD.Modules.achievementsLight",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           }
         ],
         [
@@ -94,9 +73,7 @@
             "id": "vengeful ghosts",
             "name": "AFOD.Modules.achievementsVengefulGhosts",
             "description": "AFOD.Modules.achievementsDarkness",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "bringer of pain",
@@ -107,9 +84,7 @@
             "id": "rail connection",
             "name": "AFOD.Modules.achievementsRailConnection",
             "description": "AFOD.Modules.achievementsNeutral",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "hellstone claim 3",

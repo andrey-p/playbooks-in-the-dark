@@ -55,42 +55,31 @@
             "id": "interrogation chamber",
             "name": "BITD.Modules.claimsInterrogationChamber",
             "description": "BITD.Modules.claimsInterrogationChamberDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           },
           {
             "id": "turf1",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "right"
-            ],
+            "connections": ["right"],
             "description": ""
           },
           {
             "id": "loyal fence",
             "name": "BITD.Modules.claimsLoyalFence",
             "description": "BITD.Modules.claimsLoyalFenceDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           },
           {
             "id": "gambling den",
             "name": "BITD.Modules.claimsGamblingDen",
             "description": "BITD.Modules.claimsGamblingDenDescription",
-            "connections": [
-              "down",
-              "right"
-            ]
+            "connections": ["down", "right"]
           },
           {
             "id": "tavern",
             "name": "BITD.Modules.claimsTavern",
             "description": "BITD.Modules.claimsTavernDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           }
         ],
         [
@@ -98,45 +87,32 @@
             "id": "drug den",
             "name": "BITD.Modules.claimsDrugDen",
             "description": "BITD.Modules.claimsDrugDenDescription",
-            "connections": [
-              "down",
-              "right"
-            ]
+            "connections": ["down", "right"]
           },
           {
             "id": "informants",
             "name": "BITD.Modules.claimsInformants",
             "description": "BITD.Modules.claimsInformantsDescription",
-            "connections": [
-              "down",
-              "right"
-            ]
+            "connections": ["down", "right"]
           },
           {
             "id": "lair",
             "name": "BITD.Modules.claimsLair",
             "selectable": false,
-            "connections": [
-              "down",
-              "right"
-            ],
+            "connections": ["down", "right"],
             "description": ""
           },
           {
             "id": "turf2",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "right"
-            ],
+            "connections": ["right"],
             "description": ""
           },
           {
             "id": "lookouts",
             "name": "BITD.Modules.claimsLookouts",
             "description": "BITD.Modules.claimsLookoutsDescription",
-            "connections": [
-              "down"
-            ]
+            "connections": ["down"]
           }
         ],
         [
@@ -144,9 +120,7 @@
             "id": "hagfish farm",
             "name": "BITD.Modules.claimsHagfishFarm",
             "description": "BITD.Modules.claimsHagfishFarmDescription",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "infirmary",
@@ -157,16 +131,12 @@
             "id": "covert drops",
             "name": "BITD.Modules.claimsCovertDrops",
             "description": "BITD.Modules.claimsCovertDropsDescription",
-            "connections": [
-              "right"
-            ]
+            "connections": ["right"]
           },
           {
             "id": "turf3",
             "name": "BITD.Modules.claimsTurf",
-            "connections": [
-              "right"
-            ],
+            "connections": ["right"],
             "description": ""
           },
           {
