@@ -1,0 +1,11 @@
+{
+  "id": "bump",
+  "name": "BUMP.System.name",
+  "description": "BUMP.System.description",
+  "customStyles": "styles.css",
+  "translationNamespace": "BUMP",
+  "playbookTypes": ["character", "pact"],
+  "license": "TODO",
+  "attribution": "TODO",
+  "website": "https://jexjthomas.itch.io/bump-in-the-dark"
+}

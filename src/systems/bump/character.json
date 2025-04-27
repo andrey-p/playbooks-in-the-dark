@@ -1,0 +1,19 @@
+{
+  "id": "character",
+  "name": "BUMP.Playbooks.character",
+  "playbooks": [
+    "shield"
+  ],
+  "layout": [
+    [
+      "name"
+    ]
+  ],
+  "modules": {
+    "name": {
+      "id": "name",
+      "type": "textField",
+      "label": "BUMP.Modules.nameLabel"
+    }
+  }
+}

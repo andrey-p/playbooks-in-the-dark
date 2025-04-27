@@ -1,6 +1,7 @@
 {
   "systems": [
     { "id": "bitd" },
-    { "id": "afod" }
+    { "id": "afod" },
+    { "id": "bump" }
   ]
 }

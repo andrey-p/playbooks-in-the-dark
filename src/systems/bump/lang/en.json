@@ -1,0 +1,21 @@
+{
+  "BUMP": {
+    "System": {
+      "name": "Bump in the Dark",
+      "description": "A game of supernatural mystery and action-packed showdowns with regular folk caught in the middle."
+    },
+    "Playbooks": {
+      "makeA": {
+        "character": "Make a character",
+        "pact": "Make a pact"
+      },
+      "character": "Character",
+      "pact": "Pact",
+      "shield": "The Shield",
+      "shieldDescription": "A fierce protector & fighter"
+    },
+    "Modules": {
+      "nameLabel": "Name / Pronouns"
+    }
+  }
+}
