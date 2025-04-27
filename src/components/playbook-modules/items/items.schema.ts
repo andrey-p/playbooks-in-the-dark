@@ -51,6 +51,7 @@ export const PlaybookProps = BasePlaybookProps.and(
   z
     .object({
       custom: z.array(Item).optional(),
+      groups: z.array(Group).optional(),
       startingItems: z.record(z.string(), z.number()).optional()
     })
     .optional()

@@ -10,14 +10,15 @@ type Props = z.infer<typeof PropsSchema>;
 type SlotValueType = z.infer<typeof SlotValueSchema>;
 
 export default function Items(props: Props) {
-  const { moduleDefinition, userValue, onUpdate, playbookProps } = props;
+  const { moduleDefinition, userValue, onUpdate, playbookProps = {} } = props;
   const { common, load, twoColumns, groups } = moduleDefinition.props;
+  const { startingItems, groups: playbookGroups } = playbookProps;
   const { load: selectedLoad, slots: slotValues } = userValue;
   let { items: selectedItems } = userValue;
 
   // add any preselected items for the playbook
-  if (playbookProps?.startingItems) {
-    selectedItems = Object.assign(playbookProps.startingItems, selectedItems);
+  if (startingItems) {
+    selectedItems = Object.assign(startingItems, selectedItems);
   }
 
   const onItemSelect = (itemId: string, selected: number) => {
@@ -66,6 +67,7 @@ export default function Items(props: Props) {
       {playbookProps?.custom?.length && (
         <ItemList
           items={playbookProps.custom}
+          groups={playbookGroups}
           selectedItems={selectedItems}
           onItemSelect={onItemSelect}
           slotValues={slotValues || {}}
