@@ -330,10 +330,10 @@
           },
           {
             "id": "wounded1",
-            "name": "BUMP.Modules.conditionsWoundSlot",
+            "name": "BUMP.Modules.conditionsWoundSlot1",
             "group": "wounded",
             "slots": [{
-              "id": "wound",
+              "id": "wound1",
               "label": "BUMP.Modules.conditionsWound",
               "size": 20
             }],
@@ -341,10 +341,10 @@
           },
           {
             "id": "wounded2",
-            "name": "BUMP.Modules.conditionsWoundSlot",
+            "name": "BUMP.Modules.conditionsWoundSlot2",
             "group": "wounded",
             "slots": [{
-              "id": "wound",
+              "id": "wound2",
               "label": "BUMP.Modules.conditionsWound",
               "size": 20
             }],
@@ -352,10 +352,10 @@
           },
           {
             "id": "wounded3",
-            "name": "BUMP.Modules.conditionsWoundSlot",
+            "name": "BUMP.Modules.conditionsWoundSlot3",
             "group": "wounded",
             "slots": [{
-              "id": "wound",
+              "id": "wound3",
               "label": "BUMP.Modules.conditionsWound",
               "size": 20
             }],
