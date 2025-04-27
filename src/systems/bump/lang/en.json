@@ -29,9 +29,29 @@
       "abilitiesLabel": "Abilities",
       "abilitiesRelentless": "Relentless",
       "abilitiesRelentlessDescription": "You can <strong>push your luck</strong> to do one of the following: <em>perform a feat of physical strength verging on the supernatural</em> -or- <em>engage a small gang (or large monster) on equal footing</em>.",
+      "luckDoomHopeLabel": "Luck, Doom, Hope",
       "luckLabel": "Luck",
       "doomLabel": "Doom",
-      "hopeLabel": "Hope"
+      "hopeLabel": "Hope",
+      "ratingsLabel": "Ratings",
+      "ratingsBody": "Body",
+      "ratingsHeart": "Heart",
+      "ratingsMind": "Mind",
+      "ratingsScramble": "Scramble",
+      "ratingsSneak": "Sneak",
+      "ratingsWreck": "Wreck",
+      "ratingsCompel": "Compel",
+      "ratingsConnect": "Connect",
+      "ratingsSway": "Sway",
+      "ratingsHunt": "Hunt",
+      "ratingsRead": "Read",
+      "ratingsRig": "Rig",
+      "ratingsExhaustedLabel": "Exhausted (-1d)",
+      "ratingsExhaustedToClear": "To clear: ignore the demands of a situation to steal some respite",
+      "ratingsVoidTouchedLabel": "Void touched (-1d)",
+      "ratingsVoidTouchedToClear": "To clear: act in the interest of the void",
+      "ratingsAfraidLabel": "Afraid (-1d)",
+      "ratingsAfraidToClear": "To clear: flee, leaving something important behind"
     }
   }
 }

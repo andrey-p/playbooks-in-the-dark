@@ -11,6 +11,12 @@
           "description": "BUMP.Modules.abilitiesRelentlessDescription"
         }
       ]
+    },
+    "ratings": {
+      "startingRatings": {
+        "wreck": 2,
+        "compel": 1
+      }
     }
   }
 }

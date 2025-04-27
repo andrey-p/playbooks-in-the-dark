@@ -19,6 +19,9 @@
     [
       "abilities",
       "luckDoomHope"
+    ],
+    [
+      "ratings"
     ]
   ],
   "modules": {
@@ -83,7 +86,7 @@
     "luckDoomHope": {
       "id": "luckDoomHope",
       "type": "multiTracker",
-      "label": "",
+      "label": "BUMP.Modules.luckDoomHopeLabel",
       "props": {
         "trackers": {
           "luck": {
@@ -102,6 +105,85 @@
             "label": "BUMP.Modules.hopeLabel"
           }
         }
+      }
+    },
+    "ratings": {
+      "id": "ratings",
+      "type": "ratings",
+      "label": "BUMP.Modules.ratingsLabel",
+      "props": {
+        "maxRating": 3,
+        "trackerProps": {
+          "max": 1,
+          "type": "triangle"
+        },
+        "attributes": [
+          {
+            "id": "body",
+            "name": "BUMP.Modules.ratingsBody",
+            "trackerLabel": "BUMP.Modules.ratingsExhaustedLabel",
+            "description": "BUMP.Modules.ratingsExhaustedToClear"
+          },
+          {
+            "id": "heart",
+            "name": "BUMP.Modules.ratingsHeart",
+            "trackerLabel": "BUMP.Modules.ratingsVoidTouchedLabel",
+            "description": "BUMP.Modules.ratingsVoidTouchedToClear"
+          },
+          {
+            "id": "mind",
+            "name": "BUMP.Modules.ratingsMind",
+            "trackerLabel": "BUMP.Modules.ratingsAfraidLabel",
+            "description": "BUMP.Modules.ratingsAfraidToClear"
+          }
+        ],
+        "actions": [
+          {
+            "id": "scramble",
+            "name": "BUMP.Modules.ratingsScramble",
+            "attributeId": "body"
+          },
+          {
+            "id": "sneak",
+            "name": "BUMP.Modules.ratingsSneak",
+            "attributeId": "body"
+          },
+          {
+            "id": "wreck",
+            "name": "BUMP.Modules.ratingsWreck",
+            "attributeId": "body"
+          },
+          {
+            "id": "compel",
+            "name": "BUMP.Modules.ratingsCompel",
+            "attributeId": "heart"
+          },
+          {
+            "id": "connect",
+            "name": "BUMP.Modules.ratingsConnect",
+            "attributeId": "heart"
+          },
+          {
+            "id": "sway",
+            "name": "BUMP.Modules.ratingsSway",
+            "attributeId": "heart"
+          },
+          {
+            "id": "hunt",
+            "name": "BUMP.Modules.ratingsHunt",
+            "attributeId": "mind"
+          },
+          {
+            "id": "read",
+            "name": "BUMP.Modules.ratingsRead",
+            "attributeId": "mind"
+          },
+          {
+            "id": "rig",
+            "name": "BUMP.Modules.ratingsRig",
+            "attributeId": "mind"
+          }
+        ]
       }
     }
   }
