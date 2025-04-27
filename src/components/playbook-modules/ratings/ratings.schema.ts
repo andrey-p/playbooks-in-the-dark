@@ -18,7 +18,8 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
     props: z.object({
       attributes: z.array(Attribute),
       actions: z.array(Action),
-      trackerProps: TrackerProps.optional()
+      trackerProps: TrackerProps.optional(),
+      maxRating: z.number().int().default(4)
     })
   })
 );

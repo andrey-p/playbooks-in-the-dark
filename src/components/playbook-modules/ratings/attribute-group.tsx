@@ -17,6 +17,7 @@ type Props = {
   actions: ActionType[];
   currentRatings: Record<string, number>;
   xp: number;
+  maxRating: number;
   onRatingUpdate: (actionName: string, value: number) => void;
   onXpUpdate: (attributeName: string, value: number) => void;
   trackerProps?: TrackerPropsType;
@@ -27,6 +28,7 @@ export default function AttributeGroup(props: Props) {
     attribute,
     actions,
     currentRatings,
+    maxRating,
     xp,
     onRatingUpdate,
     onXpUpdate,
@@ -54,7 +56,7 @@ export default function AttributeGroup(props: Props) {
           <li key={action.id} className={styles.rating}>
             <Tracker
               value={currentRatings[action.id] || 0}
-              max={4}
+              max={maxRating}
               type='circle'
               onValueSelect={(value) => {
                 onRatingUpdate(action.id, value);
