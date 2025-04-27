@@ -5,6 +5,7 @@ import {
 } from './ratings.schema';
 import { TrackerProps as TrackerPropsSchema } from '@/components/playbook-elements/trackers/trackers.schema';
 import Tracker from '@/components/playbook-elements/trackers/simple-tracker';
+import Description from '@/components/playbook-elements/description/description';
 import styles from './attribute-group.module.css';
 import { useTranslations } from 'next-intl';
 
@@ -49,6 +50,7 @@ export default function AttributeGroup(props: Props) {
             onXpUpdate(attribute.id, value);
           }}
         />
+        {attribute.trackerLabel && <div>{t(attribute.trackerLabel)}</div>}
       </div>
 
       <ul className={styles.ratings}>
@@ -66,6 +68,8 @@ export default function AttributeGroup(props: Props) {
           </li>
         ))}
       </ul>
+
+      {attribute.description && <Description text={attribute.description} />}
     </div>
   );
 }

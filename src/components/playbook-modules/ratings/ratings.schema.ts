@@ -4,7 +4,9 @@ import { TrackerProps } from '@/components/playbook-elements/trackers/trackers.s
 
 export const Attribute = z.object({
   id: z.string(),
-  name: z.string()
+  name: z.string(),
+  trackerLabel: z.string().optional(),
+  description: z.string().optional()
 });
 
 export const Action = z.object({
