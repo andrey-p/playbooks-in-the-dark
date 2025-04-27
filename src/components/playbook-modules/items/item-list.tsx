@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { Group as GroupSchema, Item as ItemSchema } from './items.schema';
 import { SlotValue as SlotValueSchema } from '@/components/playbook-elements/slotted-text/slotted-text.schema';
+import Description from '@/components/playbook-elements/description/description';
 import Item from './item';
 import styles from './item-list.module.css';
 import clsx from 'clsx';
@@ -72,6 +73,7 @@ export default function ItemList(props: Props) {
                 </li>
               ))}
             </ul>
+            {group.description && <Description text={group.description} />}
           </div>
         );
       })}

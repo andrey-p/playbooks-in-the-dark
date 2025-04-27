@@ -22,7 +22,11 @@ export const Group = z.object({
     .string()
     .refine((val) => val.length <= 255)
     .optional(),
-  name: z.string().refine((val) => val.length <= 255)
+  name: z.string().refine((val) => val.length <= 255),
+  description: z
+    .string()
+    .refine((val) => val.length <= 1024)
+    .optional()
 });
 
 export const ModuleDefinition = BaseModuleDefinition.merge(
