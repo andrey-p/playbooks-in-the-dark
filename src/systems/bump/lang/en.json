@@ -66,7 +66,14 @@
       "gearBodyArmor": "Body Armor",
       "armorLabel": "Armor Uses",
       "armorArmor": "Armor",
-      "armorPlot": "Plot"
+      "armorPlot": "Plot",
+      "conditionsLabel": "Conditions",
+      "conditionsWounded": "Wounded: Reduced impact on relevant conditions",
+      "conditionsWoundedToClear": "To clear: take the RECOVER beat in downtime",
+      "conditionsAngry": "Angry: Can't benefit from teamwork",
+      "conditionsAngryToClear": "To clear: make a rash action others cannot ignore",
+      "conditionsWoundSlot": "'{wound'}",
+      "conditionsWound": "Wound"
     }
   }
 }

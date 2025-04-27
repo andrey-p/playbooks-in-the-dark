@@ -23,7 +23,8 @@
     [
       "ratings",
       "gear",
-      "armor"
+      "armor",
+      "conditions"
     ]
   ],
   "modules": {
@@ -286,6 +287,66 @@
           {
             "id": "plot2",
             "name": "BUMP.Modules.armorPlot",
+            "load": 1
+          }
+        ]
+      }
+    },
+    "conditions": {
+      "id": "conditions",
+      "type": "items",
+      "label": "BUMP.Modules.conditionsLabel",
+      "props": {
+        "groups": [
+          {
+            "id": "angry",
+            "name": "",
+            "description": "BUMP.Modules.conditionsAngryToClear"
+          },
+          {
+            "id": "wounded",
+            "name": "BUMP.Modules.conditionsWounded",
+            "description": "BUMP.Modules.conditionsWoundedToClear"
+          }
+        ],
+        "common": [
+          {
+            "id": "angry",
+            "name": "BUMP.Modules.conditionsAngry",
+            "group": "angry",
+            "load": 1
+          },
+          {
+            "id": "wounded1",
+            "name": "BUMP.Modules.conditionsWoundSlot",
+            "group": "wounded",
+            "slots": [{
+              "id": "wound",
+              "label": "BUMP.Modules.conditionsWound",
+              "size": 20
+            }],
+            "load": 1
+          },
+          {
+            "id": "wounded2",
+            "name": "BUMP.Modules.conditionsWoundSlot",
+            "group": "wounded",
+            "slots": [{
+              "id": "wound",
+              "label": "BUMP.Modules.conditionsWound",
+              "size": 20
+            }],
+            "load": 1
+          },
+          {
+            "id": "wounded3",
+            "name": "BUMP.Modules.conditionsWoundSlot",
+            "group": "wounded",
+            "slots": [{
+              "id": "wound",
+              "label": "BUMP.Modules.conditionsWound",
+              "size": 20
+            }],
             "load": 1
           }
         ]
