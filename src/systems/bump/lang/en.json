@@ -51,7 +51,22 @@
       "ratingsVoidTouchedLabel": "Void touched (-1d)",
       "ratingsVoidTouchedToClear": "To clear: act in the interest of the void",
       "ratingsAfraidLabel": "Afraid (-1d)",
-      "ratingsAfraidToClear": "To clear: flee, leaving something important behind"
+      "ratingsAfraidToClear": "To clear: flee, leaving something important behind",
+      "gearLabel": "Gear",
+      "gearArmoryUpgrade": "Armory Upgrade (+2 slots)",
+      "gearKnife": "Knife",
+      "gearFlashlight": "Flashlight",
+      "gearImprovisedWeapon": "Improvised Weapon",
+      "gearHuntersKit": "Hunter's Kit",
+      "gearHuntersKitUses": "Hunter's Kit Uses",
+      "gearOccultOrHolyRelic": "Occult or Holy Relic",
+      "gearWalkieOrPager": "Walkie or Pager",
+      "gearHandgun": "Handgun",
+      "gearRifle": "Rifle",
+      "gearBodyArmor": "Body Armor",
+      "armorLabel": "Armor Uses",
+      "armorArmor": "Armor",
+      "armorPlot": "Plot"
     }
   }
 }

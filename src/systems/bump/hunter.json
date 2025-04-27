@@ -21,7 +21,9 @@
       "luckDoomHope"
     ],
     [
-      "ratings"
+      "ratings",
+      "gear",
+      "armor"
     ]
   ],
   "modules": {
@@ -182,6 +184,109 @@
             "id": "rig",
             "name": "BUMP.Modules.ratingsRig",
             "attributeId": "mind"
+          }
+        ]
+      }
+    },
+    "gear": {
+      "id": "gear",
+      "type": "items",
+      "label": "BUMP.Modules.gearLabel",
+      "props": {
+        "groups": [
+          {
+            "id": "normal",
+            "name": ""
+          },
+          {
+            "id": "armory",
+            "name": "BUMP.Modules.gearArmoryUpgrade"
+          }
+        ],
+        "common": [
+          {
+            "id": "knife",
+            "name": "BUMP.Modules.gearKnife",
+            "group": "normal",
+            "load": 1
+          },
+          {
+            "id": "flashlight",
+            "name": "BUMP.Modules.gearFlashlight",
+            "group": "normal",
+            "load": 1
+          },
+          {
+            "id": "improvised weapon",
+            "name": "BUMP.Modules.gearImprovisedWeapon",
+            "group": "normal",
+            "load": 1
+          },
+          {
+            "id": "hunters kit",
+            "name": "BUMP.Modules.gearHuntersKit",
+            "group": "normal",
+            "load": 1
+          },
+          {
+            "id": "hunters kit uses",
+            "name": "BUMP.Modules.gearHuntersKitUses",
+            "group": "normal",
+            "load": 3
+          },
+          {
+            "id": "occult or holy relic",
+            "name": "BUMP.Modules.gearOccultOrHolyRelic",
+            "group": "normal",
+            "load": 1
+          },
+          {
+            "id": "walkie or pager",
+            "name": "BUMP.Modules.gearWalkieOrPager",
+            "group": "normal",
+            "load": 0
+          },
+          {
+            "id": "handgun",
+            "name": "BUMP.Modules.gearHandgun",
+            "group": "armory",
+            "load": 1
+          },
+          {
+            "id": "rifle",
+            "name": "BUMP.Modules.gearRifle",
+            "group": "armory",
+            "load": 2
+          },
+          {
+            "id": "body armor",
+            "name": "BUMP.Modules.gearBodyArmor",
+            "group": "armory",
+            "load": 3
+          }
+        ]
+      }
+    },
+    "armor": {
+      "id": "armor",
+      "type": "items",
+      "label": "BUMP.Modules.armorLabel",
+      "props": {
+        "common": [
+          {
+            "id": "armor",
+            "name": "BUMP.Modules.armorArmor",
+            "load": 1
+          },
+          {
+            "id": "plot1",
+            "name": "BUMP.Modules.armorPlot",
+            "load": 1
+          },
+          {
+            "id": "plot2",
+            "name": "BUMP.Modules.armorPlot",
+            "load": 1
           }
         ]
       }
