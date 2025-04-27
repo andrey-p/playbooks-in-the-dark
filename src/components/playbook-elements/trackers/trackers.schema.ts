@@ -8,5 +8,6 @@ export const TrackerProps = z.object({
   reverse: z.boolean().optional(),
   variant: z.enum(['linked']).optional(),
   wrap: z.boolean().optional(),
-  size: z.number().int().optional()
+  size: z.number().int().optional(),
+  readOnly: z.boolean().optional()
 });

@@ -14,7 +14,8 @@ export const Item = z.object({
     .refine((val) => val >= 0 && val <= 10),
   showLinked: z.boolean().optional(),
   group: z.string().optional(),
-  slots: z.array(SlotProps).optional()
+  slots: z.array(SlotProps).optional(),
+  readOnly: z.boolean().optional()
 });
 
 export const Group = z.object({

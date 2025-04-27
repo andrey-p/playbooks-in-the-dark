@@ -368,6 +368,15 @@
       "id": "beats",
       "type": "items",
       "label": "BUMP.Modules.beatsLabel",
+      "default": {
+        "items": {
+          "quell alarm": 1,
+          "seek solace": 1,
+          "acquire asset": 1,
+          "recover": 1,
+          "long term project": 1
+        }
+      },
       "props": {
         "groups": [
           {

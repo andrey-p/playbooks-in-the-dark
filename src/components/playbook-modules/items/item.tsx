@@ -27,6 +27,7 @@ export default function Item(props: Props) {
       <SimpleTracker
         value={selected || 0}
         type='square'
+        readOnly={item.readOnly}
         variant={showLinked ? 'linked' : undefined}
         max={item.load || 1}
         onValueSelect={onSelect}

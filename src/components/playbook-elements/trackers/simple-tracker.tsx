@@ -10,7 +10,8 @@ type Props = z.infer<typeof TrackerPropsSchema> & {
 };
 
 export default function SimpleTracker(props: Props) {
-  const { value, max, type, variant, reverse, wrap, onValueSelect } = props;
+  const { value, readOnly, max, type, variant, reverse, wrap, onValueSelect } =
+    props;
   let { size } = props;
 
   const [highlightedValue, setHighlightedValue] = useState<number | null>(null);
@@ -43,7 +44,7 @@ export default function SimpleTracker(props: Props) {
           highlighted={highlighted}
           size={size}
           onClick={() => {
-            if (onValueSelect) {
+            if (onValueSelect && !readOnly) {
               if (value === i + 1) {
                 onValueSelect(0);
               } else {
@@ -52,7 +53,9 @@ export default function SimpleTracker(props: Props) {
             }
           }}
           onMouseEnter={() => {
-            setHighlightedValue(i + 1);
+            if (!readOnly) {
+              setHighlightedValue(i + 1);
+            }
           }}
         />
       </div>
