@@ -4,7 +4,7 @@
   "description": "BUMP.System.description",
   "customStyles": "styles.css",
   "translationNamespace": "BUMP",
-  "playbookTypes": ["character", "pact"],
+  "playbookTypes": ["hunter", "pact"],
   "license": "TODO",
   "attribution": "TODO",
   "website": "https://jexjthomas.itch.io/bump-in-the-dark"

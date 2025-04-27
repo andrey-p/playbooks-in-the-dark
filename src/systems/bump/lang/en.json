@@ -6,10 +6,10 @@
     },
     "Playbooks": {
       "makeA": {
-        "character": "Make a character",
+        "hunter": "Make a hunter",
         "pact": "Make a pact"
       },
-      "character": "Character",
+      "hunter": "Hunter",
       "pact": "Pact",
       "shield": "The Shield",
       "shieldDescription": "A fierce protector & fighter"
