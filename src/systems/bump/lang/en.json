@@ -15,7 +15,17 @@
       "shieldDescription": "A fierce protector & fighter"
     },
     "Modules": {
-      "nameLabel": "Name / Pronouns"
+      "nameLabel": "Name / Pronouns",
+      "lookLabel": "Look",
+      "backgroundLabel": "Background",
+      "backgroundDescription": "Field, speciality, origin",
+      "solaceLabel": "Solace",
+      "beliefLabel": "Belief",
+      "belief1Description": "(About the pact or another hunter)",
+      "belief2Description": "(About the world or the supernatural)",
+      "driveLabel": "Drive",
+      "connectionsLabel": "Connections",
+      "notesLabel": "Notes"
     }
   }
 }

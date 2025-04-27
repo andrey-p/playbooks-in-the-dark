@@ -6,7 +6,15 @@
   ],
   "layout": [
     [
-      "name"
+      "name",
+      "look",
+      "background",
+      "solace",
+      "belief1",
+      "belief2",
+      "drive",
+      ["connections1", "connections2"],
+      "notes"
     ]
   ],
   "modules": {
@@ -14,6 +22,54 @@
       "id": "name",
       "type": "textField",
       "label": "BUMP.Modules.nameLabel"
+    },
+    "look": {
+      "id": "look",
+      "type": "textArea",
+      "label": "BUMP.Modules.lookLabel"
+    },
+    "background": {
+      "id": "background",
+      "type": "textArea",
+      "label": "BUMP.Modules.backgroundLabel",
+      "description": "BUMP.Modules.backgroundDescription"
+    },
+    "solace": {
+      "id": "solace",
+      "type": "textField",
+      "label": "BUMP.Modules.solaceLabel"
+    },
+    "belief1": {
+      "id": "belief1",
+      "type": "textArea",
+      "label": "BUMP.Modules.beliefLabel",
+      "description": "BUMP.Modules.belief1Description"
+    },
+    "belief2": {
+      "id": "belief2",
+      "type": "textArea",
+      "label": "BUMP.Modules.beliefLabel",
+      "description": "BUMP.Modules.belief2Description"
+    },
+    "drive": {
+      "id": "drive",
+      "type": "textArea",
+      "label": "BUMP.Modules.driveLabel"
+    },
+    "connections1": {
+      "id": "connections1",
+      "type": "textArea",
+      "label": "BUMP.Modules.connectionsLabel"
+    },
+    "connections2": {
+      "id": "connections2",
+      "type": "textArea",
+      "label": "BUMP.Modules.connectionsLabel"
+    },
+    "notes": {
+      "id": "notes",
+      "type": "textArea",
+      "label": "BUMP.Modules.notesLabel"
     }
   }
 }
