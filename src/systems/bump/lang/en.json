@@ -52,6 +52,7 @@
       "ratingsVoidTouchedToClear": "To clear: act in the interest of the void",
       "ratingsAfraidLabel": "Afraid (-1d)",
       "ratingsAfraidToClear": "To clear: flee, leaving something important behind",
+      "gearSlotsLabel": "Available Gear Slots",
       "gearLabel": "Gear",
       "gearArmoryUpgrade": "Armory Upgrade (+2 slots)",
       "gearKnife": "Knife",

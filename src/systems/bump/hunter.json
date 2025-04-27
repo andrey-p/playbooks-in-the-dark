@@ -22,6 +22,7 @@
     ],
     [
       "ratings",
+      "gearSlots",
       "gear",
       "armor",
       "conditions",
@@ -188,6 +189,16 @@
             "attributeId": "mind"
           }
         ]
+      }
+    },
+    "gearSlots": {
+      "id": "gearSlots",
+      "type": "tracker",
+      "label": "BUMP.Modules.gearSlotsLabel",
+      "default": { "value": 4 },
+      "props": {
+        "type": "square",
+        "max": 7
       }
     },
     "gear": {
@@ -437,30 +448,35 @@
             "id": "quell alarm",
             "name": "BUMP.Modules.beatsQuellAlarm",
             "group": "basic",
+            "readOnly": true,
             "load": 1
           },
           {
             "id": "seek solace",
             "name": "BUMP.Modules.beatsSeekSolace",
             "group": "basic",
+            "readOnly": true,
             "load": 1
           },
           {
             "id": "acquire asset",
             "name": "BUMP.Modules.beatsAcquireAnAsset",
             "group": "basic",
+            "readOnly": true,
             "load": 1
           },
           {
             "id": "recover",
             "name": "BUMP.Modules.beatsRecover",
             "group": "basic",
+            "readOnly": true,
             "load": 1
           },
           {
             "id": "long term project",
             "name": "BUMP.Modules.beatsLongTermProject",
             "group": "basic",
+            "readOnly": true,
             "load": 1
           }
         ]
