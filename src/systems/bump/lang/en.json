@@ -73,7 +73,26 @@
       "conditionsAngry": "Angry: Can't benefit from teamwork",
       "conditionsAngryToClear": "To clear: make a rash action others cannot ignore",
       "conditionsWoundSlot": "'{wound'}",
-      "conditionsWound": "Wound"
+      "conditionsWound": "Wound",
+      "beatsLabel": "Downtime Beats",
+      "beatsHunterArc": "Hunter Arc",
+      "beatsPactArc": "Pact Arc",
+      "beatsBasic": "Basic Beats",
+      "beatsOriginStory": "Origin Story (2H)",
+      "beatsCutLoose": "Cut Loose (2B)",
+      "beatsLevelUp": "Level Up (4H)",
+      "beatsRetire": "Retire (4B)",
+      "beatsChosenFamily": "Chosen Family (3B)",
+      "beatsMakeADiscovery": "Make a Discovery (3H)",
+      "beatsGalvanize": "Galvanize (4B)",
+      "beatsMakeFriends": "Make Friends (5B)",
+      "beatsRemodel": "Remodel (5B)",
+      "beatsTiesThatBind": "The Ties That Bind (6B)",
+      "beatsQuellAlarm": "Quell Alarm (2B)",
+      "beatsSeekSolace": "Seek Solace (2H)",
+      "beatsAcquireAnAsset": "Acquire an Asset (2H)",
+      "beatsRecover": "Recover (2H)",
+      "beatsLongTermProject": "Work on Long-Term Project (2H)"
     }
   }
 }

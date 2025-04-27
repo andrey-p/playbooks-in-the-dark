@@ -24,7 +24,8 @@
       "ratings",
       "gear",
       "armor",
-      "conditions"
+      "conditions",
+      "beats"
     ]
   ],
   "modules": {
@@ -347,6 +348,119 @@
               "label": "BUMP.Modules.conditionsWound",
               "size": 20
             }],
+            "load": 1
+          }
+        ]
+      }
+    },
+    "beats": {
+      "id": "beats",
+      "type": "items",
+      "label": "BUMP.Modules.beatsLabel",
+      "props": {
+        "groups": [
+          {
+            "id": "hunter",
+            "name": "BUMP.Modules.beatsHunterArc"
+          },
+          {
+            "id": "pact",
+            "name": "BUMP.Modules.beatsPactArc"
+          },
+          {
+            "id": "basic",
+            "name": "BUMP.Modules.beatsBasic"
+          }
+        ],
+        "common": [
+          {
+            "id": "origin story",
+            "name": "BUMP.Modules.beatsOriginStory",
+            "group": "hunter",
+            "load": 2
+          },
+          {
+            "id": "cut loose",
+            "name": "BUMP.Modules.beatsCutLoose",
+            "group": "hunter",
+            "load": 2
+          },
+          {
+            "id": "level up",
+            "name": "BUMP.Modules.beatsLevelUp",
+            "group": "hunter",
+            "load": 4
+          },
+          {
+            "id": "retire",
+            "name": "BUMP.Modules.beatsRetire",
+            "group": "hunter",
+            "load": 1
+          },
+          {
+            "id": "chosen family",
+            "name": "BUMP.Modules.beatsChosenFamily",
+            "group": "pact",
+            "load": 2
+          },
+          {
+            "id": "make a discovery",
+            "name": "BUMP.Modules.beatsMakeADiscovery",
+            "group": "pact",
+            "load": 4
+          },
+          {
+            "id": "galvanize",
+            "name": "BUMP.Modules.beatsGalvanize",
+            "group": "pact",
+            "load": 4
+          },
+          {
+            "id": "make friends",
+            "name": "BUMP.Modules.beatsMakeFriends",
+            "group": "pact",
+            "load": 3
+          },
+          {
+            "id": "remodel",
+            "name": "BUMP.Modules.beatsRemodel",
+            "group": "pact",
+            "load": 3
+          },
+          {
+            "id": "ties that bind",
+            "name": "BUMP.Modules.beatsTiesThatBind",
+            "group": "pact",
+            "load": 4
+          },
+          {
+            "id": "quell alarm",
+            "name": "BUMP.Modules.beatsQuellAlarm",
+            "group": "basic",
+            "load": 1
+          },
+          {
+            "id": "seek solace",
+            "name": "BUMP.Modules.beatsSeekSolace",
+            "group": "basic",
+            "load": 1
+          },
+          {
+            "id": "acquire asset",
+            "name": "BUMP.Modules.beatsAcquireAnAsset",
+            "group": "basic",
+            "load": 1
+          },
+          {
+            "id": "recover",
+            "name": "BUMP.Modules.beatsRecover",
+            "group": "basic",
+            "load": 1
+          },
+          {
+            "id": "long term project",
+            "name": "BUMP.Modules.beatsLongTermProject",
+            "group": "basic",
             "load": 1
           }
         ]
