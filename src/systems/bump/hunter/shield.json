@@ -17,6 +17,61 @@
         "wreck": 2,
         "compel": 1
       }
+    },
+    "gear": {
+      "custom": [
+        {
+          "id": "fighting style",
+          "name": "BUMP.Modules.gearFightingStyle",
+          "load": 0
+        },
+        {
+          "id": "hand weapon",
+          "name": "BUMP.Modules.gearHandWeapon",
+          "load": 1
+        },
+        {
+          "id": "superior heavy weapon",
+          "name": "BUMP.Modules.gearSuperiorHeavyWeapon",
+          "load": 2
+        },
+        {
+          "id": "makeshift armor",
+          "name": "BUMP.Modules.gearMakeshiftArmor",
+          "load": 2
+        },
+        { "id": "restraints",
+          "name": "BUMP.Modules.gearRestraints",
+          "load": 1
+        },
+        {
+          "id": "token of another life",
+          "name": "BUMP.Modules.gearTokenOfAnotherLife",
+          "load": 0
+        }
+      ]
+    },
+    "beats": {
+      "groups": [
+        {
+          "id": "shield arc",
+          "name": "BUMP.Modules.beatsShieldArc"
+        }
+      ],
+      "custom": [
+        {
+          "id": "troubled past",
+          "name": "BUMP.Modules.beatsTroubledPast",
+          "group": "shield arc",
+          "load": 1
+        },
+        {
+          "id": "kill it with fire",
+          "name": "BUMP.Modules.beatsKillItWithFire",
+          "group": "shield arc",
+          "load": 1
+        }
+      ]
     }
   }
 }

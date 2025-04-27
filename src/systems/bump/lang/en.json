@@ -65,6 +65,12 @@
       "gearHandgun": "Handgun",
       "gearRifle": "Rifle",
       "gearBodyArmor": "Body Armor",
+      "gearFightingStyle": "Fighting Style",
+      "gearHandWeapon": "Hand Weapon",
+      "gearSuperiorHeavyWeapon": "Superior Heavy Weapon",
+      "gearMakeshiftArmor": "Makeshift Armor",
+      "gearRestraints": "Restraints",
+      "gearTokenOfAnotherLife": "Token of Another Life",
       "armorLabel": "Armor Uses",
       "armorArmor": "Armor",
       "armorPlot": "Plot",
@@ -78,6 +84,7 @@
       "conditionsWoundSlot3": "'{wound3'}",
       "conditionsWound": "Wound",
       "beatsLabel": "Downtime Beats",
+      "beatsShieldArc": "Shield Arc",
       "beatsHunterArc": "Hunter Arc",
       "beatsPactArc": "Pact Arc",
       "beatsBasic": "Basic Beats",
@@ -95,7 +102,9 @@
       "beatsSeekSolace": "Seek Solace (2H)",
       "beatsAcquireAnAsset": "Acquire an Asset (2H)",
       "beatsRecover": "Recover (2H)",
-      "beatsLongTermProject": "Work on Long-Term Project (2H)"
+      "beatsLongTermProject": "Work on Long-Term Project (2H)",
+      "beatsTroubledPast": "Troubled Past (3H)",
+      "beatsKillItWithFire": "Kill It With Fire (4H)"
     }
   }
 }
