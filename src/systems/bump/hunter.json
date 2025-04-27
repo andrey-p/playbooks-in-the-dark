@@ -15,6 +15,10 @@
       "drive",
       ["connections1", "connections2"],
       "notes"
+    ],
+    [
+      "abilities",
+      "luckDoomHope"
     ]
   ],
   "modules": {
@@ -70,6 +74,35 @@
       "id": "notes",
       "type": "textArea",
       "label": "BUMP.Modules.notesLabel"
+    },
+    "abilities": {
+      "id": "abilities",
+      "type": "specialAbilities",
+      "label": "BUMP.Modules.abilitiesLabel"
+    },
+    "luckDoomHope": {
+      "id": "luckDoomHope",
+      "type": "multiTracker",
+      "label": "",
+      "props": {
+        "trackers": {
+          "luck": {
+            "max": 9,
+            "type": "square",
+            "label": "BUMP.Modules.luckLabel"
+          },
+          "doom": {
+            "max": 5,
+            "type": "square",
+            "label": "BUMP.Modules.doomLabel"
+          },
+          "hope": {
+            "max": 8,
+            "type": "square",
+            "label": "BUMP.Modules.hopeLabel"
+          }
+        }
+      }
     }
   }
 }

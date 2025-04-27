@@ -25,7 +25,13 @@
       "belief2Description": "(About the world or the supernatural)",
       "driveLabel": "Drive",
       "connectionsLabel": "Connections",
-      "notesLabel": "Notes"
+      "notesLabel": "Notes",
+      "abilitiesLabel": "Abilities",
+      "abilitiesRelentless": "Relentless",
+      "abilitiesRelentlessDescription": "You can <strong>push your luck</strong> to do one of the following: <em>perform a feat of physical strength verging on the supernatural</em> -or- <em>engage a small gang (or large monster) on equal footing</em>.",
+      "luckLabel": "Luck",
+      "doomLabel": "Doom",
+      "hopeLabel": "Hope"
     }
   }
 }
