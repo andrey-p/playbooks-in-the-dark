@@ -11,27 +11,6 @@ addTestTranslations({
   }
 });
 
-const scoundrel = {
-  id: 'scoundrel',
-  name: 'LOCAL_STORAGE_TEST.scoundrel',
-  modules: {
-    name: {
-      id: 'name',
-      label: 'LOCAL_STORAGE_TEST.nameLabel',
-      type: 'textField'
-    }
-  },
-  layout: [['name']],
-  playbooks: ['cutter']
-};
-
-const cutter = {
-  id: 'cutter',
-  modules: {},
-  name: 'LOCAL_STORAGE_TEST.cutter',
-  description: 'something'
-};
-
 describe('showing saved playbooks on homepage', () => {
   beforeEach(() => {
     window.localStorage.clear();
