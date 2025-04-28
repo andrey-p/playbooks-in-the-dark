@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { Item as ItemSchema } from './items.schema';
 import { SlotValue as SlotValueSchema } from '@/components/playbook-elements/slotted-text/slotted-text.schema';
+import { TrackerProps as TrackerPropsSchema } from '@/components/playbook-elements/trackers/trackers.schema';
 import SimpleTracker from '@/components/playbook-elements/trackers/simple-tracker';
 import SlottedText from '@/components/playbook-elements/slotted-text/slotted-text';
 import styles from './item.module.css';
@@ -12,10 +13,18 @@ type Props = {
   onSelect: (selected: number) => void;
   slotValues: z.infer<typeof SlotValueSchema>;
   onSlotUpdate: (values: Record<string, string>) => void;
+  trackerProps?: z.infer<typeof TrackerPropsSchema>;
 };
 
 export default function Item(props: Props) {
-  const { item, selected, slotValues, onSelect, onSlotUpdate } = props;
+  const {
+    item,
+    selected,
+    slotValues,
+    trackerProps = {},
+    onSelect,
+    onSlotUpdate
+  } = props;
 
   // default to showing load 2+ items as linked
   const showLinked =
@@ -29,8 +38,9 @@ export default function Item(props: Props) {
         type='square'
         readOnly={item.readOnly}
         variant={showLinked ? 'linked' : undefined}
-        max={item.load || 1}
         onValueSelect={onSelect}
+        {...trackerProps}
+        max={item.load || 1}
       />
       <span
         className={clsx(styles.itemLabel, item.load === 0 && styles.noLoadItem)}

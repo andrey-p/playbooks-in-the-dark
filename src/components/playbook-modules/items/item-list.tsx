@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { Group as GroupSchema, Item as ItemSchema } from './items.schema';
 import { SlotValue as SlotValueSchema } from '@/components/playbook-elements/slotted-text/slotted-text.schema';
+import { TrackerProps as TrackerPropsSchema } from '@/components/playbook-elements/trackers/trackers.schema';
 import Description from '@/components/playbook-elements/description/description';
 import Item from './item';
 import styles from './item-list.module.css';
@@ -10,6 +11,7 @@ import { useTranslations } from 'next-intl';
 type ItemType = z.infer<typeof ItemSchema>;
 type GroupType = z.infer<typeof GroupSchema>;
 type SlotValueType = z.infer<typeof SlotValueSchema>;
+type TrackerPropsType = z.infer<typeof TrackerPropsSchema>;
 
 type Props = {
   items: ItemType[];
@@ -19,6 +21,7 @@ type Props = {
   onSlotUpdate: (values: SlotValueType) => void;
   slotValues: SlotValueType;
   twoColumns?: boolean;
+  trackerProps?: TrackerPropsType;
 };
 
 export default function ItemList(props: Props) {
@@ -27,6 +30,7 @@ export default function ItemList(props: Props) {
     twoColumns,
     selectedItems,
     slotValues,
+    trackerProps,
     onItemSelect,
     onSlotUpdate
   } = props;
@@ -81,6 +85,7 @@ export default function ItemList(props: Props) {
                     slotValues={slotValues}
                     onSlotUpdate={onSlotUpdate}
                     onSelect={(selected) => onItemSelect(item.id, selected)}
+                    trackerProps={trackerProps}
                   />
                 </li>
               ))}

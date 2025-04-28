@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
+import { TrackerProps } from '@/components/playbook-elements/trackers/trackers.schema';
 import {
   SlotProps,
   SlotValue
@@ -43,7 +44,8 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
         )
         .optional(),
       groups: z.array(Group).optional(),
-      common: z.array(Item)
+      common: z.array(Item),
+      trackerProps: TrackerProps.optional()
     })
   })
 );

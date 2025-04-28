@@ -11,7 +11,8 @@ type SlotValueType = z.infer<typeof SlotValueSchema>;
 
 export default function Items(props: Props) {
   const { moduleDefinition, userValue, onUpdate, playbookProps = {} } = props;
-  const { common, load, twoColumns, groups } = moduleDefinition.props;
+  const { common, load, twoColumns, groups, trackerProps } =
+    moduleDefinition.props;
   const { startingItems, groups: playbookGroups } = playbookProps;
   const { load: selectedLoad, slots: slotValues } = userValue;
   let { items: selectedItems } = userValue;
@@ -73,6 +74,7 @@ export default function Items(props: Props) {
           slotValues={slotValues || {}}
           onSlotUpdate={onSlotUpdate}
           twoColumns={twoColumns}
+          trackerProps={trackerProps}
         />
       )}
       {common.length && (
@@ -84,6 +86,7 @@ export default function Items(props: Props) {
           slotValues={slotValues || {}}
           onSlotUpdate={onSlotUpdate}
           onItemSelect={onItemSelect}
+          trackerProps={trackerProps}
         />
       )}
     </ModuleWrapper>
