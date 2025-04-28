@@ -7,7 +7,8 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
       .object({
         examples: z.string().array().optional()
       })
-      .optional()
+      .optional(),
+    hideModuleLabel: z.boolean().default(true)
   })
 );
 

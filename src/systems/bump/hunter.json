@@ -33,7 +33,8 @@
     "name": {
       "id": "name",
       "type": "textField",
-      "label": "BUMP.Modules.nameLabel"
+      "label": "BUMP.Modules.nameLabel",
+      "hideModuleLabel"
     },
     "look": {
       "id": "look",
