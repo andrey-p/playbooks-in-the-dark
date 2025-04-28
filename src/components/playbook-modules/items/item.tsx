@@ -34,13 +34,13 @@ export default function Item(props: Props) {
     <div className={styles.container}>
       {/* load 0 items still show a box */}
       <SimpleTracker
-        value={selected || 0}
         type='square'
         readOnly={item.readOnly}
         variant={showLinked ? 'linked' : undefined}
         onValueSelect={onSelect}
         {...trackerProps}
         max={item.load || 1}
+        value={selected || 0}
       />
       <span
         className={clsx(styles.itemLabel, item.load === 0 && styles.noLoadItem)}
