@@ -6,6 +6,12 @@ jest.mock('fs/promises');
 
 describe('system-data', () => {
   describe('getJson', () => {
+    afterEach(() => {
+      if (jest.mocked(fs.readFile).mockRestore) {
+        jest.mocked(fs.readFile).mockRestore();
+      }
+    });
+
     test('gets existing JSON file OK', async () => {
       expect(await getJson('bitd', 'system')).toMatchObject({
         id: 'bitd'
