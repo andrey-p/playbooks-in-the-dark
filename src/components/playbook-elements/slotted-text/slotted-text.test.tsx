@@ -5,8 +5,8 @@ import userEvent from '@testing-library/user-event';
 addTestTranslations({
   SLOT_TEST: {
     noSlots: 'Hello foo bar baz',
-    slotLike: 'Hello {foo} bar baz',
-    multipleSlots: 'Hello {foo} bar {qux} baz'
+    slotLike: 'Hello [foo] bar baz',
+    multipleSlots: 'Hello [foo] bar [qux] baz'
   }
 });
 
@@ -20,14 +20,14 @@ describe('SlottedText', () => {
     test('slot-like text', () => {
       render(<SlottedText text='SLOT_TEST.slotLike' onUpdate={() => {}} />);
 
-      expect(screen.getByText('Hello {foo} bar baz')).toBeTruthy();
+      expect(screen.getByText('Hello [foo] bar baz')).toBeTruthy();
     });
     test('empty array of slots', () => {
       render(
         <SlottedText text='SLOT_TEST.slotLike' slots={[]} onUpdate={() => {}} />
       );
 
-      expect(screen.getByText('Hello {foo} bar baz')).toBeTruthy();
+      expect(screen.getByText('Hello [foo] bar baz')).toBeTruthy();
     });
   });
 
@@ -109,7 +109,7 @@ describe('SlottedText', () => {
         />
       );
 
-      expect(screen.queryByText('Hello {foo} bar {qux} baz')).toBeFalsy();
+      expect(screen.queryByText('Hello [foo] bar [qux] baz')).toBeFalsy();
       expect(screen.getByText(/Hello/)).toBeTruthy();
       expect(screen.getByText(/bar/)).toBeTruthy();
       expect(screen.getByText(/baz/)).toBeTruthy();
