@@ -10,6 +10,10 @@
         "character": "Make a character",
         "posse": "Make a posse"
       },
+      "unnamed": {
+        "character": "An unnamed character",
+        "posse": "An unnamed posse"
+      },
       "character": "Character",
       "fist": "The Fist",
       "fistDescription": "Like a cobra ready to strike",
