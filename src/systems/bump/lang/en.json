@@ -9,6 +9,10 @@
         "hunter": "Make a hunter",
         "pact": "Make a pact"
       },
+      "unnamed": {
+        "hunter": "An unnamed hunter",
+        "pact": "An unnamed pact"
+      },
       "hunter": "Hunter",
       "pact": "Pact",
       "shield": "The Shield",
