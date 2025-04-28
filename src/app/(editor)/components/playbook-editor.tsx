@@ -74,7 +74,7 @@ export default function Playbook(props: Props) {
 
     // store this in local storage
     // so it can be accessed easily from the homepage
-    savePlaybookToLocalStorage(dataWithId, playbookData, playbookDefinition);
+    savePlaybookToLocalStorage(dataWithId);
 
     // if this is a new character being saved, store the newly created ID in local state
     if (!userData.id && data.id) {
@@ -88,14 +88,7 @@ export default function Playbook(props: Props) {
     if (!userData.shareId && data.shareId) {
       dispatch({ type: 'set_share_id', value: data.shareId });
     }
-  }, [
-    userData,
-    playbookData,
-    playbookDefinition,
-    pathName,
-    readOnly,
-    saveAction
-  ]);
+  }, [userData, pathName, readOnly, saveAction]);
 
   // after the first save, save automatically every 30s
   // (because of how the dependencies are constructed,
