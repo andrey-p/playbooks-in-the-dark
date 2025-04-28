@@ -2,10 +2,12 @@ import { getJson } from './system-data';
 import { NotFoundError } from './errors';
 import fs from 'fs/promises';
 
-jest.mock('fs/promises');
-
 describe('system-data', () => {
   describe('getJson', () => {
+    afterEach(() => {
+      jest.restoreAllMocks();
+    });
+
     test('gets existing JSON file OK', async () => {
       expect(await getJson('bitd', 'system')).toMatchObject({
         id: 'bitd'
@@ -28,7 +30,7 @@ describe('system-data', () => {
     });
 
     test("throws meaningful error if JSON file doesn't parse correctly", () => {
-      fs.readFile = jest.fn().mockImplementation(async () => {
+      jest.spyOn(fs, 'readFile').mockImplementation(async () => {
         return '{ "foo": bar }';
       });
 

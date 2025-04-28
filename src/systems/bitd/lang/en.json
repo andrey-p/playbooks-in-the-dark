@@ -10,6 +10,10 @@
         "scoundrel": "Make a scoundrel",
         "crew": "Make a crew"
       },
+      "unnamed": {
+        "scoundrel": "An unnamed scoundrel",
+        "crew": "An unnamed crew"
+      },
       "scoundrel": "Scoundrel",
       "cutter": "Cutter",
       "cutterDescription": "A dangerous & intimidating fighter",

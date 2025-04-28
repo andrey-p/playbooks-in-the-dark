@@ -2,7 +2,10 @@ import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // make sure all system JSON data gets included in the build
+  outputFileTracingIncludes: {
+    '/': ['./src/systems/**/*.json']
+  }
 };
 
 const withNextIntl = createNextIntlPlugin();

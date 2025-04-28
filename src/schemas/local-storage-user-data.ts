@@ -5,8 +5,17 @@ const LocalStorageUserData = z.object({
   systemId: z.string(),
   playbookType: z.string(),
   playbookId: z.string(),
-  name: z.string(),
-  description: z.string()
+  name: z.string().optional(),
+  modules: z
+    .object({
+      name: z
+        .object({
+          text: z.string()
+        })
+        .optional()
+    })
+    .optional(),
+  description: z.string().optional()
 });
 
 export default LocalStorageUserData;

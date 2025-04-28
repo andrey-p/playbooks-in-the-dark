@@ -1,7 +1,7 @@
 {
   "systems": [
-    { "id": "bitd" },
-    { "id": "afod" },
-    { "id": "bump" }
+    { "id": "bitd", "translationNamespace": "BITD" },
+    { "id": "afod", "translationNamespace": "AFOD" },
+    { "id": "bump", "translationNamespace": "BUMP" }
   ]
 }

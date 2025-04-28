@@ -144,8 +144,7 @@ describe('PlaybookEditor', () => {
         systemId: 'bitd',
         playbookId: 'cutter',
         playbookType: 'scoundrel',
-        name: 'beatrice',
-        description: 'Cutter'
+        modules: { name: { text: 'beatrice' } }
       });
 
       // the URL should've updated
@@ -177,8 +176,7 @@ describe('PlaybookEditor', () => {
         systemId: 'bitd',
         playbookId: 'cutter',
         playbookType: 'scoundrel',
-        name: 'beatrice beatrice',
-        description: 'Cutter'
+        modules: { name: { text: 'beatrice beatrice' } }
       });
     });
   });
