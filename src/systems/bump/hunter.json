@@ -34,7 +34,7 @@
       "id": "name",
       "type": "textField",
       "label": "BUMP.Modules.nameLabel",
-      "hideModuleLabel"
+      "hideModuleLabel": false
     },
     "look": {
       "id": "look",
@@ -50,7 +50,8 @@
     "solace": {
       "id": "solace",
       "type": "textField",
-      "label": "BUMP.Modules.solaceLabel"
+      "label": "BUMP.Modules.solaceLabel",
+      "hideModuleLabel": false
     },
     "belief1": {
       "id": "belief1",
@@ -93,6 +94,7 @@
       "id": "luckDoomHope",
       "type": "multiTracker",
       "label": "BUMP.Modules.luckDoomHopeLabel",
+      "hideModuleLabel": true,
       "props": {
         "trackers": {
           "luck": {
