@@ -4,6 +4,30 @@
 
   /* HUNTERS */
   &.hunter {
+    .ratings {
+      .attribute-group-container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .xp {
+        position: relative;
+        right: 0;
+        top: 0;
+        order: 1;
+        display: flex;
+        margin-top: 0.5rem;
+
+        .tracker-container {
+          margin-right: 0.5rem;
+        }
+      }
+
+      .description {
+        order: 2;
+      }
+    }
+
     .conditions {
       .item-list {
         margin-bottom: 0.5rem;

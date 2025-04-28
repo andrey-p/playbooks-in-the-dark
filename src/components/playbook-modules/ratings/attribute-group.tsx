@@ -8,6 +8,7 @@ import Tracker from '@/components/playbook-elements/trackers/simple-tracker';
 import Description from '@/components/playbook-elements/description/description';
 import styles from './attribute-group.module.css';
 import { useTranslations } from 'next-intl';
+import clsx from 'clsx';
 
 type AttributeType = z.infer<typeof AttributeSchema>;
 type ActionType = z.infer<typeof ActionSchema>;
@@ -38,9 +39,9 @@ export default function AttributeGroup(props: Props) {
   const t = useTranslations();
 
   return (
-    <div className={styles.container}>
+    <div className={clsx(styles.container, 'attribute-group-container')}>
       <h3 className={styles.title}>{t(attribute.name)}</h3>
-      <div className={styles.xp}>
+      <div className={clsx(styles.xp, 'xp')}>
         <Tracker
           max={6}
           type='dagger'
