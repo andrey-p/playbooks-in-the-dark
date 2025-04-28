@@ -46,13 +46,25 @@ export default function ItemList(props: Props) {
           return item.group === group.id;
         });
 
+        if (!itemsForGroup.length) {
+          return null;
+        }
+
         return (
           <div
             key={group.id || ''}
-            className={clsx(group.id && `group-${group.id}`)}
+            className={clsx('group', group.id && `group-${group.id}`)}
           >
             {group.name && (
-              <div className={styles.groupName}>{t(group.name)}</div>
+              <div
+                className={clsx(
+                  'group-name',
+                  styles.groupName,
+                  group.id && `group-${group.id}-name`
+                )}
+              >
+                {t(group.name)}
+              </div>
             )}
             <ul className={clsx(styles.list, 'item-list')}>
               {itemsForGroup.map((item: ItemType) => (

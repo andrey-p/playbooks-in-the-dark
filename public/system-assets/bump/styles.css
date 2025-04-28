@@ -1,4 +1,27 @@
 .bump {
   /* GENERAL */
   --font-display: var(--font-saira-extra-condensed);
+
+  /* HUNTERS */
+  &.hunter {
+    .conditions {
+      .item-list {
+        margin-bottom: 0.5rem;
+      }
+
+      .group {
+        border-bottom: 1px solid var(--foreground);
+        padding-bottom: 1rem;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .group-wounded-name {
+        margin-top: 1rem;
+        text-transform: unset;
+      }
+    }
+  }
 }
