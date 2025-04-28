@@ -46,7 +46,7 @@ export default function SlottedText(props: Props) {
 
   slots.forEach((slot) => {
     slotComponentsById.set(
-      `{${slot.id}}`,
+      `[${slot.id}]`,
       <Slot
         key={slot.id}
         slot={slot}
@@ -58,13 +58,13 @@ export default function SlottedText(props: Props) {
 
   // separate the text into chunks separated by slot-like tokens e.g.:
   //
-  // "hello {foo} bar"
+  // "hello [foo] bar"
   // ->
-  // ["hello ", "{foo}", " bar"]
+  // ["hello ", "[foo]", " bar"]
   //
-  // (at this stage it doesn't matter if {foo} is an actual slot -
+  // (at this stage it doesn't matter if [foo] is an actual slot -
   // we check that below)
-  const splitText = translatedText.split(/(\{[a-zA-Z0-9-]+\})/);
+  const splitText = translatedText.split(/(\[[a-zA-Z0-9-]+\])/);
 
   return (
     <>
