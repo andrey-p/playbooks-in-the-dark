@@ -6,6 +6,14 @@
     rotate: 90deg;
   }
 
+  .items {
+    .tracker-toggle {
+      &:after {
+        content: none;
+      }
+    }
+  }
+
   /* HUNTERS */
   &.hunter {
     .ratings {
@@ -21,6 +29,7 @@
         order: 1;
         display: flex;
         margin-top: 0.5rem;
+        align-items: center;
 
         .tracker-container {
           margin-right: 0.5rem;
