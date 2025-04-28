@@ -72,7 +72,7 @@ describe('showing saved playbooks on homepage', () => {
     expect(option.innerHTML).toContain('Cutter');
   });
 
-  test('backwards compat - name: "unnamed cutter"', async () => {
+  test('backwards compat - storing name and description as unstructured / untranslated data', async () => {
     window.localStorage.setItem(
       'playbooks',
       JSON.stringify([
