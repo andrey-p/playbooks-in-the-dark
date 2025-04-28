@@ -37,9 +37,11 @@ export default function TextField(props: Props) {
         />
       </div>
       <div className={styles.labelContainer}>
-        <label className={styles.label} htmlFor={consistentId}>
-          {t(label)}
-        </label>
+        {moduleDefinition.hideModuleLabel && (
+          <label className={styles.label} htmlFor={consistentId}>
+            {t(label)}
+          </label>
+        )}
         {examples && <ExampleList items={examples} />}
       </div>
     </ModuleWrapper>
