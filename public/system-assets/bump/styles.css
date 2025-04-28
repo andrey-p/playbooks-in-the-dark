@@ -2,6 +2,10 @@
   /* GENERAL */
   --font-display: var(--font-saira-extra-condensed);
 
+  .toggle.triangle {
+    rotate: 90deg;
+  }
+
   /* HUNTERS */
   &.hunter {
     .ratings {
