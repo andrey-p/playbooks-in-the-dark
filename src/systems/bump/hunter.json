@@ -200,7 +200,7 @@
       "label": "BUMP.Modules.gearSlotsLabel",
       "default": { "value": 4 },
       "props": {
-        "type": "square",
+        "type": "triangle",
         "max": 7
       }
     },
@@ -209,6 +209,9 @@
       "type": "items",
       "label": "BUMP.Modules.gearLabel",
       "props": {
+        "trackerProps": {
+          "type": "triangle"
+        },
         "groups": [
           {
             "id": "normal",
@@ -288,6 +291,9 @@
       "type": "items",
       "label": "BUMP.Modules.armorLabel",
       "props": {
+        "trackerProps": {
+          "type": "triangle"
+        },
         "common": [
           {
             "id": "armor",
@@ -312,6 +318,9 @@
       "type": "items",
       "label": "BUMP.Modules.conditionsLabel",
       "props": {
+        "trackerProps": {
+          "type": "triangle"
+        },
         "groups": [
           {
             "id": "angry",
@@ -381,6 +390,9 @@
         }
       },
       "props": {
+        "trackerProps": {
+          "type": "triangle"
+        },
         "groups": [
           {
             "id": "hunter",
