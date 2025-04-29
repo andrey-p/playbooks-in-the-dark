@@ -275,6 +275,9 @@
             "id": "hunters kit uses",
             "name": "BUMP.Modules.gearHuntersKitUses",
             "group": "normal",
+            "trackerProps": {
+              "type": "square"
+            },
             "load": 3
           },
           {
