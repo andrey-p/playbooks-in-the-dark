@@ -18,15 +18,15 @@
     ],
     [
       "abilities",
-      "luckDoomHope"
+      "luckDoomHope",
+      "beats"
     ],
     [
       "ratings",
       "gearSlots",
       "gear",
       "armor",
-      "conditions",
-      "beats"
+      "conditions"
     ]
   ],
   "modules": {
