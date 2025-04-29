@@ -16,7 +16,8 @@ export const Item = z.object({
   showLinked: z.boolean().optional(),
   group: z.string().optional(),
   slots: z.array(SlotProps).optional(),
-  readOnly: z.boolean().optional()
+  readOnly: z.boolean().optional(),
+  trackerProps: TrackerProps.optional()
 });
 
 export const Group = z.object({

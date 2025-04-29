@@ -30,8 +30,10 @@ export default function Item(props: Props) {
   const showLinked =
     typeof item.showLinked === 'boolean' ? item.showLinked : true;
 
+  const itemTrackerProps = item.trackerProps || {};
+
   return (
-    <div className={styles.container}>
+    <div className={clsx(styles.container, 'item')}>
       {/* load 0 items still show a box */}
       <SimpleTracker
         type='square'
@@ -39,6 +41,7 @@ export default function Item(props: Props) {
         variant={showLinked ? 'linked' : undefined}
         onValueSelect={onSelect}
         {...trackerProps}
+        {...itemTrackerProps}
         max={item.load || 1}
         value={selected || 0}
       />
