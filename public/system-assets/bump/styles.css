@@ -6,6 +6,8 @@
     rotate: 90deg;
   }
 
+  /* all the item toggles are triangles, */
+  /* no point in showing the -s between the boxes */
   .items {
     .tracker-toggle {
       &:after {
@@ -58,6 +60,15 @@
       .group-wounded-name {
         margin-top: 1rem;
         text-transform: unset;
+      }
+    }
+
+    .multiTracker.luckDoomHope {
+      .doom {
+        .tracker-toggle:nth-child(4) {
+          padding-right: 0.3rem;
+          border-right: 2px solid var(--foreground);
+        }
       }
     }
   }
