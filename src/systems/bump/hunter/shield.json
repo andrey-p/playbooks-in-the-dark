@@ -9,6 +9,47 @@
           "id": "relentless",
           "name": "BUMP.Modules.abilitiesRelentless",
           "description": "BUMP.Modules.abilitiesRelentlessDescription"
+        },
+        {
+          "id": "allOuttaBubblegum",
+          "name": "BUMP.Modules.abilitiesAllOuttaBubblegum",
+          "description": "BUMP.Modules.abilitiesAllOuttaBubblegumDescription"
+        },
+        {
+          "id": "bashingHeads",
+          "name": "BUMP.Modules.abilitiesBashingHeads",
+          "description": "BUMP.Modules.abilitiesBashingHeadsDescription"
+        },
+        {
+          "id": "imTheOne",
+          "name": "BUMP.Modules.abilitiesImTheOne",
+          "description": "BUMP.Modules.abilitiesImTheOneDescription"
+        },
+        {
+          "id": "protective",
+          "name": "BUMP.Modules.abilitiesProtective",
+          "description": "BUMP.Modules.abilitiesProtectiveDescription"
+        },
+        {
+          "id": "resilient",
+          "name": "BUMP.Modules.abilitiesResilient",
+          "description": "BUMP.Modules.abilitiesResilientDescription"
+        },
+        {
+          "id": "thickSkin",
+          "name": "BUMP.Modules.abilitiesThickSkin",
+          "description": "BUMP.Modules.abilitiesThickSkinDescription"
+        },
+        {
+          "id": "others",
+          "name": "BUMP.Modules.abilitiesOthers",
+          "description": "BUMP.Modules.abilitiesOthersDescription",
+          "slots": [{
+              "id": "otherAbilities",
+              "label": "BUMP.Modules.abilitiesOtherAbilities",
+              "multiline": true,
+              "height": 100
+          }]
         }
       ]
     },
