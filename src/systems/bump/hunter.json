@@ -73,12 +73,12 @@
     "connections1": {
       "id": "connections1",
       "type": "textArea",
-      "label": "BUMP.Modules.connectionsLabel"
+      "label": "BUMP.Modules.connectionsUpLabel"
     },
     "connections2": {
       "id": "connections2",
       "type": "textArea",
-      "label": "BUMP.Modules.connectionsLabel"
+      "label": "BUMP.Modules.connectionsDownLabel"
     },
     "notes": {
       "id": "notes",
