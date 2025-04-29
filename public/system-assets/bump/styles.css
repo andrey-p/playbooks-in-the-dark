@@ -7,7 +7,7 @@
   }
 
   /* all the item toggles are triangles, */
-  /* no point in showing the -s between the boxes */
+  /* no point in showing the -s between them */
   .items {
     .tracker-toggle {
       &:after {
