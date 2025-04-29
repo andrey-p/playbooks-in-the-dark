@@ -2,7 +2,9 @@ import { z } from 'zod';
 
 export const SlotProps = z.object({
   id: z.string(),
-  size: z.number().int(),
+  size: z.number().int().optional(),
+  height: z.number().int().optional(),
+  multiline: z.boolean().optional(),
   label: z.string()
 });
 

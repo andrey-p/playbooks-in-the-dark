@@ -14,14 +14,26 @@ export default function TextSlot(props: Props) {
   const { slot, value, onUpdate } = props;
   const { label } = slot;
 
-  return (
-    <input
-      className={styles.input}
-      type='text'
-      aria-label={label}
-      value={value}
-      size={slot.size}
-      onChange={(e) => onUpdate(e.currentTarget.value)}
-    />
-  );
+  if (slot.multiline) {
+    return (
+      <textarea
+        className={styles.textArea}
+        aria-label={label}
+        value={value}
+        style={{ height: slot.height }}
+        onChange={(e) => onUpdate(e.currentTarget.value)}
+      />
+    );
+  } else {
+    return (
+      <input
+        className={styles.input}
+        type='text'
+        aria-label={label}
+        value={value}
+        size={slot.size}
+        onChange={(e) => onUpdate(e.currentTarget.value)}
+      />
+    );
+  }
 }
