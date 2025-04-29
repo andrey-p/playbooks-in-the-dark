@@ -10,5 +10,5 @@ export const SlotProps = z.object({
 
 export const SlotValue = z.record(
   z.string().refine((val) => val.length <= 255),
-  z.string().refine((val) => val.length <= 255)
+  z.string().refine((val) => val.length <= 1024)
 );
