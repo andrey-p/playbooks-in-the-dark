@@ -39,13 +39,19 @@
     "look": {
       "id": "look",
       "type": "textArea",
-      "label": "BUMP.Modules.lookLabel"
+      "label": "BUMP.Modules.lookLabel",
+      "props": {
+        "height": 150
+      }
     },
     "background": {
       "id": "background",
       "type": "textArea",
       "label": "BUMP.Modules.backgroundLabel",
-      "description": "BUMP.Modules.backgroundDescription"
+      "description": "BUMP.Modules.backgroundDescription",
+      "props": {
+        "height": 150
+      }
     },
     "solace": {
       "id": "solace",
@@ -57,33 +63,51 @@
       "id": "belief1",
       "type": "textArea",
       "label": "BUMP.Modules.beliefLabel",
-      "description": "BUMP.Modules.belief1Description"
+      "description": "BUMP.Modules.belief1Description",
+      "props": {
+        "height": 150
+      }
     },
     "belief2": {
       "id": "belief2",
       "type": "textArea",
       "label": "BUMP.Modules.beliefLabel",
-      "description": "BUMP.Modules.belief2Description"
+      "description": "BUMP.Modules.belief2Description",
+      "props": {
+        "height": 150
+      }
     },
     "drive": {
       "id": "drive",
       "type": "textArea",
-      "label": "BUMP.Modules.driveLabel"
+      "label": "BUMP.Modules.driveLabel",
+      "props": {
+        "height": 150
+      }
     },
     "connections1": {
       "id": "connections1",
       "type": "textArea",
-      "label": "BUMP.Modules.connectionsUpLabel"
+      "label": "BUMP.Modules.connectionsUpLabel",
+      "props": {
+        "height": 150
+      }
     },
     "connections2": {
       "id": "connections2",
       "type": "textArea",
-      "label": "BUMP.Modules.connectionsDownLabel"
+      "label": "BUMP.Modules.connectionsDownLabel",
+      "props": {
+        "height": 150
+      }
     },
     "notes": {
       "id": "notes",
       "type": "textArea",
-      "label": "BUMP.Modules.notesLabel"
+      "label": "BUMP.Modules.notesLabel",
+      "props": {
+        "height": 150
+      }
     },
     "abilities": {
       "id": "abilities",
