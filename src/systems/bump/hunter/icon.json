@@ -1,0 +1,109 @@
+{
+  "id": "icon",
+  "name": "BUMP.Playbooks.icon",
+  "description": "BUMP.Playbooks.iconDescription",
+  "modules": {
+    "abilities": {
+      "abilities": [
+        {
+          "id": "deadeye",
+          "name": "BUMP.Modules.abilitiesDeadeye",
+          "description": "BUMP.Modules.abilitiesDeadeyeDescription"
+        },
+        {
+          "id": "leave no one behind",
+          "name": "BUMP.Modules.abilitiesLeaveNoOneBehind",
+          "description": "BUMP.Modules.abilitiesLeaveNoOneBehindDescription"
+        },
+        {
+          "id": "networked",
+          "name": "BUMP.Modules.abilitiesNetworked",
+          "description": "BUMP.Modules.abilitiesNetworkedDescription"
+        },
+        {
+          "id": "plausible deniability",
+          "name": "BUMP.Modules.abilitiesPlausibleDeniability",
+          "description": "BUMP.Modules.abilitiesPlausibleDeniabilityDescription"
+        },
+        {
+          "id": "undercover",
+          "name": "BUMP.Modules.abilitiesUndercover",
+          "description": "BUMP.Modules.abilitiesUndercoverDescription"
+        },
+        {
+          "id": "others",
+          "name": "BUMP.Modules.abilitiesOthers",
+          "description": "BUMP.Modules.abilitiesOthersDescription",
+          "slots": [{
+              "id": "otherAbilities",
+              "label": "BUMP.Modules.abilitiesOtherAbilities",
+              "multiline": true,
+              "height": 100
+          }]
+        }
+      ]
+    },
+    "ratings": {
+      "startingRatings": {
+        "compel": 2,
+        "hunt": 1
+      }
+    },
+    "gear": {
+      "custom": [
+        {
+          "id": "pair of worldclass handguns",
+          "name": "BUMP.Modules.gearPairOfWorldClassHandguns",
+          "load": 1
+        },
+        {
+          "id": "tactical vest",
+          "name": "BUMP.Modules.gearTacticalVest",
+          "load": 2
+        },
+        {
+          "id": "satellite phone",
+          "name": "BUMP.Modules.gearSatellitePhone",
+          "load": 2
+        },
+        {
+          "id": "enhanced vision goggles",
+          "name": "BUMP.Modules.gearEnhancedVisionGoggles",
+          "load": 1
+        },
+        { "id": "official id or badge",
+          "name": "BUMP.Modules.gearOfficialIdOrBadge",
+          "load": 0
+        },
+        {
+          "id": "smart business wear",
+          "name": "BUMP.Modules.gearSmartBusinessWear",
+          "load": 0
+        }
+      ]
+    },
+    "beats": {
+      "groups": [
+        {
+          "id": "icon arc",
+          "name": "BUMP.Modules.beatsIconArc"
+        }
+      ],
+      "custom": [
+        {
+          "id": "the black dossier",
+          "name": "BUMP.Modules.beatsTheBlackDossier",
+          "group": "icon arc",
+          "load": 1
+        },
+        {
+          "id": "deal with the devil",
+          "name": "BUMP.Modules.beatsDealWithTheDevil",
+          "group": "icon arc",
+          "load": 1
+        }
+      ]
+    }
+  }
+}
+

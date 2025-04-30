@@ -16,7 +16,9 @@
       "hunter": "Hunter",
       "pact": "Pact",
       "shield": "The Shield",
-      "shieldDescription": "A fierce protector & fighter"
+      "shieldDescription": "A fierce protector & fighter",
+      "icon": "The Icon",
+      "iconDescription": "A keen liaison & investigator"
     },
     "Modules": {
       "nameLabel": "Name / Pronouns",
@@ -49,6 +51,20 @@
       "abilitiesOthers": "Other(s)",
       "abilitiesOtherAbilities": "Other Abilities",
       "abilitiesOthersDescription": "[otherAbilities]",
+      "abilitiesCrimeSceneInvestigator": "Crime Scene Investigator",
+      "abilitiesCrimeSceneInvestigatorDescription": "You have a practiced eye for examining crime scenes and sites of strange occurrences. Gain <strong>+1d</strong> when you investigate a crime scene. You can always find a <strong>clue</strong> when you study wounds, corpses, etc., even on a miss.",
+      "abilitiesAdvancedAwareness": "Advanced Awareness",
+      "abilitiesAdvancedAwarenessDescription": "You can always <strong>help</strong> another hunter without marking <strong>luck</strong> as long as you can see them and you agree to <strong>protect</strong> them from consequences.",
+      "abilitiesDeadeye": "Deadeye",
+      "abilitiesDeadeyeDescription": "You can <strong>push your luck</strong> to do one of the following: <em>make a ranged attack at extreme distance (beyond what’s normal for the weapon)</em> –or– <em>create viable ranged trajectories using ricochet or arcs</em>.",
+      "abilitiesLeaveNoOneBehind": "Leave No One Behind",
+      "abilitiesLeaveNoOneBehindDescription": "When you <strong>act together</strong> to escape, gain <strong>+1d</strong>. When you <strong>protect</strong> someone, resist with <strong>+1d</strong>.",
+      "abilitiesNetworked": "Networked",
+      "abilitiesNetworkedDescription": "You can ACQUIRE ASSETS or QUELL ALARM for free once per downtime. Gain <strong>+1d</strong> to CONNECT when you investigate by leaning on your sources.",
+      "abilitiesPlausibleDeniability": "Plausible Deniability",
+      "abilitiesPlausibleDeniabilityDescription": "You may expend your <strong>plot armor</strong> to resist a consequence from suspicion or persuasion, or to <strong>push your luck</strong> at no cost when engaging in subterfuge.",
+      "abilitiesUndercover": "Undercover",
+      "abilitiesUndercoverDescription": "When you use a disguise or other form of covert misdirection, gain <strong>increased impact</strong> on attempts to confuse or deflect suspicion. When you reveal your true identity, the resulting surprise gives you an advantage.",
       "luckDoomHopeLabel": "Luck, Doom, Hope",
       "luckLabel": "Luck",
       "doomLabel": "Doom",
@@ -91,6 +107,12 @@
       "gearMakeshiftArmor": "Makeshift Armor",
       "gearRestraints": "Restraints",
       "gearTokenOfAnotherLife": "Token of Another Life",
+      "gearPairOfWorldClassHandguns": "Pair of World-Class Handguns",
+      "gearTacticalVest": "Tactical Vest",
+      "gearSatellitePhone": "Satellite Phone",
+      "gearEnhancedVisionGoggles": "Enhanced Vision Goggles",
+      "gearOfficialIdOrBadge": "Official ID or Badge",
+      "gearSmartBusinessWear": "Smart Business Wear",
       "armorLabel": "Armor Uses",
       "armorArmor": "Armor",
       "armorPlot": "Plot",
@@ -105,6 +127,7 @@
       "conditionsWound": "Wound",
       "beatsLabel": "Downtime Beats",
       "beatsShieldArc": "Shield Arc",
+      "beatsIconArc": "Icon Arc",
       "beatsHunterArc": "Hunter Arc",
       "beatsPactArc": "Pact Arc",
       "beatsBasic": "Basic Beats",
@@ -124,7 +147,9 @@
       "beatsRecover": "Recover (2H)",
       "beatsLongTermProject": "Work on Long-Term Project (2H)",
       "beatsTroubledPast": "Troubled Past (3H)",
-      "beatsKillItWithFire": "Kill It With Fire (4H)"
+      "beatsKillItWithFire": "Kill It With Fire (4H)",
+      "beatsTheBlackDossier": "The Black Dossier (3H)",
+      "beatsDealWithTheDevil": "Deal with the Devil (4H)"
     }
   }
 }

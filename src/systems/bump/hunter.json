@@ -2,7 +2,8 @@
   "id": "hunter",
   "name": "BUMP.Playbooks.hunter",
   "playbooks": [
-    "shield"
+    "shield",
+    "icon"
   ],
   "layout": [
     [
