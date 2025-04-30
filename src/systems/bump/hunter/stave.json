@@ -1,0 +1,118 @@
+{
+  "id": "stave",
+  "name": "BUMP.Playbooks.stave",
+  "description": "BUMP.Playbooks.staveDescription",
+  "modules": {
+    "abilities": {
+      "abilities": [
+        {
+          "id": "smell it on em",
+          "name": "BUMP.Modules.abilitiesSmellItOnEm",
+          "description": "BUMP.Modules.abilitiesSmellItOnEmDescription"
+        },
+        {
+          "id": "always prepared",
+          "name": "BUMP.Modules.abilitiesAlwaysPrepared",
+          "description": "BUMP.Modules.abilitiesAlwaysPreparedDescription"
+        },
+        {
+          "id": "devils luck",
+          "name": "BUMP.Modules.abilitiesDevilsLuck",
+          "description": "BUMP.Modules.abilitiesDevilsLuckDescription"
+        },
+        {
+          "id": "never stop to think",
+          "name": "BUMP.Modules.abilitiesNeverStopToThink",
+          "description": "BUMP.Modules.abilitiesNeverStopToThinkDescription"
+        },
+        {
+          "id": "old friends",
+          "name": "BUMP.Modules.abilitiesOldFriends",
+          "description": "BUMP.Modules.abilitiesOldFriendsDescription"
+        },
+        {
+          "id": "quickdraw",
+          "name": "BUMP.Modules.abilitiesQuickdraw",
+          "description": "BUMP.Modules.abilitiesQuickdrawDescription"
+        },
+        {
+          "id": "walk softly",
+          "name": "BUMP.Modules.abilitiesWalkSoftly",
+          "description": "BUMP.Modules.abilitiesWalkSoftlyDescription"
+        },
+        {
+          "id": "others",
+          "name": "BUMP.Modules.abilitiesOthers",
+          "description": "BUMP.Modules.abilitiesOthersDescription",
+          "slots": [{
+              "id": "otherAbilities",
+              "label": "BUMP.Modules.abilitiesOtherAbilities",
+              "multiline": true,
+              "height": 100
+          }]
+        }
+      ]
+    },
+    "ratings": {
+      "startingRatings": {
+        "sneak": 2,
+        "sway": 1
+      }
+    },
+    "gear": {
+      "custom": [
+        {
+          "id": "hidden weapon",
+          "name": "BUMP.Modules.gearHiddenWeapon",
+          "load": 1
+        },
+        {
+          "id": "professional lock-pick set",
+          "name": "BUMP.Modules.gearProfessionalLockPickSet",
+          "load": 1
+        },
+        {
+          "id": "burglary kit",
+          "name": "BUMP.Modules.gearBurglaryKit",
+          "load": 2
+        },
+        {
+          "id": "forged documents",
+          "name": "BUMP.Modules.gearForgedDocuments",
+          "load": 0
+        },
+        { "id": "surveillance gear",
+          "name": "BUMP.Modules.gearSurveillanceGear",
+          "load": 2
+        },
+        {
+          "id": "disguise kit",
+          "name": "BUMP.Modules.gearDisguiseKit",
+          "load": 0
+        }
+      ]
+    },
+    "beats": {
+      "groups": [
+        {
+          "id": "stave arc",
+          "name": "BUMP.Modules.beatsStaveArc"
+        }
+      ],
+      "custom": [
+        {
+          "id": "born to run",
+          "name": "BUMP.Modules.beatsBornToRun",
+          "group": "stave arc",
+          "load": 1
+        },
+        {
+          "id": "blood brothers",
+          "name": "BUMP.Modules.beatsBloodBrothers",
+          "group": "stave arc",
+          "load": 1
+        }
+      ]
+    }
+  }
+}

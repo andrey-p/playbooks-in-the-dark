@@ -22,7 +22,9 @@
       "scourge": "The Scourge",
       "scourgeDescription": "A powerful spellbinder & sorcerer",
       "raven": "The Raven",
-      "ravenDescription": "An expert thinker & watcher"
+      "ravenDescription": "An expert thinker & watcher",
+      "stave": "The Stave",
+      "staveDescription": "A cunning scoundrel & crook"
     },
     "Modules": {
       "nameLabel": "Name / Pronouns",
@@ -97,6 +99,20 @@
       "abilitiesProfessorialDescription": "You have a way of explaining things to make them easy to understand to anyone. Once per hunt, when you provide meaningful advice that another hunter follows, you both clear <strong>1 luck</strong>.",
       "abilitiesTinkerer": "Tinkerer",
       "abilitiesTinkererDescription": "You can modify or CRAFT new tools or devices. Add one invention to your gear. Additionally, gain <strong>+1d</strong> to CRAFT during downtime.",
+      "abilitiesSmellItOnEm": "Smell It On ’Em",
+      "abilitiesSmellItOnEmDescription": "You always know when someone is lying to you.",
+      "abilitiesAlwaysPrepared": "Always Prepared",
+      "abilitiesAlwaysPreparedDescription": "Gain an additional <strong>gear slot</strong>. When being ambushed, you may mark <strong>2 luck</strong> to have pre-prepared a trap or distraction; you have <strong>increased impact</strong> when acting on this prep.",
+      "abilitiesDevilsLuck": "Devil’s Luck",
+      "abilitiesDevilsLuckDescription": "You gain a second use of plot armor between downtimes. You may expend your plot armor to <strong>resist</strong> the consequences of violence or to <strong>push your luck</strong> at no cost when talking your way out of, or running away from, trouble.",
+      "abilitiesNeverStopToThink": "Never Stop to Think",
+      "abilitiesNeverStopToThinkDescription": "When you <strong>go for broke</strong>, you get <strong>+1d</strong> if you also agree to take <strong>-1d</strong> to <strong>resist</strong> consequences from your action.",
+      "abilitiesOldFriends": "Old Friends",
+      "abilitiesOldFriendsDescription": "Once per hunt, you may declare that you know somebody related to the current situation. Write them down as a <strong>connection</strong>.",
+      "abilitiesQuickdraw": "Quickdraw",
+      "abilitiesQuickdrawDescription": "When you attack from hiding, take <strong>+1d</strong>. Whenever there’s a question of who acts first, the answer is always you.",
+      "abilitiesWalkSoftly": "Walk Softly",
+      "abilitiesWalkSoftlyDescription": "When you <strong>push your luck</strong>, choose one of the following additional benefits: <em>perform a feat of dexterity verging on the superhuman</em> –or– <em>maneuver to confuse your enemies so they attack each other</em>.",
       "luckDoomHopeLabel": "Luck, Doom, Hope",
       "luckLabel": "Luck",
       "doomLabel": "Doom",
@@ -158,6 +174,12 @@
       "gearInfraredCameras": "Infrared Cameras",
       "gearQualityClothing": "Quality Clothing",
       "gearMedicalKit": "Medical Kit",
+      "gearHiddenWeapon": "Hidden Weapon",
+      "gearProfessionalLockPickSet": "Professional Lock-pick Set",
+      "gearBurglaryKit": "Burglary Kit",
+      "gearForgedDocuments": "Forged Documents",
+      "gearSurveillanceGear": "Surveillance Gear",
+      "gearDisguiseKit": "Disguise Kit",
       "armorLabel": "Armor Uses",
       "armorArmor": "Armor",
       "armorPlot": "Plot",
@@ -175,6 +197,7 @@
       "beatsIconArc": "Icon Arc",
       "beatsScourgeArc": "Scourge Arc",
       "beatsRavenArc": "Raven Arc",
+      "beatsStaveArc": "Stave Arc",
       "beatsHunterArc": "Hunter Arc",
       "beatsPactArc": "Pact Arc",
       "beatsBasic": "Basic Beats",
@@ -200,7 +223,9 @@
       "beatsAccidentalIncantation": "Accidental Incantation (3H)",
       "beatsTheDescent": "The Descent (4H)",
       "beatsFavorsDue": "Favors Due (3H)",
-      "beatsTheThingWhich": "The Thing Which ... (4H)"
+      "beatsTheThingWhich": "The Thing Which ... (4H)",
+      "beatsBornToRun": "Born to Run (3H)",
+      "beatsBloodBrothers": "Blood Brothers (4H)"
     }
   }
 }
