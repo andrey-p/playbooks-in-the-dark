@@ -20,7 +20,9 @@
       "icon": "The Icon",
       "iconDescription": "A keen liaison & investigator",
       "scourge": "The Scourge",
-      "scourgeDescription": "A Powerful Spellbinder & Sorcerer"
+      "scourgeDescription": "A powerful spellbinder & sorcerer",
+      "raven": "The Raven",
+      "ravenDescription": "An expert thinker & watcher"
     },
     "Modules": {
       "nameLabel": "Name / Pronouns",
@@ -79,8 +81,22 @@
       "abilitiesSlantedEnchantedDescription": "When you invent or CRAFT a creation with arcane features, take <strong>+1d</strong> to your roll. You begin with one arcane design already known.",
       "abilitiesSpooky": "Spooky",
       "abilitiesSpookyDescription": "You can channel the void to act on your behalf. Roll CONNECT to move small objects with your mind. Mark <strong>1 luck</strong> to increase the effect, such as <em>throwing a table-sized object with dangerous force</em> –or– <em>briefly propelling yourself with superhuman speed</em>.",
-      "abilitiesVoidSense": "",
+      "abilitiesVoidSense": "Void Sense",
       "abilitiesVoidSenseDescription": "You’re always aware of supernatural entities in your presence. Take <strong>+1d</strong> when you investigate supernatural effects.",
+      "abilitiesExpertise": "Expertise",
+      "abilitiesExpertiseDescription": "Choose an action. You can <strong>push your luck</strong> to roll that rating while performing a different action. Tell the keeper how you’re doing it this way. When you <strong>act together</strong> using that action, gain <strong>+1 result level</strong>.",
+      "abilitiesAllPartOfThePlan": "All Part of the Plan",
+      "abilitiesAllPartOfThePlanDescription": "Expend your <strong>plot armor</strong> to reveal that this was the plan all along. Describe a flashback showing how you prepared, and grant <strong>+2d</strong> when <strong>helping</strong> a teammate, even after they roll. Gain <strong>increased impact</strong> when acting on your prep.",
+      "abilitiesHaven": "Haven",
+      "abilitiesHavenDescription": "You have a haven. Gain an additional <strong>gear slot</strong>, and once per hunt, you can visit to do one of the following: <em>immediately</em> ACQUIRE <em>the temporary use of an asset at no cost</em> –or– <em>bring a wounded hunter here to <strong>clear a condition</strong></em>",
+      "abilitiesHitTheBooks": "Hit the Books",
+      "abilitiesHitTheBooksDescription": "During <strong>downtime</strong>, you get two ticks to distribute among any long-term project clocks that involve investigation or learning something new.",
+      "abilitiesMoralCompass": "Moral Compass",
+      "abilitiesMoralCompassDescription": "When you do the right thing at a cost to yourself, mark <strong>hope</strong>.",
+      "abilitiesProfessorial": "Professorial",
+      "abilitiesProfessorialDescription": "You have a way of explaining things to make them easy to understand to anyone. Once per hunt, when you provide meaningful advice that another hunter follows, you both clear <strong>1 luck</strong>.",
+      "abilitiesTinkerer": "Tinkerer",
+      "abilitiesTinkererDescription": "You can modify or CRAFT new tools or devices. Add one invention to your gear. Additionally, gain <strong>+1d</strong> to CRAFT during downtime.",
       "luckDoomHopeLabel": "Luck, Doom, Hope",
       "luckLabel": "Luck",
       "doomLabel": "Doom",
@@ -135,6 +151,13 @@
       "gearUnusualSpellComponents": "Unusual Spell Components",
       "gearOfferings": "Offerings",
       "gearAnimalFamiliar": "Animal Familiar",
+      "gearMelleWeapon": "Melle Weapon",
+      "gearBookOfAncientKnowledge": "Book of Ancient Knowledge",
+      "gearCustomizedHandgun": "Customized Handgun",
+      "gearMonsterHuntingGear": "Monster Hunting Gear",
+      "gearInfraredCameras": "Infrared Cameras",
+      "gearQualityClothing": "Quality Clothing",
+      "gearMedicalKit": "Medical Kit",
       "armorLabel": "Armor Uses",
       "armorArmor": "Armor",
       "armorPlot": "Plot",
@@ -151,6 +174,7 @@
       "beatsShieldArc": "Shield Arc",
       "beatsIconArc": "Icon Arc",
       "beatsScourgeArc": "Scourge Arc",
+      "beatsRavenArc": "Raven Arc",
       "beatsHunterArc": "Hunter Arc",
       "beatsPactArc": "Pact Arc",
       "beatsBasic": "Basic Beats",
@@ -174,7 +198,9 @@
       "beatsTheBlackDossier": "The Black Dossier (3H)",
       "beatsDealWithTheDevil": "Deal with the Devil (4H)",
       "beatsAccidentalIncantation": "Accidental Incantation (3H)",
-      "beatsTheDescent": "The Descent (4H)"
+      "beatsTheDescent": "The Descent (4H)",
+      "beatsFavorsDue": "Favors Due (3H)",
+      "beatsTheThingWhich": "The Thing Which ... (4H)"
     }
   }
 }

@@ -1,0 +1,118 @@
+{
+  "id": "icon",
+  "name": "BUMP.Playbooks.raven",
+  "description": "BUMP.Playbooks.ravenDescription",
+  "modules": {
+    "abilities": {
+      "abilities": [
+        {
+          "id": "expertise",
+          "name": "BUMP.Modules.abilitiesExpertise",
+          "description": "BUMP.Modules.abilitiesExpertiseDescription"
+        },
+        {
+          "id": "all part of the plan",
+          "name": "BUMP.Modules.abilitiesAllPartOfThePlan",
+          "description": "BUMP.Modules.abilitiesAllPartOfThePlanDescription"
+        },
+        {
+          "id": "haven",
+          "name": "BUMP.Modules.abilitiesHaven",
+          "description": "BUMP.Modules.abilitiesHavenDescription"
+        },
+        {
+          "id": "hit the books",
+          "name": "BUMP.Modules.abilitiesHitTheBooks",
+          "description": "BUMP.Modules.abilitiesHitTheBooksDescription"
+        },
+        {
+          "id": "moral compass",
+          "name": "BUMP.Modules.abilitiesMoralCompass",
+          "description": "BUMP.Modules.abilitiesMoralCompassDescription"
+        },
+        {
+          "id": "professorial",
+          "name": "BUMP.Modules.abilitiesProfessorial",
+          "description": "BUMP.Modules.abilitiesProfessorialDescription"
+        },
+        {
+          "id": "tinkerer",
+          "name": "BUMP.Modules.abilitiesTinkerer",
+          "description": "BUMP.Modules.abilitiesTinkererDescription"
+        },
+        {
+          "id": "others",
+          "name": "BUMP.Modules.abilitiesOthers",
+          "description": "BUMP.Modules.abilitiesOthersDescription",
+          "slots": [{
+              "id": "otherAbilities",
+              "label": "BUMP.Modules.abilitiesOtherAbilities",
+              "multiline": true,
+              "height": 100
+          }]
+        }
+      ]
+    },
+    "ratings": {
+      "startingRatings": {
+        "rig": 1,
+        "read": 2
+      }
+    },
+    "gear": {
+      "custom": [
+        {
+          "id": "melee weapon",
+          "name": "BUMP.Modules.gearMeleeWeapon",
+          "load": 1
+        },
+        {
+          "id": "book of ancient knowledge",
+          "name": "BUMP.Modules.gearBookOfAncientKnowledge",
+          "load": 0
+        },
+        {
+          "id": "customized handgun",
+          "name": "BUMP.Modules.gearCustomizedHandgun",
+          "load": 1
+        },
+        {
+          "id": "monster hunting gear",
+          "name": "BUMP.Modules.gearMonsterHuntingGear",
+          "load": 2
+        },
+        { "id": "quality clothing",
+          "name": "BUMP.Modules.gearQualityClothing",
+          "load": 0
+        },
+        {
+          "id": "medical kit",
+          "name": "BUMP.Modules.gearMedicalKit",
+          "load": 2
+        }
+      ]
+    },
+    "beats": {
+      "groups": [
+        {
+          "id": "raven arc",
+          "name": "BUMP.Modules.beatsRavenArc"
+        }
+      ],
+      "custom": [
+        {
+          "id": "favors due",
+          "name": "BUMP.Modules.beatsFavorsDue",
+          "group": "raven arc",
+          "load": 1
+        },
+        {
+          "id": "the thing which",
+          "name": "BUMP.Modules.beatsTheThingWhich",
+          "group": "raven arc",
+          "load": 1
+        }
+      ]
+    }
+  }
+}
