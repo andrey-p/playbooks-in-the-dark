@@ -18,7 +18,9 @@
       "shield": "The Shield",
       "shieldDescription": "A fierce protector & fighter",
       "icon": "The Icon",
-      "iconDescription": "A keen liaison & investigator"
+      "iconDescription": "A keen liaison & investigator",
+      "scourge": "The Scourge",
+      "scourgeDescription": "A Powerful Spellbinder & Sorcerer"
     },
     "Modules": {
       "nameLabel": "Name / Pronouns",
@@ -65,6 +67,20 @@
       "abilitiesPlausibleDeniabilityDescription": "You may expend your <strong>plot armor</strong> to resist a consequence from suspicion or persuasion, or to <strong>push your luck</strong> at no cost when engaging in subterfuge.",
       "abilitiesUndercover": "Undercover",
       "abilitiesUndercoverDescription": "When you use a disguise or other form of covert misdirection, gain <strong>increased impact</strong> on attempts to confuse or deflect suspicion. When you reveal your true identity, the resulting surprise gives you an advantage.",
+      "abilitiesThaumaturge": "Thaumaturge",
+      "abilitiesThaumaturgeDescription": "You can <strong>push your luck</strong> to do one of the following: <em>unleash an elemental attack (fire, wind, lightning, ice, etc.) – briefly cloud a target’s mind to sway them in the face of contradictory evidence – enhance your senses to eavesdrop on nearby conversations</em>.",
+      "abilitiesCastingBones": "Casting Bones",
+      "abilitiesCastingBonesDescription": "Mark <strong>2 luck</strong> to remotely view a distant place or person tied to you in some intimate way. Mark <strong>1 luck</strong> for each additional feature: <em>it lasts for a minute rather than a moment – your target can also see and hear you – you can see something familiar rather than intimate</em>.",
+      "abilitiesInvoke": "Invoke",
+      "abilitiesInvokeDescription": "You can COMPEL the void, forcing a nearby entity to obey a command you give it. You are not supernaturally terrified by what you summon or compel, though your teammates might be.",
+      "abilitiesPreparedRitual": "Prepared Ritual",
+      "abilitiesPreparedRitualDescription": "Once per hunt, you may expend <strong>plot armor</strong> to have an already prepared ritual or spell that does one of the following: <em>allow for escape – reveal hidden information – create an opportunity for a teammate</em>.",
+      "abilitiesSlantedEnchanted": "Slanted & Enchanted",
+      "abilitiesSlantedEnchantedDescription": "When you invent or CRAFT a creation with arcane features, take <strong>+1d</strong> to your roll. You begin with one arcane design already known.",
+      "abilitiesSpooky": "Spooky",
+      "abilitiesSpookyDescription": "You can channel the void to act on your behalf. Roll CONNECT to move small objects with your mind. Mark <strong>1 luck</strong> to increase the effect, such as <em>throwing a table-sized object with dangerous force</em> –or– <em>briefly propelling yourself with superhuman speed</em>.",
+      "abilitiesVoidSense": "",
+      "abilitiesVoidSenseDescription": "You’re always aware of supernatural entities in your presence. Take <strong>+1d</strong> when you investigate supernatural effects.",
       "luckDoomHopeLabel": "Luck, Doom, Hope",
       "luckLabel": "Luck",
       "doomLabel": "Doom",
@@ -113,6 +129,12 @@
       "gearEnhancedVisionGoggles": "Enhanced Vision Goggles",
       "gearOfficialIdOrBadge": "Official ID or Badge",
       "gearSmartBusinessWear": "Smart Business Wear",
+      "gearRitualKnife": "Ritual Knife",
+      "gearArcaneArtifact": "Arcane Artifact",
+      "gearAmuletOrFoci": "Amulet or Foci",
+      "gearUnusualSpellComponents": "Unusual Spell Components",
+      "gearOfferings": "Offerings",
+      "gearAnimalFamiliar": "Animal Familiar",
       "armorLabel": "Armor Uses",
       "armorArmor": "Armor",
       "armorPlot": "Plot",
@@ -128,6 +150,7 @@
       "beatsLabel": "Downtime Beats",
       "beatsShieldArc": "Shield Arc",
       "beatsIconArc": "Icon Arc",
+      "beatsScourgeArc": "Scourge Arc",
       "beatsHunterArc": "Hunter Arc",
       "beatsPactArc": "Pact Arc",
       "beatsBasic": "Basic Beats",
@@ -149,7 +172,9 @@
       "beatsTroubledPast": "Troubled Past (3H)",
       "beatsKillItWithFire": "Kill It With Fire (4H)",
       "beatsTheBlackDossier": "The Black Dossier (3H)",
-      "beatsDealWithTheDevil": "Deal with the Devil (4H)"
+      "beatsDealWithTheDevil": "Deal with the Devil (4H)",
+      "beatsAccidentalIncantation": "Accidental Incantation (3H)",
+      "beatsTheDescent": "The Descent (4H)"
     }
   }
 }
