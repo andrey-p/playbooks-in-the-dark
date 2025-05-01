@@ -1,0 +1,107 @@
+.bump {
+  /* GENERAL */
+  --font-display: var(--font-saira-extra-condensed);
+
+  .toggle.triangle {
+    rotate: 90deg;
+  }
+
+  /* all the item toggles are triangles, */
+  /* no point in showing the -s between them */
+  .items {
+    .tracker-toggle {
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  /* HUNTERS */
+  &.hunter {
+    .ratings {
+      .attribute-group-container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .xp {
+        position: relative;
+        right: 0;
+        top: 0;
+        order: 1;
+        display: flex;
+        margin-top: 0.5rem;
+        align-items: center;
+
+        .tracker-container {
+          margin-right: 0.5rem;
+        }
+      }
+
+      .description {
+        order: 2;
+      }
+    }
+
+    .gearSlots {
+      .tracker-toggle:nth-child(4) {
+        padding-right: 0.3rem;
+        border-right: 2px solid var(--foreground);
+      }
+    }
+
+    .conditions {
+      .item-list {
+        margin-bottom: 0.5rem;
+      }
+
+      .group {
+        border-bottom: 1px solid var(--foreground);
+        padding-bottom: 1rem;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .group-wounded-name {
+        margin-top: 1rem;
+        text-transform: unset;
+      }
+    }
+
+    .multiTracker.luckDoomHope {
+      .doom {
+        .tracker-toggle:nth-child(4) {
+          padding-right: 0.3rem;
+          border-right: 2px solid var(--foreground);
+        }
+      }
+    }
+
+    /* highlight fine items */
+    .gear {
+      .group-icon,
+      .group-lance,
+      .group-unshaped {
+        .item-list > li:nth-child(1) {
+          font-weight: bold;
+        }
+      }
+
+      .group-scourge,
+      .group-stave {
+        .item-list > li:nth-child(2) {
+          font-weight: bold;
+        }
+      }
+
+      .group-raven,
+      .group-shield {
+        .item-list > li:nth-child(3) {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

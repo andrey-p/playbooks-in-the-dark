@@ -3,7 +3,7 @@ import { z } from 'zod';
 import styles from './text-field.module.css';
 import ExampleList from '@/components/playbook-elements/example-list/example-list';
 import PropsSchema from './text-field.schema';
-import clsx from 'clsx';
+import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 import { useTranslations } from 'next-intl';
 
 type Props = z.infer<typeof PropsSchema>;
@@ -18,12 +18,9 @@ export default function TextField(props: Props) {
   const consistentId = useId();
 
   return (
-    <div
-      className={clsx(
-        styles.container,
-        moduleDefinition.id,
-        moduleDefinition.type
-      )}
+    <ModuleWrapper
+      moduleDefinition={moduleDefinition}
+      playbookProps={playbookProps}
     >
       <div className={styles.inputContainer}>
         <input
@@ -40,11 +37,13 @@ export default function TextField(props: Props) {
         />
       </div>
       <div className={styles.labelContainer}>
-        <label className={styles.label} htmlFor={consistentId}>
-          {t(label)}
-        </label>
+        {moduleDefinition.hideModuleLabel && (
+          <label className={styles.label} htmlFor={consistentId}>
+            {t(label)}
+          </label>
+        )}
         {examples && <ExampleList items={examples} />}
       </div>
-    </div>
+    </ModuleWrapper>
   );
 }

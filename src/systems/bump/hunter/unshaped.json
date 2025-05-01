@@ -1,0 +1,131 @@
+{
+  "id": "unshaped",
+  "name": "BUMP.Playbooks.unshaped",
+  "description": "BUMP.Playbooks.unshapedDescription",
+  "modules": {
+    "abilities": {
+      "abilities": [
+        {
+          "id": "trust me",
+          "name": "BUMP.Modules.abilitiesTrustMe",
+          "description": "BUMP.Modules.abilitiesTrustMeDescription"
+        },
+        {
+          "id": "baby driver",
+          "name": "BUMP.Modules.abilitiesBabyDriver",
+          "description": "BUMP.Modules.abilitiesBabyDriverDescription"
+        },
+        {
+          "id": "hack the planet",
+          "name": "BUMP.Modules.abilitiesHackThePlanet",
+          "description": "BUMP.Modules.abilitiesHackThePlanetDescription"
+        },
+        {
+          "id": "just a hobby",
+          "name": "BUMP.Modules.abilitiesJustAHobby",
+          "description": "BUMP.Modules.abilitiesJustAHobbyDescription"
+        },
+        {
+          "id": "oops",
+          "name": "BUMP.Modules.abilitiesOops",
+          "description": "BUMP.Modules.abilitiesOopsDescription"
+        },
+        {
+          "id": "quick on your feet",
+          "name": "BUMP.Modules.abilitiesQuickOnYourFeet",
+          "description": "BUMP.Modules.abilitiesQuickOnYourFeetDescription"
+        },
+        {
+          "id": "risk averse",
+          "name": "BUMP.Modules.abilitiesRiskAverse",
+          "description": "BUMP.Modules.abilitiesRiskAverseDescription"
+        },
+        {
+          "id": "others",
+          "name": "BUMP.Modules.abilitiesOthers",
+          "description": "BUMP.Modules.abilitiesOthersDescription",
+          "slots": [{
+              "id": "otherAbilities",
+              "label": "BUMP.Modules.abilitiesOtherAbilities",
+              "multiline": true,
+              "height": 100
+          }]
+        }
+      ]
+    },
+    "ratings": {
+      "startingRatings": {
+        "scramble": 2,
+        "rig": 1
+      }
+    },
+    "gear": {
+      "groups": [
+        {
+          "id": "unshaped",
+          "name": ""
+        }
+      ],
+      "custom": [
+        {
+          "id": "fine improvised weapon",
+          "name": "BUMP.Modules.gearFineImprovisedWeapon",
+          "group": "unshaped",
+          "load": 1
+        },
+        {
+          "id": "hunting rifle",
+          "name": "BUMP.Modules.gearHuntingRifle",
+          "group": "unshaped",
+          "load": 2
+        },
+        {
+          "id": "hacking tools",
+          "name": "BUMP.Modules.gearHackingTools",
+          "group": "unshaped",
+          "load": 2
+        },
+        {
+          "id": "multi tool",
+          "name": "BUMP.Modules.gearMultiTool",
+          "group": "unshaped",
+          "load": 1
+        },
+        {
+          "id": "lucky charm",
+          "name": "BUMP.Modules.gearLuckyCharm",
+          "group": "unshaped",
+          "load": 0
+        },
+        {
+          "id": "means of transportation",
+          "name": "BUMP.Modules.gearMeansOfTransportation",
+          "group": "unshaped",
+          "load": 0
+        }
+      ]
+    },
+    "beats": {
+      "groups": [
+        {
+          "id": "unshaped arc",
+          "name": "BUMP.Modules.beatsUnshapedArc"
+        }
+      ],
+      "custom": [
+        {
+          "id": "just another day",
+          "name": "BUMP.Modules.beatsJustAnotherDay",
+          "group": "unshaped arc",
+          "load": 1
+        },
+        {
+          "id": "chosen",
+          "name": "BUMP.Modules.beatsChosen",
+          "group": "unshaped arc",
+          "load": 1
+        }
+      ]
+    }
+  }
+}
