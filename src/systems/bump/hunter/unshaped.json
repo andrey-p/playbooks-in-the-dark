@@ -60,35 +60,47 @@
       }
     },
     "gear": {
+      "groups": [
+        {
+          "id": "unshaped",
+          "name": ""
+        }
+      ],
       "custom": [
         {
           "id": "fine improvised weapon",
           "name": "BUMP.Modules.gearFineImprovisedWeapon",
+          "group": "unshaped",
           "load": 1
         },
         {
           "id": "hunting rifle",
           "name": "BUMP.Modules.gearHuntingRifle",
+          "group": "unshaped",
           "load": 2
         },
         {
           "id": "hacking tools",
           "name": "BUMP.Modules.gearHackingTools",
+          "group": "unshaped",
           "load": 2
         },
         {
           "id": "multi tool",
           "name": "BUMP.Modules.gearMultiTool",
+          "group": "unshaped",
           "load": 1
         },
         {
           "id": "lucky charm",
           "name": "BUMP.Modules.gearLuckyCharm",
+          "group": "unshaped",
           "load": 0
         },
         {
           "id": "means of transportation",
           "name": "BUMP.Modules.gearMeansOfTransportation",
+          "group": "unshaped",
           "load": 0
         }
       ]

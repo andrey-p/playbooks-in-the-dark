@@ -60,34 +60,46 @@
       }
     },
     "gear": {
+      "groups": [
+        {
+          "id": "shield",
+          "name": ""
+        }
+      ],
       "custom": [
         {
           "id": "fighting style",
           "name": "BUMP.Modules.gearFightingStyle",
+          "group": "shield",
           "load": 0
         },
         {
           "id": "hand weapon",
           "name": "BUMP.Modules.gearHandWeapon",
+          "group": "shield",
           "load": 1
         },
         {
           "id": "superior heavy weapon",
           "name": "BUMP.Modules.gearSuperiorHeavyWeapon",
+          "group": "shield",
           "load": 2
         },
         {
           "id": "makeshift armor",
           "name": "BUMP.Modules.gearMakeshiftArmor",
+          "group": "shield",
           "load": 2
         },
         { "id": "restraints",
           "name": "BUMP.Modules.gearRestraints",
+          "group": "shield",
           "load": 1
         },
         {
           "id": "token of another life",
           "name": "BUMP.Modules.gearTokenOfAnotherLife",
+          "group": "shield",
           "load": 0
         }
       ]

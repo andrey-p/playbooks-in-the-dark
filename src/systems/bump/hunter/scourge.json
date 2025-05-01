@@ -60,34 +60,46 @@
       }
     },
     "gear": {
+      "groups": [
+        {
+          "id": "scourge",
+          "name": ""
+        }
+      ],
       "custom": [
         {
           "id": "ritual knife",
           "name": "BUMP.Modules.gearRitualKnife",
+          "group": "scourge",
           "load": 1
         },
         {
           "id": "arcane artifact",
           "name": "BUMP.Modules.gearArcaneArtifact",
+          "group": "scourge",
           "load": 1
         },
         {
           "id": "amulet or foci",
           "name": "BUMP.Modules.gearAmuletOrFoci",
+          "group": "scourge",
           "load": 1
         },
         {
           "id": "unusual spell components",
           "name": "BUMP.Modules.gearUnusualSpellComponents",
+          "group": "scourge",
           "load": 1
         },
         { "id": "offerings",
           "name": "BUMP.Modules.gearOfferings",
+          "group": "scourge",
           "load": 1
         },
         {
           "id": "animal familiar",
           "name": "BUMP.Modules.gearAnimalFamiliar",
+          "group": "scourge",
           "load": 0
         }
       ]

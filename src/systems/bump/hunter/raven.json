@@ -60,34 +60,46 @@
       }
     },
     "gear": {
+      "groups": [
+        {
+          "id": "raven",
+          "name": ""
+        }
+      ],
       "custom": [
         {
           "id": "melee weapon",
           "name": "BUMP.Modules.gearMeleeWeapon",
+          "group": "raven",
           "load": 1
         },
         {
           "id": "book of ancient knowledge",
           "name": "BUMP.Modules.gearBookOfAncientKnowledge",
+          "group": "raven",
           "load": 0
         },
         {
           "id": "customized handgun",
           "name": "BUMP.Modules.gearCustomizedHandgun",
+          "group": "raven",
           "load": 1
         },
         {
           "id": "monster hunting gear",
           "name": "BUMP.Modules.gearMonsterHuntingGear",
+          "group": "raven",
           "load": 2
         },
         { "id": "quality clothing",
           "name": "BUMP.Modules.gearQualityClothing",
+          "group": "raven",
           "load": 0
         },
         {
           "id": "medical kit",
           "name": "BUMP.Modules.gearMedicalKit",
+          "group": "raven",
           "load": 2
         }
       ]

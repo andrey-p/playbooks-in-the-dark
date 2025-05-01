@@ -60,34 +60,46 @@
       }
     },
     "gear": {
+      "groups": [
+        {
+          "id": "lance",
+          "name": ""
+        }
+      ],
       "custom": [
         {
           "id": "ritual weapon",
           "name": "BUMP.Modules.gearRitualWeapon",
+          "group": "lance",
           "load": 1
         },
         {
-          "id": "fine ornate armor",
-          "name": "BUMP.Modules.gearFineOrnateArmor",
+          "id": "ornate armor",
+          "name": "BUMP.Modules.gearOrnateArmor",
+          "group": "lance",
           "load": 2
         },
         {
           "id": "offerings",
           "name": "BUMP.Modules.gearOfferings",
+          "group": "lance",
           "load": 0
         },
         {
           "id": "talisman",
           "name": "BUMP.Modules.gearTalisman",
+          "group": "lance",
           "load": 1
         },
         { "id": "healing herbs and poultices",
           "name": "BUMP.Modules.gearHealingHerbsAndPoultices",
+          "group": "lance",
           "load": 1
         },
         {
           "id": "ceremonial clothing",
           "name": "BUMP.Modules.gearCeremonialClothing",
+          "group": "lance",
           "load": 0
         }
       ]

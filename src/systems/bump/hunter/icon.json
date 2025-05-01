@@ -60,34 +60,46 @@
       }
     },
     "gear": {
+      "groups": [
+        {
+          "id": "icon",
+          "name": ""
+        }
+      ],
       "custom": [
         {
           "id": "pair of worldclass handguns",
           "name": "BUMP.Modules.gearPairOfWorldClassHandguns",
+          "group": "icon",
           "load": 1
         },
         {
           "id": "tactical vest",
           "name": "BUMP.Modules.gearTacticalVest",
+          "group": "icon",
           "load": 2
         },
         {
           "id": "satellite phone",
           "name": "BUMP.Modules.gearSatellitePhone",
+          "group": "icon",
           "load": 2
         },
         {
           "id": "enhanced vision goggles",
           "name": "BUMP.Modules.gearEnhancedVisionGoggles",
+          "group": "icon",
           "load": 1
         },
         { "id": "official id or badge",
           "name": "BUMP.Modules.gearOfficialIdOrBadge",
+          "group": "icon",
           "load": 0
         },
         {
           "id": "smart business wear",
           "name": "BUMP.Modules.gearSmartBusinessWear",
+          "group": "icon",
           "load": 0
         }
       ]

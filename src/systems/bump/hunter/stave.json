@@ -60,34 +60,46 @@
       }
     },
     "gear": {
+      "groups": [
+        {
+          "id": "stave",
+          "name": ""
+        }
+      ],
       "custom": [
         {
           "id": "hidden weapon",
           "name": "BUMP.Modules.gearHiddenWeapon",
+          "group": "stave",
           "load": 1
         },
         {
           "id": "professional lock-pick set",
           "name": "BUMP.Modules.gearProfessionalLockPickSet",
+          "group": "stave",
           "load": 1
         },
         {
           "id": "burglary kit",
           "name": "BUMP.Modules.gearBurglaryKit",
+          "group": "stave",
           "load": 2
         },
         {
           "id": "forged documents",
           "name": "BUMP.Modules.gearForgedDocuments",
+          "group": "stave",
           "load": 0
         },
         { "id": "surveillance gear",
           "name": "BUMP.Modules.gearSurveillanceGear",
+          "group": "stave",
           "load": 2
         },
         {
           "id": "disguise kit",
           "name": "BUMP.Modules.gearDisguiseKit",
+          "group": "stave",
           "load": 0
         }
       ]
