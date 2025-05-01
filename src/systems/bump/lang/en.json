@@ -24,7 +24,9 @@
       "raven": "The Raven",
       "ravenDescription": "An expert thinker & watcher",
       "stave": "The Stave",
-      "staveDescription": "A cunning scoundrel & crook"
+      "staveDescription": "A cunning scoundrel & crook",
+      "lance": "The Lance",
+      "lanceDescription": "A zealous occultist & disciple"
     },
     "Modules": {
       "nameLabel": "Name / Pronouns",
@@ -113,6 +115,20 @@
       "abilitiesQuickdrawDescription": "When you attack from hiding, take <strong>+1d</strong>. Whenever there’s a question of who acts first, the answer is always you.",
       "abilitiesWalkSoftly": "Walk Softly",
       "abilitiesWalkSoftlyDescription": "When you <strong>push your luck</strong>, choose one of the following additional benefits: <em>perform a feat of dexterity verging on the superhuman</em> –or– <em>maneuver to confuse your enemies so they attack each other</em>.",
+      "abilitiesSignatureStyle": "Signature Style",
+      "abilitiesSignatureStyleDescription": "When fighting in the manner of your sect, choose one; it occurs even on a miss: <em>you force them where you want them – you gain an extra use of armor – you can escape and they cannot follow</em>. You cannot choose the same option twice during a hunt.",
+      "abilitiesAllConsumed": "All-Consumed",
+      "abilitiesAllConsumedDescription": "You are captivated by an element of the history or lore of your sect. <em>What is it?</em> When you investigate or work on a LONG-TERM PROJECT about this subject, gain <strong>+1 result level</strong>.",
+      "abilitiesCharmingDisarming": "Charming & Disarming",
+      "abilitiesCharmingDisarmingDescription": "You may <strong>push your luck</strong> to <em>cause all hostile creatures to pause while you speak</em> –or– <em>surprise someone with damning information</em>, making them momentarily dazed. Gain <strong>increased impact</strong> on your next action toward them.",
+      "abilitiesHiddenPower": "Hidden Power",
+      "abilitiesHiddenPowerDescription": "Your training has awakened a power deep inside you. Choose a <strong>monstrous ability</strong>; you can <strong>push your luck</strong> to activate it without paying the cost.",
+      "abilitiesHolisticHealer": "Holistic Healer",
+      "abilitiesHolisticHealerDescription": "Once per hunt, you may treat another hunter’s <strong>conditions</strong>. They ignore the effects until the end of a hunt.",
+      "abilitiesInspiredInspiring": "Inspired & Inspiring",
+      "abilitiesInspiredInspiringDescription": "If you give a rousing speech or pep talk before acting together, take <strong>+1d</strong>. Additionally, you may count multiple <strong>6s</strong> from different hunters’ rolls toward a <strong>critical</strong>.",
+      "abilitiesMasterMeditator": "Master Meditator",
+      "abilitiesMasterMeditatorDescription": "You’ve learned to control your vital functions and autonomic responses for several minutes. Expend your <strong>plot armor</strong> to <em>feign death convincingly, lie without being caught, hold your breath for an extended period of time, etc.</em>",
       "luckDoomHopeLabel": "Luck, Doom, Hope",
       "luckLabel": "Luck",
       "doomLabel": "Doom",
@@ -180,6 +196,12 @@
       "gearForgedDocuments": "Forged Documents",
       "gearSurveillanceGear": "Surveillance Gear",
       "gearDisguiseKit": "Disguise Kit",
+      "gearRitualWeapon": "Ritual Weapon",
+      "gearFineOrnateArmor": "Fine Ornate Armor",
+      "gearOfferings": "Offerings",
+      "gearTalisman": "Talisman",
+      "gearHealingHerbsAndPoultices": "Healing Herbs & Poultices",
+      "gearCeremonialClothing": "Ceremonial Clothing",
       "armorLabel": "Armor Uses",
       "armorArmor": "Armor",
       "armorPlot": "Plot",
@@ -198,6 +220,7 @@
       "beatsScourgeArc": "Scourge Arc",
       "beatsRavenArc": "Raven Arc",
       "beatsStaveArc": "Stave Arc",
+      "beatsLanceArc": "Lance Arc",
       "beatsHunterArc": "Hunter Arc",
       "beatsPactArc": "Pact Arc",
       "beatsBasic": "Basic Beats",
@@ -225,7 +248,9 @@
       "beatsFavorsDue": "Favors Due (3H)",
       "beatsTheThingWhich": "The Thing Which ... (4H)",
       "beatsBornToRun": "Born to Run (3H)",
-      "beatsBloodBrothers": "Blood Brothers (4H)"
+      "beatsBloodBrothers": "Blood Brothers (4H)",
+      "beatsAncientEvil": "Ancient Evil (3H)",
+      "beatsNewScars": "New Scars (4H)"
     }
   }
 }
