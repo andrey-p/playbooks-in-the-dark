@@ -6,6 +6,6 @@
   "translationNamespace": "BUMP",
   "playbookTypes": ["hunter", "pact"],
   "license": "TODO",
-  "attribution": "TODO",
+  "attribution": "BUMP.System.attribution",
   "website": "https://jexjthomas.itch.io/bump-in-the-dark"
 }

@@ -2,7 +2,8 @@
   "BUMP": {
     "System": {
       "name": "Bump in the Dark",
-      "description": "A game of supernatural mystery and action-packed showdowns with regular folk caught in the middle."
+      "description": "A game of supernatural mystery and action-packed showdowns with regular folk caught in the middle.",
+      "attribution": "Created by Jex Thomas"
     },
     "Playbooks": {
       "makeA": {
