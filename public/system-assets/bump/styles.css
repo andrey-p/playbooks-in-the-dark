@@ -43,6 +43,13 @@
       }
     }
 
+    .gearSlots {
+      .tracker-toggle:nth-child(4) {
+        padding-right: 0.3rem;
+        border-right: 2px solid var(--foreground);
+      }
+    }
+
     .conditions {
       .item-list {
         margin-bottom: 0.5rem;
