@@ -26,7 +26,9 @@
       "stave": "The Stave",
       "staveDescription": "A cunning scoundrel & crook",
       "lance": "The Lance",
-      "lanceDescription": "A zealous occultist & disciple"
+      "lanceDescription": "A zealous occultist & disciple",
+      "unshaped": "The Unshaped",
+      "unshapedDescription": "An enthusiastic novice & innocent"
     },
     "Modules": {
       "nameLabel": "Name / Pronouns",
@@ -129,6 +131,20 @@
       "abilitiesInspiredInspiringDescription": "If you give a rousing speech or pep talk before acting together, take <strong>+1d</strong>. Additionally, you may count multiple <strong>6s</strong> from different hunters’ rolls toward a <strong>critical</strong>.",
       "abilitiesMasterMeditator": "Master Meditator",
       "abilitiesMasterMeditatorDescription": "You’ve learned to control your vital functions and autonomic responses for several minutes. Expend your <strong>plot armor</strong> to <em>feign death convincingly, lie without being caught, hold your breath for an extended period of time, etc.</em>",
+      "abilitiesTrustMe": "Trust Me",
+      "abilitiesTrustMeDescription": "When you attempt to CONNECT with someone or SWAY them by opening up honestly and making yourself vulnerable to them, you have <strong>increased impact</strong>.",
+      "abilitiesBabyDriver": "Baby Driver",
+      "abilitiesBabyDriverDescription": "Your means of transportation is a car; add yours as an <strong>ally</strong> on the pact sheet. You gain <strong>+1d</strong> on all rolls related to driving. <strong>Resisting</strong> the consequences of driving has a maximum cost of <strong>2 luck</strong>.",
+      "abilitiesHackThePlanet": "Hack the Planet",
+      "abilitiesHackThePlanetDescription": "You know how to access the hidden knowledge of the World Wide Web. When investigating using a computer, you can choose to roll RIG instead of any other action.",
+      "abilitiesJustAHobby": "Just a hobby",
+      "abilitiesJustAHobbyDescription": "You have your own workshop. You can always REPAIR or CRAFT for free once per downtime.",
+      "abilitiesOops": "Oops!",
+      "abilitiesOopsDescription": "Your clumsiness is matched only by your good fortune. Expend <strong>plot armor</strong> when investigating to <em>reroll any one die</em> –or– <em>stumble into something useful; the keeper will tell you what</em>.",
+      "abilitiesQuickOnYourFeet": "Quick on Your Feet",
+      "abilitiesQuickOnYourFeetDescription": "Take <strong>+1d</strong> to SCRAMBLE if you are fleeing from an enemy. When acting quickly to help someone who’s defenseless, get +<strong>1 result level</strong>.",
+      "abilitiesRiskAverse": "Risk-Averse",
+      "abilitiesRiskAverseDescription": "When you <strong>play it safe</strong>, you can <strong>push your luck</strong> to increase your <strong>impact</strong> instead of (or in addition to) <strong>+1d</strong>.",
       "luckDoomHopeLabel": "Luck, Doom, Hope",
       "luckLabel": "Luck",
       "doomLabel": "Doom",
@@ -202,6 +218,12 @@
       "gearTalisman": "Talisman",
       "gearHealingHerbsAndPoultices": "Healing Herbs & Poultices",
       "gearCeremonialClothing": "Ceremonial Clothing",
+      "gearFineImprovisedWeapon": "Fine Improvised Weapon",
+      "gearHuntingRifle": "Hunting Rifle",
+      "gearHackingTools": "Hacking Tools",
+      "gearMultiTool": "Multi-Tool",
+      "gearLuckyCharm": "Lucky Charm",
+      "gearMeansOfTransportation": "Means of Transportation",
       "armorLabel": "Armor Uses",
       "armorArmor": "Armor",
       "armorPlot": "Plot",
@@ -221,6 +243,7 @@
       "beatsRavenArc": "Raven Arc",
       "beatsStaveArc": "Stave Arc",
       "beatsLanceArc": "Lance Arc",
+      "beatsUnshapedArc": "Unshaped Arc",
       "beatsHunterArc": "Hunter Arc",
       "beatsPactArc": "Pact Arc",
       "beatsBasic": "Basic Beats",
@@ -250,7 +273,9 @@
       "beatsBornToRun": "Born to Run (3H)",
       "beatsBloodBrothers": "Blood Brothers (4H)",
       "beatsAncientEvil": "Ancient Evil (3H)",
-      "beatsNewScars": "New Scars (4H)"
+      "beatsNewScars": "New Scars (4H)",
+      "beatsJustAnotherDay": "Just Another Day (3H)",
+      "beatsChosen": "Chosen (4H)"
     }
   }
 }
