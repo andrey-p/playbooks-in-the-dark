@@ -1,7 +1,7 @@
 {
   "id": "scourge",
   "name": "BUMP.Playbooks.scourge",
-  "description": "BUMP.Playbooks.scourge",
+  "description": "BUMP.Playbooks.scourgeDescription",
   "modules": {
     "abilities": {
       "abilities": [
