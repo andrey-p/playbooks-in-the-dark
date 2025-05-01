@@ -6,6 +6,16 @@
     "abilities": {
       "abilities": [
         {
+          "id": "crime scene investigator",
+          "name": "BUMP.Modules.abilitiesCrimeSceneInvestigator",
+          "description": "BUMP.Modules.abilitiesCrimeSceneInvestigatorDescription"
+        },
+        {
+          "id": "advanced awareness",
+          "name": "BUMP.Modules.abilitiesAdvancedAwareness",
+          "description": "BUMP.Modules.abilitiesAdvancedAwarenessDescription"
+        },
+        {
           "id": "deadeye",
           "name": "BUMP.Modules.abilitiesDeadeye",
           "description": "BUMP.Modules.abilitiesDeadeyeDescription"
