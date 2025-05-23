@@ -12,7 +12,7 @@ type CohortValueType = z.infer<typeof CohortValueSchema>;
 export default function Cohorts(props: Props) {
   const { moduleDefinition, playbookProps, userValue, onUpdate } = props;
   const { props: moduleProps } = moduleDefinition;
-  const { slots, radioGroups } = moduleProps;
+  const { slots, radioGroups, trackers } = moduleProps;
   let { cohorts: cohortValues } = userValue;
 
   // first time this module is rendered?
@@ -26,6 +26,7 @@ export default function Cohorts(props: Props) {
   for (let i = 0; i < slots; i++) {
     cohortProps.push({
       radioGroups: radioGroups,
+      trackers: trackers,
       values: cohortValues[i]
     });
   }
@@ -38,7 +39,7 @@ export default function Cohorts(props: Props) {
     // nature abhors a sparse array
     for (let i = 0; i < slots; i++) {
       if (!nextCohortValues[i]) {
-        nextCohortValues[i] = { radioGroups: {}, text: '' };
+        nextCohortValues[i] = { trackers: {}, radioGroups: {}, text: '' };
       }
     }
 

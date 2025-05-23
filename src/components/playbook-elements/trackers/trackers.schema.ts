@@ -11,3 +11,9 @@ export const TrackerProps = z.object({
   size: z.number().int().optional(),
   readOnly: z.boolean().optional()
 });
+
+export const TrackerPropsWithLabel = TrackerProps.and(
+  z.object({
+    label: z.string()
+  })
+);
