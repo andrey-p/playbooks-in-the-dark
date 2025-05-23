@@ -1,7 +1,235 @@
 {
   "id": "pact",
   "name": "BUMP.Playbooks.pact",
-  "playbooks": [],
-  "layout": [],
-  "modules": {}
+  "playbooks": ["pact"],
+  "layout": [
+    [
+      "name",
+      "pact",
+      "promise",
+      "reputation",
+      "baseDescription",
+      "baseUpgrades"
+    ],
+    [
+      "abilities",
+      "pactTrackers"
+    ],
+    [
+      "allies",
+      "factions",
+      "notes"
+    ]
+  ],
+  "modules": {
+    "name": {
+      "id": "name",
+      "type": "textField",
+      "label": "BUMP.Modules.pactNameLabel",
+      "hideModuleLabel": false
+    },
+    "pact": {
+      "id": "pact",
+      "type": "textArea",
+      "label": "BUMP.Modules.pactLabel",
+      "props": {
+        "height": 150
+      }
+    },
+    "promise": {
+      "id": "promise",
+      "type": "textArea",
+      "label": "BUMP.Modules.promiseLabel",
+      "props": {
+        "height": 150
+      }
+    },
+    "reputation": {
+      "id": "reputation",
+      "type": "textArea",
+      "label": "BUMP.Modules.reputationLabel",
+      "props": {
+        "height": 150
+      }
+    },
+    "baseDescription": {
+      "id": "baseDescription",
+      "type": "textArea",
+      "label": "BUMP.Modules.baseDescriptionLabel",
+      "props": {
+        "height": 150
+      }
+    },
+    "baseUpgrades": {
+      "id": "baseUpgrades",
+      "type": "items",
+      "label": "BUMP.Modules.baseUpgradesLabel",
+      "props": {
+        "twoColumns": true,
+        "trackerProps": {
+          "type": "triangle"
+        },
+        "common": [
+          {
+            "id": "hidden",
+            "name": "BUMP.Modules.baseUpgradesHidden",
+            "load": 1
+          },
+          {
+            "id": "quarters",
+            "name": "BUMP.Modules.baseUpgradesQuarters",
+            "load": 1
+          },
+          {
+            "id": "secure",
+            "name": "BUMP.Modules.baseUpgradesSecure",
+            "load": 2
+          },
+          {
+            "id": "library",
+            "name": "BUMP.Modules.baseUpgradesLibrary",
+            "load": 2
+          },
+          {
+            "id": "iconic vehicle",
+            "name": "BUMP.Modules.baseUpgradesIconicVehicle",
+            "load": 2
+          },
+          {
+            "id": "garage",
+            "name": "BUMP.Modules.baseUpgradesGarage",
+            "load": 2
+          },
+          {
+            "id": "workshop",
+            "name": "BUMP.Modules.baseUpgradesWorkshop",
+            "load": 1
+          },
+          {
+            "id": "containment",
+            "name": "BUMP.Modules.baseUpgradesContainment",
+            "load": 1
+          },
+          {
+            "id": "armory",
+            "name": "BUMP.Modules.baseUpgradesArmory",
+            "load": 2
+          },
+          {
+            "id": "laboratory",
+            "name": "BUMP.Modules.baseUpgradesLaboratory",
+            "load": 1
+          },
+          {
+            "id": "pet",
+            "name": "BUMP.Modules.baseUpgradesPet",
+            "load": 1
+          }
+        ]
+      }
+    },
+    "abilities": {
+      "id": "abilities",
+      "type": "specialAbilities",
+      "label": "BUMP.Modules.abilitiesLabel"
+    },
+    "pactTrackers": {
+      "id": "pactTrackers",
+      "type": "multiTracker",
+      "label": "BUMP.Modules.pactTrackersLabel",
+      "hideModuleLabel": true,
+      "props": {
+        "trackers": {
+          "trust": {
+            "max": 4,
+            "type": "square",
+            "label": "BUMP.Modules.trustLabel"
+          },
+          "alarm": {
+            "max": 8,
+            "type": "square",
+            "label": "BUMP.Modules.alarmLabel"
+          },
+          "panic": {
+            "max": 4,
+            "type": "square",
+            "label": "BUMP.Modules.panicLabel"
+          },
+          "bond": {
+            "max": 8,
+            "type": "square",
+            "label": "BUMP.Modules.bondLabel"
+          }
+        }
+      }
+    },
+    "allies": {
+      "id": "allies",
+      "type": "cohorts",
+      "label": "BUMP.Modules.alliesLabel",
+      "props": {
+        "slots": 8,
+        "radioGroups": {
+          "quality": {
+            "type": "circle",
+            "options": [
+              {
+                "id": "0",
+                "name": "BUMP.Modules.alliesQuality0"
+              },
+              {
+                "id": "1",
+                "name": "BUMP.Modules.alliesQuality1"
+              },
+              {
+                "id": "2",
+                "name": "BUMP.Modules.alliesQuality2"
+              },
+              {
+                "id": "3",
+                "name": "BUMP.Modules.alliesQuality3"
+              },
+              {
+                "id": "4",
+                "name": "BUMP.Modules.alliesQuality4"
+              }
+            ]
+          },
+          "expertCrew": {
+            "type": "triangle",
+            "options": [
+              {
+                "id": "expert",
+                "name": "BUMP.Modules.alliesExpert"
+              },
+              {
+                "id": "crew",
+                "name": "BUMP.Modules.alliesCrew"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "factions": {
+      "id": "factions",
+      "type": "table",
+      "label": "BUMP.Modules.factionsLabel",
+      "props": {
+        "columns": [
+          { "heading": "BUMP.Modules.factionsFaction", "widthPct": 75 },
+          { "heading": "BUMP.Modules.factionsStatus", "widthPct": 25 }
+        ],
+        "maxRows": 8
+      }
+    },
+    "notes": {
+      "id": "notes",
+      "type": "textArea",
+      "label": "BUMP.Modules.notesLabel",
+      "props": {
+        "height": 300
+      }
+    }
+  }
 }
