@@ -4,18 +4,25 @@ import { TrackerPropsWithLabel } from '@/components/playbook-elements/trackers/t
 import { RadioGroupProps } from '@/components/playbook-elements/radio-group/radio-group.schema';
 
 export const CohortValue = z.object({
-  radioGroups: z.record(
-    z.string().refine((val) => val.length <= 255),
-    z
-      .string()
-      .nullable()
-      .refine((val) => !val || val.length <= 255)
-  ),
-  trackers: z.record(
-    z.string().refine((val) => val.length <= 255),
-    z.number().int()
-  ),
-  text: z.string().refine((val) => val.length <= 1023)
+  radioGroups: z
+    .record(
+      z.string().refine((val) => val.length <= 255),
+      z
+        .string()
+        .nullable()
+        .refine((val) => !val || val.length <= 255)
+    )
+    .default({}),
+  trackers: z
+    .record(
+      z.string().refine((val) => val.length <= 255),
+      z.number().int()
+    )
+    .default({}),
+  text: z
+    .string()
+    .refine((val) => val.length <= 1023)
+    .default('')
 });
 
 export const ModuleDefinition = BaseModuleDefinition.merge(

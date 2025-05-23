@@ -33,9 +33,9 @@ export default function Cohort(props: Props) {
     };
 
     onUpdate({
-      trackers: values?.trackers || {},
+      trackers: values?.trackers,
       radioGroups: nextRadioGroups,
-      text: values?.text || ''
+      text: values?.text
     });
   };
 
@@ -47,8 +47,8 @@ export default function Cohort(props: Props) {
 
     onUpdate({
       trackers: nextTrackers,
-      radioGroups: values?.radioGroups || {},
-      text: values?.text || ''
+      radioGroups: values?.radioGroups,
+      text: values?.text
     });
   };
 
