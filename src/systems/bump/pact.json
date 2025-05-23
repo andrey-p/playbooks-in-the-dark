@@ -169,32 +169,14 @@
       "label": "BUMP.Modules.alliesLabel",
       "props": {
         "slots": 8,
-        "radioGroups": {
+        "trackers": {
           "quality": {
+            "max": 5,
             "type": "circle",
-            "options": [
-              {
-                "id": "0",
-                "name": "BUMP.Modules.alliesQuality0"
-              },
-              {
-                "id": "1",
-                "name": "BUMP.Modules.alliesQuality1"
-              },
-              {
-                "id": "2",
-                "name": "BUMP.Modules.alliesQuality2"
-              },
-              {
-                "id": "3",
-                "name": "BUMP.Modules.alliesQuality3"
-              },
-              {
-                "id": "4",
-                "name": "BUMP.Modules.alliesQuality4"
-              }
-            ]
-          },
+            "label": "BUMP.Modules.alliesQualityLabel"
+          }
+        },
+        "radioGroups": {
           "expertCrew": {
             "type": "triangle",
             "options": [
