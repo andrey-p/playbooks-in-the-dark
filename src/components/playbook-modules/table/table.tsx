@@ -26,6 +26,8 @@ export default function Table(props: Props) {
   const { moduleDefinition, playbookProps, userValue, onUpdate } = props;
   const { props: moduleProps } = moduleDefinition;
   const { values } = userValue;
+  // https://github.com/facebook/react/issues/31687
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const t = useTranslations();
 
   const rows = [];
