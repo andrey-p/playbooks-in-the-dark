@@ -104,4 +104,22 @@
       }
     }
   }
+
+  &.pact {
+    .cohorts.allies {
+      .cohort-item {
+        flex-basis: 100%;
+      }
+
+      .quality {
+        display: flex;
+        margin-bottom: 0.5rem;
+      }
+
+      .quality-label {
+        margin-left: 0.5rem;
+        line-height: 1;
+      }
+    }
+  }
 }
