@@ -6,6 +6,12 @@
     rotate: 90deg;
   }
 
+  /* tweak the font-dependent logo in the side menu */
+  /* to account for Saira Condensed's hefty height */
+  .menu h2 {
+    line-height: 1.2;
+  }
+
   /* all the item toggles are triangles, */
   /* no point in showing the -s between them */
   .items {
