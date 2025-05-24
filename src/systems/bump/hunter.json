@@ -47,7 +47,7 @@
       "type": "textArea",
       "label": "BUMP.Modules.lookLabel",
       "props": {
-        "height": 150
+        "height": 200
       }
     },
     "background": {
@@ -56,7 +56,7 @@
       "label": "BUMP.Modules.backgroundLabel",
       "description": "BUMP.Modules.backgroundDescription",
       "props": {
-        "height": 150
+        "height": 200
       }
     },
     "solace": {
@@ -71,7 +71,7 @@
       "label": "BUMP.Modules.beliefLabel",
       "description": "BUMP.Modules.belief1Description",
       "props": {
-        "height": 150
+        "height": 200
       }
     },
     "belief2": {
@@ -80,7 +80,7 @@
       "label": "BUMP.Modules.beliefLabel",
       "description": "BUMP.Modules.belief2Description",
       "props": {
-        "height": 150
+        "height": 200
       }
     },
     "drive": {
@@ -88,7 +88,7 @@
       "type": "textArea",
       "label": "BUMP.Modules.driveLabel",
       "props": {
-        "height": 150
+        "height": 200
       }
     },
     "connections1": {
@@ -96,7 +96,7 @@
       "type": "textArea",
       "label": "BUMP.Modules.connectionsUpLabel",
       "props": {
-        "height": 150
+        "height": 200
       }
     },
     "connections2": {
@@ -104,7 +104,7 @@
       "type": "textArea",
       "label": "BUMP.Modules.connectionsDownLabel",
       "props": {
-        "height": 150
+        "height": 200
       }
     },
     "notes": {
@@ -112,7 +112,7 @@
       "type": "textArea",
       "label": "BUMP.Modules.notesLabel",
       "props": {
-        "height": 150
+        "height": 200
       }
     },
     "abilities": {
