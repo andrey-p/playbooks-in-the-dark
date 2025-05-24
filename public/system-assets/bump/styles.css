@@ -18,6 +18,21 @@
 
   /* HUNTERS */
   &.hunter {
+    .column:nth-child(1) {
+      width: 40%;
+      min-width: 350px;
+    }
+
+    .column:nth-child(2) {
+      min-width: 420px;
+      width: 40%;
+    }
+
+    .column:nth-child(3) {
+      min-width: 250px;
+      width: 20%;
+    }
+
     .ratings {
       .attribute-group-container {
         display: flex;
@@ -106,6 +121,21 @@
   }
 
   &.pact {
+    .column:nth-child(1) {
+      width: 35%;
+      min-width: 350px;
+    }
+
+    .column:nth-child(2) {
+      min-width: 420px;
+      width: 35%;
+    }
+
+    .column:nth-child(3) {
+      min-width: 250px;
+      width: 30%;
+    }
+
     .cohorts.allies {
       .cohort-item {
         flex-basis: 100%;
