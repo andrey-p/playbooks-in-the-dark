@@ -1,0 +1,15 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.input {
+  width: 100%;
+  margin: 0;
+  border-bottom-width: 1px;
+  position: relative;
+
+  &:focus-visible {
+    z-index: 1;
+  }
+}

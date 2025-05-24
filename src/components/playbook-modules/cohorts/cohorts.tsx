@@ -5,6 +5,7 @@ import PropsSchema, {
 import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 import styles from './cohorts.module.css';
 import Cohort from './cohort';
+import clsx from 'clsx';
 
 type Props = z.infer<typeof PropsSchema>;
 type CohortValueType = z.infer<typeof CohortValueSchema>;
@@ -12,7 +13,7 @@ type CohortValueType = z.infer<typeof CohortValueSchema>;
 export default function Cohorts(props: Props) {
   const { moduleDefinition, playbookProps, userValue, onUpdate } = props;
   const { props: moduleProps } = moduleDefinition;
-  const { slots, radioGroups } = moduleProps;
+  const { slots, radioGroups, trackers } = moduleProps;
   let { cohorts: cohortValues } = userValue;
 
   // first time this module is rendered?
@@ -26,6 +27,7 @@ export default function Cohorts(props: Props) {
   for (let i = 0; i < slots; i++) {
     cohortProps.push({
       radioGroups: radioGroups,
+      trackers: trackers,
       values: cohortValues[i]
     });
   }
@@ -38,7 +40,7 @@ export default function Cohorts(props: Props) {
     // nature abhors a sparse array
     for (let i = 0; i < slots; i++) {
       if (!nextCohortValues[i]) {
-        nextCohortValues[i] = { radioGroups: {}, text: '' };
+        nextCohortValues[i] = { trackers: {}, radioGroups: {}, text: '' };
       }
     }
 
@@ -52,9 +54,9 @@ export default function Cohorts(props: Props) {
       moduleDefinition={moduleDefinition}
       playbookProps={playbookProps}
     >
-      <ul className={styles.container}>
+      <ul className={clsx(styles.container, 'cohort-container')}>
         {cohortProps.map((props, i) => (
-          <li key={i} className={styles.item}>
+          <li key={i} className={clsx(styles.item, 'cohort-item')}>
             <Cohort {...props} onUpdate={(value) => onCohortUpdate(i, value)} />
           </li>
         ))}

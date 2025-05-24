@@ -1,0 +1,56 @@
+{
+  "id": "pact",
+  "name": "BUMP.Playbooks.thePact",
+  "description": "BUMP.Playbooks.thePactDescription",
+  "modules": {
+    "abilities": {
+      "abilities": [
+        {
+          "id": "crafty",
+          "name": "BUMP.Modules.abilitiesCrafty",
+          "description": "BUMP.Modules.abilitiesCraftyDescription"
+        },
+        {
+          "id": "diligent",
+          "name": "BUMP.Modules.abilitiesDiligent",
+          "description": "BUMP.Modules.abilitiesDiligentDescription"
+        },
+        {
+          "id": "forged in fire",
+          "name": "BUMP.Modules.abilitiesForgedInFire",
+          "description": "BUMP.Modules.abilitiesForgedInFireDescription"
+        },
+        {
+          "id": "gone to ground",
+          "name": "BUMP.Modules.abilitiesGoneToGround",
+          "description": "BUMP.Modules.abilitiesGoneToGroundDescription"
+        },
+        {
+          "id": "person about town",
+          "name": "BUMP.Modules.abilitiesPersonAboutTown",
+          "description": "BUMP.Modules.abilitiesPersonAboutTownDescription"
+        },
+        {
+          "id": "stronger together",
+          "name": "BUMP.Modules.abilitiesStrongerTogether",
+          "description": "BUMP.Modules.abilitiesStrongerTogetherDescription"
+        },
+        {
+          "id": "trained",
+          "name": "BUMP.Modules.abilitiesTrained",
+          "description": "BUMP.Modules.abilitiesTrainedDescription"
+        },
+        {
+          "id": "were from here",
+          "name": "BUMP.Modules.abilitiesWereFromHere",
+          "description": "BUMP.Modules.abilitiesWereFromHereDescription"
+        },
+        {
+          "id": "you owe us one",
+          "name": "BUMP.Modules.abilitiesYouOweUsOne",
+          "description": "BUMP.Modules.abilitiesYouOweUsOneDescription"
+        }
+      ]
+    }
+  }
+}
