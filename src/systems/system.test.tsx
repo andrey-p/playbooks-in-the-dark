@@ -2,7 +2,12 @@ import { z } from 'zod';
 import { getJson } from '@/lib/system-data';
 import Renderer from '@/components/renderer/renderer';
 import RendererErrorBoundary from '@/components/renderer/renderer-error-boundary';
-import { render, cleanup, showTranslationWarnings } from 'test-utils';
+import {
+  render,
+  cleanup,
+  showTranslationWarnings,
+  testAccessibility
+} from 'test-utils';
 import systemsJson from './systems.json';
 
 import { fromError } from 'zod-validation-error';
@@ -73,32 +78,42 @@ describe('system data check', () => {
   systems.forEach((system) => {
     const systemId = system.id;
 
-    test(systemId, async () => {
-      const tests = await collectTests(systemId);
+    test(
+      systemId,
+      async () => {
+        const tests = await collectTests(systemId);
 
-      tests.forEach((testInput) => {
-        const { playbookData, playbookDefinition } = testInput;
+        for (const testInput of tests) {
+          const { playbookData, playbookDefinition } = testInput;
 
-        render(
-          <RendererErrorBoundary>
-            <Renderer
-              playbookData={playbookData}
-              layout={playbookDefinition.layout}
-              modules={playbookDefinition.modules}
-              userData={{
-                id: undefined,
-                playbookType: playbookDefinition.id,
-                systemId,
-                playbookId: playbookData.id,
-                modules: {}
-              }}
-              dispatch={jest.fn()}
-            />
-          </RendererErrorBoundary>
-        );
+          const { container } = render(
+            <RendererErrorBoundary>
+              <Renderer
+                playbookData={playbookData}
+                layout={playbookDefinition.layout}
+                modules={playbookDefinition.modules}
+                userData={{
+                  id: undefined,
+                  playbookType: playbookDefinition.id,
+                  systemId,
+                  playbookId: playbookData.id,
+                  modules: {}
+                }}
+                dispatch={jest.fn()}
+              />
+            </RendererErrorBoundary>
+          );
 
-        cleanup();
-      });
-    });
+          // currently adds ~10s per system which is massive for a regular unit test run
+          // ideally this wants to be part of a more formal, slower-running e2e test suite
+          if (process.env.RUN_A11Y_TESTS) {
+            await testAccessibility(container);
+          }
+
+          cleanup();
+        }
+      },
+      20000
+    );
   });
 });

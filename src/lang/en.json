@@ -62,6 +62,11 @@
       "areYouSure": "Are you sure? This is irreversible.",
       "yes": "Yes",
       "no": "No"
+    },
+    "ModulesShared": {
+      "harmLabel": "Harm with level {level}, column {column}",
+      "cohortDescriptionLabel": "Description for cohort {number}",
+      "tableCellLabel": "Entry for column {columnName}, row {row}"
     }
   }
 }

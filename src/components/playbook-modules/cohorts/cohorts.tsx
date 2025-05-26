@@ -57,7 +57,11 @@ export default function Cohorts(props: Props) {
       <ul className={clsx(styles.container, 'cohort-container')}>
         {cohortProps.map((props, i) => (
           <li key={i} className={clsx(styles.item, 'cohort-item')}>
-            <Cohort {...props} onUpdate={(value) => onCohortUpdate(i, value)} />
+            <Cohort
+              {...props}
+              index={i}
+              onUpdate={(value) => onCohortUpdate(i, value)}
+            />
           </li>
         ))}
       </ul>

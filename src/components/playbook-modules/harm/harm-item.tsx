@@ -1,5 +1,6 @@
 import styles from './harm-item.module.css';
 import { useId } from 'react';
+import { useTranslations } from 'next-intl';
 
 type Props = {
   harmText?: string;
@@ -10,6 +11,7 @@ type Props = {
 
 export default function HarmItem(props: Props) {
   const { harmText, onUpdate, level, column } = props;
+  const t = useTranslations();
 
   const consistentId = useId();
 
@@ -17,6 +19,10 @@ export default function HarmItem(props: Props) {
     <input
       className={styles.input}
       type='text'
+      aria-label={t('UI.ModulesShared.harmLabel', {
+        level: level + 1,
+        column: column + 1
+      })}
       value={harmText || ''}
       id={consistentId}
       name={consistentId}

@@ -2,6 +2,7 @@ import { render, RenderOptions } from '@testing-library/react';
 import { NextIntlClientProvider } from 'next-intl';
 import uiMessages from '@/lang/en.json';
 import { getAllSystemsText } from '@/lib/system-data';
+import { axe, toHaveNoViolations } from 'jest-axe';
 
 let messages: object;
 let testTranslations = {};
@@ -21,6 +22,25 @@ export const addTestTranslations = (extraTranslations: object) => {
     ...testTranslations,
     ...extraTranslations
   };
+};
+
+// automated accessbility checks
+expect.extend(toHaveNoViolations);
+
+export const testAccessibility = async (container: Element) => {
+  // currently very limited, to allow for staged improvements
+  const result = await axe(container);
+
+  const labelViolations = result.violations.find(
+    (violation) => violation.id === 'label'
+  );
+
+  if (labelViolations) {
+    expect(labelViolations.nodes).toHaveLength(0);
+  }
+
+  // eventually we want to uncomment this:
+  // expect(result).toHaveNoViolations();
 };
 
 // only some tests care about the translation warning showing

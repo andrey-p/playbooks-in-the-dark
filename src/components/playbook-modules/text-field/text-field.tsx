@@ -28,6 +28,7 @@ export default function TextField(props: Props) {
           value={text}
           className={styles.input}
           id={consistentId}
+          aria-label={moduleDefinition.hideModuleLabel ? undefined : label}
           name={consistentId}
           onChange={(e) =>
             onUpdate({

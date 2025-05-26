@@ -24,6 +24,7 @@ export default function TextArea(props: Props) {
         className={styles.input}
         style={{ height: moduleProps?.height }}
         id={consistentId}
+        aria-label={moduleDefinition.label}
         name={consistentId}
         onChange={(e) =>
           onUpdate({
