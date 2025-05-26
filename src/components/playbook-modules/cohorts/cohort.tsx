@@ -24,31 +24,35 @@ export default function Cohort(props: Props) {
   const { radioGroups, trackers, values, onUpdate } = props;
   const t = useTranslations();
 
+  const trackerValues = values?.trackers || {};
+  const radioGroupValues = values?.radioGroups || {};
+  const textValue = values?.text || '';
+
   const consistentId = useId();
 
   const onRadioUpdate = (id: string, value: string | null) => {
     const nextRadioGroups = {
-      ...values?.radioGroups,
+      ...radioGroupValues,
       [id]: value
     };
 
     onUpdate({
-      trackers: values?.trackers,
+      trackers: trackerValues,
       radioGroups: nextRadioGroups,
-      text: values?.text
+      text: textValue
     });
   };
 
   const onTrackerUpdate = (id: string, value: number) => {
     const nextTrackers = {
-      ...values?.trackers,
+      ...trackerValues,
       [id]: value
     };
 
     onUpdate({
       trackers: nextTrackers,
-      radioGroups: values?.radioGroups,
-      text: values?.text
+      radioGroups: radioGroupValues,
+      text: textValue
     });
   };
 
@@ -59,7 +63,7 @@ export default function Cohort(props: Props) {
           <div className={clsx(id)} key={id}>
             <SimpleTracker
               {...trackers[id]}
-              value={values?.trackers[id]}
+              value={trackerValues[id]}
               onValueSelect={(value) => onTrackerUpdate(id, value)}
             />
             <div className={clsx(`${id}-label`)}>{t(trackers[id].label)}</div>
@@ -70,7 +74,7 @@ export default function Cohort(props: Props) {
           <div className={clsx(styles.radio, id)} key={id}>
             <RadioGroup
               {...radioGroups[id]}
-              value={values?.radioGroups[id]}
+              value={radioGroupValues[id]}
               onValueSelect={(value) => onRadioUpdate(id, value)}
             />
           </div>
@@ -81,12 +85,12 @@ export default function Cohort(props: Props) {
         name={consistentId}
         onChange={(e) =>
           onUpdate({
-            trackers: values?.trackers || {},
-            radioGroups: values?.radioGroups || {},
+            trackers: trackerValues,
+            radioGroups: radioGroupValues,
             text: e.currentTarget.value
           })
         }
-        value={values?.text}
+        value={textValue}
       />
     </div>
   );
