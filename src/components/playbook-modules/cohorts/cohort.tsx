@@ -17,11 +17,12 @@ type Props = {
   radioGroups?: Record<string, RadioGroupPropsType>;
   trackers?: Record<string, TrackerPropsType>;
   values: CohortValueType;
+  index: number;
   onUpdate: (value: CohortValueType) => void;
 };
 
 export default function Cohort(props: Props) {
-  const { radioGroups, trackers, values, onUpdate } = props;
+  const { radioGroups, trackers, index, values, onUpdate } = props;
   const t = useTranslations();
 
   const trackerValues = values?.trackers || {};
@@ -81,6 +82,9 @@ export default function Cohort(props: Props) {
         ))}
       <textarea
         className={styles.textArea}
+        aria-label={t('UI.ModulesShared.cohortDescriptionLabel', {
+          number: index + 1
+        })}
         id={consistentId}
         name={consistentId}
         onChange={(e) =>

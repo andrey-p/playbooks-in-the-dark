@@ -64,7 +64,8 @@
       "no": "No"
     },
     "ModulesShared": {
-      "harmLabel": "Harm with level {level}, column {column}"
+      "harmLabel": "Harm with level {level}, column {column}",
+      "cohortDescriptionLabel": "Cohort {number} description"
     }
   }
 }
