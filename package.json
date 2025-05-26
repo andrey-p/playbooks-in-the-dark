@@ -8,6 +8,7 @@
     "dev": "next dev --turbopack",
     "start": "sst dev",
     "test": "jest",
+    "test-a11y": "RUN_A11Y_TESTS=1 jest",
     "prettier": "prettier . --write",
     "system-dev": "set -a && . ./tests/config/fake_env && npm run dev",
     "check-build": "set -a && . ./tests/config/fake_env && npm run build",
