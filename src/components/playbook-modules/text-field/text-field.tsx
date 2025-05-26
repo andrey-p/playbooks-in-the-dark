@@ -26,8 +26,9 @@ export default function TextField(props: Props) {
         <input
           type='text'
           value={text}
-          className={'input-label ' + styles.input}
+          className={styles.input}
           id={consistentId}
+          aria-label={moduleDefinition.hideModuleLabel ? undefined : label}
           name={consistentId}
           onChange={(e) =>
             onUpdate({
