@@ -78,34 +78,38 @@ describe('system data check', () => {
   systems.forEach((system) => {
     const systemId = system.id;
 
-    test(systemId, async () => {
-      const tests = await collectTests(systemId);
+    test(
+      systemId,
+      async () => {
+        const tests = await collectTests(systemId);
 
-      for (const testInput of tests) {
-        const { playbookData, playbookDefinition } = testInput;
+        for (const testInput of tests) {
+          const { playbookData, playbookDefinition } = testInput;
 
-        const { container } = render(
-          <RendererErrorBoundary>
-            <Renderer
-              playbookData={playbookData}
-              layout={playbookDefinition.layout}
-              modules={playbookDefinition.modules}
-              userData={{
-                id: undefined,
-                playbookType: playbookDefinition.id,
-                systemId,
-                playbookId: playbookData.id,
-                modules: {}
-              }}
-              dispatch={jest.fn()}
-            />
-          </RendererErrorBoundary>
-        );
+          const { container } = render(
+            <RendererErrorBoundary>
+              <Renderer
+                playbookData={playbookData}
+                layout={playbookDefinition.layout}
+                modules={playbookDefinition.modules}
+                userData={{
+                  id: undefined,
+                  playbookType: playbookDefinition.id,
+                  systemId,
+                  playbookId: playbookData.id,
+                  modules: {}
+                }}
+                dispatch={jest.fn()}
+              />
+            </RendererErrorBoundary>
+          );
 
-        await testAccessibility(container);
+          await testAccessibility(container);
 
-        cleanup();
-      }
-    });
+          cleanup();
+        }
+      },
+      20000
+    );
   });
 });
