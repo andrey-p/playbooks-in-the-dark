@@ -58,11 +58,15 @@ export default function Table(props: Props) {
   for (let i = 0; i < moduleProps.maxRows; i++) {
     rows.push(
       <tr key={i}>
-        {moduleProps.columns.map((_, j) => (
+        {moduleProps.columns.map((column, j) => (
           <td key={j}>
             <input
               className={styles.input}
               type='text'
+              aria-label={t('UI.ModulesShared.tableCellLabel', {
+                columnName: t(column.heading),
+                row: i + 1
+              })}
               value={(values[i] && values[i][j]) || ''}
               onChange={(e) => {
                 onCellChange(i, j, e.currentTarget.value);
