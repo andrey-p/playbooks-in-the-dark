@@ -26,7 +26,7 @@ export default function TextField(props: Props) {
         <input
           type='text'
           value={text}
-          className={styles.input}
+          className={'input-label ' + styles.input}
           id={consistentId}
           name={consistentId}
           onChange={(e) =>
