@@ -2,7 +2,12 @@ import { z } from 'zod';
 import { getJson } from '@/lib/system-data';
 import Renderer from '@/components/renderer/renderer';
 import RendererErrorBoundary from '@/components/renderer/renderer-error-boundary';
-import { render, cleanup, showTranslationWarnings } from 'test-utils';
+import {
+  render,
+  cleanup,
+  showTranslationWarnings,
+  testAccessibility
+} from 'test-utils';
 import systemsJson from './systems.json';
 
 import { fromError } from 'zod-validation-error';
@@ -76,10 +81,10 @@ describe('system data check', () => {
     test(systemId, async () => {
       const tests = await collectTests(systemId);
 
-      tests.forEach((testInput) => {
+      for (const testInput of tests) {
         const { playbookData, playbookDefinition } = testInput;
 
-        render(
+        const { container } = render(
           <RendererErrorBoundary>
             <Renderer
               playbookData={playbookData}
@@ -97,8 +102,10 @@ describe('system data check', () => {
           </RendererErrorBoundary>
         );
 
+        await testAccessibility(container);
+
         cleanup();
-      });
+      }
     });
   });
 });
