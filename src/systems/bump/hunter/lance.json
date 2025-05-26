@@ -1,0 +1,130 @@
+{
+  "id": "lance",
+  "name": "BUMP.Playbooks.lance",
+  "description": "BUMP.Playbooks.lanceDescription",
+  "modules": {
+    "abilities": {
+      "abilities": [
+        {
+          "id": "signature style",
+          "name": "BUMP.Modules.abilitiesSignatureStyle",
+          "description": "BUMP.Modules.abilitiesSignatureStyleDescription"
+        },
+        {
+          "id": "all consumed",
+          "name": "BUMP.Modules.abilitiesAllConsumed",
+          "description": "BUMP.Modules.abilitiesAllConsumedDescription"
+        },
+        {
+          "id": "charming disarming",
+          "name": "BUMP.Modules.abilitiesCharmingDisarming",
+          "description": "BUMP.Modules.abilitiesCharmingDisarmingDescription"
+        },
+        {
+          "id": "hidden power",
+          "name": "BUMP.Modules.abilitiesHiddenPower",
+          "description": "BUMP.Modules.abilitiesHiddenPowerDescription"
+        },
+        {
+          "id": "holistic healer",
+          "name": "BUMP.Modules.abilitiesHolisticHealer",
+          "description": "BUMP.Modules.abilitiesHolisticHealerDescription"
+        },
+        {
+          "id": "inspired inspiring",
+          "name": "BUMP.Modules.abilitiesInspiredInspiring",
+          "description": "BUMP.Modules.abilitiesInspiredInspiringDescription"
+        },
+        {
+          "id": "master meditator",
+          "name": "BUMP.Modules.abilitiesMasterMeditator",
+          "description": "BUMP.Modules.abilitiesMasterMeditatorDescription"
+        },
+        {
+          "id": "others",
+          "name": "BUMP.Modules.abilitiesOthers",
+          "description": "BUMP.Modules.abilitiesOthersDescription",
+          "slots": [{
+              "id": "otherAbilities",
+              "label": "BUMP.Modules.abilitiesOtherAbilities",
+              "multiline": true,
+              "height": 100
+          }]
+        }
+      ]
+    },
+    "ratings": {
+      "startingRatings": {
+        "connect": 1,
+        "hunt": 2
+      }
+    },
+    "gear": {
+      "groups": [
+        {
+          "id": "lance",
+          "name": ""
+        }
+      ],
+      "custom": [
+        {
+          "id": "ritual weapon",
+          "name": "BUMP.Modules.gearRitualWeapon",
+          "group": "lance",
+          "load": 1
+        },
+        {
+          "id": "ornate armor",
+          "name": "BUMP.Modules.gearOrnateArmor",
+          "group": "lance",
+          "load": 2
+        },
+        {
+          "id": "offerings",
+          "name": "BUMP.Modules.gearOfferings",
+          "group": "lance",
+          "load": 0
+        },
+        {
+          "id": "talisman",
+          "name": "BUMP.Modules.gearTalisman",
+          "group": "lance",
+          "load": 1
+        },
+        { "id": "healing herbs and poultices",
+          "name": "BUMP.Modules.gearHealingHerbsAndPoultices",
+          "group": "lance",
+          "load": 1
+        },
+        {
+          "id": "ceremonial clothing",
+          "name": "BUMP.Modules.gearCeremonialClothing",
+          "group": "lance",
+          "load": 0
+        }
+      ]
+    },
+    "beats": {
+      "groups": [
+        {
+          "id": "lance arc",
+          "name": "BUMP.Modules.beatsLanceArc"
+        }
+      ],
+      "custom": [
+        {
+          "id": "ancient evil",
+          "name": "BUMP.Modules.beatsAncientEvil",
+          "group": "lance arc",
+          "load": 1
+        },
+        {
+          "id": "new scars",
+          "name": "BUMP.Modules.beatsNewScars",
+          "group": "lance arc",
+          "load": 1
+        }
+      ]
+    }
+  }
+}

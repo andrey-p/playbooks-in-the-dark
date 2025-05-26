@@ -109,7 +109,7 @@
           "slots": [
             {
               "id": "toolName",
-              "label": "Tool Name",
+              "label": "AFOD.Modules.contactsToolName",
               "size": 10
             }
           ]

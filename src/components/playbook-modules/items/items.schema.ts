@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
+import { TrackerProps } from '@/components/playbook-elements/trackers/trackers.schema';
 import {
   SlotProps,
   SlotValue
@@ -14,7 +15,9 @@ export const Item = z.object({
     .refine((val) => val >= 0 && val <= 10),
   showLinked: z.boolean().optional(),
   group: z.string().optional(),
-  slots: z.array(SlotProps).optional()
+  slots: z.array(SlotProps).optional(),
+  readOnly: z.boolean().optional(),
+  trackerProps: TrackerProps.optional()
 });
 
 export const Group = z.object({
@@ -22,7 +25,11 @@ export const Group = z.object({
     .string()
     .refine((val) => val.length <= 255)
     .optional(),
-  name: z.string().refine((val) => val.length <= 255)
+  name: z.string().refine((val) => val.length <= 255),
+  description: z
+    .string()
+    .refine((val) => val.length <= 1024)
+    .optional()
 });
 
 export const ModuleDefinition = BaseModuleDefinition.merge(
@@ -38,7 +45,8 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
         )
         .optional(),
       groups: z.array(Group).optional(),
-      common: z.array(Item)
+      common: z.array(Item),
+      trackerProps: TrackerProps.optional()
     })
   })
 );
@@ -46,6 +54,7 @@ export const PlaybookProps = BasePlaybookProps.and(
   z
     .object({
       custom: z.array(Item).optional(),
+      groups: z.array(Group).optional(),
       startingItems: z.record(z.string(), z.number()).optional()
     })
     .optional()

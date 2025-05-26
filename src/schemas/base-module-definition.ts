@@ -7,5 +7,6 @@ export default z.object({
   default: z.any(),
   props: z.any(),
   playbooks: z.array(z.string()).optional(),
-  description: z.string().optional()
+  description: z.string().optional(),
+  hideModuleLabel: z.boolean().optional()
 });

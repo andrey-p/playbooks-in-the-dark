@@ -58,7 +58,9 @@ export default function Toggle(props: Props) {
         styles.default,
         filled && styles.filled,
         highlighted && styles.highlighted,
-        invertColours && styles.inverted
+        invertColours && styles.inverted,
+        'toggle',
+        type
       )}
       style={{ width, height }}
       {...rest}

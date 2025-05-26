@@ -1,0 +1,130 @@
+{
+  "id": "scourge",
+  "name": "BUMP.Playbooks.scourge",
+  "description": "BUMP.Playbooks.scourgeDescription",
+  "modules": {
+    "abilities": {
+      "abilities": [
+        {
+          "id": "thaumaturge",
+          "name": "BUMP.Modules.abilitiesThaumaturge",
+          "description": "BUMP.Modules.abilitiesThaumaturgeDescription"
+        },
+        {
+          "id": "casting bones",
+          "name": "BUMP.Modules.abilitiesCastingBones",
+          "description": "BUMP.Modules.abilitiesCastingBonesDescription"
+        },
+        {
+          "id": "invoke",
+          "name": "BUMP.Modules.abilitiesInvoke",
+          "description": "BUMP.Modules.abilitiesInvokeDescription"
+        },
+        {
+          "id": "prepared ritual",
+          "name": "BUMP.Modules.abilitiesPreparedRitual",
+          "description": "BUMP.Modules.abilitiesPreparedRitualDescription"
+        },
+        {
+          "id": "slanted enchanted",
+          "name": "BUMP.Modules.abilitiesSlantedEnchanted",
+          "description": "BUMP.Modules.abilitiesSlantedEnchantedDescription"
+        },
+        {
+          "id": "spooky",
+          "name": "BUMP.Modules.abilitiesSpooky",
+          "description": "BUMP.Modules.abilitiesSpookyDescription"
+        },
+        {
+          "id": "void sense",
+          "name": "BUMP.Modules.abilitiesVoidSense",
+          "description": "BUMP.Modules.abilitiesVoidSenseDescription"
+        },
+        {
+          "id": "others",
+          "name": "BUMP.Modules.abilitiesOthers",
+          "description": "BUMP.Modules.abilitiesOthersDescription",
+          "slots": [{
+              "id": "otherAbilities",
+              "label": "BUMP.Modules.abilitiesOtherAbilities",
+              "multiline": true,
+              "height": 100
+          }]
+        }
+      ]
+    },
+    "ratings": {
+      "startingRatings": {
+        "connect": 2,
+        "read": 1
+      }
+    },
+    "gear": {
+      "groups": [
+        {
+          "id": "scourge",
+          "name": ""
+        }
+      ],
+      "custom": [
+        {
+          "id": "ritual knife",
+          "name": "BUMP.Modules.gearRitualKnife",
+          "group": "scourge",
+          "load": 1
+        },
+        {
+          "id": "arcane artifact",
+          "name": "BUMP.Modules.gearArcaneArtifact",
+          "group": "scourge",
+          "load": 1
+        },
+        {
+          "id": "amulet or foci",
+          "name": "BUMP.Modules.gearAmuletOrFoci",
+          "group": "scourge",
+          "load": 1
+        },
+        {
+          "id": "unusual spell components",
+          "name": "BUMP.Modules.gearUnusualSpellComponents",
+          "group": "scourge",
+          "load": 1
+        },
+        { "id": "offerings",
+          "name": "BUMP.Modules.gearOfferings",
+          "group": "scourge",
+          "load": 1
+        },
+        {
+          "id": "animal familiar",
+          "name": "BUMP.Modules.gearAnimalFamiliar",
+          "group": "scourge",
+          "load": 0
+        }
+      ]
+    },
+    "beats": {
+      "groups": [
+        {
+          "id": "scourge arc",
+          "name": "BUMP.Modules.beatsScourgeArc"
+        }
+      ],
+      "custom": [
+        {
+          "id": "accidental incantation",
+          "name": "BUMP.Modules.beatsAccidentalIncantation",
+          "group": "scourge arc",
+          "load": 1
+        },
+        {
+          "id": "the descent",
+          "name": "BUMP.Modules.beatsTheDescent",
+          "group": "scourge arc",
+          "load": 1
+        }
+      ]
+    }
+  }
+}

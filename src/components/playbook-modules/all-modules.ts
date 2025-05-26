@@ -13,6 +13,7 @@ import * as Contacts from './contacts/contacts';
 import * as Claims from './claims/claims';
 import * as Cohorts from './cohorts/cohorts';
 import * as Description from './description/description';
+import * as Table from './table/table';
 
 export const componentsByModuleType = {
   textField: TextField,
@@ -27,5 +28,6 @@ export const componentsByModuleType = {
   claims: Claims,
   cohorts: Cohorts,
   textArea: TextArea,
-  description: Description
+  description: Description,
+  table: Table
 };

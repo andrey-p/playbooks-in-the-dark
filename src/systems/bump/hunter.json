@@ -1,0 +1,543 @@
+{
+  "id": "hunter",
+  "name": "BUMP.Playbooks.hunter",
+  "playbooks": [
+    "shield",
+    "icon",
+    "scourge",
+    "raven",
+    "stave",
+    "lance",
+    "unshaped"
+  ],
+  "layout": [
+    [
+      "name",
+      "look",
+      "background",
+      "solace",
+      "belief1",
+      "belief2",
+      "drive",
+      ["connections1", "connections2"],
+      "notes"
+    ],
+    [
+      "abilities",
+      "luckDoomHope",
+      "beats"
+    ],
+    [
+      "ratings",
+      "gearSlots",
+      "gear",
+      "armor",
+      "conditions"
+    ]
+  ],
+  "modules": {
+    "name": {
+      "id": "name",
+      "type": "textField",
+      "label": "BUMP.Modules.nameLabel",
+      "hideModuleLabel": false
+    },
+    "look": {
+      "id": "look",
+      "type": "textArea",
+      "label": "BUMP.Modules.lookLabel",
+      "props": {
+        "height": 200
+      }
+    },
+    "background": {
+      "id": "background",
+      "type": "textArea",
+      "label": "BUMP.Modules.backgroundLabel",
+      "description": "BUMP.Modules.backgroundDescription",
+      "props": {
+        "height": 200
+      }
+    },
+    "solace": {
+      "id": "solace",
+      "type": "textField",
+      "label": "BUMP.Modules.solaceLabel",
+      "hideModuleLabel": false
+    },
+    "belief1": {
+      "id": "belief1",
+      "type": "textArea",
+      "label": "BUMP.Modules.beliefLabel",
+      "description": "BUMP.Modules.belief1Description",
+      "props": {
+        "height": 200
+      }
+    },
+    "belief2": {
+      "id": "belief2",
+      "type": "textArea",
+      "label": "BUMP.Modules.beliefLabel",
+      "description": "BUMP.Modules.belief2Description",
+      "props": {
+        "height": 200
+      }
+    },
+    "drive": {
+      "id": "drive",
+      "type": "textArea",
+      "label": "BUMP.Modules.driveLabel",
+      "props": {
+        "height": 200
+      }
+    },
+    "connections1": {
+      "id": "connections1",
+      "type": "textArea",
+      "label": "BUMP.Modules.connectionsUpLabel",
+      "props": {
+        "height": 200
+      }
+    },
+    "connections2": {
+      "id": "connections2",
+      "type": "textArea",
+      "label": "BUMP.Modules.connectionsDownLabel",
+      "props": {
+        "height": 200
+      }
+    },
+    "notes": {
+      "id": "notes",
+      "type": "textArea",
+      "label": "BUMP.Modules.notesLabel",
+      "props": {
+        "height": 200
+      }
+    },
+    "abilities": {
+      "id": "abilities",
+      "type": "specialAbilities",
+      "label": "BUMP.Modules.abilitiesLabel"
+    },
+    "luckDoomHope": {
+      "id": "luckDoomHope",
+      "type": "multiTracker",
+      "label": "BUMP.Modules.luckDoomHopeLabel",
+      "hideModuleLabel": true,
+      "props": {
+        "trackers": {
+          "luck": {
+            "max": 9,
+            "type": "square",
+            "label": "BUMP.Modules.luckLabel"
+          },
+          "doom": {
+            "max": 5,
+            "type": "square",
+            "label": "BUMP.Modules.doomLabel"
+          },
+          "hope": {
+            "max": 8,
+            "type": "square",
+            "label": "BUMP.Modules.hopeLabel"
+          }
+        }
+      }
+    },
+    "ratings": {
+      "id": "ratings",
+      "type": "ratings",
+      "label": "BUMP.Modules.ratingsLabel",
+      "props": {
+        "maxRating": 3,
+        "trackerProps": {
+          "max": 1,
+          "type": "triangle"
+        },
+        "attributes": [
+          {
+            "id": "body",
+            "name": "BUMP.Modules.ratingsBody",
+            "trackerLabel": "BUMP.Modules.ratingsExhaustedLabel",
+            "description": "BUMP.Modules.ratingsExhaustedToClear"
+          },
+          {
+            "id": "heart",
+            "name": "BUMP.Modules.ratingsHeart",
+            "trackerLabel": "BUMP.Modules.ratingsVoidTouchedLabel",
+            "description": "BUMP.Modules.ratingsVoidTouchedToClear"
+          },
+          {
+            "id": "mind",
+            "name": "BUMP.Modules.ratingsMind",
+            "trackerLabel": "BUMP.Modules.ratingsAfraidLabel",
+            "description": "BUMP.Modules.ratingsAfraidToClear"
+          }
+        ],
+        "actions": [
+          {
+            "id": "scramble",
+            "name": "BUMP.Modules.ratingsScramble",
+            "attributeId": "body"
+          },
+          {
+            "id": "sneak",
+            "name": "BUMP.Modules.ratingsSneak",
+            "attributeId": "body"
+          },
+          {
+            "id": "wreck",
+            "name": "BUMP.Modules.ratingsWreck",
+            "attributeId": "body"
+          },
+          {
+            "id": "compel",
+            "name": "BUMP.Modules.ratingsCompel",
+            "attributeId": "heart"
+          },
+          {
+            "id": "connect",
+            "name": "BUMP.Modules.ratingsConnect",
+            "attributeId": "heart"
+          },
+          {
+            "id": "sway",
+            "name": "BUMP.Modules.ratingsSway",
+            "attributeId": "heart"
+          },
+          {
+            "id": "hunt",
+            "name": "BUMP.Modules.ratingsHunt",
+            "attributeId": "mind"
+          },
+          {
+            "id": "read",
+            "name": "BUMP.Modules.ratingsRead",
+            "attributeId": "mind"
+          },
+          {
+            "id": "rig",
+            "name": "BUMP.Modules.ratingsRig",
+            "attributeId": "mind"
+          }
+        ]
+      }
+    },
+    "gearSlots": {
+      "id": "gearSlots",
+      "type": "tracker",
+      "label": "BUMP.Modules.gearSlotsLabel",
+      "default": { "value": 4 },
+      "props": {
+        "type": "triangle",
+        "max": 7
+      }
+    },
+    "gear": {
+      "id": "gear",
+      "type": "items",
+      "label": "BUMP.Modules.gearLabel",
+      "props": {
+        "trackerProps": {
+          "type": "triangle"
+        },
+        "groups": [
+          {
+            "id": "normal",
+            "name": ""
+          },
+          {
+            "id": "armory",
+            "name": "BUMP.Modules.gearArmoryUpgrade"
+          }
+        ],
+        "common": [
+          {
+            "id": "knife",
+            "name": "BUMP.Modules.gearKnife",
+            "group": "normal",
+            "load": 1
+          },
+          {
+            "id": "flashlight",
+            "name": "BUMP.Modules.gearFlashlight",
+            "group": "normal",
+            "load": 1
+          },
+          {
+            "id": "improvised weapon",
+            "name": "BUMP.Modules.gearImprovisedWeapon",
+            "group": "normal",
+            "load": 1
+          },
+          {
+            "id": "hunters kit",
+            "name": "BUMP.Modules.gearHuntersKit",
+            "group": "normal",
+            "load": 1
+          },
+          {
+            "id": "hunters kit uses",
+            "name": "BUMP.Modules.gearHuntersKitUses",
+            "group": "normal",
+            "trackerProps": {
+              "type": "square"
+            },
+            "load": 3
+          },
+          {
+            "id": "occult or holy relic",
+            "name": "BUMP.Modules.gearOccultOrHolyRelic",
+            "group": "normal",
+            "load": 1
+          },
+          {
+            "id": "walkie or pager",
+            "name": "BUMP.Modules.gearWalkieOrPager",
+            "group": "normal",
+            "load": 0
+          },
+          {
+            "id": "handgun",
+            "name": "BUMP.Modules.gearHandgun",
+            "group": "armory",
+            "load": 1
+          },
+          {
+            "id": "rifle",
+            "name": "BUMP.Modules.gearRifle",
+            "group": "armory",
+            "load": 2
+          },
+          {
+            "id": "body armor",
+            "name": "BUMP.Modules.gearBodyArmor",
+            "group": "armory",
+            "load": 3
+          }
+        ]
+      }
+    },
+    "armor": {
+      "id": "armor",
+      "type": "items",
+      "label": "BUMP.Modules.armorLabel",
+      "props": {
+        "trackerProps": {
+          "type": "triangle"
+        },
+        "common": [
+          {
+            "id": "armor",
+            "name": "BUMP.Modules.armorArmor",
+            "load": 1
+          },
+          {
+            "id": "plot1",
+            "name": "BUMP.Modules.armorPlot",
+            "load": 1
+          },
+          {
+            "id": "plot2",
+            "name": "BUMP.Modules.armorPlot",
+            "load": 1
+          }
+        ]
+      }
+    },
+    "conditions": {
+      "id": "conditions",
+      "type": "items",
+      "label": "BUMP.Modules.conditionsLabel",
+      "props": {
+        "trackerProps": {
+          "type": "triangle"
+        },
+        "groups": [
+          {
+            "id": "angry",
+            "name": "",
+            "description": "BUMP.Modules.conditionsAngryToClear"
+          },
+          {
+            "id": "wounded",
+            "name": "BUMP.Modules.conditionsWounded",
+            "description": "BUMP.Modules.conditionsWoundedToClear"
+          }
+        ],
+        "common": [
+          {
+            "id": "angry",
+            "name": "BUMP.Modules.conditionsAngry",
+            "group": "angry",
+            "load": 1
+          },
+          {
+            "id": "wounded1",
+            "name": "BUMP.Modules.conditionsWoundSlot1",
+            "group": "wounded",
+            "slots": [{
+              "id": "wound1",
+              "label": "BUMP.Modules.conditionsWound",
+              "size": 20
+            }],
+            "load": 1
+          },
+          {
+            "id": "wounded2",
+            "name": "BUMP.Modules.conditionsWoundSlot2",
+            "group": "wounded",
+            "slots": [{
+              "id": "wound2",
+              "label": "BUMP.Modules.conditionsWound",
+              "size": 20
+            }],
+            "load": 1
+          },
+          {
+            "id": "wounded3",
+            "name": "BUMP.Modules.conditionsWoundSlot3",
+            "group": "wounded",
+            "slots": [{
+              "id": "wound3",
+              "label": "BUMP.Modules.conditionsWound",
+              "size": 20
+            }],
+            "load": 1
+          }
+        ]
+      }
+    },
+    "beats": {
+      "id": "beats",
+      "type": "items",
+      "label": "BUMP.Modules.beatsLabel",
+      "default": {
+        "items": {
+          "quell alarm": 1,
+          "seek solace": 1,
+          "acquire asset": 1,
+          "recover": 1,
+          "long term project": 1
+        }
+      },
+      "props": {
+        "trackerProps": {
+          "type": "triangle"
+        },
+        "groups": [
+          {
+            "id": "hunter",
+            "name": "BUMP.Modules.beatsHunterArc"
+          },
+          {
+            "id": "pact",
+            "name": "BUMP.Modules.beatsPactArc"
+          },
+          {
+            "id": "basic",
+            "name": "BUMP.Modules.beatsBasic"
+          }
+        ],
+        "common": [
+          {
+            "id": "origin story",
+            "name": "BUMP.Modules.beatsOriginStory",
+            "group": "hunter",
+            "load": 2
+          },
+          {
+            "id": "cut loose",
+            "name": "BUMP.Modules.beatsCutLoose",
+            "group": "hunter",
+            "load": 2
+          },
+          {
+            "id": "level up",
+            "name": "BUMP.Modules.beatsLevelUp",
+            "group": "hunter",
+            "load": 4
+          },
+          {
+            "id": "retire",
+            "name": "BUMP.Modules.beatsRetire",
+            "group": "hunter",
+            "load": 1
+          },
+          {
+            "id": "chosen family",
+            "name": "BUMP.Modules.beatsChosenFamily",
+            "group": "pact",
+            "load": 2
+          },
+          {
+            "id": "make a discovery",
+            "name": "BUMP.Modules.beatsMakeADiscovery",
+            "group": "pact",
+            "load": 4
+          },
+          {
+            "id": "galvanize",
+            "name": "BUMP.Modules.beatsGalvanize",
+            "group": "pact",
+            "load": 4
+          },
+          {
+            "id": "make friends",
+            "name": "BUMP.Modules.beatsMakeFriends",
+            "group": "pact",
+            "load": 3
+          },
+          {
+            "id": "remodel",
+            "name": "BUMP.Modules.beatsRemodel",
+            "group": "pact",
+            "load": 3
+          },
+          {
+            "id": "ties that bind",
+            "name": "BUMP.Modules.beatsTiesThatBind",
+            "group": "pact",
+            "load": 4
+          },
+          {
+            "id": "quell alarm",
+            "name": "BUMP.Modules.beatsQuellAlarm",
+            "group": "basic",
+            "readOnly": true,
+            "load": 1
+          },
+          {
+            "id": "seek solace",
+            "name": "BUMP.Modules.beatsSeekSolace",
+            "group": "basic",
+            "readOnly": true,
+            "load": 1
+          },
+          {
+            "id": "acquire asset",
+            "name": "BUMP.Modules.beatsAcquireAnAsset",
+            "group": "basic",
+            "readOnly": true,
+            "load": 1
+          },
+          {
+            "id": "recover",
+            "name": "BUMP.Modules.beatsRecover",
+            "group": "basic",
+            "readOnly": true,
+            "load": 1
+          },
+          {
+            "id": "long term project",
+            "name": "BUMP.Modules.beatsLongTermProject",
+            "group": "basic",
+            "readOnly": true,
+            "load": 1
+          }
+        ]
+      }
+    }
+  }
+}

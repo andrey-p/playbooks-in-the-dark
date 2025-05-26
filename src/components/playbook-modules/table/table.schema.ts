@@ -1,23 +1,27 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
-import { TrackerPropsWithLabel } from '@/components/playbook-elements/trackers/trackers.schema';
+
+export const Column = z.object({
+  heading: z.string(),
+  widthPct: z.number()
+});
 
 export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
     props: z.object({
-      trackers: z.record(z.string(), TrackerPropsWithLabel)
+      columns: z.array(Column),
+      maxRows: z.number().int()
     })
   })
 );
-export const PlaybookProps = BasePlaybookProps.and(z.void());
+
+export const PlaybookProps = BasePlaybookProps;
+
 export const UserValue = z
   .object({
-    values: z.record(
-      z.string().refine((val) => val.length < 255),
-      z.number().refine((val) => val >= 0 && val <= 255)
-    )
+    values: z.array(z.array(z.string().refine((val) => val.length <= 255)))
   })
-  .default({ values: {} });
+  .default({ values: [] });
 
 export default z.object({
   moduleDefinition: ModuleDefinition,

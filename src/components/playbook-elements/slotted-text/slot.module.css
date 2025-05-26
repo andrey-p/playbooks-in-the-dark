@@ -3,3 +3,8 @@
   border-bottom: 1px solid var(--foreground);
   margin: 0;
 }
+
+.textArea {
+  margin-top: 1rem;
+  width: 100%;
+}

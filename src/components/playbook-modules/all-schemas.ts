@@ -14,6 +14,7 @@ import * as ContactsSchemas from './contacts/contacts.schema';
 import * as ClaimsSchemas from './claims/claims.schema';
 import * as CohortsSchemas from './cohorts/cohorts.schema';
 import * as DescriptionSchemas from './description/description.schema';
+import * as TableSchemas from './table/table.schema';
 
 export const schemasByModuleType = {
   textField: TextFieldSchemas,
@@ -28,7 +29,8 @@ export const schemasByModuleType = {
   contacts: ContactsSchemas,
   claims: ClaimsSchemas,
   cohorts: CohortsSchemas,
-  description: DescriptionSchemas
+  description: DescriptionSchemas,
+  table: TableSchemas
 };
 
 export const getUnifiedUserValueSchema = () => {
