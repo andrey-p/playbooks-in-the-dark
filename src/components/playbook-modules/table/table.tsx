@@ -26,6 +26,8 @@ export default function Table(props: Props) {
   const { moduleDefinition, playbookProps, userValue, onUpdate } = props;
   const { props: moduleProps } = moduleDefinition;
   const { values } = userValue;
+  // false positive for the linter - apparently this issue should be fixed
+  // but this is still causing a lint error
   // https://github.com/facebook/react/issues/31687
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const t = useTranslations();

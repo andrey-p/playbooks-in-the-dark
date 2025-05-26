@@ -34,14 +34,18 @@ export default function Item(props: Props) {
 
   return (
     <div className={clsx(styles.container, 'item')}>
-      {/* load 0 items still show a box */}
       <SimpleTracker
         type='square'
         readOnly={item.readOnly}
         variant={showLinked ? 'linked' : undefined}
         onValueSelect={onSelect}
+        // items can have unique props for both the general module...
         {...trackerProps}
+        // ... and for the individual item itself
+        // (for example, if most items use square trackers
+        // apart from one that uses a circle tracker)
         {...itemTrackerProps}
+        // load 0 items still show a box
         max={item.load || 1}
         value={selected || 0}
       />
