@@ -65,7 +65,7 @@
     },
     "ModulesShared": {
       "harmLabel": "Harm with level {level}, column {column}",
-      "cohortDescriptionLabel": "Cohort {number} description",
+      "cohortDescriptionLabel": "Description for cohort {number}",
       "tableCellLabel": "Entry for column {columnName}, row {row}"
     }
   }
