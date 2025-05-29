@@ -7,6 +7,10 @@
   margin: -0.15rem;
   box-sizing: content-box;
   position: relative;
+
+  &:has(> .control:focus-visible) {
+    outline: 3px solid var(--highlight);
+  }
 }
 
 .control {
