@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { useState } from 'react';
+import { useState, useId } from 'react';
 import styles from './simple-tracker.module.css';
 import clsx from 'clsx';
 import Toggle from '@/components/playbook-elements/toggle/toggle';
@@ -10,8 +10,16 @@ type Props = z.infer<typeof TrackerPropsSchema> & {
 };
 
 export default function SimpleTracker(props: Props) {
-  const { value, readOnly, max, type, variant, reverse, wrap, onValueSelect } =
-    props;
+  const {
+    value = 0,
+    readOnly,
+    max,
+    type,
+    variant,
+    reverse,
+    wrap,
+    onValueSelect
+  } = props;
   let { size } = props;
 
   const [highlightedValue, setHighlightedValue] = useState<number | null>(null);
@@ -21,6 +29,8 @@ export default function SimpleTracker(props: Props) {
       'This component does not support a clock value - use the clock component instead'
     );
   }
+
+  const consistentId = useId();
 
   // make the default size of dagger trackers
   // visually similar to other sizes
@@ -39,24 +49,34 @@ export default function SimpleTracker(props: Props) {
     toggles.push(
       <div key={i} className={clsx(styles.toggle, 'tracker-toggle')}>
         <Toggle
+          // PITD trackers superficially feel like they should be <input type='range'/>
+          // but realistically they're more like a radio group with discrete
+          // (albeit numeric) options
+          // using <input type='radio'/> also provides some handy keyboard shortcuts out of the box
+          controlType='radio'
+          controlProps={{
+            name: consistentId,
+            checked: i === value - 1,
+            'aria-label': value.toString(),
+            onChange: () => {
+              if (onValueSelect && !readOnly) {
+                if (value === i + 1) {
+                  onValueSelect(0);
+                } else {
+                  onValueSelect(i + 1);
+                }
+              }
+            },
+            onMouseEnter: () => {
+              if (!readOnly) {
+                setHighlightedValue(i + 1);
+              }
+            }
+          }}
           type={type}
           filled={i < value}
           highlighted={highlighted}
           size={size}
-          onClick={() => {
-            if (onValueSelect && !readOnly) {
-              if (value === i + 1) {
-                onValueSelect(0);
-              } else {
-                onValueSelect(i + 1);
-              }
-            }
-          }}
-          onMouseEnter={() => {
-            if (!readOnly) {
-              setHighlightedValue(i + 1);
-            }
-          }}
         />
       </div>
     );

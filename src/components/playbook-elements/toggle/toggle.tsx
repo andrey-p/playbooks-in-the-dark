@@ -5,13 +5,22 @@ import clsx from 'clsx';
 import { ToggleProps as TogglePropsSchema } from './toggle.schema';
 
 type Props = z.infer<typeof TogglePropsSchema> & {
-  onMouseEnter?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  onMouseLeave?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  controlType: 'switch' | 'checkbox' | 'radio';
+  controlProps:
+    | React.InputHTMLAttributes<HTMLInputElement>
+    | React.ButtonHTMLAttributes<HTMLButtonElement>;
 };
 
 export default function Toggle(props: Props) {
-  const { type, size, highlighted, invertColours, filled, ...rest } = props;
+  const {
+    type,
+    size,
+    highlighted,
+    invertColours,
+    controlType,
+    controlProps,
+    filled
+  } = props;
 
   const height = size || 20;
   let width = height;
@@ -49,10 +58,44 @@ export default function Toggle(props: Props) {
       break;
   }
 
+  let control;
+
+  // this control is rendered with opacity: 0
+  // to make sure the toggle is in the accessibility tree
+  switch (controlType) {
+    case 'switch':
+      const buttonProps =
+        controlProps as React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+      control = (
+        <button
+          {...buttonProps}
+          role='switch'
+          className={styles.control}
+          aria-checked={filled}
+        />
+      );
+    case 'checkbox':
+    case 'radio':
+      const inputProps =
+        controlProps as React.InputHTMLAttributes<HTMLInputElement>;
+
+      control = (
+        <input
+          {...inputProps}
+          type={controlType}
+          className={styles.control}
+          checked={
+            typeof inputProps.checked === 'undefined'
+              ? filled
+              : inputProps.checked
+          }
+        />
+      );
+  }
+
   return (
-    <button
-      role='switch'
-      aria-checked={filled}
+    <div
       className={clsx(
         styles.container,
         styles.default,
@@ -63,17 +106,17 @@ export default function Toggle(props: Props) {
         type
       )}
       style={{ width, height }}
-      {...rest}
     >
-      {/* add 2px around the viewbox so the
-        shape stroke doesn't get cut off */}
+      {control}
       <svg
         width={width}
         height={height}
+        // add 2px around the viewbox so the
+        // shape stroke doesn't get cut off
         viewBox={`-2 -2 ${width + 4} ${height + 4}`}
       >
         {shape}
       </svg>
-    </button>
+    </div>
   );
 }

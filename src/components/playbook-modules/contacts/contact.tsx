@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { useState } from 'react';
+import { useState, useId } from 'react';
 import { Contact as ContactSchema } from './contacts.schema';
 import { SlotValue as SlotValueSchema } from '@/components/playbook-elements/slotted-text/slotted-text.schema';
 import SlottedText from '@/components/playbook-elements/slotted-text/slotted-text';
@@ -28,6 +28,7 @@ export default function Contact(props: Props) {
     onSlotUpdate
   } = props;
   const [highlighted, setHighlighted] = useState<number | null>(null);
+  const consistentId = useId();
 
   return (
     <div>
@@ -37,10 +38,15 @@ export default function Contact(props: Props) {
           size={15}
           filled={relationship === 1}
           highlighted={highlighted === 1}
-          onMouseEnter={() => setHighlighted(1)}
-          onMouseLeave={() => setHighlighted(null)}
-          onClick={() => {
-            onRelationshipUpdate(contact.id, relationship === 1 ? 0 : 1);
+          controlType='radio'
+          controlProps={{
+            name: consistentId,
+            checked: relationship === 1,
+            onMouseEnter: () => setHighlighted(1),
+            onMouseLeave: () => setHighlighted(null),
+            onClick: () => {
+              onRelationshipUpdate(contact.id, relationship === 1 ? 0 : 1);
+            }
           }}
         />
       </div>
@@ -51,10 +57,15 @@ export default function Contact(props: Props) {
             type='triangle'
             filled={relationship === -1}
             highlighted={highlighted === -1}
-            onMouseEnter={() => setHighlighted(-1)}
-            onMouseLeave={() => setHighlighted(null)}
-            onClick={() => {
-              onRelationshipUpdate(contact.id, relationship === -1 ? 0 : -1);
+            controlType='radio'
+            controlProps={{
+              name: consistentId,
+              checked: relationship === -1,
+              onMouseEnter: () => setHighlighted(-1),
+              onMouseLeave: () => setHighlighted(null),
+              onClick: () => {
+                onRelationshipUpdate(contact.id, relationship === -1 ? 0 : -1);
+              }
             }}
           />
         </div>

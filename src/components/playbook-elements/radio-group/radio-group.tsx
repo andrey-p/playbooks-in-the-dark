@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { useState } from 'react';
+import { useState, useId } from 'react';
 import styles from './radio-group.module.css';
 import Toggle from '@/components/playbook-elements/toggle/toggle';
 import { RadioGroupProps as RadioGroupPropsSchema } from './radio-group.schema';
@@ -13,6 +13,7 @@ export default function RadioGroup(props: Props) {
   const { options, value, size, type, onValueSelect, invertColours } = props;
   const [highlightedId, setHighlightedId] = useState<string | null>(null);
   const t = useTranslations();
+  const consistentId = useId();
 
   const onChange = (id: string | null) => {
     if (id === value) {
@@ -33,9 +34,14 @@ export default function RadioGroup(props: Props) {
               highlighted={highlightedId === option.id}
               invertColours={invertColours}
               size={size || 20}
-              onClick={() => onChange(option.id)}
-              onMouseEnter={() => setHighlightedId(option.id)}
-              onMouseLeave={() => setHighlightedId(null)}
+              controlType='radio'
+              controlProps={{
+                name: consistentId,
+                checked: value === option.id,
+                onClick: () => onChange(option.id),
+                onMouseEnter: () => setHighlightedId(option.id),
+                onMouseLeave: () => setHighlightedId(null)
+              }}
             />
             <span className={styles.name}>{t(option.name)}</span>
           </label>
