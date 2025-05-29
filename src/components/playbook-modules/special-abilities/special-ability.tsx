@@ -1,3 +1,4 @@
+import { useId } from 'react';
 import { z } from 'zod';
 import SimpleTracker from '@/components/playbook-elements/trackers/simple-tracker';
 import { SpecialAbility as SpecialAbilitySchema } from './special-abilities.schema';
@@ -21,6 +22,7 @@ export default function SpecialAbility(props: Props) {
   const { specialAbility, selected, slotValues, onSlotUpdate, onSelect } =
     props;
   const t = useTranslations();
+  const consistentId = useId();
 
   return (
     <div className={styles.container}>
@@ -28,12 +30,15 @@ export default function SpecialAbility(props: Props) {
         <SimpleTracker
           value={selected || 0}
           type='circle'
+          labelledBy={consistentId}
           max={specialAbility.max || 1}
           onValueSelect={onSelect}
         />
       </div>
       <div>
-        <span className={styles.name}>{t(specialAbility.name)}: </span>
+        <span className={styles.name} id={consistentId}>
+          {t(specialAbility.name)}:{' '}
+        </span>
         {specialAbility.slots ? (
           <SlottedText
             text={specialAbility.description}

@@ -26,6 +26,7 @@ export default function Tracker(props: Props) {
         <SimpleTracker
           {...moduleProps}
           value={value}
+          label={moduleDefinition.label}
           onValueSelect={onValueSelect}
         />
       )}

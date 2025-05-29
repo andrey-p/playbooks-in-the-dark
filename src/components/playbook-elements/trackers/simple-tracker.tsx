@@ -4,10 +4,19 @@ import styles from './simple-tracker.module.css';
 import clsx from 'clsx';
 import Toggle from '@/components/playbook-elements/toggle/toggle';
 import { TrackerProps as TrackerPropsSchema } from './trackers.schema';
+import { useTranslations } from 'next-intl';
 
-type Props = z.infer<typeof TrackerPropsSchema> & {
+type PropsWithLabel = z.infer<typeof TrackerPropsSchema> & {
   onValueSelect?: (value: number) => void;
+  label: string;
 };
+
+type PropsWithLabelledBy = z.infer<typeof TrackerPropsSchema> & {
+  onValueSelect?: (value: number) => void;
+  labelledBy: string;
+};
+
+type Props = PropsWithLabel | PropsWithLabelledBy;
 
 export default function SimpleTracker(props: Props) {
   const {
@@ -18,9 +27,11 @@ export default function SimpleTracker(props: Props) {
     variant,
     reverse,
     wrap,
-    onValueSelect
+    onValueSelect,
+    ...rest
   } = props;
   let { size } = props;
+  const t = useTranslations();
 
   const [highlightedValue, setHighlightedValue] = useState<number | null>(null);
 
@@ -112,7 +123,7 @@ export default function SimpleTracker(props: Props) {
   }
 
   return (
-    <div
+    <fieldset
       className={clsx(
         styles.container,
         variant && styles[variant],
@@ -122,8 +133,10 @@ export default function SimpleTracker(props: Props) {
       onMouseLeave={() => {
         setHighlightedValue(null);
       }}
+      aria-labelledby={'labelledBy' in rest ? rest.labelledBy : undefined}
     >
+      {rest.label && <legend className={styles.legend}>{t(rest.label)}</legend>}
       {toggles}
-    </div>
+    </fieldset>
   );
 }

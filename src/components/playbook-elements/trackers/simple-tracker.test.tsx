@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 
 describe('SimpleTracker', () => {
   it('should render', async () => {
-    render(<SimpleTracker value={5} max={10} type='dagger' />);
+    render(<SimpleTracker value={5} label='hi' max={10} type='dagger' />);
 
     const toggles = screen.getAllByRole('radio');
 
@@ -14,7 +14,7 @@ describe('SimpleTracker', () => {
   it('should highlight all the toggles up to the one being hovered', async () => {
     const user = userEvent.setup();
 
-    render(<SimpleTracker value={0} max={10} type='square' />);
+    render(<SimpleTracker value={0} label='hi' max={10} type='square' />);
 
     const toggles = screen.getAllByRole('radio');
     await user.hover(toggles[4]);
@@ -35,6 +35,7 @@ describe('SimpleTracker', () => {
       <SimpleTracker
         onValueSelect={onValueSelect}
         value={0}
+        label='hi'
         max={10}
         type='square'
       />
@@ -50,6 +51,7 @@ describe('SimpleTracker', () => {
         onValueSelect={onValueSelect}
         value={3}
         max={10}
+        label='hi'
         type='square'
       />
     );
@@ -77,6 +79,7 @@ describe('SimpleTracker', () => {
         onValueSelect={onValueSelect}
         value={0}
         max={10}
+        label='hi'
         type='square'
       />
     );
