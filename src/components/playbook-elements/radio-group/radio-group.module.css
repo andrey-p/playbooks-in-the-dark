@@ -1,6 +1,21 @@
-.list {
+.container {
   display: flex;
-  list-style-type: none;
+  gap: 0.3rem;
+  padding: 0.3rem;
+  margin: -0.3rem;
+  overflow: clip;
+  position: relative;
+  border: none;
+
+  &:has(.toggleZero:focus-visible) {
+    outline: 3px solid var(--highlight);
+  }
+}
+
+.legend,
+.toggleZeroContainer {
+  position: absolute;
+  top: -100%;
 }
 
 .label {

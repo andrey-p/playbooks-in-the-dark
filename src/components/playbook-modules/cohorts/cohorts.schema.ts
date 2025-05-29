@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { BaseModuleDefinition, BasePlaybookProps } from '@/schemas';
-import { TrackerProps } from '@/components/playbook-elements/trackers/trackers.schema';
-import { RadioGroupProps } from '@/components/playbook-elements/radio-group/radio-group.schema';
+import { TrackerPropsWithLabel } from '@/components/playbook-elements/trackers/trackers.schema';
+import { RadioGroupPropsWithLabel } from '@/components/playbook-elements/radio-group/radio-group.schema';
 
 export const CohortValue = z.object({
   radioGroups: z
@@ -29,8 +29,8 @@ export const ModuleDefinition = BaseModuleDefinition.merge(
   z.object({
     props: z.object({
       slots: z.number(),
-      trackers: z.record(z.string(), TrackerProps).optional(),
-      radioGroups: z.record(z.string(), RadioGroupProps).optional()
+      trackers: z.record(z.string(), TrackerPropsWithLabel).optional(),
+      radioGroups: z.record(z.string(), RadioGroupPropsWithLabel).optional()
     })
   })
 );

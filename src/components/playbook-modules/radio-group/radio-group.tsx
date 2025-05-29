@@ -22,6 +22,7 @@ export default function RadioGroup(props: Props) {
       <RadioGroupComponent
         {...moduleProps}
         value={value}
+        label={moduleDefinition.label}
         onValueSelect={onValueSelect}
       />
     </ModuleWrapper>
