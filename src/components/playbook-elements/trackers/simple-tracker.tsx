@@ -56,14 +56,19 @@ export default function SimpleTracker(props: Props) {
           controlType='radio'
           controlProps={{
             name: consistentId,
+            value: i + 1,
             checked: i === value - 1,
             'aria-label': (i + 1).toString(),
-            onChange: () => {
+            onChange: (e: React.ChangeEvent<HTMLInputElement>) => {
               if (onValueSelect && !readOnly) {
-                if (value === i + 1) {
+                onValueSelect(parseInt(e.target.value));
+              }
+            },
+            onClick: () => {
+              if (onValueSelect && !readOnly) {
+                // click selected value to deselect
+                if (i === value - 1) {
                   onValueSelect(0);
-                } else {
-                  onValueSelect(i + 1);
                 }
               }
             },
