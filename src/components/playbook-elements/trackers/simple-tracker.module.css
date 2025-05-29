@@ -1,6 +1,19 @@
 .container {
   display: flex;
   gap: 0.3rem;
+  padding: 0.3rem;
+  margin: -0.3rem;
+  overflow: clip;
+  position: relative;
+
+  &:has(.toggleZero:focus-visible) {
+    outline: 3px solid var(--highlight);
+  }
+}
+
+.toggleZeroContainer {
+  position: absolute;
+  top: -100%;
 }
 
 .wrap {

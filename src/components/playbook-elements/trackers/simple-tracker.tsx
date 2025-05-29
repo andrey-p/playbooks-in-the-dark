@@ -38,7 +38,27 @@ export default function SimpleTracker(props: Props) {
     size = 30;
   }
 
-  const toggles = [];
+  const toggles = [
+    // secret zeroth toggle
+    // rendered outside of the visible tracker space,
+    // but within the accessibility tree
+    // so keyboard users can zero out the tracker
+    <div key={-1} className={styles.toggleZeroContainer}>
+      <input
+        type='radio'
+        name={consistentId}
+        value={0}
+        checked={value === 0}
+        className={styles.toggleZero}
+        aria-label='0'
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+          if (onValueSelect && !readOnly) {
+            onValueSelect(parseInt(e.target.value));
+          }
+        }}
+      />
+    </div>
+  ];
 
   for (let i = 0; i < max; i++) {
     // highlight all the toggles up to and including
