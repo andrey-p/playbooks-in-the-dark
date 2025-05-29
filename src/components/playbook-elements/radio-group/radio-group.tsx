@@ -38,7 +38,7 @@ export default function RadioGroup(props: Props) {
               controlProps={{
                 name: consistentId,
                 checked: value === option.id,
-                onClick: () => onChange(option.id),
+                onChange: () => onChange(option.id),
                 onMouseEnter: () => setHighlightedId(option.id),
                 onMouseLeave: () => setHighlightedId(null)
               }}

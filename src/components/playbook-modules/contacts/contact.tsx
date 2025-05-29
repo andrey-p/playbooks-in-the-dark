@@ -44,7 +44,7 @@ export default function Contact(props: Props) {
             checked: relationship === 1,
             onMouseEnter: () => setHighlighted(1),
             onMouseLeave: () => setHighlighted(null),
-            onClick: () => {
+            onChange: () => {
               onRelationshipUpdate(contact.id, relationship === 1 ? 0 : 1);
             }
           }}
@@ -63,7 +63,7 @@ export default function Contact(props: Props) {
               checked: relationship === -1,
               onMouseEnter: () => setHighlighted(-1),
               onMouseLeave: () => setHighlighted(null),
-              onClick: () => {
+              onChange: () => {
                 onRelationshipUpdate(contact.id, relationship === -1 ? 0 : -1);
               }
             }}
