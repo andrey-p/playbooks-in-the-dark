@@ -57,7 +57,7 @@ export default function SimpleTracker(props: Props) {
           controlProps={{
             name: consistentId,
             checked: i === value - 1,
-            'aria-label': value.toString(),
+            'aria-label': (i + 1).toString(),
             onChange: () => {
               if (onValueSelect && !readOnly) {
                 if (value === i + 1) {
