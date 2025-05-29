@@ -179,6 +179,7 @@
         "radioGroups": {
           "expertCrew": {
             "type": "triangle",
+            "label": "BUMP.Modules.alliesTypeLabel",
             "options": [
               {
                 "id": "expert",
