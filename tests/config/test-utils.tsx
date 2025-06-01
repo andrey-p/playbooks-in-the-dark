@@ -28,19 +28,9 @@ export const addTestTranslations = (extraTranslations: object) => {
 expect.extend(toHaveNoViolations);
 
 export const testAccessibility = async (container: Element) => {
-  // currently very limited, to allow for staged improvements
   const result = await axe(container);
 
-  const labelViolations = result.violations.find(
-    (violation) => violation.id === 'label'
-  );
-
-  if (labelViolations) {
-    expect(labelViolations.nodes).toHaveLength(0);
-  }
-
-  // eventually we want to uncomment this:
-  // expect(result).toHaveNoViolations();
+  expect(result).toHaveNoViolations();
 };
 
 // only some tests care about the translation warning showing

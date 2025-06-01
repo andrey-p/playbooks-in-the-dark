@@ -422,6 +422,7 @@
         "radioGroups": {
           "gangExpert": {
             "type": "circle",
+            "label": "AFOD.Modules.cohortsTypeLabel",
             "options": [
               {
                 "id": "gang",
@@ -436,6 +437,7 @@
           "harm": {
             "type": "rectangle",
             "size": 30,
+            "label": "AFOD.Modules.cohortsHarmLabel",
             "options": [
               {
                 "id": "weak",
@@ -454,6 +456,7 @@
           "armor": {
             "type": "rectangle",
             "size": 30,
+            "label": "AFOD.Modules.cohortsArmorLabel",
             "options": [
               {
                 "id": "armor",

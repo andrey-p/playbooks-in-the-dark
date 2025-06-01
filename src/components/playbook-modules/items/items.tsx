@@ -61,6 +61,7 @@ export default function Items(props: Props) {
             options={load}
             value={selectedLoad || null}
             type='rhombus'
+            label='UI.ModulesShared.itemsLoad'
             onValueSelect={onLoadSelect}
           />
         </div>

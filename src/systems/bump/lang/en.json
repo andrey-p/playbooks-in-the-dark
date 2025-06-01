@@ -322,6 +322,7 @@
       "bondLabel": "Bond",
       "alliesLabel": "Allies",
       "alliesQualityLabel": "Quality",
+      "alliesTypeLabel": "Type",
       "alliesExpert": "Expert",
       "alliesCrew": "Crew",
       "factionsLabel": "Factions",

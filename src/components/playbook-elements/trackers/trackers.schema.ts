@@ -5,6 +5,7 @@ export const TrackerProps = z.object({
   type: ToggleType.or(z.enum(['clock'])),
   value: z.number().int().default(0),
   max: z.number().int().default(4),
+  label: z.string().optional(),
   reverse: z.boolean().optional(),
   variant: z.enum(['linked']).optional(),
   wrap: z.boolean().optional(),

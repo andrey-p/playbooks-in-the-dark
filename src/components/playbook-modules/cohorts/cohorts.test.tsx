@@ -10,6 +10,7 @@ const moduleDefinition = {
     slots: 4,
     radioGroups: {
       harm: {
+        label: 'Harm',
         type: 'circle' as const,
         options: [
           { id: 'weak', name: 'Weak' },

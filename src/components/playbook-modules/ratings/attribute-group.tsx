@@ -1,3 +1,4 @@
+import { useId } from 'react';
 import { z } from 'zod';
 import {
   Attribute as AttributeSchema,
@@ -37,6 +38,7 @@ export default function AttributeGroup(props: Props) {
     trackerProps
   } = props;
   const t = useTranslations();
+  const consistentId = useId();
 
   return (
     <div className={clsx(styles.container, 'attribute-group-container')}>
@@ -47,11 +49,14 @@ export default function AttributeGroup(props: Props) {
           type='dagger'
           {...trackerProps}
           value={xp}
+          labelledBy={consistentId}
           onValueSelect={(value) => {
             onXpUpdate(attribute.id, value);
           }}
         />
-        {attribute.trackerLabel && <div>{t(attribute.trackerLabel)}</div>}
+        {attribute.trackerLabel && (
+          <div id={consistentId}>{t(attribute.trackerLabel)}</div>
+        )}
       </div>
 
       <ul className={styles.ratings}>
@@ -61,11 +66,14 @@ export default function AttributeGroup(props: Props) {
               value={currentRatings[action.id] || 0}
               max={maxRating}
               type='circle'
+              labelledBy={consistentId + action.id}
               onValueSelect={(value) => {
                 onRatingUpdate(action.id, value);
               }}
             />
-            <div className={styles.actionName}>{t(action.name)}</div>
+            <div className={styles.actionName} id={consistentId + action.id}>
+              {t(action.name)}
+            </div>
           </li>
         ))}
       </ul>

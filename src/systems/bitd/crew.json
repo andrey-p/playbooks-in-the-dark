@@ -348,6 +348,7 @@
         "radioGroups": {
           "gangExpert": {
             "type": "circle",
+            "label": "BITD.Modules.cohortsTypeLabel",
             "options": [
               {
                 "id": "gang",
@@ -362,6 +363,7 @@
           "harm": {
             "type": "dagger",
             "size": 30,
+            "label": "BITD.Modules.cohortsHarmLabel",
             "options": [
               {
                 "id": "weak",
@@ -380,6 +382,7 @@
           "armor": {
             "type": "dagger",
             "size": 30,
+            "label": "BITD.Modules.cohortsArmorLabel",
             "options": [
               {
                 "id": "armor",

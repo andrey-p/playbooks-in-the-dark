@@ -21,11 +21,17 @@ export default function Tracker(props: Props) {
       playbookProps={playbookProps}
     >
       {moduleProps.type === 'clock' ? (
-        <Clock {...moduleProps} value={value} onValueSelect={onValueSelect} />
+        <Clock
+          {...moduleProps}
+          value={value}
+          onValueSelect={onValueSelect}
+          label={moduleDefinition.label}
+        />
       ) : (
         <SimpleTracker
           {...moduleProps}
           value={value}
+          label={moduleDefinition.label}
           onValueSelect={onValueSelect}
         />
       )}

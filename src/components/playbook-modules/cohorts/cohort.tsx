@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { useId } from 'react';
-import { RadioGroupProps as RadioGroupPropsSchema } from '@/components/playbook-elements/radio-group/radio-group.schema';
+import { RadioGroupPropsWithLabel as RadioGroupPropsSchema } from '@/components/playbook-elements/radio-group/radio-group.schema';
 import { TrackerPropsWithLabel as TrackerPropsSchema } from '@/components/playbook-elements/trackers/trackers.schema';
 import { CohortValue as CohortValueSchema } from './cohorts.schema';
 import RadioGroup from '@/components/playbook-elements/radio-group/radio-group';
@@ -65,9 +65,12 @@ export default function Cohort(props: Props) {
             <SimpleTracker
               {...trackers[id]}
               value={trackerValues[id]}
+              labelledBy={consistentId + 't' + id}
               onValueSelect={(value) => onTrackerUpdate(id, value)}
             />
-            <div className={clsx(`${id}-label`)}>{t(trackers[id].label)}</div>
+            <div className={clsx(`${id}-label`)} id={consistentId + 't' + id}>
+              {t(trackers[id].label)}
+            </div>
           </div>
         ))}
       {radioGroups &&
@@ -76,6 +79,7 @@ export default function Cohort(props: Props) {
             <RadioGroup
               {...radioGroups[id]}
               value={radioGroupValues[id]}
+              label={radioGroups[id].label}
               onValueSelect={(value) => onRadioUpdate(id, value)}
             />
           </div>

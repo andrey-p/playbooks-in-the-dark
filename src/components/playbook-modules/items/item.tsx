@@ -1,3 +1,4 @@
+import { useId } from 'react';
 import { z } from 'zod';
 import { Item as ItemSchema } from './items.schema';
 import { SlotValue as SlotValueSchema } from '@/components/playbook-elements/slotted-text/slotted-text.schema';
@@ -26,6 +27,8 @@ export default function Item(props: Props) {
     onSlotUpdate
   } = props;
 
+  const consistentId = useId();
+
   // default to showing load 2+ items as linked
   const showLinked =
     typeof item.showLinked === 'boolean' ? item.showLinked : true;
@@ -38,6 +41,7 @@ export default function Item(props: Props) {
         type='square'
         readOnly={item.readOnly}
         variant={showLinked ? 'linked' : undefined}
+        labelledBy={consistentId}
         onValueSelect={onSelect}
         // items can have unique props for both the general module...
         {...trackerProps}
@@ -51,6 +55,7 @@ export default function Item(props: Props) {
       />
       <span
         className={clsx(styles.itemLabel, item.load === 0 && styles.noLoadItem)}
+        id={consistentId}
       >
         <SlottedText
           text={item.name}
