@@ -6,6 +6,7 @@
   overflow: clip;
   position: relative;
   border: none;
+  align-items: center;
 
   &:has(.toggleZero:focus-visible) {
     outline: 3px solid var(--highlight);
