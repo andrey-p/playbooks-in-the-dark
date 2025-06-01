@@ -1,16 +1,20 @@
 import { z } from 'zod';
-import { useState } from 'react';
+import { useState, useId } from 'react';
 import styles from './clock.module.css';
 import clsx from 'clsx';
+import RadioControlWrapper from '@/components/playbook-elements/radio-control-wrapper/radio-control-wrapper';
+import { LabelOrLabelledBy as LabelOrLabelledBySchema } from '@/components/playbook-elements/radio-control-wrapper/radio-control-wrapper.schema';
 import { TrackerProps as TrackerPropsSchema } from './trackers.schema';
 
-type Props = z.infer<typeof TrackerPropsSchema> & {
-  onValueSelect?: (value: number) => void;
-};
+type Props = z.infer<typeof TrackerPropsSchema> &
+  z.infer<typeof LabelOrLabelledBySchema> & {
+    onValueSelect?: (value: number) => void;
+  };
 
 export default function Clock(props: Props) {
-  const { value, max: numSlices, onValueSelect, size } = props;
+  const { value, max: numSlices, onValueSelect, size, ...rest } = props;
   const [highlightedSlice, setHighlightedSlice] = useState<number | null>(null);
+  const consistentId = useId();
 
   const diameter = size || 100;
   const radius = diameter / 2;
@@ -37,7 +41,39 @@ export default function Clock(props: Props) {
   }
 
   return (
-    <div>
+    <RadioControlWrapper
+      name={consistentId}
+      zeroSelected={value === 0}
+      zeroLabel={'0'}
+      onZeroSelect={() => {
+        if (onValueSelect) {
+          onValueSelect(0);
+        }
+      }}
+      {...rest}
+    >
+      <div
+        className={styles.hiddenInputContainer}
+        style={{ width: diameter, height: diameter }}
+      >
+        {/* hidden radio inputs to back accessibility */}
+        {slices.map((_, i) => (
+          <input
+            className={styles.hiddenInput}
+            key={i}
+            type='radio'
+            name={consistentId}
+            value={i + 1}
+            checked={i === value - 1}
+            aria-label={(i + 1).toString()}
+            onChange={(e) => {
+              if (onValueSelect) {
+                onValueSelect(parseInt(e.target.value));
+              }
+            }}
+          />
+        ))}
+      </div>
       <svg
         width={diameter}
         height={diameter}
@@ -83,6 +119,6 @@ export default function Clock(props: Props) {
           fill='rgba(0,0,0,0)'
         />
       </svg>
-    </div>
+    </RadioControlWrapper>
   );
 }

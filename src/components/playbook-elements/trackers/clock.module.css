@@ -6,6 +6,26 @@
   cursor: pointer;
 }
 
+.hiddenInputContainer {
+  position: absolute;
+  left: 0.3rem;
+  top: 0.3rem;
+
+  &:has(.hiddenInput:focus-visible) {
+    outline: 3px solid var(--highlight);
+  }
+}
+
+.hiddenInput {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 .filled {
   fill: var(--foreground);
   stroke: var(--foreground);
