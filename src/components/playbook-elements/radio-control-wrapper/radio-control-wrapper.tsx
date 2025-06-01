@@ -39,7 +39,7 @@ export default function RadioControlWrapper(props: Props) {
           name={name}
           checked={zeroSelected}
           className={styles.toggleZero}
-          aria-label={zeroLabel || t('UI.ModulesShared.NotSet')}
+          aria-label={zeroLabel || t('UI.ModulesShared.notSet')}
           onChange={(e) => {
             if (e.currentTarget.checked) {
               onZeroSelect();
