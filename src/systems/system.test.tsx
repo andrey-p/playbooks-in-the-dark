@@ -104,7 +104,7 @@ describe('system data check', () => {
             </RendererErrorBoundary>
           );
 
-          // currently adds ~10s per system which is massive for a regular unit test run
+          // currently adds 20+s per system which is massive for a regular unit test run
           // ideally this wants to be part of a more formal, slower-running e2e test suite
           if (process.env.RUN_A11Y_TESTS) {
             await testAccessibility(container);
@@ -113,7 +113,7 @@ describe('system data check', () => {
           cleanup();
         }
       },
-      20000
+      30000
     );
   });
 });
