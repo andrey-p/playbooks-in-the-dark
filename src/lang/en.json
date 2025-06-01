@@ -67,7 +67,11 @@
       "harmLabel": "Harm with level {level}, column {column}",
       "cohortDescriptionLabel": "Description for cohort {number}",
       "tableCellLabel": "Entry for column {columnName}, row {row}",
-      "itemsLoad": "Load"
+      "itemsLoad": "Load",
+      "contactsPositive": "Positive",
+      "contactsNegative": "Negative",
+      "contactsNeutral": "Neutral",
+      "notSet": "Not set"
     }
   }
 }
