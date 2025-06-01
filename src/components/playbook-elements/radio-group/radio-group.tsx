@@ -3,19 +3,14 @@ import { useState, useId, JSX } from 'react';
 import styles from './radio-group.module.css';
 import Toggle from '@/components/playbook-elements/toggle/toggle';
 import { RadioGroupProps as RadioGroupPropsSchema } from './radio-group.schema';
+import RadioControlWrapper from '@/components/playbook-elements/radio-control-wrapper/radio-control-wrapper';
+import { LabelOrLabelledBy as LabelOrLabelledBySchema } from '@/components/playbook-elements/radio-control-wrapper/radio-control-wrapper.schema';
 import { useTranslations } from 'next-intl';
 
-type PropsWithLabel = z.infer<typeof RadioGroupPropsSchema> & {
-  onValueSelect: (value: string | null) => void;
-  label: string;
-};
-
-type PropsWithLabelledBy = z.infer<typeof RadioGroupPropsSchema> & {
-  onValueSelect: (value: string | null) => void;
-  labelledBy: string;
-};
-
-type Props = PropsWithLabel | PropsWithLabelledBy;
+type Props = z.infer<typeof RadioGroupPropsSchema> &
+  z.infer<typeof LabelOrLabelledBySchema> & {
+    onValueSelect: (value: string | null) => void;
+  };
 
 export default function RadioGroup(props: Props) {
   const { options, value, size, type, onValueSelect, invertColours, ...rest } =
@@ -24,24 +19,7 @@ export default function RadioGroup(props: Props) {
   const t = useTranslations();
   const consistentId = useId();
 
-  const toggles: JSX.Element[] = [
-    // secret zeroth toggle
-    // rendered outside of the visible radio group space,
-    // but within the accessibility tree
-    // so keyboard users can zero out the radio group
-    <div key={-1} className={styles.toggleZeroContainer}>
-      <input
-        type='radio'
-        name={consistentId}
-        checked={value === null}
-        className={styles.toggleZero}
-        aria-label='0'
-        onChange={() => {
-          onValueSelect(null);
-        }}
-      />
-    </div>
-  ];
+  const toggles: JSX.Element[] = [];
 
   options.forEach((option) => {
     toggles.push(
@@ -76,12 +54,13 @@ export default function RadioGroup(props: Props) {
   });
 
   return (
-    <fieldset
-      className={styles.container}
-      aria-labelledby={'labelledBy' in rest ? rest.labelledBy : undefined}
+    <RadioControlWrapper
+      name={consistentId}
+      zeroSelected={value === null}
+      onZeroSelect={() => onValueSelect(null)}
+      {...rest}
     >
-      {rest.label && <legend className={styles.legend}>{t(rest.label)}</legend>}
       {toggles}
-    </fieldset>
+    </RadioControlWrapper>
   );
 }

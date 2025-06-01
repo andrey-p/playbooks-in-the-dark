@@ -3,20 +3,14 @@ import { useState, useId } from 'react';
 import styles from './simple-tracker.module.css';
 import clsx from 'clsx';
 import Toggle from '@/components/playbook-elements/toggle/toggle';
+import { LabelOrLabelledBy as LabelOrLabelledBySchema } from '@/components/playbook-elements/radio-control-wrapper/radio-control-wrapper.schema';
+import RadioControlWrapper from '@/components/playbook-elements/radio-control-wrapper/radio-control-wrapper';
 import { TrackerProps as TrackerPropsSchema } from './trackers.schema';
-import { useTranslations } from 'next-intl';
 
-type PropsWithLabel = z.infer<typeof TrackerPropsSchema> & {
-  onValueSelect?: (value: number) => void;
-  label: string;
-};
-
-type PropsWithLabelledBy = z.infer<typeof TrackerPropsSchema> & {
-  onValueSelect?: (value: number) => void;
-  labelledBy: string;
-};
-
-type Props = PropsWithLabel | PropsWithLabelledBy;
+type Props = z.infer<typeof TrackerPropsSchema> &
+  z.infer<typeof LabelOrLabelledBySchema> & {
+    onValueSelect?: (value: number) => void;
+  };
 
 export default function SimpleTracker(props: Props) {
   const {
@@ -31,7 +25,6 @@ export default function SimpleTracker(props: Props) {
     ...rest
   } = props;
   let { size } = props;
-  const t = useTranslations();
 
   const [highlightedValue, setHighlightedValue] = useState<number | null>(null);
 
@@ -49,27 +42,7 @@ export default function SimpleTracker(props: Props) {
     size = 30;
   }
 
-  const toggles = [
-    // secret zeroth toggle
-    // rendered outside of the visible tracker space,
-    // but within the accessibility tree
-    // so keyboard users can zero out the tracker
-    <div key={-1} className={styles.toggleZeroContainer}>
-      <input
-        type='radio'
-        name={consistentId}
-        value={0}
-        checked={value === 0}
-        className={styles.toggleZero}
-        aria-label='0'
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-          if (onValueSelect && !readOnly) {
-            onValueSelect(parseInt(e.target.value));
-          }
-        }}
-      />
-    </div>
-  ];
+  const toggles = [];
 
   for (let i = 0; i < max; i++) {
     // highlight all the toggles up to and including
@@ -123,20 +96,30 @@ export default function SimpleTracker(props: Props) {
   }
 
   return (
-    <fieldset
-      className={clsx(
-        styles.container,
-        variant && styles[variant],
-        wrap && styles.wrap,
-        'tracker-container'
-      )}
-      onMouseLeave={() => {
-        setHighlightedValue(null);
+    <RadioControlWrapper
+      name={consistentId}
+      zeroSelected={value === 0}
+      zeroLabel={'0'}
+      onZeroSelect={() => {
+        if (onValueSelect && !readOnly) {
+          onValueSelect(0);
+        }
       }}
-      aria-labelledby={'labelledBy' in rest ? rest.labelledBy : undefined}
+      {...rest}
     >
-      {rest.label && <legend className={styles.legend}>{t(rest.label)}</legend>}
-      {toggles}
-    </fieldset>
+      <div
+        className={clsx(
+          styles.container,
+          variant && styles[variant],
+          wrap && styles.wrap,
+          'tracker-container'
+        )}
+        onMouseLeave={() => {
+          setHighlightedValue(null);
+        }}
+      >
+        {toggles}
+      </div>
+    </RadioControlWrapper>
   );
 }
