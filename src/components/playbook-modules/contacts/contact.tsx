@@ -83,6 +83,11 @@ export default function Contact(props: Props) {
               onMouseLeave: () => setHighlighted(null),
               onChange: () => {
                 onRelationshipUpdate(contact.id, relationship === -1 ? 0 : -1);
+              },
+              onClick: () => {
+                if (relationship === -1) {
+                  onRelationshipUpdate(contact.id, 0);
+                }
               }
             }}
           />
