@@ -24,6 +24,10 @@
   left: 0;
 }
 
+.svg {
+  display: block;
+}
+
 /* styles for CSV paths, hence stroke / width */
 .default {
   stroke: var(--foreground);
