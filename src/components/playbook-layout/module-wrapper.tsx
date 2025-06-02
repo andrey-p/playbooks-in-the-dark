@@ -27,11 +27,16 @@ export default function ModuleWrapper(props: Props) {
         moduleDefinition.type
       )}
     >
-      {!moduleDefinition.hideModuleLabel && (
-        <h2 className={styles.heading}>
-          {t(playbookProps.customLabel || moduleDefinition.label)}
-        </h2>
-      )}
+      <h2
+        className={clsx(
+          styles.heading,
+          // keep the H3 there but not visible
+          // so the accessibility tree remains consistent
+          moduleDefinition.hideModuleLabel && styles.hidden
+        )}
+      >
+        {t(playbookProps.customLabel || moduleDefinition.label)}
+      </h2>
       {children}
       {moduleDefinition.description && (
         <Description text={moduleDefinition.description} />
