@@ -4,6 +4,11 @@ import systemsJson from '@/systems/systems.json';
 import OptionList from '../components/option-list';
 import Separator from '../components/separator';
 import { getTranslations } from 'next-intl/server';
+import { getTranslatedMetadata } from '@/lib/metadata';
+
+export async function generateMetadata() {
+  return getTranslatedMetadata('UI.Global.newPlaybook');
+}
 
 export default async function Page() {
   const t = await getTranslations();

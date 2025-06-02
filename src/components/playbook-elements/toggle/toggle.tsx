@@ -110,6 +110,7 @@ export default function Toggle(props: Props) {
       {control}
       <svg
         className={styles.svg}
+        role='presentation'
         width={width}
         height={height}
         // add 2px around the viewbox so the

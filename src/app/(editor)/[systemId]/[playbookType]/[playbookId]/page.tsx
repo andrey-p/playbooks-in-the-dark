@@ -1,9 +1,11 @@
 import { z } from 'zod';
+import { Metadata } from 'next';
 import { UserData as UserDataSchema } from '@/schemas';
 import PlaybookEditor from '../../../components/playbook-editor';
 import DataWrapper from '../../../components/data-wrapper';
 import { revalidatePath } from 'next/cache';
 import { savePlaybook, deletePlaybook } from '@/lib/store';
+import { getPlaybookEditorMetadata } from '@/lib/metadata';
 
 type UserDataType = z.infer<typeof UserDataSchema>;
 
@@ -16,6 +18,12 @@ type Params = {
 type Props = {
   params: Promise<Params>;
 };
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const { systemId, playbookType } = await props.params;
+
+  return getPlaybookEditorMetadata(systemId, playbookType);
+}
 
 export default async function Page(props: Props) {
   const { playbookId, systemId, playbookType } = await props.params;
