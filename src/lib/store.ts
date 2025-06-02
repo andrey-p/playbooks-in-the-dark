@@ -16,6 +16,10 @@ export const getPlaybook = async (id: string) => {
   const command = UserData.Entity.build(GetItemCommand).key({ id });
   const { Item: result } = await command.send();
 
+  if (!result) {
+    return null;
+  }
+
   return UserDataSchema.parse(result);
 };
 
@@ -50,7 +54,15 @@ export const savePlaybook = async (data: UserDataType) => {
   });
   await command.send();
 
-  return getPlaybook(id);
+  const saved = await getPlaybook(id);
+
+  if (!saved) {
+    throw new Error(
+      "Couldn't save playbook with data: " + JSON.stringify(data)
+    );
+  }
+
+  return saved;
 };
 
 export const deletePlaybook = async (id: string) => {
