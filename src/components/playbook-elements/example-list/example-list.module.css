@@ -27,19 +27,3 @@
     right: -0.1rem;
   }
 }
-
-.selectable {
-  cursor: pointer;
-
-  &:before {
-    cursor: initial;
-  }
-}
-
-.selected {
-  text-decoration: underline;
-
-  &:before {
-    text-decoration: none;
-  }
-}
