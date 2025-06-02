@@ -4,7 +4,7 @@ import './globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale } from 'next-intl/server';
 
-import { ThemeContext } from '@/context';
+import { ThemeContext, IconContext } from '@/context';
 import { getFontClassName } from './fonts';
 
 export const metadata: Metadata = {
@@ -30,7 +30,7 @@ export default async function RootLayout({
       <body className={getFontClassName()}>
         <NextIntlClientProvider>
           <ThemeContext.Provider initialTheme={initialTheme}>
-            {children}
+            <IconContext.Provider>{children}</IconContext.Provider>
           </ThemeContext.Provider>
         </NextIntlClientProvider>
       </body>
