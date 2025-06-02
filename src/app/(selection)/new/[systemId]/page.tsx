@@ -13,12 +13,17 @@ import Separator from '../../components/separator';
 import type { Option as OptionType } from '../../components/options.types';
 import styles from './page.module.css';
 import { getTranslations } from 'next-intl/server';
+import { getTranslatedMetadata } from '@/lib/metadata';
 
 type PlaybookDefinitionType = z.infer<typeof PlaybookDefinitionSchema>;
 
 type Props = {
   params: Promise<{ systemId: string }>;
 };
+
+export async function generateMetadata() {
+  return getTranslatedMetadata('UI.Global.newPlaybook');
+}
 
 export default async function Page(props: Props) {
   const { systemId } = await props.params;
