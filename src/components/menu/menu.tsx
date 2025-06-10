@@ -113,9 +113,9 @@ export default function Menu(props: Props) {
       </div>
 
       {(userData.id || userData.shareId) && (
-        <ul className={styles.menuList}>
+        <ul className={styles.menuList} role='group'>
           {userData.id && (
-            <li className={styles.menuItem}>
+            <li className={styles.menuItem} role='menuitem'>
               <CopyMenuItem
                 text={t('copyEditableLink')}
                 path={`${userData.systemId}/${userData.playbookType}/${userData.playbookId}/${userData.id}`}
@@ -123,7 +123,7 @@ export default function Menu(props: Props) {
             </li>
           )}
           {userData.shareId && (
-            <li className={styles.menuItem}>
+            <li className={styles.menuItem} role='menuitem'>
               <CopyMenuItem
                 text={t('copyReadOnlyLink')}
                 path={`share/${userData.shareId}`}
@@ -131,7 +131,7 @@ export default function Menu(props: Props) {
             </li>
           )}
           {userData.id && (
-            <li className={styles.menuItem}>
+            <li className={styles.menuItem} role='menuitem'>
               <DeleteMenuItem deletePlaybook={deletePlaybook} />
             </li>
           )}
