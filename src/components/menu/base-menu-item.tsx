@@ -1,9 +1,9 @@
 import styles from './base-menu-item.module.css';
 import clsx from 'clsx';
-import { useId } from 'react';
+import { useId, JSX } from 'react';
 
 type Props = {
-  buttonProps: React.ButtonHTMLAttributes<HTMLButtonElement>;
+  buttonProps: JSX.IntrinsicElements['button'];
   children: React.ReactNode;
   secondaryContent?: React.ReactNode;
   showSecondaryContent?: boolean;

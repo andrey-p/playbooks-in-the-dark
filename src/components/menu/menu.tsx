@@ -25,12 +25,12 @@ type Props = {
 export default function Menu(props: Props) {
   const { id, userData, onClose, open, deletePlaybook } = props;
   const containerRef = useRef<HTMLDivElement>(null);
+  const firstButtonRef = useRef<HTMLButtonElement>(null);
   const t = useTranslations('UI.Menu');
 
   const { theme, setTheme } = useContext(ThemeContext.Context);
 
   // close on click out
-
   const onBodyClick = useCallback(
     (e: MouseEvent) => {
       if (!containerRef.current?.contains(e.target as Node)) {
@@ -47,6 +47,16 @@ export default function Menu(props: Props) {
   useEffect(() => {
     if (open) {
       document.body.addEventListener('click', onBodyClick);
+      document.body.addEventListener('keyup', onKeyUp);
+
+      // focus the first available button as per
+      // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role
+      // the timeout seems to be necessary to do it properly
+      setTimeout(() => {
+        if (firstButtonRef.current) {
+          firstButtonRef.current.focus();
+        }
+      }, 50);
     }
 
     return () => {
@@ -87,6 +97,7 @@ export default function Menu(props: Props) {
           role='menuitem'
           label={t('closeMenu')}
           icon={<FiX />}
+          ref={firstButtonRef}
         />
 
         <Link

@@ -1,6 +1,9 @@
 import styles from './icon-button.module.css';
+import { JSX } from 'react';
 
-type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+type ButtonProps = JSX.IntrinsicElements['button'];
+
+type Props = ButtonProps & {
   label: string;
   icon: React.ReactNode;
 };
