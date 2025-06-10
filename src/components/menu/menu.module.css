@@ -10,9 +10,13 @@
   z-index: 20;
   padding: 3rem 1rem 1rem;
   overflow-y: auto;
-  transition: right 0.3s ease-out;
+  transition:
+    right 0.3s ease-out,
+    visibility 0.3s ease-out;
+  visibility: hidden;
 
   &.open {
+    visibility: visible;
     right: 0;
   }
 }
