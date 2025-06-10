@@ -36,7 +36,9 @@ export default function CopyMenuItem(props: Props) {
 
   return (
     <BaseMenuItem
-      onClick={copyLink}
+      buttonProps={{
+        onClick: copyLink
+      }}
       secondaryContent={t('copied')}
       showSecondaryContent={justCopied}
     >
