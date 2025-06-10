@@ -17,12 +17,13 @@ type UserDataType = z.infer<typeof UserDataSchema>;
 type Props = {
   userData: UserDataType;
   open: boolean;
+  id: string;
   deletePlaybook: () => Promise<void>;
   onClose: () => void;
 };
 
 export default function Menu(props: Props) {
-  const { userData, onClose, open, deletePlaybook } = props;
+  const { id, userData, onClose, open, deletePlaybook } = props;
   const containerRef = useRef<HTMLDivElement>(null);
   const t = useTranslations('UI.Menu');
 
@@ -55,7 +56,9 @@ export default function Menu(props: Props) {
 
   return (
     <div
+      id={id}
       className={clsx('menu', styles.container, open && styles.open)}
+      role='menu'
       aria-hidden={!open}
       ref={containerRef}
     >
@@ -78,18 +81,30 @@ export default function Menu(props: Props) {
           </span>
         </span>
       </h2>
-      <div className={styles.btns}>
-        <IconButton onClick={onClose} label={t('closeMenu')} icon={<FiX />} />
+      <div className={styles.btns} role='group'>
+        <IconButton
+          onClick={onClose}
+          role='menuitem'
+          label={t('closeMenu')}
+          icon={<FiX />}
+        />
 
         <Link
           href='https://github.com/andrey-p/playbooks-in-the-dark'
           target='_blank'
+          role='menuitem'
+          aria-label={t('githubRepository')}
         >
-          <IconButton label={t('githubRepository')} icon={<FiGithub />} />
+          <IconButton
+            tabIndex={-1}
+            label={t('githubRepository')}
+            icon={<FiGithub />}
+          />
         </Link>
 
         <IconButton
           onClick={toggleTheme}
+          role='menuitem'
           label={
             theme === 'dark' ? t('switchToLightTheme') : t('switchToDarkTheme')
           }
