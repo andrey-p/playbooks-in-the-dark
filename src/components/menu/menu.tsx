@@ -17,22 +17,33 @@ type UserDataType = z.infer<typeof UserDataSchema>;
 type Props = {
   userData: UserDataType;
   open: boolean;
+  id: string;
   deletePlaybook: () => Promise<void>;
   onClose: () => void;
 };
 
 export default function Menu(props: Props) {
-  const { userData, onClose, open, deletePlaybook } = props;
+  const { id, userData, onClose, open, deletePlaybook } = props;
   const containerRef = useRef<HTMLDivElement>(null);
+  const firstButtonRef = useRef<HTMLButtonElement>(null);
   const t = useTranslations('UI.Menu');
 
   const { theme, setTheme } = useContext(ThemeContext.Context);
 
   // close on click out
-
   const onBodyClick = useCallback(
     (e: MouseEvent) => {
       if (!containerRef.current?.contains(e.target as Node)) {
+        onClose();
+      }
+    },
+    [onClose]
+  );
+
+  // close on esc
+  const onKeyUp = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
         onClose();
       }
     },
@@ -46,16 +57,29 @@ export default function Menu(props: Props) {
   useEffect(() => {
     if (open) {
       document.body.addEventListener('click', onBodyClick);
+      document.body.addEventListener('keyup', onKeyUp);
+
+      // focus the first available button as per
+      // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role
+      // the timeout seems to be necessary to do it properly
+      setTimeout(() => {
+        if (firstButtonRef.current) {
+          firstButtonRef.current.focus();
+        }
+      }, 50);
     }
 
     return () => {
       document.body.removeEventListener('click', onBodyClick);
+      document.body.removeEventListener('keyup', onKeyUp);
     };
-  }, [onBodyClick, open]);
+  }, [onBodyClick, onKeyUp, open]);
 
   return (
     <div
+      id={id}
       className={clsx('menu', styles.container, open && styles.open)}
+      role='menu'
       aria-hidden={!open}
       ref={containerRef}
     >
@@ -78,18 +102,31 @@ export default function Menu(props: Props) {
           </span>
         </span>
       </h2>
-      <div className={styles.btns}>
-        <IconButton onClick={onClose} label={t('closeMenu')} icon={<FiX />} />
+      <div className={styles.btns} role='group'>
+        <IconButton
+          onClick={onClose}
+          role='menuitem'
+          label={t('closeMenu')}
+          icon={<FiX />}
+          ref={firstButtonRef}
+        />
 
         <Link
           href='https://github.com/andrey-p/playbooks-in-the-dark'
           target='_blank'
+          role='menuitem'
+          aria-label={t('githubRepository')}
         >
-          <IconButton label={t('githubRepository')} icon={<FiGithub />} />
+          <IconButton
+            tabIndex={-1}
+            label={t('githubRepository')}
+            icon={<FiGithub />}
+          />
         </Link>
 
         <IconButton
           onClick={toggleTheme}
+          role='menuitem'
           label={
             theme === 'dark' ? t('switchToLightTheme') : t('switchToDarkTheme')
           }
@@ -98,9 +135,9 @@ export default function Menu(props: Props) {
       </div>
 
       {(userData.id || userData.shareId) && (
-        <ul className={styles.menuList}>
+        <ul className={styles.menuList} role='group'>
           {userData.id && (
-            <li className={styles.menuItem}>
+            <li className={styles.menuItem} role='menuitem'>
               <CopyMenuItem
                 text={t('copyEditableLink')}
                 path={`${userData.systemId}/${userData.playbookType}/${userData.playbookId}/${userData.id}`}
@@ -108,7 +145,7 @@ export default function Menu(props: Props) {
             </li>
           )}
           {userData.shareId && (
-            <li className={styles.menuItem}>
+            <li className={styles.menuItem} role='menuitem'>
               <CopyMenuItem
                 text={t('copyReadOnlyLink')}
                 path={`share/${userData.shareId}`}
@@ -116,7 +153,7 @@ export default function Menu(props: Props) {
             </li>
           )}
           {userData.id && (
-            <li className={styles.menuItem}>
+            <li className={styles.menuItem} role='menuitem'>
               <DeleteMenuItem deletePlaybook={deletePlaybook} />
             </li>
           )}

@@ -21,10 +21,14 @@
 
 .secondaryContent {
   max-height: 0;
-  transition: max-height 0.3s ease-out;
+  transition:
+    max-height 0.3s ease-out,
+    visible 0.3s ease-out;
   overflow: hidden;
+  visibility: hidden;
 }
 
 .secondaryContentVisible {
   max-height: 60px;
+  visibility: visible;
 }

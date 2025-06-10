@@ -1,16 +1,18 @@
 import styles from './icon-button.module.css';
+import { JSX } from 'react';
 
-type Props = {
-  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+type ButtonProps = JSX.IntrinsicElements['button'];
+
+type Props = ButtonProps & {
   label: string;
   icon: React.ReactNode;
 };
 
 export default function IconButton(props: Props) {
-  const { onClick, label, icon } = props;
+  const { label, icon, ...rest } = props;
 
   return (
-    <button className={styles.button} onClick={onClick} aria-label={label}>
+    <button className={styles.button} aria-label={label} {...rest}>
       {icon}
     </button>
   );

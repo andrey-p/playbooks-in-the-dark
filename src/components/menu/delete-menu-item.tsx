@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useId } from 'react';
 import BaseMenuItem from './base-menu-item';
 import styles from './delete-menu-item.module.css';
 import { useTranslations } from 'next-intl';
@@ -12,26 +12,33 @@ export default function DeleteMenuItem(props: Props) {
   const [showingConfirm, setShowingConfirm] = useState<boolean>(false);
   const t = useTranslations('UI.Menu');
 
+  const consistentId = useId();
+
   const onYesClick = async () => {
     await deletePlaybook();
   };
 
   return (
     <BaseMenuItem
-      onClick={() => setShowingConfirm(true)}
+      buttonProps={{
+        onClick: () => setShowingConfirm(true),
+        'aria-haspopup': 'dialog'
+      }}
       secondaryContent={
         <>
-          {t('areYouSure')}
-          <div>
-            <button className={styles.confirmBtn} onClick={onYesClick}>
-              {t('yes')}
-            </button>
-            <button
-              className={styles.confirmBtn}
-              onClick={() => setShowingConfirm(false)}
-            >
-              {t('no')}
-            </button>
+          <div role='dialog' aria-labelledby={consistentId}>
+            <span id={consistentId}>{t('areYouSure')}</span>
+            <div>
+              <button className={styles.confirmBtn} onClick={onYesClick}>
+                {t('yes')}
+              </button>
+              <button
+                className={styles.confirmBtn}
+                onClick={() => setShowingConfirm(false)}
+              >
+                {t('no')}
+              </button>
+            </div>
           </div>
         </>
       }
