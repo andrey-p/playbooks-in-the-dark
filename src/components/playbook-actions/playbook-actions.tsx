@@ -48,6 +48,7 @@ export default function PlaybookActions(props: Props) {
           icon={<FiMenu />}
           label={t('openMenu')}
           aria-haspopup
+          aria-expanded={isMenuOpen}
           aria-controls='side-menu'
         />
       </div>
