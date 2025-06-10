@@ -40,6 +40,16 @@ export default function Menu(props: Props) {
     [onClose]
   );
 
+  // close on esc
+  const onKeyUp = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    },
+    [onClose]
+  );
+
   const toggleTheme = useCallback(() => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
   }, [theme, setTheme]);
@@ -61,8 +71,9 @@ export default function Menu(props: Props) {
 
     return () => {
       document.body.removeEventListener('click', onBodyClick);
+      document.body.removeEventListener('keyup', onKeyUp);
     };
-  }, [onBodyClick, open]);
+  }, [onBodyClick, onKeyUp, open]);
 
   return (
     <div
