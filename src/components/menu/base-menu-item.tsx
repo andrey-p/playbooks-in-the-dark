@@ -19,8 +19,8 @@ export default function BaseMenuItem(props: Props) {
     <div className={styles.container}>
       <button
         className={styles.link}
-        aria-controls={consistentId}
-        aria-expanded={showSecondaryContent}
+        aria-controls={secondaryContent ? consistentId : undefined}
+        aria-expanded={secondaryContent ? showSecondaryContent : undefined}
         {...buttonProps}
       >
         {children}
