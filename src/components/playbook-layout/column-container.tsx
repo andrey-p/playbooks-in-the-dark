@@ -47,7 +47,7 @@ const isSwipeActionable = (
   // in order to tell whether the element being swiped at is done scrolling
   const row = swopeElement.closest('.row');
 
-  if (row && moduleWrapper && row.scrollLeft) {
+  if (row && moduleWrapper && row.scrollWidth > row.clientWidth) {
     const columnWidth = container.getBoundingClientRect().width;
     const padding = parseInt(window.getComputedStyle(container).padding);
     const moduleWrapperWidth = moduleWrapper.getBoundingClientRect().width;
