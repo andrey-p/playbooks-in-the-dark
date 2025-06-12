@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import styles from './column-container.module.css';
 import { useSwipeable } from 'react-swipeable';
 import { useMobileLayout } from '@/hooks';
@@ -65,6 +65,7 @@ export default function ColumnContainer(props: Props) {
 
   const [currentColumn, setCurrentColumn] = useState(0);
   const isMobileLayout = useMobileLayout();
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const setColumn = useCallback(
     (direction: number, event: MouseEvent | TouchEvent | React.MouseEvent) => {
@@ -77,23 +78,15 @@ export default function ColumnContainer(props: Props) {
         return;
       }
 
-      let nextColumn = currentColumn + direction;
-      nextColumn = Math.max(0, nextColumn);
-      nextColumn = Math.min(nextColumn, columns.length - 1);
+      setCurrentColumn((prevColumn) => {
+        let nextColumn = prevColumn + direction;
+        nextColumn = Math.max(0, nextColumn);
+        nextColumn = Math.min(nextColumn, columns.length - 1);
 
-      setCurrentColumn(nextColumn);
-
-      // scroll to whatever column should be selected
-      const container = event.currentTarget as Element;
-      const columnWidth = container.getBoundingClientRect().width;
-      const padding = parseInt(window.getComputedStyle(container).padding);
-
-      container.scroll({
-        left: columnWidth * nextColumn - padding,
-        behavior: 'smooth'
+        return nextColumn;
       });
     },
-    [columns.length, currentColumn, isMobileLayout]
+    [columns.length, isMobileLayout]
   );
 
   const handlers = useSwipeable({
@@ -106,8 +99,32 @@ export default function ColumnContainer(props: Props) {
     }
   });
 
+  // scroll to whatever column should be selected
+  // whenever it changes
+  useEffect(() => {
+    const container = containerRef.current;
+
+    if (!container) {
+      return;
+    }
+
+    const columnWidth = container.getBoundingClientRect().width;
+    const padding = parseInt(window.getComputedStyle(container).padding);
+
+    container.scroll({
+      left: columnWidth * currentColumn - padding,
+      behavior: 'smooth'
+    });
+  }, [currentColumn]);
+
+  const compositeRef = (el: HTMLDivElement) => {
+    handlers.ref(el);
+
+    containerRef.current = el;
+  };
+
   return (
-    <div className={styles.container} {...handlers}>
+    <div className={styles.container} {...handlers} ref={compositeRef}>
       {columns}
     </div>
   );
