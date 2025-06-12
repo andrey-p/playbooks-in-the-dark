@@ -107,8 +107,8 @@ export default function Renderer(props: Props) {
   // each of which is a list of rows (possibly a single or more modules)
   // go down and render each of them
   return (
-    <ColumnContainer>
-      {layout.map((column, i) => (
+    <ColumnContainer
+      columns={layout.map((column, i) => (
         <Column key={i}>
           {column.map((row, i) => {
             if (typeof row === 'string') {
@@ -119,6 +119,6 @@ export default function Renderer(props: Props) {
           })}
         </Column>
       ))}
-    </ColumnContainer>
+    />
   );
 }
