@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import PropsSchema from './description.schema';
 import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
+import styles from './description.module.css';
 
 type Props = z.infer<typeof PropsSchema>;
 
@@ -15,7 +16,7 @@ export default function Description(props: Props) {
       moduleDefinition={moduleDefinition}
       playbookProps={playbookProps}
     >
-      {null}
+      <div role='presentation' className={styles.empty} />
     </ModuleWrapper>
   );
 }

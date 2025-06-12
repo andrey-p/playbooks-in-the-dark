@@ -1,3 +1,7 @@
+.container {
+  min-width: 300px;
+}
+
 .tracker {
   margin-bottom: 1rem;
 }

@@ -1,5 +1,6 @@
 .input {
   height: 2.5rem;
+  min-width: 150px;
   width: 100%;
 }
 
