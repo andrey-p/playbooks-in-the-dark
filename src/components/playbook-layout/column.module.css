@@ -4,4 +4,9 @@
   flex-grow: 1;
   width: 33%;
   min-width: min-content;
+
+  @media (max-width: 600px) {
+    width: 100% !important;
+    min-width: 100%;
+  }
 }

@@ -2,4 +2,9 @@
   min-width: min-content;
   display: flex;
   gap: 1rem;
+
+  @media (max-width: 600px) {
+    min-width: unset;
+    overflow: auto;
+  }
 }
