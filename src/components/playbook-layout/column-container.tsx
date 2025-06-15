@@ -2,9 +2,11 @@ import { useState, useCallback, useEffect, useRef } from 'react';
 import styles from './column-container.module.css';
 import { useSwipeable } from 'react-swipeable';
 import { useMobileLayout } from '@/hooks';
+import Column from './column';
+import Row from './row';
 
 type Props = {
-  columns: React.ReactNode[];
+  columns: React.ReactNode[][];
 };
 
 // is it OK to assume that this swipe should switch between visible columns?
@@ -125,7 +127,13 @@ export default function ColumnContainer(props: Props) {
 
   return (
     <div className={styles.container} {...handlers} ref={compositeRef}>
-      {columns}
+      {columns.map((column, i) => (
+        <Column key={i}>
+          {column.map((row, j) => (
+            <Row key={j}>{row}</Row>
+          ))}
+        </Column>
+      ))}
     </div>
   );
 }
