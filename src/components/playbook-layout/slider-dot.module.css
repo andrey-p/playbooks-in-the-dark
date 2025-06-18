@@ -1,0 +1,18 @@
+.dot {
+  background-color: var(--midground);
+  width: 20px;
+  height: 20px;
+  border: none;
+  transition: width 0.3s ease-out,
+    background-color 0.3s ease-out;
+  cursor: pointer;
+
+  &:focus {
+    background-color: var(--highlight);
+  }
+}
+
+.active {
+  width: 40px;
+  background-color: var(--foreground);
+}

@@ -4,6 +4,8 @@ import { useSwipeable } from 'react-swipeable';
 import { useMobileLayout } from '@/hooks';
 import Column from './column';
 import Row from './row';
+import SliderDot from './slider-dot';
+import { useTranslations } from 'next-intl';
 
 type Props = {
   columns: React.ReactNode[][];
@@ -69,6 +71,7 @@ export default function ColumnContainer(props: Props) {
   const [currentColumn, setCurrentColumn] = useState(0);
   const isMobileLayout = useMobileLayout();
   const containerRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations();
 
   const setColumn = useCallback(
     (direction: number, event: MouseEvent | TouchEvent | React.MouseEvent) => {
@@ -131,23 +134,32 @@ export default function ColumnContainer(props: Props) {
   };
 
   // TODO
-  // fix multi row elements
   // fix outline around checkboxes
-  // increase default size of checkboxes
-  //
-  // TODO integration tests
-  // - with a claims module on both left and right
-  // - multi row elements on left and right
+  // increase default size of claims
 
   return (
-    <div className={styles.container} {...handlers} ref={compositeRef}>
-      {columns.map((column, i) => (
-        <Column key={i}>
-          {column.map((row, j) => (
-            <Row key={j}>{row}</Row>
+    <>
+      {isMobileLayout && (
+        <div className={styles.dots}>
+          {columns.map((_, i) => (
+            <SliderDot
+              key={i}
+              active={i === currentColumn}
+              onClick={() => setCurrentColumn(i)}
+              label={t('UI.PlaybookActions.panel', { panel: i + 1 })}
+            />
           ))}
-        </Column>
-      ))}
-    </div>
+        </div>
+      )}
+      <div className={styles.container} {...handlers} ref={compositeRef}>
+        {columns.map((column, i) => (
+          <Column key={i}>
+            {column.map((row, j) => (
+              <Row key={j}>{row}</Row>
+            ))}
+          </Column>
+        ))}
+      </div>
+    </>
   );
 }

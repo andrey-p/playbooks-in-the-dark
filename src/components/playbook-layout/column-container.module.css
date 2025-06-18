@@ -6,3 +6,9 @@
   overflow-x: auto;
   padding: 1rem;
 }
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
