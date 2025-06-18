@@ -134,6 +134,18 @@ export default function ColumnContainer(props: Props) {
     containerRef.current = el;
   };
 
+  const onKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === 'ArrowRight') {
+      setCurrentColumn(
+        currentColumn === columns.length - 1 ? 0 : currentColumn + 1
+      );
+    } else if (e.key === 'ArrowLeft') {
+      setCurrentColumn(
+        currentColumn === 0 ? columns.length - 1 : currentColumn - 1
+      );
+    }
+  };
+
   // TODO
   // fix outline around checkboxes
   // increase default size of claims
@@ -146,6 +158,7 @@ export default function ColumnContainer(props: Props) {
             <SliderDot
               key={i}
               id={`${consistentId}-tab-${i}`}
+              onKeyDown={onKeyDown}
               active={i === currentColumn}
               onClick={() => setCurrentColumn(i)}
               label={t('UI.PlaybookActions.panel', { panel: i + 1 })}
@@ -158,6 +171,7 @@ export default function ColumnContainer(props: Props) {
         {columns.map((column, i) => (
           <Column
             key={i}
+            tab-index={0}
             id={`${consistentId}-tab-${i}`}
             aria-labelledby={`${consistentId}-panel-${i}`}
             role='tabpanel'
