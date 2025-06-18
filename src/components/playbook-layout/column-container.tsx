@@ -24,37 +24,38 @@ type Props = {
 // |-----------------|
 //
 // A is the column
-// B is the row (at the mobile level, it spans the width of A)
+// B is the row (at a mobile screen size, it spans the width of A)
 // C is the module contained in the row
 //
 // if C sticks out to the right, swiping at B leftwards
-// should *not* trigger a swipe
+// should bring the rest of C into view and
+// *not* switch between columns
+//
+// however, if there's nothing left to scroll on the right,
+// any subsequent leftwards swipes on B should switch to the next column
 const isSwipeActionable = (
   event: MouseEvent | TouchEvent | React.MouseEvent
 ): boolean => {
   const container = event.currentTarget as Element;
   const swopeElement = event.target as Element;
 
+  if (!container || !swopeElement) {
+    return false;
+  }
+
   if (container === swopeElement) {
     return true;
   }
 
-  // the module wrapper's width is the _total width_ of a module
-  // if it sticks out beyond the width of the column (looking at you, claims module)
-  // this should come out longer than the width of the column
-  const moduleWrapper = swopeElement.closest('.module-wrapper');
-
-  // the row element contains the module wrapper
-  // it is what actually does the scrolling, so we need it
-  // in order to tell whether the element being swiped at is done scrolling
+  // the row element contains one or more module wrappers
+  // it is what actually does the scrolling, so we check it
+  // in order to tell whether it's done scrolling
   const row = swopeElement.closest('.row');
 
-  if (row && moduleWrapper && row.scrollWidth > row.clientWidth) {
+  if (row && row.scrollWidth > row.clientWidth) {
     const columnWidth = container.getBoundingClientRect().width;
-    const padding = parseInt(window.getComputedStyle(container).padding);
-    const moduleWrapperWidth = moduleWrapper.getBoundingClientRect().width;
 
-    if (moduleWrapperWidth - columnWidth + 2 * padding > row.scrollLeft) {
+    if (row.scrollWidth - columnWidth > row.scrollLeft) {
       return false;
     }
   }
