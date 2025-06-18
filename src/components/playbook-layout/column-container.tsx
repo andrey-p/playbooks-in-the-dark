@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback, useEffect, useRef, useId } from 'react';
 import styles from './column-container.module.css';
 import { useSwipeable } from 'react-swipeable';
 import { useMobileLayout } from '@/hooks';
@@ -72,6 +72,7 @@ export default function ColumnContainer(props: Props) {
   const isMobileLayout = useMobileLayout();
   const containerRef = useRef<HTMLDivElement>(null);
   const t = useTranslations();
+  const consistentId = useId();
 
   const setColumn = useCallback(
     (direction: number, event: MouseEvent | TouchEvent | React.MouseEvent) => {
@@ -140,20 +141,28 @@ export default function ColumnContainer(props: Props) {
   return (
     <>
       {isMobileLayout && (
-        <div className={styles.dots}>
+        <div className={styles.dots} role='tablist'>
           {columns.map((_, i) => (
             <SliderDot
               key={i}
+              id={`${consistentId}-tab-${i}`}
               active={i === currentColumn}
               onClick={() => setCurrentColumn(i)}
               label={t('UI.PlaybookActions.panel', { panel: i + 1 })}
+              aria-controls={`${consistentId}-panel-${i}`}
             />
           ))}
         </div>
       )}
       <div className={styles.container} {...handlers} ref={compositeRef}>
         {columns.map((column, i) => (
-          <Column key={i}>
+          <Column
+            key={i}
+            id={`${consistentId}-tab-${i}`}
+            aria-labelledby={`${consistentId}-panel-${i}`}
+            role='tabpanel'
+            aria-hidden={i === currentColumn}
+          >
             {column.map((row, j) => (
               <Row key={j}>{row}</Row>
             ))}

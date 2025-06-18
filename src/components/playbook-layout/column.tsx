@@ -1,11 +1,10 @@
 import styles from './column.module.css';
 import clsx from 'clsx';
+import { JSX } from 'react';
 
-type Props = {
-  children: React.ReactNode;
-};
+type DivProps = JSX.IntrinsicElements['div'];
 
-export default function Column(props: Props) {
+export default function Column(props: DivProps) {
   const { children } = props;
 
   return <div className={clsx(styles.column, 'column')}>{children}</div>;
