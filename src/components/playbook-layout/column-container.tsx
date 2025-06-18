@@ -114,10 +114,14 @@ export default function ColumnContainer(props: Props) {
     const columnWidth = container.getBoundingClientRect().width;
     const padding = parseInt(window.getComputedStyle(container).padding);
 
-    container.scroll({
-      left: columnWidth * currentColumn - padding,
-      behavior: 'smooth'
-    });
+    // in a browser, container.scroll is always defined,
+    // but this is not the case in jsdom - this makes tests pass
+    if (container.scroll) {
+      container.scroll({
+        left: columnWidth * currentColumn - padding,
+        behavior: 'smooth'
+      });
+    }
   }, [currentColumn]);
 
   const compositeRef = (el: HTMLDivElement) => {
@@ -125,6 +129,15 @@ export default function ColumnContainer(props: Props) {
 
     containerRef.current = el;
   };
+
+  // TODO
+  // fix multi row elements
+  // fix outline around checkboxes
+  // increase default size of checkboxes
+  //
+  // TODO integration tests
+  // - with a claims module on both left and right
+  // - multi row elements on left and right
 
   return (
     <div className={styles.container} {...handlers} ref={compositeRef}>
