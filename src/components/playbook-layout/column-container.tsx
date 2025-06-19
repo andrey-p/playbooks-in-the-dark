@@ -2,8 +2,6 @@ import { useState, useCallback, useEffect, useRef, useId } from 'react';
 import styles from './column-container.module.css';
 import { useSwipeable } from 'react-swipeable';
 import { useMobileLayout } from '@/hooks';
-import Column from './column';
-import Row from './row';
 import SliderDot from './slider-dot';
 import { useTranslations } from 'next-intl';
 
@@ -169,18 +167,19 @@ export default function ColumnContainer(props: Props) {
       )}
       <div className={styles.container} {...handlers} ref={compositeRef}>
         {columns.map((column, i) => (
-          <Column
+          <div
             key={i}
             tab-index={0}
             id={`${consistentId}-tab-${i}`}
             aria-labelledby={`${consistentId}-panel-${i}`}
             role='tabpanel'
             aria-hidden={i === currentColumn}
+            className={styles.column}
           >
             {column.map((row, j) => (
-              <Row key={j}>{row}</Row>
+              <div key={j}>{row}</div>
             ))}
-          </Column>
+          </div>
         ))}
       </div>
     </>

@@ -12,3 +12,27 @@
   justify-content: center;
   gap: 0.5rem;
 }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 33%;
+  min-width: min-content;
+
+  @media (max-width: 600px) {
+    width: 100% !important;
+    min-width: 100%;
+  }
+}
+
+.row {
+  min-width: min-content;
+  display: flex;
+  gap: 1rem;
+
+  @media (max-width: 600px) {
+    min-width: unset;
+    overflow: auto;
+  }
+}
