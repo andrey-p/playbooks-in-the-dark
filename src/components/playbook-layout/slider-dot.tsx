@@ -24,7 +24,7 @@ export default function SliderDot(props: Props) {
       ref={buttonRef}
       role='tab'
       aria-selected={active}
-      tab-index={active ? 0 : -1}
+      tabIndex={active ? 0 : -1}
       className={clsx(styles.dot, active && styles.active)}
       aria-label={label}
       {...rest}

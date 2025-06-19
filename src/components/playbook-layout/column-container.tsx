@@ -169,11 +169,12 @@ export default function ColumnContainer(props: Props) {
         {columns.map((column, i) => (
           <div
             key={i}
-            tab-index={0}
+            tabIndex={i === currentColumn ? 0 : -1}
             id={`${consistentId}-tab-${i}`}
             aria-labelledby={`${consistentId}-panel-${i}`}
             role='tabpanel'
             aria-hidden={i === currentColumn}
+            inert={i !== currentColumn}
             className={styles.column}
           >
             {column.map((row, j) => (
