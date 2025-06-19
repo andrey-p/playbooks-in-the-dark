@@ -1,7 +1,8 @@
 import { test, expect, MountResult } from '@playwright/experimental-ct-react';
 import { Locator } from 'playwright';
 import ColumnContainer from '@/components/playbook-layout/column-container';
-import { swipe } from 'playwright-utils';
+import { NextIntlClientProvider } from 'next-intl';
+import { swipe, getMessages } from 'playwright-utils';
 
 // These tests use playwright because checking swipeability etc on jsdom is a big headache
 
@@ -38,11 +39,11 @@ const expectColumnToBeInViewPort = async (
   for (let i = 0; i < numColumns; i++) {
     if (i === columnIdx) {
       await expect(
-        container.locator(`> div:nth-child(${i + 1})`)
+        container.locator(`div[role="tabpanel"]:nth-child(${i + 1})`)
       ).toBeInViewport({ ratio: 0.1 });
     } else {
       await expect(
-        container.locator(`> div:nth-child(${i + 1})`)
+        container.locator(`div[role="tabpanel"]:nth-child(${i + 1})`)
       ).not.toBeInViewport({ ratio: 0.1 });
     }
   }
@@ -54,31 +55,55 @@ const scrollRowTo = async (locator: Locator, px: number) => {
   }, px);
 };
 
+let messages: object;
+
+test.beforeEach(async () => {
+  messages = await getMessages();
+});
+
 test.describe('Playbook mobile mode', () => {
   test('scrolling between containers', async ({ mount }) => {
     const container = await mount(
-      <ColumnContainer
-        columns={[
-          [fullWidthDiv(1), fullWidthDiv(2), fullWidthDiv(3), fullWidthDiv(4)],
-          [fullWidthDiv(5), fullWidthDiv(6), fullWidthDiv(7), fullWidthDiv(8)],
-          [
-            fullWidthDiv(9),
-            fullWidthDiv(10),
-            fullWidthDiv(11),
-            fullWidthDiv(12)
-          ]
-        ]}
-      />
+      <NextIntlClientProvider locale='en' messages={messages}>
+        <ColumnContainer
+          columns={[
+            [
+              fullWidthDiv(1),
+              fullWidthDiv(2),
+              fullWidthDiv(3),
+              fullWidthDiv(4)
+            ],
+            [
+              fullWidthDiv(5),
+              fullWidthDiv(6),
+              fullWidthDiv(7),
+              fullWidthDiv(8)
+            ],
+            [
+              fullWidthDiv(9),
+              fullWidthDiv(10),
+              fullWidthDiv(11),
+              fullWidthDiv(12)
+            ]
+          ]}
+        />
+      </NextIntlClientProvider>
     );
     await expectColumnToBeInViewPort(container, 0, 3);
 
-    await swipe('left', container.locator('> div:nth-child(1)'));
+    await swipe('left', container.locator('div[role="tabpanel"]:nth-child(1)'));
     await expectColumnToBeInViewPort(container, 1, 3);
 
-    await swipe('right', container.locator('> div:nth-child(2)'));
+    await swipe(
+      'right',
+      container.locator('div[role="tabpanel"]:nth-child(2)')
+    );
     await expectColumnToBeInViewPort(container, 0, 3);
 
-    await swipe('right', container.locator('> div:nth-child(1)'));
+    await swipe(
+      'right',
+      container.locator('div[role="tabpanel"]:nth-child(1)')
+    );
     await expectColumnToBeInViewPort(container, 0, 3);
   });
 
@@ -86,18 +111,30 @@ test.describe('Playbook mobile mode', () => {
     mount
   }) => {
     const container = await mount(
-      <ColumnContainer
-        columns={[
-          [fullWidthDiv(1), extraWideDiv(2), fullWidthDiv(3), fullWidthDiv(4)],
-          [fullWidthDiv(5), fullWidthDiv(6), extraWideDiv(7), fullWidthDiv(8)],
-          [
-            fullWidthDiv(9),
-            fullWidthDiv(10),
-            fullWidthDiv(11),
-            fullWidthDiv(12)
-          ]
-        ]}
-      />
+      <NextIntlClientProvider locale='en' messages={messages}>
+        <ColumnContainer
+          columns={[
+            [
+              fullWidthDiv(1),
+              extraWideDiv(2),
+              fullWidthDiv(3),
+              fullWidthDiv(4)
+            ],
+            [
+              fullWidthDiv(5),
+              fullWidthDiv(6),
+              extraWideDiv(7),
+              fullWidthDiv(8)
+            ],
+            [
+              fullWidthDiv(9),
+              fullWidthDiv(10),
+              fullWidthDiv(11),
+              fullWidthDiv(12)
+            ]
+          ]}
+        />
+      </NextIntlClientProvider>
     );
     await expectColumnToBeInViewPort(container, 0, 3);
 
@@ -122,6 +159,43 @@ test.describe('Playbook mobile mode', () => {
 
     await scrollRowTo(container.locator('div[data-id="7"]'), 0);
     await swipe('right', container.locator('div[data-id="7"]'));
+    await expectColumnToBeInViewPort(container, 0, 3);
+  });
+
+  test('using dot buttons to switch between columns', async ({ mount }) => {
+    const container = await mount(
+      <NextIntlClientProvider locale='en' messages={messages}>
+        <ColumnContainer
+          columns={[
+            [
+              fullWidthDiv(1),
+              fullWidthDiv(2),
+              fullWidthDiv(3),
+              fullWidthDiv(4)
+            ],
+            [
+              fullWidthDiv(5),
+              fullWidthDiv(6),
+              fullWidthDiv(7),
+              fullWidthDiv(8)
+            ],
+            [
+              fullWidthDiv(9),
+              fullWidthDiv(10),
+              fullWidthDiv(11),
+              fullWidthDiv(12)
+            ]
+          ]}
+        />
+      </NextIntlClientProvider>
+    );
+
+    await expectColumnToBeInViewPort(container, 0, 3);
+
+    await container.locator('button[role="tab"]:nth-child(2)').click();
+    await expectColumnToBeInViewPort(container, 1, 3);
+
+    await container.locator('button[role="tab"]:nth-child(1)').click();
     await expectColumnToBeInViewPort(container, 0, 3);
   });
 });

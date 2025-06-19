@@ -1,5 +1,7 @@
 import { Locator } from 'playwright';
 import { TestInfo } from '@playwright/test';
+import uiMessages from '@/lang/en.json';
+import { getAllSystemsText } from '@/lib/system-data';
 
 type Point = { x: number; y: number };
 
@@ -58,6 +60,13 @@ export const swipe = async (direction: 'left' | 'right', locator: Locator) => {
     },
     { direction }
   );
+};
+
+export const getMessages = async () => {
+  return {
+    ...(await getAllSystemsText('en')),
+    ...uiMessages
+  };
 };
 
 // stop test in its tracks - useful for debugging
