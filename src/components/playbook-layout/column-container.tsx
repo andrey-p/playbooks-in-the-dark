@@ -109,7 +109,7 @@ export default function ColumnContainer(props: Props) {
   useEffect(() => {
     const container = containerRef.current;
 
-    if (!container) {
+    if (!container || !isMobileLayout) {
       return;
     }
 
@@ -124,7 +124,7 @@ export default function ColumnContainer(props: Props) {
         behavior: 'smooth'
       });
     }
-  }, [currentColumn]);
+  }, [currentColumn, isMobileLayout]);
 
   const compositeRef = (el: HTMLDivElement) => {
     handlers.ref(el);
@@ -166,22 +166,27 @@ export default function ColumnContainer(props: Props) {
         </div>
       )}
       <div className={styles.container} {...handlers} ref={compositeRef}>
-        {columns.map((column, i) => (
-          <div
-            key={i}
-            tabIndex={i === currentColumn ? 0 : -1}
-            id={`${consistentId}-tab-${i}`}
-            aria-labelledby={`${consistentId}-panel-${i}`}
-            role='tabpanel'
-            aria-hidden={i === currentColumn}
-            inert={i !== currentColumn}
-            className={styles.column}
-          >
-            {column.map((row, j) => (
-              <div key={j}>{row}</div>
-            ))}
-          </div>
-        ))}
+        {columns.map((column, i) => {
+          const mobileProps = isMobileLayout
+            ? // mostly a11y-related props to help with the mobile layout switcher
+              {
+                tabIndex: i === currentColumn ? 0 : -1,
+                id: `${consistentId}-tab-${i}`,
+                'aria-labelledby': `${consistentId}-panel-${i}`,
+                role: 'tabpanel',
+                'aria-hidden': i === currentColumn,
+                inert: i !== currentColumn
+              }
+            : {};
+
+          return (
+            <div key={i} className={styles.column} {...mobileProps}>
+              {column.map((row, j) => (
+                <div key={j}>{row}</div>
+              ))}
+            </div>
+          );
+        })}
       </div>
     </>
   );
