@@ -145,10 +145,6 @@ export default function ColumnContainer(props: Props) {
     }
   };
 
-  // TODO
-  // fix outline around checkboxes
-  // increase default size of claims
-
   return (
     <>
       {isMobileLayout && (
