@@ -146,7 +146,7 @@ export default function ColumnContainer(props: Props) {
   };
 
   return (
-    <>
+    <div className={styles.container}>
       {isMobileLayout && (
         <div className={styles.dots} role='tablist'>
           {columns.map((_, i) => (
@@ -162,7 +162,7 @@ export default function ColumnContainer(props: Props) {
           ))}
         </div>
       )}
-      <div className={styles.container} {...handlers} ref={compositeRef}>
+      <div className={styles.columnContainer} {...handlers} ref={compositeRef}>
         {columns.map((column, i) => {
           const mobileProps = isMobileLayout
             ? // mostly a11y-related props to help with the mobile layout switcher
@@ -187,6 +187,6 @@ export default function ColumnContainer(props: Props) {
           );
         })}
       </div>
-    </>
+    </div>
   );
 }

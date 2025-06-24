@@ -1,4 +1,18 @@
 .container {
+  position: relative;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  /* absolutely positioned so when they're added via JS */
+  /* the page doesn't jump */
+  position: absolute;
+  width: 100%;
+}
+
+.columnContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -7,14 +21,9 @@
   padding: 1rem;
 
   @media (max-width: 600px) {
-    padding: 1rem 0;
+    /* +20px for the absolutely positioned dots */
+    padding: calc(1rem + 20px) 0 1rem 0;
   }
-}
-
-.dots {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
 }
 
 .column {
