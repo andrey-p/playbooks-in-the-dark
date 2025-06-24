@@ -4,6 +4,7 @@ import { useSwipeable } from 'react-swipeable';
 import { useMobileLayout } from '@/hooks';
 import SliderDot from './slider-dot';
 import { useTranslations } from 'next-intl';
+import clsx from 'clsx';
 
 type Props = {
   columns: React.ReactNode[][];
@@ -182,7 +183,9 @@ export default function ColumnContainer(props: Props) {
           return (
             <div key={i} className={styles.column} {...mobileProps}>
               {column.map((row, j) => (
-                <div key={j}>{row}</div>
+                <div className={clsx(styles.row, 'row')} key={j}>
+                  {row}
+                </div>
               ))}
             </div>
           );
