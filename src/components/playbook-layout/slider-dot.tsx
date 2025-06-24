@@ -15,7 +15,7 @@ export default function SliderDot(props: Props) {
 
   useEffect(() => {
     if (buttonRef.current && active) {
-      buttonRef.current.focus();
+      buttonRef.current.focus({ preventScroll: true });
     }
   }, [active]);
 
