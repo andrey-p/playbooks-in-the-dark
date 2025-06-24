@@ -1,1 +1,1 @@
-export { default as useMobileLayout } from './useMobileLayout';
+export { default as useMobileLayout } from './use-mobile-layout';
