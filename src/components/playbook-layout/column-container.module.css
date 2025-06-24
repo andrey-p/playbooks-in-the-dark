@@ -1,8 +1,59 @@
 .container {
+  position: relative;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  /* absolutely positioned so when they're added via JS */
+  /* the page doesn't jump */
+  position: absolute;
+  width: 100%;
+}
+
+.columnContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 1rem;
   overflow-x: auto;
   padding: 1rem;
+
+  @media (max-width: 600px) {
+    /* +20px for the absolutely positioned dots */
+    padding: calc(1rem + 20px) 0 1rem 0;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 33%;
+  min-width: min-content;
+
+  @media (max-width: 600px) {
+    width: 100% !important;
+    min-width: 100%;
+  }
+}
+
+.row {
+  min-width: min-content;
+  display: flex;
+  gap: 1rem;
+
+  @media (max-width: 600px) {
+    min-width: unset;
+    overflow: auto;
+    padding: 0 1rem;
+    mask: linear-gradient(
+      90deg,
+      transparent 0%,
+      red 1rem,
+      red calc(100% - 1rem),
+      transparent 100%
+    );
+  }
 }

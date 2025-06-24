@@ -47,7 +47,8 @@
     "PlaybookActions": {
       "save": "Save",
       "saveUnsavedChanges": "Save (you have unsaved changes)",
-      "openMenu": "Open menu"
+      "openMenu": "Open menu",
+      "panel": "Panel {panel}"
     },
     "Menu": {
       "closeMenu": "Close menu",

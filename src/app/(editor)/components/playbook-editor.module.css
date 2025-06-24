@@ -7,6 +7,13 @@
 .heading {
   font-family: var(--font-display);
   text-transform: uppercase;
+
+  @media (max-width: 600px) {
+    /* leave space for the action buttons */
+    padding-right: 85px;
+    overflow-wrap: break-word;
+    font-size: 2rem;
+  }
 }
 
 .description {

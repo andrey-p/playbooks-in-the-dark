@@ -45,3 +45,10 @@ next-env.d.ts
 
 # open-next
 .open-next
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

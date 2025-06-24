@@ -18,9 +18,7 @@
 
   &:hover,
   &:has(> .control:focus-visible) {
-    box-shadow:
-      0px 0px 0px 5px var(--background),
-      0px 0px 0px 8px var(--highlight);
+    box-shadow: 0px 0px 0px 8px var(--highlight);
   }
 }
 
@@ -32,6 +30,13 @@
   box-shadow:
     0px 0px 0px 5px var(--background),
     0px 0px 0px 8px var(--foreground);
+
+  &:hover,
+  &:has(> .control:focus-visible) {
+    box-shadow:
+      0px 0px 0px 5px var(--highlight),
+      0px 0px 0px 8px var(--foreground);
+  }
 }
 
 .control {

@@ -54,17 +54,19 @@ export default function Cohorts(props: Props) {
       moduleDefinition={moduleDefinition}
       playbookProps={playbookProps}
     >
-      <ul className={clsx(styles.container, 'cohort-container')}>
-        {cohortProps.map((props, i) => (
-          <li key={i} className={clsx(styles.item, 'cohort-item')}>
-            <Cohort
-              {...props}
-              index={i}
-              onUpdate={(value) => onCohortUpdate(i, value)}
-            />
-          </li>
-        ))}
-      </ul>
+      <div className={clsx(styles.container, 'cohort-container')}>
+        <ul className={clsx(styles.list, 'cohort-list')}>
+          {cohortProps.map((props, i) => (
+            <li key={i} className={clsx(styles.item, 'cohort-item')}>
+              <Cohort
+                {...props}
+                index={i}
+                onUpdate={(value) => onCohortUpdate(i, value)}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
     </ModuleWrapper>
   );
 }

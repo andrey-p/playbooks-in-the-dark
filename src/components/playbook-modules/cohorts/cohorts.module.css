@@ -1,9 +1,22 @@
 .container {
+  container: cohorts / inline-size;
+}
+
+.list {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+
+  @container cohorts (max-width: 550px) {
+    flex-direction: column;
+  }
 }
 
 .item {
-  flex-basis: calc(50% - 1rem);
+  max-width: 500px;
+  flex-basis: calc(50% - 0.5rem);
+
+  @container cohorts (max-width: 550px) {
+    max-width: 100%;
+  }
 }

@@ -31,21 +31,23 @@ export default function MultiTracker(props: Props) {
       moduleDefinition={moduleDefinition}
       playbookProps={playbookProps}
     >
-      {Object.keys(trackers).map((trackerId) => (
-        <div key={trackerId} className={clsx(styles.tracker, trackerId)}>
-          <SimpleTracker
-            {...trackers[trackerId]}
-            value={values[trackerId] || 0}
-            labelledBy={consistentId}
-            onValueSelect={(value: number) => onValueSelect(trackerId, value)}
-          />
-          {trackers[trackerId].label && (
-            <div id={consistentId} className={clsx(`${trackerId}-label`)}>
-              {t(trackers[trackerId].label)}
-            </div>
-          )}
-        </div>
-      ))}
+      <div className={styles.container}>
+        {Object.keys(trackers).map((trackerId) => (
+          <div key={trackerId} className={clsx(styles.tracker, trackerId)}>
+            <SimpleTracker
+              {...trackers[trackerId]}
+              value={values[trackerId] || 0}
+              labelledBy={consistentId}
+              onValueSelect={(value: number) => onValueSelect(trackerId, value)}
+            />
+            {trackers[trackerId].label && (
+              <div id={consistentId} className={clsx(`${trackerId}-label`)}>
+                {t(trackers[trackerId].label)}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </ModuleWrapper>
   );
 }

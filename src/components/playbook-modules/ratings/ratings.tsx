@@ -5,6 +5,7 @@ import PropsSchema, {
 } from './ratings.schema';
 import AttributeGroup from './attribute-group';
 import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
+import styles from './ratings.module.css';
 
 type Props = z.infer<typeof PropsSchema>;
 type AttributeType = z.infer<typeof AttributeSchema>;
@@ -47,21 +48,23 @@ export default function Ratings(props: Props) {
       moduleDefinition={moduleDefinition}
       playbookProps={playbookProps}
     >
-      {attributes.map((attribute: AttributeType) => (
-        <AttributeGroup
-          key={attribute.id}
-          attribute={attribute}
-          xp={attributeXp[attribute.id]}
-          currentRatings={currentRatings}
-          trackerProps={trackerProps}
-          maxRating={maxRating}
-          onRatingUpdate={onRatingUpdate}
-          onXpUpdate={onXpUpdate}
-          actions={actions.filter(
-            (action: ActionType) => action.attributeId === attribute.id
-          )}
-        />
-      ))}
+      <div className={styles.container}>
+        {attributes.map((attribute: AttributeType) => (
+          <AttributeGroup
+            key={attribute.id}
+            attribute={attribute}
+            xp={attributeXp[attribute.id]}
+            currentRatings={currentRatings}
+            trackerProps={trackerProps}
+            maxRating={maxRating}
+            onRatingUpdate={onRatingUpdate}
+            onXpUpdate={onXpUpdate}
+            actions={actions.filter(
+              (action: ActionType) => action.attributeId === attribute.id
+            )}
+          />
+        ))}
+      </div>
     </ModuleWrapper>
   );
 }

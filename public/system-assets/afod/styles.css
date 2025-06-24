@@ -34,16 +34,13 @@
   &.character {
     .column:nth-child(1) {
       width: 40%;
-      min-width: 350px;
     }
 
     .column:nth-child(2) {
-      min-width: 420px;
       width: 40%;
     }
 
     .column:nth-child(3) {
-      min-width: 250px;
       width: 20%;
     }
 
@@ -56,11 +53,9 @@
   &.posse {
     .column:nth-child(1) {
       width: 60%;
-      min-width: 670px;
     }
 
     .column:nth-child(2) {
-      min-width: 500px;
       width: 40%;
     }
 
@@ -93,7 +88,7 @@
 
       .claims {
         position: absolute;
-        top: 2.2rem;
+        bottom: 2rem;
         left: 151px;
       }
 

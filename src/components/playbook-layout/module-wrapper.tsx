@@ -22,6 +22,7 @@ export default function ModuleWrapper(props: Props) {
     <div
       className={clsx(
         styles.container,
+        'module-wrapper',
         // add the ID and type of the module to use as a styling hook
         moduleDefinition.id,
         moduleDefinition.type

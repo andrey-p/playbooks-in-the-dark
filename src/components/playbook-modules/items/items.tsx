@@ -5,6 +5,7 @@ import RadioGroup from '@/components/playbook-elements/radio-group/radio-group';
 import ModuleWrapper from '@/components/playbook-layout/module-wrapper';
 import styles from './items.module.css';
 import ItemList from './item-list';
+import clsx from 'clsx';
 
 type Props = z.infer<typeof PropsSchema>;
 type SlotValueType = z.infer<typeof SlotValueSchema>;
@@ -66,30 +67,32 @@ export default function Items(props: Props) {
           />
         </div>
       )}
-      {playbookProps?.custom?.length && (
-        <ItemList
-          items={playbookProps.custom}
-          groups={playbookGroups}
-          selectedItems={selectedItems}
-          onItemSelect={onItemSelect}
-          slotValues={slotValues || {}}
-          onSlotUpdate={onSlotUpdate}
-          twoColumns={twoColumns}
-          trackerProps={trackerProps}
-        />
-      )}
-      {common.length && (
-        <ItemList
-          items={common}
-          groups={groups}
-          twoColumns={twoColumns}
-          selectedItems={selectedItems}
-          slotValues={slotValues || {}}
-          onSlotUpdate={onSlotUpdate}
-          onItemSelect={onItemSelect}
-          trackerProps={trackerProps}
-        />
-      )}
+      <div className={clsx(styles.items, twoColumns && styles.twoColumns)}>
+        {playbookProps?.custom?.length && (
+          <ItemList
+            items={playbookProps.custom}
+            groups={playbookGroups}
+            selectedItems={selectedItems}
+            onItemSelect={onItemSelect}
+            slotValues={slotValues || {}}
+            onSlotUpdate={onSlotUpdate}
+            twoColumns={twoColumns}
+            trackerProps={trackerProps}
+          />
+        )}
+        {common.length && (
+          <ItemList
+            items={common}
+            groups={groups}
+            twoColumns={twoColumns}
+            selectedItems={selectedItems}
+            slotValues={slotValues || {}}
+            onSlotUpdate={onSlotUpdate}
+            onItemSelect={onItemSelect}
+            trackerProps={trackerProps}
+          />
+        )}
+      </div>
     </ModuleWrapper>
   );
 }

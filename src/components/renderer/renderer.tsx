@@ -8,8 +8,6 @@ import {
 import type Action from '@/reducers/user-data-action';
 
 import ColumnContainer from '@/components/playbook-layout/column-container';
-import Column from '@/components/playbook-layout/column';
-import Row from '@/components/playbook-layout/row';
 
 import { componentsByModuleType } from '@/components/playbook-modules/all-modules';
 import { schemasByModuleType } from '@/components/playbook-modules/all-schemas';
@@ -107,18 +105,16 @@ export default function Renderer(props: Props) {
   // each of which is a list of rows (possibly a single or more modules)
   // go down and render each of them
   return (
-    <ColumnContainer>
-      {layout.map((column, i) => (
-        <Column key={i}>
-          {column.map((row, i) => {
-            if (typeof row === 'string') {
-              return <Row key={i}>{renderModule(row)}</Row>;
-            } else if (row instanceof Array) {
-              return <Row key={i}>{row.map(renderModule)}</Row>;
-            }
-          })}
-        </Column>
-      ))}
-    </ColumnContainer>
+    <ColumnContainer
+      columns={layout.map((column) => {
+        return column.map((row) => {
+          if (typeof row === 'string') {
+            return renderModule(row);
+          } else if (row instanceof Array) {
+            return row.map(renderModule);
+          }
+        });
+      })}
+    />
   );
 }

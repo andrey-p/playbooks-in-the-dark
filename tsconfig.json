@@ -20,7 +20,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "test-utils": ["./tests/config/test-utils.tsx"]
+      "test-utils": ["./tests/config/test-utils.tsx"],
+      "playwright-utils": ["./tests/config/playwright-utils.tsx"]
     }
   },
   "include": [
