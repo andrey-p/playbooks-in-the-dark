@@ -3,7 +3,8 @@
   width: 20px;
   height: 20px;
   border: none;
-  transition: width 0.3s ease-out,
+  transition:
+    width 0.3s ease-out,
     background-color 0.3s ease-out;
   cursor: pointer;
 
