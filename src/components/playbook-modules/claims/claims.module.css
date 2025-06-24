@@ -1,6 +1,7 @@
 .container {
   min-width: 670px;
   margin-top: 2rem;
+  border: none;
 }
 
 .row {
